@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boundless Collection</title>
+  <meta name="description" content="Invitații, plicuri de dar, meniuri, numere de masă și mărturii din ceară de soia parfumate." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="images/Delia.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/Delia.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/Delia.png">
+<link rel="shortcut icon" href="images/Delia.ico">
+<meta name="theme-color" content="#f7cfe1">
+
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <div class="brand-logo"><span>BC</span></div>
+        <div class="brand-title">Boundless Collection</div>
+      </a>
+      <!-- buton hamburger -->
+    <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
+      <nav aria-label="Meniu principal">
+        <ul id="mainmenu">
+          <li class="dropdown">
+            <button class="dropbtn">Produse</button>
+            <ul class="menu">
+              <li><a href="marturii.html">Prezentare Mărturii</a></li>
+              <li><a href="invitatii.html">Prezentare Invitații</a></li>
+            </ul>
+          </li>
+          <li><a href="#servicii">Servicii</a></li>
+          <li><a href="#produse">Galerie/Produse</a></li>
+          <li><a href="#despre">Despre</a></li>
+          <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank">Facebook</a></li>
+          <li><a class="cta" href="https://wa.me/40760617724" target="_blank">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>    
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-card">
+      <h1>Invitații & papetărie personalizată • Mărturii din ceară de soia</h1>
+      <p>Invitații, plicuri de dar, meniuri, numere de masă și mărturii parfumate — în stil alb–roz.</p>
+    </div>
+    <figure class="hero-img">
+      <!-- pune fișierul în folderul /images și folosește calea relativă -->
+      <img src="images/Delia.png" alt="Delia – brand portrait" />
+    </figure>
+  </section>
+
+  <!-- SERVICII -->
+  <section id="servicii" class="container">
+    <h2 class="section-title">Servicii</h2>
+    <p class="section-sub">Mostre, propuneri de design și consultanță cap-coadă.</p>
+    <div class="grid" id="services-grid"><!-- cardurile din HTML simplu --></div>
+  </section>
+
+  <!-- PRODUSE / GALERIE -->
+  <section id="produse" class="container">
+    <h2 class="section-title">Galerie & produse</h2>
+    <p class="section-sub">Poți adăuga poze și prețuri (se salvează local în browser).</p>
+
+    <div class="toolbar">
+      <div class="search" role="search">
+        <input id="q" type="search" placeholder="Caută (ex: invitații, soia, plic)" aria-label="Căutare produse" />
+      </div>
+      <div class="filter" role="group" aria-label="Filtre categorie">
+        <button class="pill" data-filter="toate" aria-pressed="true">Toate</button>
+        <button class="pill" data-filter="Invitații">Invitații</button>
+        <button class="pill" data-filter="Plicuri">Plicuri</button>
+        <button class="pill" data-filter="Meniuri">Meniuri</button>
+        <button class="pill" data-filter="Numere">Numere</button>
+        <button class="pill" data-filter="Mărturii soia">Mărturii soia</button>
+        <button class="pill" data-filter="Aranjamente florale">Aranjamente florale</button>
+        <button class="pill" data-filter="Set">Set</button>
+      </div>
+    </div>
+
+    <div class="grid products" id="grid" aria-live="polite"></div>
+
+    <!-- Editor local pentru adăugare produse -->
+    <details class="admin">
+      <summary><strong>Editează produsele</strong> (salvare locală)</summary>
+      <form id="form">
+        <label class="col-3">Denumire
+          <input required name="title" />
+        </label>
+      
+        <label class="col-2">Preț (RON)
+          <input required name="price" type="number" min="0" step="0.5" />
+        </label>
+      
+        <label class="col-1">Categorie
+          <select name="category">
+            <option>Invitații</option>
+            <option>Plicuri</option>
+            <option>Meniuri</option>
+            <option>Numere</option>
+            <option>Mărturii soia</option>
+            <option>Set</option>
+            <option>Aranjamente florale</option>
+          </select>
+        </label>
+      
+        <!-- ====== MANAGER IMAGINI (înlocuiește vechiul textarea + input file) ====== -->
+        <label class="col-6">Imagini</label>
+        <div class="col-6">
+          <!-- Galeria de thumb-uri -->
+          <div id="imgManager" class="img-manager">
+            <div class="thumb empty">Nicio imagine încă</div>
+          </div>
+      
+          <!-- Instrumente de adăugare -->
+          <div class="img-tools">
+            <input id="imgUrl" type="text" placeholder="Lipește un URL de imagine" />
+            <button id="addUrl" class="btn" type="button">Adaugă URL</button>
+            <input id="files" name="files" type="file" accept="image/*" multiple />
+          </div>
+      
+          <!-- Storage invizibil (sincronizat automat din JS) -->
+          <textarea id="imagesStore" name="images" style="display:none"></textarea>
+        </div>
+        <!-- =============================================================== -->
+      
+        <label class="col-6">Descriere
+          <textarea name="desc"></textarea>
+        </label>
+      
+        <div class="col-6">
+          <button class="btn primary" type="submit">Adaugă</button>
+          <button id="cancelEdit" class="btn" type="button" style="display:none">Anulează editarea</button>
+          <button id="reset" class="btn" type="button">Reset local</button>
+        </div>
+      </form>
+      
+    </details>
+  </section>
+
+  <!-- DESPRE & CONTACT -->
+  <section id="despre" class="container about">
+    <article class="panel">
+      <h2 class="section-title">Despre Delia</h2>
+      <p>Sunt Delia și creez papetărie elegantă și mărturii din ceară de soia, în nuanțe alb–roz.</p>
+    </article>
+    <article id="contact" class="panel contact">
+      <h2 class="section-title">Contact</h2>
+      <p>Scrie-mi pe <a href="https://wa.me/40760617724" target="_blank"><strong>WhatsApp</strong></a>,
+         <a href="https://www.instagram.com/marturiiboundlesscollection_?igsh=YThvYm82ZHBhbnFh&utm_source=qr" target="_blank">Instagram</a> sau
+         <a href="https://www.facebook.com/share/16TEGEfgGs/?mibextid=wwXIfr" target="_blank">Facebook</a>.
+      </p>
+      <form id="contactForm">
+        <input name="name"    required placeholder="Nume" />
+        <input name="email"   required type="email" placeholder="Email" />
+        <input name="phone"   placeholder="Telefon" />
+        <textarea name="message" required placeholder="Mesajul tău"></textarea>
+      
+        <!-- honeypot anti-spam (ascuns) -->
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+      
+        <button class="btn primary" type="submit">Trimite</button>
+      </form>
+
+      <div class="qr-grid">
+        <figure><img src="images/qr-instagram.png" alt="QR Instagram"><figcaption>Scanează pentru Instagram</figcaption></figure>
+        <figure><img src="images/qr-facebook.jpg" alt="QR Facebook"><figcaption>Scanează pentru Facebook</figcaption></figure>
+        <figure><img src="images/qr-whatsapp.jpg" alt="QR WhatsApp"><figcaption>Scanează pentru WhatsApp</figcaption></figure>
+        <figure><img src="images/qr-tiktok.jpg" alt="QR TikTok"><figcaption>Scanează pentru TikTok</figcaption></figure>
+      </div>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Boundless Collection 2023</small>
+      <small>Realizat cu pasiune ✨</small>
+    </div>
+  </footer>
+
+  <!-- Buton WhatsApp plutitor -->
+  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" title="Scrie pe WhatsApp">
+    💬 <span>Scrie-mi pe WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+  <!-- Toggle admin (vizibil doar când ești în modul admin) -->
+<button id="adminToggle" class="admin-switch admin-only" type="button" title="Comută modul admin">
+    Admin: ON
+  </button>
+  
+</body>
+</html>

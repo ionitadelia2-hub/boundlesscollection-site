@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mărturii din ceară de soia – Delia’s Candles</title>
+
+  <!-- fonturi ca pe index -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- același CSS ca pe index -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER identic cu index (fără dropdown aici) -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-logo"><span>DC</span></div>
+        <div class="brand-title">Delia’s Candles & Papetărie</div>
+      </a>
+
+      <!-- dacă vrei și burger pe mobil, păstrează butonul (opțional) -->
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
+
+      <nav aria-label="Meniu principal">
+        <!-- IMPORTANT: id="mainmenu" ca să se aplice flex-ul din CSS -->
+        <ul id="mainmenu">
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="invitatii.html">Invitații</a></li>
+          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h1 class="section-title">Mărturii din ceară de soia parfumate</h1>
+    <p class="section-sub">
+      Realizate manual, din ceară naturală de soia, în forme elegante – fluturi, ursuleți, inimioare.
+      Parfumate delicat cu arome florale.
+    </p>
+
+    <div class="grid products">
+      <article class="item">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=800" alt="Mărturie Fluture">
+        </div>
+        <div class="content">
+          <h3>Mărturie Fluture</h3>
+          <p class="muted">Ceară de soia, aromă lavandă.</p>
+          <div class="price">12 RON</div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1603190287605-e7d7b4f7a0f2?q=80&w=800" alt="Mărturie Ursuleț">
+        </div>
+        <div class="content">
+          <h3>Mărturie Ursuleț</h3>
+          <p class="muted">Arome vanilie & iasomie.</p>
+          <div class="price">10 RON</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
+      <small>Realizat în nuanțe alb–roz ✨</small>
+    </div>
+  </footer>
+
+  <!-- buton WhatsApp plutitor -->
+  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener">
+    💬 <span>Scrie-mi pe WhatsApp</span>
+  </a>
+
+  <script>
+    // anul din footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // (opțional) burger pentru mobil – același JS ca pe index
+    (function(){
+      const btn  = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('mainmenu');
+      if(!btn || !menu) return;
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const open = document.body.classList.toggle('menu-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e)=>{
+        if (document.body.classList.contains('menu-open')) {
+          const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
+          if (!inside) {
+            document.body.classList.remove('menu-open');
+            btn.setAttribute('aria-expanded','false');
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

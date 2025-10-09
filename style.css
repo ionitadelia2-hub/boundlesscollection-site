@@ -1,0 +1,517 @@
+/* =========================
+   Variabile & bază
+   ========================= */
+   :root{
+    --rose:#f7cfe1;
+    --rose-2:#f9e7ef;
+    --white:#fff;
+    --text:#2a2a2a;
+    --muted:#6b6b6b;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(234,168,197,.25);
+  }
+  
+  *{ box-sizing:border-box }
+  html,body{
+    margin:0;
+    font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color:var(--text);
+    background:linear-gradient(180deg,var(--white),var(--rose-2));
+  }
+  a{ color:inherit; text-decoration:none }
+  img{ max-width:100%; display:block }
+  .container{ width:min(1100px,92%); margin-inline:auto }
+  
+  /* =========================
+     HEADER & NAVBAR – DESKTOP
+     ========================= */
+  .header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,.85);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid #ffeaf3;
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    gap:1rem; padding:1rem 0;
+  }
+  
+  .brand{
+    display:flex; align-items:center; gap:.6rem; white-space:nowrap;
+  }
+  .brand-logo{
+    width:48px; height:48px; border-radius:50%;
+    background:linear-gradient(135deg,var(--rose),var(--white));
+    display:grid; place-items:center; box-shadow:var(--shadow);
+  }
+  .brand-logo span{ font-weight:600; color:#ad5f86 }
+  .brand-title{
+    font-family:'Playfair Display',serif; font-weight:600; font-size:1.45rem;
+  }
+  
+  /* buton hamburger – ascuns pe desktop */
+  .nav-toggle{ display:none; }
+  
+  /* meniul principal pe desktop */
+  #mainmenu{
+    display:flex;                 /* IMPORTANT: vizibil pe desktop */
+    align-items:center;
+    gap:.9rem;
+    margin:0; padding:0; list-style:none;
+  }
+  #mainmenu > li > a,
+  .dropbtn{
+    font-family:'Playfair Display',serif;
+    font-weight:500; font-size:1.1rem;
+    padding:.35rem .6rem; border-radius:999px;
+    transition:background .2s,color .2s;
+    background:transparent; border:0; cursor:pointer;
+  }
+  #mainmenu > li > a:hover,
+  .dropbtn:hover{ background:var(--rose-2); color:#ad5f86 }
+  
+  /* butonul WhatsApp din navbar */
+  #mainmenu .cta{
+    font-family:Poppins, sans-serif;
+    font-weight:600;
+    background:var(--rose);
+    border:1px solid #ffd8e7;
+    box-shadow:var(--shadow);
+  }
+  
+/* Dropdown "Produse" */
+.dropdown{ position:relative }
+
+/* Butonul */
+.dropbtn{
+  font-family:'Playfair Display', serif; font-weight:500; font-size:1.1rem;
+  background:transparent; border:0; padding:.35rem .6rem;
+  border-radius:999px; display:inline-flex; align-items:center; gap:.35rem;
+  cursor:pointer; transition:background .2s,color .2s;
+}
+.dropbtn::after{ content:"▼"; font-size:.6rem; margin-top:1px; transition:transform .15s ease }
+[aria-expanded="true"].dropbtn::after{ transform:rotate(180deg) }
+.dropbtn:hover{ background:var(--rose-2); color:#ad5f86 }
+
+/* Lista */
+.dropdown .menu{
+  position:absolute;
+  top:100%;                 /* fara spatiu intre buton si meniu */
+  left:0;
+  min-width:220px;
+  background:#fff;
+  border:1px solid #ffe1ee;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  padding:.4rem;
+  margin-top:.35rem;        /* daca vrei o umbra mica, nu e "gap" real */
+  display:none;
+  z-index:1000;
+}
+.dropdown .menu li{ list-style:none }
+.dropdown .menu a{ display:block; padding:.6rem .8rem; border-radius:8px }
+.dropdown .menu a:hover{ background:var(--rose-2) }
+
+/* Punte transparenta (ca sa nu "cada" hover-ul cand cobori in meniu) */
+.dropdown::after{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:100%;
+  height:8px;               /* mica zona invizibila */
+}
+
+/* Arata meniul cand dropdown-ul e deschis pe click */
+.dropdown.open .menu{ display:block }
+
+/* Pe desktop pastram si deschiderea la hover, dar fara sa incomodeze click-ul */
+@media (hover:hover){
+  .dropdown:hover .menu{ display:block }
+}
+
+  
+  /* =========================
+     HERO
+     ========================= */
+  .hero{
+    display:grid; grid-template-columns:1.1fr .9fr;
+    gap:2rem; align-items:center; padding:2.5rem 0 1.5rem;
+  }
+  .hero-card{
+    background:#fff; border-radius:var(--radius);
+    padding:2rem; box-shadow:var(--shadow); text-align:center;
+  }
+  .hero h1{
+    font-family:'Playfair Display',serif; font-weight:600;
+    font-size:clamp(1.8rem,3vw,2.6rem);
+    line-height:1.15; margin:0 0 .6rem;
+  }
+  .hero p{ color:var(--muted); margin:0 0 1rem; text-align:center }
+  .hero-img{ border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow) }
+  
+  /* =========================
+     SECȚIUNI / GRID / CARDURI
+     ========================= */
+  section{ padding:2.2rem 0 }
+  .section-title{
+    font-size:1.6rem; margin:0 0 .8rem; font-family:'Playfair Display',serif;
+  }
+  .section-sub{ margin:0 0 1.2rem; color:var(--muted) }
+  
+  .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:1.1rem }
+  .card, .products .item{
+    background:#fff; border:1px solid #ffe1ee; border-radius:var(--radius); box-shadow:var(--shadow)
+  }
+  .card{ grid-column:span 4; padding:1rem }
+  .card h3{ margin:.3rem 0 .1rem; font-size:1.05rem; font-family:'Playfair Display',serif }
+  .card p{ margin:.25rem 0; color:var(--muted) }
+  
+  /* =========================
+     TOOLBAR + PRODUSE
+     ========================= */
+  .toolbar{
+    display:flex; flex-wrap:wrap; gap:.6rem;
+    align-items:center; justify-content:space-between; margin-bottom:1rem;
+  }
+  .search{ flex:1; min-width:220px; display:flex; gap:.5rem }
+  .search input{
+    flex:1; padding:.7rem .9rem; border-radius:999px; border:1px solid #ffd8e7; background:#fff;
+  }
+  .filter{ display:flex; gap:.4rem; flex-wrap:wrap }
+  .filter .pill{
+    padding:.55rem .9rem; border-radius:999px; border:1px solid #ffd8e7; background:#fff; cursor:pointer
+  }
+  .filter .pill[aria-pressed="true"], .filter .pill:hover{ background:var(--rose-2) }
+  
+  .products .item{ grid-column:span 3; overflow:hidden; display:flex; flex-direction:column }
+  .item .media{ aspect-ratio:4/3; background:var(--rose-2); display:grid; place-items:center }
+  .item .content{ padding:.9rem }
+  .price{ font-weight:600; color:#9a5a78 }
+  .pill{ font-size:.8rem; color:#9a5a78; background:#fff0f6; border:1px solid #ffd8e7; border-radius:999px; padding:.25rem .6rem }
+  .muted{ color:var(--muted) }
+  .actions{ display:flex; gap:.6rem; margin-top:auto; padding:.9rem; border-top:1px solid #ffe8f2 }
+  .btn{ flex:1; padding:.6rem .8rem; border-radius:12px; border:1px solid #ffd8e7; background:#fff; cursor:pointer }
+  .btn.primary{ background:var(--rose); font-weight:600 }
+  
+  /* =========================
+     ADMIN (editor local)
+     ========================= */
+  details.admin{
+    margin-top:1.2rem; border:1px dashed #ffcade; border-radius:var(--radius); padding:1rem; background:#fff
+  }
+  .admin form{ display:grid; gap:.6rem; grid-template-columns:repeat(6,1fr) }
+  .admin input, .admin textarea, .admin select{
+    width:100%; padding:.55rem .7rem; border:1px solid #ffd8e7; border-radius:10px; background:#fff
+  }
+  .admin textarea{ grid-column:span 6; min-height:70px }
+  .admin .col-3{ grid-column:span 3 }
+  .admin .col-2{ grid-column:span 2 }
+  .admin .col-6{ grid-column:span 6 }
+  .admin .help{ font-size:.85rem; color:#9a5a78 }
+
+  /* =========================
+   ADMIN VISIBILITY CONTROL
+   ========================= */
+
+/* ascunse pentru vizitatori */
+details.admin,
+.admin-only { display: none; }
+
+/* vizibile doar în modul admin */
+body.admin details.admin,
+body.admin .admin-only { display: inline-flex; }   /* sau inline-flex pe butoane */
+
+  
+  /* =========================
+     ABOUT & CONTACT
+     ========================= */
+  .about{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem }
+  .about .panel{ background:#fff; border:1px solid #ffe1ee; border-radius:var(--radius); padding:1.1rem; box-shadow:var(--shadow) }
+  .contact form{ display:grid; gap:.7rem }
+  .contact input, .contact textarea{
+    padding:.7rem .9rem; border:1px solid #ffd8e7; border-radius:12px; background:#fff
+  }
+  .qr-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:.8rem; margin-top:1rem }
+  .qr-grid figure{ border:1px solid #ffe1ee; border-radius:12px; padding:.6rem; background:#fff }
+  .qr-grid figcaption{ color:var(--muted); margin-top:.3rem; text-align:center }
+  
+  /* =========================
+     FOOTER
+     ========================= */
+  footer{
+    margin-top:2rem; padding:1.2rem 0;
+    background:#fff; border-top:1px solid #ffe8f2; color:#7a6b73
+  }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap
+  }
+  
+  /* =========================
+     Buton WhatsApp plutitor
+     ========================= */
+  .whatsapp-wrapper{
+    position:fixed; right:18px; bottom:18px;
+    display:inline-flex; align-items:center; gap:.55rem;
+    padding:.7rem 1rem; background:#25D366; color:#fff;
+    border-radius:999px; font-weight:600; text-decoration:none;
+    box-shadow:0 6px 18px rgba(0,0,0,.25); z-index:9999;
+    transition:transform .15s ease;
+  }
+  .whatsapp-wrapper:hover{ transform:scale(1.05) }
+  .whatsapp-wrapper span{ font-size:.95rem; line-height:1 }
+  
+  /* =========================
+     RESPONSIVE
+     ========================= */
+  @media (max-width:1100px){
+    #mainmenu{ gap:.7rem }
+    #mainmenu > li > a, .dropbtn{ font-size:1rem; padding:.3rem .5rem }
+    .nav{ gap:1rem }
+  }
+  
+  @media (max-width:960px){
+    .hero{ grid-template-columns:1fr }
+    .card{ grid-column:span 6 }
+    .products .item{ grid-column:span 6 }
+    .about{ grid-template-columns:1fr }
+  }
+  
+  @media (max-width:540px){
+    .card{ grid-column:span 12 }
+    .products .item{ grid-column:span 12 }
+    .brand-title{ font-size:1.3rem }
+  }
+  
+  /* =========================
+     NAVBAR – MOBIL / TABLETE
+     ========================= */
+  @media (max-width:900px){
+    .nav{ gap:.6rem }
+    .brand-title{ font-size:1.2rem }
+  
+    .nav-toggle{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:40px; height:40px; border:1px solid #ffe1ee; border-radius:12px; background:#fff;
+      box-shadow:var(--shadow);
+    }
+    .nav-toggle::after{ content:"☰"; font-size:1.1rem }
+    .menu-open .nav-toggle::after{ content:"✕" }
+  
+    nav{ position:relative }
+    #mainmenu{
+      position:absolute; top:100%; right:0;
+      background:#fff; border:1px solid #ffe1ee; border-radius:12px; box-shadow:var(--shadow);
+      padding:.6rem; margin-top:.4rem;
+      display:none;                     /* ascuns implicit pe mobil */
+      flex-direction:column; align-items:stretch; gap:.2rem;
+      min-width:220px; max-height:60vh; overflow:auto; z-index:1000;
+    }
+    .menu-open #mainmenu{ display:flex } /* JS adaugă .menu-open pe <body> */
+  
+    #mainmenu > li > a, .dropbtn{ font-size:1rem; padding:.45rem .6rem }
+  
+    /* dropdown în panoul mobil – la click, nu la hover */
+    .dropdown .menu{
+        position: static;        /* <- important pe mobil */
+        display: none;           /* se arată doar când e .open */
+        padding: .25rem 0;
+        margin: .25rem 0 0 0;
+        box-shadow: none;
+        border: 0;
+        background: transparent;
+      }
+    .dropdown.open .menu{ display:block; }  /* arată când e deschis */
+     /* Săgeata se rotește când e deschis */
+  .dropbtn::after{ content:"▼"; font-size:.6rem; margin-left:.35rem; transition:transform .2s ease }
+  .dropdown.open .dropbtn::after{ transform: rotate(180deg); }
+}
+
+/* Pe mobil: WhatsApp din meniu mai mic */
+@media (max-width:900px){
+    #mainmenu .cta{
+      font-size: 0.9rem;          /* text mai mic */
+      padding: .3rem .55rem;      /* margini mai compacte */
+      border-radius: 12px;        /* colțuri mai fine */
+    }
+  }
+  
+  /* Admin actions pe card */
+.btn.small{ padding:.45rem .6rem; font-size:.9rem }
+.btn.warn{ border-color:#ffe1a8; }
+.btn.danger{ color:#b42323; border-color:#f3b3b3; }
+.btn.danger:hover{ background:#ffeaea }
+
+/* =========================
+   Layout butoane produs (admin)
+   ========================= */
+
+/* containerul acțiunilor – permite 2 rânduri dacă nu încape */
+.actions {
+    display: flex;
+    flex-wrap: wrap;        /* permite împachetarea */
+    gap: 0.5rem;
+    padding: 0.9rem;
+    border-top: 1px solid #ffe8f2;
+    justify-content: center; /* butoanele centrate */
+  }
+  
+  /* butoane cu dimensiuni potrivite */
+  .actions .btn {
+    flex: 1 1 45%;           /* două pe rând */
+    text-align: center;
+    font-size: 0.9rem;
+    white-space: nowrap;     /* textul nu rupe linia */
+  }
+  
+  /* culoare mai clară pentru ștergere */
+  .btn.danger {
+    color: #b42323;
+    border-color: #f3b3b3;
+  }
+  .btn.danger:hover {
+    background: #ffeaea;
+  }
+  
+  /* Editează / Șterge – doar pentru admin */
+  body:not(.admin) .admin-only {
+    display: none !important;
+  }
+  
+  /* --- Vizibilitate admin --- */
+/* Ascunse pentru vizitatori */
+details.admin,
+.admin-only { display: none; }
+
+/* Vizibile doar în modul admin */
+body.admin details.admin,
+body.admin .admin-only { display: block; }
+
+/* Buton toggle admin (plutitor, mic) */
+.admin-switch{
+  position: fixed;
+  left: 18px;
+  bottom: 90px;                  /* deasupra butonului WhatsApp */
+  padding: .45rem .7rem;
+  border-radius: 999px;
+  border: 1px solid #ffd8e7;
+  background: #fff;
+  box-shadow: var(--shadow);
+  font-weight: 600;
+  color: #9a5a78;
+  cursor: pointer;
+  z-index: 9999;
+}
+.admin-switch:hover{ background: var(--rose-2); }
+
+/* ===== Manager imagini (admin) ===== */
+.img-manager{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(190px,2fr));
+    gap:.5rem;
+  }
+  .thumb {
+    position: relative;
+    border: 1px solid #ffd8e7;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    height: 140px; /* mai mare */
+    display: block;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .thumb:hover {
+    transform: scale(1.04);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .thumb .remove{
+    position:absolute;
+    top:6px; right:6px;
+    width:26px; height:26px; line-height:24px;
+    border-radius:999px;
+    border:1px solid #ffd8e7;
+    background:#fff;
+    font-weight:700;
+    cursor:pointer;
+  }
+  .thumb.empty{
+    display:grid; place-items:center;
+    border-style:dashed; color:#9a5a78; font-size:.9rem;
+  }
+  
+  .img-tools{
+    display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.5rem;
+  }
+  .img-tools input[type="text"]{
+    flex:1; min-width:220px;
+    padding:.55rem .7rem; border:1px solid #ffd8e7; border-radius:10px;
+  }
+  
+
+/* ===== Slider produs ===== */
+.item .media {
+    position: relative;
+    aspect-ratio: 4/3;
+    background: var(--rose-2);
+    overflow: hidden;
+    border-bottom: 1px solid #ffe8f2;
+  }
+  
+  .slide-track { 
+    width: 100%; height: 100%;
+    position: relative;
+  }
+  
+  .slide-track img{
+    position: absolute; inset:0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0; transform: scale(1.02);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+  .slide-track img.active{ opacity: 1; transform: scale(1); }
+  
+  /* butoane prev/next */
+  .slider-nav{
+    position:absolute; inset:0; display:flex; justify-content:space-between; align-items:center;
+    padding: .35rem; pointer-events:none;
+  }
+  .slider-nav button{
+    pointer-events:auto;
+    border:1px solid #ffd8e7; background:#fff; border-radius:999px;
+    width:36px; height:36px; font-weight:700; line-height:1;
+    box-shadow: var(--shadow); opacity:.9;
+  }
+  .slider-nav button:hover{ background: var(--rose-2); }
+  
+  /* bullet-uri */
+  .slider-dots{
+    position:absolute; left:50%; bottom:.45rem; transform:translateX(-50%);
+    display:flex; gap:.35rem; padding:.2rem .4rem; border-radius:999px; background:rgba(255,255,255,.65);
+  }
+  .slider-dots i{
+    width:7px; height:7px; border-radius:50%; background:#d9a9bf; opacity:.55;
+  }
+  .slider-dots i.active{ opacity:1; background:#ad5f86; }
+  
+  /* ===== Efect evidențiere editor ===== */
+details.admin.highlight {
+    animation: highlightPulse 10s ease;
+    box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.5);
+  }
+  
+  @keyframes highlightPulse {
+    0%   { box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.9); }
+    50%  { box-shadow: 0 0 0 6px rgba(255, 192, 203, 0.3); }
+    100% { box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.5); }
+  }
+  

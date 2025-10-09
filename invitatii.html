@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Invitații de nuntă – Delia’s Candles & Papetărie</title>
+
+  <!-- fonturi ca pe index -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- același CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-logo"><span>DC</span></div>
+        <div class="brand-title">Delia’s Candles & Papetărie</div>
+      </a>
+
+      <!-- opțional: buton burger pentru mobil, dacă îl folosești și pe index -->
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
+
+      <nav aria-label="Meniu principal">
+        <!-- IMPORTANT: id="mainmenu" pentru stilul pe orizontală -->
+        <ul id="mainmenu">
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="marturii.html">Mărturii</a></li>
+          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h1 class="section-title">Invitații de nuntă personalizate</h1>
+    <p class="section-sub">Invitații elegante, cu sigilii din ceară, panglici de satin și design personalizat pentru tema evenimentului tău.</p>
+
+    <div class="grid products">
+      <article class="item">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1519681393784-6f2cb90b72a1?q=80&w=800" alt="Invitație florală">
+        </div>
+        <div class="content">
+          <h3>Invitație Florală</h3>
+          <p class="muted">Design romantic, sigiliu din ceară roz pal.</p>
+          <div class="price">9.5 RON</div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="media">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800" alt="Set invitație minimalist">
+        </div>
+        <div class="content">
+          <h3>Set Minimalist</h3>
+          <p class="muted">Hârtie premium, fundă din catifea.</p>
+          <div class="price">8 RON</div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
+      <small>Realizat în nuanțe alb–roz ✨</small>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener">
+    💬 <span>Scrie-mi pe WhatsApp</span>
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // burger pentru mobil (aceeași logică ca pe index)
+    (function(){
+      const btn  = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('mainmenu');
+      if(!btn || !menu) return;
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const open = document.body.classList.toggle('menu-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e)=>{
+        if (document.body.classList.contains('menu-open')) {
+          const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
+          if (!inside) {
+            document.body.classList.remove('menu-open');
+            btn.setAttribute('aria-expanded','false');
+          }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
