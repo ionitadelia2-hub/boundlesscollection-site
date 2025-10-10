@@ -59,14 +59,14 @@
   </section>
 
   <!-- SERVICII -->
-  <section id="servicii" class="container">
+  <section id="servicii" class="container reveal">
     <h2 class="section-title">Servicii</h2>
     <p class="section-sub">Mostre, propuneri de design și consultanță cap-coadă.</p>
     <div class="grid" id="services-grid"><!-- cardurile din HTML simplu --></div>
   </section>
 
   <!-- PRODUSE / GALERIE -->
-  <section id="produse" class="container">
+  <section id="produse" class="container reveal">
     <h2 class="section-title">Galerie & produse</h2>
     <p class="section-sub">Poți adăuga poze și prețuri (se salvează local în browser).</p>
 
@@ -147,7 +147,7 @@
   </section>
 
   <!-- DESPRE & CONTACT -->
-  <section id="despre" class="container about">
+  <section id="despre" class="container about reveal">
     <article class="panel">
       <h2 class="section-title">Despre Delia</h2>
       <p>Sunt Delia și creez papetărie elegantă și mărturii din ceară de soia, în nuanțe alb–roz.</p>
@@ -169,13 +169,6 @@
       
         <button class="btn primary" type="submit">Trimite</button>
       </form>
-
-      <div class="qr-grid">
-        <figure><img src="images/qr-instagram.png" alt="QR Instagram"><figcaption>Scanează pentru Instagram</figcaption></figure>
-        <figure><img src="images/qr-facebook.jpg" alt="QR Facebook"><figcaption>Scanează pentru Facebook</figcaption></figure>
-        <figure><img src="images/qr-whatsapp.jpg" alt="QR WhatsApp"><figcaption>Scanează pentru WhatsApp</figcaption></figure>
-        <figure><img src="images/qr-tiktok.jpg" alt="QR TikTok"><figcaption>Scanează pentru TikTok</figcaption></figure>
-      </div>
     </article>
   </section>
 
@@ -197,5 +190,16 @@
 <button id="adminToggle" class="admin-switch admin-only" type="button" title="Comută modul admin">
     Admin: ON
   </button>
+  <script>
+    (function(){
+      const els = document.querySelectorAll('section, .card, .products .item');
+      els.forEach(el => el.classList.add('reveal'));
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold:.12 });
+      els.forEach(el => io.observe(el));
+    })();
+  </script>
+  
 </body>
 </html>

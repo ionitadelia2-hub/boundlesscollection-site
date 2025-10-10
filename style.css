@@ -515,3 +515,71 @@ details.admin.highlight {
     100% { box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.5); }
   }
   
+  /* — Hero halo — */
+.hero-img{ position:relative; isolation:isolate; }
+.hero-img::after{
+  content:""; position:absolute; inset:-8%;
+  background: radial-gradient(60% 60% at 70% 30%, rgba(247,207,225,.55), transparent 60%);
+  z-index:-1; filter: blur(18px);
+  border-radius: var(--radius);
+}
+.hero-card{
+  border:1px solid #ffe1ee;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.hero-card:hover{ transform: translateY(-2px); box-shadow: 0 14px 36px rgba(234,168,197,.28); }
+
+/* — Grid spacing — */
+.products { row-gap: 1.2rem; }
+
+/* — Card hover & focus — */
+.products .item{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.products .item:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(234,168,197,.22);
+  border-color:#ffd1e4;
+}
+
+/* — Buttons refinement — */
+.btn{
+  transition: transform .08s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,.04);
+}
+.btn:hover{ transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.07); }
+.btn:active{ transform: translateY(0); box-shadow: 0 4px 10px rgba(0,0,0,.06); }
+
+.btn.primary{
+  background: linear-gradient(180deg, var(--rose), #ffdced);
+  border-color:#ffcfe6;
+}
+.btn.primary:hover{ background:linear-gradient(180deg, #ffcfe2, #ffe9f4); }
+
+/* — Pills mai definite — */
+.pill{ border-color:#ffcfe0; background:#fff7fb; }
+
+/* — Slider nav: micro efect — */
+.slider-nav button{ transition: transform .12s ease, background-color .18s ease; }
+.slider-nav button:active{ transform: scale(.96); }
+
+/* — Section rhythm — */
+section { padding: clamp(1.6rem, 3vw, 2.8rem) 0; }
+.section-title{ letter-spacing:.2px; }
+.section-sub{ max-width: 60ch; }
+
+/* — Cards “Servicii” opționale (dacă randezi din JS) — */
+.card{
+  background: #fff;
+  border: 1px solid #ffe3ef;
+  box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card:hover{ transform: translateY(-3px); box-shadow: 0 12px 28px rgba(234,168,197,.26); }
+
+@media (max-width:460px){
+  .whatsapp-wrapper span{ display:none; }
+}
+
+.reveal{ opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.in{ opacity:1; transform:none; }
