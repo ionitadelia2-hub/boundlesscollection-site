@@ -92,63 +92,6 @@
     </div>
 
     <div class="grid products" id="grid" aria-live="polite"></div>
-
-    <!-- Editor local pentru adăugare produse -->
-    <details class="admin">
-      <summary><strong>Editează produsele</strong> (salvare locală)</summary>
-      <form id="form">
-        <label class="col-3">Denumire
-          <input required name="title" />
-        </label>
-      
-        <label class="col-2">Preț (RON)
-          <input required name="price" type="number" min="0" step="0.5" />
-        </label>
-      
-        <label class="col-1">Categorie
-          <select name="category">
-            <option>Invitații</option>
-            <option>Plicuri</option>
-            <option>Meniuri</option>
-            <option>Numere</option>
-            <option>Mărturii soia</option>
-            <option>Set</option>
-            <option>Aranjamente florale</option>
-          </select>
-        </label>
-      
-        <!-- ====== MANAGER IMAGINI (înlocuiește vechiul textarea + input file) ====== -->
-        <label class="col-6">Imagini</label>
-        <div class="col-6">
-          <!-- Galeria de thumb-uri -->
-          <div id="imgManager" class="img-manager">
-            <div class="thumb empty">Nicio imagine încă</div>
-          </div>
-      
-          <!-- Instrumente de adăugare -->
-          <div class="img-tools">
-            <input id="imgUrl" type="text" placeholder="Lipește un URL de imagine" />
-            <button id="addUrl" class="btn" type="button">Adaugă URL</button>
-            <input id="files" name="files" type="file" accept="image/*" multiple />
-          </div>
-      
-          <!-- Storage invizibil (sincronizat automat din JS) -->
-          <textarea id="imagesStore" name="images" style="display:none"></textarea>
-        </div>
-        <!-- =============================================================== -->
-      
-        <label class="col-6">Descriere
-          <textarea name="desc"></textarea>
-        </label>
-      
-        <div class="col-6">
-          <button class="btn primary" type="submit">Adaugă</button>
-          <button id="cancelEdit" class="btn" type="button" style="display:none">Anulează editarea</button>
-          <button id="reset" class="btn" type="button">Reset local</button>
-        </div>
-      </form>
-      
-    </details>
   </section>
 
   <!-- DESPRE & CONTACT -->
@@ -191,10 +134,6 @@
   </a>
 
   <script src="script.js"></script>
-  <!-- Toggle admin (vizibil doar când ești în modul admin) -->
-<button id="adminToggle" class="admin-switch admin-only" type="button" title="Comută modul admin">
-    Admin: ON
-  </button>
   <script>
     (function(){
       const els = document.querySelectorAll('section, .card, .products .item');

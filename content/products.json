@@ -1,0 +1,64 @@
+[
+    {
+      "id": "1",
+      "title": "Invitație Florală",
+      "price": 9.5,
+      "category": "Invitații",
+      "desc": "Model elegant cu sigiliu din ceară, în nuanțe pastelate și detalii florale.",
+      "images": [
+        "https://images.unsplash.com/photo-1519681393784-6f2cb90b72a1?q=80&w=1200&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1200&auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Plic de dar Roz Pal",
+      "price": 6,
+      "category": "Plicuri",
+      "desc": "Carton texturat premium, fundă satin și inserție florală delicată.",
+      "images": [
+        "https://images.unsplash.com/photo-1527259232211-2a12fda1d24a?q=80&w=1200&auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Meniu Elegant",
+      "price": 7.5,
+      "category": "Meniuri",
+      "desc": "Design rafinat, print calitativ pe hârtie mată, potrivit pentru mese festive.",
+      "images": [
+        "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1200&auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Număr de masă Minimal",
+      "price": 5,
+      "category": "Numere",
+      "desc": "Aspect curat, tipărit pe carton satinat gros, pentru un decor modern.",
+      "images": [
+        "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Mărturie Soia – Fluture",
+      "price": 12,
+      "category": "Mărturii soia",
+      "desc": "Lumânare parfumată din ceară de soia, în formă de fluture delicat.",
+      "images": [
+        "https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=1200&auto=format&fit=crop"
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Set Papetărie Roz",
+      "price": 39,
+      "category": "Set",
+      "desc": "Set complet: invitație, plic, meniu, număr de masă și mărturie asortată.",
+      "images": [
+        "https://images.unsplash.com/photo-1520975922329-8273f33a69a6?q=80&w=1200&auto=format&fit=crop"
+      ]
+    }
+  ]
+  
