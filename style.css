@@ -608,3 +608,48 @@ a:active {
   transform: translateY(-2px);
   transition: all 0.25s ease;
 }
+
+/* --- HAMBURGER COLOR --- */
+.nav-toggle{
+  color:#ad5f86;                 /* roz închis */
+}
+
+/* varianta mea folosește simbolul "☰" din ::after */
+.nav-toggle::after{
+  color:#ad5f86;                 /* barele roz */
+}
+/* când meniul e deschis arată X roz */
+.menu-open .nav-toggle::after{
+  color:#ad5f86;
+}
+
+/* dacă pe unele telefoane simbolul iese albastru, forțăm & evităm moșteniri */
+.nav-toggle,
+.nav-toggle::after{
+  -webkit-text-fill-color:#ad5f86;
+  text-decoration:none !important;
+}
+/* Desktop – ASCUND butonul, arăt meniul pe orizontală */
+@media (min-width: 901px){
+  .nav-toggle{ display:none !important; }
+  #mainmenu{ display:flex !important; }
+}
+
+/* Mobil / tabletă – ARĂT butonul, ascund meniul inițial */
+@media (max-width: 900px){
+  .nav-toggle{ display:inline-flex !important; }
+  #mainmenu{ display:none; }             /* va deveni flex când body.menu-open */
+  .menu-open #mainmenu{ display:flex; }
+}
+
+@media (max-width:900px){
+  #mainmenu{
+    background:#fff;
+    border:1px solid #ffe1ee;
+    box-shadow:0 16px 40px rgba(234,168,197,.35);
+  }
+  #mainmenu > li > a,
+  .dropbtn{ color:#2a2a2a; }
+  #mainmenu > li > a:hover,
+  .dropbtn:hover{ background:#f9e7ef; color:#ad5f86; }
+}
