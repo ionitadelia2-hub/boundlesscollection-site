@@ -583,3 +583,28 @@ section { padding: clamp(1.6rem, 3vw, 2.8rem) 0; }
 
 .reveal{ opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.in{ opacity:1; transform:none; }
+
+/* ==== LINKURI MOBILE – negru elegant ==== */
+a,
+a:visited,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+/* ==== Butoane din produse ==== */
+.btn,
+.btn:visited {
+  color: #000; /* text negru */
+  background: #f7cfe1; /* fundal roz deschis */
+  border: 1px solid #e6a7b9;
+  font-weight: 500;
+}
+
+/* Efect hover (opțional, ușor inversat) */
+.btn:hover {
+  background: #e6a7b9;
+  color: #fff;
+  transform: translateY(-2px);
+  transition: all 0.25s ease;
+}
