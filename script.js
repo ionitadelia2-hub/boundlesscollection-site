@@ -154,3 +154,66 @@ window.addEventListener('DOMContentLoaded', async ()=>{
   await loadProducts();
   render();
 });
+
+/* =============== Meniu mobil (hamburger) =============== */
+(function(){
+  const btnHamb  = document.querySelector('.nav-toggle');
+  const mainMenu = document.querySelector('#mainmenu');
+  const dd       = document.querySelector('.dropdown');
+  const ddBtn    = dd?.querySelector('.dropbtn');
+  const ddMenu   = dd?.querySelector('.menu');
+
+  // deschide/închide panoul mobil
+  if (btnHamb && mainMenu){
+    btnHamb.addEventListener('click', (e)=>{
+      e.preventDefault();
+      e.stopPropagation();
+      const open = document.body.classList.toggle('menu-open');
+      btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      dd?.classList.remove('open');
+      ddBtn?.setAttribute('aria-expanded','false');
+    });
+  }
+
+  // dropdown “Produse” (în meniu)
+  if (dd && ddBtn && ddMenu){
+    const close = ()=>{ 
+      dd.classList.remove('open'); 
+      ddBtn.setAttribute('aria-expanded','false'); 
+    };
+
+    ddBtn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      e.stopPropagation();
+      const now = dd.classList.toggle('open');
+      ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
+    });
+
+    ddMenu.addEventListener('click', (e)=> e.stopPropagation());
+    document.addEventListener('click', close);
+    document.addEventListener('keydown', (e)=>{ if (e.key==='Escape') close(); });
+  }
+
+  // click în afara panoului mobil => închide
+  document.addEventListener('click', (e)=>{
+    if (!document.body.classList.contains('menu-open')) return;
+    const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
+    if (!inside){
+      document.body.classList.remove('menu-open');
+      btnHamb?.setAttribute('aria-expanded','false');
+      dd?.classList.remove('open');
+      ddBtn?.setAttribute('aria-expanded','false');
+    }
+  });
+
+  // ESC închide panoul mobil
+  document.addEventListener('keydown', (e)=>{
+    if (e.key !== 'Escape') return;
+    if (document.body.classList.contains('menu-open')){
+      document.body.classList.remove('menu-open');
+      btnHamb?.setAttribute('aria-expanded','false');
+      dd?.classList.remove('open');
+      ddBtn?.setAttribute('aria-expanded','false');
+    }
+  });
+})();
