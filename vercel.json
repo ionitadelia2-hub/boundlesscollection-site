@@ -1,0 +1,1 @@
+{ "rewrites": [{ "source": "/produs/:slug", "destination": "/produs.html?id=:slug" }] }
