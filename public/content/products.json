@@ -1,27 +1,18 @@
 [
   {
-    "id": "invitatie-florala-1d801b5c",
+    "id": "f63571a2-7f05-4b3a-be7e-150575c298c8",
     "title": "Invitație Florală",
     "price": 9.5,
-    "category": ["Invitații", "Set"],
-    "desc": "Model elegant pe carton ivory, plic opțional.",
+    "category": "Invitații",
+    "desc": "Model elegant",
     "images": [
       "/images/invitatie-florala.jpg",
       "/images/invitatie-florala-2.jpg"
     ],
-    "tags": ["roz", "floral"],
-
-    "price_from": 9.5,
-    "lead_time_days": 7,
-    "options": [
-      "Personalizare text și font",
-      "Plic asortat (+2 lei/buc)",
-      "Sigiliu ceară opțional (+3 lei/buc)"
+    "tags": [
+      "roz",
+      "floral"
     ],
-    "specs": {
-      "dimensiuni": "120×180 mm",
-      "hartie": "Ivory 300gsm",
-      "tipar": "Digital"
-    }
+    "slug": "invitatie-florala-f63571a2"
   }
 ]
