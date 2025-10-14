@@ -1,1 +1,8 @@
-{ "rewrites": [{ "source": "/produs/:slug", "destination": "/produs.html?id=:slug" }] }
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/produs/:slug", "destination": "/produs.html?id=:slug" }
+  ]
+}
