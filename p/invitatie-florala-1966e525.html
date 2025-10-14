@@ -1,0 +1,109 @@
+<!doctype html>
+  <html lang="ro">
+  <head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Invitație Florală – Boundless Collection</title>
+  <meta name="description" content="Model elegant">
+  <link rel="canonical" href="http://127.0.0.1:5501/p/invitatie-florala-1966e525.html">
+  
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="Invitație Florală – Boundless Collection">
+  <meta property="og:description" content="Model elegant">
+  <meta property="og:image" content="http://127.0.0.1:5501/images/invitatie-florala.jpg">
+  <meta property="og:url" content="http://127.0.0.1:5501/p/invitatie-florala-1966e525.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Invitație Florală – Boundless Collection">
+  <meta name="twitter:description" content="Model elegant">
+  <meta name="twitter:image" content="http://127.0.0.1:5501/images/invitatie-florala.jpg">
+  
+  <!-- JSON-LD Product -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Product",
+   "name":"Invitație Florală",
+   "image":["http://127.0.0.1:5501/images/invitatie-florala.jpg","http://127.0.0.1:5501/images/invitatie-florala-2.jpg"],
+   "description":"Model elegant",
+   "brand":{"@type":"Brand","name":"Boundless Collection"},
+   "offers":{"@type":"Offer","priceCurrency":"RON","price":"9.50",
+   "availability":"https://schema.org/InStock","url":"http://127.0.0.1:5501/p/invitatie-florala-1966e525.html"}}
+  </script>
+  
+  <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+  <header class="header">
+    <nav class="nav">
+      <a href="/" class="logo">Boundless Collection</a>
+      <a class="btn btn-light back-link" href="/">← Înapoi la catalog</a>
+    </nav>
+  </header>
+  
+  <main class="container product-page">
+    <nav class="crumbs">
+      <a href="/">Acasă</a>
+      <span aria-hidden="true">›</span>
+      <a href="/#Invitații">Invitații</a><span aria-hidden="true">›</span>
+      <span class="current">Invitație Florală</span>
+    </nav>
+  
+    <article class="product-card">
+      <header class="product-head">
+        <h1 class="product-title">Invitație Florală</h1>
+        <span class="price-badge">9.50 RON</span>
+      </header>
+  
+      <section class="product-hero">
+        <figure class="gallery">
+          <div class="gallery-main">
+            <img id="mainImg" src="../images/invitatie-florala.jpg" alt="Invitație Florală" loading="eager">
+          </div>
+          
+          <div class="thumbs">
+            
+              <button class="thumb" data-src="../images/invitatie-florala.jpg" aria-label="Imagine 1">
+                <img src="../images/invitatie-florala.jpg" alt="Invitație Florală – miniatura 1" loading="lazy">
+              </button>
+              <button class="thumb" data-src="../images/invitatie-florala-2.jpg" aria-label="Imagine 2">
+                <img src="../images/invitatie-florala-2.jpg" alt="Invitație Florală – miniatura 2" loading="lazy">
+              </button>
+          </div>
+        </figure>
+  
+        <div class="product-info">
+          <p class="lead">Model elegant</p>
+  
+          <ul class="tags">
+                 <li>roz</li><li>floral</li>
+               </ul>
+  
+          <div class="actions">
+            <a class="btn btn-light" href="/" onclick="event.preventDefault(); history.back()">⟵ Înapoi</a>
+            <a class="btn btn-primary" href="https://wa.me/40706617724?text=Bun%C4%83!%20A%C8%99%20dori%20detalii%20despre%3A%20Invita%C8%9Bie%20Floral%C4%83%20(http%3A%2F%2F127.0.0.1%3A5501%2Fp%2Finvitatie-florala-1966e525.html)" target="_blank" rel="noopener">✉️ Scrie-ne pe WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  
+  <footer class="footer">
+    <small>© <span id="year"></span> Boundless Collection</small>
+  </footer>
+  
+  <script>
+    // anul din footer
+    document.getElementById('year').textContent=new Date().getFullYear();
+  
+    // schimbă imaginea principală la click pe thumbnail
+    const mainImg = document.getElementById('mainImg');
+    document.querySelectorAll('.thumb').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const src = btn.getAttribute('data-src');
+        if (src) mainImg.src = src;
+        // stări active vizuale
+        document.querySelectorAll('.thumb').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+  </body>
+  </html>
