@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delia's – Invitații, papetărie nuntă & mărturii din ceară de soia</title>
+  <meta name="description" content="Invitații de nuntă, plicuri de dar, meniuri, numere de masă și mărturii din ceară de soia parfumate. Realizate cu grijă, în nuanțe alb–roz." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --rose:#f7cfe1;          /* roz pal */
+      --rose-2:#f9e7ef;        /* roz foarte deschis */
+      --rose-3:#eaa8c5;        /* roz accent */
+      --white:#ffffff;
+      --text:#2a2a2a;
+      --muted:#6b6b6b;
+      --shadow: 0 10px 30px rgba(234,168,197,.25);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(180deg,var(--white),var(--rose-2));}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1100px,92%);margin-inline:auto}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid #ffeaf3}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{display:flex;gap:.8rem;align-items:center}
+    .brand-logo{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--rose),var(--white));display:grid;place-items:center;box-shadow:var(--shadow);overflow:hidden}
+    .brand-logo span{font-weight:600;color:#ad5f86}
+    .brand-title{font-weight:600}
+    nav ul{list-style:none;display:flex;gap:1rem;padding:0;margin:0}
+    nav a{padding:.55rem .8rem;border-radius:999px}
+    nav a:hover{background:var(--rose-2)}
+    .cta{background:var(--rose);border:1px solid #ffd8e7;box-shadow:var(--shadow)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:2.5rem 0 1.5rem}
+    .hero-card{background:var(--white);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow)}
+    .hero h1{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.15;margin:0 0 .6rem}
+    .hero p{color:var(--muted);margin:0 0 1rem}
+    .badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+    .badge{background:var(--rose-2);border:1px solid #ffd8e7;padding:.45rem .7rem;border-radius:999px;font-size:.85rem}
+    .hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .hero-img .placeholder{aspect-ratio:1/1;background:radial-gradient(circle at 30% 20%, var(--rose) 0 35%, var(--white) 35% 100%);display:grid;place-items:center;color:#9a5a78;font-weight:600}
+
+    /* Services */
+    section{padding:2.2rem 0}
+    .section-title{font-size:1.6rem;margin:0 0 .8rem}
+    .section-sub{margin:0 0 1.2rem;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1.1rem}
+    .card{grid-column:span 4;background:var(--white);border:1px solid #ffe1ee;border-radius:var(--radius);padding:1rem;box-shadow:var(--shadow)}
+    .card h3{margin:.3rem 0 .1rem;font-size:1.05rem}
+    .card p{margin:.25rem 0;color:var(--muted)}
+
+    /* Gallery / Shop */
+    .toolbar{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;justify-content:space-between;margin-bottom:1rem}
+    .search{flex:1;min-width:220px;display:flex;gap:.5rem}
+    .search input{flex:1;padding:.7rem .9rem;border-radius:999px;border:1px solid #ffd8e7;background:#fff}
+    .filter{display:flex;gap:.4rem;flex-wrap:wrap}
+    .filter button{padding:.55rem .9rem;border-radius:999px;border:1px solid #ffd8e7;background:#fff;cursor:pointer}
+    .filter button[aria-pressed="true"], .filter button:hover{background:var(--rose-2)}
+    .products.grid .item{grid-column:span 3;background:#fff;border:1px solid #ffe1ee;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+    .item .media{aspect-ratio:4/3;background:var(--rose-2);display:grid;place-items:center}
+    .item .content{padding:.9rem}
+    .price{font-weight:600;color:#9a5a78}
+    .pill{font-size:.8rem;color:#9a5a78;background:#fff0f6;border:1px solid #ffd8e7;border-radius:999px;padding:.25rem .6rem}
+    .muted{color:var(--muted)}
+    .actions{display:flex;gap:.6rem;margin-top:auto;padding:.9rem;border-top:1px solid #ffe8f2}
+    .btn{flex:1;padding:.6rem .8rem;border-radius:12px;border:1px solid #ffd8e7;background:#fff;cursor:pointer}
+    .btn.primary{background:var(--rose);font-weight:600}
+
+    /* Admin (local, fără server) */
+    details.admin{margin-top:1.2rem;border:1px dashed #ffcade;border-radius:var(--radius);padding:1rem;background:#fff}
+    .admin form{display:grid;gap:.6rem;grid-template-columns:repeat(6,1fr)}
+    .admin label{font-size:.9rem;color:var(--muted)}
+    .admin input,.admin textarea,.admin select{width:100%;padding:.55rem .7rem;border:1px solid #ffd8e7;border-radius:10px;background:#fff}
+    .admin textarea{grid-column:span 6;min-height:70px}
+    .admin .col-3{grid-column:span 3}
+    .admin .col-2{grid-column:span 2}
+    .admin .col-6{grid-column:span 6}
+    .admin .help{font-size:.85rem;color:#9a5a78}
+
+    /* About + Contact */
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+    .about .panel{background:#fff;border:1px solid #ffe1ee;border-radius:var(--radius);padding:1.1rem;box-shadow:var(--shadow)}
+    .contact form{display:grid;gap:.7rem}
+    .contact input, .contact textarea{padding:.7rem .9rem;border:1px solid #ffd8e7;border-radius:12px;background:#fff}
+
+    /* Footer */
+    footer{margin-top:2rem;padding:1.2rem 0;background:#fff;border-top:1px solid #ffe8f2;color:#7a6b73}
+
+    /* Responsive */
+    @media (max-width: 960px){
+      .hero{grid-template-columns:1fr}
+      .card{grid-column:span 6}
+      .products.grid .item{grid-column:span 6}
+      .about{grid-template-columns:1fr}
+    }
+    @media (max-width: 540px){
+      .card{grid-column:span 12}
+      .products.grid .item{grid-column:span 12}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <div class="brand-logo" aria-hidden="true"><span>DC</span></div>
+        <div class="brand-title">Delia's Candles & Papetărie</div>
+      </a>
+      <nav aria-label="Meniu principal">
+        <ul>
+          <li><a href="#servicii">Servicii</a></li>
+          <li><a href="#produse">Galerie/Produse</a></li>
+          <li><a href="#despre">Despre</a></li>
+          <li><a href="https://www.instagram.com/marturiiboundlesscollection_?igsh=YThvYm82ZHBhbnFh&utm_source=qr" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/16TEGEfgGs/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-card">
+      <h1>Invitații de nuntă & papetărie personalizată • Mărturii din ceară de soia parfumate</h1>
+      <p>Te ajut să transformi evenimentul tău într-o poveste: de la invitații și plicuri de dar, la meniuri, numere de masă și 
+        mărturii parfumate din ceară de soia – toate în stil elegant.</p>
+      <div class="badges" aria-label="Categorii principale">
+        <span class="badge">Invitații</span>
+        <span class="badge">Plicuri de dar</span>
+        <span class="badge">Meniuri</span>
+        <span class="badge">Numere de masă</span>
+        <span class="badge">Mărturii din soia</span>
+      </div>
+    </div>
+    <figure class="hero-img">
+      <img src="D.png" alt="Delia – brand portrait cu mărturii din ceară de soia" />
+    </figure>
+  </section>
+
+  <!-- SERVICII -->
+  <section id="servicii" class="container">
+    <h2 class="section-title">Servicii</h2>
+    <p class="section-sub">Lucrăm la comandă, cu mostre, propuneri de design și consultanță de la idee până la produsul final.</p>
+
+    <div class="grid">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1519681393784-6f2cb90b72a1?q=80&w=1500&auto=format&fit=crop" alt="Invitații de nuntă delicate în tonuri alb-roz" />
+        <h3>Invitații de nuntă</h3>
+        <p>Design personalizat în stilul evenimentului tău. Hârtie premium, panglici, sigilii cu ceară, print față-verso.</p>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1527259232211-2a12fda1d24a?q=80&w=1500&auto=format&fit=crop" alt="Plicuri de dar roz pal" />
+        <h3>Plicuri de dar</h3>
+        <p>Asortate cu invitația și tema nunții. Posibilitate de personalizare cu inițiale sau monogramă.</p>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1500&auto=format&fit=crop" alt="Meniuri și numere de masă" />
+        <h3>Meniuri & numere de masă</h3>
+        <p>Tipar special, finisaje fine și layout clar pentru o masă elegantă și organizată.</p>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=1500&auto=format&fit=crop" alt="Mărturii din ceară de soia parfumate" />
+        <h3>Mărturii din ceară de soia parfumate</h3>
+        <p>Forme delicate (fluturi, ursuleți, inimioare). Arome premium, colorit subtil alb–roz.</p>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1536&auto=format&fit=crop" alt="Set papetărie complet" />
+        <h3>Seturi complete</h3>
+        <p>Pachete avantajoase pentru întreaga papetărie a evenimentului tău, cu discount progresiv.</p>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1520975922329-8273f33a69a6?q=80&w=1500&auto=format&fit=crop" alt="Consultanță și machetare" />
+        <h3>Consultanță & machetare</h3>
+        <p>Te ghidăm în alegerea stilului, fonturilor și a culorilor. Machete digitale pentru aprobare rapidă.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PRODUSE / GALERIE -->
+  <section id="produse" class="container">
+    <h2 class="section-title">Galerie & produse</h2>
+    <p class="section-sub">Adaugă rapid poze și prețuri. Totul este salvat local (în browserul tău) – util pentru testare și prezentări rapide.
+    </p>
+
+    <div class="toolbar">
+      <div class="search" role="search">
+        <input id="q" type="search" placeholder="Caută (ex: invitații, soia, plic)" aria-label="Căutare produse" />
+      </div>
+      <div class="filter" role="group" aria-label="Filtre categorie">
+        <button class="pill" data-filter="toate" aria-pressed="true">Toate</button>
+        <button class="pill" data-filter="Invitații">Invitații</button>
+        <button class="pill" data-filter="Plicuri">Plicuri</button>
+        <button class="pill" data-filter="Meniuri">Meniuri</button>
+        <button class="pill" data-filter="Numere">Numere</button>
+        <button class="pill" data-filter="Mărturii soia">Mărturii soia</button>
+        <button class="pill" data-filter="Set">Set</button>
+      </div>
+    </div>
+
+    <div class="grid products" id="grid" aria-live="polite"></div>
+
+    <details class="admin">
+      <summary><strong>Editează produsele</strong> (doar pentru tine – se salvează în acest browser)</summary>
+      <p class="help">Poți adăuga produse noi sau imagini direct din calculator. Datele se salvează în <em>localStorage</em>, fără server. Pentru site „live”, îmi poți trimite imaginile și le integrez permanent.</p>
+      <form id="form">
+        <div class="col-3">
+          <label>Denumire
+            <input required name="title" placeholder="Ex: Invitație Florală" />
+          </label>
+        </div>
+        <div class="col-2">
+          <label>Preț (RON)
+            <input required name="price" type="number" min="0" step="0.5" placeholder="12.5" />
+          </label>
+        </div>
+        <div class="col-1">
+          <label>Categorie
+            <select name="category">
+              <option>Invitații</option>
+              <option>Plicuri</option>
+              <option>Meniuri</option>
+              <option>Numere</option>
+              <option>Mărturii soia</option>
+              <option>Set</option>
+            </select>
+          </label>
+        </div>
+        <div class="col-3">
+          <label>Imagine (link URL)
+            <input name="image" type="url" placeholder="https://...jpg" />
+          </label>
+        </div>
+        <div class="col-3">
+          <label>…sau încarcă imagine
+            <input name="file" type="file" accept="image/*" />
+          </label>
+        </div>
+        <div class="col-6">
+          <label>Descriere
+            <textarea name="desc" placeholder="Detalii despre produs/aranjament"></textarea>
+          </label>
+        </div>
+        <div class="col-6">
+          <button class="btn primary" type="submit">Adaugă produs</button>
+          <button id="reset" class="btn" type="button" title="Șterge toate produsele salvate local">Reset local</button>
+        </div>
+      </form>
+    </details>
+  </section>
+
+  <!-- DESPRE & CONTACT -->
+  <section id="despre" class="container about">
+    <article class="panel">
+      <h2 class="section-title">Despre Delia</h2>
+      <p>Sunt Delia, pasionată de design și de detaliile care transformă orice eveniment într-o amintire frumoasă. Îmi place să îmbin papetăria elegantă în nuanțe <strong>alb–roz</strong> cu aromele delicate ale mărturiilor din ceară de soia. Fiecare proiect e lucrat manual, cu grijă pentru calitate și armonie vizuală.</p>
+      <p>Lucrez pe bază de comandă, iar înainte de producție primești machete digitale pentru verificare. Dacă ai deja o temă sau paletă de culori, o integrez în propunere. Dacă nu, te ajut să o găsești. 💗</p>
+    </article>
+    <article id="contact" class="panel contact">
+      <h2 class="section-title">Contact</h2>
+      <p style="margin:.2rem 0 .8rem">Preferi mesaj direct? Scrie-mi pe <a href="https://wa.me/40760617724" target="_blank" rel="noopener"><strong>WhatsApp</strong></a>, <a href="https://www.instagram.com/marturiiboundlesscollection_?igsh=YThvYm82ZHBhbnFh&utm_source=qr" target="_blank" rel="noopener">Instagram</a> sau <a href="https://www.facebook.com/share/16TEGEfgGs/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>.</p>
+      <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin:.6rem 0 1rem">
+        <a class="btn primary" href="https://wa.me/40760617724" target="_blank" rel="noopener">💬 Deschide WhatsApp</a>
+        <a class="btn" href="https://www.instagram.com/marturiiboundlesscollection_?igsh=YThvYm82ZHBhbnFh&utm_source=qr" target="_blank" rel="noopener">📸 Instagram</a>
+        <a class="btn" href="https://www.facebook.com/share/16TEGEfgGs/?mibextid=wwXIfr" target="_blank" rel="noopener">📘 Facebook</a>
+      </div>
+      <form onsubmit="event.preventDefault(); alert('Mulțumesc! Te voi contacta în curând.'); this.reset();">
+        <input required placeholder="Nume" />
+        <input required type="email" placeholder="Email" />
+        <input placeholder="Telefon" />
+        <textarea required placeholder="Mesajul tău (ex: număr invitați, stil dorit)"></textarea>
+        <button class="btn primary" type="submit">Trimite</button>
+      </form>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.8rem;margin-top:1rem">
+        <figure style="border:1px solid #ffe1ee;border-radius:12px;padding:.6rem;background:#fff"><img src="insta-qr.png" alt="QR Instagram"/><figcaption class="muted" style="margin-top:.3rem">Scanează pentru Instagram</figcaption></figure>
+        <figure style="border:1px solid #ffe1ee;border-radius:12px;padding:.6rem;background:#fff"><img src="Fb.jpg" alt="QR Facebook"/><figcaption class="muted" style="margin-top:.3rem">Scanează pentru Facebook</figcaption></figure>
+        <figure style="border:1px solid #ffe1ee;border-radius:12px;padding:.6rem;background:#fff"><img src="WhatsApp Image 2025-10-07 at 11.25.05_b1936d3a.jpg" alt="QR WhatsApp"/><figcaption class="muted" style="margin-top:.3rem">Scanează pentru WhatsApp</figcaption></figure>
+      </div>
+      <p class="muted" style="margin-top:.6rem">Poți scrie și pe Facebook / Instagram – am adăugat link-urile tale.</p>
+    </article>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+      <small>© <span id="year"></span> Delia's Candles & Papetărie · Toate drepturile rezervate</small>
+      <small>Realizat cu drag în nuanțe alb–roz ✨</small>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" title="Scrie pe WhatsApp">
+    💬 <span>Scrie-mi pe WhatsApp</span>
+    </a>
+
+  <script>
+    // --------- Date demo (se încarcă o singură dată) ---------
+    const demo = [
+      {id:crypto.randomUUID(), title:"Invitație Florală", price:9.5, category:"Invitații", desc:"Model elegant cu sigiliu din ceară.", image:"https://images.unsplash.com/photo-1519681393784-6f2cb90b72a1?q=80&w=1200&auto=format&fit=crop"},
+      {id:crypto.randomUUID(), title:"Plic de dar Roz Pal", price:6, category:"Plicuri", desc:"Carton texturat, fundă satin.", image:"https://images.unsplash.com/photo-1527259232211-2a12fda1d24a?q=80&w=1200&auto=format&fit=crop"},
+      {id:crypto.randomUUID(), title:"Meniu Elegant", price:7.5, category:"Meniuri", desc:"Print calitativ, fonturi moderne.", image:"https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1200&auto=format&fit=crop"},
+      {id:crypto.randomUUID(), title:"Număr de masă Minimal", price:5, category:"Numere", desc:"Aspect curat, ușor de citit.", image:"https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop"},
+      {id:crypto.randomUUID(), title:"Mărturie Soia – Fluture", price:12, category:"Mărturii soia", desc:"Aromă florală discretă.", image:"https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=1200&auto=format&fit=crop"},
+      {id:crypto.randomUUID(), title:"Set Papetărie Roz", price:39, category:"Set", desc:"Invitație + plic + meniu + număr.", image:"https://images.unsplash.com/photo-1520975922329-8273f33a69a6?q=80&w=1200&auto=format&fit=crop"}
+    ];
+
+    const KEY = "delia_products_v1";
+    const $ = (sel, root=document) => root.querySelector(sel);
+    const $$ = (sel, root=document) => [...root.querySelectorAll(sel)];
+
+    function load(){
+      const saved = localStorage.getItem(KEY);
+      if(!saved){
+        localStorage.setItem(KEY, JSON.stringify(demo));
+        return demo;
+      }
+      try{ return JSON.parse(saved) }catch{ return demo }
+    }
+    function save(data){ localStorage.setItem(KEY, JSON.stringify(data)); }
+
+    let PRODUCTS = load();
+
+    // --------- Render produse ---------
+    const grid = $("#grid");
+    const q = $("#q");
+    const filterBtns = $$(".filter button");
+    let activeFilter = "toate";
+
+    function card(p){
+      return `
+        <article class="item">
+          <div class="media">${p.image ? `<img src="${p.image}" alt="${p.title}">` : "<span>Fără imagine</span>"}</div>
+          <div class="content">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
+              <h3 style="margin:0;font-size:1rem">${p.title}</h3>
+              <span class="pill">${p.category}</span>
+            </div>
+            <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ""}</p>
+            <div class="price">${Number(p.price).toFixed(2)} RON</div>
+          </div>
+          <div class="actions">
+            <button class="btn" onclick="share('${p.title}')">Distribuie</button>
+            <button class="btn primary" onclick="inquire('${p.title}')">Solicită ofertă</button>
+          </div>
+        </article>`
+    }
+
+    function render(){
+      const term = q.value.toLowerCase();
+      const items = PRODUCTS.filter(p => {
+        const hitTerm = [p.title,p.desc,p.category].join(" ").toLowerCase().includes(term);
+        const hitCat = activeFilter === "toate" || p.category === activeFilter;
+        return hitTerm && hitCat;
+      });
+      grid.innerHTML = items.map(card).join("");
+    }
+
+    q.addEventListener('input', render);
+    filterBtns.forEach(btn => btn.addEventListener('click', () =>{
+      filterBtns.forEach(b=>b.setAttribute('aria-pressed','false'));
+      btn.setAttribute('aria-pressed','true');
+      activeFilter = btn.dataset.filter;
+      render();
+    }));
+
+    // --------- Admin: adăugare produs ---------
+    const form = $("#form");
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const fd = new FormData(form);
+      let image = fd.get('image');
+      const file = fd.get('file');
+      if(file && file.size){
+        image = await toDataURL(file);
+      }
+      const p = {
+        id: crypto.randomUUID(),
+        title: fd.get('title'),
+        price: Number(fd.get('price')),
+        category: fd.get('category'),
+        desc: fd.get('desc'),
+        image
+      };
+      PRODUCTS.unshift(p);
+      save(PRODUCTS);
+      form.reset();
+      render();
+    });
+
+    $("#reset").addEventListener('click',()=>{
+      if(confirm('Ștergi toate produsele salvate local?')){
+        localStorage.removeItem(KEY);
+        PRODUCTS = load();
+        render();
+      }
+    });
+
+    function toDataURL(file){
+      return new Promise((res,rej)=>{
+        const r = new FileReader();
+        r.onload=()=>res(r.result);
+        r.onerror=rej;
+        r.readAsDataURL(file);
+      })
+    }
+
+    // ------- Acțiuni carduri -------
+    function inquire(title){
+      const url = location.href.split('#')[0] + '#contact';
+      alert(`Îți mulțumesc pentru interes în "${title}"! Completează formularul din secțiunea Contact.\n\nLink: ${url}`);
+      location.hash = 'contact';
+    }
+    window.inquire = inquire;
+
+    async function share(title){
+      const shareData = {title: "Delia's – Papetărie & Mărturii", text: `Îți recomand: ${title}`, url: location.href};
+      try{ if(navigator.share){ await navigator.share(shareData) } else { throw 0 } }
+      catch{ navigator.clipboard?.writeText(shareData.url); alert('Link copiat!'); }
+    }
+    window.share = share;
+
+    // Init
+    $('#year').textContent = new Date().getFullYear();
+    render();
+  </script>
+</body>
+</html>
