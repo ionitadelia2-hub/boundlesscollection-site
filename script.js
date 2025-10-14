@@ -9,41 +9,53 @@ const grid       = $('#grid');
 const q          = $('#q');
 const filterBtns = $$('.filter .pill');
 
+const slug = s => (s||"")
+  .toString()
+  .normalize("NFD").replace(/[\u0300-\u036f]/g,"") // fără diacritice
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g,"-")
+  .replace(/(^-|-$)+/g,"")
+  .slice(0,80);
+
 /* =============== Card + Render =============== */
 function card(p){
   const imgs   = Array.isArray(p.images) ? p.images : [];
   const dots   = imgs.map((_,i)=>`<i class="${i===0?'active':''}"></i>`).join('');
   const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy">`).join('');
+  const to = `/produs/${encodeURIComponent(p.slug || p.id || slug(p.title))}`;
 
   return `
-  <article class="item" data-id="${p.id}">
-    <div class="media">
-      <div class="slide-track" data-index="0">
-        ${slides || `<img src="" alt="${p.title}" class="active" style="opacity:.25">`}
+  <article class="item" data-id="${p.id}" tabindex="0">
+    <a class="card-link" href="${to}" aria-label="Vezi detalii ${p.title}">
+      <div class="media">
+        <div class="slide-track" data-index="0">
+          ${slides || `<img src="" alt="${p.title}" class="active" style="opacity:.25">`}
+        </div>
+        ${imgs.length>1 ? `
+        <div class="slider-nav">
+          <button class="prev" type="button" aria-label="Anterior">‹</button>
+          <button class="next" type="button" aria-label="Următor">›</button>
+        </div>
+        <div class="slider-dots">${dots}</div>` : ``}
       </div>
-      ${imgs.length>1 ? `
-      <div class="slider-nav">
-        <button class="prev" aria-label="Anterior">‹</button>
-        <button class="next" aria-label="Următor">›</button>
-      </div>
-      <div class="slider-dots">${dots}</div>` : ``}
-    </div>
 
-    <div class="content">
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
-        <h3 style="margin:0;font-size:1rem">${p.title}</h3>
-        <span class="pill">${p.category}</span>
+      <div class="content">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
+          <h3 style="margin:0;font-size:1rem">${p.title}</h3>
+          <span class="pill">${p.category}</span>
+        </div>
+        <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ""}</p>
+        <div class="price">${Number(p.price).toFixed(2)} RON</div>
       </div>
-      <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ""}</p>
-      <div class="price">${Number(p.price).toFixed(2)} RON</div>
-    </div>
+    </a>
 
     <div class="actions">
-      <button class="btn" onclick="share('${p.title}')">Distribuie</button>
-      <button class="btn primary" onclick="inquire('${p.title}')">Solicită ofertă</button>
+      <button class="btn" type="button" onclick="share('${p.title}')">Distribuie</button>
+      <button class="btn primary" type="button" onclick="inquire('${p.title}')">Solicită ofertă</button>
     </div>
   </article>`;
 }
+
 
 function render(){
   if (!grid) return;
@@ -67,13 +79,14 @@ async function loadProducts(){
     if(!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
     // normalizare minimă:
     PRODUCTS = data.map(p => ({
-      id: p.id || crypto.randomUUID(),
-      title: p.title || '',
-      price: Number(p.price || 0),
-      category: p.category || '',
-      desc: p.desc || '',
-      images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : [])
-    }));
+  id: p.id || crypto.randomUUID(),
+  title: p.title || '',
+  price: Number(p.price || 0),
+  category: p.category || '',
+  desc: p.desc || '',
+  images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
+  slug: p.slug || slug(p.title), // <- important
+}));
   }catch(err){
     console.error(err);
     PRODUCTS = []; // fallback gol
