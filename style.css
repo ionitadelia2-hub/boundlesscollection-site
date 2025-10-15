@@ -885,3 +885,29 @@ header .price-badge {
 .back-link{ margin-left:auto; }
 
 .logo{ font-weight:800; letter-spacing:.2px; text-decoration:none; }
+
+/* Pagina de produs: titlu + preț centrate */
+.product-page .product-head{
+  display: flex;
+  flex-direction: column;   /* titlu deasupra, prețul dedesubt */
+  align-items: center;      /* centrează pe orizontală */
+  gap: .5rem;
+  text-align: center;
+}
+
+.product-page .price-badge{
+  margin: 0 auto;           /* siguranță: badge-ul stă pe centru */
+}
+
+/* (opțional) păstrează prețul în dreapta pe ecrane mari */
+@media (min-width: 900px){
+  .product-page.wide-right .product-head{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .product-page.wide-right .price-badge{
+    margin: 0;              /* revine în dreapta */
+  }
+}
