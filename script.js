@@ -17,6 +17,12 @@ const slug = s => (s||"")
   .replace(/(^-|-$)+/g,"")
   .slice(0,80);
 
+// normalizare pt. comparații (căutare/filtrare)
+const norm = s => (s||"")
+  .toString()
+  .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+  .toLowerCase().trim();
+
 /* =============== Card + Render =============== */
 function card(p){
   const imgs   = Array.isArray(p.images) ? p.images : [];
@@ -60,12 +66,17 @@ function card(p){
 
 function render(){
   if (!grid) return;
-  const term = (q?.value || '').toLowerCase();
+  const term = norm(q?.value || '');
+
   const items = PRODUCTS.filter(p=>{
-    const hitTerm = [p.title, p.desc, p.category].join(' ').toLowerCase().includes(term);
-    const hitCat  = activeFilter==='toate' || p.category===activeFilter;
+    const hay = norm([p.title, p.desc, p.category, ...(p.tags||[])].join(' '));
+    const hitTerm = !term || hay.includes(term);
+    const hitCat  = activeFilter === 'toate'
+                 || p.categoryKey === activeFilter
+                 || (p.tagsKey && p.tagsKey.includes(activeFilter));
     return hitTerm && hitCat;
   });
+
   grid.innerHTML = items.map(card).join('');
 
   // butoanele din card
@@ -93,15 +104,21 @@ async function loadProducts(){
     const data = await res.json();
     if(!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
 
-    PRODUCTS = data.map(p => ({
-      id: p.id || crypto.randomUUID(),
-      title: p.title || '',
-      price: Number(p.price || 0),
-      category: p.category || '',
-      desc: p.desc || '',
-      images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
-      slug: p.slug || slug(p.title),
-    }));
+    PRODUCTS = data.map(p => {
+      const tags = Array.isArray(p.tags) ? p.tags : [];
+      return {
+        id: p.id || crypto.randomUUID(),
+        title: p.title || '',
+        price: Number(p.price || 0),
+        category: p.category || '',
+        categoryKey: norm(p.category || ''),      // <- pentru filtrare
+        desc: p.desc || '',
+        images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
+        slug: p.slug || slug(p.title),
+        tags,
+        tagsKey: tags.map(norm)                   // <- pentru filtrare
+      };
+    });
   }catch(err){
     console.error(err);
     PRODUCTS = []; // fallback gol
@@ -192,7 +209,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
   filterBtns.forEach(btn => btn.addEventListener('click', ()=>{
     filterBtns.forEach(b=>b.setAttribute('aria-pressed','false'));
     btn.setAttribute('aria-pressed','true');
-    activeFilter = btn.dataset.filter;
+    activeFilter = norm(btn.dataset.filter || 'toate'); // <- normalizat
     render();
   }));
 
