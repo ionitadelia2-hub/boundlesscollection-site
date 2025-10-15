@@ -789,20 +789,29 @@ a:active {
   padding:clamp(1rem,3vw,2rem);
 }
 
-.product-head{
-  display:flex; align-items:center; gap:1rem; justify-content:space-between;
-  margin-bottom:1rem;
-}
 .product-title{
   font-size:clamp(1.5rem,3vw,2rem);
   margin:0; line-height:1.2; color:var(--text);
 }
+/* Badge preț – clar, contrast bun */
 .price-badge{
-  background:rgba(255,105,180,.12); /* roz foarte fin */
-  color:var(--rose-2, #b0456b);
-  border:1px solid rgba(255,105,180,.25);
-  padding:.4rem .8rem; border-radius:999px; font-weight:700;
-  font-variant-numeric:tabular-nums;
+  display:inline-block;
+  padding:.45rem .9rem;
+  border-radius:999px;
+  font-weight:600;
+  font-size:.95rem;
+  line-height:1;
+  color:#a23366;               /* text vizibil */
+  background:#ffe6f0;          /* roz pal, dar plin */
+  border:1px solid #f7b8d0;    /* contur fin */
+  box-shadow:0 1px 0 rgba(0,0,0,.03);
+  opacity:1 !important;        /* forțează să nu fie translucid */
+}
+
+/* Dacă există vreo regulă care dă opacitate, o anulăm */
+.product-head .price-badge,
+header .price-badge {
+  opacity:1 !important;
 }
 
 .product-hero{
