@@ -26,22 +26,34 @@ function getId(){
 
 /* --------- main --------- */
 async function main(){
+  // debug: unde suntem și ce cheie (id/slug) citim din URL
+  console.log('[product.js] location.pathname =', location.pathname);
   const key = getId();
-  if (!key) return renderNotFound("Produs indisponibil");
+  console.log('[product.js] id/slug din URL =', key);
+
+  if (!key) {
+    renderNotFound("Produs indisponibil");
+    return;
+  }
 
   try {
     const list = await fetchProducts();
+    console.log('[product.js] produse încărcate =', Array.isArray(list) ? list.length : 'N/A');
 
-    // MATCH după id, slug sau slug(titlu)
+    // match după id, slug sau slug(titlu)
     const prod = list.find(p =>
       String(p.id) === key ||
       p.slug === key ||
       slug(p.title) === key
     );
+    console.log('[product.js] produs găsit =', prod);
 
-    if (!prod) return renderNotFound("Produsul nu a fost găsit.");
+    if (!prod) {
+      renderNotFound("Produsul nu a fost găsit.");
+      return;
+    }
 
-    // (opțional) canonicalizează URL-ul: /produs/<slug|id>
+    // opțional: normalizează URL-ul (slug canonic)
     const canonical = prod.slug || String(prod.id) || slug(prod.title);
     if (key !== canonical) {
       history.replaceState(null, "", `/produs/${encodeURIComponent(canonical)}`);
@@ -49,9 +61,10 @@ async function main(){
 
     renderProduct(prod);
   } catch (e) {
-    console.error(e);
+    console.error('[product.js] EROARE în main()', e);
     renderNotFound("Nu am putut încărca produsul.");
   }
 }
+
 
 document.addEventListener('DOMContentLoaded', main);
