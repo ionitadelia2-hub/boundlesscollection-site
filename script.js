@@ -97,7 +97,7 @@ function render(){
 /* =============== Loader JSON =============== */
 async function loadProducts(){
   try{
-    const res = await fetch('/content/products.json?cachebust=' + Date.now(), {
+    const res = await fetch('./content/products.json?cachebust=' + Date.now(), {
       headers: { 'Accept': 'application/json' }
     });
     if(!res.ok) throw new Error('Nu s-a putut încărca products.json');
