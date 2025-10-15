@@ -116,7 +116,7 @@ function render(){
 async function loadProducts(){
   try{
     // calea sigură, relativă
-    const res = await fetch('./products.json?cachebust=' + Date.now(), {
+    const res = await fetch('./content/products.json?cachebust=' + Date.now(), {
       headers: { 'Accept': 'application/json' }
     });
     if(!res.ok) throw new Error('Nu s-a putut încărca products.json');
