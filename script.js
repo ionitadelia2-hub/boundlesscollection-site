@@ -21,15 +21,19 @@ const slug = s => (s||"")
 function card(p){
   const imgs   = Array.isArray(p.images) ? p.images : [];
   const dots   = imgs.map((_,i)=>`<i class="${i===0?'active':''}"></i>`).join('');
-  const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy">`).join('');
-  const to = `/produs/${encodeURIComponent(p.slug || p.id || slug(p.title))}`;
+  const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy" decoding="async">`).join('');
+
+  // aleg ce pun în URL: slug > id > slug(titlu)
+  const linkId = p.slug || p.id || slug(p.title);
+  const href   = `/produs/${encodeURIComponent(linkId)}`; // merge și cu rewrite-ul vercel
+  // alternativ clasic: const href = `/produs.html?id=${encodeURIComponent(linkId)}`;
 
   return `
-  <article class="item" data-id="${p.id}" tabindex="0">
-    <a class="card-link" href="${to}" aria-label="Vezi detalii ${p.title}">
+  <article class="item" data-id="${p.id}">
+    <a class="card-link" href="${href}" aria-label="Vezi detalii ${p.title}">
       <div class="media">
         <div class="slide-track" data-index="0">
-          ${slides || `<img src="" alt="${p.title}" class="active" style="opacity:.25">`}
+          ${slides || `<img src="/images/preview.jpg" alt="${p.title}" class="active" style="opacity:.25">`}
         </div>
         ${imgs.length>1 ? `
         <div class="slider-nav">
@@ -50,11 +54,12 @@ function card(p){
     </a>
 
     <div class="actions">
-      <button class="btn" type="button" onclick="share('${p.title}')">Distribuie</button>
-      <button class="btn primary" type="button" onclick="inquire('${p.title}')">Solicită ofertă</button>
+      <button class="btn" type="button" data-act="share">Distribuie</button>
+      <button class="btn primary" type="button" data-act="inquire">Solicită ofertă</button>
     </div>
   </article>`;
 }
+
 
 
 function render(){
