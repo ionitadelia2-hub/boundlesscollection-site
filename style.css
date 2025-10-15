@@ -795,7 +795,7 @@ a:active {
 }
 /* Badge preț – clar, contrast bun */
 .price-badge{
-  display:center;
+  display:inline-block;
   padding:.45rem .9rem;
   border-radius:999px;
   font-weight:600;
