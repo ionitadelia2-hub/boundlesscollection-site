@@ -11,7 +11,7 @@ const filterBtns = $$('.filter .pill');
 
 const slug = s => (s||"")
   .toString()
-  .normalize("NFD").replace(/[\u0300-\u036f]/g,"") // fără diacritice
+  .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
   .toLowerCase()
   .replace(/[^a-z0-9]+/g,"-")
   .replace(/(^-|-$)+/g,"")
@@ -22,6 +22,21 @@ const norm = s => (s||"")
   .toString()
   .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
   .toLowerCase().trim();
+
+/* Aliasuri prietenoase între butoane și categorii/taguri */
+const ALIASES = {
+  'plicuri': ['plicuri', 'plicuri de dar', 'plic'],
+  'marturii soia': ['marturii soia', 'marturii', 'marturii din ceara de soia'],
+  'aranjamente florale': ['aranjamente florale', 'aranjamente'],
+  'set': ['set', 'seturi'],
+  'numere': ['numere', 'numere de masa'],
+  'meniuri': ['meniuri', 'meniu'],
+  'invitatii': ['invitatii', 'invitații', 'invitaţie', 'invitație']
+};
+const matchesAlias = (candidate, filterKey) => {
+  const options = ALIASES[filterKey] || [filterKey];
+  return options.some(opt => candidate.includes(opt));
+};
 
 /* =============== Card + Render =============== */
 function card(p){
@@ -51,10 +66,10 @@ function card(p){
         <h3 style="margin:0;font-size:1rem">
           <a href="${href}" class="card-title-link">${p.title}</a>
         </h3>
-        <span class="pill">${p.category}</span>
+        <span class="pill">${p.category || ''}</span>
       </div>
       <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ""}</p>
-      <div class="price">${Number(p.price).toFixed(2)} RON</div>
+      <div class="price">${Number(p.price||0).toFixed(2)} RON</div>
     </div>
 
     <div class="actions">
@@ -71,9 +86,12 @@ function render(){
   const items = PRODUCTS.filter(p=>{
     const hay = norm([p.title, p.desc, p.category, ...(p.tags||[])].join(' '));
     const hitTerm = !term || hay.includes(term);
-    const hitCat  = activeFilter === 'toate'
-                 || p.categoryKey === activeFilter
-                 || (p.tagsKey && p.tagsKey.includes(activeFilter));
+
+    // filtrare pe categorie + taguri, cu aliasuri
+    const hitCat = activeFilter === 'toate'
+      || matchesAlias(p.categoryKey, activeFilter)
+      || (p.tagsKey && p.tagsKey.some(t => matchesAlias(t, activeFilter)));
+
     return hitTerm && hitCat;
   });
 
@@ -97,6 +115,7 @@ function render(){
 /* =============== Loader JSON =============== */
 async function loadProducts(){
   try{
+    // calea sigură, relativă
     const res = await fetch('./content/products.json?cachebust=' + Date.now(), {
       headers: { 'Accept': 'application/json' }
     });
@@ -107,7 +126,7 @@ async function loadProducts(){
     PRODUCTS = data.map(p => {
       const tags = Array.isArray(p.tags) ? p.tags : [];
       return {
-        id: p.id || crypto.randomUUID(),
+        id: p.id || (crypto?.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2)),
         title: p.title || '',
         price: Number(p.price || 0),
         category: p.category || '',
@@ -119,6 +138,9 @@ async function loadProducts(){
         tagsKey: tags.map(norm)                   // <- pentru filtrare
       };
     });
+
+    // diagnostic: vezi câte produse s-au încărcat
+    // console.log('Loaded', PRODUCTS.length, 'items');
   }catch(err){
     console.error(err);
     PRODUCTS = []; // fallback gol
@@ -181,7 +203,7 @@ grid?.addEventListener('click', (e)=>{
     return;
   }
 
-  // click pe media (imagine / zonă liberă) => navighează la produs
+  // click pe media => navighează la produs
   const media = e.target.closest('.media');
   if (media && !e.target.closest('.slider-nav') && !e.target.closest('.slider-dots')){
     const href = media.dataset.href;
