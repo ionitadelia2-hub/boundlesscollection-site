@@ -3,33 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Boundless Collection</title>
+  <title>Invitații • Boundless Collection</title>
 
-  <!-- fonturi ca pe index -->
+  <!-- Fonturi -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- același CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- CSS (cale absolută din rădăcină) -->
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="index.html">
+      <a class="brand" href="/index.html">
         <div class="brand-logo">
-          <img src="images/delia-avatar.png" alt="Delia – Boundless Collection" />
+          <img src="/images/delia-avatar.png" alt="Delia – Boundless Collection">
         </div>
         <div class="brand-title">Boundless Collection</div>
       </a>
 
-      <!-- opțional: buton burger pentru mobil, dacă îl folosești și pe index -->
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
 
       <nav aria-label="Meniu principal">
-        <!-- IMPORTANT: id="mainmenu" pentru stilul pe orizontală -->
         <ul id="mainmenu">
-          <li><a href="index.html">Acasă</a></li>
-          <li><a href="marturii.html">Mărturii</a></li>
+          <li><a href="/index.html">Acasă</a></li>
+          <li><a href="/marturii.html">Mărturii</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </nav>
@@ -41,28 +39,34 @@
     <p class="section-sub">Invitații elegante, cu sigilii din ceară, panglici de satin și design personalizat pentru tema evenimentului tău.</p>
 
     <div class="grid products">
-      <article class="item">
+
+      <!-- Card: Invitație Florală -->
+      <a class="item" href="/produs/invitatie-florala-1d801b5c" aria-label="Vezi detalii Invitație Florală">
         <div class="media">
-          <img src="images/invitatie-florala.jpg" alt="Invitație florală">
-          <img src="images/invitatie-florala-2.jpg" alt="Invitație florală">
+          <img src="/images/invitatie-florala.jpg" alt="Invitație Florală" width="800" height="600" loading="eager" decoding="async" style="object-fit:cover;">
         </div>
         <div class="content">
-          <h3>Invitație Florală</h3>
-          <p class="muted">Design romantic, sigiliu din ceară roz pal.</p>
-          <div class="price">9.5 RON</div>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
+            <h3 style="margin:0;font-size:1rem">Invitație Florală</h3>
+            <span class="pill">Invitații</span>
+          </div>
+          <p class="muted" style="margin:.25rem 0 .6rem">Design romantic, sigiliu din ceară roz pal.</p>
+          <div class="price">9.50 RON</div>
         </div>
-      </article>
+      </a>
 
-      <article class="item">
+      <!-- Card: Set Minimalist (exemplu) -->
+      <div class="item">
         <div class="media">
-          <img src="images/invitatie-florala-2.jpg" alt="Set invitație minimalist">
+          <img src="/images/invitatie-florala-2.jpg" alt="Set Minimalist" width="800" height="600" loading="lazy" decoding="async" style="object-fit:cover;">
         </div>
         <div class="content">
           <h3>Set Minimalist</h3>
           <p class="muted">Hârtie premium, fundă din catifea.</p>
-          <div class="price">8 RON</div>
+          <div class="price">8.00 RON</div>
         </div>
-      </article>
+      </div>
+
     </div>
   </section>
 
@@ -78,9 +82,10 @@
   </a>
 
   <script>
+    // anul curent
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // burger pentru mobil (aceeași logică ca pe index)
+    // meniu mobil
     (function(){
       const btn  = document.querySelector('.nav-toggle');
       const menu = document.getElementById('mainmenu');
