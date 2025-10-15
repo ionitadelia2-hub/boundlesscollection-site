@@ -543,3 +543,23 @@ section { padding: clamp(1.6rem, 3vw, 2.8rem) 0; }
 @media (max-width:460px){
   .whatsapp-wrapper span{ display:none; }
 }
+
+/* centrează blocul mare de imagine */
+.product-page .gallery-main{
+  max-width: 520px;          /* setează o lățime rezonabilă */
+  margin: 0 auto;            /* CENTRARE pe orizontală */
+  display: block;
+}
+
+/* imaginea principală din bloc */
+.product-page .gallery-main img{
+  display: block;
+  margin: 0 auto;            /* siguranță: și ea e centrată */
+  width: 100%;
+  height: auto;
+}
+
+/* centrează și thumbnails */
+.product-page .thumbs{
+  justify-content: center;
+}
