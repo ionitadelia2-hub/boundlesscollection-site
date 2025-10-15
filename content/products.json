@@ -1,6 +1,6 @@
 [
   {
-    "id": "f63571a2-7f05-4b3a-be7e-150575c298c8",
+    "id": "1d801b5c-839f-4fff-9a5f-6b1f8d00e60b",
     "title": "Invitație Florală",
     "price": 9.5,
     "category": "Invitații",
@@ -9,10 +9,7 @@
       "/images/invitatie-florala.jpg",
       "/images/invitatie-florala-2.jpg"
     ],
-    "tags": [
-      "roz",
-      "floral"
-    ],
-    "slug": "invitatie-florala-f63571a2"
+    "tags": ["roz","floral"],
+    "slug": "invitatie-florala-1d801b5c"
   }
 ]
