@@ -396,12 +396,7 @@ footer{
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
-.product-page img {
-  max-width: 280px;
-  border-radius: 1rem;
-  object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+
 .product-page .price {
   font-size: 1.4rem;
   font-weight: bold;
