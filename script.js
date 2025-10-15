@@ -23,10 +23,8 @@ function card(p){
   const dots   = imgs.map((_,i)=>`<i class="${i===0?'active':''}"></i>`).join('');
   const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy" decoding="async">`).join('');
 
-  // aleg ce pun în URL: slug > id > slug(titlu)
   const linkId = p.slug || p.id || slug(p.title);
-  const href   = `/produs/${encodeURIComponent(linkId)}`; // merge și cu rewrite-ul vercel
-  // alternativ clasic: const href = `/produs.html?id=${encodeURIComponent(linkId)}`;
+  const href = `/produs/${encodeURIComponent(linkId)}`;
 
   return `
   <article class="item" data-id="${p.id}">
@@ -42,7 +40,6 @@ function card(p){
         </div>
         <div class="slider-dots">${dots}</div>` : ``}
       </div>
-
       <div class="content">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
           <h3 style="margin:0;font-size:1rem">${p.title}</h3>
@@ -52,13 +49,13 @@ function card(p){
         <div class="price">${Number(p.price).toFixed(2)} RON</div>
       </div>
     </a>
-
     <div class="actions">
       <button class="btn" type="button" data-act="share">Distribuie</button>
       <button class="btn primary" type="button" data-act="inquire">Solicită ofertă</button>
     </div>
   </article>`;
 }
+
 
 
 
@@ -71,6 +68,19 @@ function render(){
     return hitTerm && hitCat;
   });
   grid.innerHTML = items.map(card).join('');
+  grid.querySelectorAll('.actions .btn').forEach(btn=>{
+  btn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    e.stopPropagation();
+    const card = e.currentTarget.closest('.item');
+    const id = card?.dataset.id;
+    const p = PRODUCTS.find(x=>x.id===id);
+    if(!p) return;
+    if (btn.dataset.act === 'share') share(p.title);
+    if (btn.dataset.act === 'inquire') inquire(p.title, id);
+  });
+});
+
 }
 
 /* =============== Loader JSON =============== */
