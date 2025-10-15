@@ -563,3 +563,80 @@ section { padding: clamp(1.6rem, 3vw, 2.8rem) 0; }
 .product-page .thumbs{
   justify-content: center;
 }
+
+/* ==== Product layout: stânga poze + thumbnails, dreapta descriere ==== */
+
+/* 2 coloane pe desktop: stânga (poze) / dreapta (info) */
+.product-hero{
+  display: grid;
+  grid-template-columns: minmax(360px, 1.15fr) minmax(300px, .85fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Blocașul cu poza mare + thumbs rămâne compact, aliniat la stânga */
+.product-page .gallery,
+.product-page .gallery-main{
+  max-width: 720px;     /* ajustează dacă vrei mai lat/îngust */
+  margin: 0;            /* IMPORTANT: să nu mai fie centrat */
+}
+
+.product-page .gallery-main{
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+/* imaginea mare */
+.product-page .gallery-main img{
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;       /* păstrează raport frumos */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* thumbnails sub poză, pe centru doar în lățimea galeriei */
+.product-page .thumbs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* miniaturile pe centru sub poză */
+  gap: .55rem;
+  margin-top: .75rem;
+}
+
+/* coloana din dreapta: descriere, tag-uri, butoane */
+.product-page .product-info{
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+/* (opțional) badge-ul de preț în dreapta sus, sub titlu */
+.product-page .product-head{
+  display: flex;
+  align-items: center;
+  justify-content: center;     /* titlul pe centru */
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 980px){
+  .product-page .product-head{
+    justify-content: space-between;  /* pe desktop: titlu stânga, preț dreapta */
+  }
+}
+
+/* Responsive: sub 980px trecem pe 1 coloană și centrăm totul frumos */
+@media (max-width: 980px){
+  .product-hero{
+    grid-template-columns: 1fr;
+  }
+  .product-page .gallery,
+  .product-page .gallery-main{
+    margin: 0 auto;            /* pe mobil, poză centrată */
+  }
+  .product-page .product-head{
+    justify-content: center;   /* titlu + preț pe centru la mobil */
+  }
+}
