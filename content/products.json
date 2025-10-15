@@ -9,7 +9,10 @@
       "/images/invitatie-florala.jpg",
       "/images/invitatie-florala-2.jpg"
     ],
-    "tags": ["roz","floral"],
+    "tags": [
+      "roz",
+      "floral"
+    ],
     "slug": "invitatie-florala-1d801b5c"
   }
 ]
