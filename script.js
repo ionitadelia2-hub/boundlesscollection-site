@@ -17,13 +17,12 @@ const slug = s => (s||"")
   .replace(/(^-|-$)+/g,"")
   .slice(0,80);
 
-// normalizare pt. comparații (căutare/filtrare)
 const norm = s => (s||"")
   .toString()
   .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
   .toLowerCase().trim();
 
-/* Aliasuri prietenoase între butoane și categorii/taguri */
+/* Aliasuri între butoane și categorii/taguri */
 const ALIASES = {
   'plicuri': ['plicuri', 'plicuri de dar', 'plic'],
   'marturii soia': ['marturii soia', 'marturii', 'marturii din ceara de soia'],
@@ -31,7 +30,7 @@ const ALIASES = {
   'set': ['set', 'seturi'],
   'numere': ['numere', 'numere de masa'],
   'meniuri': ['meniuri', 'meniu'],
-  'invitatii': ['invitatii', 'invitații', 'invitaţie', 'invitație']
+  'invitatii': ['invitatii', 'invitații', 'invitatie', 'invitație']
 };
 const matchesAlias = (candidate, filterKey) => {
   const options = ALIASES[filterKey] || [filterKey];
@@ -51,7 +50,7 @@ function card(p){
   <article class="item" data-id="${p.id}">
     <div class="media" data-href="${href}">
       <div class="slide-track" data-index="0">
-        ${slides || `<img src="/images/preview.jpg" alt="${p.title}" class="active" style="opacity:.25">`}
+        ${slides || `<img src="images/preview.jpg" alt="${p.title}" class="active" style="opacity:.25">`}
       </div>
       ${imgs.length>1 ? `
       <div class="slider-nav">
@@ -87,7 +86,6 @@ function render(){
     const hay = norm([p.title, p.desc, p.category, ...(p.tags||[])].join(' '));
     const hitTerm = !term || hay.includes(term);
 
-    // filtrare pe categorie + taguri, cu aliasuri
     const hitCat = activeFilter === 'toate'
       || matchesAlias(p.categoryKey, activeFilter)
       || (p.tagsKey && p.tagsKey.some(t => matchesAlias(t, activeFilter)));
@@ -97,7 +95,6 @@ function render(){
 
   grid.innerHTML = items.map(card).join('');
 
-  // butoanele din card
   grid.querySelectorAll('.actions .btn').forEach(btn=>{
     btn.addEventListener('click', (e)=>{
       e.preventDefault();
@@ -112,39 +109,57 @@ function render(){
   });
 }
 
-/* =============== Loader JSON =============== */
-async function loadProducts(){
-  try{
-    // calea sigură, relativă
-    const res = await fetch('./content/products.json?cachebust=' + Date.now(), {
-      headers: { 'Accept': 'application/json' }
-    });
-    if(!res.ok) throw new Error('Nu s-a putut încărca products.json');
-    const data = await res.json();
-    if(!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
-
-    PRODUCTS = data.map(p => {
-      const tags = Array.isArray(p.tags) ? p.tags : [];
-      return {
-        id: p.id || (crypto?.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2)),
-        title: p.title || '',
-        price: Number(p.price || 0),
-        category: p.category || '',
-        categoryKey: norm(p.category || ''),      // <- pentru filtrare
-        desc: p.desc || '',
-        images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
-        slug: p.slug || slug(p.title),
-        tags,
-        tagsKey: tags.map(norm)                   // <- pentru filtrare
-      };
-    });
-
-    // diagnostic: vezi câte produse s-au încărcat
-    // console.log('Loaded', PRODUCTS.length, 'items');
-  }catch(err){
-    console.error(err);
-    PRODUCTS = []; // fallback gol
+/* =============== Loader JSON (multi-path, cu fallback) =============== */
+async function fetchFirst(urls){
+  for (const url of urls){
+    try{
+      const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
+      if(res.ok){
+        console.info('[products.json] loaded from:', url);
+        return await res.json();
+      }else{
+        console.warn('[products.json] not found at:', url, res.status);
+      }
+    }catch(e){
+      console.warn('[products.json] error at:', url, e?.message||e);
+    }
   }
+  throw new Error('Nu am putut încărca products.json din niciuna dintre căi.');
+}
+
+async function loadProducts(){
+  // Dacă rulează pe GitHub Pages sub /<user>.github.io/<repo>/
+  const basePath = (location.pathname.includes('/boundlesscollection-site/'))
+    ? '/boundlesscollection-site'
+    : '';
+
+  // Încearcă pe rând: rădăcina curentă, /content, și cu prefixul repo-ului
+  const candidates = [
+    './products.json?cb=' + Date.now(),
+    './content/products.json?cb=' + Date.now(),
+    `${basePath}/products.json?cb=${Date.now()}`,
+    `${basePath}/content/products.json?cb=${Date.now()}`
+  ];
+
+  const data = await fetchFirst(candidates);
+  if(!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
+
+  PRODUCTS = data.map(p => {
+    const tags = Array.isArray(p.tags) ? p.tags : [];
+    return {
+      id: p.id || (crypto?.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2)),
+      title: p.title || '',
+      price: Number(p.price || 0),
+      category: p.category || '',
+      categoryKey: norm(p.category || ''),
+      desc: p.desc || '',
+      // asigură-te că în products.json imaginile sunt fără slash inițial: "images/.."
+      images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
+      slug: p.slug || slug(p.title),
+      tags,
+      tagsKey: tags.map(norm)
+    };
+  });
 }
 
 /* =============== Acțiuni publice =============== */
@@ -184,7 +199,6 @@ grid?.addEventListener('click', (e)=>{
     dots.forEach((d, idx)=> d.classList.toggle('active', idx===i));
   };
 
-  // prev / next
   const prev = e.target.closest('.prev');
   const next = e.target.closest('.next');
   if (prev || next){
@@ -194,7 +208,6 @@ grid?.addEventListener('click', (e)=>{
     return;
   }
 
-  // dots
   const dot = e.target.closest('.slider-dots i');
   if (dot){
     e.preventDefault(); e.stopPropagation();
@@ -203,7 +216,6 @@ grid?.addEventListener('click', (e)=>{
     return;
   }
 
-  // click pe media => navighează la produs
   const media = e.target.closest('.media');
   if (media && !e.target.closest('.slider-nav') && !e.target.closest('.slider-dots')){
     const href = media.dataset.href;
@@ -225,28 +237,29 @@ grid?.addEventListener('touchend', (e)=>{
   btn?.click();
 },{passive:true});
 
-/* =============== Init pe DOMContentLoaded =============== */
+/* =============== Init =============== */
 window.addEventListener('DOMContentLoaded', async ()=>{
-  // filtre
   filterBtns.forEach(btn => btn.addEventListener('click', ()=>{
     filterBtns.forEach(b=>b.setAttribute('aria-pressed','false'));
     btn.setAttribute('aria-pressed','true');
-    activeFilter = norm(btn.dataset.filter || 'toate'); // <- normalizat
+    activeFilter = norm(btn.dataset.filter || 'toate');
     render();
   }));
 
-  // search
   q?.addEventListener('input', render);
 
-  // anul curent în footer
   const year = $('#year'); if (year) year.textContent = new Date().getFullYear();
 
-  // încarcă & randează
-  await loadProducts();
+  try{
+    await loadProducts();
+  }catch(err){
+    console.error(err);
+    alert('Nu s-a putut încărca lista de produse. Vezi consola pentru detalii.');
+  }
   render();
 });
 
-/* =============== Meniu mobil (hamburger) =============== */
+/* =============== Meniu mobil =============== */
 (function(){
   const btnHamb  = document.querySelector('.nav-toggle');
   const mainMenu = document.querySelector('#mainmenu');
@@ -254,7 +267,6 @@ window.addEventListener('DOMContentLoaded', async ()=>{
   const ddBtn    = dd?.querySelector('.dropbtn');
   const ddMenu   = dd?.querySelector('.menu');
 
-  // deschide/închide panoul mobil
   if (btnHamb && mainMenu){
     btnHamb.addEventListener('click', (e)=>{
       e.preventDefault();
@@ -266,7 +278,6 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     });
   }
 
-  // dropdown “Produse” (în meniu)
   if (dd && ddBtn && ddMenu){
     const close = ()=>{ 
       dd.classList.remove('open'); 
@@ -285,7 +296,6 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     document.addEventListener('keydown', (e)=>{ if (e.key==='Escape') close(); });
   }
 
-  // click în afara panoului mobil => închide
   document.addEventListener('click', (e)=>{
     if (!document.body.classList.contains('menu-open')) return;
     const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
@@ -297,7 +307,6 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     }
   });
 
-  // ESC închide panoul mobil
   document.addEventListener('keydown', (e)=>{
     if (e.key !== 'Escape') return;
     if (document.body.classList.contains('menu-open')){
