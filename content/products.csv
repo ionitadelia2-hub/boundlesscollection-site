@@ -1,2 +1,6 @@
 id,title,price,category,desc,images,tags
-1d801b5c-839f-4fff-9a5f-6b1f8d00e60b,Invitație Florală,9.5,Invitații,Model elegant,/images/invitatie-florala.jpg|/images/invitatie-florala-2.jpg,roz|floral
+inv-001,Invitație Florală,9.5,Invitații,Model elegant,"images/invitatii/florala-1.jpg|images/invitatii/florala-2.jpg","floral|roz"
+pl-001,Plic de dar Albastru,7.5,Plicuri,Satin albastru,"images/plicuri/albastru-1.jpg|images/plicuri/albastru-2.jpg","plic|albastru"
+men-001,Meniu A5,6.5,Meniuri,Carton perlat,images/meniuri/a5-rama-1.jpg,"meniuri|perlat"
+num-001,Număr de masă Acrilic,10,Numere de masă,Acrilic transparent,images/numere/numar-acrilic-1.jpg,"numere|acrilic"
+ms-001,Mărturie soia Inimioară,12,Mărturii soia,Soia parfumată,"images/marturii/inimioara-1.jpg|images/marturii/inimioara-2.jpg","marturie|alb"
