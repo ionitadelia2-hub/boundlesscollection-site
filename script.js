@@ -32,6 +32,8 @@ function card(p){
   const linkId = p.slug || p.id || slug(p.title);
   const href = `/produs/${encodeURIComponent(linkId)}`;
 
+  const priceStr = Number.isFinite(p.price) ? `${Number(p.price).toFixed(2)} RON` : '';
+
   return `
   <article class="item" data-id="${p.id}">
     <a class="card-link" href="${href}" aria-label="Vezi detalii ${p.title}">
@@ -52,7 +54,7 @@ function card(p){
           <span class="pill">${p.category || ''}</span>
         </div>
         <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ""}</p>
-        <div class="price">${Number(p.price).toFixed(2)} RON</div>
+        <div class="price">${priceStr}</div>
       </div>
     </a>
     <div class="actions">
@@ -60,6 +62,13 @@ function card(p){
       <button class="btn primary" type="button" data-act="inquire">Solicită ofertă</button>
     </div>
   </article>`;
+}
+
+function emptyState(message){
+  return `
+    <div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">
+      ${message}
+    </div>`;
 }
 
 function render(){
@@ -75,7 +84,9 @@ function render(){
     return hitTerm && hitCat;
   });
 
-  grid.innerHTML = items.map(card).join('');
+  grid.innerHTML = items.length
+    ? items.map(card).join('')
+    : emptyState('Nu am găsit produse pentru filtrul/ căutarea selectată.');
 
   // butoanele din card
   grid.querySelectorAll('.actions .btn').forEach(btn=>{
@@ -93,12 +104,25 @@ function render(){
 }
 
 /* =============== Loader JSON =============== */
+async function fetchFirstOk(urls){
+  for (const u of urls){
+    try{
+      const res = await fetch(u, { headers: { 'Accept': 'application/json' }});
+      if (res.ok) return res;
+    }catch{ /* try next */ }
+  }
+  throw new Error('Nu s-a putut încărca niciun products.json din căile testate.');
+}
+
 async function loadProducts(){
   try{
-    const res = await fetch('./products.json?cachebust=' + Date.now(), {
-      headers: { 'Accept': 'application/json' }
-    });
-    if(!res.ok) throw new Error('Nu s-a putut încărca products.json');
+    // încearcă în rădăcină apoi în /content
+    const cachebust = '?cachebust=' + Date.now();
+    const res = await fetchFirstOk([
+      './products.json' + cachebust,
+      './content/products.json' + cachebust
+    ]);
+
     const data = await res.json();
     if(!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
 
@@ -107,18 +131,16 @@ async function loadProducts(){
       return {
         id: p.id || (crypto?.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2)),
         title: p.title || '',
-        price: Number(p.price || 0),
+        price: Number(p.price ?? NaN),
         category: p.category || '',
-        categoryKey: norm(p.category || ''),   // <- pt. filtrare „plicuri” vs „Plicuri”
+        categoryKey: norm(p.category || ''),   // ex. „Plicuri” -> „plicuri”
         desc: p.desc || '',
         images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
         slug: p.slug || slug(p.title),
         tags,
-        tagsKey: tags.map(norm)                // <- căutare/filtrare și în tags
+        tagsKey: tags.map(norm)                // căutare/filtrare și în tags
       };
     });
-
-    // console.log('Loaded', PRODUCTS.length, 'items');
   }catch(err){
     console.error(err);
     PRODUCTS = []; // fallback gol
@@ -181,11 +203,12 @@ grid?.addEventListener('touchend', (e)=>{
 
 /* =============== Init pe DOMContentLoaded =============== */
 window.addEventListener('DOMContentLoaded', async ()=>{
-  // filtre
+  // filtre (folosește data-filter sau textul butonului ca fallback)
   filterBtns.forEach(btn => btn.addEventListener('click', ()=>{
     filterBtns.forEach(b=>b.setAttribute('aria-pressed','false'));
     btn.setAttribute('aria-pressed','true');
-    activeFilter = norm(btn.dataset.filter || 'toate'); // <- normalizat!
+    const key = btn.dataset.filter || btn.textContent;
+    activeFilter = norm(key || 'toate'); // <- normalizat!
     render();
   }));
 
