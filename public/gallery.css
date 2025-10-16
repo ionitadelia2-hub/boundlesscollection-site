@@ -1,7 +1,20 @@
 /* ===== Boundless – Product Gallery ===== */
 .bc-gallery { width: 100%; max-width: 900px; margin-inline: auto; }
 .bc-viewport { position: relative; overflow: hidden; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.06); background:#fff; }
-.bc-viewport::before { content:""; display:block; width:100%; aspect-ratio: 4 / 3; } /* raport imagine */
+.bc-gallery {
+  width: 100%;
+  max-width: 700px; /* era 900px, reducem puțin */
+  margin-inline: auto;
+}
+
+.bc-viewport::before {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  max-height: 420px; /* LIMITĂ MAXIMĂ pentru înălțime */
+}
+
 .bc-track { display: flex; height: 100%; position: absolute; inset: 0; transition: transform .35s ease; }
 .bc-slide { flex: 0 0 100%; position: relative; }
 .bc-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
