@@ -47,7 +47,7 @@ function card(p){
   const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy" decoding="async">`).join('');
 
   const linkId = p.slug || p.id || slug(p.title);
-  const href = `/produs/${encodeURIComponent(linkId)}`;
+  const href = `/p/${encodeURIComponent(linkId)}.html`;
 
   const priceStr = Number.isFinite(p.price) ? `${Number(p.price).toFixed(2)} RON` : '';
 
