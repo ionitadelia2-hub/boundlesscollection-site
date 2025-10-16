@@ -189,7 +189,7 @@ function main(){
     if (['node_modules','public','.git','.vercel'].includes(entry)) continue;
     const s = path.join(ROOT, entry);
     const st = fs.lstatSync(s);
-    if (st.isFile() && /\.(html|css|js|txt|ico|png|svg|webmanifest)$/i.test(entry)){
+    if (st.isFile() && /\.(html|css|js|txt|ico|png|svg|webmanifest|json)$/i.test(entry)){
       copyFileSync(s, path.join(OUT, entry));
     }
   }
@@ -218,3 +218,8 @@ function main(){
 }
 
 main();
+
+// după ce scrii JSON_OUT
+fs.writeFileSync(JSON_OUT, JSON.stringify(products, null, 2), 'utf8');
+// 👉 publică-l și ca /products.json
+copyFileSync(JSON_OUT, path.join(OUT, 'products.json'));
