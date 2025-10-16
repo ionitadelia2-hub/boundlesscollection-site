@@ -1,0 +1,148 @@
+[
+  {
+    "id": "inv-001",
+    "title": "Invitație Florală Clasic",
+    "price": 9.5,
+    "category": "Invitații",
+    "desc": "Model elegant cu accente florale.",
+    "images": ["images/invitatii/florala-1.jpg", "images/invitatii/florala-2.jpg"],
+    "tags": ["invitatii", "floral", "roz"],
+    "slug": "invitatie-florala-clasic-inv-001"
+  },
+  {
+    "id": "inv-002",
+    "title": "Invitație Minimal",
+    "price": 8.0,
+    "category": "Invitații",
+    "desc": "Design aerisit, text serif.",
+    "images": ["images/invitatii/minimal-1.jpg"],
+    "tags": ["invitatii", "minimal"],
+    "slug": "invitatie-minimal-inv-002"
+  },
+
+  {
+    "id": "pl-001",
+    "title": "Plic de dar Albastru",
+    "price": 7.5,
+    "category": "Plicuri",
+    "desc": "Satin albastru, card interior personalizat.",
+    "images": ["images/plicuri/albastru-1.jpg", "images/plicuri/albastru-2.jpg"],
+    "tags": ["plicuri", "albastru"],
+    "slug": "plic-dar-albastru-pl-001"
+  },
+  {
+    "id": "pl-002",
+    "title": "Plic de dar Ivoire",
+    "price": 7.0,
+    "category": "Plicuri",
+    "desc": "Textură perlată, panglică satin.",
+    "images": ["images/plicuri/ivoire-1.jpg"],
+    "tags": ["plicuri", "ivoire"],
+    "slug": "plic-dar-ivoire-pl-002"
+  },
+
+  {
+    "id": "men-001",
+    "title": "Meniu Vertical Perlat",
+    "price": 6.0,
+    "category": "Meniuri",
+    "desc": "Carton perlat, fonturi elegante.",
+    "images": ["images/meniuri/vertical-1.jpg"],
+    "tags": ["meniuri", "perlat"],
+    "slug": "meniu-vertical-perlat-men-001"
+  },
+  {
+    "id": "men-002",
+    "title": "Meniu A5 Cu Ramă",
+    "price": 6.5,
+    "category": "Meniuri",
+    "desc": "Compoziție cu ramă fină.",
+    "images": ["images/meniuri/a5-rama-1.jpg"],
+    "tags": ["meniuri", "a5"],
+    "slug": "meniu-a5-rama-men-002"
+  },
+
+  {
+    "id": "num-001",
+    "title": "Număr de masă Acrilic",
+    "price": 10.0,
+    "category": "Numere de masă",
+    "desc": "Acrilic transparent cu tipar alb.",
+    "images": ["images/numere/numar-acrilic-1.jpg"],
+    "tags": ["numere de masa", "acrilic"],
+    "slug": "numar-masa-acrilic-num-001"
+  },
+  {
+    "id": "num-002",
+    "title": "Număr de masă Floral",
+    "price": 8.5,
+    "category": "Numere de masă",
+    "desc": "Motiv floral discret.",
+    "images": ["images/numere/floral-1.jpg"],
+    "tags": ["numere de masa", "floral"],
+    "slug": "numar-masa-floral-num-002"
+  },
+
+  {
+    "id": "ms-001",
+    "title": "Mărturie soia Inimioară",
+    "price": 12.0,
+    "category": "Mărturii soia",
+    "desc": "Ceară de soia parfumată, formă inimă.",
+    "images": ["images/marturii/inimioara-1.jpg", "images/marturii/inimioara-2.jpg"],
+    "tags": ["marturii soia", "parfumata", "alb"],
+    "slug": "marturie-soia-inimioara-ms-001"
+  },
+  {
+    "id": "ms-002",
+    "title": "Mărturie soia Pastilă",
+    "price": 11.0,
+    "category": "Mărturii soia",
+    "desc": "Pastilă cu sclipiri fine.",
+    "images": ["images/marturii/pastila-1.jpg"],
+    "tags": ["marturii soia", "glitter"],
+    "slug": "marturie-soia-pastila-ms-002"
+  },
+
+  {
+    "id": "af-001",
+    "title": "Aranjament floral Roz Pudră",
+    "price": 160.0,
+    "category": "Aranjamente florale",
+    "desc": "Compoziție delicată pe nuanțe pudrate.",
+    "images": ["images/aranjamente/roz-pudra-1.jpg"],
+    "tags": ["aranjamente florale", "roz"],
+    "slug": "aranjament-roz-pudra-af-001"
+  },
+  {
+    "id": "af-002",
+    "title": "Aranjament floral Verde Salvie",
+    "price": 175.0,
+    "category": "Aranjamente florale",
+    "desc": "Texturi naturale, note de salvie.",
+    "images": ["images/aranjamente/verde-salvie-1.jpg"],
+    "tags": ["aranjamente florale", "verde"],
+    "slug": "aranjament-verde-salvie-af-002"
+  },
+
+  {
+    "id": "set-001",
+    "title": "Set Nuntă Elegant",
+    "price": 420.0,
+    "category": "Set",
+    "desc": "Invitații + plicuri + meniuri + numere de masă.",
+    "images": ["images/seturi/elegant-1.jpg", "images/seturi/elegant-2.jpg"],
+    "tags": ["set", "invitatii", "plicuri", "meniuri", "numere de masa"],
+    "slug": "set-nunta-elegant-set-001"
+  },
+  {
+    "id": "set-002",
+    "title": "Set Rustic Chic",
+    "price": 390.0,
+    "category": "Set",
+    "desc": "Hârtie texturată, sfoară naturală.",
+    "images": ["images/seturi/rustic-1.jpg"],
+    "tags": ["set", "rustic"],
+    "slug": "set-rustic-chic-set-002"
+  }
+]
