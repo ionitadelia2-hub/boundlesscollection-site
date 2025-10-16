@@ -1,45 +1,89 @@
-/* ===== Boundless – Product Gallery ===== */
-.bc-gallery { width: 100%; max-width: 900px; margin-inline: auto; }
-.bc-viewport {
-  padding: 10px;
-  background: #fff;
-}
-
-.bc-slide img {
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
+/* ===== Boundless – Product Gallery (compact) ===== */
 .bc-gallery {
   width: 100%;
-  max-width: 700px; /* era 900px, reducem puțin */
+  max-width: 680px;          /* << ajustează aici cât de “micuț” îl vrei pe desktop */
   margin-inline: auto;
 }
 
+.bc-viewport {
+  position: relative;        /* << obligatoriu pentru ca bc-track (absolute) să se așeze corect */
+  overflow: hidden;          /* << ascunde marginile în afara cadrului */
+  padding: 10px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.06);
+}
+
+/* raport de aspect + înălțime maximă a cadrului */
 .bc-viewport::before {
   content: "";
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  max-height: 420px; /* LIMITĂ MAXIMĂ pentru înălțime */
+  aspect-ratio: 4 / 3;       /* schimbă în 1/1 sau 16/9 dacă vrei altă proporție */
+  max-height: 420px;         /* << limitează înălțimea (fă-l mai mic dacă vrei) */
 }
 
-.bc-track { display: flex; height: 100%; position: absolute; inset: 0; transition: transform .35s ease; }
+.bc-track {
+  display: flex;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  transition: transform .35s ease;
+}
+
 .bc-slide { flex: 0 0 100%; position: relative; }
-.bc-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.bc-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
 /* butoane */
-.bc-nav { position:absolute; top:50%; translate:0 -50%; width:38px; height:38px; border-radius:999px; border:0; background:rgba(255,255,255,.92); box-shadow:0 4px 12px rgba(0,0,0,.15); font-size:26px; line-height:1; cursor:pointer; }
-.bc-nav:hover { transform: scale(1.06) translateY(-50%); }
-.bc-prev { left:10px; } .bc-next { right:10px; }
+.bc-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+.bc-nav:hover { transform: translateY(-50%) scale(1.06); }
+.bc-prev { left: 10px; }
+.bc-next { right: 10px; }
 
 /* thumbs */
 .bc-thumbs { margin-top: 12px; overflow: hidden; }
-.bc-thumbs-row { display:flex; gap:8px; }
-.bc-thumb { padding:0; border:0; background:transparent; cursor:pointer; outline:2px solid transparent; border-radius:10px; overflow:hidden; transition:outline-color .15s ease, transform .12s ease; }
+.bc-thumbs-row { display: flex; gap: 8px; }
+.bc-thumb {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: 2px solid transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: outline-color .15s ease, transform .12s ease;
+}
 .bc-thumb:hover { transform: translateY(-1px); }
-.bc-thumb img { display:block; width:80px; height:60px; object-fit: cover; }
-.bc-thumb.is-active { outline-color:#eab8c6; } /* roz pal (poți schimba) */
+.bc-thumb img { display: block; width: 80px; height: 60px; object-fit: cover; }
+.bc-thumb.is-active { outline-color: #eab8c6; }
 
 /* mic efect */
 .bc-slide:hover img { transform: scale(1.015); transition: transform .25s ease; }
+
+/* ----- Mobile tweaks ----- */
+@media (max-width: 768px) {
+  .bc-gallery { max-width: 100%; }
+  .bc-viewport::before { max-height: 320px; } /* mai mic pe telefon */
+  .bc-thumb img { width: 64px; height: 48px; }
+}
