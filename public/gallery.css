@@ -8,7 +8,27 @@
 
 /* butoane */
 .bc-nav { position:absolute; top:50%; translate:0 -50%; width:38px; height:38px; border-radius:999px; border:0; background:rgba(255,255,255,.92); box-shadow:0 4px 12px rgba(0,0,0,.15); font-size:26px; line-height:1; cursor:pointer; }
-.bc-nav:hover { transform: scale(1.06) translateY(-50%); }
+.bc-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.bc-nav:hover {
+  transform: translateY(-50%) scale(1.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+
 .bc-prev { left:10px; } .bc-next { right:10px; }
 
 /* thumbs */
