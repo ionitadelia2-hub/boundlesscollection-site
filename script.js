@@ -47,9 +47,7 @@ function card(p){
   const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy" decoding="async">`).join('');
 
   const linkId = p.slug || p.id || slug(p.title);
-  const href = `/p/${encodeURIComponent(linkId)}.html`;
-
-  const priceStr = Number.isFinite(p.price) ? `${Number(p.price).toFixed(2)} RON` : '';
+  const href = `/produs/${encodeURIComponent(linkId)}`;
 
   return `
   <article class="item" data-id="${p.id}">
@@ -68,10 +66,10 @@ function card(p){
       <div class="content">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
           <h3 style="margin:0;font-size:1rem">${p.title}</h3>
-          <span class="pill">${p.category || ''}</span>
+          <span class="pill">${p.category}</span>
         </div>
         <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ""}</p>
-        <div class="price">${priceStr}</div>
+        <div class="price">${Number(p.price).toFixed(2)} RON</div>
       </div>
     </a>
     <div class="actions">
