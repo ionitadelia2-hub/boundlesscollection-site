@@ -23,6 +23,7 @@
  "offers":{"@type":"Offer","priceCurrency":"RON","price":"6.50","availability":"https://schema.org/InStock","url":"https://boundlesscollection.ro/p/meniu-a5-men-001.html"}}
 </script>
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/gallery.css"><!-- nou: stil slider -->
 </head>
 <body>
 <header class="header">
@@ -38,9 +39,24 @@
 <main class="container product-page">
 <article>
   <h1>Meniu A5</h1>
-  <div class="media">
-    <img src="/images/meniuri/a5-rama-1.jpg" alt="Meniu A5" loading="lazy">
-  </div>
+
+  <!-- ===== GALERIE SLIDER ===== -->
+  <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
+    <div class="bc-viewport">
+      <div class="bc-track">
+        
+          <figure class="bc-slide">
+            <img src="/images/meniuri/a5-rama-1.jpg" alt="Meniu A5 – imagine 1" loading="eager">
+          </figure>
+        
+      </div>
+      <button class="bc-nav bc-prev" aria-label="Imaginea anterioară">‹</button>
+      <button class="bc-nav bc-next" aria-label="Imaginea următoare">›</button>
+    </div>
+    
+  </section>
+  <!-- ===== END GALERIE ===== -->
+
   <p class="price price-badge">6.50 RON</p>
   <p>Carton perlat</p>
   <div class="tags"><span class="tag">meniuri</span><span class="tag">perlat</span></div>
@@ -53,5 +69,6 @@
 
 <footer class="footer"><small>© <span id="year"></span> Boundless Collection</small></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script defer src="/gallery.js"></script><!-- nou: logică slider -->
 </body>
 </html>

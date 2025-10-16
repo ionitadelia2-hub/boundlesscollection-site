@@ -104,6 +104,7 @@ function pageTemplate(prod) {
  "offers":{"@type":"Offer","priceCurrency":"RON","price":"${Number(prod.price||0).toFixed(2)}","availability":"https://schema.org/InStock","url":"${url}"}}
 </script>
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/gallery.css"><!-- nou: stil slider -->
 </head>
 <body>
 <header class="header">
@@ -119,9 +120,33 @@ function pageTemplate(prod) {
 <main class="container product-page">
 <article>
   <h1>${title}</h1>
-  <div class="media">
-    ${relImgs.map(src => `<img src="${src}" alt="${esc(title)}" loading="lazy">`).join("")}
-  </div>
+
+  <!-- ===== GALERIE SLIDER ===== -->
+  <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
+    <div class="bc-viewport">
+      <div class="bc-track">
+        ${relImgs.map((src, i) => `
+          <figure class="bc-slide">
+            <img src="${src}" alt="${esc(title)} – imagine ${i+1}" loading="${i ? "lazy" : "eager"}">
+          </figure>
+        `).join("")}
+      </div>
+      <button class="bc-nav bc-prev" aria-label="Imaginea anterioară">‹</button>
+      <button class="bc-nav bc-next" aria-label="Imaginea următoare">›</button>
+    </div>
+    ${relImgs.length > 1 ? `
+    <div class="bc-thumbs">
+      <div class="bc-thumbs-row">
+        ${relImgs.map((src, i) => `
+          <button class="bc-thumb ${i===0?"is-active":""}" aria-label="Miniatură ${i+1}">
+            <img src="${src}" alt="${esc(title)} thumb ${i+1}" loading="lazy">
+          </button>
+        `).join("")}
+      </div>
+    </div>` : ""}
+  </section>
+  <!-- ===== END GALERIE ===== -->
+
   <p class="price price-badge">${price}</p>
   <p>${desc}</p>
   <div class="tags">${(prod.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
@@ -134,6 +159,7 @@ function pageTemplate(prod) {
 
 <footer class="footer"><small>© <span id="year"></span> ${brand}</small></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+<script defer src="/gallery.js"></script><!-- nou: logică slider -->
 </body>
 </html>`;
 }
