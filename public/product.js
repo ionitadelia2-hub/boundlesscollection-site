@@ -1,9 +1,7 @@
-// product.js – pagină produs (slug/id) – Vercel ready
-
+// product.js – pagină produs (merge cu /p/<slug>.html și /produs/<slug>)
 const $ = (s, r=document) => r.querySelector(s);
 const fmt = n => (Math.round(Number(n||0)*100)/100).toFixed(2);
 
-// normalizări (identice ca în script.js)
 const norm = s => (s||"").toString()
   .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
   .toLowerCase().trim();
@@ -13,16 +11,21 @@ const slugify = s => norm(s)
   .replace(/(^-|-$)+/g, "")
   .slice(0,80);
 
-// ========== extrage cheie din URL: /produs/<slug> sau ?slug= / ?id=
+// ---- extrage cheia din URL (/produs/<slug> | /p/<slug>.html | ?slug= / ?id=)
 function getKeyFromUrl(){
   const path = location.pathname.replace(/\/+$/,'');
-  const m = path.match(/\/produs\/([^/]+)$/);
+  // /p/<slug>.html  (extensia .html e opțională)
+  let m = path.match(/\/p\/([^\/\.]+)(?:\.html)?$/i);
   if (m) return decodeURIComponent(m[1]);
+  // /produs/<slug>
+  m = path.match(/\/produs\/([^/]+)$/i);
+  if (m) return decodeURIComponent(m[1]);
+
   const u = new URL(location.href);
   return u.searchParams.get('slug') || u.searchParams.get('id') || "";
 }
 
-// ========== UI helpers
+// ---- UI helpers
 function renderNotFound(msg="Produs indisponibil"){
   const root = $('#product-root');
   if (!root) return;
@@ -43,103 +46,69 @@ function updateOG(p, firstImage){
   set('meta[property="og:url"]', location.href);
 }
 
+// ---- rander produs + slider
 function renderProduct(p){
-  const root = document.querySelector('#product-root');
+  const root = $('#product-root');
   if (!root) return;
 
   const images = Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'];
-  document.title = `${p.title} • Boundless Collection`;
+  updateOG(p, images[0]);
 
-  // markup cu SLIDER (slide-track + butoane + dots)
   root.innerHTML = `
-    <nav class="breadcrumbs"><a href="/">Acasă</a><span>›</span><span class="current">${p.title}</span></nav>
+    <nav class="crumbs"><a href="/">Acasă</a> › <span class="current">${p.title}</span></nav>
 
     <header class="product-head">
       <h1 class="product-title">${p.title}</h1>
-      ${Number.isFinite(+p.price) ? `<span class="price-badge">${(+p.price).toFixed(2)} RON</span>` : ``}
+      ${Number.isFinite(+p.price) ? `<span class="price-badge">${fmt(p.price)} RON</span>` : ``}
     </header>
 
     <section class="product-hero">
       <div class="gallery">
-        <div class="frame">
-          <div class="slide-track" data-index="0" style="transform:translateX(0%)">
-            ${images.map((src,i)=>`
-              <img class="slide ${i===0?'active':''}" src="${src}" alt="${p.title} – imagine ${i+1}" loading="${i? 'lazy':'eager'}" decoding="async">
-            `).join('')}
-          </div>
-
-          ${images.length>1 ? `
-            <button class="nav prev" type="button" aria-label="Imagine anterioară">‹</button>
-            <button class="nav next" type="button" aria-label="Imagine următoare">›</button>
-          ` : ``}
+        <div class="gallery-main">
+          <button class="nav prev" aria-label="Anterior">‹</button>
+          <img id="main-photo" src="${images[0]}" alt="${p.title}">
+          <button class="nav next" aria-label="Următor">›</button>
         </div>
-
-        ${images.length>1 ? `
-          <div class="thumbs">
-            ${images.map((src,i)=>`
-              <button class="thumb ${i===0?'active':''}" data-i="${i}" aria-label="Miniatură ${i+1}">
-                <img src="${src}" alt="Miniatură ${i+1}">
-              </button>
-            `).join('')}
-          </div>
-        ` : ``}
+        <div class="thumbs">
+          ${images.map((src,i)=>`
+            <button class="thumb ${i===0?'active':''}" data-index="${i}" aria-label="Imagine ${i+1}">
+              <img src="${src}" alt="${p.title} imagine ${i+1}">
+            </button>
+          `).join('')}
+        </div>
       </div>
 
       <div class="product-info">
         <p class="lead">${p.desc || 'Model elegant, personalizabil.'}</p>
+
         ${Array.isArray(p.options) && p.options.length ? `
-          <ul class="tags">${p.options.map(o=>`<li>${o}</li>`).join('')}</ul>
+          <ul class="tags">
+            ${p.options.map(o => `<li>${o}</li>`).join('')}
+          </ul>
         ` : ''}
 
         <div class="actions">
-          <a class="btn primary" id="wa-btn">Cere ofertă pe WhatsApp</a>
-          <a class="btn" href="/">⇠ Înapoi la catalog</a>
+          <a class="btn btn-primary" id="wa-btn">Cere ofertă pe WhatsApp</a>
+          <a class="btn btn-light" href="/">⇠ Înapoi la catalog</a>
         </div>
       </div>
     </section>
   `;
 
-  // === SLIDER logic ===
-  const track = root.querySelector('.slide-track');
-  const slides = [...root.querySelectorAll('.slide')];
+  // ---- slider logic (prev/next + thumbs)
+  let idx = 0;
+  const main = $('#main-photo');
   const thumbs = [...root.querySelectorAll('.thumb')];
-  const prevBtn = root.querySelector('.nav.prev');
-  const nextBtn = root.querySelector('.nav.next');
-  let index = 0, busy = false;
 
-  function go(i){
-    if (busy || !slides.length) return;
-    index = (i + slides.length) % slides.length;
-    busy = true;
-    track.style.transform = `translateX(${-100*index}%)`;
-    slides.forEach((s,k)=>s.classList.toggle('active', k===index));
-    thumbs.forEach((t,k)=>t.classList.toggle('active', k===index));
-    setTimeout(()=>busy=false, 250);
+  function show(i){
+    idx = (i + images.length) % images.length;
+    main.src = images[idx];
+    thumbs.forEach(b => b.classList.toggle('active', Number(b.dataset.index)===idx));
   }
-  function next(){ go(index+1); }
-  function prev(){ go(index-1); }
 
-  // inițializează lățimea track-ului (flex row implicit via CSS)
-  track.style.width = `${slides.length*100}%`;
-
-  // evenimente
-  nextBtn?.addEventListener('click', next);
-  prevBtn?.addEventListener('click', prev);
-  thumbs.forEach(btn => btn.addEventListener('click', ()=> go(+btn.dataset.i)));
-
-  // taste ← / →
-  document.addEventListener('keydown', (e)=>{
-    if (e.key === 'ArrowRight') next();
-    if (e.key === 'ArrowLeft') prev();
-  });
-
-  // swipe pe mobil
-  let startX=0, deltaX=0;
-  track.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; deltaX=0; }, {passive:true});
-  track.addEventListener('touchmove',  (e)=>{ deltaX = e.touches[0].clientX - startX; }, {passive:true});
-  track.addEventListener('touchend',   ()=>{
-    if (Math.abs(deltaX) > 40) (deltaX<0 ? next() : prev());
-  });
+  root.querySelector('.prev')?.addEventListener('click', ()=>show(idx-1));
+  root.querySelector('.next')?.addEventListener('click', ()=>show(idx+1));
+  thumbs.forEach(btn => btn.addEventListener('click', ()=>show(Number(btn.dataset.index))));
 
   // WhatsApp
   root.querySelector('#wa-btn')?.addEventListener('click', ()=>{
@@ -148,10 +117,7 @@ function renderProduct(p){
   });
 }
 
-
-// ========== încărcare products.json (root cu fallback + cachebust)
-// ========== încărcare products.json (doar din /content, cu cachebust)
-// ========== încărcare products.json (doar din /content, cu cachebust)
+// ---- încărcare products.json
 async function fetchProducts(){
   const cb = `?cb=${Date.now()}`;
   const url = `/content/products.json${cb}`;
@@ -162,21 +128,15 @@ async function fetchProducts(){
   return data;
 }
 
-
-
-// ========== main
+// ---- main
 async function main(){
   const keyRaw = getKeyFromUrl();
-  if (!keyRaw){
-    renderNotFound("Produs indisponibil");
-    return;
-  }
+  if (!keyRaw){ renderNotFound("Produs indisponibil"); return; }
   const key = norm(keyRaw);
 
   try{
     const list = await fetchProducts();
 
-    // match după: slug (norm), id (exact), slug(title)
     const prod = list.find(p => {
       const pid = (p.id ?? '').toString();
       const pslug = norm(p.slug ?? '');
@@ -184,15 +144,17 @@ async function main(){
       return pslug === key || pid === keyRaw || ptitleSlug === key;
     });
 
-    if (!prod){
-      renderNotFound("Produsul nu a fost găsit.");
-      return;
-    }
+    if (!prod){ renderNotFound("Produsul nu a fost găsit."); return; }
 
-    // canonicalizează URL-ul către /produs/{slug}
-    const canonical = prod.slug || (prod.title ? slugify(prod.title) : (prod.id ?? '').toString());
-    if (decodeURIComponent(keyRaw) !== canonical){
-      history.replaceState(null, "", `/produs/${encodeURIComponent(canonical)}`);
+    // Canonical: nu forțăm redirect între /p/ și /produs/ ca să nu stricăm paginile statice,
+    // doar actualizăm URL-ul în aceeași „familie” dacă e nevoie.
+    const canonicalSlug = prod.slug || (prod.title ? slugify(prod.title) : (prod.id ?? '').toString());
+    const path = location.pathname;
+    const isStatic = /\/p\//.test(path);
+    const desired = isStatic ? `/p/${encodeURIComponent(canonicalSlug)}.html`
+                             : `/produs/${encodeURIComponent(canonicalSlug)}`;
+    if (!decodeURIComponent(path).endsWith(decodeURIComponent(desired))){
+      history.replaceState(null, "", desired);
     }
 
     renderProduct(prod);

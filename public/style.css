@@ -23,7 +23,7 @@ img{ max-width:100%; display:block }
 .container{ width:min(1100px,92%); margin-inline:auto }
 
 /* =========================
-   HEADER & NAVBAR
+   HEADER & NAVBAR – DESKTOP
    ========================= */
 .header{
   position:sticky; top:0; z-index:50;
@@ -35,18 +35,28 @@ img{ max-width:100%; display:block }
   display:flex; align-items:center; justify-content:space-between;
   gap:1rem; padding:1rem 0;
 }
-.brand{ display:flex; align-items:center; gap:.6rem; white-space:nowrap }
+
+.brand{
+  display:flex; align-items:center; gap:.6rem; white-space:nowrap;
+}
 .brand-logo{
   width:48px; height:48px; border-radius:50%;
   background:linear-gradient(135deg,var(--rose),var(--white));
   display:grid; place-items:center; box-shadow:var(--shadow);
 }
-.brand-title{ font-family:'Playfair Display',serif; font-weight:600; font-size:1.45rem }
-.nav-toggle{ display:none }
+.brand-logo span{ font-weight:600; color:#ad5f86 }
+.brand-title{
+  font-family:'Playfair Display',serif; font-weight:600; font-size:1.45rem;
+}
 
-/* Meniu principal */
+/* buton hamburger – ascuns pe desktop */
+.nav-toggle{ display:none; }
+
+/* meniul principal pe desktop */
 #mainmenu{
-  display:flex; align-items:center; gap:.9rem;
+  display:flex;                 /* vizibil pe desktop */
+  align-items:center;
+  gap:.9rem;
   margin:0; padding:0; list-style:none;
 }
 #mainmenu > li > a,
@@ -59,26 +69,62 @@ img{ max-width:100%; display:block }
 }
 #mainmenu > li > a:hover,
 .dropbtn:hover{ background:var(--rose-2); color:#ad5f86 }
+
+/* butonul WhatsApp din navbar */
 #mainmenu .cta{
-  font-weight:600; background:var(--rose);
-  border:1px solid #ffd8e7; box-shadow:var(--shadow);
+  font-family:'Playfair Display', sans-serif;
+  font-weight:600;
+  background:var(--rose);
+  border:1px solid #ffd8e7;
+  box-shadow:var(--shadow);
 }
 
 /* Dropdown "Produse" */
 .dropdown{ position:relative }
-.dropbtn{ display:inline-flex; align-items:center; gap:.35rem }
+.dropbtn{
+  font-family:'Playfair Display', serif; font-weight:500; font-size:1.1rem;
+  background:transparent; border:0; padding:.35rem .6rem;
+  border-radius:999px; display:inline-flex; align-items:center; gap:.35rem;
+  cursor:pointer; transition:background .2s,color .2s;
+}
 .dropbtn::after{ content:"▼"; font-size:.6rem; margin-top:1px; transition:transform .15s ease }
 [aria-expanded="true"].dropbtn::after{ transform:rotate(180deg) }
+.dropbtn:hover{ background:var(--rose-2); color:#ad5f86 }
+
 .dropdown .menu{
-  position:absolute; top:100%; left:0; min-width:220px;
-  background:#fff; border:1px solid #ffe1ee; border-radius:12px;
-  box-shadow:var(--shadow); padding:.4rem; margin-top:.35rem; display:none; z-index:1000;
+  position:absolute;
+  top:100%;
+  left:0;
+  min-width:220px;
+  background:#fff;
+  border:1px solid #ffe1ee;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+  padding:.4rem;
+  margin-top:.35rem;
+  display:none;
+  z-index:1000;
 }
 .dropdown .menu li{ list-style:none }
 .dropdown .menu a{ display:block; padding:.6rem .8rem; border-radius:8px }
 .dropdown .menu a:hover{ background:var(--rose-2) }
+
+/* punte transparentă (hover safe-area) */
+.dropdown::after{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  top:100%;
+  height:8px;
+}
+
+/* arată meniul când .open */
 .dropdown.open .menu{ display:block }
-@media (hover:hover){ .dropdown:hover .menu{ display:block }}
+
+/* pe desktop permitem și hover */
+@media (hover:hover){
+  .dropdown:hover .menu{ display:block }
+}
 
 /* =========================
    HERO
@@ -89,29 +135,24 @@ img{ max-width:100%; display:block }
 }
 .hero-card{
   background:#fff; border-radius:var(--radius);
-  padding:2rem; box-shadow:var(--shadow); text-align:center; border:1px solid #ffe1ee;
-  transition: transform .25s ease, box-shadow .25s ease;
+  padding:2rem; box-shadow:var(--shadow); text-align:center;
 }
-.hero-card:hover{ transform: translateY(-2px); box-shadow: 0 14px 36px rgba(234,168,197,.28) }
 .hero h1{
   font-family:'Playfair Display',serif; font-weight:600;
   font-size:clamp(1.8rem,3vw,2.6rem);
   line-height:1.15; margin:0 0 .6rem;
 }
 .hero p{ color:var(--muted); margin:0 0 1rem; text-align:center }
-.hero-img{ border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); position:relative; isolation:isolate }
-.hero-img::after{
-  content:""; position:absolute; inset:-8%;
-  background: radial-gradient(60% 60% at 70% 30%, rgba(247,207,225,.55), transparent 60%);
-  z-index:-1; filter: blur(18px); border-radius: var(--radius);
-}
+.hero-img{ border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow) }
 
 /* =========================
    SECȚIUNI / GRID / CARDURI
    ========================= */
-section{ padding: clamp(1.6rem, 3vw, 2.8rem) 0 }
-.section-title{ font-size:1.6rem; margin:0 0 .8rem; font-family:'Playfair Display',serif; letter-spacing:.2px }
-.section-sub{ margin:0 0 1.2rem; color:var(--muted); max-width:60ch }
+section{ padding:2.2rem 0 }
+.section-title{
+  font-size:1.6rem; margin:0 0 .8rem; font-family:'Playfair Display',serif;
+}
+.section-sub{ margin:0 0 1.2rem; color:var(--muted) }
 
 .grid{ display:grid; grid-template-columns:repeat(12,1fr); gap:1.1rem }
 .card, .products .item{
@@ -138,129 +179,101 @@ section{ padding: clamp(1.6rem, 3vw, 2.8rem) 0 }
 }
 .filter .pill[aria-pressed="true"], .filter .pill:hover{ background:var(--rose-2) }
 
-.products .item{ grid-column:span 3; overflow:hidden; display:flex; flex-direction:column; transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease }
-.products .item:hover{ transform: translateY(-4px); box-shadow: 0 14px 30px rgba(234,168,197,.22); border-color:#ffd1e4 }
+.products .item{ grid-column:span 3; overflow:hidden; display:flex; flex-direction:column }
 .products .item .media{
-  position: relative; width:100%; aspect-ratio: 4 / 3; overflow: hidden;
-  border-radius: 18px; background: #f8eef3; display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f8eef3;
+  display: block;
 }
 .products .item .media img{
-  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; display:block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
-.products .item .media img.contain{ object-fit:contain; background:#fff }
+/* opțional pentru imagini care nu trebuie tăiate (ex: QR) */
+.products .item .media img.contain{
+  object-fit: contain;
+  background: #fff;
+}
+
 .products .item .content{ padding:.9rem }
 .price{ font-weight:600; color:#9a5a78 }
 .pill{ font-size:.8rem; color:#9a5a78; background:#fff0f6; border:1px solid #ffd8e7; border-radius:999px; padding:.25rem .6rem }
 .muted{ color:var(--muted) }
 
-/* acțiunile cardului */
+/* acțiunile cardului (scoped la gridul de produse) */
 .products .actions{
   display:flex; gap:.6rem; margin-top:auto; padding:.9rem; border-top:1px solid #ffe8f2
 }
 .btn{
   flex:1; padding:.6rem .8rem; border-radius:12px; border:1px solid #ffd8e7; background:#fff; cursor:pointer;
   transition: transform .08s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
-  box-shadow:0 4px 10px rgba(0,0,0,.04);
+  box-shadow: 0 4px 10px rgba(0,0,0,.04);
 }
-.btn:hover{ transform: translateY(-1px); box-shadow:0 8px 18px rgba(0,0,0,.07) }
-.btn:active{ transform: translateY(0); box-shadow:0 4px 10px rgba(0,0,0,.06) }
-.btn.primary{ background:linear-gradient(180deg,var(--rose),#ffdced); border-color:#ffcfe6; font-weight:600 }
-.btn.primary:hover{ background:linear-gradient(180deg,#ffcfe2,#ffe9f4) }
+.btn:hover{ transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.07); }
+.btn:active{ transform: translateY(0); box-shadow: 0 4px 10px rgba(0,0,0,.06); }
+.btn.primary{ background: linear-gradient(180deg, var(--rose), #ffdced); border-color:#ffcfe6; font-weight:600 }
+.btn.primary:hover{ background:linear-gradient(180deg, #ffcfe2, #ffe9f4); }
 
 /* =========================
-   Pagina produsului individual
+   ADMIN (editor local)
    ========================= */
-.product-page{
-  max-width:900px; margin:4rem auto; padding:1.5rem;
-  background:#fff; border-radius:1.5rem; box-shadow:0 4px 12px rgba(0,0,0,.06);
+details.admin{
+  margin-top:1.2rem; border:1px dashed #ffcade; border-radius:var(--radius); padding:1rem; background:#fff
 }
-.product-head{
-  display:flex; flex-direction:column; align-items:center; gap:.5rem; text-align:center; margin-bottom:1rem;
+.admin form{ display:grid; gap:.6rem; grid-template-columns:repeat(6,1fr) }
+.admin input, .admin textarea, .admin select{
+  width:100%; padding:.55rem .7rem; border:1px solid #ffd8e7; border-radius:10px; background:#fff
 }
-.price-badge{
-  display:inline-block; padding:.45rem .9rem; border-radius:999px;
-  font-weight:600; font-size:.95rem; line-height:1; color:#a23366;
-  background:#ffe6f0; border:1px solid #f7b8d0; box-shadow:0 1px 0 rgba(0,0,0,.03);
-}
-@media (min-width:900px){
-  .product-page.wide-right .product-head{
-    flex-direction:row; justify-content:space-between; align-items:center; text-align:left;
-  }
-}
-.product-page h1{ font-size:1.8rem; color:#333; margin:0 }
+.admin textarea{ grid-column:span 6; min-height:70px }
+.admin .col-3{ grid-column:span 3 }
+.admin .col-2{ grid-column:span 2 }
+.admin .col-6{ grid-column:span 6 }
+.admin .help{ font-size:.85rem; color:#9a5a78 }
 
-/* Layout 2 coloane: stânga (poze), dreapta (info) */
-.product-hero{
-  display:grid; grid-template-columns:minmax(360px,1.15fr) minmax(300px,.85fr);
-  gap:2rem; align-items:start;
-}
-@media (max-width:980px){
-  .product-hero{ grid-template-columns:1fr }
-  .product-head{ justify-content:center }
-}
+/* ascunse pentru vizitatori */
+details.admin,
+.admin-only { display: none; }
 
-/* Breadcrumbs */
-.breadcrumbs{
-  display:flex; align-items:center; gap:.5rem; color:#6b6b6b; justify-content:center; margin-bottom:1rem;
-}
-.breadcrumbs a{ color:#7a5d6c }
-.breadcrumbs a:hover{ text-decoration:underline }
-.breadcrumbs span{ opacity:.7 }
+/* vizibile doar în modul admin */
+body.admin details.admin,
+body.admin .admin-only { display: inline-flex; }
 
 /* =========================
-   SLIDER produs (sincron cu product.js)
+   ABOUT & CONTACT
    ========================= */
-.gallery{ position:relative }
-.gallery .frame{
-  position:relative; width:100%; aspect-ratio:4/3; overflow:hidden;
-  border-radius:1rem; background:#fff; box-shadow:0 8px 20px rgba(0,0,0,.06);
+.about{ display:grid; grid-template-columns:1fr 1fr; gap:1.4rem }
+.about .panel{ background:#fff; border:1px solid #ffe1ee; border-radius:var(--radius); padding:1.1rem; box-shadow:var(--shadow) }
+.contact form{ display:grid; gap:.7rem }
+.contact input, .contact textarea{
+  padding:.7rem .9rem; border:1px solid #ffd8e7; border-radius:12px; background:#fff
 }
-
-/* Banda cu toate slide-urile */
-.slide-track{
-  display:flex; height:100%; width:100%;
-  transition:transform .25s ease; will-change:transform;
-}
-
-/* Fiecare slide ocupă 100% din cadru */
-.slide{
-  width:100%; flex:0 0 100%; height:100%;
-  object-fit:cover; display:block;
-}
-
-/* Butoane nav */
-.gallery .nav{
-  position:absolute; top:50%; transform:translateY(-50%);
-  background:#f2e6ec; border:none; width:42px; height:42px;
-  border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.12);
-  cursor:pointer; font-size:22px; line-height:42px; text-align:center;
-  color:#6b4f5c;
-}
-.gallery .prev{ left:10px }
-.gallery .next{ right:10px }
-.gallery .nav:hover{ filter:brightness(.98) }
-
-/* Thumbnails */
-.thumbs{
-  display:flex; gap:.55rem; justify-content:center; margin-top:.75rem; flex-wrap:wrap;
-}
-.thumbs .thumb{
-  border:none; padding:0; background:transparent; cursor:pointer;
-  width:70px; height:70px; border-radius:.75rem; overflow:hidden;
-  box-shadow:0 2px 6px rgba(0,0,0,.08); opacity:.7; transition:.15s;
-}
-.thumbs .thumb.active, .thumbs .thumb:hover{ opacity:1; transform:translateY(-1px) }
-.thumbs .thumb img{ width:100%; height:100%; object-fit:cover; display:block }
+.qr-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:.8rem; margin-top:1rem }
+.qr-grid figure{ border:1px solid #ffe1ee; border-radius:12px; padding:.6rem; background:#fff }
+.qr-grid figcaption{ color:var(--muted); margin-top:.3rem; text-align:center }
 
 /* =========================
-   FOOTER & WhatsApp plutitor
+   FOOTER
    ========================= */
 footer{
   margin-top:2rem; padding:1.2rem 0;
   background:#fff; border-top:1px solid #ffe8f2; color:#7a6b73
 }
-.footer-inner{ display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap }
+.footer-inner{
+  display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap
+}
 
+/* =========================
+   Buton WhatsApp plutitor
+   ========================= */
 .whatsapp-wrapper{
   position:fixed; right:18px; bottom:18px;
   display:inline-flex; align-items:center; gap:.55rem;
@@ -273,7 +286,7 @@ footer{
 .whatsapp-wrapper span{ font-size:.95rem; line-height:1 }
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE – layout
    ========================= */
 @media (max-width:1100px){
   #mainmenu{ gap:.7rem }
@@ -291,9 +304,14 @@ footer{
   .products .item{ grid-column:span 12 }
   .brand-title{ font-size:1.3rem }
 }
+
+/* =========================
+   NAVBAR – MOBIL / TABLETE
+   ========================= */
 @media (max-width:900px){
   .nav{ gap:.6rem }
   .brand-title{ font-size:1.2rem }
+
   .nav-toggle{
     display:inline-flex; align-items:center; justify-content:center;
     width:40px; height:40px; border:1px solid #ffe1ee; border-radius:12px; background:#fff;
@@ -307,21 +325,346 @@ footer{
     position:absolute; top:100%; right:0;
     background:#fff; border:1px solid #ffe1ee; border-radius:12px; box-shadow:var(--shadow);
     padding:.6rem; margin-top:.4rem;
-    display:none; flex-direction:column; align-items:stretch; gap:.2rem;
+    display:none;                     /* ascuns implicit pe mobil */
+    flex-direction:column; align-items:stretch; gap:.2rem;
     min-width:220px; max-height:60vh; overflow:auto; z-index:1000;
   }
   .menu-open #mainmenu{ display:flex }
 
   #mainmenu > li > a, .dropbtn{ font-size:1rem; padding:.45rem .6rem }
 
-  /* Dropdown în panoul mobil – click, nu hover */
+  /* dropdown în panoul mobil – click, nu hover */
   .dropdown .menu{
-    position:static; display:none; padding:.25rem 0; margin:.25rem 0 0 0;
-    box-shadow:none; border:0; background:transparent;
+    position: static;
+    display: none;
+    padding: .25rem 0;
+    margin: .25rem 0 0 0;
+    box-shadow: none;
+    border: 0;
+    background: transparent;
   }
-  .dropdown.open .menu{ display:block }
+  .dropdown.open .menu{ display:block; }
 
-  /* WhatsApp badge mai compact */
-  #mainmenu .cta{ font-size:.9rem; padding:.3rem .55rem; border-radius:12px }
+  /* WhatsApp badge din meniu mai compact */
+  #mainmenu .cta{
+    font-size: 0.9rem;
+    padding: .3rem .55rem;
+    border-radius: 12px;
+  }
 }
-@media (max-width:460px){ .whatsapp-wrapper span{ display:none } }
+
+/* =========================
+   Pagina produsului individual
+   ========================= */
+.product-page {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+.product-page .product-head{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  text-align: center;
+}
+.product-page .price-badge{
+  margin: 0 auto;
+}
+@media (min-width: 900px){
+  .product-page.wide-right .product-head{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  .product-page.wide-right .price-badge{ margin: 0; }
+}
+.product-page h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.product-page .media {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.product-page .price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #b48c9e;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+}
+.product-page p {
+  text-align: center;
+  color: #555;
+  line-height: 1.6;
+}
+.product-page .actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.product-page .btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: #f2e6ec;
+  border-radius: 999px;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+.product-page .btn.primary {
+  background: #d2b8c9;
+  color: white;
+}
+.product-page .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Breadcrumbs */
+.breadcrumbs{
+  display:flex; align-items:center; gap:.5rem;
+  margin: 0 0 1rem; color:#6b6b6b; justify-content:center;
+}
+.breadcrumbs a{ color:#7a5d6c; text-decoration:none; }
+.breadcrumbs a:hover{ text-decoration:underline; }
+.breadcrumbs span{ opacity:.7 }
+
+/* Galerie / slider produs */
+.gallery{ position:relative; margin: 1rem auto 1.5rem; max-width: 760px; }
+.gallery .frame{
+  position:relative; width:100%; aspect-ratio: 4/3;
+  overflow:hidden; border-radius: 1rem; background:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+.gallery .slide{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; opacity:0; transform: scale(1.01);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.gallery .slide.active{ opacity:1; transform: scale(1); }
+.gallery .nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:#f2e6ec; border:none; width:40px; height:40px;
+  border-radius:50%; box-shadow:0 2px 8px rgba(0,0,0,.12);
+  cursor:pointer; font-size:22px; line-height:40px; text-align:center;
+  color:#6b4f5c;
+}
+.gallery .nav:hover{ filter:brightness(.98); }
+.gallery .prev{ left:-14px; }
+.gallery .next{ right:-14px; }
+.gallery .thumbs{
+  display:flex; gap:.5rem; justify-content:center; margin-top:.75rem; flex-wrap:wrap;
+}
+.gallery .thumb{
+  border:none; padding:0; background:transparent; cursor:pointer;
+  width:70px; height:70px; border-radius:.75rem; overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,.08); opacity:.7; transition:.15s;
+}
+.gallery .thumb.active, .gallery .thumb:hover{ opacity:1; transform:translateY(-1px); }
+.gallery .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* ===== UI rafinări generale ===== */
+.hero-img{ position:relative; isolation:isolate; }
+.hero-img::after{
+  content:""; position:absolute; inset:-8%;
+  background: radial-gradient(60% 60% at 70% 30%, rgba(247,207,225,.55), transparent 60%);
+  z-index:-1; filter: blur(18px);
+  border-radius: var(--radius);
+}
+.hero-card{
+  border:1px solid #ffe1ee;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.hero-card:hover{ transform: translateY(-2px); box-shadow: 0 14px 36px rgba(234,168,197,.28); }
+
+.products { row-gap: 1.2rem; }
+.products .item{
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.products .item:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(234,168,197,.22);
+  border-color:#ffd1e4;
+}
+
+/* linkuri & butoane – contrast bun pe mobil */
+a, a:visited, a:active{ color:#000; text-decoration:none; }
+
+/* badge preț clar */
+.price-badge{
+  display:inline-block;
+  padding:.45rem .9rem;
+  border-radius:999px;
+  font-weight:600;
+  font-size:.95rem;
+  line-height:1;
+  color:#a23366;
+  background:#ffe6f0;
+  border:1px solid #f7b8d0;
+  box-shadow:0 1px 0 rgba(0,0,0,.03);
+  opacity:1 !important;
+}
+.product-head .price-badge, header .price-badge{ opacity:1 !important; }
+
+/* elemente cu animații soft */
+.reveal{ opacity:0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.reveal.in{ opacity:1; transform:none; }
+
+/* micro efecte pe slider nav */
+.slider-nav button{ transition: transform .12s ease, background-color .18s ease; }
+.slider-nav button:active{ transform: scale(.96); }
+
+/* ritm secțiuni */
+section { padding: clamp(1.6rem, 3vw, 2.8rem) 0; }
+.section-title{ letter-spacing:.2px; }
+.section-sub{ max-width: 60ch; }
+
+/* ascunde textul WhatsApp pe ecrane foarte mici */
+@media (max-width:460px){
+  .whatsapp-wrapper span{ display:none; }
+}
+
+/* centrează blocul mare de imagine */
+.product-page .gallery-main{
+  max-width: 520px;          /* setează o lățime rezonabilă */
+  margin: 0 auto;            /* CENTRARE pe orizontală */
+  display: block;
+}
+
+/* imaginea principală din bloc */
+.product-page .gallery-main img{
+  display: block;
+  margin: 0 auto;            /* siguranță: și ea e centrată */
+  width: 100%;
+  height: auto;
+}
+
+/* centrează și thumbnails */
+.product-page .thumbs{
+  justify-content: center;
+}
+
+/* ==== Product layout: stânga poze + thumbnails, dreapta descriere ==== */
+
+/* 2 coloane pe desktop: stânga (poze) / dreapta (info) */
+.product-hero{
+  display: grid;
+  grid-template-columns: minmax(360px, 1.15fr) minmax(300px, .85fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Blocașul cu poza mare + thumbs rămâne compact, aliniat la stânga */
+.product-page .gallery,
+.product-page .gallery-main{
+  max-width: 720px;     /* ajustează dacă vrei mai lat/îngust */
+  margin: 0;            /* IMPORTANT: să nu mai fie centrat */
+}
+
+.product-page .gallery-main{
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,.05);
+}
+
+/* imaginea mare */
+.product-page .gallery-main img{
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;       /* păstrează raport frumos */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* thumbnails sub poză, pe centru doar în lățimea galeriei */
+.product-page .thumbs{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* miniaturile pe centru sub poză */
+  gap: .55rem;
+  margin-top: .75rem;
+}
+
+/* coloana din dreapta: descriere, tag-uri, butoane */
+.product-page .product-info{
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+/* (opțional) badge-ul de preț în dreapta sus, sub titlu */
+.product-page .product-head{
+  display: flex;
+  align-items: center;
+  justify-content: center;     /* titlul pe centru */
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 980px){
+  .product-page .product-head{
+    justify-content: space-between;  /* pe desktop: titlu stânga, preț dreapta */
+  }
+}
+
+/* Responsive: sub 980px trecem pe 1 coloană și centrăm totul frumos */
+@media (max-width: 980px){
+  .product-hero{
+    grid-template-columns: 1fr;
+  }
+  .product-page .gallery,
+  .product-page .gallery-main{
+    margin: 0 auto;            /* pe mobil, poză centrată */
+  }
+  .product-page .product-head{
+    justify-content: center;   /* titlu + preț pe centru la mobil */
+  }
+}
+
+/* Cadrul imaginii principale */
+.gallery-main{
+  background:#fff;
+  border-radius:1rem;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.05);
+  aspect-ratio: 4 / 3;          /* raport orizontal frumos */
+}
+
+/* Imaginea principală – umple complet cadrul */
+.gallery-main img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  max-width:none;                /* important: anulează vechiul max-width */
+}
+
+/* Thumbs sub poză */
+.gallery .thumb{
+  border:none; padding:0; background:transparent; cursor:pointer;
+  width:70px; height:70px; border-radius:.75rem; overflow:hidden;
+  box-shadow:0 2px 6px rgba(0,0,0,.08); opacity:.85; transition:.15s;
+}
+.gallery .thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.gallery .thumb:hover,
+.gallery .thumb.active{ opacity:1; transform:translateY(-1px); }
