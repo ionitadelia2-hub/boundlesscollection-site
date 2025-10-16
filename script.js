@@ -114,19 +114,16 @@ async function fetchFirstOk(urls){
   throw new Error('Nu s-a putut încărca niciun products.json din căile testate.');
 }
 
+/* =============== Loader JSON =============== */
 async function loadProducts(){
   try{
-    // Încearcă absolut din rădăcină (Vercel) + fallback-uri
     const cb = '?cb=' + Date.now();
-    const res = await fetchFirstOk([
-      '/products.json' + cb,
-      '/content/products.json' + cb,
-      './products.json' + cb,
-      './content/products.json' + cb
-    ]);
-
+    const res = await fetch('/content/products.json' + cb, {
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!res.ok) throw new Error('products.json 404 la /content/');
     const data = await res.json();
-    if(!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
+    if (!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
 
     PRODUCTS = data.map(p => {
       const tags = Array.isArray(p.tags) ? p.tags : [];
@@ -135,24 +132,26 @@ async function loadProducts(){
         title: p.title || '',
         price: Number(p.price ?? NaN),
         category: p.category || '',
-        categoryKey: norm(p.category || ''),   // ex. „Plicuri” -> „plicuri”
+        categoryKey: norm(p.category || ''),
         desc: p.desc || '',
         images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
         slug: p.slug || slug(p.title),
         tags,
-        tagsKey: tags.map(norm)                // căutare/filtrare și în tags
+        tagsKey: tags.map(norm)
       };
     });
   }catch(err){
     console.error('[loadProducts]', err);
-    PRODUCTS = []; // fallback gol
+    PRODUCTS = [];
     if (grid){
-      grid.innerHTML = emptyState(
-        'Nu am putut încărca <code>products.json</code>. Verifică că există la <code>/products.json</code> în deploy.'
-      );
+      grid.innerHTML = `
+        <div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">
+          Nu am putut încărca <code>content/products.json</code>. Verifică că există în deploy.
+        </div>`;
     }
   }
 }
+
 
 /* =============== Acțiuni publice =============== */
 function inquire(title){

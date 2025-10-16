@@ -106,25 +106,17 @@ function renderProduct(p){
 }
 
 // ========== încărcare products.json (root cu fallback + cachebust)
+// ========== încărcare products.json (doar din /content, cu cachebust)
 async function fetchProducts(){
   const cb = `?cb=${Date.now()}`;
-  const tries = [
-    `/products.json${cb}`,
-    `/content/products.json${cb}`,
-    `products.json${cb}`,
-    `content/products.json${cb}`
-  ];
-  for (const url of tries){
-    try{
-      const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
-      if (res.ok){
-        const data = await res.json();
-        if (Array.isArray(data)) return data;
-      }
-    }catch{ /* next */ }
-  }
-  throw new Error('Nu am putut încărca products.json');
+  const url = `/content/products.json${cb}`;
+  const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
+  if (!res.ok) throw new Error('Nu am putut încărca /content/products.json');
+  const data = await res.json();
+  if (!Array.isArray(data)) throw new Error('products.json nu e un array');
+  return data;
 }
+
 
 // ========== main
 async function main(){
