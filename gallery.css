@@ -82,3 +82,54 @@
     text-align: center;
   }
 }
+
+/* ===== Stil modern tip homepage pentru produs ===== */
+.product-hero.centered {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.hero-box {
+  background: #fff6f9;               /* roz pal, ca pe homepage */
+  border-radius: 20px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.05);
+  padding: 40px 32px;
+  max-width: 850px;
+  width: 100%;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: #222;
+}
+
+.product-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.2em;
+}
+
+/* Integrare mai naturală a galeriei */
+.hero-box .bc-gallery {
+  margin: 0 auto 24px;
+  max-width: 700px;
+}
+
+/* Pe mobil: spațiu mai mic */
+@media (max-width: 768px) {
+  .hero-box {
+    padding: 28px 18px;
+    max-width: 95%;
+  }
+  .product-title {
+    font-size: 1.6rem;
+  }
+  .product-desc {
+    font-size: 1rem;
+  }
+}

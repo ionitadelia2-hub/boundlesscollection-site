@@ -118,48 +118,46 @@ function pageTemplate(prod) {
 </header>
 
 <main class="container product-page">
-  <section class="product-hero">
-    <div class="hero-inner">
-      <div class="hero-text">
-        <h1 class="product-title">${title}</h1>
-        <p class="product-desc">${desc}</p>
-        <p class="price price-badge">${price}</p>
-        <div class="tags">${(prod.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
-        <div class="actions">
-          <a class="btn" href="/" onclick="event.preventDefault(); history.back()">Înapoi</a>
-          <a class="btn btn-primary" href="${waLink}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
-        </div>
-      </div>
+  <section class="product-hero centered">
+    <div class="hero-box">
+      <h1 class="product-title">${title}</h1>
+      <p class="product-desc">${desc}</p>
 
-      <div class="hero-media">
-        <!-- GALERIE SLIDER -->
-        <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
-          <div class="bc-viewport">
-            <div class="bc-track">
-              ${relImgs.map((src, i) => `
-                <figure class="bc-slide">
-                  <img src="${src}" alt="${esc(title)} – imagine ${i+1}" loading="${i ? "lazy" : "eager"}">
-                </figure>
-              `).join("")}
-            </div>
-            <button class="bc-nav bc-prev">‹</button>
-            <button class="bc-nav bc-next">›</button>
+      <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
+        <div class="bc-viewport">
+          <div class="bc-track">
+            ${relImgs.map((src, i) => `
+              <figure class="bc-slide">
+                <img src="${src}" alt="${esc(title)} – imagine ${i+1}" loading="${i ? "lazy" : "eager"}">
+              </figure>
+            `).join("")}
           </div>
-          ${relImgs.length > 1 ? `
-          <div class="bc-thumbs">
-            <div class="bc-thumbs-row">
-              ${relImgs.map((src, i) => `
-                <button class="bc-thumb ${i===0?"is-active":""}" aria-label="Miniatură ${i+1}">
-                  <img src="${src}" alt="${esc(title)} thumb ${i+1}" loading="lazy">
-                </button>
-              `).join("")}
-            </div>
-          </div>` : ""}
-        </section>
+          <button class="bc-nav bc-prev">‹</button>
+          <button class="bc-nav bc-next">›</button>
+        </div>
+        ${relImgs.length > 1 ? `
+        <div class="bc-thumbs">
+          <div class="bc-thumbs-row">
+            ${relImgs.map((src, i) => `
+              <button class="bc-thumb ${i===0?"is-active":""}">
+                <img src="${src}" alt="${esc(title)} thumb ${i+1}" loading="lazy">
+              </button>
+            `).join("")}
+          </div>
+        </div>` : ""}
+      </section>
+
+      <p class="price price-badge">${price}</p>
+      <p>${desc}</p>
+      <div class="tags">${(prod.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
+      <div class="actions">
+        <a class="btn" href="/" onclick="event.preventDefault(); history.back()">Înapoi</a>
+        <a class="btn btn-primary" href="${waLink}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
       </div>
     </div>
   </section>
 </main>
+
 
 
 <footer class="footer"><small>© <span id="year"></span> ${brand}</small></footer>
