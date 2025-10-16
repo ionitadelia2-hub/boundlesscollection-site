@@ -47,12 +47,11 @@ function card(p){
   const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy" decoding="async">`).join('');
 
   // folosește link-ul spre pagina statică
+// folosește ruta dinamică (Vercel rewrite -> produs.html)
 const linkId = p.slug || p.id || slug(p.title);
-const href = `/p/${encodeURIComponent(linkId)}.html`;
-
-
-  const hasPrice = Number.isFinite(Number(p.price));
-  const priceStr = hasPrice ? `${Number(p.price).toFixed(2)} RON` : '';
+const href = `/produs/${encodeURIComponent(linkId)}`;
+const hasPrice = Number.isFinite(Number(p.price));
+const priceStr = hasPrice ? `${Number(p.price).toFixed(2)} RON` : '';
 
   return `
   <article class="item" data-id="${p.id||''}">

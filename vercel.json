@@ -3,7 +3,8 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/produs", "destination": "/produs.html" },
-    { "source": "/produs/:slug", "destination": "/produs.html" }
+    { "source": "/produs/(.*)", "destination": "/produs.html" }
+
   ],
   "redirects": [{ "source": "/index", "destination": "/", "permanent": true }]
 }
