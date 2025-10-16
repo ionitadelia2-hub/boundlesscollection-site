@@ -4,13 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Title/desc vor fi suprascrise dinamic de product.js -->
   <title>Produs • Boundless Collection</title>
-  <meta name="description" content="Detalii, imagini și preț pentru produsul selectat din Boundless Collection." />
+  <meta name="description" content="Vezi detalii, imagini și preț pentru produsul selectat din Boundless Collection." />
   <meta name="theme-color" content="#f7cfe1" />
   <link rel="canonical" href="/" />
 
-  <!-- Icons -->
+  <!-- Favicon / App Icons -->
   <link rel="icon" type="image/png" sizes="32x32"  href="/images/Delia.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/images/Delia.png">
   <link rel="apple-touch-icon" sizes="180x180"     href="/images/Delia.png">
@@ -24,21 +23,21 @@
   <!-- CSS -->
   <link rel="stylesheet" href="/style.css" />
 
-  <!-- Open Graph (suprascris de product.js) -->
+  <!-- Open Graph (product.js va suprascrie dinamic titlul/descrierea/imaginea) -->
   <meta property="og:type"        content="product" />
   <meta property="og:title"       content="Produs • Boundless Collection" />
   <meta property="og:description" content="Detalii produs – Boundless Collection" />
-  <meta property="og:image"       content="/images/preview.jpg" />
-  <meta property="og:url"         content="/" />
+  <meta property="og:image"       content="/content/preview.jpg" />
+  <meta property="og:url"         content="/produs.html" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Produs • Boundless Collection" />
   <meta name="twitter:description" content="Detalii produs – Boundless Collection" />
-  <meta name="twitter:image"       content="/images/preview.jpg" />
+  <meta name="twitter:image"       content="/content/preview.jpg" />
 </head>
 
-<body class="is-product">
+<body>
   <!-- HEADER -->
   <header class="header">
     <div class="container nav">
@@ -49,25 +48,16 @@
         <span class="brand-title">Boundless Collection</span>
       </a>
 
-      <!-- buton meniu mobil (folosește stilurile din style.css) -->
-      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
-
-      <nav aria-label="Meniu principal">
-        <ul id="mainmenu">
-          <li><a href="/">Acasă</a></li>
-          <li><a href="/marturii.html">Mărturii</a></li>
-          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
-        </ul>
-      </nav>
+      <a class="btn btn-light back-link" href="/" aria-label="Înapoi la catalog">⇠ Înapoi la catalog</a>
     </div>
   </header>
 
   <!-- MAIN -->
   <main class="container product-page" id="product-root" aria-live="polite">
-    <!-- Conținutul se randează dinamic de product.js în funcție de /p/<slug-sau-id> -->
+    <!-- Conținutul se randează dinamic din product.js pe baza id/slug -->
     <noscript>
       <p>Activează JavaScript pentru a putea vedea pagina produsului.</p>
-      <p><a class="btn" href="/">⇠ Înapoi la catalog</a></p>
+      <p><a class="btn btn-light" href="/">Înapoi la catalog</a></p>
     </noscript>
   </main>
 
@@ -82,32 +72,11 @@
   <!-- Scriptul paginii de produs -->
   <script src="/product.js" defer></script>
 
-  <!-- Utilitare: anul curent + meniu mobil -->
+  <!-- Anul curent în footer -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // anul curent
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
-
-      // meniu mobil
-      const btn  = document.querySelector('.nav-toggle');
-      const menu = document.getElementById('mainmenu');
-      if (btn && menu) {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          const open = document.body.classList.toggle('menu-open');
-          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        document.addEventListener('click', (e) => {
-          if (document.body.classList.contains('menu-open')) {
-            const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
-            if (!inside) {
-              document.body.classList.remove('menu-open');
-              btn.setAttribute('aria-expanded','false');
-            }
-          }
-        });
-      }
     });
   </script>
 </body>

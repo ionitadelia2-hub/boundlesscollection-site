@@ -44,58 +44,101 @@ function updateOG(p, firstImage){
 }
 
 function renderProduct(p){
-  const root = $('#product-root');
+  const root = document.querySelector('#product-root');
   if (!root) return;
 
   const images = Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'];
-  updateOG(p, images[0]);
+  document.title = `${p.title} • Boundless Collection`;
 
+  // markup cu SLIDER (slide-track + butoane + dots)
   root.innerHTML = `
-    <nav class="crumbs"><a href="/">Acasă</a> › <span class="current">${p.title}</span></nav>
+    <nav class="breadcrumbs"><a href="/">Acasă</a><span>›</span><span class="current">${p.title}</span></nav>
 
     <header class="product-head">
       <h1 class="product-title">${p.title}</h1>
-      ${Number.isFinite(+p.price) ? `<span class="price-badge">${fmt(p.price)} RON</span>` : ``}
+      ${Number.isFinite(+p.price) ? `<span class="price-badge">${(+p.price).toFixed(2)} RON</span>` : ``}
     </header>
 
     <section class="product-hero">
       <div class="gallery">
-        <div class="gallery-main">
-          <img id="main-photo" src="${images[0]}" alt="${p.title}">
+        <div class="frame">
+          <div class="slide-track" data-index="0" style="transform:translateX(0%)">
+            ${images.map((src,i)=>`
+              <img class="slide ${i===0?'active':''}" src="${src}" alt="${p.title} – imagine ${i+1}" loading="${i? 'lazy':'eager'}" decoding="async">
+            `).join('')}
+          </div>
+
+          ${images.length>1 ? `
+            <button class="nav prev" type="button" aria-label="Imagine anterioară">‹</button>
+            <button class="nav next" type="button" aria-label="Imagine următoare">›</button>
+          ` : ``}
         </div>
-        <div class="thumbs">
-          ${images.map((src,i)=>`
-            <button class="thumb ${i===0?'active':''}" data-src="${src}" aria-label="Imagine ${i+1}">
-              <img src="${src}" alt="${p.title} imagine ${i+1}">
-            </button>
-          `).join('')}
-        </div>
+
+        ${images.length>1 ? `
+          <div class="thumbs">
+            ${images.map((src,i)=>`
+              <button class="thumb ${i===0?'active':''}" data-i="${i}" aria-label="Miniatură ${i+1}">
+                <img src="${src}" alt="Miniatură ${i+1}">
+              </button>
+            `).join('')}
+          </div>
+        ` : ``}
       </div>
 
       <div class="product-info">
         <p class="lead">${p.desc || 'Model elegant, personalizabil.'}</p>
-
         ${Array.isArray(p.options) && p.options.length ? `
-          <ul class="tags">
-            ${p.options.map(o => `<li>${o}</li>`).join('')}
-          </ul>
+          <ul class="tags">${p.options.map(o=>`<li>${o}</li>`).join('')}</ul>
         ` : ''}
 
         <div class="actions">
-          <a class="btn btn-primary" id="wa-btn">Cere ofertă pe WhatsApp</a>
-          <a class="btn btn-light" href="/">⇠ Înapoi la catalog</a>
+          <a class="btn primary" id="wa-btn">Cere ofertă pe WhatsApp</a>
+          <a class="btn" href="/">⇠ Înapoi la catalog</a>
         </div>
       </div>
     </section>
   `;
 
-  // thumbs
-  root.querySelectorAll('.thumb').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      root.querySelectorAll('.thumb').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      $('#main-photo').src = btn.dataset.src;
-    });
+  // === SLIDER logic ===
+  const track = root.querySelector('.slide-track');
+  const slides = [...root.querySelectorAll('.slide')];
+  const thumbs = [...root.querySelectorAll('.thumb')];
+  const prevBtn = root.querySelector('.nav.prev');
+  const nextBtn = root.querySelector('.nav.next');
+  let index = 0, busy = false;
+
+  function go(i){
+    if (busy || !slides.length) return;
+    index = (i + slides.length) % slides.length;
+    busy = true;
+    track.style.transform = `translateX(${-100*index}%)`;
+    slides.forEach((s,k)=>s.classList.toggle('active', k===index));
+    thumbs.forEach((t,k)=>t.classList.toggle('active', k===index));
+    setTimeout(()=>busy=false, 250);
+  }
+  function next(){ go(index+1); }
+  function prev(){ go(index-1); }
+
+  // inițializează lățimea track-ului (flex row implicit via CSS)
+  track.style.width = `${slides.length*100}%`;
+
+  // evenimente
+  nextBtn?.addEventListener('click', next);
+  prevBtn?.addEventListener('click', prev);
+  thumbs.forEach(btn => btn.addEventListener('click', ()=> go(+btn.dataset.i)));
+
+  // taste ← / →
+  document.addEventListener('keydown', (e)=>{
+    if (e.key === 'ArrowRight') next();
+    if (e.key === 'ArrowLeft') prev();
+  });
+
+  // swipe pe mobil
+  let startX=0, deltaX=0;
+  track.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; deltaX=0; }, {passive:true});
+  track.addEventListener('touchmove',  (e)=>{ deltaX = e.touches[0].clientX - startX; }, {passive:true});
+  track.addEventListener('touchend',   ()=>{
+    if (Math.abs(deltaX) > 40) (deltaX<0 ? next() : prev());
   });
 
   // WhatsApp
@@ -104,6 +147,7 @@ function renderProduct(p){
     window.open(`https://wa.me/40760617724?text=${msg}`, '_blank', 'noopener');
   });
 }
+
 
 // ========== încărcare products.json (root cu fallback + cachebust)
 // ========== încărcare products.json (doar din /content, cu cachebust)
