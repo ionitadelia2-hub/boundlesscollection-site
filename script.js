@@ -17,6 +17,12 @@ const slug = s => (s||"")
   .replace(/(^-|-$)+/g,"")
   .slice(0,80);
 
+// normalizare pt. comparații (căutare/filtrare)
+const norm = s => (s||"")
+  .toString()
+  .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
+  .toLowerCase().trim();
+
 /* =============== Card + Render =============== */
 function card(p){
   const imgs   = Array.isArray(p.images) ? p.images : [];
@@ -31,7 +37,7 @@ function card(p){
     <a class="card-link" href="${href}" aria-label="Vezi detalii ${p.title}">
       <div class="media">
         <div class="slide-track" data-index="0">
-          ${slides || `<img src="/images/preview.jpg" alt="${p.title}" class="active" style="opacity:.25">`}
+          ${slides || `<img src="images/preview.jpg" alt="${p.title}" class="active" style="opacity:.25">`}
         </div>
         ${imgs.length>1 ? `
         <div class="slider-nav">
@@ -43,7 +49,7 @@ function card(p){
       <div class="content">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
           <h3 style="margin:0;font-size:1rem">${p.title}</h3>
-          <span class="pill">${p.category}</span>
+          <span class="pill">${p.category || ''}</span>
         </div>
         <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ""}</p>
         <div class="price">${Number(p.price).toFixed(2)} RON</div>
@@ -56,31 +62,34 @@ function card(p){
   </article>`;
 }
 
-
-
-
 function render(){
   if (!grid) return;
-  const term = (q?.value || '').toLowerCase();
+  const term = norm(q?.value || '');
+
   const items = PRODUCTS.filter(p=>{
-    const hitTerm = [p.title, p.desc, p.category].join(' ').toLowerCase().includes(term);
-    const hitCat  = activeFilter==='toate' || p.category===activeFilter;
+    const hay = norm([p.title, p.desc, p.category, ...(p.tags||[])].join(' '));
+    const hitTerm = !term || hay.includes(term);
+    const hitCat  = activeFilter === 'toate'
+                 || p.categoryKey === activeFilter
+                 || (p.tagsKey && p.tagsKey.includes(activeFilter));
     return hitTerm && hitCat;
   });
-  grid.innerHTML = items.map(card).join('');
-  grid.querySelectorAll('.actions .btn').forEach(btn=>{
-  btn.addEventListener('click', (e)=>{
-    e.preventDefault();
-    e.stopPropagation();
-    const card = e.currentTarget.closest('.item');
-    const id = card?.dataset.id;
-    const p = PRODUCTS.find(x=>x.id===id);
-    if(!p) return;
-    if (btn.dataset.act === 'share') share(p.title);
-    if (btn.dataset.act === 'inquire') inquire(p.title, id);
-  });
-});
 
+  grid.innerHTML = items.map(card).join('');
+
+  // butoanele din card
+  grid.querySelectorAll('.actions .btn').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      e.stopPropagation();
+      const card = e.currentTarget.closest('.item');
+      const id = card?.dataset.id;
+      const p = PRODUCTS.find(x=>x.id===id);
+      if(!p) return;
+      if (btn.dataset.act === 'share') share(p.title);
+      if (btn.dataset.act === 'inquire') inquire(p.title, id);
+    });
+  });
 }
 
 /* =============== Loader JSON =============== */
@@ -92,16 +101,24 @@ async function loadProducts(){
     if(!res.ok) throw new Error('Nu s-a putut încărca products.json');
     const data = await res.json();
     if(!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
-    // normalizare minimă:
-    PRODUCTS = data.map(p => ({
-  id: p.id || crypto.randomUUID(),
-  title: p.title || '',
-  price: Number(p.price || 0),
-  category: p.category || '',
-  desc: p.desc || '',
-  images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
-  slug: p.slug || slug(p.title), // <- important
-}));
+
+    PRODUCTS = data.map(p => {
+      const tags = Array.isArray(p.tags) ? p.tags : [];
+      return {
+        id: p.id || (crypto?.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2)),
+        title: p.title || '',
+        price: Number(p.price || 0),
+        category: p.category || '',
+        categoryKey: norm(p.category || ''),   // <- pt. filtrare „plicuri” vs „Plicuri”
+        desc: p.desc || '',
+        images: Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []),
+        slug: p.slug || slug(p.title),
+        tags,
+        tagsKey: tags.map(norm)                // <- căutare/filtrare și în tags
+      };
+    });
+
+    // console.log('Loaded', PRODUCTS.length, 'items');
   }catch(err){
     console.error(err);
     PRODUCTS = []; // fallback gol
@@ -168,7 +185,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
   filterBtns.forEach(btn => btn.addEventListener('click', ()=>{
     filterBtns.forEach(b=>b.setAttribute('aria-pressed','false'));
     btn.setAttribute('aria-pressed','true');
-    activeFilter = btn.dataset.filter;
+    activeFilter = norm(btn.dataset.filter || 'toate'); // <- normalizat!
     render();
   }));
 
