@@ -1,15 +1,39 @@
 /* ===== Boundless – Product Gallery ===== */
 .bc-gallery { width: 100%; max-width: 900px; margin-inline: auto; }
 .bc-viewport { position: relative; overflow: hidden; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.06); background:#fff; }
-.bc-viewport::before { content:""; display:block; width:100%; aspect-ratio: 3 / 2; } /* raport imagine */
+/* cadrul sliderului */
+.bc-viewport::before{
+  content:"";
+  display:block;
+  width:100%;
+  aspect-ratio: 3 / 2;  /* 4/3 sau 1/1 dacă preferi */
+  max-height: 360px;    /* ← micșorează aici înălțimea */
+}
 .bc-track { display: flex; height: 100%; position: absolute; inset: 0; transition: transform .35s ease; }
 .bc-slide { flex: 0 0 100%; position: relative; }
 .bc-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* butoane */
-.bc-nav { position:absolute; top:50%; translate:0 -50%; width:38px; height:38px; border-radius:999px; border:0; background:rgba(255,255,255,.92); box-shadow:0 4px 12px rgba(0,0,0,.15); font-size:26px; line-height:1; cursor:pointer; }
-.bc-nav:hover { transform: scale(1.06) translateY(-50%); }
-.bc-prev { left:10px; } .bc-next { right:10px; }
+.bc-nav{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);      /* baza CONSISTENTĂ */
+  transform-origin:center;
+  width:38px; height:38px; border:0; border-radius:999px;
+  background:rgba(255,255,255,.92);
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+  font-size:26px; line-height:1; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  transition: transform .15s ease, box-shadow .15s ease;
+  will-change: transform;
+  backface-visibility: hidden;      /* anti-flicker pe WebKit */
+}
+.bc-nav:hover{
+  transform:translateY(-50%) scale(1.06);  /* NU schimbăm baza */
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+.bc-prev{ left:10px; }
+.bc-next{ right:10px; }
 
 /* thumbs */
 .bc-thumbs { margin-top: 12px; overflow: hidden; }
@@ -115,9 +139,10 @@
 }
 
 /* Integrare mai naturală a galeriei */
-.hero-box .bc-gallery {
-  margin: 0 auto 24px;
-  max-width: 700px;
+/* cardul roz centrat */
+.hero-box .bc-gallery{
+  max-width: 680px;     /* ← fă-l 640/620 dacă vrei și mai mic */
+  margin: 10px auto 18px;
 }
 
 /* Pe mobil: spațiu mai mic */
