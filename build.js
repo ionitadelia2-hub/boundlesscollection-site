@@ -7,6 +7,9 @@ const ROOT     = __dirname;
 const OUT      = path.join(ROOT, 'public');        // <- folderul de ieșire pentru Vercel
 const CSV_FILE = path.join(ROOT, 'content', 'products.csv');
 const JSON_OUT = path.join(ROOT, 'content', 'products.json'); // sursă, apoi copiem în OUT
+// după fs.writeFileSync(JSON_OUT, ...);
+copyFileSync(JSON_OUT, path.join(OUT, 'products.json')); // <- bonus: /products.json
+
 
 const ORIGIN = (process.env.SITE_ORIGIN || 'https://boundlesscollection.ro').replace(/\/+$/, '');
 
