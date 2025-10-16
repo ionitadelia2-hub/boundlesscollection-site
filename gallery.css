@@ -1,7 +1,7 @@
 /* ===== Boundless – Product Gallery ===== */
 .bc-gallery { width: 100%; max-width: 900px; margin-inline: auto; }
 .bc-viewport { position: relative; overflow: hidden; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.06); background:#fff; }
-.bc-viewport::before { content:""; display:block; width:100%; aspect-ratio: 4 / 3; } /* raport imagine */
+.bc-viewport::before { content:""; display:block; width:100%; aspect-ratio: 3 / 2; } /* raport imagine */
 .bc-track { display: flex; height: 100%; position: absolute; inset: 0; transition: transform .35s ease; }
 .bc-slide { flex: 0 0 100%; position: relative; }
 .bc-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -21,3 +21,64 @@
 
 /* mic efect */
 .bc-slide:hover img { transform: scale(1.015); transition: transform .25s ease; }
+
+/* ===== layout tip homepage pentru pagina produs ===== */
+.product-hero {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text {
+  text-align: left;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.product-desc {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+.price-badge {
+  font-size: 1.3rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  background: #fde6ec;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+.hero-media {
+  justify-self: center;
+}
+
+/* pe mobil: imaginea deasupra textului */
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .hero-media {
+    order: -1; /* mută sliderul deasupra */
+  }
+  .product-title {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}

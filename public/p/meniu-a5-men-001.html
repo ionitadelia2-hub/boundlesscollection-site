@@ -37,35 +37,40 @@
 </header>
 
 <main class="container product-page">
-<article>
-  <h1>Meniu A5</h1>
-
-  <!-- ===== GALERIE SLIDER ===== -->
-  <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
-    <div class="bc-viewport">
-      <div class="bc-track">
-        
-          <figure class="bc-slide">
-            <img src="/images/meniuri/a5-rama-1.jpg" alt="Meniu A5 – imagine 1" loading="eager">
-          </figure>
-        
+  <section class="product-hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1 class="product-title">Meniu A5</h1>
+        <p class="product-desc">Carton perlat</p>
+        <p class="price price-badge">6.50 RON</p>
+        <div class="tags"><span class="tag">meniuri</span><span class="tag">perlat</span></div>
+        <div class="actions">
+          <a class="btn" href="/" onclick="event.preventDefault(); history.back()">Înapoi</a>
+          <a class="btn btn-primary" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Meniu%20A5%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Fmeniu-a5-men-001.html)" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+        </div>
       </div>
-      <button class="bc-nav bc-prev" aria-label="Imaginea anterioară">‹</button>
-      <button class="bc-nav bc-next" aria-label="Imaginea următoare">›</button>
-    </div>
-    
-  </section>
-  <!-- ===== END GALERIE ===== -->
 
-  <p class="price price-badge">6.50 RON</p>
-  <p>Carton perlat</p>
-  <div class="tags"><span class="tag">meniuri</span><span class="tag">perlat</span></div>
-  <div class="actions">
-    <a class="btn" href="/" onclick="event.preventDefault(); history.back()">Înapoi</a>
-    <a class="btn btn-primary" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Meniu%20A5%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Fmeniu-a5-men-001.html)" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
-  </div>
-</article>
+      <div class="hero-media">
+        <!-- GALERIE SLIDER -->
+        <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
+          <div class="bc-viewport">
+            <div class="bc-track">
+              
+                <figure class="bc-slide">
+                  <img src="/images/meniuri/a5-rama-1.jpg" alt="Meniu A5 – imagine 1" loading="eager">
+                </figure>
+              
+            </div>
+            <button class="bc-nav bc-prev">‹</button>
+            <button class="bc-nav bc-next">›</button>
+          </div>
+          
+        </section>
+      </div>
+    </div>
+  </section>
 </main>
+
 
 <footer class="footer"><small>© <span id="year"></span> Boundless Collection</small></footer>
 <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
