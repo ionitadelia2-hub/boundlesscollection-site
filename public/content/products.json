@@ -6,13 +6,31 @@
     "category": "Invitații",
     "desc": "Model elegant",
     "images": [
-      "/images/invitatie-florala.jpg",
-      "/images/invitatie-florala-2.jpg"
+      "images/invitatie-florala.jpg",
+      "images/invitatie-florala-2.jpg"
     ],
-    "tags": [
-      "roz",
-      "floral"
-    ],
+    "tags": ["roz","floral"],
     "slug": "invitatie-florala-1d801b5c"
+  },
+  {
+    "id": "pl-001",
+    "title": "Plic de dar albastru",
+    "price": 7.5,
+    "category": "Plicuri",
+    "desc": "Satin albastru, card interior personalizat.",
+    "images": ["images/plic-albastru-1.jpg","images/plic-albastru-2.jpg"],
+    "tags": ["plicuri", "albastru"],
+    "slug": "plic-dar-albastru-pl-001"
+  },
+  {
+    "id": "pl-002",
+    "title": "Plic de dar ivoire",
+    "price": 7.0,
+    "category": "Plicuri",
+    "desc": "Textură perlată, panglică satin.",
+    "images": ["images/plic-ivoire-1.jpg"],
+    "tags": ["plicuri", "ivoire"],
+    "slug": "plic-dar-ivoire-pl-002"
   }
 ]
+
