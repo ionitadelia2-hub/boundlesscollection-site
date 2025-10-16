@@ -1,39 +1,46 @@
-// product.js – pagină produs (id/slug)
+// product.js – pagină produs (slug/id) – Vercel ready
 
 const $ = (s, r=document) => r.querySelector(s);
 const fmt = n => (Math.round(Number(n||0)*100)/100).toFixed(2);
 
-// === util: slug identic cu cel din script.js (pt. fallback) ===
-const slug = s => (s||"")
-  .toString()
+// normalizări (identice ca în script.js)
+const norm = s => (s||"").toString()
   .normalize("NFD").replace(/[\u0300-\u036f]/g,"")
-  .toLowerCase()
-  .replace(/[^a-z0-9]+/g,"-")
-  .replace(/(^-|-$)+/g,"")
+  .toLowerCase().trim();
+
+const slugify = s => norm(s)
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/(^-|-$)+/g, "")
   .slice(0,80);
 
-// --------- ID din URL: ?id=... sau /produs/<id|slug> ---------
-function getId(){
+// ========== extrage cheie din URL: /produs/<slug> sau ?slug= / ?id=
+function getKeyFromUrl(){
+  const path = location.pathname.replace(/\/+$/,'');
+  const m = path.match(/\/produs\/([^/]+)$/);
+  if (m) return decodeURIComponent(m[1]);
   const u = new URL(location.href);
-  let id = u.searchParams.get('id');
-  if (!id) {
-    const parts = location.pathname.split('/').filter(Boolean); // ["produs","<id|slug>"]
-    const maybe = parts[1];
-    if (parts[0] === 'produs' && maybe) id = decodeURIComponent(maybe);
-  }
-  return id || "";
+  return u.searchParams.get('slug') || u.searchParams.get('id') || "";
 }
 
-// --------- UI helpers ---------
+// ========== UI helpers
 function renderNotFound(msg="Produs indisponibil"){
   const root = $('#product-root');
   if (!root) return;
   root.innerHTML = `
     <h1>${msg}</h1>
     <p>Produsul nu a fost specificat sau nu există.</p>
-    <a class="btn btn-light" href="/">⇠ Înapoi la galerie</a>
+    <a class="btn btn-light" href="/">⇠ Înapoi la catalog</a>
   `;
   document.title = `Produs indisponibil • Boundless Collection`;
+}
+
+function updateOG(p, firstImage){
+  document.title = `${p.title} • Boundless Collection`;
+  const set = (sel, val) => { const el = document.querySelector(sel); if (el) el.setAttribute('content', val); };
+  set('meta[property="og:title"]', p.title);
+  set('meta[property="og:description"]', p.desc || p.category || 'Detalii produs');
+  if (firstImage) set('meta[property="og:image"]', firstImage);
+  set('meta[property="og:url"]', location.href);
 }
 
 function renderProduct(p){
@@ -41,20 +48,14 @@ function renderProduct(p){
   if (!root) return;
 
   const images = Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'];
-
-  // titlu + meta dinamice
-  document.title = `${p.title} • Boundless Collection`;
-  const ogT = document.querySelector('meta[property="og:title"]');        if (ogT) ogT.setAttribute('content', p.title);
-  const ogD = document.querySelector('meta[property="og:description"]');  if (ogD) ogD.setAttribute('content', p.desc || 'Detalii produs');
-  const ogI = document.querySelector('meta[property="og:image"]');        if (ogI) ogI.setAttribute('content', images[0]);
-  const ogU = document.querySelector('meta[property="og:url"]');          if (ogU) ogU.setAttribute('content', location.href);
+  updateOG(p, images[0]);
 
   root.innerHTML = `
     <nav class="crumbs"><a href="/">Acasă</a> › <span class="current">${p.title}</span></nav>
 
     <header class="product-head">
       <h1 class="product-title">${p.title}</h1>
-      <span class="price-badge">${fmt(p.price)} RON</span>
+      ${Number.isFinite(+p.price) ? `<span class="price-badge">${fmt(p.price)} RON</span>` : ``}
     </header>
 
     <section class="product-hero">
@@ -88,7 +89,7 @@ function renderProduct(p){
     </section>
   `;
 
-  // thumbs → schimbă imaginea mare
+  // thumbs
   root.querySelectorAll('.thumb').forEach(btn=>{
     btn.addEventListener('click', ()=>{
       root.querySelectorAll('.thumb').forEach(b=>b.classList.remove('active'));
@@ -99,68 +100,65 @@ function renderProduct(p){
 
   // WhatsApp
   root.querySelector('#wa-btn')?.addEventListener('click', ()=>{
-    const msg = encodeURIComponent(`Bună! Aș dori ofertă pentru: ${p.title} (ID: ${p.id}).`);
+    const msg = encodeURIComponent(`Bună! Aș dori ofertă pentru: ${p.title} (ID: ${p.id || p.slug}).`);
     window.open(`https://wa.me/40760617724?text=${msg}`, '_blank', 'noopener');
   });
 }
 
-// --------- încărcare JSON cu fallback de cale ---------
+// ========== încărcare products.json (root cu fallback + cachebust)
 async function fetchProducts(){
-  const tries = ['/content/products.json', 'content/products.json'];
-  for (const url of tries) {
-    try {
-      console.log('[product.js] încerc fetch:', url);
-      const r = await fetch(url, { headers: { 'Accept':'application/json' } });
-      console.log('[product.js] răspuns pentru', url, 'status =', r.status);
-      if (r.ok) {
-        const data = await r.json();
-        console.log('[product.js] încărcat din', url, 'items =', Array.isArray(data) ? data.length : 'N/A');
-        return data;
+  const cb = `?cb=${Date.now()}`;
+  const tries = [
+    `/products.json${cb}`,
+    `/content/products.json${cb}`,
+    `products.json${cb}`,
+    `content/products.json${cb}`
+  ];
+  for (const url of tries){
+    try{
+      const res = await fetch(url, { headers: { 'Accept': 'application/json' } });
+      if (res.ok){
+        const data = await res.json();
+        if (Array.isArray(data)) return data;
       }
-    } catch (e) {
-      console.warn('[product.js] fetch eșuat pentru', url, e);
-    }
+    }catch{ /* next */ }
   }
-  throw new Error('Nu am putut încărca products.json din /content/');
+  throw new Error('Nu am putut încărca products.json');
 }
 
-// --------- main ---------
+// ========== main
 async function main(){
-  console.log('[product.js] location.pathname =', location.pathname);
-  const key = getId();
-  console.log('[product.js] id/slug din URL =', key);
-
-  if (!key) {
+  const keyRaw = getKeyFromUrl();
+  if (!keyRaw){
     renderNotFound("Produs indisponibil");
     return;
   }
+  const key = norm(keyRaw);
 
-  try {
+  try{
     const list = await fetchProducts();
-    console.log('[product.js] produse încărcate =', Array.isArray(list) ? list.length : 'N/A');
 
-    // match după id, slug sau slug(titlu)
-    const prod = list.find(p =>
-      String(p.id) === key ||
-      p.slug === key ||
-      slug(p.title) === key
-    );
-    console.log('[product.js] produs găsit =', prod);
+    // match după: slug (norm), id (exact), slug(title)
+    const prod = list.find(p => {
+      const pid = (p.id ?? '').toString();
+      const pslug = norm(p.slug ?? '');
+      const ptitleSlug = slugify(p.title ?? '');
+      return pslug === key || pid === keyRaw || ptitleSlug === key;
+    });
 
-    if (!prod) {
+    if (!prod){
       renderNotFound("Produsul nu a fost găsit.");
       return;
     }
 
-    // normalizează URL-ul (opțional)
-    const canonical = prod.slug || String(prod.id) || slug(prod.title);
-    if (key !== canonical) {
+    // canonicalizează URL-ul către /produs/{slug}
+    const canonical = prod.slug || (prod.title ? slugify(prod.title) : (prod.id ?? '').toString());
+    if (decodeURIComponent(keyRaw) !== canonical){
       history.replaceState(null, "", `/produs/${encodeURIComponent(canonical)}`);
     }
 
     renderProduct(prod);
-  } catch (e) {
-    console.error('[product.js] EROARE în main()', e);
+  }catch(e){
     renderNotFound("Nu am putut încărca produsul.");
   }
 }
