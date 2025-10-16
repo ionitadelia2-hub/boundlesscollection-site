@@ -47,10 +47,14 @@ function card(p){
   const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy" decoding="async">`).join('');
 
   const linkId = p.slug || p.id || slug(p.title);
-  const href = `/produs/${encodeURIComponent(linkId)}`;
+  // ⇩⇩⇩ trimite la pagina statică generată de build.js
+  const href = `/p/${encodeURIComponent(linkId)}.html`;
+
+  const hasPrice = Number.isFinite(Number(p.price));
+  const priceStr = hasPrice ? `${Number(p.price).toFixed(2)} RON` : '';
 
   return `
-  <article class="item" data-id="${p.id}">
+  <article class="item" data-id="${p.id||''}">
     <a class="card-link" href="${href}" aria-label="Vezi detalii ${p.title}">
       <div class="media">
         <div class="slide-track" data-index="0">
@@ -66,10 +70,10 @@ function card(p){
       <div class="content">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
           <h3 style="margin:0;font-size:1rem">${p.title}</h3>
-          <span class="pill">${p.category}</span>
+          <span class="pill">${p.category || ''}</span>
         </div>
         <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ""}</p>
-        <div class="price">${Number(p.price).toFixed(2)} RON</div>
+        <div class="price">${priceStr}</div>
       </div>
     </a>
     <div class="actions">
@@ -78,6 +82,7 @@ function card(p){
     </div>
   </article>`;
 }
+
 
 function emptyState(message){
   return `
