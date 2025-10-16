@@ -39,7 +39,7 @@ function card(p){
     <a class="card-link" href="${href}" aria-label="Vezi detalii ${p.title}">
       <div class="media">
         <div class="slide-track" data-index="0">
-          ${slides || `<img src="images/preview.jpg" alt="${p.title}" class="active" style="opacity:.25">`}
+          ${slides || `<img src="/images/preview.jpg" alt="${p.title}" class="active" style="opacity:.25">`}
         </div>
         ${imgs.length>1 ? `
         <div class="slider-nav">
@@ -86,7 +86,7 @@ function render(){
 
   grid.innerHTML = items.length
     ? items.map(card).join('')
-    : emptyState('Nu am găsit produse pentru filtrul/ căutarea selectată.');
+    : emptyState('Nu am găsit produse pentru filtrul/căutarea selectată.');
 
   // butoanele din card
   grid.querySelectorAll('.actions .btn').forEach(btn=>{
@@ -109,18 +109,20 @@ async function fetchFirstOk(urls){
     try{
       const res = await fetch(u, { headers: { 'Accept': 'application/json' }});
       if (res.ok) return res;
-    }catch{ /* try next */ }
+    }catch{/* try next */}
   }
   throw new Error('Nu s-a putut încărca niciun products.json din căile testate.');
 }
 
 async function loadProducts(){
   try{
-    // încearcă în rădăcină apoi în /content
-    const cachebust = '?cachebust=' + Date.now();
+    // Încearcă absolut din rădăcină (Vercel) + fallback-uri
+    const cb = '?cb=' + Date.now();
     const res = await fetchFirstOk([
-      './products.json' + cachebust,
-      './content/products.json' + cachebust
+      '/products.json' + cb,
+      '/content/products.json' + cb,
+      './products.json' + cb,
+      './content/products.json' + cb
     ]);
 
     const data = await res.json();
@@ -142,8 +144,13 @@ async function loadProducts(){
       };
     });
   }catch(err){
-    console.error(err);
+    console.error('[loadProducts]', err);
     PRODUCTS = []; // fallback gol
+    if (grid){
+      grid.innerHTML = emptyState(
+        'Nu am putut încărca <code>products.json</code>. Verifică că există la <code>/products.json</code> în deploy.'
+      );
+    }
   }
 }
 
