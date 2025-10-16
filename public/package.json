@@ -1,0 +1,13 @@
+{
+  "name": "boundlesscollection",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generator static pentru catalog + pagini produs",
+  "scripts": {
+    "build:catalog": "node build.js",
+    "build": "node build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
