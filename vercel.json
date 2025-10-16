@@ -1,6 +1,16 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     { "source": "/produs", "destination": "/produs.html" },
     { "source": "/produs/:slug", "destination": "/produs.html" }
+  ],
+  "headers": [
+    {
+      "source": "/products.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
+      ]
+    }
   ]
 }
