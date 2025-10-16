@@ -107,6 +107,7 @@ function renderProduct(p){
 
 // ========== încărcare products.json (root cu fallback + cachebust)
 // ========== încărcare products.json (doar din /content, cu cachebust)
+// ========== încărcare products.json (doar din /content, cu cachebust)
 async function fetchProducts(){
   const cb = `?cb=${Date.now()}`;
   const url = `/content/products.json${cb}`;
@@ -116,6 +117,7 @@ async function fetchProducts(){
   if (!Array.isArray(data)) throw new Error('products.json nu e un array');
   return data;
 }
+
 
 
 // ========== main
