@@ -9,6 +9,23 @@ const grid       = $('#grid');
 const q          = $('#q');
 const filterBtns = $$('.filter .pill');
 
+// ===== DEBUG UI (banner vizibil când apare o eroare) =====
+function debugBanner(msg){
+  try{
+    let el = document.getElementById('__debug_banner');
+    if(!el){
+      el = document.createElement('div');
+      el.id='__debug_banner';
+      el.style.cssText = 'position:fixed;left:0;right:0;top:0;z-index:99999;padding:.7rem 1rem;background:#b00020;color:#fff;font:600 14px/1.3 system-ui,Segoe UI,Arial;border-bottom:2px solid rgba(255,255,255,.25);box-shadow:0 6px 16px rgba(0,0,0,.25)';
+      el.innerHTML = '<span id="__debug_text"></span> <button id="__debug_close" style="margin-left:12px;padding:.25rem .55rem;border:0;border-radius:999px;background:#fff;color:#b00020;font-weight:700;cursor:pointer">OK</button>';
+      document.body.appendChild(el);
+      document.getElementById('__debug_close').onclick = ()=> el.remove();
+    }
+    document.getElementById('__debug_text').innerHTML = msg;
+  }catch(e){ console.warn('debugBanner fail', e); }
+}
+
+
 const slug = s => (s||"")
   .toString()
   .normalize("NFD").replace(/[\u0300-\u036f]/g,"") // fără diacritice
@@ -116,14 +133,36 @@ async function fetchFirstOk(urls){
 
 /* =============== Loader JSON =============== */
 async function loadProducts(){
+  const url = '/content/products.json?cb=' + Date.now();
   try{
-    const cb = '?cb=' + Date.now();
-    const res = await fetch('/content/products.json' + cb, {
-      headers: { 'Accept': 'application/json' }
-    });
-    if (!res.ok) throw new Error('products.json 404 la /content/');
+    console.log('[loadProducts] încerc:', url);
+    const res = await fetch(url, { headers: { 'Accept': 'application/json' }});
+    if (!res.ok){
+      const txt = await res.text().catch(()=>'(fără body)');
+      const msg = `❌ products.json NU s-a încărcat (${res.status}). URL: <code>${url.split('?')[0]}</code><br><small>Body: ${txt.slice(0,180)}</small>`;
+      console.error('[loadProducts] HTTP', res.status, txt);
+      debugBanner(msg);
+      // mesaj și în grid ca să fie evident
+      if (grid) grid.innerHTML = `
+        <div class="item" style="grid-column:1/-1;padding:1.2rem;border:1px solid #ffd8e7;border-radius:12px;background:#fff0f3">
+          ${msg}
+        </div>`;
+      PRODUCTS = [];
+      return;
+    }
+
     const data = await res.json();
-    if (!Array.isArray(data)) throw new Error('Format invalid: products.json trebuie să fie un array');
+    if(!Array.isArray(data)){
+      const msg = '❌ Format invalid: <code>content/products.json</code> trebuie să fie un array.';
+      console.error('[loadProducts] format invalid', data);
+      debugBanner(msg);
+      if (grid) grid.innerHTML = `
+        <div class="item" style="grid-column:1/-1;padding:1.2rem;border:1px solid #ffd8e7;border-radius:12px;background:#fff0f3">
+          ${msg}
+        </div>`;
+      PRODUCTS = [];
+      return;
+    }
 
     PRODUCTS = data.map(p => {
       const tags = Array.isArray(p.tags) ? p.tags : [];
@@ -140,13 +179,17 @@ async function loadProducts(){
         tagsKey: tags.map(norm)
       };
     });
+
+    console.log('[loadProducts] OK, produse:', PRODUCTS.length);
   }catch(err){
-    console.error('[loadProducts]', err);
+    const msg = `❌ Eroare rețea la <code>${url.split('?')[0]}</code>: ${String(err)}`;
+    console.error('[loadProducts] catch', err);
+    debugBanner(msg);
     PRODUCTS = [];
     if (grid){
       grid.innerHTML = `
-        <div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">
-          Nu am putut încărca <code>content/products.json</code>. Verifică că există în deploy.
+        <div class="item" style="grid-column:1/-1;padding:1.2rem;border:1px solid #ffd8e7;border-radius:12px;background:#fff0f3">
+          ${msg}
         </div>`;
     }
   }
