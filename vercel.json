@@ -5,7 +5,5 @@
     { "source": "/produs", "destination": "/produs.html" },
     { "source": "/produs/:slug", "destination": "/produs.html" }
   ],
-  "redirects": [
-    { "source": "/index", "destination": "/", "permanent": true }
-  ]
+  "redirects": [{ "source": "/index", "destination": "/", "permanent": true }]
 }
