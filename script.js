@@ -46,9 +46,10 @@ function card(p){
   const dots   = imgs.map((_,i)=>`<i class="${i===0?'active':''}"></i>`).join('');
   const slides = imgs.map((src,i)=>`<img src="${src}" alt="${p.title}" class="${i===0?'active':''}" loading="lazy" decoding="async">`).join('');
 
-  const linkId = p.slug || p.id || slug(p.title);
-  // ⇩⇩⇩ trimite la pagina statică generată de build.js
-  const href = `/p/${encodeURIComponent(linkId)}.html`;
+  // folosește link-ul spre pagina statică
+const linkId = p.slug || p.id || slug(p.title);
+const href = `/p/${encodeURIComponent(linkId)}.html`;
+
 
   const hasPrice = Number.isFinite(Number(p.price));
   const priceStr = hasPrice ? `${Number(p.price).toFixed(2)} RON` : '';
