@@ -35,50 +35,61 @@
 .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
 .thumb:hover, .thumb.active{ opacity:1; transform:translateY(-1px); }
 
-/* Coloana dreaptă (info) */
+/* Coloana dreaptă (info) — compatibil cu .col-info din product.js */
+.col-info,
 .product-info{
   display:grid;
   align-content:start;
   gap:1rem;
-  text-align:left;               /* IMPORTANT: titlu/descriere pe stânga */
 }
-.product-title{                 /* header din product.js */
-  text-align:left;               /* override peste reguli vechi din style.css */
-}
-.lead{ color:#555; line-height:1.6; }
 
-/* Prețul din header (price-badge există deja în style.css) */
+/* Overwrite al regulilor vechi care centrău conținutul pe pagina de produs */
+.col-info .product-title,
+.col-info .product-desc,
+.col-info p,
+.col-info h1 { 
+  text-align:left;
+}
+
+/* Aspect text */
+.product-desc,
+.col-info .lead{ color:#555; line-height:1.6; font-size:1.05rem; }
+
+/* Header cu preț (dacă îl pui aici) */
 .product-head{
   display:flex; align-items:center; justify-content:space-between;
   gap:.6rem; margin-bottom:1rem;
 }
 
+/* Tag-uri */
+.tags{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.tags .tag{
+  background:#fff0f6; border:1px solid #ffd8e7;
+  border-radius:999px; padding:.25rem .7rem; font-size:.9rem; color:#9a5a78;
+}
+
 /* Butoane acțiuni */
 .actions{ display:flex; gap:1rem; margin-top:1rem; }
 .actions .btn{
-  flex:1;
-  padding:.7rem 1.2rem;
-  border-radius:999px;
-  border:1px solid #ffd8e7;
-  background:#fff;
+  flex:1; padding:.7rem 1.2rem; border-radius:999px;
+  border:1px solid #ffd8e7; background:#fff;
   box-shadow:0 4px 12px rgba(0,0,0,.06);
-  cursor:pointer;
-  transition:transform .12s ease, box-shadow .18s ease;
+  cursor:pointer; transition:transform .12s ease, box-shadow .18s ease;
 }
 .actions .btn:hover{
   transform:translateY(-2px);
   box-shadow:0 8px 20px rgba(0,0,0,.1);
 }
+.actions .btn.primary,
 .actions .btn.btn-primary{
-  background:#f7cfe1;
-  color:#333;
-  font-weight:600;
+  background:#f7cfe1; color:#333; font-weight:600;
 }
 
 /* Responsive */
 @media (max-width: 960px){
   .product-hero{ grid-template-columns:1fr; gap:1.25rem; }
-  .gallery, .product-info{ max-width:92%; margin:0 auto; }
+  .gallery{ max-width:92%; margin:0 auto; }
+  .col-info, .product-info{ max-width:92%; margin:0 auto; }
   .product-head{ justify-content:center; gap:.6rem; }
   .actions{ flex-direction:column; }
 }
