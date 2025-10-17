@@ -558,3 +558,29 @@ form input[type="submit"]:active {
   background: linear-gradient(180deg, #ffcfe2, #ffe9f4);
   color: #8a4468;
 }
+/* ===== Corectare culoare "Produse ▼" din dropdown ===== */
+.dropbtn,
+#mainmenu > li > a {
+  color: var(--text); /* text negru/închis elegant */
+  font-weight: 500;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+/* culoare roz la hover sau activ */
+.dropbtn:hover,
+#mainmenu > li > a:hover,
+.dropdown.open > .dropbtn {
+  color: #ad5f86;
+  background: var(--rose-2);
+}
+
+/* eliminare stil implicit de link (albastru) */
+.dropbtn:visited,
+#mainmenu > li > a:visited {
+  color: var(--text);
+}
+
+/* pentru selectia activa (dropdown deschis) */
+.dropdown.open > .dropbtn::after {
+  color: #ad5f86;
+}
