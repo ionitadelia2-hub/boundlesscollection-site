@@ -1,17 +1,17 @@
 // build.js — generează site-ul static în /public din content/products.csv
-// Node >=18 (fără dependențe externe)
+// Node >= 18, fără dependențe externe
 
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const ROOT = __dirname;
-const OUT = path.join(ROOT, "public");                  // director ieșire (Vercel Output)
-const CSV_FILE = path.join(ROOT, "content", "products.csv");
-const JSON_OUT = path.join(ROOT, "content", "products.json");
+const ROOT = __dirname;                        // rădăcina repo-ului
+const OUT  = path.join(ROOT, "public");        // directorul servit de hosting (web root)
 
-const ORIGIN = (process.env.SITE_ORIGIN || "https://boundlesscollection.ro")
-  .replace(/\/+$/, "");
+const CSV_FILE  = path.join(ROOT, "content", "products.csv");
+const JSON_OUT  = path.join(ROOT, "content", "products.json");
+
+const ORIGIN = (process.env.SITE_ORIGIN || "https://boundlesscollection.ro").replace(/\/+$/, "");
 
 // ---------------- fs utils ----------------
 function rimrafSync(p) {
@@ -24,11 +24,8 @@ function rimrafSync(p) {
   }
   fs.rmdirSync(p);
 }
-function ensureDir(p) { fs.mkdirSync(p, { recursive: true }); }
-function copyFileSync(src, dest) {
-  ensureDir(path.dirname(dest));
-  fs.copyFileSync(src, dest);
-}
+function ensureDir(p)     { fs.mkdirSync(p, { recursive: true }); }
+function copyFileSync(s,d){ ensureDir(path.dirname(d)); fs.copyFileSync(s,d); }
 function copyDirSync(src, dest) {
   if (!fs.existsSync(src)) return;
   for (const entry of fs.readdirSync(src)) {
@@ -39,6 +36,7 @@ function copyDirSync(src, dest) {
     else copyFileSync(s, d);
   }
 }
+const exists = (...parts) => fs.existsSync(path.join(...parts));
 
 // ---------------- helpers ----------------
 const slugify = (str) => (str || "")
@@ -52,66 +50,99 @@ const esc = (s) => (s || "").replace(/[&<>"']/g, c => (
   { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
 ));
 
-const toRelForPage = (u) => {
+// Transformă o cale relativă de imagine în root-absolute (pentru web root)
+/** ex: "images/poza.jpg" -> "/images/poza.jpg" */
+const toRootAbs = (u) => {
   if (!u) return "";
   if (/^https?:\/\//i.test(u)) return u;
-  if (u.startsWith("/")) return u;
-  return "/" + u.replace(/^\.?\//, "");
+  return "/" + String(u).replace(/^\/+/, "");
 };
+
+// Pentru meta absolute (cu ORIGIN)
 const toAbsForMeta = (u) => {
   if (!u) return `${ORIGIN}/content/preview.jpg`;
   if (/^https?:\/\//i.test(u)) return u;
-  if (u.startsWith("/")) return `${ORIGIN}${u}`;
-  return `${ORIGIN}/${u.replace(/^\.?\//, "")}`;
+  return `${ORIGIN}/${String(u).replace(/^\/+/, "")}`;
+};
+
+// Generează tag <link rel="stylesheet"...> doar dacă fișierul există în sursă
+const cssTagIfExists = (filename) => {
+  if (exists(ROOT, filename)) return `<link rel="stylesheet" href="/${filename}">`;
+  return "";
+};
+// Generează tag <script ...> doar dacă fișierul există în sursă
+const jsTagIfExists  = (filename) => {
+  if (exists(ROOT, filename)) return `<script defer src="/${filename}"></script>`;
+  return "";
 };
 
 // ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
   const brand = "Boundless Collection";
   const title = esc(prod.title || "");
-  const desc = esc(prod.desc || title);
+  const desc  = esc(prod.desc || title);
   const price = Number(prod.price || 0).toFixed(2) + " RON";
-  const relImgs = (prod.images || []).map(toRelForPage);
-  const ogImg = toAbsForMeta((prod.images || [])[0]);
-  const url = `${ORIGIN}/p/${prod.slug}.html`;
-  const imagesAbs = (prod.images || []).map(toAbsForMeta);
 
-  const waMsg = encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`);
+  // imaginile din CSV (relative) -> root-absolute pentru web
+  const relImgs = (prod.images || []).map(toRootAbs);
+  const imagesAbsForMeta = (prod.images || []).map(toAbsForMeta);
+  const ogImg = imagesAbsForMeta[0] || `${ORIGIN}/content/preview.jpg`;
+
+  const url = `${ORIGIN}/p/${prod.slug}.html`;
+
+  const waMsg  = encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`);
   const waLink = `https://wa.me/40760617724?text=${waMsg}`;
+
+  // favicon preferat (dacă nu există, browserul îl ignoră)
+  const faviconPng = exists(ROOT, "images", "Delia.png") ? `/images/Delia.png` : "";
+  const faviconIco = exists(ROOT, "images", "Delia.ico") ? `/images/Delia.ico` : "";
+  const brandAvatar = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
+
+  // CSS: întâi global, apoi layout produs, apoi override-uri (dacă există)
+  const cssGlobal   = cssTagIfExists("style.css");
+  const cssGallery  = cssTagIfExists("gallery.css");       // layout / slider
+  const cssProduct  = cssTagIfExists("product-page.css");  // opțional override
+
+  // JS necesar
+  const jsGlobal    = jsTagIfExists("script.js");
+  const jsGallery   = jsTagIfExists("gallery.js");         // logică slider
+  const jsProduct   = jsTagIfExists("product.js");         // rander/alte interacțiuni
 
   return `<!doctype html>
 <html lang="ro">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>${title} – ${brand}</title>
-<meta name="description" content="${desc}">
-<link rel="canonical" href="${url}">
-<meta property="og:type" content="product">
-<meta property="og:title" content="${title} – ${brand}">
-<meta property="og:description" content="${desc}">
-<meta property="og:image" content="${ogImg}">
-<meta property="og:url" content="${url}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="${title} – ${brand}">
-<meta name="twitter:description" content="${desc}">
-<meta name="twitter:image" content="${ogImg}">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Product",
- "name":"${title}",
- "image":${JSON.stringify(imagesAbs)},
- "description":"${desc}",
- "brand":{"@type":"Brand","name":"${brand}"},
- "offers":{"@type":"Offer","priceCurrency":"RON","price":"${Number(prod.price||0).toFixed(2)}","availability":"https://schema.org/InStock","url":"${url}"}}
-</script>
-<link rel="stylesheet" href="/style.css">
-<link rel="stylesheet" href="/gallery.css"><!-- nou: stil slider -->
-<link rel="stylesheet" href="/product-page.css"><!-- override pagină produs -->
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>${title} – ${brand}</title>
+  <meta name="description" content="${desc}">
+  <link rel="canonical" href="${url}">
+  <meta property="og:type" content="product">
+  <meta property="og:title" content="${title} – ${brand}">
+  <meta property="og:description" content="${desc}">
+  <meta property="og:image" content="${ogImg}">
+  <meta property="og:url" content="${url}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${title} – ${brand}">
+  <meta name="twitter:description" content="${desc}">
+  <meta name="twitter:image" content="${ogImg}">
+
+  ${faviconPng ? `<link rel="icon" type="image/png" href="${faviconPng}">` : ""}
+  ${faviconIco ? `<link rel="icon" type="image/x-icon" href="${faviconIco}">` : ""}
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  ${cssGlobal}
+  ${cssGallery}
+  ${cssProduct}
 </head>
 <body>
 <header class="header">
   <nav class="nav">
-    <a href="/" class="logo">
-      <img src="/images/delia-avatar.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+    <a href="/" class="logo" aria-label="Înapoi la pagina principală">
+      ${brandAvatar ? `<img src="${brandAvatar}" alt="" class="brand-logo" onerror="this.style.display='none'">` : ""}
       <span class="brand-text">Boundless Collection</span>
     </a>
     <a class="btn btn-light back-link" href="/" onclick="event.preventDefault(); history.back()">← Înapoi la catalog</a>
@@ -120,7 +151,7 @@ function pageTemplate(prod) {
 
 <main class="container product-page">
   <section class="product-hero">
-    
+
     <!-- GALERIE: stânga -->
     <div class="hero-media">
       <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
@@ -128,19 +159,18 @@ function pageTemplate(prod) {
           <div class="bc-track">
             ${relImgs.map((src, i) => `
               <figure class="bc-slide">
-                <img src="${src}" alt="${esc(title)} – imagine ${i+1}" loading="${i ? "lazy" : "eager"}">
+                <img src="${src}" alt="${esc(title)} – imagine ${i + 1}" loading="${i ? "lazy" : "eager"}">
               </figure>
             `).join("")}
           </div>
-          <button class="bc-nav bc-prev">‹</button>
-          <button class="bc-nav bc-next">›</button>
+          ${relImgs.length > 1 ? `<button class="bc-nav bc-prev">‹</button><button class="bc-nav bc-next">›</button>` : ""}
         </div>
         ${relImgs.length > 1 ? `
         <div class="bc-thumbs">
           <div class="bc-thumbs-row">
             ${relImgs.map((src, i) => `
-              <button class="bc-thumb ${i===0?"is-active":""}">
-                <img src="${src}" alt="${esc(title)} thumb ${i+1}" loading="lazy">
+              <button class="bc-thumb ${i===0 ? "is-active" : ""}">
+                <img src="${src}" alt="${esc(title)} thumb ${i + 1}" loading="lazy">
               </button>
             `).join("")}
           </div>
@@ -155,22 +185,27 @@ function pageTemplate(prod) {
       <p class="price price-badge">${price}</p>
 
       <div class="tags">
-        ${(prod.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}
+        ${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}
       </div>
 
       <div class="actions">
         <a class="btn" href="/" onclick="event.preventDefault(); history.back()">← Înapoi</a>
-        <a class="btn btn-primary" href="${waLink}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/40760617724?text=${encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`)}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
       </div>
     </div>
 
   </section>
 </main>
 
+<footer class="footer">
+  <small>© <span id="year"></span> ${brand}</small>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
-<footer class="footer"><small>© <span id="year"></span> ${brand}</small></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
-<script defer src="/gallery.js"></script><!-- nou: logică slider -->
+<!-- JS (doar ce există) -->
+${jsGallery}
+${jsProduct}
+${jsGlobal}
 </body>
 </html>`;
 }
@@ -214,22 +249,19 @@ function main() {
   if (fs.existsSync(OUT)) rimrafSync(OUT);
   ensureDir(OUT);
 
-  // 1) CSV -> obiecte produse
+  // 1) CSV -> produse
   const rows = parseCSV(fs.readFileSync(CSV_FILE, "utf8"));
 
   const products = rows.map((r) => {
-    const id = r.id || crypto.randomUUID();
+    const id  = r.id || crypto.randomUUID();
     const slug = slugify(`${r.title || ""}-${id.slice(0, 8)}`);
+
     const images = (r.images || "")
-      .split("|")
-      .map(s => s.trim())
-      .filter(Boolean)
-      .map(toRelForPage); // -> /images/...
+      .split("|").map(s => s.trim()).filter(Boolean)
+      .map(toRootAbs);  // => "/images/.."
 
     const tags = (r.tags || "")
-      .split("|")
-      .map(s => s.trim())
-      .filter(Boolean);
+      .split("|").map(s => s.trim()).filter(Boolean);
 
     return {
       id,
@@ -243,34 +275,34 @@ function main() {
     };
   });
 
-  // 2) scriu JSON sursă în /content și îl public și în /public
+  // 2) scriu JSON sursă + copii publice
   ensureDir(path.dirname(JSON_OUT));
   fs.writeFileSync(JSON_OUT, JSON.stringify(products, null, 2), "utf8");
-  copyFileSync(JSON_OUT, path.join(OUT, "products.json"));             // /products.json
-  copyFileSync(JSON_OUT, path.join(OUT, "content", "products.json"));  // /content/products.json
+  copyFileSync(JSON_OUT, path.join(OUT, "products.json"));
+  copyFileSync(JSON_OUT, path.join(OUT, "content", "products.json"));
 
-  // 3) copiere fișiere statice din rădăcină (inclusiv *.json)
+  // 3) copiere fișiere statice (din rădăcină => OUT)
   for (const entry of fs.readdirSync(ROOT)) {
     if (["node_modules", "public", ".git", ".vercel"].includes(entry)) continue;
     const s = path.join(ROOT, entry);
     const st = fs.lstatSync(s);
-    if (st.isFile() && /\.(html|css|js|txt|ico|png|svg|webmanifest|json)$/i.test(entry)) {
+    if (st.isFile() && /\.(html|css|js|txt|ico|png|svg|webmanifest|json|xml)$/i.test(entry)) {
       copyFileSync(s, path.join(OUT, entry));
     }
   }
 
-  // 4) directoare
-  copyDirSync(path.join(ROOT, "images"), path.join(OUT, "images"));
+  // 4) directoare de media/content
+  copyDirSync(path.join(ROOT, "images"),  path.join(OUT, "images"));
   copyDirSync(path.join(ROOT, "content"), path.join(OUT, "content"));
 
-  // 5) pagini produs: /public/p/*.html
+  // 5) pagini de produs /public/p/*.html
   const PAGES_DIR = path.join(OUT, "p");
   ensureDir(PAGES_DIR);
   products.forEach((p) => {
     fs.writeFileSync(path.join(PAGES_DIR, `${p.slug}.html`), pageTemplate(p), "utf8");
   });
 
-  // 6) sitemap în /public
+  // 6) sitemap simplu
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>${ORIGIN}/</loc></url>
