@@ -105,6 +105,7 @@ function pageTemplate(prod) {
 </script>
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/gallery.css"><!-- nou: stil slider -->
+<link rel="stylesheet" href="/product-page.css"><!-- override pagină produs -->
 </head>
 <body>
 <header class="header">
@@ -165,8 +166,6 @@ function pageTemplate(prod) {
 
   </section>
 </main>
-
-
 
 
 <footer class="footer"><small>© <span id="year"></span> ${brand}</small></footer>
