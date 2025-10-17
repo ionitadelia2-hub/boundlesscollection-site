@@ -584,5 +584,7 @@ form input[type="submit"]:active {
 .dropdown.open > .dropbtn::after {
   color: #ad5f86;
 }
-/* ascundem butonul hamburger pe desktop */
-.nav-toggle{ display:none; }
+/* ascundem butonul hamburger DOAR pe desktop */
+@media (min-width: 901px){
+  .nav-toggle { display: none; }
+}
