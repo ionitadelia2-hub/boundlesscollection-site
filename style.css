@@ -285,3 +285,67 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none !important;
 }
+
+
+/* ===== Contact Form ===== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+form input,
+form textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #ffd8e7;
+  border-radius: 999px;
+  background: #fff;
+  padding: .55rem .9rem;
+  font: 400 14px/1.3 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text, #2a2a2a);
+  box-shadow: 0 6px 12px rgba(0,0,0,.05);
+  transition: box-shadow .18s ease, border-color .18s ease, background-color .18s ease;
+  min-width: 140px;
+}
+
+form textarea {
+  border-radius: 18px;
+  resize: vertical;
+  min-width: 200px;
+  min-height: 38px;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #f3b8cc;
+  box-shadow: 0 0 0 3px rgba(243,184,204,.28), 0 6px 16px rgba(0,0,0,.08);
+  outline: none;
+}
+
+form button[type="submit"],
+form input[type="submit"] {
+  background: linear-gradient(180deg, var(--rose), #ffdced);
+  border: 1px solid #ffcfe6;
+  border-radius: 999px;
+  color: #2a2a2a;
+  font-weight: 600;
+  padding: .55rem 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  transition: transform .1s ease, box-shadow .2s ease;
+}
+
+form button[type="submit"]:hover,
+form input[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+
+form button[type="submit"]:active,
+form input[type="submit"]:active {
+  transform: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.06);
+}
