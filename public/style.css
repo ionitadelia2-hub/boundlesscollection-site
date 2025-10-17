@@ -441,3 +441,40 @@ form input[type="submit"]:active {
     padding: 0.45rem 1rem;
   }
 }
+/* ===== Mobile: centrare titlu și repoziționare meniu ===== */
+@media (max-width: 768px) {
+  /* 1. Titlul principal din hero */
+  .hero h1,
+  .hero-title,
+  h1 {
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 auto 0.8rem;
+    max-width: 90%;
+  }
+
+  .hero p,
+  .hero-subtitle {
+    text-align: center;
+    max-width: 90%;
+    margin-inline: auto;
+  }
+
+  /* 2. Iconul de meniu - aliniat dreapta */
+  .nav-toggle {
+    margin-left: auto;            /* împinge spre dreapta */
+    margin-right: 0.3rem;         /* mic spațiu față de margine */
+    border: 1px solid #ffd9e7;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+
+  /* 3. Logo-ul și titlul brandului - centrate mai bine */
+  .brand {
+    gap: 0.4rem;
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
