@@ -398,3 +398,39 @@ form button[type="submit"]:active, form input[type="submit"]:active{ transform:n
   background:linear-gradient(180deg,#ffcfe2,#ffe9f4);
   color:#8a4468;
 }
+/* === Fix mobile: carduri mai compacte, imagine încadrată === */
+@media (max-width: 768px){
+
+  /* un singur card pe rând, dar cu lățime controlată */
+  .products{
+    grid-template-columns: 1fr;
+  }
+  .products .item{
+    max-width: 560px;          /* <— ajustează 520–600 după gust */
+    margin: 0 auto 1rem;
+  }
+
+  /* imaginea nu mai „întinde” cardul */
+  .products .item .media{
+    aspect-ratio: 4 / 3;
+    max-height: 260px;         /* <— dacă o vrei și mai mică, pune 230–240 */
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  /* spațiere mai mică în card */
+  .products .item .content{ padding: .8rem 1rem; }
+  .price{ font-size: .98rem; }
+
+  /* butoanele nu mai forțează lățimea */
+  .products .actions{ padding: .7rem 1rem; }
+  .products .actions .btn{
+    min-width: auto;           /* anulăm min-width-ul anterior */
+    padding: .55rem .9rem;
+  }
+}
+
+/* opțional: și pe tabletă un pic mai redus */
+@media (min-width: 769px) and (max-width: 980px){
+  .products .item .media{ max-height: 300px; }
+}
