@@ -103,15 +103,15 @@ function pageTemplate(prod) {
  "brand":{"@type":"Brand","name":"${brand}"},
  "offers":{"@type":"Offer","priceCurrency":"RON","price":"${Number(prod.price||0).toFixed(2)}","availability":"https://schema.org/InStock","url":"${url}"}}
 </script>
-<link rel="stylesheet" href="/public/style.css">
-<link rel="stylesheet" href="href="/public/gallery.css"><!-- nou: stil slider -->
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/gallery.css"><!-- nou: stil slider -->
 <link rel="stylesheet" href="/product-page.css"><!-- override pagină produs -->
 </head>
 <body>
 <header class="header">
   <nav class="nav">
     <a href="/" class="logo">
-      <img src="/public/images/delia-avatar.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+      <img src="/images/delia-avatar.png" alt="" class="brand-logo" onerror="this.style.display='none'">
       <span class="brand-text">Boundless Collection</span>
     </a>
     <a class="btn btn-light back-link" href="/" onclick="event.preventDefault(); history.back()">← Înapoi la catalog</a>
