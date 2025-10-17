@@ -111,7 +111,7 @@ function pageTemplate(prod) {
 <header class="header">
   <nav class="nav">
     <a href="/" class="logo">
-      <img src="/images/logo.png" alt="" class="brand-logo" onerror="this.style.display='none'">
+      <img src="/images/delia-avatar.png" alt="" class="brand-logo" onerror="this.style.display='none'">
       <span class="brand-text">Boundless Collection</span>
     </a>
     <a class="btn btn-light back-link" href="/" onclick="event.preventDefault(); history.back()">← Înapoi la catalog</a>
