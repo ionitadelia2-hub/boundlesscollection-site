@@ -118,10 +118,11 @@ function pageTemplate(prod) {
 </header>
 
 <main class="container product-page">
-  <section class="product-hero">
-    
-    <!-- GALERIE: stânga -->
-    <div class="hero-media">
+  <section class="product-hero centered">
+    <div class="hero-box">
+      <h1 class="product-title">${title}</h1>
+      <p class="product-desc">${desc}</p>
+
       <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
         <div class="bc-viewport">
           <div class="bc-track">
@@ -145,22 +146,17 @@ function pageTemplate(prod) {
           </div>
         </div>` : ""}
       </section>
-    </div>
 
-    <!-- TEXT: dreapta -->
-    <div class="hero-text">
-      <h1 class="product-title">${title}</h1>
-      <p class="product-desc">${desc}</p>
       <p class="price price-badge">${price}</p>
-
-      <div class="tags">
-        ${(prod.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}
-      </div>
-
+      <p>${desc}</p>
+      <div class="tags">${(prod.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</div>
       <div class="actions">
-        <a class="btn" href="/" onclick="event.preventDefault(); history.back()">← Înapoi</a>
-        <a class="btn btn-primary" href="${waLink}" target="_blank" re_
-
+        <a class="btn" href="/" onclick="event.preventDefault(); history.back()">Înapoi</a>
+        <a class="btn btn-primary" href="${waLink}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
 
 
 
