@@ -47,43 +47,47 @@ function renderProduct(p){
   const root = $('#product-root');
   if (!root) return;
 
-  const images = Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'];
-  updateOG(p, images[0]);
+  // normalizează imaginile la rute relative corecte
+  const relImgs = (Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'])
+    .map(src => src.startsWith('/') ? src : '/'+src.replace(/^\.?\//,''));
 
+  // OG/meta
+  updateOG(p, relImgs[0]);
+
+  // ===== markup final: IMAGINI STÂNGA, INFO DREAPTA (UN SINGUR TITLU/DESC) =====
   root.innerHTML = `
-    <nav class="crumbs"><a href="/">Acasă</a> › <span class="current">${p.title}</span></nav>
-
-    <header class="product-head">
-      <h1 class="product-title">${p.title}</h1>
-      ${Number.isFinite(+p.price) ? `<span class="price-badge">${fmt(p.price)} RON</span>` : ``}
-    </header>
-
     <section class="product-hero">
-      <div class="gallery">
-        <div class="gallery-main">
-          <img id="main-photo" src="${images[0]}" alt="${p.title}">
-        </div>
-        <div class="thumbs">
-          ${images.map((src,i)=>`
-            <button class="thumb ${i===0?'active':''}" data-src="${src}" aria-label="Imagine ${i+1}">
-              <img src="${src}" alt="${p.title} imagine ${i+1}">
-            </button>
-          `).join('')}
+      <!-- STÂNGA: GALERIE -->
+      <div class="col-media">
+        <div class="gallery">
+          <div class="gallery-main">
+            <img id="main-photo" src="${relImgs[0]}" alt="${p.title}">
+          </div>
+          ${relImgs.length > 1 ? `
+          <div class="thumbs">
+            ${relImgs.map((src,i)=>`
+              <button class="thumb ${i===0?'active':''}" data-src="${src}" aria-label="Imagine ${i+1}">
+                <img src="${src}" alt="${p.title} imagine ${i+1}">
+              </button>
+            `).join('')}
+          </div>` : ``}
         </div>
       </div>
 
-      <div class="product-info">
-        <p class="lead">${p.desc || 'Model elegant, personalizabil.'}</p>
+      <!-- DREAPTA: INFO PRODUS -->
+      <div class="col-info">
+        <h1 class="product-title">${p.title}</h1>
+        <p class="product-desc">${p.desc || 'Model elegant, personalizabil.'}</p>
+        ${Number.isFinite(+p.price) ? `<span class="price-badge">${fmt(p.price)} RON</span>` : ``}
 
-        ${Array.isArray(p.options) && p.options.length ? `
-          <ul class="tags">
-            ${p.options.map(o => `<li>${o}</li>`).join('')}
-          </ul>
-        ` : ''}
+        ${(p.tags && p.tags.length) ? `
+          <div class="tags">
+            ${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}
+          </div>` : ``}
 
         <div class="actions">
-          <a class="btn btn-primary" id="wa-btn">Cere ofertă pe WhatsApp</a>
-          <a class="btn btn-light" href="/">⇠ Înapoi la catalog</a>
+          <a class="btn" href="/" onclick="event.preventDefault(); history.back()">← Înapoi</a>
+          <a class="btn primary" id="wa-btn">Scrie-ne pe WhatsApp</a>
         </div>
       </div>
     </section>
@@ -98,11 +102,14 @@ function renderProduct(p){
     });
   });
 
-  // WhatsApp
-  root.querySelector('#wa-btn')?.addEventListener('click', ()=>{
-    const msg = encodeURIComponent(`Bună! Aș dori ofertă pentru: ${p.title} (ID: ${p.id || p.slug}).`);
-    window.open(`https://wa.me/40760617724?text=${msg}`, '_blank', 'noopener');
-  });
+  // WhatsApp (include URL curent)
+  const wa = root.querySelector('#wa-btn');
+  if (wa){
+    const msg = encodeURIComponent(`Bună! Mă interesează: ${p.title} (${location.href})`);
+    wa.href = `https://wa.me/40760617724?text=${msg}`;
+    wa.target = '_blank';
+    wa.rel = 'noopener';
+  }
 }
 
 // ========== încărcare products.json (root cu fallback + cachebust)
