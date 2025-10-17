@@ -478,3 +478,48 @@ form input[type="submit"]:active {
     text-align: center;
   }
 }
+
+/* ===== Centrare butoane produs + formular Contact ===== */
+@media (max-width: 768px) {
+  /* Butoanele de sub preț ("Distribuie", "Solicită ofertă") */
+  .products .actions,
+  .product-page .actions {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .products .actions .btn,
+  .product-page .actions .btn {
+    flex: 0 0 auto;
+    min-width: 140px;
+  }
+
+  /* Formular Contact */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  form input,
+  form textarea {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  form button[type="submit"],
+  .btn.submit {
+    align-self: center;
+    margin-top: 0.6rem;
+    background: linear-gradient(180deg, var(--rose), #ffdced);
+    border: 1px solid #ffcfe6;
+    box-shadow: var(--shadow);
+    color: #2a2a2a;
+    font-weight: 600;
+  }
+
+  form button[type="submit"]:hover {
+    background: linear-gradient(180deg, #ffcfe2, #ffe9f4);
+  }
+}
