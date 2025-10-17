@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Boundless Collection</title>
+  <title>Mărturii | Boundless Collection</title>
 
-  <!-- fonturi ca pe index -->
+  <!-- Fonturi -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <!-- același CSS ca pe index -->
+  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- HEADER identic cu index (fără dropdown aici) -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container nav">
       <a class="brand" href="index.html">
@@ -23,11 +23,9 @@
         <div class="brand-title">Boundless Collection</div>
       </a>
 
-      <!-- dacă vrei și burger pe mobil, păstrează butonul (opțional) -->
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
 
       <nav aria-label="Meniu principal">
-        <!-- IMPORTANT: id="mainmenu" ca să se aplice flex-ul din CSS -->
         <ul id="mainmenu">
           <li><a href="index.html">Acasă</a></li>
           <li><a href="invitatii.html">Invitații</a></li>
@@ -37,38 +35,19 @@
     </div>
   </header>
 
-  <section class="container">
+  <!-- CONȚINUT PRINCIPAL -->
+  <section class="container" id="produse">
     <h1 class="section-title">Mărturii din ceară de soia parfumate</h1>
     <p class="section-sub">
       Realizate manual, din ceară naturală de soia, în forme elegante – fluturi, ursuleți, inimioare.
       Parfumate delicat cu arome florale.
     </p>
 
-    <div class="grid products">
-      <article class="item">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1505577058444-a3dab90d4253?q=80&w=800" alt="Mărturie Fluture">
-        </div>
-        <div class="content">
-          <h3>Mărturie Fluture</h3>
-          <p class="muted">Ceară de soia, aromă lavandă.</p>
-          <div class="price">12 RON</div>
-        </div>
-      </article>
-
-      <article class="item">
-        <div class="media">
-          <img src="https://images.unsplash.com/photo-1603190287605-e7d7b4f7a0f2?q=80&w=800" alt="Mărturie Ursuleț">
-        </div>
-        <div class="content">
-          <h3>Mărturie Ursuleț</h3>
-          <p class="muted">Arome vanilie & iasomie.</p>
-          <div class="price">10 RON</div>
-        </div>
-      </article>
-    </div>
+    <!-- grilă pentru produse (se încarcă din products.json) -->
+    <div id="grid" class="grid products"></div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
       <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
@@ -76,16 +55,17 @@
     </div>
   </footer>
 
-  <!-- buton WhatsApp plutitor -->
+  <!-- Buton WhatsApp plutitor -->
   <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener">
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
+  <!-- Scripturi -->
   <script>
-    // anul din footer
+    // actualizează anul în footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // (opțional) burger pentru mobil – același JS ca pe index
+    // buton meniu mobil
     (function(){
       const btn  = document.querySelector('.nav-toggle');
       const menu = document.getElementById('mainmenu');
@@ -105,6 +85,12 @@
         }
       });
     })();
+
+    // categorie activă pentru această pagină
+    window.PAGE_CATEGORY = 'Mărturii soia';
   </script>
+
+  <!-- script global care încarcă produsele -->
+  <script defer src="/script.js"></script>
 </body>
 </html>
