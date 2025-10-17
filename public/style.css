@@ -401,3 +401,43 @@ form input[type="submit"]:active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
   }
 }
+
+/* ===== Mobile layout pentru Galerie & Produse ===== */
+@media (max-width: 768px) {
+  /* Centrează titlul secțiunii */
+  h2.section-title,
+  h2,
+  #produse h2 {
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Centrează bara de căutare */
+  .toolbar {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search input[type="search"],
+  #q {
+    width: 90%;
+    max-width: 340px;
+  }
+
+  /* Ajustează categoriile (pills) pentru simetrie */
+  .filter {
+    justify-content: center;
+    gap: 0.7rem 1rem;
+  }
+
+  .pill {
+    padding: 0.45rem 1rem;
+  }
+}
