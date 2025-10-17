@@ -523,3 +523,38 @@ form input[type="submit"]:active {
     background: linear-gradient(180deg, #ffcfe2, #ffe9f4);
   }
 }
+
+/* ===== Stil roz pentru butoanele din carduri ===== */
+.products .actions .btn,
+.product-page .actions .btn {
+  font-weight: 500;
+  color: #ad5f86; /* roz text */
+  border: 1px solid #ffd8e7;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+
+.products .actions .btn:hover,
+.product-page .actions .btn:hover {
+  background: #ffeaf3;
+  color: #8a4468; /* roz mai intens la hover */
+}
+
+/* ===== Variante primare (ex: „Solicită ofertă”) ===== */
+.products .actions .btn.primary,
+.product-page .actions .btn.primary,
+.products .actions .btn.btn-primary,
+.product-page .actions .btn.btn-primary {
+  background: linear-gradient(180deg, var(--rose), #ffdced);
+  border-color: #ffcfe6;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.products .actions .btn.primary:hover,
+.product-page .actions .btn.primary:hover,
+.products .actions .btn.btn-primary:hover,
+.product-page .actions .btn.btn-primary:hover {
+  background: linear-gradient(180deg, #ffcfe2, #ffe9f4);
+  color: #8a4468;
+}
