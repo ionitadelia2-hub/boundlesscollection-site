@@ -205,7 +205,6 @@ function pageTemplate(prod) {
 <!-- JS (doar ce există) -->
 ${jsGallery}
 ${jsProduct}
-${jsGlobal}
 </body>
 </html>`;
 }
