@@ -606,3 +606,24 @@ form input[type="submit"]:active {
     box-shadow: var(--shadow);
   }
 }
+
+/* ===== Ajustare imagine și text HERO doar pe desktop ===== */
+@media (min-width: 992px) {
+  /* micșorează imaginea */
+  .hero img {
+    width: 70%;             /* ajustează dimensiunea (poți încerca și 65% dacă vrei mai mică) */
+    max-width: 420px;       /* limitează lățimea maximă */
+    height: auto;
+    display: block;
+    margin-inline: auto;    /* centrează imaginea */
+  }
+
+  /* centrează titlul și subtitlul */
+  .hero h1,
+  .hero-title,
+  .hero p,
+  .hero-subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
