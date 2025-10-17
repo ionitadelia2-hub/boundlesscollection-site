@@ -104,7 +104,7 @@ function pageTemplate(prod) {
   const cssProduct  = cssTagIfExists("product-page.css");  // opțional override
 
   // JS necesar
-  const jsGlobal    = jsTagIfExists("script.js");
+  /*const jsGlobal    = jsTagIfExists("script.js");*/
   const jsGallery   = jsTagIfExists("gallery.js");         // logică slider
   const jsProduct   = jsTagIfExists("product.js");         // rander/alte interacțiuni
 
