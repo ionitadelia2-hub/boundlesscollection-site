@@ -366,3 +366,38 @@ form input[type="submit"]:active {
   transform: none;
   box-shadow: 0 4px 10px rgba(0,0,0,.06);
 }
+
+/* ===== Mobile fix: Pills aerisite ===== */
+@media (max-width: 768px) {
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 0.8rem; /* spațiu între butoane */
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .pill {
+    font-size: 0.95rem;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: #fff5f8;
+    border: 1px solid #ffcfe0;
+    color: #8a3c63;
+    flex-shrink: 0;
+  }
+
+  .pill:hover {
+    background: #ffe3ee;
+  }
+
+  /* Pentru când filtrul e activ */
+  .pill[aria-pressed="true"] {
+    background: linear-gradient(180deg, var(--rose), #ffdced);
+    color: #2a2a2a;
+    border-color: #ffbcd7;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+  }
+}
