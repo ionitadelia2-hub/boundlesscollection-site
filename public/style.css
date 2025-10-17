@@ -200,7 +200,7 @@ footer{margin-top:2rem; padding:1.2rem 0; background:#fff; border-top:1px solid 
   .brand-title{font-size:1.2rem}
   .nav{gap:.6rem}
   /* mobile menu drawer (simple) */
-  .nav-toggle{display:none; align-items:center; justify-content:center; width:40px; height:40px; border:1px solid #ffe1ee; border-radius:12px; background:#fff; box-shadow:var(--shadow); color:#ad5f86}
+  .nav-toggle{display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border:1px solid #ffe1ee; border-radius:12px; background:#fff; box-shadow:var(--shadow); color:#ad5f86}
   .nav-toggle::after{content:"☰"; font-size:1.1rem}
   .menu-open .nav-toggle::after{content:"✕"}
   nav{position:relative}
@@ -584,3 +584,5 @@ form input[type="submit"]:active {
 .dropdown.open > .dropbtn::after {
   color: #ad5f86;
 }
+/* ascundem butonul hamburger pe desktop */
+.nav-toggle{ display:none; }
