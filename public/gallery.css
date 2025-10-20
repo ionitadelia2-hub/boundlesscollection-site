@@ -57,13 +57,14 @@
   min-width:100%;
   position:relative;
 }
-.bc-slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;      /* păstrează look-ul de Instagram */
-  display:block;
-  border-radius:10px;
+.bc-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* păstrează proporțiile pătratului */
+  display: block;
+  border-radius: 10px;
 }
+
 /* butoane stânga/dreapta */
 .bc-nav{
   position:absolute;
@@ -141,11 +142,18 @@
     text-align: center;
   }
 
-  /* galerie pătrată pe mobil */
-  .bc-viewport {
-    aspect-ratio: 1 / 1;   /* pătrat Instagram style */
-    max-height: 340px;     /* mai mic pe ecrane mici */
-  }
+ .bc-viewport {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.06);
+  background: #fff;
+  aspect-ratio: 1 / 1;    /* pătrat perfect */
+  width: 100%;
+  max-width: 600px;       /* opțional – limitează lățimea pe desktop */
+  margin-inline: auto;    /* centrează frumos pe pagină */
+}
+
 
   .bc-thumb img {
     width: 92px;
