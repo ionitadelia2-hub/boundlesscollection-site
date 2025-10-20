@@ -52,12 +52,6 @@
       .toLowerCase()
       .trim();
 
-  // <<<--- IMPORTANT: PAGE_FILTER declarat GLOBAL (nu în render)
-  // Dacă pagina setează window.PAGE_FILTER (ex: "Mărturii soia"), îl normalizăm aici
-  const PAGE_FILTER = (typeof window.PAGE_FILTER === 'string' && window.PAGE_FILTER.trim())
-    ? norm(window.PAGE_FILTER)
-    : null;
-
   // ===== Card + render =====
   function card(p) {
     const imgs   = Array.isArray(p.images) ? p.images : [];
@@ -123,6 +117,11 @@
     if (!grid) return; // pe pagini fără grid (ex. produs), ieșim
 
     const term = norm(q?.value || '');
+    // dacă pagina setează window.PAGE_FILTER (ex: "Mărturii soia"), îl normalizăm aici
+const PAGE_FILTER = (typeof window.PAGE_FILTER === 'string' && window.PAGE_FILTER.trim())
+  ? norm(window.PAGE_FILTER)
+  : null;
+
 
     const items = PRODUCTS.filter((p) => {
       const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
@@ -273,13 +272,15 @@
   });
 
   // swipe simplu
-  let sx = 0, sy = 0;
+  let sx = 0,
+    sy = 0;
   grid?.addEventListener('touchstart', (e) => {
     sx = e.touches[0].clientX;
     sy = e.touches[0].clientY;
   }, { passive: true });
   grid?.addEventListener('touchend', (e) => {
-    const ex = e.changedTouches[0].clientX, ey = e.changedTouches[0].clientY;
+    const ex = e.changedTouches[0].clientX,
+      ey = e.changedTouches[0].clientY;
     if (Math.abs(ex - sx) < 30 || Math.abs(ey - sy) > 60) return;
     const card = e.target.closest('.item');
     if (!card) return;
@@ -289,7 +290,7 @@
 
   // ===== Init =====
   window.addEventListener('DOMContentLoaded', async () => {
-    // filtre (catalog)
+    // filtre
     filterBtns.forEach((btn) =>
       btn.addEventListener('click', () => {
         filterBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
@@ -310,8 +311,9 @@
     // încarcă produse doar dacă avem grid (catalog)
     if (grid) {
       await loadProducts();
-      // dacă avem filtru setat de pagină (ex: marturii.html), îl aplicăm
-      if (PAGE_FILTER) activeFilter = PAGE_FILTER;
+      // dacă avem filtru de pagină, îl aplicăm înainte de randare
+if (PAGE_FILTER) activeFilter = PAGE_FILTER;
+
       render();
     }
   });
