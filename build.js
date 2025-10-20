@@ -77,6 +77,7 @@ const jsTagIfExists  = (filename) => {
 };
 
 // ---------------- template pagină produs ----------------
+// ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
   const brand = "Boundless Collection";
   const title = esc(prod.title || "");
@@ -86,6 +87,7 @@ function pageTemplate(prod) {
   const relImgs = (prod.images || []).map(toRootAbs);
   const imagesAbsForMeta = (prod.images || []).map(toAbsForMeta);
   const ogImg = imagesAbsForMeta[0] || `${ORIGIN}/content/preview.jpg`;
+  const firstImg = relImgs[0] || "/content/preview.jpg";
   const url = `${ORIGIN}/p/${prod.slug}.html`;
 
   const waMsg  = encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`);
@@ -96,12 +98,14 @@ function pageTemplate(prod) {
   const brandAvatar = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
 
   const cssGlobal  = cssTagIfExists("style.css");
-  const cssGallery = cssTagIfExists("gallery.css");
+  const cssGallery = cssTagIfExists("gallery.css");   // ok să rămână, dar nu mai folosim sliderul
   const cssProduct = cssTagIfExists("product-page.css");
 
-  const jsGlobal   = jsTagIfExists("script.js");   // IMPORTANT: pentru stiluri/comportament comun
-  const jsGallery  = jsTagIfExists("gallery.js");
-  const jsProduct  = jsTagIfExists("product.js");
+  const jsGlobal   = jsTagIfExists("script.js");
+  // NU mai avem nevoie de gallery.js sau product.js aici,
+  // dar le putem lăsa – nu afectează nimic dacă nu există în pagină.
+  const jsGallery  = ""; // jsTagIfExists("gallery.js");
+  const jsProduct  = ""; // jsTagIfExists("product.js");
 
   return `<!doctype html>
 <html lang="ro">
@@ -131,6 +135,28 @@ function pageTemplate(prod) {
   ${cssGlobal}
   ${cssGallery}
   ${cssProduct}
+
+  <style>
+    /* Single image (fără slider) – pătrat, responsiv */
+    .single-media{ width:100%; max-width:720px; margin:0 auto; }
+    .single-viewport{
+      width:100%;
+      aspect-ratio:1/1;            /* pătrat Instagram */
+      background:#fff;
+      border-radius:14px;
+      box-shadow:0 6px 24px rgba(0,0,0,.06);
+      overflow:hidden;
+      display:grid; place-items:center;
+    }
+    .single-viewport img{
+      max-width:100%; max-height:100%;
+      width:auto; height:auto;
+      object-fit:contain; display:block;
+    }
+    @media (max-width:960px){
+      .single-media{ max-width:94%; }
+    }
+  </style>
 </head>
 <body>
 
@@ -150,30 +176,13 @@ function pageTemplate(prod) {
   <main class="container product-page">
     <section class="product-hero">
 
-      <!-- GALERIE -->
+      <!-- POZĂ UNICĂ (fără slider) -->
       <div class="hero-media">
-        <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
-          <div class="bc-viewport">
-            <div class="bc-track">
-              ${relImgs.map((src, i) => `
-                <figure class="bc-slide">
-                  <img src="${src}" alt="${esc(title)} – imagine ${i + 1}" loading="${i ? "lazy" : "eager"}">
-                </figure>`).join("")}
-            </div>
-            ${relImgs.length > 1 ? `
-              <button class="bc-nav bc-prev">‹</button>
-              <button class="bc-nav bc-next">›</button>` : ""}
+        <figure class="single-media">
+          <div class="single-viewport">
+            <img src="${firstImg}" alt="${esc(title)}" loading="eager" decoding="async">
           </div>
-          ${relImgs.length > 1 ? `
-          <div class="bc-thumbs">
-            <div class="bc-thumbs-row">
-              ${relImgs.map((src, i) => `
-                <button class="bc-thumb ${i===0 ? "is-active" : ""}">
-                  <img src="${src}" alt="${esc(title)} thumb ${i + 1}" loading="lazy">
-                </button>`).join("")}
-            </div>
-          </div>` : ""}
-        </section>
+        </figure>
       </div>
 
       <!-- TEXT -->
@@ -200,9 +209,7 @@ function pageTemplate(prod) {
   </footer>
 
   <script>
-    // anul
     document.getElementById('year').textContent = new Date().getFullYear();
-    // back „deștept” după referer
     (function(){
       var ref = (document.referrer || "").toLowerCase();
       var back = "/index.html#produse";
@@ -225,6 +232,7 @@ function pageTemplate(prod) {
 </body>
 </html>`;
 }
+
 
 
 // ---------------- CSV parser simplu ----------------

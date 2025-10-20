@@ -26,6 +26,28 @@
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="/gallery.css">
   <link rel="stylesheet" href="/product-page.css">
+
+  <style>
+    /* Single image (fără slider) – pătrat, responsiv */
+    .single-media{ width:100%; max-width:720px; margin:0 auto; }
+    .single-viewport{
+      width:100%;
+      aspect-ratio:1/1;            /* pătrat Instagram */
+      background:#fff;
+      border-radius:14px;
+      box-shadow:0 6px 24px rgba(0,0,0,.06);
+      overflow:hidden;
+      display:grid; place-items:center;
+    }
+    .single-viewport img{
+      max-width:100%; max-height:100%;
+      width:auto; height:auto;
+      object-fit:contain; display:block;
+    }
+    @media (max-width:960px){
+      .single-media{ max-width:94%; }
+    }
+  </style>
 </head>
 <body>
 
@@ -45,36 +67,13 @@
   <main class="container product-page">
     <section class="product-hero">
 
-      <!-- GALERIE -->
+      <!-- POZĂ UNICĂ (fără slider) -->
       <div class="hero-media">
-        <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
-          <div class="bc-viewport">
-            <div class="bc-track">
-              
-                <figure class="bc-slide">
-                  <img src="/images/invitatii/florala-1.jpg" alt="Invitație Florală – imagine 1" loading="eager">
-                </figure>
-                <figure class="bc-slide">
-                  <img src="/images/invitatii/florala-2.jpg" alt="Invitație Florală – imagine 2" loading="lazy">
-                </figure>
-            </div>
-            
-              <button class="bc-nav bc-prev">‹</button>
-              <button class="bc-nav bc-next">›</button>
+        <figure class="single-media">
+          <div class="single-viewport">
+            <img src="/images/invitatii/florala-1.jpg" alt="Invitație Florală" loading="eager" decoding="async">
           </div>
-          
-          <div class="bc-thumbs">
-            <div class="bc-thumbs-row">
-              
-                <button class="bc-thumb is-active">
-                  <img src="/images/invitatii/florala-1.jpg" alt="Invitație Florală thumb 1" loading="lazy">
-                </button>
-                <button class="bc-thumb ">
-                  <img src="/images/invitatii/florala-2.jpg" alt="Invitație Florală thumb 2" loading="lazy">
-                </button>
-            </div>
-          </div>
-        </section>
+        </figure>
       </div>
 
       <!-- TEXT -->
@@ -101,9 +100,7 @@
   </footer>
 
   <script>
-    // anul
     document.getElementById('year').textContent = new Date().getFullYear();
-    // back „deștept” după referer
     (function(){
       var ref = (document.referrer || "").toLowerCase();
       var back = "/index.html#produse";
@@ -121,7 +118,7 @@
 
   <!-- JS -->
   <script defer src="/script.js"></script>
-  <script defer src="/gallery.js"></script>
-  <script defer src="/product.js"></script>
+  
+  
 </body>
 </html>
