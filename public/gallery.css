@@ -3,7 +3,7 @@
 /* container general */
 .container.product-page { padding-top: 0; }
 
-/* Grid: 2 coloane pe desktop, poze mai late */
+/* Grid: 2 coloane pe desktop */
 .product-hero{
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -28,18 +28,17 @@
   user-select: none;
 }
 
-/* container vizibil – înlocuiește pseudo-elementul ::before */
+/* === VIEWPORT PĂTRAT, fără deformare === */
 .bc-viewport{
   position: relative;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 0 6px 24px rgba(0,0,0,.06);
   background: #fff;
-  aspect-ratio: 1 / 1;       /* pătrat perfect */
-  max-height: 600px;         /* opțional: puțin mai mare pentru desktop */
+  aspect-ratio: 1 / 1;     /* pătrat perfect */
   width: 100%;
+  max-height: 600px;       /* protecție pe desktop foarte lat */
 }
-
 
 /* track-ul cu slide-uri */
 .bc-track{
@@ -51,18 +50,21 @@
   transition:transform .35s ease;
 }
 
-/* fiecare slide ocupă 100% din viewport */
+/* Fiecare slide ocupa 100% – fix pt iOS/Safari */
 .bc-slide{
   flex:0 0 100%;
   min-width:100%;
   position:relative;
 }
-.bc-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* păstrează proporțiile pătratului */
-  display: block;
-  border-radius: 10px;
+
+/* ===== IMAGINEA NU SE TAIE ===== */
+.bc-slide img{
+  width:100%;
+  height:100%;
+  object-fit: contain;   /* vezi toată poza, fără decupare */
+  background:#fff;       /* umple spațiul rămas elegant */
+  display:block;
+  border-radius:10px;
 }
 
 /* butoane stânga/dreapta */
@@ -86,21 +88,22 @@
 .bc-prev{ left:10px; } 
 .bc-next{ right:10px; }
 
-@media (max-width:960px){
-  .bc-nav{ top: calc(50% - 6px); }
-}
-
-/* thumbs */
-.bc-thumbs{ margin-top:10px; overflow:hidden; }
-.bc-thumbs-row{ display:flex; gap:8px; justify-content:center; }
+/* thumbs – PĂTRATE și ele, fără tăiere */
+.bc-thumbs{ margin-top:12px; overflow:hidden; }
+.bc-thumbs-row{ display:flex; gap:10px; justify-content:center; }
 .bc-thumb{
   padding:0; border:0; background:transparent; cursor:pointer;
-  outline:2px solid transparent; border-radius:10px; overflow:hidden;
+  outline:2px solid transparent; border-radius:12px; overflow:hidden;
   transition:outline-color .15s ease, transform .12s ease;
   -webkit-tap-highlight-color: transparent;
 }
 .bc-thumb:hover{ transform:translateY(-1px); }
-.bc-thumb img{ display:block; width:100px; height:72px; object-fit:cover; }
+.bc-thumb img{
+  display:block;
+  width:96px; height:96px;      /* pătrate */
+  object-fit: contain;          /* nu taie din miniatură */
+  background:#fff;
+}
 .bc-thumb.is-active{ outline-color:#eab8c6; }
 
 /* ===== Coloana dreaptă: textul ===== */
@@ -130,38 +133,9 @@
 
 /* ===== Responsiv ===== */
 @media (max-width: 960px){
-  .product-hero {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .hero-media,
-  .hero-text {
-    max-width: 94%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
- .bc-viewport {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
-  box-shadow: 0 6px 24px rgba(0,0,0,.06);
-  background: #fff;
-  aspect-ratio: 1 / 1;    /* pătrat perfect */
-  width: 100%;
-  max-width: 600px;       /* opțional – limitează lățimea pe desktop */
-  margin-inline: auto;    /* centrează frumos pe pagină */
-}
-
-
-  .bc-thumb img {
-    width: 92px;
-    height: 92px;          /* pătrățele și ele */
-    object-fit: cover;
-  }
-
-  .actions {
-    flex-direction: column;
-  }
+  .product-hero{ grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero-media, .hero-text{ max-width: 94%; margin: 0 auto; text-align: center; }
+  .bc-viewport{ aspect-ratio: 1 / 1; max-height: 360px; }  /* pătrat compact pe mobil */
+  .bc-thumb img{ width:86px; height:86px; }
+  .actions{ flex-direction: column; }
 }
