@@ -627,3 +627,12 @@ form input[type="submit"]:active {
     margin-inline: auto;
   }
 }
+
+/* asigură-te că header + burger sunt peste tot */
+.header{ z-index: 1000; }
+.nav-toggle{ position: relative; z-index: 1001; }
+
+/* în mobile, panoul are prioritate mare */
+@media (max-width:900px){
+  #mainmenu{ z-index: 1000; }
+}
