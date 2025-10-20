@@ -817,3 +817,35 @@ form input[type="submit"]:active {
     margin-inline: auto;
   }
 }
+
+/* --- Dropdown Produse --- */
+.site-nav .has-sub { position: relative; }
+.site-nav .has-sub > a::after { content:" ▾"; font-size:.85em; }
+
+.site-nav .has-sub .sub{
+  position: absolute;
+  top: 100%; left: 0;
+  min-width: 260px;
+  background: #fff;
+  border: 1px solid #f3d9e3;
+  border-radius: 14px;
+  box-shadow: 0 14px 36px rgba(0,0,0,.08);
+  padding: .5rem 0;
+  display: none;
+  z-index: 30;
+}
+.site-nav .has-sub .sub a{
+  display:block; padding:.55rem 1rem; white-space:nowrap;
+}
+.site-nav .has-sub .sub a:hover{ background:#fff4f8; }
+
+.site-nav .has-sub.open .sub{ display:block; }
+
+/* Mobil: arată submeniul în coloană, fără poziționare absolută */
+@media (max-width: 960px){
+  .site-nav .has-sub .sub{
+    position: static;
+    border: 0; border-radius: 0; box-shadow: none;
+    padding: 0; display: block;
+  }
+}
