@@ -774,3 +774,46 @@ form input[type="submit"]:active {
     max-width: 300px;
   }
 }
+
+/* ===== Category pages (grid aerisit și centrat) ===== */
+.products.category{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+  justify-items: center;         /* centrează cardurile când sunt puține */
+}
+
+/* cardurile nu mai forțează span pe 12-col grid */
+.products.category .item{
+  grid-column: auto;
+  width: 100%;
+  max-width: 420px;              /* nu lăsa cardul să se lăbărțeze */
+}
+
+/* păstrează un raport frumos și NU taie imagini importante */
+.products.category .item .media{
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #f8eef3;
+}
+.products.category .item .media img{
+  width:100%; height:100%;
+  object-fit: cover;             /* schimbă în 'contain' dacă vrei tot cadrul vizibil */
+  object-position: center;
+}
+
+/* coperta paginii — titlu/subtitlu centrate și mai înguste */
+#produse > .section-title,
+#produse > .section-sub{
+  text-align: left;
+  max-width: 800px;
+  margin-inline: 0;              /* pe paginile category e la stânga, ca în screenshot */
+}
+@media (max-width: 960px){
+  #produse > .section-title,
+  #produse > .section-sub{
+    text-align: center;
+    margin-inline: auto;
+  }
+}

@@ -1,22 +1,27 @@
-// script.js – catalog + navigație
+// script.js – catalog + navigație (stabil, cu suport pagini categorie)
 (function () {
   'use strict';
 
-  // ===== Helpers globali =====
-  if (!window.$)  window.$  = (s, d = document) => d.querySelector(s);
-  if (!window.$$) window.$$ = (s, d = document) => Array.from(d.querySelectorAll(s));
+  // ===== Helpers =====
+  const $  = (s, d = document) => d.querySelector(s);
+  const $$ = (s, d = document) => Array.from(d.querySelectorAll(s));
+
+  if (!window.$)  window.$  = $;
+  if (!window.$$) window.$$ = $$;
 
   const grid       = $('#grid') || null;
   const q          = $('#q') || null;
-  const filterBtns = $$('.filter .pill') || [];
-
-  let PRODUCTS = [];
+  const filterBtns = $$('.filter .pill');
+  let PRODUCTS     = [];
   let activeFilter = 'toate';
 
   // ===== Filtru setat de pagină (ex: marturii.html) =====
   const PAGE_FILTER = (typeof window.PAGE_CATEGORY === 'string' && window.PAGE_CATEGORY.trim())
     ? window.PAGE_CATEGORY.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()
     : null;
+
+  // Dacă e pagină de categorie, marchează grila pt layout-ul aerisit
+  if (PAGE_FILTER && grid) grid.classList.add('category');
 
   // ===== Normalizări =====
   const norm = (s) =>
@@ -37,42 +42,55 @@
       .replace(/(^-|-$)+/g, '')
       .slice(0, 80);
 
-  // ===== Card produs =====
+  const money = (n) => {
+    const v = Number(n);
+    return Number.isFinite(v) ? `${v.toFixed(2)} RON` : '';
+  };
+
+  // ===== Card produs (cu slider dacă are >1 imagine) =====
   function card(p) {
-    const imgs   = Array.isArray(p.images) ? p.images : [];
-    const dots   = imgs.map((_, i) => `<i class="${i === 0 ? 'active' : ''}"></i>`).join('');
-    const slides = imgs.map(
-      (src, i) =>
-        `<img src="${src}" alt="${p.title}" class="${i === 0 ? 'active' : ''}" loading="lazy" decoding="async">`
-    ).join('');
+    const imgs = Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'];
+    const hasMany = imgs.length > 1;
+
+    const slides = imgs
+      .map((src, i) => `<img src="${src}" alt="${p.title} – imagine ${i+1}" class="slide ${i===0?'is-active':''}" loading="lazy" decoding="async">`)
+      .join('');
+
+    const dots = hasMany
+      ? `<div class="slider-dots">${imgs.map((_,i)=>`<i class="${i===0?'is-active':''}"></i>`).join('')}</div>`
+      : '';
+
+    const nav  = hasMany
+      ? `<div class="slider-nav">
+           <button class="prev" type="button" aria-label="Imagine anterioară">‹</button>
+           <button class="next" type="button" aria-label="Imagine următoare">›</button>
+         </div>`
+      : '';
 
     const linkId = p.slug || p.id || slug(p.title);
     const href   = `/p/${encodeURIComponent(linkId)}.html`;
-    const priceStr = Number.isFinite(Number(p.price)) ? `${Number(p.price).toFixed(2)} RON` : '';
 
     return `
     <article class="item" data-id="${p.id || ''}">
       <a class="card-link" href="${href}" aria-label="Vezi detalii ${p.title}">
         <div class="media">
           <div class="slide-track" data-index="0">
-            ${slides || `<img src="/images/preview.jpg" alt="${p.title}" class="active" style="opacity:.25">`}
+            ${slides}
           </div>
-          ${imgs.length > 1 ? `
-            <div class="slider-nav">
-              <button class="prev" type="button">‹</button>
-              <button class="next" type="button">›</button>
-            </div>
-            <div class="slider-dots">${dots}</div>` : ``}
+          ${nav}
+          ${dots}
         </div>
+
         <div class="content">
           <div style="display:flex;justify-content:space-between;align-items:center;gap:.6rem;flex-wrap:wrap">
             <h3 style="margin:0;font-size:1rem">${p.title}</h3>
-            <span class="pill">${p.category || ''}</span>
+            ${p.category ? `<span class="pill">${p.category}</span>` : ``}
           </div>
-          <p class="muted" style="margin:.25rem 0 .6rem">${p.desc || ''}</p>
-          <div class="price">${priceStr}</div>
+          ${p.desc ? `<p class="muted" style="margin:.25rem 0 .6rem">${p.desc}</p>` : ``}
+          <div class="price">${money(p.price)}</div>
         </div>
       </a>
+
       <div class="actions">
         <button class="btn" type="button" data-act="share">Distribuie</button>
         <button class="btn primary" type="button" data-act="inquire">Solicită ofertă</button>
@@ -84,7 +102,7 @@
     return `<div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">${message}</div>`;
   }
 
-  // ===== Render produse =====
+  // ===== Render + bind pe carduri =====
   function render() {
     if (!grid) return;
     const term = norm(q?.value || '');
@@ -110,18 +128,44 @@
       ? items.map(card).join('')
       : emptyState('Nu am găsit produse pentru această categorie.');
 
-    // acțiuni
+    // Acțiuni card
     grid.querySelectorAll('.actions .btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        const card = e.currentTarget.closest('.item');
-        const id = card?.dataset.id;
-        const p = PRODUCTS.find((x) => x.id === id);
+        const wrap = e.currentTarget.closest('.item');
+        const id   = wrap?.dataset.id;
+        const p    = PRODUCTS.find((x) => x.id === id);
         if (!p) return;
+
         if (btn.dataset.act === 'share') share(p.title);
         if (btn.dataset.act === 'inquire') inquire(p.title, id);
       });
+    });
+
+    // Slider pe card (dacă există)
+    grid.querySelectorAll('.item .slide-track').forEach((track) => {
+      const slides = $$('.slide', track);
+      if (slides.length <= 1) return;
+
+      const dots  = track.parentElement.querySelectorAll('.slider-dots i');
+      const prev  = track.parentElement.querySelector('.prev');
+      const next  = track.parentElement.querySelector('.next');
+
+      const setIndex = (i) => {
+        const n = slides.length;
+        const cur = ((i % n) + n) % n;
+        track.dataset.index = String(cur);
+        slides.forEach((img, k) => img.classList.toggle('is-active', k === cur));
+        dots.forEach((d, k) => d.classList.toggle('is-active', k === cur));
+      };
+
+      let idx = Number(track.dataset.index || 0) || 0;
+      setIndex(idx);
+
+      prev?.addEventListener('click', (e) => { e.preventDefault(); setIndex(--idx); });
+      next?.addEventListener('click', (e) => { e.preventDefault(); setIndex(++idx); });
+      dots.forEach((d, k) => d.addEventListener('click', (e) => { e.preventDefault(); idx = k; setIndex(idx); }));
     });
   }
 
