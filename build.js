@@ -77,7 +77,6 @@ const jsTagIfExists  = (filename) => {
 };
 
 // ---------------- template pagină produs ----------------
-// ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
   const brand = "Boundless Collection";
   const title = esc(prod.title || "");
@@ -98,12 +97,10 @@ function pageTemplate(prod) {
   const brandAvatar = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
 
   const cssGlobal  = cssTagIfExists("style.css");
-  const cssGallery = cssTagIfExists("gallery.css");   // ok să rămână, dar nu mai folosim sliderul
+  const cssGallery = cssTagIfExists("gallery.css");   // ok să rămână
   const cssProduct = cssTagIfExists("product-page.css");
 
   const jsGlobal   = jsTagIfExists("script.js");
-  // NU mai avem nevoie de gallery.js sau product.js aici,
-  // dar le putem lăsa – nu afectează nimic dacă nu există în pagină.
   const jsGallery  = ""; // jsTagIfExists("gallery.js");
   const jsProduct  = ""; // jsTagIfExists("product.js");
 
@@ -160,7 +157,7 @@ function pageTemplate(prod) {
 </head>
 <body>
 
-  <!-- HEADER compatibil cu index.html -->
+  <!-- HEADER unificat (dropdown Produse + burger) -->
   <header class="header">
     <div class="container nav">
       <a class="brand" href="/index.html">
@@ -169,7 +166,31 @@ function pageTemplate(prod) {
         </div>
         <div class="brand-title">${brand}</div>
       </a>
-      <a id="backLink" class="btn" href="/index.html#produse">← Înapoi la catalog</a>
+
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
+
+      <nav aria-label="Meniu principal">
+        <ul id="mainmenu">
+          <li class="dropdown">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Produse</button>
+            <ul class="menu" role="menu">
+              <li><a href="/marturii.html">Prezentare Mărturii</a></li>
+              <li><a href="/invitatii.html">Prezentare Invitații</a></li>
+              <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
+              <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
+              <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
+              <li><a href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
+              <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
+              <li><a href="/seturi.html">Prezentare Seturi</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/index.html">Acasă</a></li>
+          <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -209,7 +230,10 @@ function pageTemplate(prod) {
   </footer>
 
   <script>
+    // anul curent
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // back „deștept” după referer
     (function(){
       var ref = (document.referrer || "").toLowerCase();
       var back = "/index.html#produse";
@@ -220,20 +244,51 @@ function pageTemplate(prod) {
       else if (ref.includes("/numere-masa")) back = "/numere-masa.html";
       else if (ref.includes("/aranjamente-florale")) back = "/aranjamente-florale.html";
       else if (ref.includes("/seturi")) back = "/seturi.html";
-      var a = document.getElementById('backLink'); if(a) a.href = back;
-      var b = document.getElementById('backBtn');  if(b) b.href = back;
+      var b = document.getElementById('backBtn'); if(b) b.href = back;
+    })();
+
+    // burger + dropdown mobil (identic cu paginile de categorie)
+    (function(){
+      const btnHamb  = document.querySelector('.nav-toggle');
+      const mainMenu = document.querySelector('#mainmenu');
+      const dd       = document.querySelector('.dropdown');
+      const ddBtn    = dd?.querySelector('.dropbtn');
+      if (!btnHamb || !mainMenu) return;
+
+      function closeAll() {
+        document.body.classList.remove('menu-open');
+        btnHamb.setAttribute('aria-expanded','false');
+        if (dd) { dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }
+      }
+
+      btnHamb.addEventListener('click', (e) => {
+        e.preventDefault(); e.stopPropagation();
+        const open = document.body.classList.toggle('menu-open');
+        btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (!open && dd) { dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }
+      });
+
+      if (dd && ddBtn) {
+        ddBtn.addEventListener('click', (e) => {
+          e.preventDefault(); e.stopPropagation();
+          const now = dd.classList.toggle('open');
+          ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
+        });
+        mainMenu.addEventListener('click', (e) => e.stopPropagation());
+      }
+
+      document.addEventListener('click', closeAll);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
     })();
   </script>
 
-  <!-- JS -->
+  <!-- JS global (căutare/filtre pe homepage & pagini categorie) -->
   ${jsGlobal}
   ${jsGallery}
   ${jsProduct}
 </body>
 </html>`;
 }
-
-
 
 // ---------------- CSV parser simplu ----------------
 function parseCSV(text) {
