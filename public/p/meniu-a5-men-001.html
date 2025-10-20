@@ -14,7 +14,6 @@
   <meta name="twitter:title" content="Meniu A5 – Boundless Collection">
   <meta name="twitter:description" content="Carton perlat">
   <meta name="twitter:image" content="https://boundlesscollection.ro/images/meniuri/a5-rama-1.jpg">
-
   <link rel="icon" type="image/png" href="/images/Delia.png">
   <link rel="icon" type="image/x-icon" href="/images/Delia.ico">
 
@@ -29,62 +28,84 @@
   <link rel="stylesheet" href="/product-page.css">
 </head>
 <body>
-<header class="header">
-  <nav class="nav">
-    <a href="/" class="logo" aria-label="Înapoi la pagina principală">
-      <img src="/images/delia-avatar.png" alt="" class="brand-logo" onerror="this.style.display='none'">
-      <span class="brand-text">Boundless Collection</span>
-    </a>
-    <a class="btn btn-light back-link" href="/" onclick="event.preventDefault(); history.back()">← Înapoi la catalog</a>
-  </nav>
-</header>
 
-<main class="container product-page">
-  <section class="product-hero">
+  <!-- HEADER compatibil cu index.html -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="/index.html">
+        <div class="brand-logo">
+          <img src="/images/delia-avatar.png" alt="Delia – Boundless Collection">
+        </div>
+        <div class="brand-title">Boundless Collection</div>
+      </a>
+      <a id="backLink" class="btn" href="/index.html#produse">← Înapoi la catalog</a>
+    </div>
+  </header>
 
-    <!-- GALERIE: stânga -->
-    <div class="hero-media">
-      <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
-        <div class="bc-viewport">
-          <div class="bc-track">
-            
-              <figure class="bc-slide">
-                <img src="/images/meniuri/a5-rama-1.jpg" alt="Meniu A5 – imagine 1" loading="eager">
-              </figure>
+  <main class="container product-page">
+    <section class="product-hero">
+
+      <!-- GALERIE -->
+      <div class="hero-media">
+        <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
+          <div class="bc-viewport">
+            <div class="bc-track">
+              
+                <figure class="bc-slide">
+                  <img src="/images/meniuri/a5-rama-1.jpg" alt="Meniu A5 – imagine 1" loading="eager">
+                </figure>
+            </div>
             
           </div>
           
+        </section>
+      </div>
+
+      <!-- TEXT -->
+      <div class="hero-text">
+        <h1 class="product-title">Meniu A5</h1>
+        <p class="product-desc">Carton perlat</p>
+        <p class="price price-badge">6.50 RON</p>
+
+        <div class="tags">
+          <span class="tag">meniuri</span><span class="tag">perlat</span>
         </div>
-        
-      </section>
-    </div>
 
-    <!-- TEXT: dreapta -->
-    <div class="hero-text">
-      <h1 class="product-title">Meniu A5</h1>
-      <p class="product-desc">Carton perlat</p>
-      <p class="price price-badge">6.50 RON</p>
-
-      <div class="tags">
-        <span class="tag">meniuri</span><span class="tag">perlat</span>
+        <div class="actions">
+          <a class="btn" href="/index.html#produse" id="backBtn">← Înapoi</a>
+          <a class="btn btn-primary" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Meniu%20A5%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Fmeniu-a5-men-001.html)" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+        </div>
       </div>
 
-      <div class="actions">
-        <a class="btn" href="/" onclick="event.preventDefault(); history.back()">← Înapoi</a>
-        <a class="btn btn-primary" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Meniu%20A5%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Fmeniu-a5-men-001.html)" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
-      </div>
-    </div>
+    </section>
+  </main>
 
-  </section>
-</main>
+  <footer class="footer">
+    <small>© <span id="year"></span> Boundless Collection</small>
+  </footer>
 
-<footer class="footer">
-  <small>© <span id="year"></span> Boundless Collection</small>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    // anul
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // back „deștept” după referer
+    (function(){
+      var ref = (document.referrer || "").toLowerCase();
+      var back = "/index.html#produse";
+      if (ref.includes("/marturii")) back = "/marturii.html";
+      else if (ref.includes("/invitatii")) back = "/invitatii.html";
+      else if (ref.includes("/plicuri")) back = "/plicuri.html";
+      else if (ref.includes("/meniuri")) back = "/meniuri.html";
+      else if (ref.includes("/numere-masa")) back = "/numere-masa.html";
+      else if (ref.includes("/aranjamente-florale")) back = "/aranjamente-florale.html";
+      else if (ref.includes("/seturi")) back = "/seturi.html";
+      var a = document.getElementById('backLink'); if(a) a.href = back;
+      var b = document.getElementById('backBtn');  if(b) b.href = back;
+    })();
+  </script>
 
-<!-- JS (doar ce există) -->
-<script defer src="/gallery.js"></script>
-<script defer src="/product.js"></script>
+  <!-- JS -->
+  <script defer src="/script.js"></script>
+  <script defer src="/gallery.js"></script>
+  <script defer src="/product.js"></script>
 </body>
 </html>

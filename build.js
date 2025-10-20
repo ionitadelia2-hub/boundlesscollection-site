@@ -83,30 +83,25 @@ function pageTemplate(prod) {
   const desc  = esc(prod.desc || title);
   const price = Number(prod.price || 0).toFixed(2) + " RON";
 
-  // imaginile din CSV (relative) -> root-absolute pentru web
   const relImgs = (prod.images || []).map(toRootAbs);
   const imagesAbsForMeta = (prod.images || []).map(toAbsForMeta);
   const ogImg = imagesAbsForMeta[0] || `${ORIGIN}/content/preview.jpg`;
-
   const url = `${ORIGIN}/p/${prod.slug}.html`;
 
   const waMsg  = encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`);
   const waLink = `https://wa.me/40760617724?text=${waMsg}`;
 
-  // favicon preferat (dacă nu există, browserul îl ignoră)
-  const faviconPng = exists(ROOT, "images", "Delia.png") ? `/images/Delia.png` : "";
-  const faviconIco = exists(ROOT, "images", "Delia.ico") ? `/images/Delia.ico` : "";
+  const faviconPng  = exists(ROOT, "images", "Delia.png") ? `/images/Delia.png` : "";
+  const faviconIco  = exists(ROOT, "images", "Delia.ico") ? `/images/Delia.ico` : "";
   const brandAvatar = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
 
-  // CSS: întâi global, apoi layout produs, apoi override-uri (dacă există)
-  const cssGlobal   = cssTagIfExists("style.css");
-  const cssGallery  = cssTagIfExists("gallery.css");       // layout / slider
-  const cssProduct  = cssTagIfExists("product-page.css");  // opțional override
+  const cssGlobal  = cssTagIfExists("style.css");
+  const cssGallery = cssTagIfExists("gallery.css");
+  const cssProduct = cssTagIfExists("product-page.css");
 
-  // JS necesar
-  /*const jsGlobal    = jsTagIfExists("script.js");*/
-  const jsGallery   = jsTagIfExists("gallery.js");         // logică slider
-  const jsProduct   = jsTagIfExists("product.js");         // rander/alte interacțiuni
+  const jsGlobal   = jsTagIfExists("script.js");   // IMPORTANT: pentru stiluri/comportament comun
+  const jsGallery  = jsTagIfExists("gallery.js");
+  const jsProduct  = jsTagIfExists("product.js");
 
   return `<!doctype html>
 <html lang="ro">
@@ -124,7 +119,6 @@ function pageTemplate(prod) {
   <meta name="twitter:title" content="${title} – ${brand}">
   <meta name="twitter:description" content="${desc}">
   <meta name="twitter:image" content="${ogImg}">
-
   ${faviconPng ? `<link rel="icon" type="image/png" href="${faviconPng}">` : ""}
   ${faviconIco ? `<link rel="icon" type="image/x-icon" href="${faviconIco}">` : ""}
 
@@ -139,75 +133,99 @@ function pageTemplate(prod) {
   ${cssProduct}
 </head>
 <body>
-<header class="header">
-  <nav class="nav">
-    <a href="/" class="logo" aria-label="Înapoi la pagina principală">
-      ${brandAvatar ? `<img src="${brandAvatar}" alt="" class="brand-logo" onerror="this.style.display='none'">` : ""}
-      <span class="brand-text">Boundless Collection</span>
-    </a>
-    <a class="btn btn-light back-link" href="/" onclick="event.preventDefault(); history.back()">← Înapoi la catalog</a>
-  </nav>
-</header>
 
-<main class="container product-page">
-  <section class="product-hero">
-
-    <!-- GALERIE: stânga -->
-    <div class="hero-media">
-      <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
-        <div class="bc-viewport">
-          <div class="bc-track">
-            ${relImgs.map((src, i) => `
-              <figure class="bc-slide">
-                <img src="${src}" alt="${esc(title)} – imagine ${i + 1}" loading="${i ? "lazy" : "eager"}">
-              </figure>
-            `).join("")}
-          </div>
-          ${relImgs.length > 1 ? `<button class="bc-nav bc-prev">‹</button><button class="bc-nav bc-next">›</button>` : ""}
+  <!-- HEADER compatibil cu index.html -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="/index.html">
+        <div class="brand-logo">
+          ${brandAvatar ? `<img src="${brandAvatar}" alt="Delia – ${brand}">` : ""}
         </div>
-        ${relImgs.length > 1 ? `
-        <div class="bc-thumbs">
-          <div class="bc-thumbs-row">
-            ${relImgs.map((src, i) => `
-              <button class="bc-thumb ${i===0 ? "is-active" : ""}">
-                <img src="${src}" alt="${esc(title)} thumb ${i + 1}" loading="lazy">
-              </button>
-            `).join("")}
+        <div class="brand-title">${brand}</div>
+      </a>
+      <a id="backLink" class="btn" href="/index.html#produse">← Înapoi la catalog</a>
+    </div>
+  </header>
+
+  <main class="container product-page">
+    <section class="product-hero">
+
+      <!-- GALERIE -->
+      <div class="hero-media">
+        <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
+          <div class="bc-viewport">
+            <div class="bc-track">
+              ${relImgs.map((src, i) => `
+                <figure class="bc-slide">
+                  <img src="${src}" alt="${esc(title)} – imagine ${i + 1}" loading="${i ? "lazy" : "eager"}">
+                </figure>`).join("")}
+            </div>
+            ${relImgs.length > 1 ? `
+              <button class="bc-nav bc-prev">‹</button>
+              <button class="bc-nav bc-next">›</button>` : ""}
           </div>
-        </div>` : ""}
-      </section>
-    </div>
-
-    <!-- TEXT: dreapta -->
-    <div class="hero-text">
-      <h1 class="product-title">${title}</h1>
-      <p class="product-desc">${desc}</p>
-      <p class="price price-badge">${price}</p>
-
-      <div class="tags">
-        ${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}
+          ${relImgs.length > 1 ? `
+          <div class="bc-thumbs">
+            <div class="bc-thumbs-row">
+              ${relImgs.map((src, i) => `
+                <button class="bc-thumb ${i===0 ? "is-active" : ""}">
+                  <img src="${src}" alt="${esc(title)} thumb ${i + 1}" loading="lazy">
+                </button>`).join("")}
+            </div>
+          </div>` : ""}
+        </section>
       </div>
 
-      <div class="actions">
-        <a class="btn" href="/" onclick="event.preventDefault(); history.back()">← Înapoi</a>
-        <a class="btn btn-primary" href="https://wa.me/40760617724?text=${encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`)}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+      <!-- TEXT -->
+      <div class="hero-text">
+        <h1 class="product-title">${title}</h1>
+        <p class="product-desc">${desc}</p>
+        <p class="price price-badge">${price}</p>
+
+        <div class="tags">
+          ${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="/index.html#produse" id="backBtn">← Înapoi</a>
+          <a class="btn btn-primary" href="${waLink}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer class="footer">
-  <small>© <span id="year"></span> ${brand}</small>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="footer">
+    <small>© <span id="year"></span> ${brand}</small>
+  </footer>
 
-<!-- JS (doar ce există) -->
-${jsGallery}
-${jsProduct}
+  <script>
+    // anul
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // back „deștept” după referer
+    (function(){
+      var ref = (document.referrer || "").toLowerCase();
+      var back = "/index.html#produse";
+      if (ref.includes("/marturii")) back = "/marturii.html";
+      else if (ref.includes("/invitatii")) back = "/invitatii.html";
+      else if (ref.includes("/plicuri")) back = "/plicuri.html";
+      else if (ref.includes("/meniuri")) back = "/meniuri.html";
+      else if (ref.includes("/numere-masa")) back = "/numere-masa.html";
+      else if (ref.includes("/aranjamente-florale")) back = "/aranjamente-florale.html";
+      else if (ref.includes("/seturi")) back = "/seturi.html";
+      var a = document.getElementById('backLink'); if(a) a.href = back;
+      var b = document.getElementById('backBtn');  if(b) b.href = back;
+    })();
+  </script>
+
+  <!-- JS -->
+  ${jsGlobal}
+  ${jsGallery}
+  ${jsProduct}
 </body>
 </html>`;
 }
+
 
 // ---------------- CSV parser simplu ----------------
 function parseCSV(text) {

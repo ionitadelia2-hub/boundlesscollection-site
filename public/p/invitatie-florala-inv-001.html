@@ -14,7 +14,6 @@
   <meta name="twitter:title" content="Invitație Florală – Boundless Collection">
   <meta name="twitter:description" content="What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s">
   <meta name="twitter:image" content="https://boundlesscollection.ro/images/invitatii/florala-1.jpg">
-
   <link rel="icon" type="image/png" href="/images/Delia.png">
   <link rel="icon" type="image/x-icon" href="/images/Delia.ico">
 
@@ -29,79 +28,100 @@
   <link rel="stylesheet" href="/product-page.css">
 </head>
 <body>
-<header class="header">
-  <nav class="nav">
-    <a href="/" class="logo" aria-label="Înapoi la pagina principală">
-      <img src="/images/delia-avatar.png" alt="" class="brand-logo" onerror="this.style.display='none'">
-      <span class="brand-text">Boundless Collection</span>
-    </a>
-    <a class="btn btn-light back-link" href="/" onclick="event.preventDefault(); history.back()">← Înapoi la catalog</a>
-  </nav>
-</header>
 
-<main class="container product-page">
-  <section class="product-hero">
-
-    <!-- GALERIE: stânga -->
-    <div class="hero-media">
-      <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
-        <div class="bc-viewport">
-          <div class="bc-track">
-            
-              <figure class="bc-slide">
-                <img src="/images/invitatii/florala-1.jpg" alt="Invitație Florală – imagine 1" loading="eager">
-              </figure>
-            
-              <figure class="bc-slide">
-                <img src="/images/invitatii/florala-2.jpg" alt="Invitație Florală – imagine 2" loading="lazy">
-              </figure>
-            
-          </div>
-          <button class="bc-nav bc-prev">‹</button><button class="bc-nav bc-next">›</button>
+  <!-- HEADER compatibil cu index.html -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="/index.html">
+        <div class="brand-logo">
+          <img src="/images/delia-avatar.png" alt="Delia – Boundless Collection">
         </div>
-        
-        <div class="bc-thumbs">
-          <div class="bc-thumbs-row">
-            
-              <button class="bc-thumb is-active">
-                <img src="/images/invitatii/florala-1.jpg" alt="Invitație Florală thumb 1" loading="lazy">
-              </button>
-            
-              <button class="bc-thumb ">
-                <img src="/images/invitatii/florala-2.jpg" alt="Invitație Florală thumb 2" loading="lazy">
-              </button>
-            
-          </div>
-        </div>
-      </section>
+        <div class="brand-title">Boundless Collection</div>
+      </a>
+      <a id="backLink" class="btn" href="/index.html#produse">← Înapoi la catalog</a>
     </div>
+  </header>
 
-    <!-- TEXT: dreapta -->
-    <div class="hero-text">
-      <h1 class="product-title">Invitație Florală</h1>
-      <p class="product-desc">What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s</p>
-      <p class="price price-badge">9.50 RON</p>
+  <main class="container product-page">
+    <section class="product-hero">
 
-      <div class="tags">
-        <span class="tag">floral</span><span class="tag">roz</span>
+      <!-- GALERIE -->
+      <div class="hero-media">
+        <section class="bc-gallery" data-autoplay="3500" tabindex="0" aria-label="Galerie produs">
+          <div class="bc-viewport">
+            <div class="bc-track">
+              
+                <figure class="bc-slide">
+                  <img src="/images/invitatii/florala-1.jpg" alt="Invitație Florală – imagine 1" loading="eager">
+                </figure>
+                <figure class="bc-slide">
+                  <img src="/images/invitatii/florala-2.jpg" alt="Invitație Florală – imagine 2" loading="lazy">
+                </figure>
+            </div>
+            
+              <button class="bc-nav bc-prev">‹</button>
+              <button class="bc-nav bc-next">›</button>
+          </div>
+          
+          <div class="bc-thumbs">
+            <div class="bc-thumbs-row">
+              
+                <button class="bc-thumb is-active">
+                  <img src="/images/invitatii/florala-1.jpg" alt="Invitație Florală thumb 1" loading="lazy">
+                </button>
+                <button class="bc-thumb ">
+                  <img src="/images/invitatii/florala-2.jpg" alt="Invitație Florală thumb 2" loading="lazy">
+                </button>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <div class="actions">
-        <a class="btn" href="/" onclick="event.preventDefault(); history.back()">← Înapoi</a>
-        <a class="btn btn-primary" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Invita%C8%9Bie%20Floral%C4%83%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Finvitatie-florala-inv-001.html)" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+      <!-- TEXT -->
+      <div class="hero-text">
+        <h1 class="product-title">Invitație Florală</h1>
+        <p class="product-desc">What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s</p>
+        <p class="price price-badge">9.50 RON</p>
+
+        <div class="tags">
+          <span class="tag">floral</span><span class="tag">roz</span>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="/index.html#produse" id="backBtn">← Înapoi</a>
+          <a class="btn btn-primary" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Invita%C8%9Bie%20Floral%C4%83%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Finvitatie-florala-inv-001.html)" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+        </div>
       </div>
-    </div>
 
-  </section>
-</main>
+    </section>
+  </main>
 
-<footer class="footer">
-  <small>© <span id="year"></span> Boundless Collection</small>
-</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <footer class="footer">
+    <small>© <span id="year"></span> Boundless Collection</small>
+  </footer>
 
-<!-- JS (doar ce există) -->
-<script defer src="/gallery.js"></script>
-<script defer src="/product.js"></script>
+  <script>
+    // anul
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // back „deștept” după referer
+    (function(){
+      var ref = (document.referrer || "").toLowerCase();
+      var back = "/index.html#produse";
+      if (ref.includes("/marturii")) back = "/marturii.html";
+      else if (ref.includes("/invitatii")) back = "/invitatii.html";
+      else if (ref.includes("/plicuri")) back = "/plicuri.html";
+      else if (ref.includes("/meniuri")) back = "/meniuri.html";
+      else if (ref.includes("/numere-masa")) back = "/numere-masa.html";
+      else if (ref.includes("/aranjamente-florale")) back = "/aranjamente-florale.html";
+      else if (ref.includes("/seturi")) back = "/seturi.html";
+      var a = document.getElementById('backLink'); if(a) a.href = back;
+      var b = document.getElementById('backBtn');  if(b) b.href = back;
+    })();
+  </script>
+
+  <!-- JS -->
+  <script defer src="/script.js"></script>
+  <script defer src="/gallery.js"></script>
+  <script defer src="/product.js"></script>
 </body>
 </html>
