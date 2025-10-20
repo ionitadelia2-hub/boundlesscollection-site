@@ -3,79 +3,91 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Plicuri de dar • Boundless Collection</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Plicuri de dar | Boundless Collection</title>
+
+  <!-- Fonturi -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="index.html">
-      <div class="brand-logo"><img src="images/delia-avatar.png" alt="" width="48" height="48"></div>
-      <div class="brand-title">Boundless Collection</div>
-    </a>
-    <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
-    <nav aria-label="Meniu principal">
-      <ul id="mainmenu">
-        <li><a href="index.html">Acasă</a></li>
-        <li><a href="marturii.html">Mărturii</a></li>
-        <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-logo"><img src="images/delia-avatar.png" alt="Delia – Boundless Collection"></div>
+        <div class="brand-title">Boundless Collection</div>
+      </a>
 
-<section class="container">
-  <h1 class="section-title">Prezentare Plicuri de dar</h1>
-  <p class="section-sub">Plicuri asortate temei, cu sigilii din ceară și panglici elegante.</p>
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
 
-  <div class="grid products">
-    <article class="item">
-      <div class="media">
-        <img src="images/preview.jpg" alt="Plic de dar floral" class="contain">
-      </div>
-      <div class="content">
-        <h3><a href="/produs/plic-floral">Plic floral</a></h3>
-        <p class="muted">Hârtie texturată, inserții perlate.</p>
-        <div class="price">7.50 RON</div>
-      </div>
-    </article>
+      <nav aria-label="Meniu principal">
+        <ul id="mainmenu">
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="marturii.html">Mărturii</a></li>
+          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <article class="item">
-      <div class="media">
-        <img src="images/preview.jpg" alt="Plic de dar minimalist">
-      </div>
-      <div class="content">
-        <h3><a href="/produs/plic-minimalist">Plic minimalist</a></h3>
-        <p class="muted">Sigiliu de ceară & panglică satin.</p>
-        <div class="price">6.50 RON</div>
-      </div>
-    </article>
-  </div>
-</section>
+  <!-- CONȚINUT -->
+  <section class="container" id="produse">
+    <h1 class="section-title">Prezentare Plicuri de dar</h1>
+    <p class="section-sub">Plicuri asortate temei, cu sigilii din ceară și panglici elegante.</p>
 
-<footer>
-  <div class="container footer-inner">
-    <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
-    <small>Realizat în nuanțe alb–roz ✨</small>
-  </div>
-</footer>
+    <!-- grilă pentru produse (populată din products.json de script.js) -->
+    <div id="grid" class="grid products"></div>
+  </section>
 
-<a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener">💬 <span>Scrie-mi pe WhatsApp</span></a>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
+      <small>Realizat în nuanțe alb–roz ✨</small>
+    </div>
+  </footer>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-  (function(){
-    const btn=document.querySelector('.nav-toggle'), menu=document.getElementById('mainmenu');
-    if(!btn||!menu) return;
-    btn.addEventListener('click',e=>{e.preventDefault(); const open=document.body.classList.toggle('menu-open'); btn.setAttribute('aria-expanded',open?'true':'false');});
-    document.addEventListener('click',e=>{
-      if(document.body.classList.contains('menu-open')){
-        const inside=e.target.closest('.nav-toggle')||e.target.closest('nav');
-        if(!inside){ document.body.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); }
-      }
-    });
-  })();
-</script>
+  <!-- WhatsApp plutitor -->
+  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener">
+    💬 <span>Scrie-mi pe WhatsApp</span>
+  </a>
+
+  <!-- JS: anul + meniu mobil + categoria + încărcarea produselor -->
+  <script>
+    // anul din footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // hamburger
+    (function(){
+      const btn  = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('mainmenu');
+      if(!btn || !menu) return;
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const open = document.body.classList.toggle('menu-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e)=>{
+        if (document.body.classList.contains('menu-open')) {
+          const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
+          if (!inside) {
+            document.body.classList.remove('menu-open');
+            btn.setAttribute('aria-expanded','false');
+          }
+        }
+      });
+    })();
+
+    // ⚠️ Pune aici EXACT numele categoriei din CSV
+    // Exemplu: dacă în products.csv, coloana "category" are "Plicuri de dar"
+    // atunci lasă exact "Plicuri de dar".
+    window.PAGE_CATEGORY = 'Plicuri';
+  </script>
+
+  <!-- script-ul global care citește /content/products.json și populează #grid -->
+  <script defer src="/script.js"></script>
 </body>
 </html>
