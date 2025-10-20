@@ -1,11 +1,12 @@
 /* ===== Pagina produsului – imagini stânga / text dreapta ===== */
 
+/* container general */
 .container.product-page { padding-top: 0; }
 
-/* Layout general: două coloane pe desktop */
+/* Grid: 2 coloane pe desktop, poze mai late */
 .product-hero{
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;  /* stânga mai mare (poze) */
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
   align-items: start;
   margin-top: 20px;
@@ -19,47 +20,47 @@
   align-items: center;
 }
 
-/* lățimea maximă a galeriei (poți crește 760/820 dacă vrei mai mare) */
 .bc-gallery{
   width: 100%;
-  max-width: 720px;
+  max-width: 720px;              /* un pic mai generos pe desktop */
   margin: 0 auto;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-/* cadrul principal – înălțime fluidă, fără ::before */
+/* cadrul principal */
 .bc-viewport{
   position: relative;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 0 6px 24px rgba(0,0,0,.06);
   background: #fff;
-
-  /* înălțime adaptivă:
-     - minimum 260px,
-     - de regulă 56vw (mai „înalt” pe mobil),
-     - maximum 520px pe desktop. */
-  height: clamp(260px, 56vw, 520px);
 }
 
+/* înălțimea se păstrează după aspect ratio; max-height protejează pe mobile */
+.bc-viewport::before{
+  content:"";
+  display:block;
+  width:100%;
+  aspect-ratio: 4 / 3;          /* 4:3 arată cel mai bine pentru poze de produs */
+  max-height: 520px;            /* desktop */
+}
+
+/* track-ul trebuie să aibă lățime explicită pentru iOS/Safari */
 .bc-track{
-  display:flex;
-  height:100%;
   position:absolute;
   inset:0;
+  display:flex;
+  width: 100%;                  /* <- FIX pentru iOS (important) */
+  height:100%;
   transition:transform .35s ease;
-  will-change: transform;
 }
 
-.bc-slide{
-  flex:0 0 100%;
-  position:relative;
-  height: 100%;
-}
-
+.bc-slide{ flex:0 0 100%; position:relative; }
 .bc-slide img{
   width:100%;
   height:100%;
-  object-fit:cover;          /* umple cadrul indiferent de raportul imaginii */
+  object-fit:cover;
   display:block;
   border-radius:10px;
 }
@@ -69,145 +70,66 @@
   position:absolute;
   top:50%;
   transform:translateY(-50%);
-  width:40px; height:40px;
+  width:38px; height:38px;
   border:0; border-radius:999px;
-  background:rgba(255,255,255,.95);
+  background:rgba(255,255,255,.92);
   box-shadow:0 4px 12px rgba(0,0,0,.15);
   font-size:26px; line-height:1;
   cursor:pointer;
   display:flex; align-items:center; justify-content:center;
-  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  transition:transform .15s ease, box-shadow .15s ease;
   will-change:transform;
   backface-visibility:hidden;
 }
-.bc-nav:hover{
-  transform:translateY(-50%) scale(1.06);
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
-}
-.bc-prev{ left:10px; }
-.bc-next{ right:10px; }
+.bc-nav:hover{ transform:translateY(-50%) scale(1.06); box-shadow:0 8px 20px rgba(0,0,0,.25); }
+.bc-prev{ left:10px; } .bc-next{ right:10px; }
 
 /* thumbs */
-.bc-thumbs{
-  margin-top:12px;
-  overflow:hidden;
-  width: 100%;
-}
-.bc-thumbs-row{
-  display:flex;
-  gap:10px;
-  justify-content:center;
-  flex-wrap: wrap;     /* ca să nu iasă în afara ecranului pe mobil */
-}
+.bc-thumbs{ margin-top:10px; overflow:hidden; }
+.bc-thumbs-row{ display:flex; gap:8px; justify-content:center; }
 .bc-thumb{
-  padding:0;
-  border:0;
-  background:transparent;
-  cursor:pointer;
-  outline:2px solid transparent;
-  border-radius:12px;
-  overflow:hidden;
+  padding:0; border:0; background:transparent; cursor:pointer;
+  outline:2px solid transparent; border-radius:10px; overflow:hidden;
   transition:outline-color .15s ease, transform .12s ease;
 }
 .bc-thumb:hover{ transform:translateY(-1px); }
-.bc-thumb img{
-  display:block;
-  width:96px;
-  height:72px;
-  object-fit:cover;
-  border-radius:10px;
-}
+.bc-thumb img{ display:block; width:100px; height:72px; object-fit:cover; }
 .bc-thumb.is-active{ outline-color:#eab8c6; }
 
 /* ===== Coloana dreaptă: textul ===== */
 .hero-text{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.8rem;
-  padding-top: 0.5rem;
-}
-
-.product-title{
-  font-size: 1.9rem;
-  font-weight: 600;
-  margin-bottom: 0.3em;
-}
-
-.product-desc{
-  color: #666;
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
-
-.price-badge{
-  font-size: 1.2rem;
-  padding: 8px 16px;
-  border-radius: 20px;
-  display: inline-block;
-  background: #fde6ec;
-  color: #333;
-  font-weight: 600;
-  margin: 6px 0 12px;
-}
-
-.tags{
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-}
-.tags .tag{
-  background:#fff0f6;
-  border:1px solid #ffd8e7;
-  border-radius:999px;
-  padding:.25rem .7rem;
-  font-size:.9rem;
-  color:#9a5a78;
-}
-
-.actions{
   display:flex;
-  gap:1rem;
-  margin-top: 1rem;
+  flex-direction:column;
+  gap:.8rem;
+  padding-top:.5rem;
 }
+.product-title{ font-size:1.9rem; font-weight:600; margin-bottom:.3em; }
+.product-desc{ color:#666; line-height:1.6; font-size:1.05rem; }
+.price-badge{
+  font-size:1.2rem; padding:8px 16px; border-radius:20px; display:inline-block;
+  background:#fde6ec; color:#333; font-weight:600; margin:6px 0 12px;
+}
+.tags{ display:flex; flex-wrap:wrap; gap:.4rem; }
+.tags .tag{ background:#fff0f6; border:1px solid #ffd8e7; border-radius:999px; padding:.25rem .7rem; font-size:.9rem; color:#9a5a78; }
+
+.actions{ display:flex; gap:1rem; margin-top:1rem; }
 .actions .btn{
-  flex:1;
-  padding:0.7rem 1.2rem;
-  border-radius:999px;
-  border:1px solid #ffd8e7;
-  background:#fff;
-  box-shadow:0 4px 12px rgba(0,0,0,.06);
-  cursor:pointer;
-  transition:transform .12s ease, box-shadow .18s ease;
+  flex:1; padding:.7rem 1.2rem; border-radius:999px; border:1px solid #ffd8e7;
+  background:#fff; box-shadow:0 4px 12px rgba(0,0,0,.06);
+  cursor:pointer; transition:transform .12s ease, box-shadow .18s ease;
 }
-.actions .btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-.actions .btn.btn-primary{
-  background:#f7cfe1;
-  color:#333;
-  font-weight:600;
-}
+.actions .btn:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.1); }
+.actions .btn.btn-primary{ background:#f7cfe1; color:#333; font-weight:600; }
 
 /* ===== Responsiv ===== */
-@media (max-width: 1200px){
-  .bc-gallery{ max-width: 680px; }
-  .bc-viewport{ height: clamp(260px, 60vw, 540px); }
-}
 @media (max-width: 960px){
-  .product-hero{
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .hero-media, .hero-text{
-    max-width: 92%;
-    margin: 0 auto;
-    text-align: center;
-  }
+  .product-hero{ grid-template-columns: 1fr; gap: 1.5rem; }
+  .hero-media, .hero-text{ max-width: 94%; margin: 0 auto; text-align: center; }
+
+  /* puțin mai jos pe mobile, ca să respire */
+  .bc-viewport::before{ max-height: 380px; }
+
+  /* thumbs mai mari pentru touch */
+  .bc-thumb img{ width:92px; height:68px; }
   .actions{ flex-direction: column; }
-}
-@media (max-width: 480px){
-  .bc-thumb img{ width:84px; height:62px; }
-  .bc-viewport{ height: clamp(240px, 68vw, 480px); }
 }
