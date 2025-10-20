@@ -117,11 +117,7 @@
     if (!grid) return; // pe pagini fără grid (ex. produs), ieșim
 
     const term = norm(q?.value || '');
-    // dacă pagina setează window.PAGE_FILTER (ex: "Mărturii soia"), îl normalizăm aici
-const PAGE_FILTER = (typeof window.PAGE_FILTER === 'string' && window.PAGE_FILTER.trim())
-  ? norm(window.PAGE_FILTER)
-  : null;
-
+    
 
     const items = PRODUCTS.filter((p) => {
       const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
@@ -311,9 +307,6 @@ const PAGE_FILTER = (typeof window.PAGE_FILTER === 'string' && window.PAGE_FILTE
     // încarcă produse doar dacă avem grid (catalog)
     if (grid) {
       await loadProducts();
-      // dacă avem filtru de pagină, îl aplicăm înainte de randare
-if (PAGE_FILTER) activeFilter = PAGE_FILTER;
-
       render();
     }
   });
