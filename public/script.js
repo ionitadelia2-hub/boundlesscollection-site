@@ -117,7 +117,6 @@
     if (!grid) return; // pe pagini fără grid (ex. produs), ieșim
 
     const term = norm(q?.value || '');
-    
 
     const items = PRODUCTS.filter((p) => {
       const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
