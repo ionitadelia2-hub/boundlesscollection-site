@@ -45,10 +45,11 @@
   position:absolute;
   inset:0;
   display:flex;
-  width:100%;
+  /* width:100%;  <-- scoate linia asta */
   height:100%;
   transition:transform .35s ease;
 }
+
 
 /* Fiecare slide ocupa 100% – fix pt iOS/Safari */
 .bc-slide{
