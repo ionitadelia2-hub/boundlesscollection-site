@@ -14,7 +14,7 @@
     <nav class="site-nav" aria-label="Meniu principal">
   <ul id="mainmenu">
     <li class="has-sub">
-      <a href="/index.html#produse">Produse</a>
+      <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
       <ul class="sub">
         <li><a href="/marturii.html">Prezentare Mărturii</a></li>
         <li><a href="/invitatii.html">Prezentare Invitații</a></li>
@@ -71,6 +71,26 @@
 <script>
   document.getElementById('year').textContent=new Date().getFullYear();
   (function(){const b=document.querySelector('.nav-toggle'),m=document.getElementById('mainmenu');if(!b||!m)return;b.addEventListener('click',e=>{e.preventDefault();const o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});document.addEventListener('click',e=>{if(document.body.classList.contains('menu-open')){const inx=e.target.closest('.nav-toggle')||e.target.closest('nav');if(!inx){document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');}}});})();
+</script>
+<script>
+  // Dropdown "Produse" – deschide/închide la click
+  (function () {
+    const item = document.querySelector('.has-sub');          // <li class="has-sub">
+    const btn  = document.getElementById('productsToggle');   // linkul "Produse"
+    if (!item || !btn) return;
+
+    function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+    function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+    function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+
+    btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+    document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+    // (opțional) hover pe desktop
+    item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
+    item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
+  })();
 </script>
 </body>
 </html>

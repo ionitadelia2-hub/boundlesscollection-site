@@ -25,13 +25,31 @@
 
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
 
-      <nav aria-label="Meniu principal">
-        <ul id="mainmenu">
-          <li><a href="index.html">Acasă</a></li>
-          <li><a href="marturii.html">Mărturii</a></li>
-          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
-        </ul>
-      </nav>
+      <nav class="site-nav" aria-label="Meniu principal">
+  <ul id="mainmenu">
+    <!-- Dropdown Produse -->
+    <li class="has-sub">
+      <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
+      <ul class="sub">
+        <li><a href="/marturii.html">Prezentare Mărturii</a></li>
+        <li><a href="/invitatii.html">Prezentare Invitații</a></li>
+        <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
+        <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
+        <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
+        <li><a href="/stickere.html">Prezentare Stickere oglindă</a></li>
+        <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
+        <li><a href="/seturi.html">Prezentare Seturi</a></li>
+      </ul>
+    </li>
+
+    <!-- restul meniului -->
+    <li><a href="/index.html">Acasă</a></li>
+    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+    <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+    <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
+  </ul>
+</nav>
+
     </div>
   </header>
 
@@ -86,7 +104,26 @@
     // ⚠️ Categoria trebuie să fie EXACT cea din CSV/JSON
     window.PAGE_CATEGORY = 'Stickere oglindă';
   </script>
+<script>
+  // Dropdown "Produse" – deschide/închide la click
+  (function () {
+    const item = document.querySelector('.has-sub');          // <li class="has-sub">
+    const btn  = document.getElementById('productsToggle');   // linkul "Produse"
+    if (!item || !btn) return;
 
+    function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+    function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+    function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+
+    btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+    document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+    // (opțional) hover pe desktop
+    item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
+    item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
+  })();
+</script>
   <!-- script-ul global care citește /content/products.json și populează #grid -->
   <script defer src="/script.js"></script>
 </body>
