@@ -35,10 +35,11 @@
   border-radius: 14px;
   box-shadow: 0 6px 24px rgba(0,0,0,.06);
   background: #fff;
-  aspect-ratio: 4 / 3;      /* raport stabil pentru toate ecranele */
-  max-height: 520px;        /* limită desktop */
+  aspect-ratio: 1 / 1;       /* pătrat perfect */
+  max-height: 600px;         /* opțional: puțin mai mare pentru desktop */
   width: 100%;
 }
+
 
 /* track-ul cu slide-uri */
 .bc-track{
@@ -59,11 +60,10 @@
 .bc-slide img{
   width:100%;
   height:100%;
-  object-fit:cover;
+  object-fit:cover;      /* păstrează look-ul de Instagram */
   display:block;
   border-radius:10px;
 }
-
 /* butoane stânga/dreapta */
 .bc-nav{
   position:absolute;
@@ -129,9 +129,31 @@
 
 /* ===== Responsiv ===== */
 @media (max-width: 960px){
-  .product-hero{ grid-template-columns: 1fr; gap: 1.5rem; }
-  .hero-media, .hero-text{ max-width: 94%; margin: 0 auto; text-align: center; }
-  .bc-viewport{ max-height: 380px; }  /* înălțime mai mică pe mobil */
-  .bc-thumb img{ width:92px; height:68px; }
-  .actions{ flex-direction: column; }
+  .product-hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-media,
+  .hero-text {
+    max-width: 94%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* galerie pătrată pe mobil */
+  .bc-viewport {
+    aspect-ratio: 1 / 1;   /* pătrat Instagram style */
+    max-height: 340px;     /* mai mic pe ecrane mici */
+  }
+
+  .bc-thumb img {
+    width: 92px;
+    height: 92px;          /* pătrățele și ele */
+    object-fit: cover;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
 }
