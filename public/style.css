@@ -883,3 +883,20 @@ form input[type="submit"]:active {
   color: #000;
 }
 
+/* ===== Centrează titlul și subtitlul secțiunii Servicii ===== */
+#servicii .section-title,
+#servicii .section-sub {
+  text-align: center;
+  margin-inline: auto;
+}
+
+#servicii .section-title {
+  font-size: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+
+#servicii .section-sub {
+  max-width: 680px;
+  color: #6b5a63;
+  line-height: 1.6;
+}
