@@ -3,17 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Numere de masă | Boundless Collection</title>
+  <title>Stickere oglindă | Boundless Collection</title>
 
   <!-- Fonturi -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- Favicon / App Icons -->
-  <link rel="icon" type="image/png" sizes="32x32"  href="/images/delia-avatar.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/delia-avatar.png">
-  <link rel="apple-touch-icon" sizes="180x180"     href="/images/delia-avatar.png">
-  <link rel="shortcut icon"                         href="/images/delia-avatar.png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
@@ -22,36 +16,19 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="/index.html">
-        <div class="brand-logo"><img src="/images/delia-avatar.png" alt="Delia – Boundless Collection" width="48" height="48"></div>
+      <a class="brand" href="index.html">
+        <div class="brand-logo">
+          <img src="images/delia-avatar.png" alt="Delia – Boundless Collection" width="48" height="48">
+        </div>
         <div class="brand-title">Boundless Collection</div>
       </a>
 
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
 
-      <!-- MENIU UNIFICAT CU DROPDOWN -->
-      <nav class="site-nav" aria-label="Meniu principal">
+      <nav aria-label="Meniu principal">
         <ul id="mainmenu">
-          <li class="has-sub">
-            <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
-            <ul class="sub">
-              <li><a href="/marturii.html">Prezentare Mărturii</a></li>
-              <li><a href="/invitatii.html">Prezentare Invitații</a></li>
-              <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-              <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
-              <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
-              <li><a href="/stickere.html">Prezentare Stickere oglindă</a></li>
-              <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-              <li><a href="/seturi.html">Prezentare Seturi</a></li>
-            </ul>
-          </li>
-
-          <li><a href="/index.html#servicii">Servicii</a></li>
-<li><a href="/index.html#galerie">Galerie/Produse</a></li>
-<li><a href="/index.html#despre">Despre</a></li>
-
-          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="marturii.html">Mărturii</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </nav>
@@ -60,9 +37,10 @@
 
   <!-- CONȚINUT -->
   <section class="container" id="produse">
-    <h1 class="section-title">Prezentare Numere de masă</h1>
-    <p class="section-sub">Seturi coordonate cu invitațiile și meniurile.</p>
+    <h1 class="section-title">Prezentare Stickere oglindă</h1>
+    <p class="section-sub">Autocolante pentru oglinzi de întâmpinare și semnalistică elegantă.</p>
 
+    <!-- grilă populată automat din /content/products.json -->
     <div id="grid" class="grid products"></div>
   </section>
 
@@ -79,12 +57,12 @@
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- JS: anul + mobil + categoria + dropdown -->
+  <!-- JS: anul + meniu mobil + categoria + încărcarea produselor -->
   <script>
-    // anul footer
+    // anul în footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // hamburger
+    // meniu mobil (hamburger)
     (function(){
       const btn  = document.querySelector('.nav-toggle');
       const menu = document.getElementById('mainmenu');
@@ -105,32 +83,31 @@
       });
     })();
 
-    // Filtrare pentru această pagină – EXACT ca în CSV/JSON
-    window.PAGE_CATEGORY = 'Numere de masă';
+    // ⚠️ Categoria trebuie să fie EXACT cea din CSV/JSON
+    window.PAGE_CATEGORY = 'Stickere oglindă';
   </script>
-
   <script>
-    // Dropdown "Produse"
-    (function () {
-      const item = document.querySelector('.has-sub');
-      const btn  = document.getElementById('productsToggle');
-      if (!item || !btn) return;
+  // Dropdown "Produse" – deschide/închide la click
+  (function () {
+    const item = document.querySelector('.has-sub');          // <li class="has-sub">
+    const btn  = document.getElementById('productsToggle');   // linkul "Produse"
+    if (!item || !btn) return;
 
-      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+    function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+    function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+    function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
 
-      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
-      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+    document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
 
-      // hover pe desktop (opțional)
-      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
-      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
-    })();
-  </script>
+    // (opțional) hover pe desktop
+    item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
+    item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
+  })();
+</script>
 
-  <!-- script global care populează #grid -->
+  <!-- script-ul global care citește /content/products.json și populează #grid -->
   <script defer src="/script.js"></script>
 </body>
 </html>

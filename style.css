@@ -1,5 +1,5 @@
 /* =========================================================
-   Boundless Collection – STYLE (versiune curată)
+   Boundless – Global Styles (clean)
    ========================================================= */
 
 /* ---------- Vars ---------- */
@@ -25,157 +25,66 @@ img{display:block; max-width:100%; height:auto}
 a{color:inherit; text-decoration:none}
 .container{width:min(1100px,92%); margin-inline:auto}
 
+/* ---------- Header / Nav ---------- */
+.header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid #ffeaf3;
+}
+.nav{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:1rem 0}
+
+.brand{display:flex; align-items:center; gap:.6rem; white-space:nowrap}
+.brand-logo{
+  width:48px; height:48px; border-radius:50%;
+  background:linear-gradient(135deg,var(--rose),var(--white));
+  display:grid; place-items:center; box-shadow:var(--shadow);
+}
+.brand-title{font-weight:600; font-size:1.45rem}
+
+#mainmenu{display:flex; align-items:center; gap:.9rem; list-style:none; margin:0; padding:0}
+#mainmenu > li > a, .dropbtn{
+  font-weight:500; font-size:1.1rem;
+  padding:.35rem .6rem; border-radius:999px;
+  background:transparent; border:0; cursor:pointer;
+  transition:background .2s,color .2s;
+}
+#mainmenu > li > a:hover, .dropbtn:hover{background:var(--rose-2); color:#ad5f86}
+#mainmenu .cta{
+  font-weight:600; background:var(--rose);
+  border:1px solid #ffd8e7; box-shadow:var(--shadow);
+}
+
+/* Dropdown */
+.dropdown{position:relative}
+.dropbtn{display:inline-flex; align-items:center; gap:.35rem}
+.dropbtn::after{content:"▼"; font-size:.6rem; margin-top:1px; transition:transform .15s ease}
+[aria-expanded="true"].dropbtn::after{transform:rotate(180deg)}
+.dropdown .menu{
+  position:absolute; top:100%; left:0; z-index:1000;
+  min-width:220px; padding:.4rem; margin-top:.35rem;
+  display:none; background:#fff; border:1px solid #ffe1ee; border-radius:12px; box-shadow:var(--shadow);
+}
+.dropdown .menu li{list-style:none}
+.dropdown .menu a{display:block; padding:.6rem .8rem; border-radius:8px}
+.dropdown .menu a:hover{background:var(--rose-2)}
+.dropdown.open .menu{display:block}
+@media (hover:hover){ .dropdown:hover .menu{display:block} }
+
+/* ---------- Sections / Cards / Grid ---------- */
 section{padding:clamp(1.6rem, 3vw, 2.8rem) 0}
 .section-title{font-size:1.6rem; margin:0 0 .8rem}
 .section-sub{margin:0 0 1.2rem; color:var(--muted)}
-
-/* =========================================================
-   HEADER + NAV + DROPDOWN
-   ========================================================= */
-.header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255,255,255,.78);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,182,193,.25);
-  box-shadow: 0 2px 10px rgba(0,0,0,.04);
-  transition: background .25s ease;
-}
-.header:hover{ background: rgba(255,255,255,.9); }
-.header::after{
-  content:"";
-  display:block;
-  height:3px;
-  background: linear-gradient(90deg, #f8a8c8, #ffd9e8, #f8a8c8);
-}
-
-.nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-  padding:1rem 0;
-}
-
-.brand{ display:flex; align-items:center; gap:.6rem; white-space:nowrap; }
-.brand-logo{ width:48px; height:48px; border-radius:50%; overflow:hidden; box-shadow: var(--shadow); }
-.brand-title{ font-weight:600; font-size:1.45rem; }
-
-.site-nav{ position:relative; }
-.site-nav ul{ margin:0; padding:0; list-style:none; display:flex; gap:1.2rem; }
-.site-nav li{ position:relative; }
-
-/* linkuri nivel 1 */
-.site-nav > ul > li > a{
-  font-family:"Playfair Display", serif;
-  font-weight:500;
-  font-size:1.05rem;
-  color:#333;
-  padding:.45rem .7rem;
-  border-radius:8px;
-  transition: color .2s ease, background .2s ease;
-  position:relative;
-}
-.site-nav > ul > li > a::after{
-  content:"";
-  position:absolute;
-  left:50%; bottom:-2px;
-  width:0; height:2px;
-  background:#d56c91;
-  transform:translateX(-50%);
-  transition:width .25s ease;
-}
-.site-nav > ul > li > a:hover{ color:#d56c91; background:rgba(245,180,200,.12); }
-.site-nav > ul > li > a:hover::after{ width:60%; }
-
-/* CTA */
-.site-nav a.cta{
-  font-weight:600;
-  background: var(--rose);
-  border:1px solid #ffd8e7;
-  box-shadow: var(--shadow);
-  border-radius:999px;
-}
-
-/* Dropdown Produse */
-.site-nav .has-sub > a::after{ content:" ▾"; font-size:.9em; }
-.site-nav .has-sub .sub{
-  position:absolute;
-  top:100%; left:0;
-  min-width:240px;
-  background:#fff;
-  border:1px solid #f3d9e3;
-  border-radius:14px;
-  box-shadow: 0 14px 36px rgba(0,0,0,.08);
-  padding:.4rem 0;
-  display:none;
-  z-index: 1001;
-}
-.site-nav .has-sub .sub li{ list-style:none; }
-.site-nav .has-sub .sub a{
-  display:block;
-  padding:.55rem 1rem;
-  color:#222;
-  white-space:nowrap;
-  border-radius:8px;
-  transition: background .18s ease, color .18s ease;
-}
-.site-nav .has-sub .sub a::after{ display:none; }
-.site-nav .has-sub .sub a:hover{ background:#fff4f8; color:#000; }
-.site-nav .has-sub.open .sub{ display:block; }
-@media (hover:hover){ .site-nav .has-sub:hover .sub{ display:block; } }
-
-/* Mobile nav */
-@media (max-width:900px){
-  .nav{ position:relative; }
-  .nav-toggle{
-    display:inline-flex; align-items:center; justify-content:center;
-    width:40px; height:40px;
-    border:1px solid #ffe1ee; border-radius:12px; background:#fff; box-shadow:var(--shadow); color:#ad5f86;
-  }
-  .nav-toggle::after{ content:"☰"; font-size:1.1rem; }
-  .menu-open .nav-toggle::after{ content:"✕"; }
-
-  .site-nav ul#mainmenu{
-    position:absolute; top:100%; right:0;
-    display:none; flex-direction:column; align-items:stretch; gap:.2rem;
-    min-width:220px; max-height:60vh; overflow:auto;
-    padding:.6rem; margin-top:.4rem;
-    background:#fff; border:1px solid #ffe1ee; border-radius:12px; box-shadow:var(--shadow);
-    z-index:1000;
-  }
-  .menu-open .site-nav ul#mainmenu{ display:flex; }
-
-  .site-nav .has-sub .sub{
-    position:static; display:none; border:0; border-radius:0; box-shadow:none; padding:0; margin:.25rem 0 0;
-  }
-  .site-nav .has-sub.open .sub{ display:block; }
-
-  .brand-title{ font-size:1.25rem; }
-  .site-nav > ul > li > a{ font-size:1rem; padding:.4rem .55rem; }
-}
-@media (min-width:901px){
-  .nav-toggle{ display:none; }
-}
-
-/* =========================================================
-   GRID / CARDURI PRODUSE
-   ========================================================= */
 .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:1.1rem}
 
-.products .item{
-  grid-column:span 3;
-  display:flex; flex-direction:column;
-  background:#fff; border:1px solid #ffe1ee; border-radius:var(--radius);
-  box-shadow:var(--shadow);
-  transition:transform .18s, box-shadow .18s, border-color .18s;
-}
+.card{grid-column:span 4; padding:1rem; background:#fff; border:1px solid #ffe1ee; border-radius:var(--radius); box-shadow:var(--shadow)}
+.card h3{margin:.3rem 0 .1rem; font-size:1.05rem}
+.card p{margin:.25rem 0; color:var(--muted)}
+
+.products .item{grid-column:span 3; display:flex; flex-direction:column; background:#fff; border:1px solid #ffe1ee; border-radius:var(--radius); box-shadow:var(--shadow); transition:transform .18s, box-shadow .18s, border-color .18s}
 .products .item:hover{transform:translateY(-4px); box-shadow:0 14px 30px rgba(234,168,197,.22); border-color:#ffd1e4}
 .products .item .media{
-  position:relative; width:100%; aspect-ratio:4/3; overflow:hidden;
-  border-radius:18px; background:#f8eef3
+  position:relative; width:100%; aspect-ratio:4/3; overflow:hidden; border-radius:18px; background:#f8eef3
 }
 .products .item .media img{
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center
@@ -183,21 +92,27 @@ section{padding:clamp(1.6rem, 3vw, 2.8rem) 0}
 .products .item .media img.contain{object-fit:contain; background:#fff}
 .products .item .content{padding:.9rem}
 .price{font-weight:600; color:#9a5a78}
-
-/* Pills */
-.pill{
-  font-size:.9rem; font-weight:500;
-  padding:.4rem .9rem; border-radius:999px;
-  border:1px solid #ffcfe0; background:#fff5f8; color:#8a3c63;
-  box-shadow:0 2px 6px rgba(0,0,0,.05);
-  transition:all .2s ease;
+/* ===== PILL BUTTONS mai mari ===== */
+.pill {
+  font-size: 0.9rem;         /* puțin mai mare */
+  font-weight: 500;
+  padding: 0.4rem 0.9rem;    /* mai mult spațiu interior */
+  border-radius: 999px;
+  border: 1px solid #ffcfe0;
+  background: #fff5f8;
+  color: #8a3c63;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: all 0.2s ease;
 }
-.pill:hover{ background:#ffe3ee; border-color:#f5b8cf; color:#73284e; }
 
-/* Card actions */
+.pill:hover {
+  background: #ffe3ee;
+  border-color: #f5b8cf;
+  color: #73284e;
+}
 .products .actions{display:flex; gap:.6rem; margin-top:auto; padding:.9rem; border-top:1px solid #ffe8f2}
 
-/* Buttons */
+/* Generic button */
 .btn{
   padding:.6rem .8rem; border-radius:12px; border:1px solid #ffd8e7; background:#fff; cursor:pointer;
   box-shadow:0 4px 10px rgba(0,0,0,.04);
@@ -205,99 +120,61 @@ section{padding:clamp(1.6rem, 3vw, 2.8rem) 0}
 }
 .btn:hover{transform:translateY(-1px); box-shadow:0 8px 18px rgba(0,0,0,.07)}
 .btn:active{transform:none; box-shadow:0 4px 10px rgba(0,0,0,.06)}
-.btn.primary,.btn.btn-primary{
-  background:linear-gradient(180deg, var(--rose), #ffdced); border-color:#ffcfe6; font-weight:600; color:var(--text)
-}
-.btn.primary:hover,.btn.btn-primary:hover{ background:linear-gradient(180deg,#ffcfe2,#ffe9f4) }
-.products .actions .btn,
-.product-page .actions .btn{
-  font-weight:500; color:#ad5f86; border:1px solid #ffd8e7; background:#fff; transition:all .25s ease;
-}
-.products .actions .btn:hover,
-.product-page .actions .btn:hover{ background:#ffeaf3; color:#8a4468 }
+.btn.primary{background:linear-gradient(180deg, var(--rose), #ffdced); border-color:#ffcfe6; font-weight:600}
+.btn.primary:hover{background:linear-gradient(180deg, #ffcfe2, #ffe9f4)}
 
-/* =========================================================
-   TOOLBAR + SEARCH
-   ========================================================= */
-.toolbar{ display:flex; gap:1rem; align-items:center; flex-wrap:wrap; margin:0 0 1rem; }
-.search{ position:relative; }
-.search::before{ content:"🔎"; position:absolute; left:12px; top:50%; transform:translateY(-50%); font-size:14px; opacity:.6; pointer-events:none; }
-#q, .search input[type="search"]{
-  -webkit-appearance:none; appearance:none;
-  width:260px; max-width:100%;
-  padding:.55rem .9rem .55rem 2rem;
-  border:1px solid #ffd8e7; border-radius:999px; background:#fff;
-  color:var(--text); font:400 14px/1.2 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  box-shadow:0 6px 16px rgba(0,0,0,.06);
-  outline:none; transition: box-shadow .18s, border-color .18s, background-color .18s;
-}
-#q::placeholder,.search input[type="search"]::placeholder{ color:#9a5a78; opacity:.7; }
-#q:focus,.search input[type="search"]:focus{
-  border-color:#f3b8cc;
-  box-shadow:0 0 0 3px rgba(243,184,204,.28), 0 6px 16px rgba(0,0,0,.08);
-  background:#fff;
-}
-.search input[type="search"]::-webkit-search-decoration,
-.search input[type="search"]::-webkit-search-cancel-button{ -webkit-appearance:none; }
-
-/* =========================================================
-   PAGINA DE PRODUS
-   ========================================================= */
+/* ---------- Product Page ---------- */
 .product-page{
   max-width:1100px;
-  margin:2.5rem auto;
+  margin:3rem auto;
   padding:1.25rem;
   background:#fff;
   border-radius:24px;
   box-shadow:0 4px 12px rgba(0,0,0,.06);
 }
+
+/* 2 coloane: media stânga, info dreapta */
 .product-hero{
   display:grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: minmax(420px, 1.2fr) minmax(320px, .8fr);
   gap:2rem;
   align-items:start;
 }
-.col-media{min-width:0}
-.col-info{display:grid; align-content:start; gap:1.2rem}
-.product-title{margin:0; font-size:2rem; line-height:1.25; text-align:left}
+.col-media{min-width:0} /* necessary for overflow within grid */
+.col-info{display:grid; align-content:start; gap:1rem}
+
+/* Titlu/descriere/preț */
+.product-title{margin:0; font-size:2rem; line-height:1.2; text-align:left}
 .product-desc{margin:.25rem 0 0; color:#555; line-height:1.65; text-align:left}
 .price-badge{
-  display:inline-block; margin-top:.25rem; padding:.6rem 1rem; border-radius:999px;
-  font-weight:600; font-size:1rem; line-height:1; color:#a23366;
-  background:#ffe6f0; border:1px solid #f7b8d0; box-shadow:0 1px 0 rgba(0,0,0,.03)
+  display:inline-block; margin-top:.25rem;
+  padding:.5rem .9rem; border-radius:999px;
+  font-weight:600; font-size:.95rem; line-height:1;
+  color:#a23366; background:#ffe6f0; border:1px solid #f7b8d0; box-shadow:0 1px 0 rgba(0,0,0,.03)
 }
-.tags{display:flex; flex-wrap:wrap; gap:.4rem; justify-content:flex-start}
-.tag{padding:.35rem .7rem; border-radius:999px; background:#fff0f6; border:1px solid #ffd8e7; font-size:.9rem; color:#9a5a78}
+.tags{display:flex; flex-wrap:wrap; gap:.4rem}
+.tag{padding:.35rem .6rem; border-radius:999px; background:#fff0f6; border:1px solid #ffd8e7; font-size:.85rem}
 .product-page .actions{display:flex; gap:.8rem; margin-top:.5rem}
-.product-page .actions .btn{ flex:1; text-align:center; min-width:140px; border-radius:999px }
 
-/* =========================================================
-   CATEGORY PAGES – grid aerisit și centrat
-   ========================================================= */
-.products.category{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.1rem;
-  justify-items: center;
-}
-.products.category .item{ grid-column:auto; width:100%; max-width:420px; }
-.products.category .item .media{ aspect-ratio:4/3; overflow:hidden; border-radius:var(--radius); background:#f8eef3; }
-.products.category .item .media img{ width:100%; height:100%; object-fit:cover; object-position:center; }
-
-/* titluri/subtitluri category */
-#produse > .section-title,
-#produse > .section-sub{ text-align:left; max-width:800px; margin-inline:0; }
-@media (max-width:960px){
-  #produse > .section-title,
-  #produse > .section-sub{ text-align:center; margin-inline:auto; }
+/* Galerie container (stilurile sliderului sunt în gallery.css) */
+.product-page .gallery-shell{
+  border-radius:14px; overflow:hidden; box-shadow:0 6px 24px rgba(0,0,0,.06); background:#fff
 }
 
-/* =========================================================
-   FOOTER + WhatsApp floating
-   ========================================================= */
+/* ---------- Breadcrumbs ---------- */
+.breadcrumbs{
+  display:flex; align-items:center; justify-content:center; gap:.5rem;
+  margin:0 0 1rem; color:#6b6b6b
+}
+.breadcrumbs a{color:#7a5d6c}
+.breadcrumbs a:hover{text-decoration:underline}
+.breadcrumbs span{opacity:.7}
+
+/* ---------- Footer ---------- */
 footer{margin-top:2rem; padding:1.2rem 0; background:#fff; border-top:1px solid #ffe8f2; color:#7a6b73}
 .footer-inner{display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap}
 
+/* ---------- WhatsApp floating ---------- */
 .whatsapp-wrapper{
   position:fixed; right:18px; bottom:18px; z-index:9999;
   display:inline-flex; align-items:center; gap:.55rem;
@@ -309,57 +186,762 @@ footer{margin-top:2rem; padding:1.2rem 0; background:#fff; border-top:1px solid 
 .whatsapp-wrapper:hover{transform:scale(1.05)}
 @media (max-width:460px){ .whatsapp-wrapper span{display:none} }
 
-/* =========================================================
-   FORMS (Contact)
-   ========================================================= */
-form{ display:flex; flex-wrap:wrap; gap:.6rem; justify-content:center; margin-top:1rem; }
-form input, form textarea{
-  -webkit-appearance:none; appearance:none;
-  border:1px solid #ffd8e7; border-radius:999px; background:#fff;
-  padding:.55rem .9rem;
-  font:400 14px/1.3 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:var(--text);
-  box-shadow:0 6px 12px rgba(0,0,0,.05);
-  transition: box-shadow .18s, border-color .18s, background-color .18s;
-  min-width:140px;
-}
-form textarea{ border-radius:18px; resize:vertical; min-width:200px; min-height:38px; }
-form input:focus, form textarea:focus{
-  border-color:#f3b8cc;
-  box-shadow:0 0 0 3px rgba(243,184,204,.28), 0 6px 16px rgba(0,0,0,.08);
-  outline:none;
-}
-form button[type="submit"], form input[type="submit"]{
-  background:linear-gradient(180deg, var(--rose), #ffdced);
-  border:1px solid #ffcfe6; border-radius:999px;
-  color:#2a2a2a; font-weight:600; padding:.55rem 1.1rem; cursor:pointer;
-  box-shadow:0 6px 16px rgba(0,0,0,.08);
-  transition: transform .1s ease, box-shadow .2s ease;
-}
-form button[type="submit"]:hover, form input[type="submit"]:hover{
-  transform:translateY(-1px); box-shadow:0 8px 18px rgba(0,0,0,.12);
-}
-form button[type="submit"]:active, form input[type="submit"]:active{
-  transform:none; box-shadow:0 4px 10px rgba(0,0,0,.06);
-}
-
-/* =========================================================
-   RESPONSIVE MIX
-   ========================================================= */
+/* ---------- Responsive ---------- */
 @media (max-width:1100px){
-  .site-nav ul{ gap:.9rem }
-  .site-nav > ul > li > a{ font-size:1rem; padding:.3rem .5rem }
+  #mainmenu{gap:.7rem}
+  #mainmenu > li > a, .dropbtn{font-size:1rem; padding:.3rem .5rem}
 }
 @media (max-width:980px){
-  .product-hero{ grid-template-columns:1fr; gap:1.4rem; text-align:center }
-  .product-title,.product-desc{ text-align:center }
-  .product-page .actions{ justify-content:center; flex-direction:column; align-items:center }
-  .product-page .actions .btn{ width:90%; max-width:300px }
+  .product-hero{grid-template-columns:1fr}
+  .product-title, .product-desc{ text-align:center }
+  .product-page .actions{justify-content:center}
+}
+@media (max-width:900px){
+  .brand-title{font-size:1.2rem}
+  .nav{gap:.6rem}
+  /* mobile menu drawer (simple) */
+  .nav-toggle{display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border:1px solid #ffe1ee; border-radius:12px; background:#fff; box-shadow:var(--shadow); color:#ad5f86}
+  .nav-toggle::after{content:"☰"; font-size:1.1rem}
+  .menu-open .nav-toggle::after{content:"✕"}
+  nav{position:relative}
+  #mainmenu{
+    position:absolute; top:100%; right:0; min-width:220px; max-height:60vh; overflow:auto; z-index:1000;
+    display:none; flex-direction:column; align-items:stretch; gap:.2rem; padding:.6rem; margin-top:.4rem;
+    background:#fff; border:1px solid #ffe1ee; border-radius:12px; box-shadow:var(--shadow)
+  }
+  .menu-open #mainmenu{display:flex}
+  /* dropdown inside mobile panel */
+  .dropdown .menu{position:static; display:none; padding:.25rem 0; margin:.25rem 0 0; box-shadow:none; border:0; background:transparent}
+  .dropdown.open .menu{display:block}
+  #mainmenu .cta{font-size:.9rem; padding:.3rem .55rem; border-radius:12px}
 }
 @media (max-width:540px){
-  .brand-title{ font-size:1.3rem }
-  .products .item{ grid-column:span 12 }
-  .toolbar{ justify-content:center; flex-direction:column; }
-  .search{ width:100%; display:flex; justify-content:center; }
-  .search input[type="search"], #q{ width:90%; max-width:340px; }
+  .brand-title{font-size:1.3rem}
+  .card, .products .item{grid-column:span 12}
+}
+
+/* ===== Toolbar + Search ===== */
+.toolbar{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  flex-wrap:wrap;
+  margin: 0 0 1rem;
+}
+
+.search{ position:relative; }
+
+/* icon (opțional) */
+.search::before{
+  content:"🔎";
+  position:absolute;
+  left:12px; top:50%; transform:translateY(-50%);
+  font-size:14px; opacity:.6; pointer-events:none;
+}
+
+/* stil pentru inputul de căutare */
+#q,
+.search input[type="search"]{
+  -webkit-appearance: none; /* scoate stilul default pe Chromium/Safari */
+  appearance: none;
+  width: 260px; max-width: 100%;
+  padding: .55rem .9rem .55rem 2rem; /* loc pt icon */
+  border: 1px solid #ffd8e7;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--text, #2a2a2a);
+  font: 400 14px/1.2 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  outline: none;
+  transition: box-shadow .18s ease, border-color .18s ease, background-color .18s ease;
+}
+
+#q::placeholder,
+.search input[type="search"]::placeholder{
+  color: #9a5a78; opacity:.7;
+}
+
+#q:focus,
+.search input[type="search"]:focus{
+  border-color:#f3b8cc;
+  box-shadow: 0 0 0 3px rgba(243,184,204,.28), 0 6px 16px rgba(0,0,0,.08);
+  background:#fff;
+}
+
+/* ascunde butonul de „clear” specific browserului, dacă strică layoutul */
+.search input[type="search"]::-webkit-search-decoration,
+.search input[type="search"]::-webkit-search-cancel-button{
+  -webkit-appearance: none;
+}
+
+/* ============ FIX pentru Chrome / Chromium (search input) ============ */
+input[type="search"],
+#q {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border-radius: 999px !important;
+  border: 1px solid #ffd8e7 !important;
+  background: #fff !important;
+  color: var(--text, #2a2a2a) !important;
+  padding: .55rem .9rem .55rem 2rem !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,.06) !important;
+  font: 400 14px/1.2 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+}
+
+input[type="search"]:focus,
+#q:focus {
+  outline: none !important;
+  border-color: #f3b8cc !important;
+  box-shadow: 0 0 0 3px rgba(243,184,204,.28), 0 6px 16px rgba(0,0,0,.08) !important;
+}
+
+/* elimină iconițele native de search / clear */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none !important;
+}
+
+
+/* ===== Contact Form ===== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+form input,
+form textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #ffd8e7;
+  border-radius: 999px;
+  background: #fff;
+  padding: .55rem .9rem;
+  font: 400 14px/1.3 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text, #2a2a2a);
+  box-shadow: 0 6px 12px rgba(0,0,0,.05);
+  transition: box-shadow .18s ease, border-color .18s ease, background-color .18s ease;
+  min-width: 140px;
+}
+
+form textarea {
+  border-radius: 18px;
+  resize: vertical;
+  min-width: 200px;
+  min-height: 38px;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #f3b8cc;
+  box-shadow: 0 0 0 3px rgba(243,184,204,.28), 0 6px 16px rgba(0,0,0,.08);
+  outline: none;
+}
+
+form button[type="submit"],
+form input[type="submit"] {
+  background: linear-gradient(180deg, var(--rose), #ffdced);
+  border: 1px solid #ffcfe6;
+  border-radius: 999px;
+  color: #2a2a2a;
+  font-weight: 600;
+  padding: .55rem 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  transition: transform .1s ease, box-shadow .2s ease;
+}
+
+form button[type="submit"]:hover,
+form input[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+
+form button[type="submit"]:active,
+form input[type="submit"]:active {
+  transform: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.06);
+}
+
+/* ===== Mobile fix: Pills aerisite ===== */
+@media (max-width: 768px) {
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem 0.8rem; /* spațiu între butoane */
+    margin-top: 0.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .pill {
+    font-size: 0.95rem;
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    background: #fff5f8;
+    border: 1px solid #ffcfe0;
+    color: #8a3c63;
+    flex-shrink: 0;
+  }
+
+  .pill:hover {
+    background: #ffe3ee;
+  }
+
+  /* Pentru când filtrul e activ */
+  .pill[aria-pressed="true"] {
+    background: linear-gradient(180deg, var(--rose), #ffdced);
+    color: #2a2a2a;
+    border-color: #ffbcd7;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+  }
+}
+
+/* ===== Mobile layout pentru Galerie & Produse ===== */
+@media (max-width: 768px) {
+  /* Centrează titlul secțiunii */
+  h2.section-title,
+  h2,
+  #produse h2 {
+    text-align: center;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Centrează bara de căutare */
+  .toolbar {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search input[type="search"],
+  #q {
+    width: 90%;
+    max-width: 340px;
+  }
+
+  /* Ajustează categoriile (pills) pentru simetrie */
+  .filter {
+    justify-content: center;
+    gap: 0.7rem 1rem;
+  }
+
+  .pill {
+    padding: 0.45rem 1rem;
+  }
+}
+/* ===== Mobile: centrare titlu și repoziționare meniu ===== */
+@media (max-width: 768px) {
+  /* 1. Titlul principal din hero */
+  .hero h1,
+  .hero-title,
+  h1 {
+    text-align: center;
+    line-height: 1.3;
+    margin: 0 auto 0.8rem;
+    max-width: 90%;
+  }
+
+  .hero p,
+  .hero-subtitle {
+    text-align: center;
+    max-width: 90%;
+    margin-inline: auto;
+  }
+
+  /* 2. Iconul de meniu - aliniat dreapta */
+  .nav-toggle {
+    margin-left: auto;            /* împinge spre dreapta */
+    margin-right: 0.3rem;         /* mic spațiu față de margine */
+    border: 1px solid #ffd9e7;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+
+  /* 3. Logo-ul și titlul brandului - centrate mai bine */
+  .brand {
+    gap: 0.4rem;
+  }
+
+  .brand-title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
+/* ===== Centrare butoane produs + formular Contact ===== */
+@media (max-width: 768px) {
+  /* Butoanele de sub preț ("Distribuie", "Solicită ofertă") */
+  .products .actions,
+  .product-page .actions {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .products .actions .btn,
+  .product-page .actions .btn {
+    flex: 0 0 auto;
+    min-width: 140px;
+  }
+
+  /* Formular Contact */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  form input,
+  form textarea {
+    width: 90%;
+    max-width: 360px;
+  }
+
+  form button[type="submit"],
+  .btn.submit {
+    align-self: center;
+    margin-top: 0.6rem;
+    background: linear-gradient(180deg, var(--rose), #ffdced);
+    border: 1px solid #ffcfe6;
+    box-shadow: var(--shadow);
+    color: #2a2a2a;
+    font-weight: 600;
+  }
+
+  form button[type="submit"]:hover {
+    background: linear-gradient(180deg, #ffcfe2, #ffe9f4);
+  }
+}
+
+/* ===== Stil roz pentru butoanele din carduri ===== */
+.products .actions .btn,
+.product-page .actions .btn {
+  font-weight: 500;
+  color: #ad5f86; /* roz text */
+  border: 1px solid #ffd8e7;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+
+.products .actions .btn:hover,
+.product-page .actions .btn:hover {
+  background: #ffeaf3;
+  color: #8a4468; /* roz mai intens la hover */
+}
+
+/* ===== Variante primare (ex: „Solicită ofertă”) ===== */
+.products .actions .btn.primary,
+.product-page .actions .btn.primary,
+.products .actions .btn.btn-primary,
+.product-page .actions .btn.btn-primary {
+  background: linear-gradient(180deg, var(--rose), #ffdced);
+  border-color: #ffcfe6;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.products .actions .btn.primary:hover,
+.product-page .actions .btn.primary:hover,
+.products .actions .btn.btn-primary:hover,
+.product-page .actions .btn.btn-primary:hover {
+  background: linear-gradient(180deg, #ffcfe2, #ffe9f4);
+  color: #8a4468;
+}
+/* ===== Corectare culoare "Produse ▼" din dropdown ===== */
+.dropbtn,
+#mainmenu > li > a {
+  color: var(--text); /* text negru/închis elegant */
+  font-weight: 500;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+/* culoare roz la hover sau activ */
+.dropbtn:hover,
+#mainmenu > li > a:hover,
+.dropdown.open > .dropbtn {
+  color: #ad5f86;
+  background: var(--rose-2);
+}
+
+/* eliminare stil implicit de link (albastru) */
+.dropbtn:visited,
+#mainmenu > li > a:visited {
+  color: var(--text);
+}
+
+/* pentru selectia activa (dropdown deschis) */
+.dropdown.open > .dropbtn::after {
+  color: #ad5f86;
+}
+/* ascundem butonul hamburger DOAR pe desktop */
+@media (min-width: 901px){
+  .nav-toggle { display: none; }
+}
+/* === Mobil: evită suprapunerea dropdown-ului cu hamburger === */
+@media (max-width: 900px){
+  .nav{ position: relative; }
+  .nav-toggle{ position: relative; z-index: 1002; }      /* butonul deasupra */
+  #mainmenu{ position:absolute; right:0; z-index: 1000; }
+
+  /* oferă loc în dreapta, sub bulina cu X/☰ */
+  .menu-open #mainmenu{ padding-right: 56px; }           /* ~lățimea bulinei */
+
+  /* dropdown-ul din #mainmenu (ex: „Produse ▾”) */
+  #mainmenu .dropdown{ position: relative; }
+  #mainmenu .dropdown .menu{
+    left: auto;                   /* nu-l ancora la stânga */
+    right: .5rem;                 /* aliniază la dreapta panelului */
+    top: calc(100% + .5rem);      /* coboară puțin sub butonul „Produse” */
+    box-shadow: var(--shadow);
+  }
+}
+
+/* ===== Ajustare imagine și text HERO doar pe desktop ===== */
+@media (min-width: 992px) {
+  /* micșorează imaginea */
+  .hero img {
+    width: 70%;             /* ajustează dimensiunea (poți încerca și 65% dacă vrei mai mică) */
+    max-width: 420px;       /* limitează lățimea maximă */
+    height: auto;
+    display: block;
+    margin-inline: auto;    /* centrează imaginea */
+  }
+
+  /* centrează titlul și subtitlul */
+  .hero h1,
+  .hero-title,
+  .hero p,
+  .hero-subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+/* asigură-te că header + burger sunt peste tot */
+.header{ z-index: 1000; }
+.nav-toggle{ position: relative; z-index: 1001; }
+
+/* în mobile, panoul are prioritate mare */
+@media (max-width:900px){
+  #mainmenu{ z-index: 1000; }
+}
+/* ===== PATCH – Optimizare layout produs (desktop + mobil) ===== */
+
+/* Pagina de produs – container general */
+.product-page {
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+}
+
+/* Două coloane echilibrate pe desktop */
+.product-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Imagine + text responsive */
+.col-media {
+  min-width: 0;
+}
+.col-info {
+  display: grid;
+  align-content: start;
+  gap: 1.2rem;
+}
+
+/* Titlu / descriere / preț */
+.product-title {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.25;
+  text-align: left;
+}
+.product-desc {
+  margin: .25rem 0 0;
+  color: #555;
+  line-height: 1.65;
+  text-align: left;
+}
+.price-badge {
+  display: inline-block;
+  margin-top: .25rem;
+  padding: .6rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  color: #a23366;
+  background: #ffe6f0;
+  border: 1px solid #f7b8d0;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+}
+
+/* Butoane + etichete */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  justify-content: flex-start;
+}
+.tag {
+  padding: .35rem .7rem;
+  border-radius: 999px;
+  background: #fff0f6;
+  border: 1px solid #ffd8e7;
+  font-size: .9rem;
+  color: #9a5a78;
+}
+.product-page .actions {
+  display: flex;
+  gap: .8rem;
+  margin-top: .5rem;
+}
+.product-page .actions .btn {
+  flex: 1;
+  text-align: center;
+  min-width: 140px;
+  font-weight: 500;
+  border-radius: 999px;
+  border: 1px solid #ffd8e7;
+  background: #fff;
+  color: #ad5f86;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .06);
+  transition: all 0.25s ease;
+}
+.product-page .actions .btn:hover {
+  background: #ffeaf3;
+  color: #8a4468;
+}
+.product-page .actions .btn.btn-primary {
+  background: linear-gradient(180deg, var(--rose), #ffdced);
+  border-color: #ffcfe6;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+.product-page .actions .btn.btn-primary:hover {
+  background: linear-gradient(180deg, #ffcfe2, #ffe9f4);
+}
+
+/* ===== Responsiv – Mobil ===== */
+@media (max-width: 960px) {
+  .product-hero {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+    text-align: center;
+  }
+
+  .product-page {
+    padding: 1rem;
+    border-radius: 18px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .05);
+  }
+
+  .product-title {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+  .product-desc {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .tags {
+    justify-content: center;
+  }
+  .product-page .actions {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-page .actions .btn {
+    width: 90%;
+    max-width: 300px;
+  }
+}
+
+/* ===== Category pages (grid aerisit și centrat) ===== */
+.products.category{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+  justify-items: center;         /* centrează cardurile când sunt puține */
+}
+
+/* cardurile nu mai forțează span pe 12-col grid */
+.products.category .item{
+  grid-column: auto;
+  width: 100%;
+  max-width: 420px;              /* nu lăsa cardul să se lăbărțeze */
+}
+
+/* păstrează un raport frumos și NU taie imagini importante */
+.products.category .item .media{
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: #f8eef3;
+}
+.products.category .item .media img{
+  width:100%; height:100%;
+  object-fit: cover;             /* schimbă în 'contain' dacă vrei tot cadrul vizibil */
+  object-position: center;
+}
+
+/* coperta paginii — titlu/subtitlu centrate și mai înguste */
+#produse > .section-title,
+#produse > .section-sub{
+  text-align: left;
+  max-width: 800px;
+  margin-inline: 0;              /* pe paginile category e la stânga, ca în screenshot */
+}
+@media (max-width: 960px){
+  #produse > .section-title,
+  #produse > .section-sub{
+    text-align: center;
+    margin-inline: auto;
+  }
+}
+
+/* --- Dropdown Produse --- */
+.site-nav .has-sub { position: relative; }
+.site-nav .has-sub > a::after { content:" ▾"; font-size:.85em; }
+
+.site-nav .has-sub .sub{
+  position: absolute;
+  top: 100%; left: 0;
+  min-width: 260px;
+  background: #fff;
+  border: 1px solid #f3d9e3;
+  border-radius: 14px;
+  box-shadow: 0 14px 36px rgba(0,0,0,.08);
+  padding: .5rem 0;
+  display: none;
+  z-index: 30;
+}
+.site-nav .has-sub .sub a{
+  display:block; padding:.55rem 1rem; white-space:nowrap;
+}
+.site-nav .has-sub .sub a:hover{ background:#fff4f8; }
+
+.site-nav .has-sub.open .sub{ display:block; }
+
+/* Mobil: arată submeniul în coloană, fără poziționare absolută */
+@media (max-width: 960px){
+  .site-nav .has-sub .sub{
+    position: static;
+    border: 0; border-radius: 0; box-shadow: none;
+    padding: 0; display: block;
+  }
+}
+/* === Elimină bullet-urile din dropdown Produse === */
+.site-nav ul,
+.site-nav li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Elimină orice bullet care vine din browser */
+.site-nav .sub li::marker {
+  content: none;
+}
+.site-nav .sub a {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #222;
+  transition: background 0.2s ease;
+}
+
+.site-nav .sub a:hover {
+  background: #ffe6f0;
+  color: #000;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 182, 193, 0.25);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+.header:hover {
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.header::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: linear-gradient(to right, #f8a8c8, #ffd9e8, #f8a8c8);
+}
+.site-nav a {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  color: #333;
+  padding: 0.6rem 1rem;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #d56c91;
+  background: rgba(245, 180, 200, 0.15);
+  border-radius: 8px;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav a {
+  position: relative;
+}
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #d56c91;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+.site-nav a:hover::after {
+  width: 60%;
 }
