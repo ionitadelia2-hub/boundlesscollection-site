@@ -9,6 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- Favicon / App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32"  href="/images/delia-avatar.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/delia-avatar.png">
+  <link rel="apple-touch-icon" sizes="180x180"     href="/images/delia-avatar.png">
+  <link rel="shortcut icon"                         href="/images/delia-avatar.png">
+
   <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -16,17 +22,35 @@
   <!-- HEADER -->
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="index.html">
-        <div class="brand-logo"><img src="images/delia-avatar.png" alt="Delia – Boundless Collection" width="48" height="48"></div>
+      <a class="brand" href="/index.html">
+        <div class="brand-logo"><img src="/images/delia-avatar.png" alt="Delia – Boundless Collection" width="48" height="48"></div>
         <div class="brand-title">Boundless Collection</div>
       </a>
 
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
 
-      <nav aria-label="Meniu principal">
+      <!-- MENIU UNIFICAT CU DROPDOWN -->
+      <nav class="site-nav" aria-label="Meniu principal">
         <ul id="mainmenu">
-          <li><a href="index.html">Acasă</a></li>
-          <li><a href="marturii.html">Mărturii</a></li>
+          <li class="has-sub">
+            <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
+            <ul class="sub">
+              <li><a href="/marturii.html">Prezentare Mărturii</a></li>
+              <li><a href="/invitatii.html">Prezentare Invitații</a></li>
+              <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
+              <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
+              <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
+              <li><a href="/stickere.html">Prezentare Stickere oglindă</a></li>
+              <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
+              <li><a href="/seturi.html">Prezentare Seturi</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/servicii.html">Servicii</a></li>
+          <li><a href="/galerie.html">Galerie/Produse</a></li>
+          <li><a href="/despre.html">Despre</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </nav>
@@ -38,7 +62,6 @@
     <h1 class="section-title">Prezentare Numere de masă</h1>
     <p class="section-sub">Seturi coordonate cu invitațiile și meniurile.</p>
 
-    <!-- grilă populată din /content/products.json de script.js -->
     <div id="grid" class="grid products"></div>
   </section>
 
@@ -55,9 +78,9 @@
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- JS: anul + meniu mobil + categoria + încărcarea produselor -->
+  <!-- JS: anul + mobil + categoria + dropdown -->
   <script>
-    // anul în footer
+    // anul footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // hamburger
@@ -81,11 +104,32 @@
       });
     })();
 
-    // ⚠️ IDENTIC cu valoarea din CSV (category) pentru numere
+    // Filtrare pentru această pagină – EXACT ca în CSV/JSON
     window.PAGE_CATEGORY = 'Numere de masă';
   </script>
 
-  <!-- script global care citește /content/products.json și populează #grid -->
+  <script>
+    // Dropdown "Produse"
+    (function () {
+      const item = document.querySelector('.has-sub');
+      const btn  = document.getElementById('productsToggle');
+      if (!item || !btn) return;
+
+      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+
+      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+      // hover pe desktop (opțional)
+      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
+      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
+    })();
+  </script>
+
+  <!-- script global care populează #grid -->
   <script defer src="/script.js"></script>
 </body>
 </html>
