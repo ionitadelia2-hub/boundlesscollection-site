@@ -92,8 +92,8 @@ function pageTemplate(prod) {
   const waMsg  = encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`);
   const waLink = `https://wa.me/40760617724?text=${waMsg}`;
 
-  const faviconPng  = exists(ROOT, "images", "Delia.png") ? `/images/Delia.png` : "";
-  const faviconIco  = exists(ROOT, "images", "Delia.ico") ? `/images/Delia.ico` : "";
+  const faviconPng  = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
+  const faviconIco  = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
   const brandAvatar = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
 
   const cssGlobal  = cssTagIfExists("style.css");
@@ -225,9 +225,13 @@ function pageTemplate(prod) {
     </section>
   </main>
 
-  <footer class="footer">
-    <small>© <span id="year"></span> ${brand}</small>
-  </footer>
+  <footer>
+  <div class="container footer-inner">
+    <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
+    <small>Realizat în nuanțe alb–roz ✨</small>
+  </div>
+</footer>
+
 
   <script>
     // anul curent
