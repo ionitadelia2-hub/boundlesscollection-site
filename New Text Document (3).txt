@@ -290,7 +290,7 @@
   <footer>
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
       <small>© <span id="year"></span> Delia's Candles & Papetărie · Toate drepturile rezervate</small>
-      <small>Realizat cu drag în nuanțe alb–roz ✨</small>
+      <small>Realizat cu pasiune ✨</small>
     </div>
   </footer>
 

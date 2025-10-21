@@ -228,7 +228,7 @@ function pageTemplate(prod) {
   <footer>
   <div class="container footer-inner">
     <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
-    <small>Realizat în nuanțe alb–roz ✨</small>
+    <small>Realizat cu pasiune ✨</small>
   </div>
 </footer>
 
