@@ -8,6 +8,11 @@
   <!-- Fonturi -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Favicon / App Icons -->
+<link rel="icon" type="image/png" sizes="32x32"  href="/images/delia-avatar.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/delia-avatar.png">
+<link rel="apple-touch-icon" sizes="180x180"     href="/images/delia-avatar.png">
+<link rel="shortcut icon"                         href="/images/delia-avatar.png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
@@ -117,53 +122,6 @@
     // ⚠️ EXACT ca în products.csv/JSON
     window.PAGE_CATEGORY = 'Seturi';
   </script>
-  <script>
-(function () {
-  const btnHamb  = document.querySelector('.nav-toggle');
-  const mainMenu = document.querySelector('#mainmenu');
-  const dd       = document.querySelector('.dropdown');
-  const ddBtn    = dd?.querySelector('.dropbtn');
-
-  if (!btnHamb || !mainMenu) return;
-
-  function closeAll() {
-    document.body.classList.remove('menu-open');
-    btnHamb.setAttribute('aria-expanded','false');
-    if (dd) {
-      dd.classList.remove('open');
-      ddBtn?.setAttribute('aria-expanded','false');
-    }
-  }
-
-  // toggle burger
-  btnHamb.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const open = document.body.classList.toggle('menu-open');
-    btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (!open && dd) {
-      dd.classList.remove('open');
-      ddBtn?.setAttribute('aria-expanded','false');
-    }
-  });
-
-  // dropdown în panoul mobil
-  if (dd && ddBtn) {
-    ddBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const now = dd.classList.toggle('open');
-      ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
-    });
-    // click în interiorul panoului nu închide meniul
-    mainMenu.addEventListener('click', (e) => e.stopPropagation());
-  }
-
-  // click pe fundal / Esc => închide
-  document.addEventListener('click', closeAll);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
-})();
-</script>
 
   <!-- Script global: încarcă /content/products.json și umple #grid -->
   <script defer src="/script.js"></script>

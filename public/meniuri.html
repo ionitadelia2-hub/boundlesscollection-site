@@ -1,96 +1,129 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Meniuri • Boundless Collection</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Meniuri | Boundless Collection</title>
+
+  <!-- Fonturi -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Favicon / App Icons -->
+<link rel="icon" type="image/png" sizes="32x32"  href="/images/delia-avatar.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/delia-avatar.png">
+<link rel="apple-touch-icon" sizes="180x180"     href="/images/delia-avatar.png">
+<link rel="shortcut icon"                         href="/images/delia-avatar.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="index.html"><div class="brand-logo"><img src="images/delia-avatar.png" alt="" width="48" height="48"></div><div class="brand-title">Boundless Collection</div></a>
-    <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
-    <nav class="site-nav" aria-label="Meniu principal">
-  <ul id="mainmenu">
-    <li class="has-sub">
-      <a href="/index.html#produse">Produse</a>
-      <ul class="sub">
-        <li><a href="/marturii.html">Prezentare Mărturii</a></li>
-        <li><a href="/invitatii.html">Prezentare Invitații</a></li>
-        <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-        <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
-        <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
-        <li><a href="/stickere.html">Prezentare Stickere oglindă</a></li>
-        <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-        <li><a href="/seturi.html">Prezentare Seturi</a></li>
-      </ul>
-    </li>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <div class="brand-logo"><img src="images/delia-avatar.png" alt="Delia – Boundless Collection" width="48" height="48"></div>
+        <div class="brand-title">Boundless Collection</div>
+      </a>
 
-    <li><a href="/index.html">Acasă</a></li>
-    <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-    <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
-    <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
-  </ul>
-</nav>
-  </div>
-</header>
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
 
-<section class="container">
-  <h1 class="section-title">Prezentare Meniuri</h1>
-  <p class="section-sub">Tipar premium, potrivite cu invitațiile și numerele de masă.</p>
+      <!-- MENIU cu dropdown „Produse” -->
+      <nav class="site-nav" aria-label="Meniu principal">
+        <ul id="mainmenu">
+          <li class="has-sub">
+            <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
+            <ul class="sub">
+              <li><a href="/marturii.html">Prezentare Mărturii</a></li>
+              <li><a href="/invitatii.html">Prezentare Invitații</a></li>
+              <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
+              <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
+              <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
+              <li><a href="/stickere.html">Prezentare Stickere oglindă</a></li>
+              <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
+              <li><a href="/seturi.html">Prezentare Seturi</a></li>
+            </ul>
+          </li>
 
-  <div class="grid products">
-    <article class="item">
-      <div class="media"><img src="images/preview.jpg" alt="Meniu floral"></div>
-      <div class="content">
-        <h3><a href="/produs/meniu-floral">Meniu floral</a></h3>
-        <p class="muted">Model elegant, paletă roz–albastru.</p>
-        <div class="price">5.50 RON</div>
-      </div>
-    </article>
+          <li><a href="/index.html">Acasă</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <article class="item">
-      <div class="media"><img src="images/preview.jpg" alt="Meniu minimalist"></div>
-      <div class="content">
-        <h3><a href="/produs/meniu-minimalist">Meniu minimalist</a></h3>
-        <p class="muted">Font serif & detalii catifelate.</p>
-        <div class="price">5.00 RON</div>
-      </div>
-    </article>
-  </div>
-</section>
+  <!-- CONȚINUT -->
+  <section class="container" id="produse">
+    <h1 class="section-title">Prezentare Meniuri</h1>
+    <p class="section-sub">Tipar premium, potrivite cu invitațiile și numerele de masă.</p>
 
-<footer>
-  <div class="container footer-inner">
-    <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
-    <small>Realizat în nuanțe alb–roz ✨</small>
-  </div>
-</footer>
-<a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener">💬 <span>Scrie-mi pe WhatsApp</span></a>
-<script>
-  document.getElementById('year').textContent=new Date().getFullYear();
-  (function(){const b=document.querySelector('.nav-toggle'),m=document.getElementById('mainmenu');if(!b||!m)return;b.addEventListener('click',e=>{e.preventDefault();const o=document.body.classList.toggle('menu-open');b.setAttribute('aria-expanded',o?'true':'false');});document.addEventListener('click',e=>{if(document.body.classList.contains('menu-open')){const inx=e.target.closest('.nav-toggle')||e.target.closest('nav');if(!inx){document.body.classList.remove('menu-open');b.setAttribute('aria-expanded','false');}}});})();
-</script>
-<script>
-  // Dropdown "Produse" – deschide/închide la click
-  (function () {
-    const item = document.querySelector('.has-sub');          // <li class="has-sub">
-    const btn  = document.getElementById('productsToggle');   // linkul "Produse"
-    if (!item || !btn) return;
+    <!-- grilă populată automat din /content/products.json -->
+    <div id="grid" class="grid products"></div>
+  </section>
 
-    function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-    function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-    function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
+      <small>Realizat în nuanțe alb–roz ✨</small>
+    </div>
+  </footer>
 
-    btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
-    document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  <!-- WhatsApp plutitor -->
+  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener">
+    💬 <span>Scrie-mi pe WhatsApp</span>
+  </a>
 
-    // (opțional) hover pe desktop
-    item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
-    item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
-  })();
-</script>
+  <!-- JS: anul + meniu mobil + dropdown + categoria + produse -->
+  <script>
+    // Anul din footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Meniu mobil (hamburger)
+    (function(){
+      const btn  = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('mainmenu');
+      if(!btn || !menu) return;
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const open = document.body.classList.toggle('menu-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      document.addEventListener('click', (e)=>{
+        if (document.body.classList.contains('menu-open')) {
+          const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
+          if (!inside) {
+            document.body.classList.remove('menu-open');
+            btn.setAttribute('aria-expanded','false');
+          }
+        }
+      });
+    })();
+
+    // Dropdown „Produse” (click + hover + escape)
+    (function () {
+      const item = document.querySelector('.has-sub');
+      const btn  = document.getElementById('productsToggle');
+      if (!item || !btn) return;
+
+      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+
+      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
+      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
+    })();
+
+    // ⚠️ EXACT ca în products.csv / JSON
+    window.PAGE_CATEGORY = 'Meniuri';
+  </script>
+
+  <!-- Script global: încarcă produsele din /content/products.json -->
+  <script defer src="/script.js"></script>
 </body>
 </html>
