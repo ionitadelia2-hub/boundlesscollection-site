@@ -900,3 +900,22 @@ form input[type="submit"]:active {
   color: #6b5a63;
   line-height: 1.6;
 }
+/* ===== Buton roz elegant pentru secțiunea Despre ===== */
+.btn-rose {
+  display: inline-block;
+  margin-top: 1.8rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--rose), #ffdced);
+  color: #2a2a2a;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.btn-rose:hover {
+  background: linear-gradient(180deg, #ffcfe2, #ffe9f4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
