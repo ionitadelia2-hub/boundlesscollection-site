@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>http://127.0.0.1:5501/</loc></url>
-    <url><loc>http://127.0.0.1:5501/p/invitatie-florala-1966e525.html</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://boundlesscollection.ro/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://boundlesscollection.ro/marturii.html</loc></url>
+  <url><loc>https://boundlesscollection.ro/invitatii.html</loc></url>
+  <url><loc>https://boundlesscollection.ro/plicuri.html</loc></url>
+  <url><loc>https://boundlesscollection.ro/meniuri.html</loc></url>
+  <url><loc>https://boundlesscollection.ro/numere-masa.html</loc></url>
+  <url><loc>https://boundlesscollection.ro/seturi.html</loc></url>
+  <url><loc>https://boundlesscollection.ro/aranjamente-florale.html</loc></url>
+  <url><loc>https://boundlesscollection.ro/stickere-oglinda.html</loc></url>
+  <url><loc>https://boundlesscollection.ro/multumesc.html</loc></url>
 </urlset>

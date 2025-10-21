@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://boundlesscollection.ro/sitemap.xml
