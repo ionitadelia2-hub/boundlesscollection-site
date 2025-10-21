@@ -43,12 +43,21 @@ a{color:inherit; text-decoration:none}
 .brand-title{font-weight:600; font-size:1.45rem}
 
 #mainmenu{display:flex; align-items:center; gap:.9rem; list-style:none; margin:0; padding:0}
-#mainmenu > li > a, .dropbtn{
-  font-weight:500; font-size:1.1rem;
-  padding:.35rem .6rem; border-radius:999px;
-  background:transparent; border:0; cursor:pointer;
-  transition:background .2s,color .2s;
+#mainmenu > li > a,
+.dropbtn {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  color: #333;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: color 0.3s ease, background 0.3s ease;
 }
+
 #mainmenu > li > a:hover, .dropbtn:hover{background:var(--rose-2); color:#ad5f86}
 #mainmenu .cta{
   font-weight:600; background:var(--rose);
@@ -568,12 +577,11 @@ form input[type="submit"]:active {
 
 /* culoare roz la hover sau activ */
 .dropbtn:hover,
-#mainmenu > li > a:hover,
-.dropdown.open > .dropbtn {
-  color: #ad5f86;
-  background: var(--rose-2);
+#mainmenu > li > a:hover {
+  color: #d56c91;
+  background: rgba(245, 180, 200, 0.15);
+  border-radius: 8px;
 }
-
 /* eliminare stil implicit de link (albastru) */
 .dropbtn:visited,
 #mainmenu > li > a:visited {
