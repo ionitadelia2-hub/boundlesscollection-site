@@ -204,17 +204,30 @@
         <a href="https://www.facebook.com/share/16TEGEfgGs/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>.
       </p>
       
-      <form id="contactForm">
-        <input name="name" required placeholder="Nume" />
-        <input name="email" required type="email" placeholder="Email" />
-        <input name="phone" placeholder="Telefon" />
-        <textarea name="message" required placeholder="Mesajul tău"></textarea>
+      <form id="contactForm"
+      action="https://formsubmit.co/ionitadelia@yahoo.com"
+      method="POST">
 
-        <!-- honeypot anti-spam (ascuns) -->
-        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+  <!-- setări FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="Mesaj nou — Boundless Collection">
+  <input type="hidden" name="_template" value="table">
+  <!-- după trimitere, reconduce înapoi pe #contact cu un flag în URL -->
+  <input type="hidden" name="_next" value="https://boundlesscollection.ro/#contact?sent=1">
 
-        <button class="btn primary" type="submit">Trimite</button>
-      </form>
+  <!-- câmpuri -->
+  <input name="name"   required placeholder="Nume" />
+  <input name="email"  required type="email" placeholder="Email" />
+  <input name="phone"  placeholder="Telefon" />
+  <textarea name="message" required placeholder="Mesajul tău"></textarea>
+
+  <!-- honeypot anti-spam (FormSubmit folosește _honey) -->
+  <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+  <button id="sendBtn" class="btn primary" type="submit">Trimite</button>
+  <span id="formStatus" aria-live="polite" style="margin-left:.6rem;"></span>
+</form>
+
     </article>
   </section>
 
@@ -296,6 +309,31 @@
   document.addEventListener('click', closeAll);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
 })();
+</script>
+<script>
+  (function () {
+    const form      = document.getElementById('contactForm');
+    const btn       = document.getElementById('sendBtn');
+    const statusEl  = document.getElementById('formStatus');
+
+    if (!form) return;
+
+    // disable pe durata trimiterii (evită dublu-click)
+    form.addEventListener('submit', function () {
+      btn.disabled = true;
+      btn.textContent = 'Se trimite...';
+      statusEl.textContent = '';
+    });
+
+    // dacă am fost redirecționați cu ?sent=1 -> afișează mulțumire
+    const urlHasSent = location.hash.includes('#contact') && location.search.includes('sent=1');
+    if (urlHasSent) {
+      statusEl.textContent = 'Mulțumesc! Mesajul tău a fost trimis.';
+      // curăță parametrii din bară ca să nu tot apară
+      const cleanUrl = location.origin + location.pathname + '#contact';
+      history.replaceState({}, '', cleanUrl);
+    }
+  })();
 </script>
 
 </body>
