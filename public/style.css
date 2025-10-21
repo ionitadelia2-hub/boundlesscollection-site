@@ -86,9 +86,36 @@ section{padding:clamp(1.6rem, 3vw, 2.8rem) 0}
 .section-sub{margin:0 0 1.2rem; color:var(--muted)}
 .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:1.1rem}
 
-.card{grid-column:span 4; padding:1rem; background:#fff; border:1px solid #ffe1ee; border-radius:var(--radius); box-shadow:var(--shadow)}
-.card h3{margin:.3rem 0 .1rem; font-size:1.05rem}
-.card p{margin:.25rem 0; color:var(--muted)}
+.card {
+  border: 1px solid #ffe1ee;
+  border-radius: 20px;
+  padding: 1.3rem;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(234, 168, 197, .15);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(234, 168, 197, .25);
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #a23366;
+  margin-bottom: 0.6rem;
+}
+
+.card p {
+  color: #5a4a52;
+  line-height: 1.7;
+}
+
+.card strong {
+  color: #ad5f86;
+  font-weight: 600;
+}
+
 
 .products .item{grid-column:span 3; display:flex; flex-direction:column; background:#fff; border:1px solid #ffe1ee; border-radius:var(--radius); box-shadow:var(--shadow); transition:transform .18s, box-shadow .18s, border-color .18s}
 .products .item:hover{transform:translateY(-4px); box-shadow:0 14px 30px rgba(234,168,197,.22); border-color:#ffd1e4}
