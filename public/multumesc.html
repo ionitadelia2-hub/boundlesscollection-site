@@ -48,5 +48,49 @@
   Mă bucur că ai ales să faci parte din povestea <strong>Boundless Collection</strong>.</p>
 
   <a href="/" class="btn">Înapoi la pagină</a>
+  <!-- stratul pentru inimioare -->
+<div id="floating-hearts" aria-hidden="true"></div>
+<script>
+(function(){
+  const layer = document.getElementById('floating-hearts');
+  if(!layer) return;
+
+  // creează o inimă cu parametri randomizați
+  function makeHeart() {
+    const h = document.createElement('div');
+    h.className = 'heart variant-' + (1 + Math.floor(Math.random()*3));
+    // poziție orizontală aleatoare + dimensiune
+    const x = Math.random() * 100;                 // vw
+    const s = 0.8 + Math.random() * 1.2;           // scale 0.8–2.0
+    const dur = 6 + Math.random() * 4;             // 6–10s
+
+    h.style.left = x + 'vw';
+    h.style.bottom = '-10vh';
+    h.style.setProperty('--scale', s);
+    h.style.animation = `floatUp ${dur}s cubic-bezier(.2,.6,.3,1) forwards`;
+
+    layer.appendChild(h);
+    // curățare după animare
+    setTimeout(()=>h.remove(), dur*1000 + 200);
+  }
+
+  // pornește o „ploaie” scurtă de inimioare
+  function burst(seconds = 10, perSecond = 6){
+    const interval = 1000 / perSecond;
+    const end = performance.now() + seconds*1000;
+    const timer = setInterval(()=>{
+      if (performance.now() > end) return clearInterval(timer);
+      // 1–3 inimi la fiecare tick pentru naturalețe
+      const n = 1 + Math.floor(Math.random()*3);
+      for(let i=0;i<n;i++) setTimeout(makeHeart, Math.random()*350);
+    }, interval);
+  }
+
+  // rulează la intrarea pe pagină + un mic val după 3s
+  burst(8, 7);
+  setTimeout(()=>burst(4, 8), 3000);
+})();
+</script>
+
 </body>
 </html>

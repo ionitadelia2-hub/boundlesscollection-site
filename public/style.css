@@ -919,3 +919,46 @@ form input[type="submit"]:active {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
+/* --- Floating Hearts -------------------------------------------------- */
+#floating-hearts {
+  position: fixed;
+  inset: 0;                 /* full screen */
+  pointer-events: none;     /* nu blochează click-uri */
+  z-index: 999;             /* peste conținut */
+}
+
+.heart {
+  position: absolute;
+  width: 14px; height: 14px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #ffb7cf;
+  opacity: 0;
+  filter: drop-shadow(0 6px 12px rgba(234, 168, 197, .35));
+  will-change: transform, opacity;
+}
+.heart::before, .heart::after{
+  content:"";
+  position: absolute;
+  width: 14px; height: 14px;
+  background: inherit;
+  border-radius: 50%;
+}
+.heart::before{ left:-7px; top:0; }
+.heart::after { top:-7px; left:0; }
+
+/* animația urcă, se mărește și se estompează */
+@keyframes floatUp {
+  0%   { transform: translate(-50%, 20px) rotate(45deg) scale(var(--scale,1)); opacity: 0; }
+  10%  { opacity: .9; }
+  100% { transform: translate(-50%, -120vh) rotate(45deg) scale(calc(var(--scale,1) * 1.35)); opacity: 0; }
+}
+
+/* mai multe nuanțe subtile roz */
+.heart.variant-1 { background:#ffcfe2; }
+.heart.variant-2 { background:#f8a8c8; }
+.heart.variant-3 { background:#ffd9e8; }
+
+/* dacă utilizatorul preferă mai puțină mișcare, nu animăm deloc */
+@media (prefers-reduced-motion: reduce){
+  #floating-hearts { display:none !important; }
+}
