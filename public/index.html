@@ -10,36 +10,26 @@
   <meta name="description" content="Invitații, plicuri de dar, meniuri, numere de masă și mărturii din ceară de soia parfumate." />
   <meta property="og:title" content="Boundless Collection – Mărturii, invitații & papetărie elegantă">
   <meta property="og:description" content="Invitații, plicuri de dar, meniuri, numere de masă și mărturii parfumate din ceară de soia – realizate cu eleganță și pasiune.">
-  <meta property="og:image" content="https://boundlesscollection.ro/images/preview.jpg">
+  <meta property="og:image" content="https://boundlesscollection.ro/images/preview-square.jpg">
   <meta property="og:image:alt" content="Colaj cu produse Boundless Collection în nuanțe alb–roz">
   <meta property="og:url" content="https://boundlesscollection.ro">
   <meta property="og:type" content="website">
-  <!-- variantă pătrată (WhatsApp) -->
-  <meta property="og:image" content="https://boundlesscollection.ro/images/preview-square.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <!-- Favicon / App Icons -->
-<link rel="icon" type="image/png" sizes="32x32"  href="/images/delia-avatar.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/images/delia-avatar.png">
-<link rel="apple-touch-icon" sizes="180x180"     href="/images/delia-avatar.png">
-<link rel="shortcut icon"                         href="/images/delia-avatar.png">
 
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="images/delia-avatar.png">
+  <!-- Favicon / App Icons (poți păstra avatarul ca favicon; nu apare în pagină) -->
+  <link rel="icon" type="image/png" sizes="32x32"  href="images/delia-avatar.png">
   <link rel="icon" type="image/png" sizes="192x192" href="images/delia-avatar.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/delia-avatar.png">
   <link rel="shortcut icon" href="images/delia-avatar.png">
   <meta name="theme-color" content="#f7cfe1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- HEADER -->
@@ -47,7 +37,8 @@
     <div class="container nav">
       <a class="brand" href="/">
         <div class="brand-logo">
-          <img src="images/delia-avatar.png" alt="Delia – Boundless Collection" />
+          <!-- am scos imaginea din brand dacă o vrei și aici eliminată complet,
+               lasă div-ul gol sau șterge-l -->
         </div>
         <div class="brand-title">Boundless Collection</div>
       </a>
@@ -72,7 +63,6 @@
               <li><a href="seturi.html">Prezentare Seturi</a></li>
             </ul>
           </li>
-
           <li><a href="#servicii">Servicii</a></li>
           <li><a href="#produse">Galerie/Produse</a></li>
           <li><a href="#despre">Despre</a></li>
@@ -84,75 +74,59 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO (fără imaginea avatar) -->
   <section class="hero container">
-    <div class="hero-card">
+    <div class="hero-card" style="margin-inline:auto; text-align:center;">
       <h1>Mărturii din ceară de soia · Invitații & papetărie personalizată</h1>
       <p>Invitații, plicuri de dar, meniuri, numere de masă, stickere oglindă și mărturii parfumate</p>
     </div>
-    <figure class="hero-img">
-      <img src="images/delia-avatar.png" alt="Delia – brand portrait" loading="lazy" decoding="async" />
-    </figure>
   </section>
 
   <!-- SERVICII -->
   <section id="servicii" class="container">
-  <h2 class="section-title">Servicii personalizate</h2>
-  <p class="section-sub">
-    Detalii rafinate, concepte gândite atent și produse create manual pentru evenimente pline de emoție.
-  </p>
+    <h2 class="section-title">Servicii personalizate</h2>
+    <p class="section-sub">
+      Detalii rafinate, concepte gândite atent și produse create manual pentru evenimente pline de emoție.
+    </p>
 
-  <div class="grid">
-    <!-- Card 1 -->
-    <div class="card">
-      <h3>Personalizare produse</h3>
-      <p>
-        Mărturii realizate după dorințele tale — de la opțiuni <strong>low-budget</strong> până la <strong>ediții premium</strong>, cu ambalaje și accesorii elegante.
-        <br><br>
-        Personalizăm și <strong>invitațiile</strong> sau <strong>plicurile de dar</strong> cu model digital gratuit, pentru un set perfect coordonat.
-      </p>
+    <div class="grid">
+      <div class="card">
+        <h3>Personalizare produse</h3>
+        <p>
+          Mărturii realizate după dorințele tale — de la opțiuni <strong>low-budget</strong> până la <strong>ediții premium</strong>, cu ambalaje și accesorii elegante.
+          <br><br>
+          Personalizăm și <strong>invitațiile</strong> sau <strong>plicurile de dar</strong> cu model digital gratuit, pentru un set perfect coordonat.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Seturi tematice complete</h3>
+        <p>
+          Creăm <strong>colecții asortate</strong> — mărturii, invitații, meniuri, plicuri și numere de masă —
+          toate în același stil, pentru o prezentare elegantă și unitară a evenimentului tău.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Design & consultanță vizuală</h3>
+        <p>
+          Oferim <strong>consultanță gratuită</strong> în alegerea paletei de culori, a fonturilor și detaliilor decorative,
+          astfel încât fiecare produs să transmită perfect tema evenimentului tău.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Comenzi corporate & cadouri</h3>
+        <p>
+          Realizăm <strong>lumânări parfumate personalizate</strong> și <strong>pachete elegante de cadouri</strong> pentru companii, colaboratori sau evenimente speciale.
+        </p>
+      </div>
     </div>
-
-    <!-- Card 2 -->
-    <div class="card">
-      <h3>Seturi tematice complete</h3>
-      <p>
-        Creăm <strong>colecții asortate</strong> — mărturii, invitații, meniuri, plicuri și numere de masă -
-        toate în același stil, pentru o prezentare elegantă și unitară a evenimentului tău.
-        <br><br>
-        Fiecare set este realizat manual, în tonuri calde, delicate și elegante.
-      </p>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <h3>Design & consultanță vizuală</h3>
-      <p>
-        Oferim <strong>consultanță gratuită</strong> în alegerea paletei de culori, a fonturilor și a detaliilor decorative,
-        astfel încât fiecare produs să transmită perfect tema evenimentului tău.
-        <br><br>
-        Îți trimitem variante digitale înainte de imprimare, pentru a te asigura că rezultatul final e exact cum îți dorești.
-      </p>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="card">
-      <h3>Comenzi corporate & cadouri</h3>
-      <p>
-        Realizăm <strong>lumânări parfumate personalizate</strong> și <strong>pachete elegante de cadouri</strong> pentru companii, colaboratori sau evenimente speciale.
-        <br><br>
-        Fiecare produs este ambalat cu grijă și adaptat identității vizuale a brandului tău.
-      </p>
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- PRODUSE / GALERIE -->
   <section id="produse" class="container reveal">
     <h2 class="section-title">Galerie & produse</h2>
-    <p class="section-sub"></p>
 
     <div class="toolbar">
       <div class="search" role="search">
@@ -173,26 +147,43 @@
     <div class="grid products" id="grid" aria-live="polite"></div>
   </section>
 
-   <!-- DESPRE DELIA -->
-  <section id="despre" class="container">
-    <h2 class="section-title">Despre Delia</h2>
-    <p class="section-sub">
-      Povestea mea a început din pasiunea pentru detalii, culori și mirosuri fine — acele mici lucruri care pot transforma orice moment într-o amintire prețioasă.
-      <br><br>
-      În timp, această pasiune s-a transformat într-un atelier dedicat creării de 
-      <strong>mărturii parfumate din ceară de soia</strong>, 
-      <strong>invitații elegante</strong> și 
-      <strong>papetărie personalizată</strong>, realizate manual cu grijă și emoție.
-      <br><br>
-      Fiecare colecție poartă o parte din sufletul meu: combinația perfectă între estetică, armonie și simplitate.
-      <br><br>
-      💕 <em>Boundless Collection</em> nu este doar un brand — este o poveste despre 
-      <strong>pasiune, echilibru și bucuria de a aduce zâmbete</strong> prin lucruri create cu sufletul.
-    </p>
-    <div class="about-photo">
-      <img src="images/delia-avatar.png" alt="Delia – fondatoarea Boundless Collection">
-    </div>
-    <a href="#produse" class="btn-rose">Vezi portofoliu</a>
+  <!-- DESPRE & CONTACT -->
+  <section id="despre" class="container about reveal">
+    <article class="panel">
+      <h2 class="section-title">Despre Delia</h2>
+      <p>
+        Povestea mea a început din pasiunea pentru detalii, culori și mirosuri fine — acele mici lucruri care pot transforma orice moment într-o amintire prețioasă.
+        În timp, această pasiune s-a transformat într-un atelier dedicat creării de
+        <strong>mărturii parfumate din ceară de soia</strong>, <strong>invitații elegante</strong> și
+        <strong>papetărie personalizată</strong>, realizate manual cu grijă și emoție.
+        Fiecare colecție poartă o parte din sufletul meu: combinația perfectă între estetică, armonie și simplitate.
+        <br><br>
+        💕 <em>Boundless Collection</em> nu este doar un brand — este o poveste despre
+        <strong>pasiune, echilibru și bucuria de a aduce zâmbete</strong> prin lucruri create cu sufletul.
+      </p>
+    </article>
+
+    <article id="contact" class="panel contact">
+      <h2 class="section-title">Contact</h2>
+      <p>
+        Scrie-mi pe
+        <a href="https://wa.me/40760617724" target="_blank" rel="noopener"><strong>WhatsApp</strong></a>,
+        <a href="https://www.instagram.com/marturiiboundlesscollection_?igsh=YThvYm82ZHBhbnFh&utm_source=qr" target="_blank" rel="noopener">Instagram</a> sau
+        <a href="https://www.facebook.com/share/16TEGEfgGs/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook</a>.
+      </p>
+
+      <form id="contactForm">
+        <input name="name" required placeholder="Nume" />
+        <input name="email" required type="email" placeholder="Email" />
+        <input name="phone" placeholder="Telefon" />
+        <textarea name="message" required placeholder="Mesajul tău"></textarea>
+
+        <!-- honeypot anti-spam (ascuns) -->
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+        <button class="btn primary" type="submit">Trimite</button>
+      </form>
+    </article>
   </section>
 
   <!-- FOOTER -->
@@ -203,7 +194,7 @@
     </div>
   </footer>
 
-  <!-- WhatsApp plutitor -->
+  <!-- Buton WhatsApp plutitor -->
   <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener" title="Scrie pe WhatsApp">
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
@@ -211,19 +202,68 @@
   <!-- JS -->
   <script defer src="/script.js"></script>
   <script>
-    // Scroll lin pentru butoanele interne (#id)
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-      link.addEventListener('click', function(e){
-        const target = document.querySelector(this.getAttribute('href'));
-        if(target){
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
+    // animații simple la apariție
+    (function(){
+      const els = document.querySelectorAll('section, .card, .products .item');
+      els.forEach(el => el.classList.add('reveal'));
+      const io = new IntersectionObserver((entries)=>{
+        entries.forEach(e => {
+          if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold:.12 });
+      els.forEach(el => io.observe(el));
+
+      // anul în footer
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+  <script>
+  (function () {
+    const btnHamb  = document.querySelector('.nav-toggle');
+    const mainMenu = document.querySelector('#mainmenu');
+    const dd       = document.querySelector('.dropdown');
+    const ddBtn    = dd?.querySelector('.dropbtn');
+
+    if (!btnHamb || !mainMenu) return;
+
+    function closeAll() {
+      document.body.classList.remove('menu-open');
+      btnHamb.setAttribute('aria-expanded','false');
+      if (dd) {
+        dd.classList.remove('open');
+        ddBtn?.setAttribute('aria-expanded','false');
+      }
+    }
+
+    // toggle burger
+    btnHamb.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const open = document.body.classList.toggle('menu-open');
+      btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open && dd) {
+        dd.classList.remove('open');
+        ddBtn?.setAttribute('aria-expanded','false');
+      }
     });
 
-    // Actualizează anul din footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // dropdown în panoul mobil
+    if (dd && ddBtn) {
+      ddBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const now = dd.classList.toggle('open');
+        ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
+      });
+      // click în interiorul panoului nu închide meniul
+      mainMenu.addEventListener('click', (e) => e.stopPropagation());
+    }
+
+    // click pe fundal / Esc => închide
+    document.addEventListener('click', closeAll);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+  })();
   </script>
 </body>
 </html>
