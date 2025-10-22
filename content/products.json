@@ -1,6 +1,6 @@
 [
   {
-    "id": "912806f7-0079-4bf5-bb66-a870c7dc786a",
+    "id": "f832af85-eb13-43d1-8341-9c354cf22512",
     "title": "Invitație botez cu sigiliu roz și flori uscate",
     "price": 9,
     "category": "invitatii",
@@ -18,10 +18,10 @@
       "natural",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-912806f7"
+    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-f832af85"
   },
   {
-    "id": "cc7758b9-e294-4c94-8cac-0f449624fd54",
+    "id": "ea2b54a3-5904-456a-98b5-f915a25f965f",
     "title": "Invitație botez cu poză și foaie de calc",
     "price": 10,
     "category": "invitatii",
@@ -40,10 +40,10 @@
       "modern",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-cc7758b9"
+    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-ea2b54a3"
   },
   {
-    "id": "fb0816b2-94b7-40ff-8e7c-3ee2a8ae1ef5",
+    "id": "61fabe8f-44a0-4754-b34d-33637dc5349a",
     "title": "Invitație botez băiețel cu ursuleț și fundiță bleu",
     "price": 9,
     "category": "invitatii",
@@ -62,10 +62,10 @@
       "delicat",
       "copii"
     ],
-    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-fb0816b2"
+    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-61fabe8f"
   },
   {
-    "id": "0d947e65-4d75-4170-9047-8478a3e70c6c",
+    "id": "d823380b-b1f8-4dff-bdb0-5528df09bbbd",
     "title": "Invitație de botez cu fundiță roșie și foaie de calc",
     "price": 9,
     "category": "invitatii",
@@ -84,10 +84,10 @@
       "clasic",
       "personalizat"
     ],
-    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-0d947e65"
+    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-d823380b"
   },
   {
-    "id": "bc17d170-161a-4bc4-a4e1-b1a62dafba58",
+    "id": "5abbb098-9ef3-4c63-9b3c-753107f6d924",
     "title": "Număr de masă Acrilic",
     "price": 10,
     "category": "Numere de masă",
@@ -99,10 +99,10 @@
       "numere",
       "acrilic"
     ],
-    "slug": "numar-de-masa-acrilic-bc17d170"
+    "slug": "numar-de-masa-acrilic-5abbb098"
   },
   {
-    "id": "1523989b-fdb1-4150-9ab9-3f3346ed0989",
+    "id": "2ead9509-8a89-44ed-89b4-6b0718cd98e3",
     "title": "Mărturie soia Inimioară",
     "price": 12,
     "category": "Mărturii soia",
@@ -115,6 +115,6 @@
       "marturie",
       "alb"
     ],
-    "slug": "marturie-soia-inimioara-1523989b"
+    "slug": "marturie-soia-inimioara-2ead9509"
   }
 ]
