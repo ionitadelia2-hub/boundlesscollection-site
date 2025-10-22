@@ -1,6 +1,8 @@
 id,title,price,category,desc,images,tags
-inv-001,Invitație Florală,9.5,Invitații,What is Lorem Ipsum?Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,"images/invitatii/florala-1.jpg|images/invitatii/florala-2.jpg","floral|roz"
-pl-001,Plic de dar Albastru,7.5,Plicuri,Satin albastru,"images/plicuri/albastru-1.jpg|images/plicuri/albastru-2.jpg","plic|albastru"
-men-001,Meniu A5,6.5,Meniuri,Carton perlat,images/meniuri/a5-rama-1.jpg,"meniuri|perlat"
-num-001,Număr de masă Acrilic,10,Numere de masă,Acrilic transparent,images/numere/numar-acrilic-1.jpg,"numere|acrilic"
-ms-001,Mărturie soia Inimioară,12,Mărturii soia,Soia parfumată,"images/marturii/inimioara-1.jpg|images/marturii/inimioara-2.jpg","marturie|alb"
+
+,Invitație botez cu sigiliu roz și flori uscate,9.00,invitatii,"Invitație elegantă pe carton ivory, decorată cu sigiliu roz și flori uscate, legată manual cu sfoară aurie.",/images/invitatii/invitatie-botez-sigiliu-roz-flori-uscate.jpg,invitatii|botez|sigiliu|roz pudrat|flori uscate|auriu|natural|elegant
+,Invitație botez cu poză și foaie de calc,10.00,invitatii,"Invitație de botez elegantă pe carton foto personalizat, acoperită cu foaie de calc transparentă imprimată și decorată cu fundiță roz din organza.",/images/invitatii/invitatie-botez-foto-foaie-de-calc-roz.jpg,invitatii|botez|foto|calc|transparent|fundita roz|personalizat|modern|elegant
+,Invitație botez băiețel cu ursuleț și fundiță bleu,9.00,invitatii,"Invitație delicată de botez pentru băieței, realizată pe carton de calitate, cu ursuleț ilustrat și fundiță bleu aplicată manual.",/images/invitatii/invitatie-botez-ursulet-fundita-bleu.jpg,invitatii|botez|baiat|ursulet|fundita bleu|fundita albastra|pastel|delicat|copii
+,Invitație de botez cu fundiță roșie și foaie de calc,9.00,invitatii,"Invitație de botez elegantă, realizată pe carton premium și acoperită cu foaie de calc semi-transparentă. Decorată manual cu fundiță roșie din organza, potrivită pentru evenimente rafinate și tematice.",/images/invitatii/invitatie-botez-fundita-rosie-foaie-calc.jpg,invitatii|botez|fundita rosie|organza|calc|elegant|handmade|clasic|personalizat
+,Număr de masă Acrilic,10,Numere de masă,Acrilic transparent,images/numere/numar-acrilic-1.jpg,"numere|acrilic"
+,Mărturie soia Inimioară,12,Mărturii soia,Soia parfumată,"images/marturii/inimioara-1.jpg|images/marturii/inimioara-2.jpg","marturie|alb"
