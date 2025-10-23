@@ -1,6 +1,6 @@
 [
   {
-    "id": "a3044d38-1ff9-44bc-b8c2-bee9a4c9f90e",
+    "id": "6111dfe9-53da-4828-a9bd-cd30a33e282f",
     "title": "Invitație botez cu sigiliu roz și flori uscate",
     "price": 9,
     "category": "invitatii",
@@ -18,10 +18,10 @@
       "natural",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-a3044d38"
+    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-6111dfe9"
   },
   {
-    "id": "4d6daaf6-7c6d-4897-8f94-58612a047687",
+    "id": "031079ac-79f2-4157-85e1-aded613cc876",
     "title": "Invitație botez cu poză și foaie de calc",
     "price": 10,
     "category": "invitatii",
@@ -40,10 +40,10 @@
       "modern",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-4d6daaf6"
+    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-031079ac"
   },
   {
-    "id": "45c78389-bd4c-4455-abac-660a779be8ed",
+    "id": "e5af7785-9c36-4509-81fa-2463bfbf8bf2",
     "title": "Invitație botez băiețel cu ursuleț și fundiță bleu",
     "price": 9,
     "category": "invitatii",
@@ -62,10 +62,10 @@
       "delicat",
       "copii"
     ],
-    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-45c78389"
+    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-e5af7785"
   },
   {
-    "id": "ad191f16-3e35-4956-9969-addd55246631",
+    "id": "cd7782be-57c5-4ca4-86b7-f6020bebb419",
     "title": "Invitație de botez cu fundiță roșie și foaie de calc",
     "price": 9,
     "category": "invitatii",
@@ -84,37 +84,73 @@
       "clasic",
       "personalizat"
     ],
-    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-ad191f16"
+    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-cd7782be"
   },
   {
-    "id": "33d66ed0-e2db-40db-8fa3-0825ad344b48",
-    "title": "Număr de masă Acrilic",
-    "price": 10,
-    "category": "Numere de masă",
-    "desc": "Acrilic transparent",
+    "id": "7f02b7c8-9f30-43de-a3a6-84beac936c46",
+    "title": "Invitație de botez tip cărticică cu fundiță albastră",
+    "price": 9,
+    "category": "invitatii",
+    "desc": "Invitație de botez în format tip cărticică, realizată din carton premium, personalizată cu fotografia bebelușului și data evenimentului. Legată manual cu fundiță albastră din organza, perfectă pentru o temă elegantă și delicată.",
     "images": [
-      "/images/numere/numar-acrilic-1.jpg"
+      "/images/invitatii/invitatie-botez-tip-carticica-fundita-albastra.jpg"
     ],
     "tags": [
-      "numere",
-      "acrilic"
+      "invitatii",
+      "botez",
+      "fundita albastra",
+      "carticica",
+      "personalizat",
+      "fotografie",
+      "elegant",
+      "baietel",
+      "organza"
     ],
-    "slug": "numar-de-masa-acrilic-33d66ed0"
+    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-7f02b7c8"
   },
   {
-    "id": "e85d5fef-b647-4b67-9eca-d957ffadb378",
-    "title": "Mărturie soia Inimioară",
-    "price": 12,
-    "category": "Mărturii soia",
-    "desc": "Soia parfumată",
+    "id": "45eff671-f80a-4598-90a7-b3ebfbcc79dc",
+    "title": "Invitație de botez cu ursuleț și fundiță ivoire",
+    "price": 9,
+    "category": "invitatii",
+    "desc": "Invitație de botez elegantă, imprimată pe carton premium, cu ilustrație de ursuleț și nori pufoși în nuanțe pastel. Decorată manual cu fundiță ivoire din organza, oferind un aer delicat și rafinat, perfect pentru evenimentele băiețeilor.",
     "images": [
-      "/images/marturii/inimioara-1.jpg",
-      "/images/marturii/inimioara-2.jpg"
+      "/images/invitatii/invitatie-botez-ursulet-fundita-ivoire.jpg"
     ],
     "tags": [
-      "marturie",
-      "alb"
+      "invitatii",
+      "botez",
+      "ursulet",
+      "fundita ivoire",
+      "organza",
+      "baietel",
+      "elegant",
+      "nori",
+      "pastel"
     ],
-    "slug": "marturie-soia-inimioara-e85d5fef"
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-45eff671"
+  },
+  {
+    "id": "39d8446d-8658-46f2-8bee-ff346061b618",
+    "title": "Invitație de botez cu ursuleț și fundiță roz",
+    "price": 9,
+    "category": "invitatii",
+    "desc": "Invitație de botez realizată pe carton premium, cu ilustrație adorabilă de ursuleț și baloane pastelate. Decorată cu fundiță roz din satin, această invitație aduce o notă delicată și rafinată evenimentului micuței tale.",
+    "images": [
+      "/images/invitatii/invitatie-botez-ursulet-fundita-roz.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "ursulet",
+      "fundita roz",
+      "fetite",
+      "elegant",
+      "pastel",
+      "satin",
+      "balon",
+      "roz pudrat"
+    ],
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-39d8446d"
   }
 ]
