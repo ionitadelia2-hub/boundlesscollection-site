@@ -9,6 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <!-- Favicon / App Icons -->
+<link rel="icon" type="image/png" sizes="32x32"  href="/images/delia-avatar.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/delia-avatar.png">
+<link rel="apple-touch-icon" sizes="180x180"     href="/images/delia-avatar.png">
+<link rel="shortcut icon"                         href="/images/delia-avatar.png">
+
   <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -25,6 +31,7 @@
 
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
 
+      <!-- MENIU cu dropdown „Produse” -->
       <nav class="site-nav" aria-label="Meniu principal">
         <ul id="mainmenu">
           <li class="has-sub">
@@ -97,6 +104,24 @@
         }
       });
     })();
+
+    // Dropdown „Produse” – click/hover/escape
+    (function () {
+      const item = document.querySelector('.has-sub');
+      const btn  = document.getElementById('productsToggle');
+      if (!item || !btn) return;
+
+      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+
+      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
+      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
+    })();
+
 
     // ⚠️ Categoria trebuie să fie EXACT cea din CSV/JSON
     window.PAGE_CATEGORY = 'Stickere oglindă';

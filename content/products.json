@@ -1,6 +1,6 @@
 [
   {
-    "id": "145a929b-f115-44c3-96dc-eb95579851ca",
+    "id": "60626133-acd9-4bb6-a907-f80ba7eb82a3",
     "title": "Invitație botez cu sigiliu roz și flori uscate",
     "price": 9,
     "category": "invitatii",
@@ -18,10 +18,10 @@
       "natural",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-145a929b"
+    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-60626133"
   },
   {
-    "id": "27c5d939-1d57-4bce-a1d4-a058d0a33969",
+    "id": "3ec09242-457e-4a2f-be2e-3cddbcf3eb01",
     "title": "Invitație botez cu poză și foaie de calc",
     "price": 10,
     "category": "invitatii",
@@ -40,10 +40,10 @@
       "modern",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-27c5d939"
+    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-3ec09242"
   },
   {
-    "id": "bd31885b-253b-496d-a728-35cadfbbc334",
+    "id": "9e1e7b4d-b3d3-4170-bb66-8569de6e0dd8",
     "title": "Invitație botez băiețel cu ursuleț și fundiță bleu",
     "price": 9,
     "category": "invitatii",
@@ -62,10 +62,10 @@
       "delicat",
       "copii"
     ],
-    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-bd31885b"
+    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-9e1e7b4d"
   },
   {
-    "id": "750a2b75-4f1c-43b8-9704-bfdf9a501c6f",
+    "id": "9cfa0253-b495-4106-aacc-fc262bb533da",
     "title": "Invitație de botez cu fundiță roșie și foaie de calc",
     "price": 9,
     "category": "invitatii",
@@ -84,10 +84,10 @@
       "clasic",
       "personalizat"
     ],
-    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-750a2b75"
+    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-9cfa0253"
   },
   {
-    "id": "8a9fca7f-22a0-4bc9-927a-9854fce8594e",
+    "id": "6b31b9cc-c4fb-494a-9ca3-58f7c3800338",
     "title": "Invitație de botez tip cărticică cu fundiță albastră",
     "price": 9,
     "category": "invitatii",
@@ -106,10 +106,10 @@
       "baietel",
       "organza"
     ],
-    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-8a9fca7f"
+    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-6b31b9cc"
   },
   {
-    "id": "cb86eeaf-ecf4-4fd1-b3d0-9579d2a90f4c",
+    "id": "479b8071-4b74-4570-8fa1-375212e05a0e",
     "title": "Invitație de botez cu ursuleț și fundiță ivoire",
     "price": 9,
     "category": "invitatii",
@@ -128,10 +128,10 @@
       "nori",
       "pastel"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-cb86eeaf"
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-479b8071"
   },
   {
-    "id": "aee95f72-e060-42a7-8448-46fe42fe7658",
+    "id": "ca35d311-db20-46b7-bcf1-15df6e37f97f",
     "title": "Invitație de botez cu ursuleț și fundiță roz",
     "price": 9,
     "category": "invitatii",
@@ -151,10 +151,10 @@
       "balon",
       "roz pudrat"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-aee95f72"
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-ca35d311"
   },
   {
-    "id": "62d89049-f7b8-4931-b773-1c542d47e5af",
+    "id": "08428de0-f2a1-4921-88c8-4da2acf2519d",
     "title": "Invitație pergament cu fundiță verde smarald",
     "price": 8.5,
     "category": "invitatii",
@@ -174,10 +174,10 @@
       "rustic",
       "natural"
     ],
-    "slug": "invitatie-pergament-cu-fundita-verde-smarald-62d89049"
+    "slug": "invitatie-pergament-cu-fundita-verde-smarald-08428de0"
   },
   {
-    "id": "07d1f387-7e52-4dc9-b9f5-b60326835735",
+    "id": "708bfbd9-74d7-4150-9238-eec120e7f1dd",
     "title": "Invitație de botez Safari cu plic verde",
     "price": 13,
     "category": "invitatii",
@@ -197,10 +197,10 @@
       "natur",
       "tematica"
     ],
-    "slug": "invitatie-de-botez-safari-cu-plic-verde-07d1f387"
+    "slug": "invitatie-de-botez-safari-cu-plic-verde-708bfbd9"
   },
   {
-    "id": "75e676ae-8cab-4c33-a565-e31d77fa93d8",
+    "id": "7fd80e60-7a81-4d8b-8c88-834d164cf525",
     "title": "Invitație de nuntă tip Ziar",
     "price": 9,
     "category": "invitatii",
@@ -220,10 +220,10 @@
       "carton mat",
       "sfoara"
     ],
-    "slug": "invitatie-de-nunta-tip-ziar-75e676ae"
+    "slug": "invitatie-de-nunta-tip-ziar-7fd80e60"
   },
   {
-    "id": "0c9d5cfe-bbb5-4471-b45f-cd01af8589de",
+    "id": "bc166b48-f700-4139-af94-670993a56c4b",
     "title": "Aranjament floral din lumânări parfumate pastel",
     "price": 95,
     "category": "aranjamente-florale",
@@ -244,10 +244,10 @@
       "romantic",
       "handmade"
     ],
-    "slug": "aranjament-floral-din-lumanari-parfumate-pastel-0c9d5cfe"
+    "slug": "aranjament-floral-din-lumanari-parfumate-pastel-bc166b48"
   },
   {
-    "id": "2a0eb523-41c3-4ee0-bfd6-51a029902baf",
+    "id": "246708b5-93fe-46f1-8e99-44ee5e58dd9f",
     "title": "Aranjament floral cu inimă și lumânări parfumate",
     "price": 95,
     "category": "aranjamente-florale",
@@ -267,10 +267,10 @@
       "handmade",
       "elegant"
     ],
-    "slug": "aranjament-floral-cu-inima-si-lumanari-parfumate-2a0eb523"
+    "slug": "aranjament-floral-cu-inima-si-lumanari-parfumate-246708b5"
   },
   {
-    "id": "e5390742-79c9-43ec-8e9a-a14150ced311",
+    "id": "ed50fdd5-edb2-452e-a235-4d8a53d22778",
     "title": "Aranjament floral cu lumânări mov și albe",
     "price": 145,
     "category": "aranjamente-florale",
@@ -291,10 +291,10 @@
       "elegant",
       "handmade"
     ],
-    "slug": "aranjament-floral-cu-lumanari-mov-si-albe-e5390742"
+    "slug": "aranjament-floral-cu-lumanari-mov-si-albe-ed50fdd5"
   },
   {
-    "id": "cd194bae-2afa-4c7a-9076-becca8d11a8c",
+    "id": "0d7fd282-d900-494b-862f-1e5ffdb797bf",
     "title": "Aranjament floral roz cu iepuraș și lumânări parfumate",
     "price": 165,
     "category": "aranjamente-florale",
@@ -318,10 +318,10 @@
       "premium",
       "decor"
     ],
-    "slug": "aranjament-floral-roz-cu-iepuras-si-lumanari-parfumate-cd194bae"
+    "slug": "aranjament-floral-roz-cu-iepuras-si-lumanari-parfumate-0d7fd282"
   },
   {
-    "id": "ae398e0c-9cf9-4798-b8aa-15876a37fac0",
+    "id": "051b247e-e85f-4260-8d55-3f3c4115fc68",
     "title": "Aranjament floral bleu din lumânări parfumate în coș împletit",
     "price": 89,
     "category": "aranjamente-florale",
@@ -349,6 +349,6 @@
       "handmade",
       "natural"
     ],
-    "slug": "aranjament-floral-bleu-din-lumanari-parfumate-in-cos-impletit-ae398e0c"
+    "slug": "aranjament-floral-bleu-din-lumanari-parfumate-in-cos-impletit-051b247e"
   }
 ]
