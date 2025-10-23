@@ -1,6 +1,6 @@
 [
   {
-    "id": "98b4a604-5d60-4f04-9f2e-d7bfed9c0df4",
+    "id": "925cb638-7c33-48a9-ae62-a009e7459d51",
     "title": "Invitație botez cu sigiliu roz și flori uscate",
     "price": 9,
     "category": "invitatii",
@@ -18,10 +18,10 @@
       "natural",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-98b4a604"
+    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-925cb638"
   },
   {
-    "id": "ad3128cb-0ff3-4508-938f-6a427dadc8cd",
+    "id": "92154205-8332-4d9d-9183-4516221c983b",
     "title": "Invitație botez cu poză și foaie de calc",
     "price": 10,
     "category": "invitatii",
@@ -40,10 +40,10 @@
       "modern",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-ad3128cb"
+    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-92154205"
   },
   {
-    "id": "c73a0e9e-4518-41c6-a659-8a8188df4998",
+    "id": "6fa4ec1b-2416-4291-a401-787c8ee0e445",
     "title": "Invitație botez băiețel cu ursuleț și fundiță bleu",
     "price": 9,
     "category": "invitatii",
@@ -62,10 +62,10 @@
       "delicat",
       "copii"
     ],
-    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-c73a0e9e"
+    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-6fa4ec1b"
   },
   {
-    "id": "6108bdc6-1a52-4fb9-95d2-9c73a1530c05",
+    "id": "0fa333a5-e92b-49e2-99f0-347f42454e8b",
     "title": "Invitație de botez cu fundiță roșie și foaie de calc",
     "price": 9,
     "category": "invitatii",
@@ -84,10 +84,10 @@
       "clasic",
       "personalizat"
     ],
-    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-6108bdc6"
+    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-0fa333a5"
   },
   {
-    "id": "d19ad72e-a4b0-4dd6-a88d-9105bcb8f582",
+    "id": "0caf8fd1-8705-4467-8847-138604a0dcf3",
     "title": "Invitație de botez tip cărticică cu fundiță albastră",
     "price": 9,
     "category": "invitatii",
@@ -106,10 +106,10 @@
       "baietel",
       "organza"
     ],
-    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-d19ad72e"
+    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-0caf8fd1"
   },
   {
-    "id": "b293baae-a11c-426b-980e-d104ee3dd540",
+    "id": "2f8167a0-8daa-4403-9c20-0d98cb423dee",
     "title": "Invitație de botez cu ursuleț și fundiță ivoire",
     "price": 9,
     "category": "invitatii",
@@ -128,10 +128,10 @@
       "nori",
       "pastel"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-b293baae"
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-2f8167a0"
   },
   {
-    "id": "7b3c0a76-6fb2-4339-9f8b-3dbe1766682e",
+    "id": "1e75e4a6-4837-4bbf-b6e8-fc1bc158c60b",
     "title": "Invitație de botez cu ursuleț și fundiță roz",
     "price": 9,
     "category": "invitatii",
@@ -151,6 +151,99 @@
       "balon",
       "roz pudrat"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-7b3c0a76"
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-1e75e4a6"
+  },
+  {
+    "id": "695d4b9e-b308-4c81-9ea5-42a6a758a308",
+    "title": "Invitație pergament cu fundiță verde smarald",
+    "price": 8.5,
+    "category": "invitatii",
+    "desc": "Invitație de nuntă tip pergament, legată manual cu fundiță verde smarald din organza, potrivită pentru evenimente cu tematică naturală sau rustică.",
+    "images": [
+      "/images/invitatii/invitatie-pergament-verde-smarald.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "verde",
+      "smarald",
+      "fundita",
+      "pergament",
+      "elegant",
+      "minimalist",
+      "rustic",
+      "natural"
+    ],
+    "slug": "invitatie-pergament-cu-fundita-verde-smarald-695d4b9e"
+  },
+  {
+    "id": "fac02ec2-fdea-486c-9443-3bbed24d636d",
+    "title": "Invitație de botez Safari cu plic verde",
+    "price": 13,
+    "category": "invitatii",
+    "desc": "Invitație de botez cu tematică Safari, realizată pe carton premium mat, decorată cu ilustrații adorabile de animale din junglă. Include plic verde elegant, decupat manual cu frunză tropicală. Perfectă pentru un botez plin de culoare și energie!",
+    "images": [
+      "/images/invitatii/invitatie-botez-safari-plic-verde.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "safari",
+      "jungla",
+      "animale",
+      "verde",
+      "plic",
+      "baietel",
+      "natur",
+      "tematica"
+    ],
+    "slug": "invitatie-de-botez-safari-cu-plic-verde-fac02ec2"
+  },
+  {
+    "id": "d359c922-3a12-437f-a367-c8ad7e113e06",
+    "title": "Invitație de nuntă tip Ziar",
+    "price": 9,
+    "category": "invitatii",
+    "desc": "Invitație de nuntă inedită, realizată sub forma unui ziar elegant care spune povestea mirilor. Tipărită pe carton mat de calitate, cu detalii grafice inspirate din revistele retro, această invitație oferă o notă unică și memorabilă evenimentului vostru. Legată manual cu sfoară naturală.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-jurnal.png"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "ziar",
+      "retro",
+      "newspaper",
+      "creativa",
+      "personalizata",
+      "originala",
+      "carton mat",
+      "sfoara"
+    ],
+    "slug": "invitatie-de-nunta-tip-ziar-d359c922"
+  },
+  {
+    "id": "c27ab592-068c-49b4-887c-40a4824a9d17",
+    "title": "Aranjament floral din lumânări parfumate pastel",
+    "price": 95,
+    "category": "aranjamente-florale",
+    "desc": "Aranjament floral realizat manual din lumânări parfumate din ceară naturală de soia. Combinația delicată de nuanțe pastel — roz pudrat, ivoire și piersică — aduce un aer elegant și romantic în orice decor. Ideal ca piesă de centru, cadou rafinat sau decor pentru evenimente speciale.",
+    "images": [
+      "/images/aranjamente/aranjament-floral-lumanari-pastel.jpg"
+    ],
+    "tags": [
+      "aranjamente",
+      "florale",
+      "lumânări parfumate",
+      "decor",
+      "cadou",
+      "soia",
+      "natural",
+      "elegant",
+      "pastel",
+      "romantic",
+      "handmade"
+    ],
+    "slug": "aranjament-floral-din-lumanari-parfumate-pastel-c27ab592"
   }
 ]
