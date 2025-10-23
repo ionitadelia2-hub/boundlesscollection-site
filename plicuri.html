@@ -3,45 +3,131 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Plicuri de dar | Boundless Collection</title>
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Plicuri de dar • Boundless Collection</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://boundlesscollection.ro/plicuri.html" />
+
+  <!-- SEO -->
+  <meta name="description" content="Plicuri de dar elegante, asortate temei evenimentului. Sigilii din ceară, panglici și personalizare pentru un set perfect cu invitațiile și meniurile.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:url" content="https://boundlesscollection.ro/plicuri.html">
+  <meta property="og:title" content="Plicuri de dar • Boundless Collection">
+  <meta property="og:description" content="Plicuri de dar premium, personalizate cu sigilii din ceară și panglici elegante.">
+  <meta property="og:image" content="https://boundlesscollection.ro/images/delia-avatar-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Plicuri de dar • Boundless Collection">
+  <meta name="twitter:description" content="Plicuri de dar elegante, asortate cu invitațiile și restul papetăriei.">
+  <meta name="twitter:image" content="https://boundlesscollection.ro/images/delia-avatar-1200x630.jpg">
 
   <!-- Fonturi -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon / App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32"  href="/images/delia-avatar.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/delia-avatar.png">
+  <link rel="apple-touch-icon" sizes="180x180"     href="/images/delia-avatar.png">
+  <link rel="shortcut icon"                         href="/images/delia-avatar.png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Boundless Collection",
+    "url": "https://boundlesscollection.ro/",
+    "logo": "https://boundlesscollection.ro/images/delia-avatar.png",
+    "sameAs": [
+      "https://www.instagram.com/marturiiboundlesscollection_",
+      "https://www.facebook.com/share/16TEGEfgGs/"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Boundless Collection",
+    "url":"https://boundlesscollection.ro/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://boundlesscollection.ro/?q={search_term_string}#produse",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      { "@type":"ListItem", "position":1, "name":"Acasă", "item":"https://boundlesscollection.ro/" },
+      { "@type":"ListItem", "position":2, "name":"Plicuri de dar", "item":"https://boundlesscollection.ro/plicuri.html" }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: CollectionPage (categorie) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Plicuri de dar",
+    "url":"https://boundlesscollection.ro/plicuri.html",
+    "about":{
+      "@type":"Thing",
+      "name":"Plicuri de dar personalizate cu sigilii din ceară și panglici"
+    },
+    "isPartOf":"https://boundlesscollection.ro/"
+  }
+  </script>
 </head>
 <body>
   <!-- HEADER -->
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="index.html">
-        <div class="brand-logo"><img src="images/delia-avatar.png" alt="Delia – Boundless Collection"></div>
+      <a class="brand" href="/" aria-label="Boundless Collection - Acasă">
+        <div class="brand-logo"><img src="/images/delia-avatar.png" alt="Delia – Boundless Collection" width="64" height="64" loading="eager" decoding="async"></div>
         <div class="brand-title">Boundless Collection</div>
       </a>
 
-      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
 
       <nav class="site-nav" aria-label="Meniu principal">
-        <ul id="mainmenu">
-          <li class="has-sub">
+        <ul id="mainmenu" role="menubar">
+          <li class="has-sub" role="none">
             <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
-            <ul class="sub">
-              <li><a href="/marturii.html">Prezentare Mărturii</a></li>
-              <li><a href="/invitatii.html">Prezentare Invitații</a></li>
-              <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-              <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
-              <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
-              <li><a href="/stickere.html">Prezentare Stickere oglindă</a></li>
-              <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-              <li><a href="/seturi.html">Prezentare Seturi</a></li>
+            <ul class="sub" role="menu" aria-label="Submeniu Produse">
+              <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
+              <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
+              <li role="none"><a role="menuitem" href="/plicuri.html" aria-current="page">Prezentare Plicuri de dar</a></li>
+              <li role="none"><a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a></li>
+              <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
+              <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
+              <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
+              <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
             </ul>
           </li>
 
-          <li><a href="/index.html">Acasă</a></li>
-          <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="/">Acasă</a></li>
+          <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </nav>
@@ -51,26 +137,26 @@
   <!-- CONȚINUT -->
   <section class="container" id="produse">
     <h1 class="section-title">Prezentare Plicuri de dar</h1>
-    <p class="section-sub">Plicuri asortate temei, cu sigilii din ceară și panglici elegante.</p>
+    <p class="section-sub">Plicuri asortate temei, cu sigilii din ceară, panglici elegante și personalizare coordonată cu invitațiile și meniurile.</p>
 
     <!-- grilă pentru produse (populată din products.json de script.js) -->
-    <div id="grid" class="grid products"></div>
+    <div id="grid" class="grid products" aria-live="polite"></div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-      <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
+      <small>© <span id="year"></span> Boundless Collection</small>
       <small>Realizat cu pasiune ✨</small>
     </div>
   </footer>
 
   <!-- WhatsApp plutitor -->
-  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener">
+  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener" title="Scrie pe WhatsApp">
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- JS: anul + meniu mobil + categoria + încărcarea produselor -->
+  <!-- JS: anul + meniu mobil + dropdown + categoria + produse -->
   <script>
     // anul din footer
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -80,47 +166,49 @@
       const btn  = document.querySelector('.nav-toggle');
       const menu = document.getElementById('mainmenu');
       if(!btn || !menu) return;
+
+      function closeAll(){
+        document.body.classList.remove('menu-open');
+        btn.setAttribute('aria-expanded','false');
+        document.querySelector('.has-sub')?.classList.remove('open');
+        document.getElementById('productsToggle')?.setAttribute('aria-expanded','false');
+      }
+
       btn.addEventListener('click', (e)=>{
         e.preventDefault();
         const open = document.body.classList.toggle('menu-open');
         btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       });
+
       document.addEventListener('click', (e)=>{
-        if (document.body.classList.contains('menu-open')) {
-          const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
-          if (!inside) {
-            document.body.classList.remove('menu-open');
-            btn.setAttribute('aria-expanded','false');
-          }
-        }
+        if (!document.body.classList.contains('menu-open')) return;
+        const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
+        if (!inside) closeAll();
       });
     })();
 
-    // ⚠️ Pune aici EXACT numele categoriei din CSV
-    // Exemplu: dacă în products.csv, coloana "category" are "Plicuri de dar"
-    // atunci lasă exact "Plicuri de dar".
-    window.PAGE_CATEGORY = 'Plicuri';
+    // Dropdown "Produse" – click + hover + Esc
+    (function () {
+      const item = document.querySelector('.has-sub');
+      const btn  = document.getElementById('productsToggle');
+      if (!item || !btn) return;
+
+      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+
+      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+      // hover pe desktop
+      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
+      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
+    })();
+
+    // ⚠️ Slug exact ca în butonul de pe homepage / CSV
+    window.PAGE_CATEGORY = 'plicuri';
   </script>
-  <script>
-  // Dropdown "Produse" – deschide/închide la click
-  (function () {
-    const item = document.querySelector('.has-sub');          // <li class="has-sub">
-    const btn  = document.getElementById('productsToggle');   // linkul "Produse"
-    if (!item || !btn) return;
-
-    function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-    function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-    function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
-
-    btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
-    document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
-
-    // (opțional) hover pe desktop
-    item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
-    item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
-  })();
-</script>
 
   <!-- script-ul global care citește /content/products.json și populează #grid -->
   <script defer src="/script.js"></script>
