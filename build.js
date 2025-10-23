@@ -123,6 +123,25 @@ function pageTemplate(prod) {
   ${faviconPng ? `<link rel="icon" type="image/png" href="${faviconPng}">` : ""}
   ${faviconIco ? `<link rel="icon" type="image/x-icon" href="${faviconIco}">` : ""}
 
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "${esc(title)}",
+  "description": "${desc}",
+  "image": ${JSON.stringify((prod.images || []).map(toAbsForMeta))},
+  "brand": { "@type": "Brand", "name": "Boundless Collection" },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "RON",
+    "price": "${Number(prod.price || 0).toFixed(2)}",
+    "availability": "https://schema.org/InStock",
+    "url": "${url}"
+  }
+}
+</script>
+
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
