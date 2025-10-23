@@ -1,6 +1,6 @@
 [
   {
-    "id": "925cb638-7c33-48a9-ae62-a009e7459d51",
+    "id": "e67c4260-bd09-4f35-8ca9-4d90f05ac9fd",
     "title": "Invitație botez cu sigiliu roz și flori uscate",
     "price": 9,
     "category": "invitatii",
@@ -18,10 +18,10 @@
       "natural",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-925cb638"
+    "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-e67c4260"
   },
   {
-    "id": "92154205-8332-4d9d-9183-4516221c983b",
+    "id": "59d7f9a4-eba5-478d-ab09-d813b9e1b188",
     "title": "Invitație botez cu poză și foaie de calc",
     "price": 10,
     "category": "invitatii",
@@ -40,10 +40,10 @@
       "modern",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-92154205"
+    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-59d7f9a4"
   },
   {
-    "id": "6fa4ec1b-2416-4291-a401-787c8ee0e445",
+    "id": "9475a585-9bfb-4299-ab5f-3d1546ef28a9",
     "title": "Invitație botez băiețel cu ursuleț și fundiță bleu",
     "price": 9,
     "category": "invitatii",
@@ -62,10 +62,10 @@
       "delicat",
       "copii"
     ],
-    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-6fa4ec1b"
+    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-9475a585"
   },
   {
-    "id": "0fa333a5-e92b-49e2-99f0-347f42454e8b",
+    "id": "1369cb64-a4ec-43bc-9bd8-14e16eaaa7b7",
     "title": "Invitație de botez cu fundiță roșie și foaie de calc",
     "price": 9,
     "category": "invitatii",
@@ -84,10 +84,10 @@
       "clasic",
       "personalizat"
     ],
-    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-0fa333a5"
+    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-1369cb64"
   },
   {
-    "id": "0caf8fd1-8705-4467-8847-138604a0dcf3",
+    "id": "7cc082df-078a-4330-8b41-7027409f0d9b",
     "title": "Invitație de botez tip cărticică cu fundiță albastră",
     "price": 9,
     "category": "invitatii",
@@ -106,10 +106,10 @@
       "baietel",
       "organza"
     ],
-    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-0caf8fd1"
+    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-7cc082df"
   },
   {
-    "id": "2f8167a0-8daa-4403-9c20-0d98cb423dee",
+    "id": "14020e5f-7b06-41d3-ab09-45d18b8ad14e",
     "title": "Invitație de botez cu ursuleț și fundiță ivoire",
     "price": 9,
     "category": "invitatii",
@@ -128,10 +128,10 @@
       "nori",
       "pastel"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-2f8167a0"
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-14020e5f"
   },
   {
-    "id": "1e75e4a6-4837-4bbf-b6e8-fc1bc158c60b",
+    "id": "8f860b57-ba3f-4a64-87f9-2529c4857735",
     "title": "Invitație de botez cu ursuleț și fundiță roz",
     "price": 9,
     "category": "invitatii",
@@ -151,10 +151,10 @@
       "balon",
       "roz pudrat"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-1e75e4a6"
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-8f860b57"
   },
   {
-    "id": "695d4b9e-b308-4c81-9ea5-42a6a758a308",
+    "id": "eba5ea7a-3562-4d9e-9d0a-9ae56fc9003e",
     "title": "Invitație pergament cu fundiță verde smarald",
     "price": 8.5,
     "category": "invitatii",
@@ -174,10 +174,10 @@
       "rustic",
       "natural"
     ],
-    "slug": "invitatie-pergament-cu-fundita-verde-smarald-695d4b9e"
+    "slug": "invitatie-pergament-cu-fundita-verde-smarald-eba5ea7a"
   },
   {
-    "id": "fac02ec2-fdea-486c-9443-3bbed24d636d",
+    "id": "e7e82ea3-420a-4459-8739-cc03ac967a93",
     "title": "Invitație de botez Safari cu plic verde",
     "price": 13,
     "category": "invitatii",
@@ -197,16 +197,16 @@
       "natur",
       "tematica"
     ],
-    "slug": "invitatie-de-botez-safari-cu-plic-verde-fac02ec2"
+    "slug": "invitatie-de-botez-safari-cu-plic-verde-e7e82ea3"
   },
   {
-    "id": "d359c922-3a12-437f-a367-c8ad7e113e06",
+    "id": "32166015-1fa3-4b85-88bd-d10582ff2f88",
     "title": "Invitație de nuntă tip Ziar",
     "price": 9,
     "category": "invitatii",
     "desc": "Invitație de nuntă inedită, realizată sub forma unui ziar elegant care spune povestea mirilor. Tipărită pe carton mat de calitate, cu detalii grafice inspirate din revistele retro, această invitație oferă o notă unică și memorabilă evenimentului vostru. Legată manual cu sfoară naturală.",
     "images": [
-      "/images/invitatii/invitatie-nunta-jurnal.png"
+      "/images/invitatii/invitatie-nunta-jurnal.jpg"
     ],
     "tags": [
       "invitatii",
@@ -220,10 +220,10 @@
       "carton mat",
       "sfoara"
     ],
-    "slug": "invitatie-de-nunta-tip-ziar-d359c922"
+    "slug": "invitatie-de-nunta-tip-ziar-32166015"
   },
   {
-    "id": "c27ab592-068c-49b4-887c-40a4824a9d17",
+    "id": "62276a43-1fc7-4fd4-bdd5-149d97dafa10",
     "title": "Aranjament floral din lumânări parfumate pastel",
     "price": 95,
     "category": "aranjamente-florale",
@@ -244,6 +244,6 @@
       "romantic",
       "handmade"
     ],
-    "slug": "aranjament-floral-din-lumanari-parfumate-pastel-c27ab592"
+    "slug": "aranjament-floral-din-lumanari-parfumate-pastel-62276a43"
   }
 ]
