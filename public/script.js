@@ -7,7 +7,7 @@
   const $$ = (s, d = document) => Array.from(d.querySelectorAll(s));
 
   if (!window.$)  window.$  = $;
-  if (!window.$$) window.$$ = $$;
+  if (!window.$$ ) window.$$ = $$;
 
   const grid       = $('#grid') || null;
   const q          = $('#q') || null;
@@ -15,32 +15,26 @@
   let PRODUCTS     = [];
   let activeFilter = 'toate';
 
+  // ===== Normalizări robuste (spații/liniuțe/diacritice) =====
+  const key = (s) => (s || '')
+    .toString()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')   // fără diacritice
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')       // orice separator devine spațiu
+    .trim()
+    .replace(/\s+/g, ' ');             // spațiu unic
+
+  const norm = key;
+  const slug = (s) => key(s).replace(/\s+/g, '-').slice(0, 80);
+
   // ===== Filtru setat de pagină (ex: marturii.html) =====
   const PAGE_FILTER = (typeof window.PAGE_CATEGORY === 'string' && window.PAGE_CATEGORY.trim())
-    ? window.PAGE_CATEGORY.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()
+    ? key(window.PAGE_CATEGORY)
     : null;
 
   // Dacă e pagină de categorie, marchează grila pt layout-ul aerisit
   if (PAGE_FILTER && grid) grid.classList.add('category');
-
-  // ===== Normalizări =====
-  const norm = (s) =>
-    (s || '')
-      .toString()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-      .trim();
-
-  const slug = (s) =>
-    (s || '')
-      .toString()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)+/g, '')
-      .slice(0, 80);
 
   const money = (n) => {
     const v = Number(n);
@@ -67,16 +61,13 @@
          </div>`
       : '';
 
-    const linkId = p.slug || p.id || slug(p.title);
-    const href   = `/p/${encodeURIComponent(linkId)}.html`;
+    const href = `/p/${encodeURIComponent(p.slug || slug(p.title))}.html`;
 
     return `
     <article class="item" data-id="${p.id || ''}">
       <a class="card-link" href="${href}" aria-label="Vezi detalii ${p.title}">
         <div class="media">
-          <div class="slide-track" data-index="0">
-            ${slides}
-          </div>
+          <div class="slide-track" data-index="0">${slides}</div>
           ${nav}
           ${dots}
         </div>
@@ -138,8 +129,8 @@
         const p    = PRODUCTS.find((x) => x.id === id);
         if (!p) return;
 
-        if (btn.dataset.act === 'share') share(p.title);
-        if (btn.dataset.act === 'inquire') inquire(p.title, id);
+        if (btn.dataset.act === 'share') share(p.title, p.slug);
+        if (btn.dataset.act === 'inquire') inquire(p.title, p.slug);
       });
     });
 
@@ -185,12 +176,12 @@
               title: p.title || '',
               price: Number(p.price ?? NaN),
               category: p.category || '',
-              categoryKey: norm(p.category || ''),
+              categoryKey: key(p.category || ''),
               desc: p.desc || '',
               images: Array.isArray(p.images) ? p.images : [],
               slug: p.slug || slug(p.title),
               tags,
-              tagsKey: tags.map(norm),
+              tagsKey: tags.map(key),
             };
           })
         : [];
@@ -201,17 +192,22 @@
   }
 
   // ===== Acțiuni publice =====
-  function inquire(title) {
-    alert(`Mulțumesc pentru interes în „${title}”!`);
+  function inquire(title, slug) {
+    const url = `${location.origin}/p/${slug}.html`;
+    const wa = `https://wa.me/40760617724?text=${encodeURIComponent(
+      `Bună! Mă interesează produsul: ${title} (${url})`
+    )}`;
+    window.open(wa, '_blank', 'noopener');
   }
 
-  async function share(title) {
-    const data = { title: 'Boundless Collection', text: `Îți recomand: ${title}`, url: location.href };
+  async function share(title, slug) {
+    const url = `${location.origin}/p/${slug}.html`;
+    const data = { title: 'Boundless Collection', text: `Îți recomand: ${title}`, url };
     try {
       if (navigator.share) await navigator.share(data);
       else throw 0;
     } catch {
-      navigator.clipboard?.writeText(data.url);
+      navigator.clipboard?.writeText(url);
       alert('Link copiat!');
     }
   }
@@ -230,8 +226,8 @@
       btn.addEventListener('click', () => {
         filterBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
         btn.setAttribute('aria-pressed', 'true');
-        const key = btn.dataset.filter || btn.textContent;
-        activeFilter = norm(key || 'toate');
+        const keyVal = btn.dataset.filter || btn.textContent;
+        activeFilter = key(keyVal || 'toate');
         render();
       })
     );
