@@ -512,5 +512,87 @@
       "premium"
     ],
     "slug": "plic-de-dar-boho-auriu-elegant-plic-boh"
+  },
+  {
+    "id": "plic-botez-baietel-veverite-020",
+    "title": "Plic de botez băiețel cu veverițe jucăușe",
+    "price": 5,
+    "category": "plicuri",
+    "desc": "Plic de botez adorabil, realizat pe carton mat premium, ilustrat cu două veverițe jucăușe și mesaj de mulțumire personalizat. Design modern și vesel, perfect pentru evenimentele celor mici.",
+    "images": [
+      "/images/plicuri/plic-botez-baietel-veverite.jpg"
+    ],
+    "tags": [
+      "plicuri",
+      "botez",
+      "baietel",
+      "veverite",
+      "animale",
+      "tematic",
+      "personalizat",
+      "cadou",
+      "copii",
+      "multumire",
+      "elegant",
+      "carton premium",
+      "handmade",
+      "natural"
+    ],
+    "slug": "plic-de-botez-baietel-cu-veverite-jucause-plic-bot"
+  },
+  {
+    "id": "meniu-botez-baietel-veverite-021",
+    "title": "Meniu botez băiețel cu veverițe jucăușe",
+    "price": 7,
+    "category": "meniuri",
+    "desc": "Meniu de botez personalizat, imprimat pe carton mat premium, ilustrat cu două veverițe simpatice și ghinde discrete. Design modern și vesel, perfect pentru evenimentele celor mici. Se poate asorta cu invitația și plicul din aceeași colecție.",
+    "images": [
+      "/images/meniuri/meniu-botez-baietel-veverite.jpg"
+    ],
+    "tags": [
+      "meniuri",
+      "botez",
+      "baietel",
+      "veverite",
+      "animale",
+      "tematic",
+      "personalizat",
+      "copii",
+      "elegant",
+      "carton premium",
+      "handmade",
+      "set",
+      "ghinde",
+      "vesel"
+    ],
+    "slug": "meniu-botez-baietel-cu-veverite-jucause-meniu-bo"
+  },
+  {
+    "id": "marturie-lumanare-roz-022",
+    "title": "Mărturie lumânare roz pastel cu flori uscate și etichetă personalizată",
+    "price": 15,
+    "category": "marturii",
+    "desc": "Mărturie elegantă realizată manual din ceară naturală de soia, în nuanță roz pastel. Decorată cu panglică din satin, puf decorativ roz și etichetă personalizată cu numele și data evenimentului. Perfectă pentru botezuri, nunți sau evenimente rafinate cu tematică pastelată.",
+    "images": [
+      "/images/marturii/marturie-lumanare-roz.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "lumânare",
+      "roz pastel",
+      "pene",
+      "etichetă personalizată",
+      "handmade",
+      "soia naturală",
+      "elegant",
+      "botez",
+      "nuntă",
+      "cadou",
+      "delicat",
+      "pastel",
+      "decor",
+      "satin"
+    ],
+    "slug": "marturie-lumanare-roz-pastel-cu-flori-uscate-si-eticheta-personalizata-marturie"
   }
 ]
