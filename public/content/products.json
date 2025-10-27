@@ -350,5 +350,89 @@
       "natural"
     ],
     "slug": "aranjament-floral-bleu-din-lumanari-parfumate-in-cos-impletit-aranjame"
+  },
+  {
+    "id": "aranjament-iepuras-roz-016",
+    "title": "Aranjament floral roz cu iepuraș decorativ și lumânări parfumate",
+    "price": 105,
+    "category": "aranjamente-florale",
+    "desc": "Aranjament floral elegant realizat manual din lumânări parfumate din ceară naturală de soia, modelate în forme de flori și figurină decorativă de iepuraș. Nuantele calde de roz pudrat și alb aduc o notă delicată și veselă oricărui spațiu. Ideal ca decor de primăvară, cadou rafinat sau piesă de accent pentru evenimente speciale.",
+    "images": [
+      "/images/aranjamente/aranjament-floral-iepuras-roz-2.jpg"
+    ],
+    "tags": [
+      "aranjamente",
+      "florale",
+      "iepuras",
+      "lumânări parfumate",
+      "cadou",
+      "decor",
+      "roz pudrat",
+      "soia",
+      "natural",
+      "handmade",
+      "elegant",
+      "primavara",
+      "delicat",
+      "cadou femei",
+      "decor interior"
+    ],
+    "slug": "aranjament-floral-roz-cu-iepuras-decorativ-si-lumanari-parfumate-aranjame"
+  },
+  {
+    "id": "aranjament-creioane-toamna-018",
+    "title": "Aranjament floral cu lumânări parfumate în suport din creioane colorate",
+    "price": 150,
+    "category": "aranjamente-florale",
+    "desc": "Aranjament floral handmade realizat din lumânări parfumate din ceară naturală de soia, modelate în forme de flori pastelate și aranjate într-un suport creativ din creioane colorate. Decorat cu flori uscate, iarbă de pampas și fundiță elegantă din satin, este cadoul ideal pentru începutul școlii, ziua educatoarei sau decor de birou. O combinație perfectă între artă, culoare și parfum delicat.",
+    "images": [
+      "/images/aranjamente/aranjament-floral-creioane-colorate.jpg"
+    ],
+    "tags": [
+      "aranjamente",
+      "florale",
+      "lumânări parfumate",
+      "creioane colorate",
+      "cadou educatoare",
+      "început de școală",
+      "toamnă",
+      "decor birou",
+      "handmade",
+      "soia",
+      "natural",
+      "elegant",
+      "pastel",
+      "original",
+      "cadou profesor",
+      "aranjament creativ",
+      "flori sculptate"
+    ],
+    "slug": "aranjament-floral-cu-lumanari-parfumate-in-suport-din-creioane-colorate-aranjame"
+  },
+  {
+    "id": "marturie-scoica-perla-015",
+    "title": "marturie-lumanare-scoica-perla",
+    "price": 8,
+    "category": "marturii",
+    "desc": "Mărturie sub formă de lumânare artizanală din ceară naturală de soia, turnată în forma unei scoici care ascunde o perlă delicată. Ambalată individual în cutie transparentă cu fundiță albă și etichetă personalizată. Perfectă pentru nuntă, botez sau evenimente elegante cu tematică marină.",
+    "images": [
+      "/images/marturii/marturie-lumanare-scoica-perla.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "lumânare",
+      "scoică",
+      "perlă",
+      "cutie transparentă",
+      "fundiță albă",
+      "elegant",
+      "nuntă",
+      "botez",
+      "tematică marină",
+      "handmade",
+      "soia naturală",
+      "cadou simbolic"
+    ],
+    "slug": "marturie-lumanare-scoica-perla-marturie"
   }
 ]
