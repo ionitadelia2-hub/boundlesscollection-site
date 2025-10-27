@@ -434,5 +434,57 @@
       "cadou simbolic"
     ],
     "slug": "marturie-lumanare-scoica-cu-perla-marturie"
+  },
+  {
+    "id": "plic-boho-verde-016",
+    "title": "Plic de dar boho verde natur",
+    "price": 4.5,
+    "category": "plicuri",
+    "desc": "Plic de dar elegant, realizat pe carton texturat premium, cu design boho în nuanțe naturale de verde, crem și bej. Model decorativ cu frunze și flori uscate, ideal pentru nuntă sau botez. Poate fi personalizat cu numele mirilor și text de mulțumire.",
+    "images": [
+      "/images/plicuri/plic-boho-verde-natur.jpg"
+    ],
+    "tags": [
+      "plicuri",
+      "boho",
+      "natural",
+      "verde",
+      "bej",
+      "flori uscate",
+      "frunze",
+      "nuntă",
+      "botez",
+      "elegant",
+      "personalizat",
+      "texturat",
+      "minimalist"
+    ],
+    "slug": "plic-de-dar-boho-verde-natur-plic-boh"
+  },
+  {
+    "id": "set-invitatie-plic-boho-018",
+    "title": "Set invitație și plic de dar boho natur",
+    "price": 17,
+    "category": "set",
+    "desc": "Set elegant compus dintr-o invitație și un plic de dar asortate, realizate manual pe carton texturat premium. Decorate cu sigiliu auriu, flori uscate naturale și sfoară subțire. Perfecte pentru o nuntă cu tematică boho chic sau rustic elegant.",
+    "images": [
+      "/images/seturi/set-invitatie-plic-boho-natur.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "invitație",
+      "plic",
+      "boho",
+      "auriu",
+      "sigiliu",
+      "flori uscate",
+      "natur",
+      "elegant",
+      "rustic",
+      "handmade",
+      "nuntă",
+      "personalizat"
+    ],
+    "slug": "set-invitatie-si-plic-de-dar-boho-natur-set-invi"
   }
 ]
