@@ -593,5 +593,60 @@
       "satin"
     ],
     "slug": "marturie-lumanare-roz-pastel-cu-flori-uscate-si-eticheta-personalizata-marturie"
+  },
+  {
+    "id": "set-invitatie-plic-botez-bleu-023",
+    "title": "Set invitație și plic botez bleu cu fundiță și ursuleț",
+    "price": 14,
+    "category": "seturi",
+    "desc": "Set de botez complet, alcătuit din invitație elegantă și plic de dar asortat, ambele în nuanțe pastel de bleu. Decor cu fundiță din organza, ilustrații de ursuleț și Mickey, perfect pentru băieței. Realizat pe carton premium mat, ideal pentru un botez cu tematică dulce și modernă.",
+    "images": [
+      "/images/seturi/set-invitatie-plic-botez-bleu.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "botez",
+      "baietel",
+      "set",
+      "invitație",
+      "plic",
+      "fundita bleu",
+      "ursulet",
+      "mickey",
+      "bleu pastel",
+      "personalizat",
+      "elegant",
+      "handmade",
+      "copii",
+      "tematic",
+      "modern"
+    ],
+    "slug": "set-invitatie-si-plic-botez-bleu-cu-fundita-si-ursulet-set-invi"
+  },
+  {
+    "id": "plic-botez-bleu-ursulet-024",
+    "title": "Plic de botez bleu cu ursuleț și Mickey",
+    "price": 4.5,
+    "category": "plicuri",
+    "desc": "Plic de botez adorabil, realizat pe carton mat premium, decorat cu ilustrații de ursuleț și Mickey Mouse. Nuanțele pastel de bleu oferă un aer delicat și jucăuș, perfect pentru evenimentele băiețeilor. Personalizabil cu nume și dată, ideal de asortat cu invitația din aceeași colecție.",
+    "images": [
+      "/images/plicuri/plic-botez-bleu-ursulet.jpg"
+    ],
+    "tags": [
+      "plicuri",
+      "botez",
+      "baietel",
+      "ursulet",
+      "mickey",
+      "bleu pastel",
+      "personalizat",
+      "elegant",
+      "copii",
+      "tematic",
+      "carton premium",
+      "jucaus",
+      "handmade"
+    ],
+    "slug": "plic-de-botez-bleu-cu-ursulet-si-mickey-plic-bot"
   }
 ]
