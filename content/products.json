@@ -411,10 +411,10 @@
   },
   {
     "id": "marturie-scoica-perla-015",
-    "title": "marturie-lumanare-scoica-perla",
-    "price": 8,
-    "category": "marturii",
-    "desc": "Mărturie sub formă de lumânare artizanală din ceară naturală de soia, turnată în forma unei scoici care ascunde o perlă delicată. Ambalată individual în cutie transparentă cu fundiță albă și etichetă personalizată. Perfectă pentru nuntă, botez sau evenimente elegante cu tematică marină.",
+    "title": "Mărturie lumânare scoică cu perlă",
+    "price": 12,
+    "category": "marturii soia",
+    "desc": "Mărturie elegantă în formă de scoică, turnată manual din ceară naturală de soia, cu o perlă decorativă în interior. Fiecare piesă este ambalată individual în cutie transparentă, legată cu fundiță albă și etichetă personalizată. Ideală pentru nuntă, botez sau evenimente cu tematică marină.",
     "images": [
       "/images/marturii/marturie-lumanare-scoica-perla.jpg"
     ],
@@ -425,14 +425,14 @@
       "perlă",
       "cutie transparentă",
       "fundiță albă",
-      "elegant",
       "nuntă",
       "botez",
       "tematică marină",
       "handmade",
       "soia naturală",
+      "elegant",
       "cadou simbolic"
     ],
-    "slug": "marturie-lumanare-scoica-perla-marturie"
+    "slug": "marturie-lumanare-scoica-cu-perla-marturie"
   }
 ]
