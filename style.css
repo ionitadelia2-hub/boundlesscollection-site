@@ -181,7 +181,11 @@ section{padding:clamp(1.6rem, 3vw, 2.8rem) 0}
 
 /* ---------- Footer ---------- */
 footer{margin-top:2rem; padding:1.2rem 0; background:#fff; border-top:1px solid #ffe8f2; color:#7a6b73}
-.footer-inner{display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap}
+.footer-inner{display:flex;gap:.8rem;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.footer-links{display:flex;gap:.6rem;flex-wrap:wrap}
+.footer-links a{opacity:.9}
+.footer-links a:hover{opacity:1}
+
 
 /* ---------- WhatsApp floating ---------- */
 .whatsapp-wrapper{
