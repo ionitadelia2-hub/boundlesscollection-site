@@ -381,7 +381,7 @@ function main() {
   // 2) scriu JSON sursă + copii publice
   ensureDir(path.dirname(JSON_OUT));
   fs.writeFileSync(JSON_OUT, JSON.stringify(products, null, 2), "utf8");
-  copyFileSync(JSON_OUT, path.join(OUT, "products.json"));
+ /* copyFileSync(JSON_OUT, path.join(OUT, "products.json")); */
   copyFileSync(JSON_OUT, path.join(OUT, "content", "products.json"));
 
   // 3) copiere fișiere statice (din rădăcină => OUT)
