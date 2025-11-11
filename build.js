@@ -50,31 +50,25 @@ const esc = (s) => (s || "").replace(/[&<>"']/g, c => (
   { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
 ));
 
-// Transformă o cale relativă de imagine în root-absolute (pentru web root)
-/** ex: "images/poza.jpg" -> "/images/poza.jpg" */
+// root-absolute pentru servire web
 const toRootAbs = (u) => {
   if (!u) return "";
   if (/^https?:\/\//i.test(u)) return u;
   return "/" + String(u).replace(/^\/+/, "");
 };
-
-// Pentru meta absolute (cu ORIGIN)
-const toAbsForMeta = (u) => {
+// absolute (cu ORIGIN) pentru meta / feed
+const toAbs = (u) => {
   if (!u) return `${ORIGIN}/content/preview.jpg`;
   if (/^https?:\/\//i.test(u)) return u;
   return `${ORIGIN}/${String(u).replace(/^\/+/, "")}`;
 };
 
-// Generează tag <link rel="stylesheet"...> doar dacă fișierul există în sursă
-const cssTagIfExists = (filename) => {
-  if (exists(ROOT, filename)) return `<link rel="stylesheet" href="/${filename}">`;
-  return "";
-};
-// Generează tag <script ...> doar dacă fișierul există în sursă
-const jsTagIfExists  = (filename) => {
-  if (exists(ROOT, filename)) return `<script defer src="/${filename}"></script>`;
-  return "";
-};
+const cssTagIfExists = (filename) => exists(ROOT, filename)
+  ? `<link rel="stylesheet" href="/${filename}">`
+  : "";
+const jsTagIfExists  = (filename) => exists(ROOT, filename)
+  ? `<script defer src="/${filename}"></script>`
+  : "";
 
 // ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
@@ -84,7 +78,7 @@ function pageTemplate(prod) {
   const price = Number(prod.price || 0).toFixed(2) + " RON";
 
   const relImgs = (prod.images || []).map(toRootAbs);
-  const imagesAbsForMeta = (prod.images || []).map(toAbsForMeta);
+  const imagesAbsForMeta = (prod.images || []).map(toAbs);
   const ogImg = imagesAbsForMeta[0] || `${ORIGIN}/content/preview.jpg`;
   const firstImg = relImgs[0] || "/content/preview.jpg";
   const url = `${ORIGIN}/p/${prod.slug}.html`;
@@ -97,7 +91,7 @@ function pageTemplate(prod) {
   const brandAvatar = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
 
   const cssGlobal  = cssTagIfExists("style.css");
-  const cssGallery = cssTagIfExists("gallery.css");   // ok să rămână
+  const cssGallery = cssTagIfExists("gallery.css");
   const cssProduct = cssTagIfExists("product-page.css");
 
   const jsGlobal   = jsTagIfExists("script.js");
@@ -129,7 +123,7 @@ function pageTemplate(prod) {
   "@type": "Product",
   "name": "${esc(title)}",
   "description": "${desc}",
-  "image": ${JSON.stringify((prod.images || []).map(toAbsForMeta))},
+  "image": ${JSON.stringify((prod.images || []).map(toAbs))},
   "brand": { "@type": "Brand", "name": "Boundless Collection" },
   "offers": {
     "@type": "Offer",
@@ -141,53 +135,28 @@ function pageTemplate(prod) {
 }
 </script>
 
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  ${cssGlobal}
-  ${cssGallery}
-  ${cssProduct}
-
+  ${cssGlobal}${cssGallery}${cssProduct}
   <style>
-    /* Single image (fără slider) – pătrat, responsiv */
     .single-media{ width:100%; max-width:720px; margin:0 auto; }
     .single-viewport{
-      width:100%;
-      aspect-ratio:1/1;            /* pătrat Instagram */
-      background:#fff;
-      border-radius:14px;
-      box-shadow:0 6px 24px rgba(0,0,0,.06);
-      overflow:hidden;
-      display:grid; place-items:center;
+      width:100%; aspect-ratio:1/1; background:#fff; border-radius:14px;
+      box-shadow:0 6px 24px rgba(0,0,0,.06); overflow:hidden; display:grid; place-items:center;
     }
-    .single-viewport img{
-      max-width:100%; max-height:100%;
-      width:auto; height:auto;
-      object-fit:contain; display:block;
-    }
-    @media (max-width:960px){
-      .single-media{ max-width:94%; }
-    }
+    .single-viewport img{ max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; display:block; }
+    @media (max-width:960px){ .single-media{ max-width:94%; } }
   </style>
 </head>
 <body>
-
-  <!-- HEADER unificat (dropdown Produse + burger) -->
   <header class="header">
     <div class="container nav">
       <a class="brand" href="/index.html">
-        <div class="brand-logo">
-          ${brandAvatar ? `<img src="${brandAvatar}" alt="Delia – ${brand}">` : ""}
-        </div>
+        <div class="brand-logo">${brandAvatar ? `<img src="${brandAvatar}" alt="Delia – ${brand}">` : ""}</div>
         <div class="brand-title">${brand}</div>
       </a>
-
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
-
       <nav aria-label="Meniu principal">
         <ul id="mainmenu">
           <li class="dropdown">
@@ -203,7 +172,6 @@ function pageTemplate(prod) {
               <li><a href="/seturi.html">Prezentare Seturi</a></li>
             </ul>
           </li>
-
           <li><a href="/index.html">Acasă</a></li>
           <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
@@ -215,100 +183,53 @@ function pageTemplate(prod) {
 
   <main class="container product-page">
     <section class="product-hero">
-
-      <!-- POZĂ UNICĂ (fără slider) -->
       <div class="hero-media">
         <figure class="single-media">
-          <div class="single-viewport">
-            <img src="${firstImg}" alt="${esc(title)}" loading="eager" decoding="async">
-          </div>
+          <div class="single-viewport"><img src="${firstImg}" alt="${esc(title)}" loading="eager" decoding="async"></div>
         </figure>
       </div>
-
-      <!-- TEXT -->
       <div class="hero-text">
         <h1 class="product-title">${title}</h1>
         <p class="product-desc">${desc}</p>
         <p class="price price-badge">${price}</p>
-
-        <div class="tags">
-          ${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}
-        </div>
-
+        <div class="tags">${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
         <div class="actions">
           <a class="btn" href="/index.html#produse" id="backBtn">← Înapoi</a>
           <a class="btn btn-primary" href="${waLink}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
         </div>
       </div>
-
     </section>
   </main>
 
-  <footer>
-  <div class="container footer-inner">
+  <footer><div class="container footer-inner">
     <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
     <small>Realizat cu pasiune ✨</small>
-  </div>
-</footer>
-
+  </div></footer>
 
   <script>
-    // anul curent
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // back „deștept” după referer
     (function(){
-      var ref = (document.referrer || "").toLowerCase();
-      var back = "/index.html#produse";
-      if (ref.includes("/marturii")) back = "/marturii.html";
-      else if (ref.includes("/invitatii")) back = "/invitatii.html";
-      else if (ref.includes("/plicuri")) back = "/plicuri.html";
-      else if (ref.includes("/meniuri")) back = "/meniuri.html";
-      else if (ref.includes("/numere-masa")) back = "/numere-masa.html";
-      else if (ref.includes("/aranjamente-florale")) back = "/aranjamente-florale.html";
-      else if (ref.includes("/seturi")) back = "/seturi.html";
-      var b = document.getElementById('backBtn'); if(b) b.href = back;
+      var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
+      if(ref.includes("/marturii")) back="/marturii.html";
+      else if(ref.includes("/invitatii")) back="/invitatii.html";
+      else if(ref.includes("/plicuri")) back="/plicuri.html";
+      else if(ref.includes("/meniuri")) back="/meniuri.html";
+      else if(ref.includes("/numere-masa")) back="/numere-masa.html";
+      else if(ref.includes("/aranjamente-florale")) back="/aranjamente-florale.html";
+      else if(ref.includes("/seturi")) back="/seturi.html";
+      var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
-
-    // burger + dropdown mobil (identic cu paginile de categorie)
     (function(){
-      const btnHamb  = document.querySelector('.nav-toggle');
-      const mainMenu = document.querySelector('#mainmenu');
-      const dd       = document.querySelector('.dropdown');
-      const ddBtn    = dd?.querySelector('.dropbtn');
-      if (!btnHamb || !mainMenu) return;
-
-      function closeAll() {
-        document.body.classList.remove('menu-open');
-        btnHamb.setAttribute('aria-expanded','false');
-        if (dd) { dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }
-      }
-
-      btnHamb.addEventListener('click', (e) => {
-        e.preventDefault(); e.stopPropagation();
-        const open = document.body.classList.toggle('menu-open');
-        btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
-        if (!open && dd) { dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }
-      });
-
-      if (dd && ddBtn) {
-        ddBtn.addEventListener('click', (e) => {
-          e.preventDefault(); e.stopPropagation();
-          const now = dd.classList.toggle('open');
-          ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
-        });
-        mainMenu.addEventListener('click', (e) => e.stopPropagation());
-      }
-
-      document.addEventListener('click', closeAll);
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+      const btn=document.querySelector('.nav-toggle'), menu=document.querySelector('#mainmenu'),
+            dd=document.querySelector('.dropdown'), ddBtn=dd?.querySelector('.dropbtn');
+      if(!btn||!menu) return;
+      function closeAll(){ document.body.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); if(dd){ dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); } }
+      btn.addEventListener('click',e=>{ e.preventDefault(); e.stopPropagation(); const open=document.body.classList.toggle('menu-open'); btn.setAttribute('aria-expanded', open?'true':'false'); if(!open&&dd){ dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }});
+      if(dd&&ddBtn){ ddBtn.addEventListener('click',e=>{ e.preventDefault(); e.stopPropagation(); const now=dd.classList.toggle('open'); ddBtn.setAttribute('aria-expanded', now?'true':'false'); }); menu.addEventListener('click',e=>e.stopPropagation()); }
+      document.addEventListener('click', closeAll); document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeAll(); });
     })();
   </script>
-
-  <!-- JS global (căutare/filtre pe homepage & pagini categorie) -->
-  ${jsGlobal}
-  ${jsGallery}
-  ${jsProduct}
+  ${jsGlobal}${jsGallery}${jsProduct}
 </body>
 </html>`;
 }
@@ -318,27 +239,64 @@ function parseCSV(text) {
   const lines = text.split(/\r?\n/).filter(l => l.trim().length);
   if (!lines.length) return [];
   const split = (line) => {
-    const out = [];
-    let cur = "", q = false;
+    const out = []; let cur = "", q = false;
     for (let i = 0; i < line.length; i++) {
       const ch = line[i];
       if (ch === '"') {
         if (q && line[i + 1] === '"') { cur += '"'; i++; }
         else q = !q;
-      } else if (ch === "," && !q) {
-        out.push(cur); cur = "";
-      } else cur += ch;
+      } else if (ch === "," && !q) { out.push(cur); cur = ""; }
+      else cur += ch;
     }
     out.push(cur);
     return out.map(v => v.trim());
   };
   const header = split(lines[0]).map(h => h.trim());
   return lines.slice(1).map(line => {
-    const cols = split(line);
-    const row = {};
+    const cols = split(line); const row = {};
     header.forEach((h, i) => row[h] = (cols[i] || "").trim());
     return row;
   });
+}
+
+// === Export CSV compatibil Google Merchant: /public/feeds/products-merchant.csv
+function csvEscape(s) {
+  const v = String(s ?? "");
+  return /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v;
+}
+function exportMerchantCSV(products) {
+  const FEEDS_DIR = path.join(OUT, "feeds");
+  ensureDir(FEEDS_DIR);
+
+  const header = [
+    "id","title","description","link","image_link",
+    "price","availability","condition","brand","mpn"
+  ];
+  const rows = [header];
+
+  products.forEach(p => {
+    const link = `${ORIGIN}/p/${p.slug}.html`;
+    const imageAbs = toAbs((p.images && p.images[0]) ? p.images[0] : "/content/preview.jpg");
+    const price = `${Number(p.price || 0).toFixed(2)} RON`;
+
+    rows.push([
+      p.id,
+      p.title,
+      p.desc || p.title,
+      link,
+      imageAbs,
+      price,
+      "in stock",
+      "new",
+      "Boundless Collection",
+      p.id
+    ]);
+  });
+
+  const csv = rows.map(r => r.map(csvEscape).join(",")).join("\n");
+  const outPath = path.join(FEEDS_DIR, "products-merchant.csv");
+  fs.writeFileSync(outPath, csv, "utf8");
+  console.log(`✔ Export feed: ${outPath}`);
 }
 
 // ---------------- main build ----------------
@@ -378,10 +336,9 @@ function main() {
     };
   });
 
-  // 2) scriu JSON sursă + copii publice
+  // 2) scriu JSON sursă + copie publică
   ensureDir(path.dirname(JSON_OUT));
   fs.writeFileSync(JSON_OUT, JSON.stringify(products, null, 2), "utf8");
- /* copyFileSync(JSON_OUT, path.join(OUT, "products.json")); */
   copyFileSync(JSON_OUT, path.join(OUT, "content", "products.json"));
 
   // 3) copiere fișiere statice (din rădăcină => OUT)
@@ -394,7 +351,7 @@ function main() {
     }
   }
 
-  // 4) directoare de media/content
+  // 4) directoare media/content
   copyDirSync(path.join(ROOT, "images"),  path.join(OUT, "images"));
   copyDirSync(path.join(ROOT, "content"), path.join(OUT, "content"));
 
@@ -413,7 +370,12 @@ function main() {
 </urlset>`;
   fs.writeFileSync(path.join(OUT, "sitemap.xml"), sitemap, "utf8");
 
-  console.log(`\n✔ ${products.length} produs(e) -> JSON + pagini + sitemap`);
+  // 7) feed Merchant
+  console.log("DEBUG: pregătesc exportul Merchant – produse:", products.length);
+
+  exportMerchantCSV(products);
+
+  console.log(`\n✔ ${products.length} produs(e) -> JSON + pagini + sitemap + feed Merchant`);
   console.log(`✔ ORIGIN: ${ORIGIN}`);
   console.log(`✔ Output: ${OUT}\n`);
 }

@@ -35,53 +35,28 @@
 }
 </script>
 
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/gallery.css">
-  <link rel="stylesheet" href="/product-page.css">
-
+  <link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/gallery.css"><link rel="stylesheet" href="/product-page.css">
   <style>
-    /* Single image (fără slider) – pătrat, responsiv */
     .single-media{ width:100%; max-width:720px; margin:0 auto; }
     .single-viewport{
-      width:100%;
-      aspect-ratio:1/1;            /* pătrat Instagram */
-      background:#fff;
-      border-radius:14px;
-      box-shadow:0 6px 24px rgba(0,0,0,.06);
-      overflow:hidden;
-      display:grid; place-items:center;
+      width:100%; aspect-ratio:1/1; background:#fff; border-radius:14px;
+      box-shadow:0 6px 24px rgba(0,0,0,.06); overflow:hidden; display:grid; place-items:center;
     }
-    .single-viewport img{
-      max-width:100%; max-height:100%;
-      width:auto; height:auto;
-      object-fit:contain; display:block;
-    }
-    @media (max-width:960px){
-      .single-media{ max-width:94%; }
-    }
+    .single-viewport img{ max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; display:block; }
+    @media (max-width:960px){ .single-media{ max-width:94%; } }
   </style>
 </head>
 <body>
-
-  <!-- HEADER unificat (dropdown Produse + burger) -->
   <header class="header">
     <div class="container nav">
       <a class="brand" href="/index.html">
-        <div class="brand-logo">
-          <img src="/images/delia-avatar.png" alt="Delia – Boundless Collection">
-        </div>
+        <div class="brand-logo"><img src="/images/delia-avatar.png" alt="Delia – Boundless Collection"></div>
         <div class="brand-title">Boundless Collection</div>
       </a>
-
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
-
       <nav aria-label="Meniu principal">
         <ul id="mainmenu">
           <li class="dropdown">
@@ -97,7 +72,6 @@
               <li><a href="/seturi.html">Prezentare Seturi</a></li>
             </ul>
           </li>
-
           <li><a href="/index.html">Acasă</a></li>
           <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
@@ -109,99 +83,52 @@
 
   <main class="container product-page">
     <section class="product-hero">
-
-      <!-- POZĂ UNICĂ (fără slider) -->
       <div class="hero-media">
         <figure class="single-media">
-          <div class="single-viewport">
-            <img src="/images/aranjamente/aranjament-floral-creioane-colorate.jpg" alt="Aranjament floral cu lumânări parfumate în suport din creioane colorate" loading="eager" decoding="async">
-          </div>
+          <div class="single-viewport"><img src="/images/aranjamente/aranjament-floral-creioane-colorate.jpg" alt="Aranjament floral cu lumânări parfumate în suport din creioane colorate" loading="eager" decoding="async"></div>
         </figure>
       </div>
-
-      <!-- TEXT -->
       <div class="hero-text">
         <h1 class="product-title">Aranjament floral cu lumânări parfumate în suport din creioane colorate</h1>
         <p class="product-desc">Aranjament floral handmade realizat din lumânări parfumate din ceară naturală de soia, modelate în forme de flori pastelate și aranjate într-un suport creativ din creioane colorate. Decorat cu flori uscate, iarbă de pampas și fundiță elegantă din satin, este cadoul ideal pentru începutul școlii, ziua educatoarei sau decor de birou. O combinație perfectă între artă, culoare și parfum delicat.</p>
         <p class="price price-badge">150.00 RON</p>
-
-        <div class="tags">
-          <span class="tag">aranjamente</span><span class="tag">florale</span><span class="tag">lumânări parfumate</span><span class="tag">creioane colorate</span><span class="tag">cadou educatoare</span><span class="tag">început de școală</span><span class="tag">toamnă</span><span class="tag">decor birou</span><span class="tag">handmade</span><span class="tag">soia</span><span class="tag">natural</span><span class="tag">elegant</span><span class="tag">pastel</span><span class="tag">original</span><span class="tag">cadou profesor</span><span class="tag">aranjament creativ</span><span class="tag">flori sculptate</span>
-        </div>
-
+        <div class="tags"><span class="tag">aranjamente</span><span class="tag">florale</span><span class="tag">lumânări parfumate</span><span class="tag">creioane colorate</span><span class="tag">cadou educatoare</span><span class="tag">început de școală</span><span class="tag">toamnă</span><span class="tag">decor birou</span><span class="tag">handmade</span><span class="tag">soia</span><span class="tag">natural</span><span class="tag">elegant</span><span class="tag">pastel</span><span class="tag">original</span><span class="tag">cadou profesor</span><span class="tag">aranjament creativ</span><span class="tag">flori sculptate</span></div>
         <div class="actions">
           <a class="btn" href="/index.html#produse" id="backBtn">← Înapoi</a>
           <a class="btn btn-primary" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Aranjament%20floral%20cu%20lum%C3%A2n%C4%83ri%20parfumate%20%C3%AEn%20suport%20din%20creioane%20colorate%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Faranjament-floral-cu-lumanari-parfumate-in-suport-din-creioane-colorate-aranjame.html)" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
         </div>
       </div>
-
     </section>
   </main>
 
-  <footer>
-  <div class="container footer-inner">
+  <footer><div class="container footer-inner">
     <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
     <small>Realizat cu pasiune ✨</small>
-  </div>
-</footer>
-
+  </div></footer>
 
   <script>
-    // anul curent
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // back „deștept” după referer
     (function(){
-      var ref = (document.referrer || "").toLowerCase();
-      var back = "/index.html#produse";
-      if (ref.includes("/marturii")) back = "/marturii.html";
-      else if (ref.includes("/invitatii")) back = "/invitatii.html";
-      else if (ref.includes("/plicuri")) back = "/plicuri.html";
-      else if (ref.includes("/meniuri")) back = "/meniuri.html";
-      else if (ref.includes("/numere-masa")) back = "/numere-masa.html";
-      else if (ref.includes("/aranjamente-florale")) back = "/aranjamente-florale.html";
-      else if (ref.includes("/seturi")) back = "/seturi.html";
-      var b = document.getElementById('backBtn'); if(b) b.href = back;
+      var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
+      if(ref.includes("/marturii")) back="/marturii.html";
+      else if(ref.includes("/invitatii")) back="/invitatii.html";
+      else if(ref.includes("/plicuri")) back="/plicuri.html";
+      else if(ref.includes("/meniuri")) back="/meniuri.html";
+      else if(ref.includes("/numere-masa")) back="/numere-masa.html";
+      else if(ref.includes("/aranjamente-florale")) back="/aranjamente-florale.html";
+      else if(ref.includes("/seturi")) back="/seturi.html";
+      var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
-
-    // burger + dropdown mobil (identic cu paginile de categorie)
     (function(){
-      const btnHamb  = document.querySelector('.nav-toggle');
-      const mainMenu = document.querySelector('#mainmenu');
-      const dd       = document.querySelector('.dropdown');
-      const ddBtn    = dd?.querySelector('.dropbtn');
-      if (!btnHamb || !mainMenu) return;
-
-      function closeAll() {
-        document.body.classList.remove('menu-open');
-        btnHamb.setAttribute('aria-expanded','false');
-        if (dd) { dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }
-      }
-
-      btnHamb.addEventListener('click', (e) => {
-        e.preventDefault(); e.stopPropagation();
-        const open = document.body.classList.toggle('menu-open');
-        btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
-        if (!open && dd) { dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }
-      });
-
-      if (dd && ddBtn) {
-        ddBtn.addEventListener('click', (e) => {
-          e.preventDefault(); e.stopPropagation();
-          const now = dd.classList.toggle('open');
-          ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
-        });
-        mainMenu.addEventListener('click', (e) => e.stopPropagation());
-      }
-
-      document.addEventListener('click', closeAll);
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+      const btn=document.querySelector('.nav-toggle'), menu=document.querySelector('#mainmenu'),
+            dd=document.querySelector('.dropdown'), ddBtn=dd?.querySelector('.dropbtn');
+      if(!btn||!menu) return;
+      function closeAll(){ document.body.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); if(dd){ dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); } }
+      btn.addEventListener('click',e=>{ e.preventDefault(); e.stopPropagation(); const open=document.body.classList.toggle('menu-open'); btn.setAttribute('aria-expanded', open?'true':'false'); if(!open&&dd){ dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }});
+      if(dd&&ddBtn){ ddBtn.addEventListener('click',e=>{ e.preventDefault(); e.stopPropagation(); const now=dd.classList.toggle('open'); ddBtn.setAttribute('aria-expanded', now?'true':'false'); }); menu.addEventListener('click',e=>e.stopPropagation()); }
+      document.addEventListener('click', closeAll); document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeAll(); });
     })();
   </script>
-
-  <!-- JS global (căutare/filtre pe homepage & pagini categorie) -->
   <script defer src="/script.js"></script>
-  
-  
 </body>
 </html>
