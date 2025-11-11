@@ -41,7 +41,7 @@ const exists = (...parts) => fs.existsSync(path.join(...parts));
 // ---------------- helpers ----------------
 const slugify = (str) => (str || "")
   .toString()
-  .normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+  .normalize("NFKD").replace(/[\u0300-\u036f]/g, "")        // strip diacritice
   .replace(/[^a-z0-9\s-]/gi, "")
   .trim().replace(/\s+/g, "-").replace(/-+/g, "-")
   .toLowerCase();
@@ -125,6 +125,7 @@ function pageTemplate(prod) {
   "description": "${desc}",
   "image": ${JSON.stringify((prod.images || []).map(toAbs))},
   "brand": { "@type": "Brand", "name": "Boundless Collection" },
+  "category": "${esc(prod.product_type || "")}",
   "offers": {
     "@type": "Offer",
     "priceCurrency": "RON",
@@ -270,7 +271,8 @@ function exportMerchantCSV(products) {
 
   const header = [
     "id","title","description","link","image_link",
-    "price","availability","condition","brand","mpn"
+    "price","availability","condition","brand","mpn",
+    "google_product_category","product_type"
   ];
   const rows = [header];
 
@@ -289,7 +291,9 @@ function exportMerchantCSV(products) {
       "in stock",
       "new",
       "Boundless Collection",
-      p.id
+      p.id,
+      p.google_product_category || "",
+      p.product_type || ""
     ]);
   });
 
@@ -324,15 +328,21 @@ function main() {
     const tags = (r.tags || "")
       .split("|").map(s => s.trim()).filter(Boolean);
 
+    // nou: citim GPC + expunem și product_type (din category)
+    const gpc = r.google_product_category || "";
+    const productType = r.category || "";
+
     return {
       id,
       title: r.title || "",
       price: Number(r.price || 0),
       category: r.category || "",
+      product_type: productType,
       desc: r.desc || "",
       images,
       tags,
-      slug
+      slug,
+      google_product_category: gpc
     };
   });
 
@@ -372,7 +382,6 @@ function main() {
 
   // 7) feed Merchant
   console.log("DEBUG: pregătesc exportul Merchant – produse:", products.length);
-
   exportMerchantCSV(products);
 
   console.log(`\n✔ ${products.length} produs(e) -> JSON + pagini + sitemap + feed Merchant`);
