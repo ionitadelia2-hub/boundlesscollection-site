@@ -1,11 +1,11 @@
 [
   {
     "id": "invitatie-sigiliu-roz-flori-uscate-001",
-    "title": "Invitație botez cu sigiliu roz și flori uscate",
+    "title": "Invitatie botez cu sigiliu roz si flori uscate",
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație elegantă pe carton ivory, decorată cu sigiliu roz și flori uscate, legată manual cu sfoară aurie.",
+    "desc": "Invitatie pe carton ivory, legata manual cu sfoara aurie si sigiliu roz; decor cu flori uscate naturale. Personalizabila cu nume si data.",
     "images": [
       "/images/invitatii/invitatie-botez-sigiliu-roz-flori-uscate.jpg"
     ],
@@ -20,15 +20,15 @@
       "elegant"
     ],
     "slug": "invitatie-botez-cu-sigiliu-roz-si-flori-uscate-invitati",
-    "google_product_category": ""
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-poza-calc-roz-002",
-    "title": "Invitație botez cu poză și foaie de calc",
+    "title": "Invitatie botez cu poza si foaie de calc",
     "price": 10,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație de botez elegantă pe carton foto personalizat, acoperită cu foaie de calc transparentă imprimată și decorată cu fundiță roz din organza.",
+    "desc": "Invitatie pe carton foto, acoperita cu foaie de calc imprimata; fundita din organza roz. Personalizare completa: text, foto, data.",
     "images": [
       "/images/invitatii/invitatie-botez-foto-foaie-de-calc-roz.jpg"
     ],
@@ -44,15 +44,15 @@
       "elegant"
     ],
     "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-invitati",
-    "google_product_category": ""
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-ursulet-bleu-003",
-    "title": "Invitație botez băiețel cu ursuleț și fundiță bleu",
+    "title": "Invitatie botez baietel cu ursulet si fundita bleu",
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație delicată de botez pentru băieței, realizată pe carton de calitate, cu ursuleț ilustrat și fundiță bleu aplicată manual.",
+    "desc": "Invitatie pe carton premium cu ilustratie ursulet; fundita bleu aplicata manual. Potrivita pentru tematica baby boy, pastel.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-bleu.jpg"
     ],
@@ -62,21 +62,20 @@
       "baiat",
       "ursulet",
       "fundita bleu",
-      "fundita albastra",
       "pastel",
       "delicat",
       "copii"
     ],
     "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-invitati",
-    "google_product_category": ""
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-fundita-rosie-calc-004",
-    "title": "Invitație de botez cu fundiță roșie și foaie de calc",
+    "title": "Invitatie botez cu fundita rosie si foaie de calc",
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație de botez elegantă, realizată pe carton premium și acoperită cu foaie de calc semi-transparentă. Decorată manual cu fundiță roșie din organza, potrivită pentru evenimente rafinate și tematice.",
+    "desc": "Carton premium cu invelis calc semitransparent; fundita din organza rosie. Stil elegant, ideal pentru evenimente tematice.",
     "images": [
       "/images/invitatii/invitatie-botez-fundita-rosie-foaie-calc.jpg"
     ],
@@ -91,16 +90,16 @@
       "clasic",
       "personalizat"
     ],
-    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-invitati",
-    "google_product_category": ""
+    "slug": "invitatie-botez-cu-fundita-rosie-si-foaie-de-calc-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-carticica-albastra-005",
-    "title": "Invitație de botez tip cărticică cu fundiță albastră",
+    "title": "Invitatie botez tip carticica cu fundita albastra",
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație de botez în format tip cărticică, realizată din carton premium, personalizată cu fotografia bebelușului și data evenimentului. Legată manual cu fundiță albastră din organza, perfectă pentru o temă elegantă și delicată.",
+    "desc": "Format tip carticica pe carton premium; personalizare cu fotografie si detalii eveniment. Fundita albastra din organza.",
     "images": [
       "/images/invitatii/invitatie-botez-tip-carticica-fundita-albastra.jpg"
     ],
@@ -115,16 +114,16 @@
       "baietel",
       "organza"
     ],
-    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-invitati",
-    "google_product_category": ""
+    "slug": "invitatie-botez-tip-carticica-cu-fundita-albastra-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-ursulet-ivoire-006",
-    "title": "Invitație de botez cu ursuleț și fundiță ivoire",
+    "title": "Invitatie botez cu ursulet si fundita ivoire",
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație de botez elegantă, imprimată pe carton premium, cu ilustrație de ursuleț și nori pufoși în nuanțe pastel. Decorată manual cu fundiță ivoire din organza, oferind un aer delicat și rafinat, perfect pentru evenimentele băiețeilor.",
+    "desc": "Carton premium cu ilustratie ursulet si nori pastel; fundita ivoire din organza. Look delicat si rafinat pentru baietei.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-ivoire.jpg"
     ],
@@ -139,16 +138,16 @@
       "nori",
       "pastel"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-invitati",
-    "google_product_category": ""
+    "slug": "invitatie-botez-cu-ursulet-si-fundita-ivoire-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-ursulet-roz-007",
-    "title": "Invitație de botez cu ursuleț și fundiță roz",
+    "title": "Invitatie botez cu ursulet si fundita roz",
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație de botez realizată pe carton premium, cu ilustrație adorabilă de ursuleț și baloane pastelate. Decorată cu fundiță roz din satin, această invitație aduce o notă delicată și rafinată evenimentului micuței tale.",
+    "desc": "Carton premium cu ursulet si baloane pastel; fundita roz din satin. Stil delicat pentru fetite, personalizare completa.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-roz.jpg"
     ],
@@ -164,16 +163,16 @@
       "balon",
       "roz pudrat"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-invitati",
-    "google_product_category": ""
+    "slug": "invitatie-botez-cu-ursulet-si-fundita-roz-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-pergament-smarald-008",
-    "title": "Invitație pergament cu fundiță verde smarald",
+    "title": "Invitatie pergament cu fundita verde smarald",
     "price": 8.5,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație de nuntă tip pergament, legată manual cu fundiță verde smarald din organza, potrivită pentru evenimente cu tematică naturală sau rustică.",
+    "desc": "Invitatie tip pergament, legata manual cu fundita verde smarald din organza. Potrivita pentru nunta natur/rustic.",
     "images": [
       "/images/invitatii/invitatie-pergament-verde-smarald.jpg"
     ],
@@ -190,15 +189,15 @@
       "natural"
     ],
     "slug": "invitatie-pergament-cu-fundita-verde-smarald-invitati",
-    "google_product_category": ""
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-safari-plic-verde-009",
-    "title": "Invitație de botez Safari cu plic verde",
+    "title": "Invitatie botez Safari cu plic verde",
     "price": 13,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație de botez cu tematică Safari, realizată pe carton premium mat, decorată cu ilustrații adorabile de animale din junglă. Include plic verde elegant, decupat manual cu frunză tropicală. Perfectă pentru un botez plin de culoare și energie!",
+    "desc": "Carton premium mat cu animale de jungla; include plic verde decupat frunza tropicala. Culori vesele, personalizabila.",
     "images": [
       "/images/invitatii/invitatie-botez-safari-plic-verde.jpg"
     ],
@@ -214,16 +213,16 @@
       "natur",
       "tematica"
     ],
-    "slug": "invitatie-de-botez-safari-cu-plic-verde-invitati",
-    "google_product_category": ""
+    "slug": "invitatie-botez-safari-cu-plic-verde-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "invitatie-nunta-ziar-010",
-    "title": "Invitație de nuntă tip Ziar",
+    "title": "Invitatie nunta tip Ziar",
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitație de nuntă inedită, realizată sub forma unui ziar elegant care spune povestea mirilor. Tipărită pe carton mat de calitate, cu detalii grafice inspirate din revistele retro, această invitație oferă o notă unică și memorabilă evenimentului vostru. Legată manual cu sfoară naturală.",
+    "desc": "Design inspirat revista retro, print pe carton mat; spune povestea mirilor. Legata cu sfoara natur. Personalizabila integral.",
     "images": [
       "/images/invitatii/invitatie-nunta-jurnal.jpg"
     ],
@@ -239,23 +238,23 @@
       "carton mat",
       "sfoara"
     ],
-    "slug": "invitatie-de-nunta-tip-ziar-invitati",
-    "google_product_category": ""
+    "slug": "invitatie-nunta-tip-ziar-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "aranjament-pastel-011",
-    "title": "Aranjament floral din lumânări parfumate pastel",
+    "title": "Aranjament floral din lumanari parfumate pastel",
     "price": 95,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
-    "desc": "Aranjament floral realizat manual din lumânări parfumate din ceară naturală de soia. Combinația delicată de nuanțe pastel — roz pudrat, ivoire și piersică — aduce un aer elegant și romantic în orice decor. Ideal ca piesă de centru, cadou rafinat sau decor pentru evenimente speciale.",
+    "desc": "Lumanari din ceara de soia modelate flori, nuante roz pudrat/ivoire/piersica. Piesa de decor sau cadou elegant.",
     "images": [
       "/images/aranjamente/aranjament-floral-lumanari-pastel.jpg"
     ],
     "tags": [
       "aranjamente",
       "florale",
-      "lumânări parfumate",
+      "lumanari parfumate",
       "decor",
       "cadou",
       "soia",
@@ -266,22 +265,22 @@
       "handmade"
     ],
     "slug": "aranjament-floral-din-lumanari-parfumate-pastel-aranjame",
-    "google_product_category": ""
+    "google_product_category": "Home & Garden > Decor > Artificial Flora > Artificial Flower Arrangements"
   },
   {
     "id": "aranjament-inima-roz-012",
-    "title": "Aranjament floral cu inimă și lumânări parfumate",
+    "title": "Aranjament floral cu inima si lumanari parfumate",
     "price": 95,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
-    "desc": "Aranjament floral realizat manual din lumânări parfumate din ceară de soia, în nuanțe de roz și alb, decorat cu inimă și elemente florale uscate. Ideal pentru cadouri elegante sau decor de interior.",
+    "desc": "Lumanari din soia in nuante roz/alb, accente cu inima si flori uscate. Cadou elegant sau decor de interior.",
     "images": [
       "/images/aranjamente/aranjament-floral-inima-roz.jpg"
     ],
     "tags": [
       "aranjamente",
       "florale",
-      "lumânări",
+      "lumanari",
       "cadou",
       "decor",
       "roz",
@@ -291,22 +290,22 @@
       "elegant"
     ],
     "slug": "aranjament-floral-cu-inima-si-lumanari-parfumate-aranjame",
-    "google_product_category": ""
+    "google_product_category": "Home & Garden > Decor > Artificial Flora > Artificial Flower Arrangements"
   },
   {
     "id": "aranjament-mov-alb-013",
-    "title": "Aranjament floral cu lumânări mov și albe",
+    "title": "Aranjament floral cu lumanari mov si albe",
     "price": 145,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
-    "desc": "Aranjament floral elegant realizat manual din lumânări parfumate din ceară de soia, în nuanțe de mov, alb și roz pal. O piesă decorativă rafinată, ideală pentru cadouri sau pentru a înfrumuseța orice spațiu.",
+    "desc": "Lumanari de soia mov/alb/roz pal, stil rafinat. Potrivit pentru cadouri si ambient elegant acasa.",
     "images": [
       "/images/aranjamente/aranjament-floral-mov-alb.jpg"
     ],
     "tags": [
       "aranjamente",
       "florale",
-      "lumânări",
+      "lumanari",
       "mov",
       "alb",
       "decor",
@@ -317,77 +316,69 @@
       "handmade"
     ],
     "slug": "aranjament-floral-cu-lumanari-mov-si-albe-aranjame",
-    "google_product_category": ""
+    "google_product_category": "Home & Garden > Decor > Artificial Flora > Artificial Flower Arrangements"
   },
   {
     "id": "aranjament-roz-iepuras-014",
-    "title": "Aranjament floral roz cu iepuraș și lumânări parfumate",
+    "title": "Aranjament floral roz cu figurina si lumanari parfumate",
     "price": 165,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
-    "desc": "Aranjament floral premium realizat manual din lumânări parfumate din ceară de soia, în nuanțe de roz, alb și crem. Include o figurină decorativă în formă de veveriță și flori sculptate, oferind o notă elegantă și caldă oricărui spațiu. Ideal pentru cadouri rafinate sau decor interior deosebit.",
+    "desc": "Compozitie premium din soia, nuante roz/alb/crem; figurina decorativa si flori sculptate. Cadou deosebit.",
     "images": [
       "/images/aranjamente/aranjament-floral-roz-iepuras.jpg"
     ],
     "tags": [
       "aranjamente",
       "florale",
-      "veverita",
-      "lumânări",
-      "parfumate",
+      "figurina",
+      "lumanari parfumate",
       "cadou",
       "roz",
       "alb",
       "soia",
       "natural",
       "handmade",
-      "lux",
       "premium",
       "decor"
     ],
-    "slug": "aranjament-floral-roz-cu-iepuras-si-lumanari-parfumate-aranjame",
-    "google_product_category": ""
+    "slug": "aranjament-floral-roz-cu-figurina-si-lumanari-parfumate-aranjame",
+    "google_product_category": "Home & Garden > Decor > Artificial Flora > Artificial Flower Arrangements"
   },
   {
     "id": "aranjament-bleu-cos-015",
-    "title": "Aranjament floral bleu din lumânări parfumate în coș împletit",
+    "title": "Aranjament bleu in cos impletit cu lumanari parfumate",
     "price": 89,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
-    "desc": "Aranjament floral compact realizat manual din lumânări parfumate din ceară de soia, modelate în flori alb-bleu și așezate într-un coș împletit din praf de marmură. Accente cu puf decorativ bleu și alb. Ideal ca piesă de decor, cadou de casă nouă sau masă festivă; arde curat, cu aromă delicată.",
+    "desc": "Lumanari din soia in flori alb-bleu, cos tip piatra (praf de marmura), accente puf. Decor curat, aroma delicata.",
     "images": [
       "/images/aranjamente/aranjament-floral-bleu.jpg"
     ],
     "tags": [
       "aranjamente",
       "florale",
-      "aranjament floral",
-      "lumânări parfumate",
-      "ceară de soia",
+      "lumanari parfumate",
+      "soia",
       "bleu",
-      "albastru",
       "alb",
       "flori sculptate",
-      "coș împletit",
+      "cos impletit",
       "cadou",
       "decor interior",
-      "home decor",
-      "minimalist",
       "elegant",
-      "pastel",
-      "handmade",
-      "natural"
+      "pastel"
     ],
-    "slug": "aranjament-floral-bleu-din-lumanari-parfumate-in-cos-impletit-aranjame",
-    "google_product_category": ""
+    "slug": "aranjament-bleu-in-cos-impletit-cu-lumanari-parfumate-aranjame",
+    "google_product_category": "Home & Garden > Decor > Artificial Flora > Artificial Flower Arrangements"
   },
   {
     "id": "aranjament-iepuras-roz-016",
-    "title": "Aranjament floral roz cu iepuraș decorativ și lumânări parfumate",
+    "title": "Aranjament roz cu iepuras si lumanari parfumate",
     "price": 105,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
-    "desc": "Aranjament floral elegant realizat manual din lumânări parfumate din ceară naturală de soia, modelate în forme de flori și figurină decorativă de iepuraș. Nuantele calde de roz pudrat și alb aduc o notă delicată și veselă oricărui spațiu. Ideal ca decor de primăvară, cadou rafinat sau piesă de accent pentru evenimente speciale.",
+    "desc": "Lumanari din soia model flori + figurina iepuras; roz pudrat/alb. Decor de primavara sau cadou rafinat.",
     "images": [
       "/images/aranjamente/aranjament-floral-iepuras-roz-2.jpg"
     ],
@@ -395,81 +386,70 @@
       "aranjamente",
       "florale",
       "iepuras",
-      "lumânări parfumate",
+      "lumanari parfumate",
       "cadou",
       "decor",
       "roz pudrat",
       "soia",
-      "natural",
       "handmade",
-      "elegant",
-      "primavara",
-      "delicat",
-      "cadou femei",
-      "decor interior"
+      "elegant"
     ],
-    "slug": "aranjament-floral-roz-cu-iepuras-decorativ-si-lumanari-parfumate-aranjame",
-    "google_product_category": ""
+    "slug": "aranjament-roz-cu-iepuras-si-lumanari-parfumate-aranjame",
+    "google_product_category": "Home & Garden > Decor > Artificial Flora > Artificial Flower Arrangements"
   },
   {
     "id": "aranjament-creioane-toamna-018",
-    "title": "Aranjament floral cu lumânări parfumate în suport din creioane colorate",
+    "title": "Aranjament cu lumanari parfumate in suport din creioane",
     "price": 150,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
-    "desc": "Aranjament floral handmade realizat din lumânări parfumate din ceară naturală de soia, modelate în forme de flori pastelate și aranjate într-un suport creativ din creioane colorate. Decorat cu flori uscate, iarbă de pampas și fundiță elegantă din satin, este cadoul ideal pentru începutul școlii, ziua educatoarei sau decor de birou. O combinație perfectă între artă, culoare și parfum delicat.",
+    "desc": "Lumanari din soia in flori pastel, suport creativ din creioane; flori uscate, pampas, fundita satin. Cadou profesor/office.",
     "images": [
       "/images/aranjamente/aranjament-floral-creioane-colorate.jpg"
     ],
     "tags": [
       "aranjamente",
       "florale",
-      "lumânări parfumate",
+      "lumanari parfumate",
       "creioane colorate",
       "cadou educatoare",
-      "început de școală",
-      "toamnă",
+      "toamna",
       "decor birou",
       "handmade",
       "soia",
-      "natural",
       "elegant",
       "pastel",
-      "original",
-      "cadou profesor",
-      "aranjament creativ",
-      "flori sculptate"
+      "original"
     ],
-    "slug": "aranjament-floral-cu-lumanari-parfumate-in-suport-din-creioane-colorate-aranjame",
-    "google_product_category": ""
+    "slug": "aranjament-cu-lumanari-parfumate-in-suport-din-creioane-aranjame",
+    "google_product_category": "Home & Garden > Decor > Artificial Flora > Artificial Flower Arrangements"
   },
   {
     "id": "marturie-scoica-perla-015",
-    "title": "Mărturie lumânare scoică cu perlă",
+    "title": "Marturie lumanare scoica cu perla",
     "price": 12,
     "category": "marturii soia",
     "product_type": "marturii soia",
-    "desc": "Mărturie elegantă în formă de scoică, turnată manual din ceară naturală de soia, cu o perlă decorativă în interior. Fiecare piesă este ambalată individual în cutie transparentă, legată cu fundiță albă și etichetă personalizată. Ideală pentru nuntă, botez sau evenimente cu tematică marină.",
+    "desc": "Lumanare din soia in forma de scoica, cu perla decorativa; ambalaj cutie transparenta si fundita. Eticheta personalizata.",
     "images": [
       "/images/marturii/marturie-lumanare-scoica-perla.jpg"
     ],
     "tags": [
       "marturii",
-      "lumânare",
-      "scoică",
-      "perlă",
-      "cutie transparentă",
-      "fundiță albă",
-      "nuntă",
+      "lumanare",
+      "scoica",
+      "perla",
+      "cutie transparenta",
+      "fundita",
+      "nunta",
       "botez",
-      "tematică marină",
+      "marin",
       "handmade",
-      "soia naturală",
-      "elegant",
-      "cadou simbolic"
+      "soia",
+      "elegant"
     ],
     "slug": "marturie-lumanare-scoica-cu-perla-marturie",
-    "google_product_category": ""
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors"
   },
   {
     "id": "plic-boho-verde-016",
@@ -477,7 +457,7 @@
     "price": 4.5,
     "category": "plicuri",
     "product_type": "plicuri",
-    "desc": "Plic de dar elegant, realizat pe carton texturat premium, cu design boho în nuanțe naturale de verde, crem și bej. Model decorativ cu frunze și flori uscate, ideal pentru nuntă sau botez. Poate fi personalizat cu numele mirilor și text de mulțumire.",
+    "desc": "Plic de dar pe carton texturat verde/crem/bej, model cu frunze si flori uscate. Personalizare nume si mesaj.",
     "images": [
       "/images/plicuri/plic-boho-verde-natur.jpg"
     ],
@@ -489,29 +469,28 @@
       "bej",
       "flori uscate",
       "frunze",
-      "nuntă",
+      "nunta",
       "botez",
       "elegant",
       "personalizat",
-      "texturat",
-      "minimalist"
+      "texturat"
     ],
     "slug": "plic-de-dar-boho-verde-natur-plic-boh",
-    "google_product_category": ""
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies"
   },
   {
     "id": "set-invitatie-plic-boho-018",
-    "title": "Set invitație și plic de dar boho natur",
+    "title": "Set invitatie + plic de dar boho natur",
     "price": 17,
     "category": "set",
     "product_type": "set",
-    "desc": "Set elegant compus dintr-o invitație și un plic de dar asortate, realizate manual pe carton texturat premium. Decorate cu sigiliu auriu, flori uscate naturale și sfoară subțire. Perfecte pentru o nuntă cu tematică boho chic sau rustic elegant.",
+    "desc": "Set coordonat pe carton texturat: invitatie + plic de dar; sigiliu auriu, flori uscate, sfoara subtire. Personalizabil.",
     "images": [
       "/images/seturi/set-invitatie-plic-boho-natur.jpg"
     ],
     "tags": [
       "seturi",
-      "invitație",
+      "invitatie",
       "plic",
       "boho",
       "auriu",
@@ -521,11 +500,11 @@
       "elegant",
       "rustic",
       "handmade",
-      "nuntă",
+      "nunta",
       "personalizat"
     ],
-    "slug": "set-invitatie-si-plic-de-dar-boho-natur-set-invi",
-    "google_product_category": ""
+    "slug": "set-invitatie-plic-de-dar-boho-natur-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "plic-boho-auriu-019",
@@ -533,7 +512,7 @@
     "price": 6,
     "category": "plicuri",
     "product_type": "plicuri",
-    "desc": "Plic de dar elegant, realizat pe carton texturat premium, în nuanțe de auriu. Plicul este imprimat pe ambele fețe.",
+    "desc": "Plic de dar pe carton texturat cu nuante aurii, print fata-verso. Stil minimalist si elegant pentru evenimente.",
     "images": [
       "/images/plicuri/plic-boho-auriu-elegant.jpg"
     ],
@@ -542,26 +521,25 @@
       "boho",
       "bej",
       "gri",
-      "natural",
       "texturat",
       "floral",
       "elegant",
       "minimalist",
-      "nuntă",
+      "nunta",
       "botez",
       "handmade",
       "premium"
     ],
     "slug": "plic-de-dar-boho-auriu-elegant-plic-boh",
-    "google_product_category": ""
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies"
   },
   {
     "id": "plic-botez-baietel-veverite-020",
-    "title": "Plic de botez băiețel cu veverițe jucăușe",
+    "title": "Plic botez baietel cu veverite jucause",
     "price": 5,
     "category": "plicuri",
     "product_type": "plicuri",
-    "desc": "Plic de botez adorabil, realizat pe carton mat premium, ilustrat cu două veverițe jucăușe și mesaj de mulțumire personalizat. Design modern și vesel, perfect pentru evenimentele celor mici.",
+    "desc": "Plic pe carton mat premium, ilustratie doua veverite; mesaj de multumire personalizat. Tematica vesela pentru copii.",
     "images": [
       "/images/plicuri/plic-botez-baietel-veverite.jpg"
     ],
@@ -576,21 +554,18 @@
       "cadou",
       "copii",
       "multumire",
-      "elegant",
-      "carton premium",
-      "handmade",
-      "natural"
+      "elegant"
     ],
-    "slug": "plic-de-botez-baietel-cu-veverite-jucause-plic-bot",
-    "google_product_category": ""
+    "slug": "plic-botez-baietel-cu-veverite-jucause-plic-bot",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies"
   },
   {
     "id": "meniu-botez-baietel-veverite-021",
-    "title": "Meniu botez băiețel cu veverițe jucăușe",
+    "title": "Meniu botez baietel cu veverite",
     "price": 7,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu de botez personalizat, imprimat pe carton mat premium, ilustrat cu două veverițe simpatice și ghinde discrete. Design modern și vesel, perfect pentru evenimentele celor mici. Se poate asorta cu invitația și plicul din aceeași colecție.",
+    "desc": "Meniu personalizat pe carton mat premium; grafica cu veverite si ghinde. Se asorteaza cu invitatie/plic din colectie.",
     "images": [
       "/images/meniuri/meniu-botez-baietel-veverite.jpg"
     ],
@@ -604,51 +579,44 @@
       "personalizat",
       "copii",
       "elegant",
-      "carton premium",
-      "handmade",
-      "ghinde",
-      "vesel"
+      "carton premium"
     ],
-    "slug": "meniu-botez-baietel-cu-veverite-jucause-meniu-bo",
-    "google_product_category": ""
+    "slug": "meniu-botez-baietel-cu-veverite-meniu-bo",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies"
   },
   {
     "id": "marturie-lumanare-roz-022",
-    "title": "Mărturie lumânare roz pastel cu flori uscate și etichetă personalizată",
+    "title": "Marturie lumanare roz pastel cu flori uscate",
     "price": 15,
     "category": "marturii soia",
     "product_type": "marturii soia",
-    "desc": "Mărturie elegantă realizată manual din ceară naturală de soia, în nuanță roz pastel. Decorată cu panglică din satin, puf decorativ roz și etichetă personalizată cu numele și data evenimentului. Perfectă pentru botezuri, nunți sau evenimente rafinate cu tematică pastelată.",
+    "desc": "Lumanare din soia roz pastel cu panglica satin, puf decorativ si eticheta personalizata. Potrivita pentru nunta/botez.",
     "images": [
       "/images/marturii/marturie-lumanare-roz.jpg"
     ],
     "tags": [
       "marturii",
-      "lumânare",
+      "lumanare",
       "roz pastel",
       "pene",
-      "etichetă personalizată",
+      "eticheta personalizata",
       "handmade",
-      "soia naturală",
+      "soia naturala",
       "elegant",
       "botez",
-      "nuntă",
-      "cadou",
-      "delicat",
-      "pastel",
-      "decor",
-      "satin"
+      "nunta",
+      "cadou"
     ],
-    "slug": "marturie-lumanare-roz-pastel-cu-flori-uscate-si-eticheta-personalizata-marturie",
-    "google_product_category": ""
+    "slug": "marturie-lumanare-roz-pastel-cu-flori-uscate-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors"
   },
   {
     "id": "set-invitatie-plic-botez-bleu-023",
-    "title": "Set invitație și plic botez bleu cu fundiță și ursuleț",
+    "title": "Set invitatie + plic botez bleu cu fundita si ursulet",
     "price": 14,
     "category": "seturi",
     "product_type": "seturi",
-    "desc": "Set de botez complet, alcătuit din invitație elegantă și plic de dar asortat, ambele în nuanțe pastel de bleu. Decor cu fundiță din organza, ilustrații de ursuleț și Mickey, perfect pentru băieței. Realizat pe carton premium mat, ideal pentru un botez cu tematică dulce și modernă.",
+    "desc": "Invitatie si plic asortate in bleu pastel; fundita organza, ilustratii ursulet/Mickey. Carton premium mat, personalizabile.",
     "images": [
       "/images/seturi/set-invitatie-plic-botez-bleu.jpg"
     ],
@@ -657,7 +625,7 @@
       "botez",
       "baietel",
       "set",
-      "invitație",
+      "invitatie",
       "plic",
       "fundita bleu",
       "ursulet",
@@ -665,21 +633,18 @@
       "bleu pastel",
       "personalizat",
       "elegant",
-      "handmade",
-      "copii",
-      "tematic",
-      "modern"
+      "handmade"
     ],
-    "slug": "set-invitatie-si-plic-botez-bleu-cu-fundita-si-ursulet-set-invi",
-    "google_product_category": ""
+    "slug": "set-invitatie-plic-botez-bleu-cu-fundita-si-ursulet-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations"
   },
   {
     "id": "plic-botez-bleu-ursulet-024",
-    "title": "Plic de botez bleu cu ursuleț și Mickey",
+    "title": "Plic botez bleu cu ursulet si Mickey",
     "price": 4.5,
     "category": "plicuri",
     "product_type": "plicuri",
-    "desc": "Plic de botez adorabil, realizat pe carton mat premium, decorat cu ilustrații de ursuleț și Mickey Mouse. Nuanțele pastel de bleu oferă un aer delicat și jucăuș, perfect pentru evenimentele băiețeilor. Personalizabil cu nume și dată, ideal de asortat cu invitația din aceeași colecție.",
+    "desc": "Plic de botez pe carton mat premium; ilustratii ursulet si Mickey; nuante bleu pastel. Personalizare nume si data.",
     "images": [
       "/images/plicuri/plic-botez-bleu-ursulet.jpg"
     ],
@@ -694,11 +659,9 @@
       "elegant",
       "copii",
       "tematic",
-      "carton premium",
-      "jucaus",
       "handmade"
     ],
-    "slug": "plic-de-botez-bleu-cu-ursulet-si-mickey-plic-bot",
-    "google_product_category": ""
+    "slug": "plic-botez-bleu-cu-ursulet-si-mickey-plic-bot",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies"
   }
 ]
