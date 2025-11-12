@@ -53,7 +53,7 @@ const esc = (s) => (s || "").replace(/[&<>"']/g, c => (
 // root-absolute pentru servire web
 const toRootAbs = (u) => {
   if (!u) return "";
-  if (/^https?:\/\//i.test(u)) return u;
+  if (/^https?:\/\//i.test(u)) return u.replace(ORIGIN, ""); // normalizează spre root
   return "/" + String(u).replace(/^\/+/, "");
 };
 // absolute (cu ORIGIN) pentru meta / feed
@@ -70,17 +70,29 @@ const jsTagIfExists  = (filename) => exists(ROOT, filename)
   ? `<script defer src="/${filename}"></script>`
   : "";
 
+// ---- map categorii pentru breadcrumbs ----
+const CATEGORY_MAP = {
+  "invitatii": { name: "Invitații", url: "/invitatii.html" },
+  "plicuri": { name: "Plicuri de dar", url: "/plicuri.html" },
+  "meniuri": { name: "Meniuri", url: "/meniuri.html" },
+  "aranjamente-florale": { name: "Aranjamente florale", url: "/aranjamente-florale.html" },
+  "seturi": { name: "Seturi", url: "/seturi.html" },
+  "marturii soia": { name: "Mărturii", url: "/marturii.html" }
+};
+
 // ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
   const brand = "Boundless Collection";
   const title = esc(prod.title || "");
   const desc  = esc(prod.desc || title);
-  const price = Number(prod.price || 0).toFixed(2) + " RON";
+  const priceStr = Number(prod.price || 0).toFixed(2);
+  const price = priceStr + " RON";
 
   const relImgs = (prod.images || []).map(toRootAbs);
   const imagesAbsForMeta = (prod.images || []).map(toAbs);
   const ogImg = imagesAbsForMeta[0] || `${ORIGIN}/content/preview.jpg`;
   const firstImg = relImgs[0] || "/content/preview.jpg";
+
   const url = `${ORIGIN}/p/${prod.slug}.html`;
 
   const waMsg  = encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`);
@@ -97,6 +109,53 @@ function pageTemplate(prod) {
   const jsGlobal   = jsTagIfExists("script.js");
   const jsGallery  = ""; // jsTagIfExists("gallery.js");
   const jsProduct  = ""; // jsTagIfExists("product.js");
+
+  // -------- JSON-LD: Product + BreadcrumbList --------
+  const priceValidUntil = new Date(new Date().getFullYear() + 1, 11, 31)
+    .toISOString().slice(0, 10);
+
+  const bc = CATEGORY_MAP[prod.product_type || prod.category] || { name: "Produse", url: "/index.html#produse" };
+
+  const productLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${url}#product`,
+    name: prod.title || "",
+    description: prod.desc || prod.title || "",
+    image: imagesAbsForMeta,
+    brand: { "@type": "Brand", name: brand },
+    category: prod.category || "",
+    sku: prod.id,
+    mpn: prod.mpn || prod.id,
+    ...(prod.material ? { material: prod.material } : {}),
+    offers: {
+      "@type": "Offer",
+      url,
+      priceCurrency: "RON",
+      price: priceStr,
+      priceValidUntil,
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: { "@type": "Organization", name: brand },
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 14,
+        applicableCountry: "RO",
+        returnMethod: "https://schema.org/Mail"
+      }
+    }
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Acasă", item: `${ORIGIN}/` },
+      { "@type": "ListItem", position: 2, name: bc.name, item: `${ORIGIN}${bc.url}` },
+      { "@type": "ListItem", position: 3, name: prod.title || "", item: url }
+    ]
+  };
 
   return `<!doctype html>
 <html lang="ro">
@@ -117,24 +176,8 @@ function pageTemplate(prod) {
   ${faviconPng ? `<link rel="icon" type="image/png" href="${faviconPng}">` : ""}
   ${faviconIco ? `<link rel="icon" type="image/x-icon" href="${faviconIco}">` : ""}
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "${esc(title)}",
-  "description": "${desc}",
-  "image": ${JSON.stringify((prod.images || []).map(toAbs))},
-  "brand": { "@type": "Brand", "name": "Boundless Collection" },
-  "category": "${esc(prod.category || "")}",
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "RON",
-    "price": "${Number(prod.price || 0).toFixed(2)}",
-    "availability": "https://schema.org/InStock",
-    "url": "${url}"
-  }
-}
-</script>
+  <script type="application/ld+json">${JSON.stringify(productLd)}</script>
+  <script type="application/ld+json">${JSON.stringify(breadcrumbLd)}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -291,7 +334,7 @@ function exportMerchantCSV(products) {
       "in stock",
       "new",
       "Boundless Collection",
-      p.id,
+      p.mpn || p.id, // mpn (fallback id)
       p.google_product_category || "",
       p.product_type || p.category || ""
     ]);
@@ -334,6 +377,9 @@ function main() {
     const product_type = r.product_type || category || "";
     const gpc = r.google_product_category || "";
 
+    // opțional: material dacă există în CSV (altfel omis din JSON-LD)
+    const material = r.material || "";
+
     return {
       id,
       title,
@@ -344,7 +390,9 @@ function main() {
       images,
       tags,
       slug,
-      google_product_category: gpc
+      google_product_category: gpc,
+      material,
+      mpn: r.mpn || "" // dacă vrei să treci MPNe reale în CSV, altfel rămâne fallback la id
     };
   });
 
@@ -382,7 +430,7 @@ function main() {
 </urlset>`;
   fs.writeFileSync(path.join(OUT, "sitemap.xml"), sitemap, "utf8");
 
-  // 7) feed Merchant (acum include google_product_category + product_type)
+  // 7) feed Merchant (include google_product_category + product_type + mpn)
   console.log("DEBUG: export Merchant – produse:", products.length);
   exportMerchantCSV(products);
 
