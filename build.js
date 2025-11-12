@@ -5,8 +5,8 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
-const ROOT = __dirname;                        // rădăcina repo-ului
-const OUT  = path.join(ROOT, "public");        // directorul servit de hosting (web root)
+const ROOT = __dirname;                         // rădăcina repo-ului
+const OUT  = path.join(ROOT, "public");         // directorul servit de hosting (web root)
 
 const CSV_FILE  = path.join(ROOT, "content", "products.csv");
 const JSON_OUT  = path.join(ROOT, "content", "products.json");
@@ -41,7 +41,7 @@ const exists = (...parts) => fs.existsSync(path.join(...parts));
 // ---------------- helpers ----------------
 const slugify = (str) => (str || "")
   .toString()
-  .normalize("NFKD").replace(/[\u0300-\u036f]/g, "")        // strip diacritice
+  .normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
   .replace(/[^a-z0-9\s-]/gi, "")
   .trim().replace(/\s+/g, "-").replace(/-+/g, "-")
   .toLowerCase();
@@ -125,7 +125,7 @@ function pageTemplate(prod) {
   "description": "${desc}",
   "image": ${JSON.stringify((prod.images || []).map(toAbs))},
   "brand": { "@type": "Brand", "name": "Boundless Collection" },
-  "category": "${esc(prod.product_type || "")}",
+  "category": "${esc(prod.category || "")}",
   "offers": {
     "@type": "Offer",
     "priceCurrency": "RON",
@@ -293,7 +293,7 @@ function exportMerchantCSV(products) {
       "Boundless Collection",
       p.id,
       p.google_product_category || "",
-      p.product_type || ""
+      p.product_type || p.category || ""
     ]);
   });
 
@@ -318,8 +318,9 @@ function main() {
   const rows = parseCSV(fs.readFileSync(CSV_FILE, "utf8"));
 
   const products = rows.map((r) => {
-    const id  = r.id || crypto.randomUUID();
-    const slug = slugify(`${r.title || ""}-${id.slice(0, 8)}`);
+    const id    = r.id || crypto.randomUUID();
+    const title = r.title || "";
+    const slug  = slugify(`${title}-${id.slice(0, 8)}`);
 
     const images = (r.images || "")
       .split("|").map(s => s.trim()).filter(Boolean)
@@ -328,16 +329,17 @@ function main() {
     const tags = (r.tags || "")
       .split("|").map(s => s.trim()).filter(Boolean);
 
-    // nou: citim GPC + expunem și product_type (din category)
+    // nou: citim și păstrăm google_product_category și product_type (egale cu category)
+    const category = r.category || "";
+    const product_type = r.product_type || category || "";
     const gpc = r.google_product_category || "";
-    const productType = r.category || "";
 
     return {
       id,
-      title: r.title || "",
+      title,
       price: Number(r.price || 0),
-      category: r.category || "",
-      product_type: productType,
+      category,
+      product_type,
       desc: r.desc || "",
       images,
       tags,
@@ -380,8 +382,8 @@ function main() {
 </urlset>`;
   fs.writeFileSync(path.join(OUT, "sitemap.xml"), sitemap, "utf8");
 
-  // 7) feed Merchant
-  console.log("DEBUG: pregătesc exportul Merchant – produse:", products.length);
+  // 7) feed Merchant (acum include google_product_category + product_type)
+  console.log("DEBUG: export Merchant – produse:", products.length);
   exportMerchantCSV(products);
 
   console.log(`\n✔ ${products.length} produs(e) -> JSON + pagini + sitemap + feed Merchant`);
