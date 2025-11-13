@@ -6,27 +6,43 @@ body[data-page="craciun"] {
 }
 
 /* FULGI DE ZĂPADĂ */
+/* ===== Fulgi de zapada pur CSS (fara imagini externe) ===== */
 body[data-page="craciun"]::before,
 body[data-page="craciun"]::after {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   pointer-events: none;
   z-index: 1;
   background-repeat: repeat;
-  animation: snow 25s linear infinite;
-  opacity: 0.25;
+  background-size: 220px 220px;
+  animation: snow 35s linear infinite;
 }
 
-/* strat 1 */
+/* strat fulgi mari */
 body[data-page="craciun"]::before {
-  background-image: url("https://i.imgur.com/0M3HchU.png");
-  animation-duration: 45s;
-  opacity: .25;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.95) 0, rgba(255,255,255,0.95) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.7) 0, rgba(255,255,255,0.7) 1px, transparent 2px);
+  opacity: 0.35;
+  animation-duration: 40s;
 }
+
+/* strat fulgi mici */
+body[data-page="craciun"]::after {
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.9) 1.5px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.6) 0, rgba(255,255,255,0.6) 1px, transparent 2px);
+  opacity: 0.45;
+  animation-duration: 25s;
+}
+
+/* miscare fulgi */
+@keyframes snow {
+  0%   { background-position: 0 -300px; }
+  100% { background-position: 0 300px; }
+}
+
 
 /* strat 2 */
 body[data-page="craciun"]::after {
