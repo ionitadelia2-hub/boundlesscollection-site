@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Colecția de Crăciun • Boundless Collection</title>
+
+  <link rel="canonical" href="https://boundlesscollection.ro/craciun.html" />
+
+  <meta name="description" content="Lumânări parfumate de Crăciun, decorațiuni handmade, seturi cadou și ornamente festive create manual în atelierul Boundless Collection.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:url" content="https://boundlesscollection.ro/craciun.html">
+  <meta property="og:title" content="Colecția de Crăciun • Boundless Collection">
+  <meta property="og:description" content="Decorațiuni handmade de Crăciun: lumânări parfumate, aranjamente festive, accesorii tematice și cadouri personalizate.">
+  <meta property="og:image" content="https://boundlesscollection.ro/images/delia-avatar-1200x630.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- JSON-LD Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      { "@type":"ListItem", "position":1, "name":"Acasă", "item":"https://boundlesscollection.ro/" },
+      { "@type":"ListItem", "position":2, "name":"Crăciun", "item":"https://boundlesscollection.ro/craciun.html" }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Colecția de Crăciun",
+    "about": {
+      "@type": "Thing",
+      "name": "Decoratiuni și cadouri handmade de Crăciun"
+    },
+    "url": "https://boundlesscollection.ro/craciun.html",
+    "isPartOf": "https://boundlesscollection.ro/"
+  }
+  </script>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="/" aria-label="Boundless Collection - Acasă">
+      <img src="/images/delia-avatar.png" alt="Delia – Boundless Collection" width="64">
+      <div class="brand-title">Boundless Collection</div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Meniu"></button>
+
+    <nav>
+      <ul id="mainmenu">
+        <li class="has-sub">
+          <a id="productsToggle">Produse</a>
+          <ul class="sub">
+            <li><a href="/marturii.html">Prezentare Mărturii</a></li>
+            <li><a href="/invitatii.html">Prezentare Invitații</a></li>
+            <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
+            <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
+            <li><a href="/numere-masa.html">Prezentare Numere</a></li>
+            <li><a href="/stickere-oglinda.html">Prezentare Stickere Oglindă</a></li>
+            <li><a href="/aranjamente-florale.html">Prezentare Aranjamente</a></li>
+            <li><a href="/seturi.html">Prezentare Seturi</a></li>
+            <li><a href="/craciun.html" aria-current="page">Colecția de Crăciun</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="container">
+  <h1 class="section-title">Colecția de Crăciun</h1>
+  <p class="section-sub">
+    Aranjamente festive, lumânări parfumate, cadouri personalizate și decorațiuni handmade pentru Crăciun.
+  </p>
+
+  <div id="grid" class="grid products"></div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <small>© <span id="year"></span> Boundless Collection</small>
+    <small>Realizat cu pasiune ✨</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  window.PAGE_CATEGORY = "craciun";
+</script>
+
+<script defer src="/script.js"></script>
+
+</body>
+</html>

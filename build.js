@@ -78,7 +78,8 @@ const CATEGORY_MAP = {
   "aranjamente-florale": { name: "Aranjamente florale", url: "/aranjamente-florale.html" },
   "seturi": { name: "Seturi", url: "/seturi.html" },
   "marturii soia": { name: "Mărturii", url: "/marturii.html" },
-  "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" }
+  "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
+  "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" }
 };
 
 // ---------------- template pagină produs ----------------

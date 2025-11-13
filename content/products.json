@@ -741,5 +741,32 @@
     "google_product_category": "Home & Garden > Decor > Decals & Stickers",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "lumanare-brad-craciun-025",
+    "title": "Lumanare parfumata brad de Craciun",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare parfumata turnata manual din ceara de soia, in forma de brad de Craciun, cu detalii in relief (brazi, ren, fulgi de zapada). Ideala pentru decorul de iarna sau cadouri festive. Pretul este pentru 1 bucata, iar culoarea si aroma pot fi personalizate.",
+    "images": [
+      "/images/craciun/lumanare-brad-craciun.jpg"
+    ],
+    "tags": [
+      "lumanare",
+      "craciun",
+      "decor",
+      "brad",
+      "cadou",
+      "parfumata",
+      "soia",
+      "handmade",
+      "sezon",
+      "iarna"
+    ],
+    "slug": "lumanare-parfumata-brad-de-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
   }
 ]
