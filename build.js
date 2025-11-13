@@ -216,6 +216,7 @@ function pageTemplate(prod) {
               <li><a href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
               <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
               <li><a href="/seturi.html">Prezentare Seturi</a></li>
+              <li><a href="/craciun.html">Prezentare Colectia de Crăciun</a></li>
             </ul>
           </li>
           <li><a href="/index.html">Acasă</a></li>
