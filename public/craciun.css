@@ -5,8 +5,7 @@ body[data-page="craciun"] {
   overflow-x: hidden;
 }
 
-/* FULGI DE ZĂPADĂ */
-/* ===== Fulgi de zapada pur CSS (fara imagini externe) ===== */
+/* FULGI DE ZĂPADĂ – 2 straturi, mai dese și mai vizibile */
 body[data-page="craciun"]::before,
 body[data-page="craciun"]::after {
   content: "";
@@ -15,7 +14,6 @@ body[data-page="craciun"]::after {
   pointer-events: none;
   z-index: 1;
   background-repeat: repeat;
-  background-size: 220px 220px;
   animation: snow 35s linear infinite;
 }
 
@@ -24,9 +22,9 @@ body[data-page="craciun"]::before {
   background-image:
     radial-gradient(circle, rgba(255,255,255,0.95) 0, rgba(255,255,255,0.95) 3px, transparent 4px),
     radial-gradient(circle, rgba(255,255,255,0.75) 0, rgba(255,255,255,0.75) 2px, transparent 3px);
-  background-size: 180px 180px;  /* era 220px – acum mai des */
-  opacity: 0.65;                /* era 0.35 – acum se vede mai clar */
-  animation-duration: 30s;      /* mai rapid */
+  background-size: 180px 180px;  /* mai des */
+  opacity: 0.65;                 /* mai vizibil */
+  animation-duration: 30s;       /* mai rapid */
 }
 
 /* strat fulgi mici */
@@ -34,9 +32,9 @@ body[data-page="craciun"]::after {
   background-image:
     radial-gradient(circle, rgba(255,255,255,0.95) 0, rgba(255,255,255,0.95) 2px, transparent 3px),
     radial-gradient(circle, rgba(255,255,255,0.65) 0, rgba(255,255,255,0.65) 1.5px, transparent 2.5px);
-  background-size: 140px 140px;  /* mai des */
-  opacity: 0.55;                 /* era 0.45 */
-  animation-duration: 18s;       /* mai rapid */
+  background-size: 140px 140px;  /* si mai des */
+  opacity: 0.55;
+  animation-duration: 18s;
 }
 
 /* miscare fulgi */
@@ -45,36 +43,50 @@ body[data-page="craciun"]::after {
   100% { background-position: 0 1200px; }
 }
 
-
-
-
-/* ====== Titlu & subtitlu ====== */
+/* ====== Titlu & subtitlu – centrate, text negru ====== */
 [data-page="craciun"] .section-title {
   font-family: "Playfair Display", serif;
-  font-size: 2.4rem;
-  color: #b40036;
-  text-shadow: 0 2px 6px rgba(255, 0, 86, 0.1);
+  font-size: 2.6rem;
+  color: #000; /* negru */
+  text-align: center;
+  margin-top: 2rem !important;
+  margin-bottom: 0.75rem;
+  text-shadow: none;
 }
 
 [data-page="craciun"] .section-sub {
-  font-size: 1.1rem;
-  color: #772040;
-  max-width: 640px;
+  font-size: 1.2rem;
+  color: #111; /* negru închis */
+  max-width: 750px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
 }
 
-/* ====== Carduri de produs ====== */
+/* ====== Carduri de produs cu glow animat ====== */
 [data-page="craciun"] .item {
   background: #ffffffd8;
   border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(182, 0, 58, 0.08);
   border: 1px solid #ffe2ea;
   backdrop-filter: blur(4px);
+
+  /* glow de baza + animatie */
+  box-shadow: 0 0 18px rgba(255, 105, 150, 0.14);
+  animation: glow-craciun 3.5s ease-in-out infinite;
+
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
+/* animația de glow (pulse) */
+@keyframes glow-craciun {
+  0%   { box-shadow: 0 0 18px rgba(255, 105, 150, 0.14); }
+  50%  { box-shadow: 0 0 32px rgba(255, 40, 120, 0.30); }
+  100% { box-shadow: 0 0 18px rgba(255, 105, 150, 0.14); }
+}
+
+/* Hover: se ridică puțin și glow mai puternic */
 [data-page="craciun"] .item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(182, 0, 58, 0.14);
+  transform: translateY(-5px);
+  box-shadow: 0 0 44px rgba(255, 40, 120, 0.42);
 }
 
 /* Badge categorie CRACIUN */
@@ -90,7 +102,7 @@ body[data-page="craciun"]::after {
   font-weight: 600;
 }
 
-/* ====== WhatsApp buton ====== */
+/* ====== WhatsApp plutitor – rotunjit ====== */
 [data-page="craciun"] .whatsapp-wrapper {
   background: #25d366;
   border-radius: 40px;
