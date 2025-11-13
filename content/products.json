@@ -715,5 +715,31 @@
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "sticker-oglinda-auriu-caligrafic-001",
+    "title": "Sticker oglinda personalizat auriu (nume + data)",
+    "price": 55,
+    "category": "stickere oglinda",
+    "product_type": "stickere oglinda",
+    "desc": "Autocolant caligrafic pentru oglinda de intampinare: nume mirii + data, vinil auriu lucios. Se livreaza gata de aplicat, cu folie de transfer. Dimensiuni si text personalizabile.",
+    "images": [
+      "/images/stickere/sticker-oglinda-auriu-mara-alexandru-2025.jpg"
+    ],
+    "tags": [
+      "stickere oglinda",
+      "oglinda intampinare",
+      "nunta",
+      "autocolant text",
+      "caligrafic",
+      "auriu",
+      "personalizat",
+      "eveniment",
+      "semnalistica eleganta"
+    ],
+    "slug": "sticker-oglinda-personalizat-auriu-nume-data-sticker-",
+    "google_product_category": "Home & Garden > Decor > Decals & Stickers",
+    "material": "",
+    "mpn": ""
   }
 ]
