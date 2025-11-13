@@ -44,18 +44,7 @@ body[data-page="craciun"]::after {
 }
 
 
-/* strat 2 */
-body[data-page="craciun"]::after {
-  background-image: url("https://i.imgur.com/0M3HchU.png");
-  animation-duration: 22s;
-  opacity: .35;
-}
 
-/* Animația fulgilor */
-@keyframes snow {
-  0% { background-position: 0 -1000px; }
-  100% { background-position: 0 1000px; }
-}
 
 /* ====== Titlu & subtitlu ====== */
 [data-page="craciun"] .section-title {
