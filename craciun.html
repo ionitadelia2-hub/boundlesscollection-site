@@ -40,8 +40,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/craciun.css"> <!-- stilul special -->
-  
+  <link rel="stylesheet" href="/craciun.css">
+
   <!-- JSON-LD Breadcrumbs -->
   <script type="application/ld+json">
   {
@@ -68,7 +68,6 @@
     "isPartOf": "https://boundlesscollection.ro/"
   }
   </script>
-
 </head>
 
 <body data-page="craciun">
@@ -82,30 +81,31 @@
         <div class="brand-title">Boundless Collection</div>
       </a>
 
-      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Deschide meniul">
+        <span></span>
+      </button>
 
       <nav class="site-nav" aria-label="Meniu principal">
         <ul id="mainmenu" role="menubar">
           <li class="has-sub" role="none">
             <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
-
-            <ul class="sub" role="menu">
-              <li><a href="/marturii.html">Prezentare Mărturii</a></li>
-              <li><a href="/invitatii.html">Prezentare Invitații</a></li>
-              <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-              <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
-              <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
-              <li><a href="/stickere-oglinda.html">Prezentare Stickere Oglindă</a></li>
-              <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-              <li><a href="/seturi.html">Prezentare Seturi</a></li>
-              <li><a href="/craciun.html" aria-current="page">Colecția de Crăciun</a></li>
+            <ul class="sub" role="menu" aria-label="Submeniu Produse">
+              <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
+              <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
+              <li role="none"><a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a></li>
+              <li role="none"><a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a></li>
+              <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
+              <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
+              <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
+              <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
+              <li role="none"><a role="menuitem" href="/craciun.html" aria-current="page">Colecția de Crăciun</a></li>
             </ul>
           </li>
 
           <li><a href="/">Acasă</a></li>
-          <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank">Instagram</a></li>
-          <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank">Facebook</a></li>
-          <li><a class="cta" href="https://wa.me/40760617724" target="_blank">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </nav>
     </div>
@@ -114,7 +114,9 @@
   <!-- CONȚINUT -->
   <section class="container" id="produse">
     <h1 class="section-title">Colecția de Crăciun</h1>
-    <p class="section-sub">Aranjamente festive, lumânări parfumate, cadouri personalizate și decorațiuni handmade pentru sărbători.</p>
+    <p class="section-sub">
+      Aranjamente festive, lumânări parfumate, cadouri personalizate și decorațiuni handmade pentru sărbători.
+    </p>
 
     <div id="grid" class="grid products" aria-live="polite"></div>
   </section>
@@ -128,16 +130,65 @@
   </footer>
 
   <!-- WhatsApp plutitor -->
-  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" title="Scrie-mi pe WhatsApp">
+  <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener" title="Scrie-mi pe WhatsApp">
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- JS: anul + meniu + categoria -->
+  <!-- JS: anul + meniu mobil + dropdown + categoria -->
   <script>
+    // Anul în footer
     document.getElementById('year').textContent = new Date().getFullYear();
-    window.PAGE_CATEGORY = "craciun";  // foarte important!
+
+    // Meniu mobil (hamburger)
+    (function(){
+      const btn  = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('mainmenu');
+      if(!btn || !menu) return;
+
+      function closeAll(){
+        document.body.classList.remove('menu-open');
+        btn.setAttribute('aria-expanded','false');
+        document.querySelector('.has-sub')?.classList.remove('open');
+        document.getElementById('productsToggle')?.setAttribute('aria-expanded','false');
+      }
+
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        const open = document.body.classList.toggle('menu-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      document.addEventListener('click', (e)=>{
+        if (!document.body.classList.contains('menu-open')) return;
+        const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
+        if (!inside) closeAll();
+      });
+    })();
+
+    // Dropdown „Produse” – click/hover/Esc
+    (function () {
+      const item = document.querySelector('.has-sub');
+      const btn  = document.getElementById('productsToggle');
+      if (!item || !btn) return;
+
+      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+
+      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
+      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+
+      // Hover pe desktop
+      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
+      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
+    })();
+
+    // Categoria pentru script.js (filtrare produse)
+    window.PAGE_CATEGORY = 'craciun';
   </script>
 
+  <!-- Catalog produse -->
   <script defer src="/script.js"></script>
 </body>
 </html>
