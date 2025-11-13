@@ -22,25 +22,27 @@ body[data-page="craciun"]::after {
 /* strat fulgi mari */
 body[data-page="craciun"]::before {
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.95) 0, rgba(255,255,255,0.95) 2px, transparent 3px),
-    radial-gradient(circle, rgba(255,255,255,0.7) 0, rgba(255,255,255,0.7) 1px, transparent 2px);
-  opacity: 0.35;
-  animation-duration: 40s;
+    radial-gradient(circle, rgba(255,255,255,0.95) 0, rgba(255,255,255,0.95) 3px, transparent 4px),
+    radial-gradient(circle, rgba(255,255,255,0.75) 0, rgba(255,255,255,0.75) 2px, transparent 3px);
+  background-size: 180px 180px;  /* era 220px – acum mai des */
+  opacity: 0.65;                /* era 0.35 – acum se vede mai clar */
+  animation-duration: 30s;      /* mai rapid */
 }
 
 /* strat fulgi mici */
 body[data-page="craciun"]::after {
   background-image:
-    radial-gradient(circle, rgba(255,255,255,0.9) 0, rgba(255,255,255,0.9) 1.5px, transparent 3px),
-    radial-gradient(circle, rgba(255,255,255,0.6) 0, rgba(255,255,255,0.6) 1px, transparent 2px);
-  opacity: 0.45;
-  animation-duration: 25s;
+    radial-gradient(circle, rgba(255,255,255,0.95) 0, rgba(255,255,255,0.95) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.65) 0, rgba(255,255,255,0.65) 1.5px, transparent 2.5px);
+  background-size: 140px 140px;  /* mai des */
+  opacity: 0.55;                 /* era 0.45 */
+  animation-duration: 18s;       /* mai rapid */
 }
 
 /* miscare fulgi */
 @keyframes snow {
-  0%   { background-position: 0 -300px; }
-  100% { background-position: 0 300px; }
+  0%   { background-position: 0 -1200px; }
+  100% { background-position: 0 1200px; }
 }
 
 
