@@ -933,5 +933,59 @@
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "lumanare-brad-nivele-031",
+    "title": "Lumanare decorativa brad in straturi Craciun",
+    "price": 28,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa turnata manual din ceara de soia, model brad cu straturi ondulate si detalii in relief. Accesorizata cu fundita aurie si clopotel metalic. Ideala pentru decorul de iarna, aranjamente de Craciun si cadouri festive. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-brad-nivele.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "brad",
+      "lumanare",
+      "decor",
+      "iarna",
+      "straturi",
+      "soia",
+      "handmade",
+      "cadou",
+      "sarbatori"
+    ],
+    "slug": "lumanare-decorativa-brad-in-straturi-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-brad-bile-031",
+    "title": "Lumanare decorativa brad din bile Craciun",
+    "price": 32,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa turnata manual din ceara de soia, model brad format din bile sculptate tridimensional. Accesorizata cu fundita aurie si clopotel metalic. Piesa eleganta pentru decorul de iarna, aranjamente festive sau cadouri personalizate de Craciun. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate.",
+    "images": [
+      "/images/craciun/lumanare-brad-bile.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "brad",
+      "bile",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "sarbatori",
+      "iarna"
+    ],
+    "slug": "lumanare-decorativa-brad-din-bile-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
   }
 ]
