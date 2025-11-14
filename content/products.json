@@ -768,5 +768,143 @@
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "lumanare-gnom-bradut-026",
+    "title": "Lumanare gnom Craciun cu funda aurie si bradut",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa in forma de gnom, turnata manual din ceara de soia, cu funda aurie si bradut. Ideala pentru decorul de iarna sau cadouri de Craciun. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate la comandă.",
+    "images": [
+      "/images/craciun/lumanare-gnom-bradut.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "gnom",
+      "lumanare",
+      "argintiu",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "iarna"
+    ],
+    "slug": "lumanare-gnom-craciun-cu-funda-aurie-si-bradut-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-brad-fulgi-029",
+    "title": "Lumanare brad Craciun",
+    "price": 28,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa turnata manual din ceara de soia, model brad cu textura tip frunza. Decorata cu funda argintie si colpotel auriu. Ideala pentru decorul de sarbatori sau cadouri de Craciun. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate.",
+    "images": [
+      "/images/craciun/lumanare-brad-fulgi.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "brad",
+      "lumanare",
+      "decor",
+      "iarna",
+      "cadou",
+      "argintiu",
+      "soia",
+      "handmade",
+      "sarbatori"
+    ],
+    "slug": "lumanare-brad-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-gnom-fetita-028",
+    "title": "Lumanare parfumata gnom fetita cu codite",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare turnata manual din ceara de soia, in forma de gnomita cu codite si palarie decorata cu fulgi argintii. Ideala pentru decorul de iarna sau cadouri festive. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate.",
+    "images": [
+      "/images/craciun/lumanare-gnom-fetita.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "gnom",
+      "fetita",
+      "codite",
+      "fulgi",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "iarna",
+      "personalizabil"
+    ],
+    "slug": "lumanare-parfumata-gnom-fetita-cu-codite-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-gingerbread-om-turta-dulce-026",
+    "title": "Lumanare omulet turta dulce Craciun",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare turnata manual din ceara de soia, in forma de omulet turta dulce. Detalii in relief, finisaj mat, perfecta pentru decorul de iarna sau cadouri festive. Pretul este pentru 1 bucata, fara aroma. Culoarea si aroma pot fi personalizate.",
+    "images": [
+      "/images/craciun/lumanare-omulet-turta-dulce.jpg"
+    ],
+    "tags": [
+      "lumanare",
+      "turta dulce",
+      "gingerbread",
+      "craciun",
+      "decor",
+      "cadou",
+      "parfumata",
+      "soia",
+      "handmade",
+      "sezon",
+      "sarabatori"
+    ],
+    "slug": "lumanare-omulet-turta-dulce-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "gnom-brad-cana-027",
+    "title": "Lumanare gnom cu brad si cana Craciun",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare turnata manual din ceara de soia, model gnom de Craciun cu brad si cana in mana. Detalii fine, aspect decorativ elegant. Pretul este pentru 1 bucata, fara aroma. Culoarea si aroma pot fi personalizate.",
+    "images": [
+      "/images/craciun/lumanare-gnom-brad-cana.jpg"
+    ],
+    "tags": [
+      "gnom",
+      "craciun",
+      "decor",
+      "lumanare",
+      "soia",
+      "brad",
+      "cana",
+      "cadou",
+      "handmade",
+      "sezon",
+      "iarna"
+    ],
+    "slug": "lumanare-gnom-cu-brad-si-cana-craciun-gnom-bra",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
   }
 ]
