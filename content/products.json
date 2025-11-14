@@ -906,5 +906,32 @@
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "lumanare-con-brad-con-de-pin-030",
+    "title": "Lumanare decorativa con de brad Craciun",
+    "price": 28,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa turnata manual din ceara de soia, model con de brad cu textura realista. Accesorizata cu fundita aurie si clopotel metalic, perfecta pentru decorul de iarna, aranjamente festive si cadouri tematice. Arde curat si uniform; culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-con-brad-con-de-pin.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "decor",
+      "iarna",
+      "con de brad",
+      "pin",
+      "soia",
+      "handmade",
+      "cadou",
+      "sarbatori"
+    ],
+    "slug": "lumanare-decorativa-con-de-brad-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
   }
 ]
