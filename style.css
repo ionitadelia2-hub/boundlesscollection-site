@@ -1106,3 +1106,15 @@ form input[type="submit"]:active {
     font-size: 1.4rem;
   }
 }
+/* Fortez butoanele să fie unul sub altul */
+.xmas-popup .btn,
+.xmas-popup button.btn,
+.xmas-popup a.btn {
+  display: block !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.xmas-popup .xmas-popup-cta {
+  margin-bottom: 0.75rem !important;
+}
