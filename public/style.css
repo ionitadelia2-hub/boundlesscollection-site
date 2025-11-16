@@ -966,3 +966,143 @@ form input[type="submit"]:active {
 @media (prefers-reduced-motion: reduce){
   #floating-hearts { display:none !important; }
 }
+
+/* ===== POPUP COLECTIA DE CRACIUN ===== */
+
+.xmas-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 900;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.xmas-popup-backdrop.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.xmas-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 901;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.xmas-popup[hidden],
+.xmas-popup-backdrop[hidden] {
+  display: none;
+}
+
+.xmas-popup.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.xmas-popup-card {
+  background: #fffdfd;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(180, 0, 54, 0.25);
+  padding: 2.2rem 2rem 1.8rem;
+  max-width: 420px;
+  width: 100%;
+  position: relative;
+  transform: translateY(20px) scale(0.96);
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.xmas-popup.is-visible .xmas-popup-card {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* buton X */
+.xmas-popup-close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.8rem;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #b40036;
+  opacity: 0.65;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.xmas-popup-close:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* badge */
+.xmas-popup-badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: #ffe6f0;
+  color: #b40036;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+/* titlu + text */
+.xmas-popup h2 {
+  margin: 0 0 0.5rem;
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  color: #1f1a1c;
+}
+
+.xmas-popup p {
+  margin: 0 0 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a3c43;
+}
+
+/* butoane */
+.xmas-popup .btn {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+
+.xmas-popup-cta {
+  margin-bottom: 0.5rem;
+}
+
+/* stil pentru .btn ghost daca nu exista deja */
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #e3c1cf;
+  color: #b40036;
+}
+
+.btn.ghost:hover {
+  background: #ffeaf3;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .xmas-popup-card {
+    padding: 1.8rem 1.4rem 1.4rem;
+  }
+
+  .xmas-popup h2 {
+    font-size: 1.4rem;
+  }
+}

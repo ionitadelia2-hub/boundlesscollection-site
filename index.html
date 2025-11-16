@@ -307,6 +307,31 @@
 
 </footer>
 
+  <!-- POPUP COLECTIA DE CRACIUN -->
+  <div class="xmas-popup-backdrop" id="xmasPopupBackdrop" hidden></div>
+
+  <div class="xmas-popup" id="xmasPopup" role="dialog" aria-modal="true"
+       aria-labelledby="xmasPopupTitle" hidden>
+    <div class="xmas-popup-card">
+      <button class="xmas-popup-close" type="button" aria-label="Inchide anuntul">&times;</button>
+
+      <div class="xmas-popup-badge">NOU</div>
+
+      <h2 id="xmasPopupTitle">Colectia de Craciun</h2>
+      <p>
+        Lumanari din ceara de soia, gnomi, brazi si decoratiuni de Craciun,
+        realizate manual – ideale pentru cadouri si aranjamente de iarna.
+      </p>
+
+      <a class="btn primary xmas-popup-cta" href="/craciun.html">
+        Vezi colectia de Craciun
+      </a>
+
+      <button class="btn ghost xmas-popup-later" type="button">
+        Poate mai tarziu
+      </button>
+    </div>
+  </div>
 
   <!-- Buton WhatsApp plutitor -->
   <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener" title="Scrie pe WhatsApp">
@@ -398,6 +423,87 @@
       const cleanUrl = location.origin + location.pathname + '#contact';
       history.replaceState({}, '', cleanUrl);
     }
+  })();
+  </script>
+    <script>
+  // POPUP COLECTIA DE CRACIUN
+  (function () {
+    window.addEventListener('DOMContentLoaded', function () {
+      // aratam popup doar pe home
+      var path = location.pathname.replace(/\/+$/, '');
+      var isHome =
+        path === '' ||
+        path === '/' ||
+        path === '/index' ||
+        path === '/index.html';
+
+      if (!isHome) return;
+
+      var popup    = document.getElementById('xmasPopup');
+      var backdrop = document.getElementById('xmasPopupBackdrop');
+      if (!popup || !backdrop) return;
+
+      var CLOSE_KEY = 'bc_xmas_popup_closed_v1';
+
+      // daca utilizatorul l-a inchis, nu il mai aratam
+      try {
+        if (localStorage.getItem(CLOSE_KEY) === '1') return;
+      } catch (e) {
+        // daca localStorage e blocat, continuam fara persistenta
+      }
+
+      var btnClose = popup.querySelector('.xmas-popup-close');
+      var btnLater = popup.querySelector('.xmas-popup-later');
+      var btnCta   = popup.querySelector('.xmas-popup-cta');
+
+      function openPopup() {
+        backdrop.hidden = false;
+        popup.hidden = false;
+
+        requestAnimationFrame(function () {
+          backdrop.classList.add('is-visible');
+          popup.classList.add('is-visible');
+        });
+      }
+
+      function closePopup() {
+        backdrop.classList.remove('is-visible');
+        popup.classList.remove('is-visible');
+
+        setTimeout(function () {
+          backdrop.hidden = true;
+          popup.hidden = true;
+        }, 260);
+
+        try {
+          localStorage.setItem(CLOSE_KEY, '1');
+        } catch (e) {}
+      }
+
+      // deschidem dupa 2 secunde
+      setTimeout(openPopup, 2000);
+
+      if (btnClose) btnClose.addEventListener('click', closePopup);
+      if (btnLater) btnLater.addEventListener('click', closePopup);
+
+      backdrop.addEventListener('click', function (e) {
+        if (e.target === backdrop) closePopup();
+      });
+
+      if (btnCta) {
+        btnCta.addEventListener('click', function () {
+          try {
+            localStorage.setItem(CLOSE_KEY, '1');
+          } catch (e) {}
+        });
+      }
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && popup.classList.contains('is-visible')) {
+          closePopup();
+        }
+      });
+    });
   })();
   </script>
 </body>
