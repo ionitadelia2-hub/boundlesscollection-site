@@ -744,11 +744,11 @@
   },
   {
     "id": "brad-floral-verde-ingeras-030",
-    "title": "Brad floral Craciun cu ingeras si flori",
+    "title": "Brad floral Craciun cu ingeras si flori uscate",
     "price": 299.99,
     "category": "craciun",
     "product_type": "craciun",
-    "desc": "Lumanare decorativa de Craciun, realizata manual din ceara de soia. Model tip brad bogat in flori de iarna verde-menta, accente aurii, flori uscate si funda imprimata tematica; varf cu ingeras delicat. Piesa spectaculoasa pentru decor sau cadou premium de sarbatori. Ideal pentru decorul mesei de Craciun. Disponibila imediat bucata prezentata in imagine. Se realizeaza pe orice culoare la comanda. Timpul de lucru pentru o bucata este de 4 zile.",
+    "desc": "Bradut decorativ de Craciun, realizat manual din floricele din ceara de soia. Model tip brad bogat in flori de iarna verde-menta, accente aurii, flori uscate si funda imprimata tematica; varf cu ingeras delicat. Piesa spectaculoasa pentru decor sau cadou premium de sarbatori. Ideal pentru decorul mesei de Craciun. Disponibila imediat bucata prezentata in imagine. Se realizeaza pe orice culoare la comanda. Timpul de lucru pentru o bucata este de 4 zile.",
     "images": [
       "/images/craciun/brad-floral-verde-ingeras.jpg"
     ],
@@ -766,7 +766,36 @@
       "verde",
       "auriu"
     ],
-    "slug": "brad-floral-craciun-cu-ingeras-si-flori-brad-flo",
+    "slug": "brad-floral-craciun-cu-ingeras-si-flori-uscate-brad-flo",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "box-craciun-waxmelts-100g-031",
+    "title": "Box Craciun 100g cu wax melts parfumate",
+    "price": 49.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Cutie cadou festiva cu wax melts parfumate, turnate manual din ceara de soia 100% naturala. Contine aprox. 100g de figurine aromate in forme de Craciun – omulet turta dulce, Mos Craciun, braduti si cadouri. Cadoul perfect pentru iubitorii de arome de sarbatori.",
+    "images": [
+      "/images/craciun/box-waxmelts-100g.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "wax melts",
+      "arome",
+      "cutie cadou",
+      "craciun",
+      "turta dulce",
+      "mos craciun",
+      "bradut",
+      "ceara soia",
+      "handmade",
+      "aromaterapie",
+      "festiv"
+    ],
+    "slug": "box-craciun-100g-cu-wax-melts-parfumate-box-crac",
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
