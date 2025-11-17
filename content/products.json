@@ -777,7 +777,7 @@
     "price": 49.99,
     "category": "craciun",
     "product_type": "craciun",
-    "desc": "Cutie cadou festiva cu wax melts parfumate, turnate manual din ceara de soia 100% naturala. Contine aprox. 100g de figurine aromate in forme de Craciun – omulet turta dulce, Mos Craciun, braduti si cadouri. Cadoul perfect pentru iubitorii de arome de sarbatori.",
+    "desc": "Cutie cadou festiva cu wax melts parfumate, turnate manual din ceara de soia 100% naturala. Contine aprox. 100g de figurine aromate in forme de Craciun – omulet turta dulce, Mos Craciun, braduti, gnomi, acadele si cadouri. Cadoul perfect pentru iubitorii de arome de sarbatori.",
     "images": [
       "/images/craciun/box-waxmelts-100g.jpg"
     ],
@@ -796,6 +796,113 @@
       "festiv"
     ],
     "slug": "box-craciun-100g-cu-wax-melts-parfumate-box-crac",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "box-craciun-waxmelts-40g-032",
+    "title": "Box Craciun 40g cu wax melts parfumate",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Cutie cadou mica de Craciun cu aprox. 40g wax melts parfumate din ceara de soia, in forme de braduti. Aromă delicată, produs handmade perfect pentru un cadou festiv sau aromaterapie.",
+    "images": [
+      "/images/craciun/box-waxmelts-40g.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "wax melts",
+      "arome",
+      "cutie cadou",
+      "craciun",
+      "braduti",
+      "ceara soia",
+      "handmade",
+      "aromaterapie",
+      "festiv"
+    ],
+    "slug": "box-craciun-40g-cu-wax-melts-parfumate-box-crac",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "box-craciun-waxmelts-85g-033",
+    "title": "Box Craciun 85g cu wax melts parfumate",
+    "price": 40,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Cutie cadou de Craciun cu aprox. 85g wax melts parfumate din ceara de soia, in forme de braduti. Aromă festiva, perfectă pentru aromaterapie si cadouri elegante de sezon.",
+    "images": [
+      "/images/craciun/box-waxmelts-85g.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "wax melts",
+      "arome",
+      "cadou",
+      "craciun",
+      "braduti",
+      "ceara soia",
+      "handmade",
+      "aromaterapie",
+      "festiv"
+    ],
+    "slug": "box-craciun-85g-cu-wax-melts-parfumate-box-crac",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "box-odorizante-dulap-craciun-034",
+    "title": "Gift Set Crăciun – Odorizante dulap & Acadea parfumată",
+    "price": 59.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Set festiv format din 2 odorizante pentru dulap din ceara de soia, decorate cu fulg albastru si crengute de brad, plus un wax melt acadea roz. Parfum intens, ideal pentru dulap, dressing, sertare sau cadouri elegante de Craciun.",
+    "images": [
+      "/images/craciun/box-odorizante-dulap.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "odorizant",
+      "dulap",
+      "wax melts",
+      "cadou craciun",
+      "parfum",
+      "handmade",
+      "aromaterapie",
+      "festiv"
+    ],
+    "slug": "gift-set-craciun-odorizante-dulap-acadea-parfumata-box-odor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "gift-set-craciun-odorizante-bradut-2buc",
+    "title": "Gift Set Crăciun – Odorizante dulap brăduț (2 buc) & Floare craciun",
+    "price": 59.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Set festiv cu 2 odorizante brăduț din ceară de soia plus un wax melt, decorate manual cu frunze de ilex si poinsettia. Parfum intens, ideale pentru dulap, dressing, sertare sau ca un cadou elegant de Crăciun.",
+    "images": [
+      "/images/craciun/odorizante-bradut-2buc.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "odorizante",
+      "dulap",
+      "bradut",
+      "poinsettia",
+      "ilex",
+      "parfumate",
+      "handmade",
+      "cadou craciun",
+      "aromaterapie"
+    ],
+    "slug": "gift-set-craciun-odorizante-dulap-bradut-2-buc-floare-craciun-gift-set",
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
