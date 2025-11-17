@@ -908,6 +908,86 @@
     "mpn": ""
   },
   {
+    "id": "gift-set-craciun-odorizante-cafea-ilex-2buc",
+    "title": "Gift Set Crăciun – Odorizante dulap Cafea & Ilex (2 buc)",
+    "price": 74.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Set cu 2 odorizante pentru dulap din ceară de soia – unul cu boabe de cafea, celălalt decorat cu ilex festiv. Parfum intens, ideale pentru dulap, dressing, sertare sau cadouri elegante de Crăciun.",
+    "images": [
+      "/images/craciun/odorizante-cafea-ilex-2buc.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "odorizante",
+      "dulap",
+      "cafea",
+      "ilex",
+      "parfumate",
+      "handmade",
+      "cadou craciun",
+      "aromaterapie"
+    ],
+    "slug": "gift-set-craciun-odorizante-dulap-cafea-ilex-2-buc-gift-set",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "gift-set-craciun-odorizante-gingerbread-poinsettia-2buc",
+    "title": "Gift Set Crăciun – Odorizante dulap Gingerbread & Poinsettia (2 buc)",
+    "price": 84.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Set festiv cu 2 odorizante pentru dulap din ceară de soia, decorate cu figurine de turtă dulce și floare poinsettia. Parfum intens și design premium – perfecte pentru dulap, dressing, spații mici sau ca și cadou elegant de Crăciun.",
+    "images": [
+      "/images/craciun/odorizante-gingerbread-poinsettia.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "odorizante",
+      "gingerbread",
+      "poinsettia",
+      "craciunita",
+      "turta dulce",
+      "dulap",
+      "parfumate",
+      "handmade",
+      "cadou craciun",
+      "aromaterapie"
+    ],
+    "slug": "gift-set-craciun-odorizante-dulap-gingerbread-poinsettia-2-buc-gift-set",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "gift-set-craciun-odorizante-portocala-scortisoara-2buc",
+    "title": "Gift Set Crăciun – Odorizante dulap Portocală & Scorțișoară (2 buc)",
+    "price": 78.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Set festiv cu 2 odorizante pentru dulap din ceară de soia, decorate cu portocală deshidratată, baton de scorțișoară și elemente clasice de Crăciun. Parfum cald, condimentat și intens – ideal pentru dressing, dulap sau cadou rafinat de sărbători.",
+    "images": [
+      "/images/craciun/odorizante-portocala-scortisoara.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "odorizante",
+      "portocala",
+      "scortisoara",
+      "aroma naturala",
+      "handmade",
+      "cadou craciun",
+      "parfumate",
+      "aromaterapie"
+    ],
+    "slug": "gift-set-craciun-odorizante-dulap-portocala-scortisoara-2-buc-gift-set",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "lumanare-brad-craciun-025",
     "title": "Lumanare parfumata brad de Craciun",
     "price": 30,
