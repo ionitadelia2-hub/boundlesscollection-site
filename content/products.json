@@ -568,6 +568,30 @@
     "mpn": ""
   },
   {
+    "id": "plic-dar-balerina-roz-052",
+    "title": "Plic de dar balerina roz",
+    "price": 4.5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar in nuante roz pastel, cu ilustratie delicata balerina si fundite. Printat pe carton premium, ideal pentru botezuri si evenimente elegante.",
+    "images": [
+      "/images/plicuri/plic-dar-balerina-roz.jpg"
+    ],
+    "tags": [
+      "plicuri",
+      "botez",
+      "balerina",
+      "roz",
+      "pastel",
+      "elegant",
+      "personalizat"
+    ],
+    "slug": "plic-de-dar-balerina-roz-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-boho-verde-016",
     "title": "Plic de dar boho verde natur",
     "price": 4.5,
@@ -679,6 +703,31 @@
       "elegant"
     ],
     "slug": "plic-botez-baietel-cu-veverite-jucause-plic-bot",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-botez-elefantel-bleu-053",
+    "title": "Meniu botez elefantel bleu",
+    "price": 7,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu pentru botez cu ilustratii elefant si fundal bleu pastel, printat pe carton premium. Un design delicat si elegant, potrivit pentru evenimente tematice pentru baietei.",
+    "images": [
+      "/images/meniuri/meniu-botez-elefant-bleu.jpg"
+    ],
+    "tags": [
+      "meniuri",
+      "botez",
+      "ursulet",
+      "bleu",
+      "baietel",
+      "pastel",
+      "elegant",
+      "carton premium"
+    ],
+    "slug": "meniu-botez-elefantel-bleu-meniu-bo",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
