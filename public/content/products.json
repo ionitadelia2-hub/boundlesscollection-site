@@ -515,6 +515,59 @@
     "mpn": ""
   },
   {
+    "id": "marturie-iepuras-inima-050",
+    "title": "Marturie iepuras roz cu inimioara",
+    "price": 30,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie in forma de iepuras roz cu inimioara, realizata manual din ceara de soia si decorata cu fundita rosie. O alegere delicata si adorabila pentru botezuri, cadouri si evenimente tematice.",
+    "images": [
+      "/images/marturii/marturie-iepuras-inima.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "iepuras",
+      "roz",
+      "inima",
+      "botez",
+      "fetita",
+      "handmade",
+      "soia",
+      "cadou"
+    ],
+    "slug": "marturie-iepuras-roz-cu-inimioara-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-urs-mama-pui-051",
+    "title": "Marturie urs mama si pui",
+    "price": 25,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie delicata din ceara de soia, reprezentand o mama urs cu puiul ei, lucrata manual cu detalii fine. O piesa adorabila si simbolica, perfecta pentru botezuri si evenimente.",
+    "images": [
+      "/images/marturii/marturie-urs-mama-pui.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "urs",
+      "mama si pui",
+      "botez",
+      "fetita",
+      "baietel",
+      "pastel",
+      "handmade",
+      "soia",
+      "cadou"
+    ],
+    "slug": "marturie-urs-mama-si-pui-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-boho-verde-016",
     "title": "Plic de dar boho verde natur",
     "price": 4.5,
