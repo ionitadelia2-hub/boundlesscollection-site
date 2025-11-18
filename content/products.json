@@ -988,6 +988,140 @@
     "mpn": ""
   },
   {
+    "id": "box-macarons-waxmelts-10buc-036",
+    "title": "Set Macarons Wax Melts - 10 bucati",
+    "price": 79.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Set cadou cu 10 macarons wax melts parfumate, turnate manual din ceara de soia 100% naturala. Fiecare macaron este colorat diferit si are parfum intens, ideal pentru arzator de esente si pentru a crea o atmosfera cozy in casa. Perfect ca dar de Craciun, Secret Santa sau cadou pentru iubitorii de arome gurmande. Culorile si aromele se pot personaliza la comanda.",
+    "images": [
+      "/images/craciun/box-macarons-waxmelts-10buc.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "wax melts",
+      "macarons",
+      "cutie cadou",
+      "parfumate",
+      "ceara soia",
+      "handmade",
+      "aromaterapie",
+      "colorate"
+    ],
+    "slug": "set-macarons-wax-melts-10-bucati-box-maca",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-masinuta-craciun-040",
+    "title": "Lumanare decorativa masinuta Craciun",
+    "price": 35,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa masinuta Craciun din ceara de soia. Masinuta stil van retro, turnata manual din ceara de soia, perfecta ca piesa centrala in decorul de sarbatori. O lumanare statement care transforma orice colt intr-un decor de poveste de iarna.",
+    "images": [
+      "/images/craciun/lumanare-masinuta-craciun.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "masinuta",
+      "van",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "iarna",
+      "festiv",
+      "instagram-ready"
+    ],
+    "slug": "lumanare-decorativa-masinuta-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-fulg-craciun-041",
+    "title": "Lumanare decorativa fulg de zapada Craciun",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, realizata manual. O piesa eleganta si festiva, perfecta pentru decorul de iarna sau cadouri de sezon.",
+    "images": [
+      "/images/craciun/lumanare-fulg-craciun.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "fulg",
+      "zapada",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "iarna",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-fulg-de-zapada-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-manusa-craciun-042",
+    "title": "Lumanare decorativa manusa Craciun",
+    "price": 32,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de manusa de iarna, turnata manual cu detalii fine tip tricot. Un decor cald si festiv, perfect pentru iarna si cadouri de sezon.",
+    "images": [
+      "/images/craciun/lumanare-manusa-craciun.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "manusa",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-manusa-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-brad-flat-craciun-043",
+    "title": "Lumanare decorativa brad de Craciun flat",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de brad stilizat, turnata manual si decorata cu fundita aurie. Un element festiv perfect pentru decoruri de iarna sau cadouri de sezon.",
+    "images": [
+      "/images/craciun/lumanare-brad-flat-craciun.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "brad",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv",
+      "flat"
+    ],
+    "slug": "lumanare-decorativa-brad-de-craciun-flat-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "lumanare-brad-craciun-025",
     "title": "Lumanare parfumata brad de Craciun",
     "price": 30,
