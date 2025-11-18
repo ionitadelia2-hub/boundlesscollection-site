@@ -459,6 +459,33 @@
     "mpn": ""
   },
   {
+    "id": "marturie-iepuras-roz-048",
+    "title": "Marturie iepuras roz in saculet tulle",
+    "price": 30,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie adorabila in forma de iepuras roz, realizata manual din ceara de soia si ambalata in saculet tulle cu fundita satin. Include eticheta personalizata, fiind o alegere delicata pentru botez si evenimente speciale.",
+    "images": [
+      "/images/marturii/marturie-iepuras-roz.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "iepuras",
+      "roz",
+      "botez",
+      "fetita",
+      "tulle",
+      "fundita",
+      "handmade",
+      "soia",
+      "cadou"
+    ],
+    "slug": "marturie-iepuras-roz-in-saculet-tulle-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "marturie-scoica-perla-015",
     "title": "Marturie lumanare scoica cu perla",
     "price": 12,
@@ -599,6 +626,30 @@
       "elegant"
     ],
     "slug": "plic-botez-baietel-cu-veverite-jucause-plic-bot",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-botez-roz-sigiliu-049",
+    "title": "Meniu botez roz cu sigiliu",
+    "price": 9.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu elegant printat pe carton premium, decorat cu sigiliu roz pudrat si aranjament floral uscat. Ideal pentru botezuri si evenimente cu tematica pastel.",
+    "images": [
+      "/images/meniuri/meniu-botez-roz-sigiliu.jpg"
+    ],
+    "tags": [
+      "meniuri",
+      "botez",
+      "roz",
+      "sigiliu",
+      "elegant",
+      "pastel",
+      "carton premium"
+    ],
+    "slug": "meniu-botez-roz-cu-sigiliu-meniu-bo",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
