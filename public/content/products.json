@@ -1202,6 +1202,112 @@
     "mpn": ""
   },
   {
+    "id": "lumanare-om-zapada-craciun-044",
+    "title": "Lumanare decorativa om de zapada Craciun",
+    "price": 35,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de om de zapada, cu detalii fine tip tricot si fular de iarna. Un decor adorabil si festiv, perfect pentru cadouri si atmosfera de sarbatori.",
+    "images": [
+      "/images/craciun/lumanare-om-zapada-craciun.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "om de zapada",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-om-de-zapada-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-gnom-fulg-auriu-045",
+    "title": "Lumanare decorativa gnom cu fulg auriu",
+    "price": 38,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de gnom de Craciun, cu nas rosu si fulg auriu aplicat manual. O piesa festiva si adorabila, perfecta pentru decoruri de iarna sau cadouri speciale.",
+    "images": [
+      "/images/craciun/lumanare-gnom-fulg-auriu.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "gnom",
+      "fulg",
+      "auriu",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-gnom-cu-fulg-auriu-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-ren-auriu-046",
+    "title": "Lumanare decorativa ren cu funda aurie",
+    "price": 34,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de ren, impodobit cu funda aurie si clopotel. Un decor elegant si festiv, perfect pentru aranjamente de Craciun sau cadouri de sezon.",
+    "images": [
+      "/images/craciun/lumanare-ren-auriu.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "ren",
+      "auriu",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-ren-cu-funda-aurie-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-gnom-fulg-argintiu-047",
+    "title": "Lumanare decorativa gnom cu fulg argintiu",
+    "price": 38,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de gnom de Craciun, cu palarie inalta decorata cu fulg argintiu si nas rosu. Un decor festiv si elegant, ideal pentru cadouri si aranjamente de sezon.",
+    "images": [
+      "/images/craciun/lumanare-gnom-fulg-argintiu.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "gnom",
+      "fulg",
+      "argintiu",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-gnom-cu-fulg-argintiu-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "lumanare-gnom-fetita-028",
     "title": "Lumanare parfumata gnom fetita cu codite",
     "price": 25,
