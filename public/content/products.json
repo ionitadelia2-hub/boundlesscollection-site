@@ -598,6 +598,35 @@
     "mpn": ""
   },
   {
+    "id": "marturie-ursulet-roz-064",
+    "title": "Marturie ursulet roz in cutie transparenta",
+    "price": 30,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie adorabila sub forma de ursulet roz sculptat din ceara de soia, cu detalii florale fine. Ambalat in cutie transparenta, decorata cu funda roz si flori uscate. Un cadou modern, jucaus si elegant, perfect pentru botezuri si evenimente.",
+    "images": [
+      "/images/marturii/marturie-ursulet-roz.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "ursulet",
+      "roz",
+      "botez",
+      "fetita",
+      "flori uscate",
+      "cutie transparenta",
+      "neon",
+      "handmade",
+      "soia",
+      "cadou",
+      "adorabil"
+    ],
+    "slug": "marturie-ursulet-roz-in-cutie-transparenta-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "marturie-adidas-bleu-058",
     "title": "Marturie adidas bleu in tulle",
     "price": 25,
@@ -673,6 +702,32 @@
       "personalizat"
     ],
     "slug": "plic-de-dar-balerina-roz-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-miri-silueta-061",
+    "title": "Plic de dar cu silueta miri si flori alb-verde",
+    "price": 4.5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru nunta, decorat cu silueta mire si mireasa si coronita florala alb-verde. Printat pe carton premium alb, cu text personalizabil si spatiu dedicat pentru numele familiei. Un model rafinat si modern, potrivit pentru evenimente.",
+    "images": [
+      "/images/plicuri/plic-dar-miri-silueta.jpg"
+    ],
+    "tags": [
+      "plicuri",
+      "nunta",
+      "miri",
+      "silueta",
+      "floral",
+      "alb verde",
+      "elegant",
+      "personalizat",
+      "carton premium"
+    ],
+    "slug": "plic-de-dar-cu-silueta-miri-si-flori-alb-verde-plic-dar",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
@@ -764,6 +819,35 @@
     "mpn": ""
   },
   {
+    "id": "set-invitatie-meniu-plic-lamai-063",
+    "title": "Set invitatie + meniu + plic de dar cu lamai",
+    "price": 29,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set complet pentru nunta cu tematica mediteraneana: invitatie pe carton premium cu grafica lămâi și flori albastre, meniu asortat în același stil vibrant și plic de dar decorat cu motive citrus și detalii elegante. Toate elementele sunt complet personalizabile cu nume, dată și textul dorit. Un set luminos, rafinat și perfect pentru evenimente fresh, de vară.",
+    "images": [
+      "/images/seturi/set-invitatie-meniu-plic-lamai.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "nunta",
+      "lamai",
+      "citrus",
+      "invitație",
+      "meniu",
+      "plic dar",
+      "mediteranean",
+      "vara",
+      "colorat",
+      "elegant",
+      "personalizat"
+    ],
+    "slug": "set-invitatie-meniu-plic-de-dar-cu-lamai-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-dar-ursulet-059",
     "title": "Plic de dar cu ursulet pentru botez",
     "price": 4.5,
@@ -784,6 +868,32 @@
       "carton premium"
     ],
     "slug": "plic-de-dar-cu-ursulet-pentru-botez-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-miri-greenery-062",
+    "title": "Plic de dar miri cu greenery",
+    "price": 4.5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru nunta, ilustrat cu un cuplu de miri în nuanțe calde și coronită greenery în partea superioară. Printat pe carton premium alb, text personalizabil și spațiu dedicat pentru numele familiei. Model rafinat, modern și potrivit pentru nunți.",
+    "images": [
+      "/images/plicuri/plic-dar-miri-greenery.jpg"
+    ],
+    "tags": [
+      "plicuri",
+      "nunta",
+      "miri",
+      "greenery",
+      "floral",
+      "elegant",
+      "personalizat",
+      "carton premium",
+      "romantic"
+    ],
+    "slug": "plic-de-dar-miri-cu-greenery-plic-dar",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
