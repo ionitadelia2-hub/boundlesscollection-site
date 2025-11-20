@@ -486,6 +486,63 @@
     "mpn": ""
   },
   {
+    "id": "marturie-macaron-roz-055",
+    "title": "Marturie macaron roz in cutie kraft",
+    "price": 20,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie eleganta sub forma de macaron roz, realizata manual din ceara de soia. Ambalata in cutie kraft cu fereastra, decorata cu panglica roz si flori uscate crem. Eticheta rotunda personalizabila cu nume si data. Un cadou delicat si rafinat pentru botezuri si evenimente speciale.",
+    "images": [
+      "/images/marturii/marturie-macaron-roz.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "macaron",
+      "roz pastel",
+      "botez",
+      "fetita",
+      "flori uscate",
+      "cutie kraft",
+      "handmade",
+      "soia",
+      "cadou",
+      "elegant"
+    ],
+    "slug": "marturie-macaron-roz-in-cutie-kraft-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-borcan-bujor-057",
+    "title": "Marturie in borcan de sticla cu bujor roz",
+    "price": 25,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie eleganta din ceara de soia turnata in borcan de sticla, decorata cu floare tip bujor roz. Ambalata in cutie transparenta cu funda satin si flori uscate. Eticheta personalizabila cu nume si data. Un cadou rafinat si delicat pentru botezuri, nunti si evenimente speciale.",
+    "images": [
+      "/images/marturii/marturie-borcan-bujor-roz.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "bujor",
+      "lumanare",
+      "borcan sticla",
+      "roz",
+      "flori uscate",
+      "elegant",
+      "handmade",
+      "soia",
+      "cadou",
+      "botez",
+      "nunta"
+    ],
+    "slug": "marturie-in-borcan-de-sticla-cu-bujor-roz-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "marturie-scoica-perla-015",
     "title": "Marturie lumanare scoica cu perla",
     "price": 12,
@@ -733,6 +790,33 @@
     "mpn": ""
   },
   {
+    "id": "meniu-botez-safari-verde-054",
+    "title": "Meniu botez Safari cu frunze verzi",
+    "price": 9,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu botez tematica Safari, cu animale de jungla si frunze tropicale la partea superioara, printat pe carton premium alb si pliat tip carte. Textul meniului se personalizeaza integral pentru evenimentul tău; imaginea din fotografii este exemplu de design.",
+    "images": [
+      "/images/meniuri/meniu-botez-safari-verde.jpg"
+    ],
+    "tags": [
+      "meniuri",
+      "botez",
+      "safari",
+      "jungla",
+      "animale",
+      "verde",
+      "tematic",
+      "personalizat",
+      "carton premium",
+      "elegant"
+    ],
+    "slug": "meniu-botez-safari-cu-frunze-verzi-meniu-bo",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "meniu-botez-roz-sigiliu-049",
     "title": "Meniu botez roz cu sigiliu",
     "price": 9.5,
@@ -808,6 +892,35 @@
     ],
     "slug": "marturie-lumanare-roz-pastel-cu-flori-uscate-marturie",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-meniu-plic-botez-safari-056",
+    "title": "Set meniu + plic botez Safari",
+    "price": 14,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat pentru botez cu tematica Safari: meniu fata-verso pe carton premium, cu animale de jungla si frunze tropicale, plus plic asortat pentru dar sau mesaj. Textul de pe meniu si etichete se personalizeaza integral cu nume, data si detalii de eveniment.",
+    "images": [
+      "/images/seturi/set-meniu-plic-botez-safari.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "botez",
+      "safari",
+      "jungla",
+      "animale",
+      "meniu",
+      "plic",
+      "verde",
+      "baietel",
+      "tematic",
+      "personalizat",
+      "elegant"
+    ],
+    "slug": "set-meniu-plic-botez-safari-set-meni",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
