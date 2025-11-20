@@ -598,6 +598,35 @@
     "mpn": ""
   },
   {
+    "id": "marturie-adidas-bleu-058",
+    "title": "Marturie adidas bleu in tulle",
+    "price": 25,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie adorabila in forma de adidas bleu, realizata manual din ceara de soia. Ambalata in tulle bleu cu funda satin albastra si eticheta personalizabila cu nume si data, in cutie de adidas in miniatura. Un cadou tematic si unic pentru botezuri de baieti.",
+    "images": [
+      "/images/marturii/marturie-adidas-bleu.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "adidas",
+      "bleu",
+      "baietel",
+      "botez",
+      "tulle",
+      "fundita",
+      "handmade",
+      "soia",
+      "cadou",
+      "tematic",
+      "sport"
+    ],
+    "slug": "marturie-adidas-bleu-in-tulle-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "marturie-urs-mama-pui-051",
     "title": "Marturie urs mama si pui",
     "price": 25,
@@ -704,6 +733,58 @@
     ],
     "slug": "set-invitatie-plic-de-dar-boho-natur-set-invi",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-invitatie-plic-ursulet-060",
+    "title": "Set invitatie + plic de dar cu ursulet",
+    "price": 14,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat pentru botez, format din invitație pe carton premium alb cu ilustratie ursuleț pastel și detalii delicate, plus plic de dar asortat cu același design. Atât invitația cât și plicul se personalizează integral cu nume, dată și textul dorit. Invitatia vine rulata sul si legata cu panglica de satin",
+    "images": [
+      "/images/seturi/set-invitatie-plic-ursulet.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "botez",
+      "ursulet",
+      "invitatie",
+      "plic",
+      "baietel",
+      "pastel",
+      "elegant",
+      "personalizat",
+      "carton premium"
+    ],
+    "slug": "set-invitatie-plic-de-dar-cu-ursulet-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-ursulet-059",
+    "title": "Plic de dar cu ursulet pentru botez",
+    "price": 4.5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru botez, ilustrat cu ursuleț pastel într-un coș împletit. Printat pe carton premium alb, cu text personalizabil și spațiu dedicat pentru numele familiei. Potrivit pentru tematici delicate și evenimente rafinate.",
+    "images": [
+      "/images/plicuri/plic-dar-ursulet.jpg"
+    ],
+    "tags": [
+      "plicuri",
+      "botez",
+      "ursulet",
+      "baietel",
+      "pastel",
+      "elegant",
+      "personalizat",
+      "carton premium"
+    ],
+    "slug": "plic-de-dar-cu-ursulet-pentru-botez-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
   },
