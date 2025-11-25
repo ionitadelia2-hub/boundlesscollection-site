@@ -1686,6 +1686,89 @@
     "mpn": ""
   },
   {
+    "id": "lumanare-brad-bule-craciun-060",
+    "title": "Lumanare decorativa brad din bule Craciun",
+    "price": 32,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de brad din bule, cu steluta in varf. Turnata manual, cu aspect modern si festiv, perfecta pentru decorul mesei sau cadou de sarbatori. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-brad-bule-steluta-craciun.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "brad",
+      "lumanare",
+      "bule",
+      "steluta",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "iarna",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-brad-din-bule-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-glob-spiralat-craciun-053",
+    "title": "Lumanare decorativa glob spiralat Craciun",
+    "price": 45,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de glob de Craciun cu striatii spiralate. Aspect elegant, ideala pentru decor festiv sau cadou de sezon. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/glob-spiralat-craciun.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "glob",
+      "spiralat",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv",
+      "iarna"
+    ],
+    "slug": "lumanare-decorativa-glob-spiralat-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-glob-arabesque-craciun-001",
+    "title": "Lumanare Craciun glob decorativ cu model arabesque",
+    "price": 35,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa de Craciun in forma de glob, cu model arabesque in relief fin. Turnata manual din ceara de soia, cu finisaj mat si detalii elegante. Ideala ca piesa de decor pe masa de sarbatori sau cadou festiv. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-glob-arabesque.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "glob",
+      "ornament",
+      "arabesque",
+      "relief",
+      "decor sarbatori",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-craciun-glob-decorativ-cu-model-arabesque-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "lumanare-masinuta-craciun-040",
     "title": "Lumanare decorativa masinuta Craciun",
     "price": 35,
