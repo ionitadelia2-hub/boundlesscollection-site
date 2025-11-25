@@ -672,7 +672,7 @@
       "botez",
       "fetita",
       "baietel",
-      "pastel",
+      "pasatel",
       "handmade",
       "soia",
       "cadou"
@@ -1466,6 +1466,141 @@
       "colorate"
     ],
     "slug": "set-macarons-wax-melts-10-bucati-box-maca",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-glob-om-zapada-001",
+    "title": "Lumanare Craciun glob cu om de zapada",
+    "price": 55,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa de Craciun in forma de glob cu om de zapada si brazi, ideala pentru cadou sau decor de sarbatori. Realizata manual din ceara de soia, cu detalii 3D fine si finisaj elegant. Arde uniform, fitil centrat. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-glob-om-zapada.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "glob",
+      "om de zapada",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-craciun-glob-cu-om-de-zapada-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-glob-mos-sanie-002",
+    "title": "Lumanare Craciun glob cu Mos Craciun in sanie",
+    "price": 35,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa de Craciun in forma de glob cu Mos Craciun in sanie si ren, cu detalii reliefate. Turnata manual din ceara de soia, aspect premium si tema clasica de sarbatori. Potrivita pentru decorul mesei sau cadou festiv. Culoarea si aroma pot fi personalizate.",
+    "images": [
+      "/images/craciun/lumanare-glob-mos-sanie.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "glob",
+      "mos craciun",
+      "sanie",
+      "ren",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "iarna"
+    ],
+    "slug": "lumanare-craciun-glob-cu-mos-craciun-in-sanie-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-rotunda-nasterea-domnului-003",
+    "title": "Lumanare rotunda Nasterea Domnului",
+    "price": 40,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa rotunda cu scena Nasterii Domnului in relief fin, pentru un Craciun cu semnificatie. Realizata manual din ceara de soia, cu suprafata mata si detalii sculptate. Ideala pentru decor traditional sau cadou cu mesaj. Culoarea si aroma se pot personaliza.",
+    "images": [
+      "/images/craciun/lumanare-rotunda-nasterea-domnului.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "nasterea domnului",
+      "scena religioasa",
+      "relief",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "sarbatori"
+    ],
+    "slug": "lumanare-rotunda-nasterea-domnului-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-cilindru-fulgi-craciun-051",
+    "title": "Lumanare cilindru cu fulgi de zapada",
+    "price": 38,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare cilindrica din ceara de soia, decorata cu fulgi de zapada in relief. Arde curat si uniform, perfecta pentru ambient de iarna. Disponibila si pe o marime mai mare.",
+    "images": [
+      "/images/craciun/lumanare-cilindru-fulgi.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "cilindru",
+      "fulgi de zapada",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade"
+    ],
+    "slug": "lumanare-cilindru-cu-fulgi-de-zapada-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-casuta-home-craciun-052",
+    "title": "Lumanare decorativa casuta HOME",
+    "price": 42,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de casuta cu text HOME in relief. Stil minimalist si cozy, ideala pentru decorul casei in sezonul rece sau ca dar de Craciun.",
+    "images": [
+      "/images/craciun/lumanare-casuta-home.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "casuta",
+      "home",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "cozy",
+      "iarna"
+    ],
+    "slug": "lumanare-decorativa-casuta-home-lumanare",
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
