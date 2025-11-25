@@ -1606,6 +1606,86 @@
     "mpn": ""
   },
   {
+    "id": "lumanare-brad-straturi-craciun-001",
+    "title": "Lumanare decorativa brad in straturi Craciun",
+    "price": 35,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa turnata manual din ceara de soia, model brad cu straturi ondulate si textura eleganta. Este disponibila si intr-o marime mai mica.",
+    "images": [
+      "/images/craciun/lumanare-brad-straturi-craciun.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "brad",
+      "lumanare",
+      "decor",
+      "iarna",
+      "soia",
+      "handmade",
+      "cadou",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-brad-in-straturi-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-brad-stativ-craciun-053",
+    "title": "Lumanare decorativa brad Craciun model cu suport",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa turnata manual din ceara de soia, in forma de brad cu straturi si suport. Aspect minimalist si elegant, perfecta pentru decorul de sarbatori sau cadou festiv. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-brad-suport.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "brad",
+      "decor",
+      "soia",
+      "handmade",
+      "iarna",
+      "cadou",
+      "festiv",
+      "minimalist"
+    ],
+    "slug": "lumanare-decorativa-brad-craciun-model-cu-suport-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-brad-relief-craciun-004",
+    "title": "Lumanare decorativa brad de Craciun in relief",
+    "price": 40,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia, model brad de Craciun cu straturi suprapuse si ramuri stilizate in relief fin. Turnata manual, cu finisaj mat si aspect elegant. Ideala pentru decorul de iarna, aranjamente festive sau cadouri de sarbatori. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate la comanda. Este disponibila si in varianta mai mica.",
+    "images": [
+      "/images/craciun/lumanare-brad-relief.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "brad",
+      "relief",
+      "decor",
+      "iarna",
+      "soia",
+      "handmade",
+      "cadou",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-brad-de-craciun-in-relief-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "lumanare-masinuta-craciun-040",
     "title": "Lumanare decorativa masinuta Craciun",
     "price": 35,
