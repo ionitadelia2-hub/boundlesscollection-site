@@ -2227,5 +2227,145 @@
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "lumanare-fulg-turcoaz-craciun-002",
+    "title": "Lumanare decorativa fulg de zapada turcoaz-alb Craciun",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, in doua nuante (alb si turcoaz). Realizata manual, cu detalii fine in relief si finisaj mat. Perfecta pentru decorul de iarna, cadouri de sezon sau aranjamente festive. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-fulg-turcoaz.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "fulg de zapada",
+      "turcoaz",
+      "alb",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-fulg-de-zapada-turcoaz-alb-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-fulg-roz-craciun-003",
+    "title": "Lumanare decorativa fulg de zapada roz-alb Craciun",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, in doua nuante (alb si roz intens). Realizata manual, cu model decupat fin si aspect elegant, ideala pentru decoruri de iarna, cadouri festive sau aranjamente de Craciun. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-fulg-roz.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "fulg de zapada",
+      "roz",
+      "alb",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-fulg-de-zapada-roz-alb-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-fulg-rosu-craciun-004",
+    "title": "Lumanare decorativa fulg de zapada rosu-alb Craciun",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, bicolora (alb cu accente rosu intens pe laterale). Lucrata manual, cu detalii fine si aspect modern, perfecta pentru decor de iarna, aranjamente festive sau cadouri de Craciun. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-fulg-rosu.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "fulg de zapada",
+      "rosu",
+      "alb",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-fulg-de-zapada-rosu-alb-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-fulg-bleu-craciun-005",
+    "title": "Lumanare decorativa fulg de zapada bleu-alb Craciun",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, bicolora (alb cu accente bleu pe laterale). Realizata manual, cu detalii geometrice fine si aspect elegant de iarna. Ideala pentru decor festiv, aranjamente de Craciun sau cadou sezonier. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-fulg-bleu.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "fulg de zapada",
+      "bleu",
+      "alb",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-fulg-de-zapada-bleu-alb-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "lumanare-fulg-verde-craciun-006",
+    "title": "Lumanare decorativa fulg de zapada verde-alb Craciun",
+    "price": 30,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, bicolora (alb cu accente verde/turcoaz pe laterale). Turnata manual, cu model geometric bine definit si finisaj mat. Perfecta pentru decorul de iarna, aranjamente festive sau cadou de Craciun. Culoarea si aroma pot fi personalizate la comanda.",
+    "images": [
+      "/images/craciun/lumanare-fulg-verde.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "lumanare",
+      "fulg de zapada",
+      "verde",
+      "alb",
+      "iarna",
+      "decor",
+      "cadou",
+      "soia",
+      "handmade",
+      "festiv"
+    ],
+    "slug": "lumanare-decorativa-fulg-de-zapada-verde-alb-craciun-lumanare",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
   }
 ]
