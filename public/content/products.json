@@ -1088,6 +1088,34 @@
     "mpn": ""
   },
   {
+    "id": "marturie-inima-lalele-rosii-001",
+    "title": "Marturie lumanare inima cu lalele rosii din ceara de soia",
+    "price": 25,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie romantica in forma de inima, decorata cu lalele rosii in relief si frunze verzi, realizata manual din ceara de soia naturala. Piesa parfumabila, cu aspect premium, ideala ca marturie pentru nunta, botez sau aniversari. Culoarea si aroma pot fi personalizate la comanda, iar produsul se poate ambala individual cu eticheta personalizata.",
+    "images": [
+      "/images/marturii/marturie-inima-lalele-rosii.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "lalele rosii",
+      "inima",
+      "lumanare soia",
+      "romantic",
+      "handmade",
+      "parfumabila",
+      "cadou invitati",
+      "nunta",
+      "botez",
+      "elegant"
+    ],
+    "slug": "marturie-lumanare-inima-cu-lalele-rosii-din-ceara-de-soia-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "marturie-scoica-perla-015",
     "title": "Marturie lumanare scoica cu perla",
     "price": 12,
@@ -1138,6 +1166,62 @@
       "cadou"
     ],
     "slug": "marturie-iepuras-roz-cu-inimioara-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-bebelus-tulle-roz-bleu-001",
+    "title": "Marturie lumanare bebelus in tulle roz sau bleu",
+    "price": 30,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie delicata din ceara de soia, cu figurina bebelus si inimioara decorativa, ambalata individual in saculet de tulle cu fundita satin (roz sau bleu) si eticheta personalizata. Ideala pentru botez, baby shower sau prima aniversare. Culoarea, aroma si textul se pot personaliza la comanda. Pretul este pentru 1 bucata.",
+    "images": [
+      "/images/marturii/marturie-bebelus-tulle-roz-bleu.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "bebelus",
+      "tulle",
+      "roz",
+      "bleu",
+      "botez",
+      "baby shower",
+      "soia",
+      "handmade",
+      "cadou invitati",
+      "personalizata"
+    ],
+    "slug": "marturie-lumanare-bebelus-in-tulle-roz-sau-bleu-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-familie-ursuleti-ivory-001",
+    "title": "Marturie lumanare familie ursuleti ivory din ceara de soia",
+    "price": 30,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie delicata in forma de familie de ursuleti, realizata manual din ceara de soia in nuanta ivory cu accente calde. Design jucaus si emotionant, ideal pentru botez, nunta sau aniversari de copii. Poate fi parfumata si personalizata la comanda (culoare/aroma/ambalare). Pretul este pentru 1 bucata.",
+    "images": [
+      "/images/marturii/marturie-familie-ursuleti-ivory.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "familie ursuleti",
+      "ivory",
+      "lumanare soia",
+      "botez",
+      "nunta",
+      "copii",
+      "handmade",
+      "cadou invitati",
+      "delicat",
+      "personalizata"
+    ],
+    "slug": "marturie-lumanare-familie-ursuleti-ivory-din-ceara-de-soia-marturie",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
@@ -1223,6 +1307,33 @@
       "cadou"
     ],
     "slug": "marturie-urs-mama-si-pui-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-tulle-bleu-norisor-001",
+    "title": "Marturie lumanare norisor bleu in saculet tulle cu eticheta personalizata",
+    "price": 20,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie delicata din ceara de soia in forma de norisor nuanta bleu pastel, ambalata individual in saculet de tulle alb cu fundita satin bleu si eticheta rotunda personalizabila cu nume si data. Ideala pentru botez, baby shower sau prima aniversare. Culoarea si aroma se pot realiza la comanda. Pretul este pentru 1 bucata.",
+    "images": [
+      "/images/marturii/marturie-norisor-bleu-tulle.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "bleu pastel",
+      "tulle",
+      "fundita satin",
+      "eticheta personalizata",
+      "botez baietel",
+      "baby shower",
+      "soia",
+      "handmade",
+      "cadou invitati"
+    ],
+    "slug": "marturie-lumanare-norisor-bleu-in-saculet-tulle-cu-eticheta-personalizata-marturie",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
