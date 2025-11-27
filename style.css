@@ -818,17 +818,11 @@ form input[type="submit"]:active {
 /* coperta paginii — titlu/subtitlu centrate și mai înguste */
 #produse > .section-title,
 #produse > .section-sub{
-  text-align: left;
-  max-width: 800px;
-  margin-inline: 0;              /* pe paginile category e la stânga, ca în screenshot */
+  text-align: center;
+  max-width: 900px;
+  margin-inline: auto;
 }
-@media (max-width: 960px){
-  #produse > .section-title,
-  #produse > .section-sub{
-    text-align: center;
-    margin-inline: auto;
-  }
-}
+
 
 /* --- Dropdown Produse --- */
 .site-nav .has-sub { position: relative; }
