@@ -1125,8 +1125,17 @@ form input[type="submit"]:active {
   background: #faf7f5;
   border: 1px solid #eee3dd;
   border-radius: 12px;
+
+  text-align: center;   /* asta centreaza textul */
   font-size: 0.98rem;
   line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.note-marturii strong{ font-weight: 600; }
+
+.note-marturii p{
+  margin: 0;            /* scoate spatiul default de sus/jos */
+}
+
 
