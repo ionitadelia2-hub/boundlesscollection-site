@@ -2040,11 +2040,11 @@
   },
   {
     "id": "meniu-balerina-roz-089",
-    "title": "Meniu botez balerina roz pliant",
+    "title": "Meniu botez balerina roz carte",
     "price": 7,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu de botez tip carte, in nuante roz pastel, cu ilustratie balerina si accente delicate. Printat pe carton premium si personalizabil complet cu preparate, nume si data; textul poate fi usor distorsionat in imaginea de prezentare.",
+    "desc": "Meniu de botez tip carte, in nuante roz pastel, cu ilustratie balerina si accente delicate. Printat pe carton premium si personalizabil complet cu preparate, nume si data",
     "images": [
       "/images/meniuri/meniu-balerina-roz.jpg"
     ],
@@ -2059,7 +2059,7 @@
       "personalizat",
       "carton premium"
     ],
-    "slug": "meniu-botez-balerina-roz-pliant-meniu-ba",
+    "slug": "meniu-botez-balerina-roz-carte-meniu-ba",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
