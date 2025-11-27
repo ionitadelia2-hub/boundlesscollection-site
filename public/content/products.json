@@ -970,7 +970,7 @@
     "mpn": ""
   },
   {
-    "id": "marturie-inima-roz-texturata-cutie-transparenta-075",
+    "id": "marturie-inima-roz-cutie-transparenta-075",
     "title": "Marturie lumanare in forma de inima roz texturata in cutie transparenta cu eticheta personalizata",
     "price": 32,
     "category": "marturii soia",
@@ -1278,6 +1278,33 @@
     "mpn": ""
   },
   {
+    "id": "plic-dar-safari-bine-ati-venit-001",
+    "title": "Plic de dar botez Safari cu mesaj bine ati venit",
+    "price": 5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar pentru botez cu tematica Safari, decorat cu ilustratii animale de jungla (zebra, leu, hipopotam, elefant, girafa) si frunze tropicale. Include mesaj de intampinare „Bine ati venit!” si spatiu pentru personalizare cu numele copilului/familiei. Printat pe carton premium mat, ideal pentru masa de dar si un decor unitar la eveniment.",
+    "images": [
+      "/images/plicuri/plic-dar-safari-bine-ati-venit.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "botez",
+      "safari",
+      "jungla",
+      "animale",
+      "frunze tropicale",
+      "verde",
+      "bine ati venit",
+      "personalizat",
+      "masa de dar"
+    ],
+    "slug": "plic-de-dar-botez-safari-cu-mesaj-bine-ati-venit-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-dar-ursulet-baloane-albastru-078",
     "title": "Plic de dar ursulet cu baloane albastre",
     "price": 5,
@@ -1526,6 +1553,33 @@
     "mpn": ""
   },
   {
+    "id": "plic-dar-ursulet-petrecere-bebe-multumire-080",
+    "title": "Plic de dar ursulet petrecere bebe – mesaj multumire",
+    "price": 5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar cu tematica delicata pentru botez sau prima petrecere a bebelusului, decorat cu ursulet simpatic, stegulete festive si stelute aurii. Textul de multumire este potrivit pentru evenimente de copii si include spatiu pentru completarea numelui familiei. Aspectul cald si neutru il face usor de asortat cu orice decor pastel, fiind ideal pentru masa de dar.",
+    "images": [
+      "/images/plicuri/plic-dar-ursulet-petrecere-bebe-multumire.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "ursulet",
+      "petrecere bebe",
+      "mesaj multumire",
+      "botez",
+      "prima aniversare",
+      "baby shower",
+      "plic bani",
+      "masa de dar",
+      "personalizat"
+    ],
+    "slug": "plic-de-dar-ursulet-petrecere-bebe-mesaj-multumire-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-botez-baietel-veverite-020",
     "title": "Plic botez baietel cu veverite jucause",
     "price": 5,
@@ -1550,6 +1604,32 @@
     ],
     "slug": "plic-botez-baietel-cu-veverite-jucause-plic-bot",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-verighete-multumire-001",
+    "title": "Plic de dar cu verighete si mesaj multumim",
+    "price": 5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru nunta, cu design floral pastel si verighete aurii, plus mesaj imprimat de multumire. Printat pe carton premium mat, cu spatiu pentru personalizare nume familie. Ideal pentru masa de dar si evenimente romantice.",
+    "images": [
+      "/images/plicuri/plic-dar-verighete-multumim.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "nunta",
+      "verighete",
+      "multumim",
+      "floral pastel",
+      "elegant",
+      "romantic",
+      "personalizat",
+      "masa de dar"
+    ],
+    "slug": "plic-de-dar-cu-verighete-si-mesaj-multumim-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
     "material": "",
     "mpn": ""
   },
@@ -2963,6 +3043,32 @@
     ],
     "slug": "lumanare-decorativa-fulg-de-zapada-verde-alb-craciun-lumanare",
     "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "numar-masa-ursulet-roz-001",
+    "title": "Numar de masa botez cu ursulet roz personalizat",
+    "price": 7,
+    "category": "numere de masa",
+    "product_type": "numere de masa",
+    "desc": "Numar de masa pentru botez in nuante roz pastel, cu ilustratie ursulet si balon tip nor. Se personalizeaza cu numele copilului si numarul mesei, fiind ideal pentru organizarea invitatilor si decor unitar. Print pe carton premium, format tip suport/tent, potrivit pentru mese festive.",
+    "images": [
+      "/images/numere/numar-masa-ursulet-roz.jpg"
+    ],
+    "tags": [
+      "numar masa",
+      "botez",
+      "ursulet roz",
+      "roz pastel",
+      "masa invitati",
+      "personalizat",
+      "decor eveniment",
+      "organizare mese",
+      "baby girl"
+    ],
+    "slug": "numar-de-masa-botez-cu-ursulet-roz-personalizat-numar-ma",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
   }
