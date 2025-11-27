@@ -1285,6 +1285,36 @@
     "mpn": ""
   },
   {
+    "id": "marturie-botosei-bebe-roz-tulle-083",
+    "title": "Marturie botosei bebe roz in saculet tulle",
+    "price": 30,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie adorabila in forma de botosei roz pentru bebe, realizata manual din ceara de soia si finisata delicat pentru un aspect catifelat. Este ambalata individual in saculet de tulle cu fundita satin si eticheta personalizata cu nume si data, fiind ideala pentru botez, baby shower sau prima aniversare.",
+    "images": [
+      "/images/marturii/marturie-botosei-bebe-roz-tulle.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "botosei bebe",
+      "roz",
+      "tulle",
+      "fundita satin",
+      "eticheta personalizata",
+      "botez",
+      "baby shower",
+      "prima aniversare",
+      "soia",
+      "handmade",
+      "cadou invitati",
+      "delicat"
+    ],
+    "slug": "marturie-botosei-bebe-roz-in-saculet-tulle-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "marturie-urs-mama-pui-051",
     "title": "Marturie urs mama si pui",
     "price": 25,
@@ -1530,23 +1560,25 @@
     "id": "plic-dar-balerina-roz-052",
     "title": "Plic de dar balerina roz",
     "price": 4.5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar in nuante roz pastel, cu ilustratie delicata balerina si fundite. Printat pe carton premium, ideal pentru botezuri si evenimente elegante.",
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar in roz pastel, cu ilustratie delicata de balerina si accente fine. Printat pe carton premium, cu spatiu pentru nume familie si text personalizabil, ideal pentru botezuri elegante.",
     "images": [
       "/images/plicuri/plic-dar-balerina-roz.jpg"
     ],
     "tags": [
-      "plicuri",
-      "botez",
+      "plic de dar",
+      "plic bani",
       "balerina",
-      "roz",
-      "pastel",
+      "roz pastel",
+      "botez",
+      "fetita",
       "elegant",
-      "personalizat"
+      "personalizat",
+      "carton premium"
     ],
     "slug": "plic-de-dar-balerina-roz-plic-dar",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
     "material": "",
     "mpn": ""
   },
@@ -1554,25 +1586,24 @@
     "id": "plic-dar-miri-silueta-061",
     "title": "Plic de dar cu silueta miri si flori alb-verde",
     "price": 4.5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar elegant pentru nunta, decorat cu silueta mire si mireasa si coronita florala alb-verde. Printat pe carton premium alb, cu text personalizabil si spatiu dedicat pentru numele familiei. Un model rafinat si modern, potrivit pentru evenimente.",
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar pentru nunta, cu silueta de miri si coronita florala alb-verde. Realizat pe carton alb premium, cu mesaj si nume familie personalizabile, potrivit pentru mese de dar rafinate.",
     "images": [
       "/images/plicuri/plic-dar-miri-silueta.jpg"
     ],
     "tags": [
-      "plicuri",
+      "plic de dar",
+      "plic bani",
       "nunta",
-      "miri",
-      "silueta",
-      "floral",
-      "alb verde",
+      "miri silueta",
+      "floral alb verde",
       "elegant",
       "personalizat",
       "carton premium"
     ],
     "slug": "plic-de-dar-cu-silueta-miri-si-flori-alb-verde-plic-dar",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
     "material": "",
     "mpn": ""
   },
@@ -1580,9 +1611,9 @@
     "id": "plic-dar-safari-bine-ati-venit-001",
     "title": "Plic de dar botez Safari cu mesaj bine ati venit",
     "price": 5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar pentru botez cu tematica Safari, decorat cu ilustratii animale de jungla (zebra, leu, hipopotam, elefant, girafa) si frunze tropicale. Include mesaj de intampinare „Bine ati venit!” si spatiu pentru personalizare cu numele copilului/familiei. Printat pe carton premium mat, ideal pentru masa de dar si un decor unitar la eveniment.",
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar pentru botez cu tematica Safari, ilustrat cu animale de jungla si frunze tropicale. Include mesajul „Bine ati venit!” si zona pentru personalizare cu nume familie/copil.",
     "images": [
       "/images/plicuri/plic-dar-safari-bine-ati-venit.jpg"
     ],
@@ -1607,9 +1638,9 @@
     "id": "plic-dar-ursulet-baloane-albastru-078",
     "title": "Plic de dar ursulet cu baloane albastre",
     "price": 5,
-    "category": "accesorii eveniment",
-    "product_type": "accesorii eveniment",
-    "desc": "Plic de dar pentru botez sau prima aniversare, cu design delicat in nuante de albastru si ilustratie cu ursulet si baloane. Include mesaj de multumire pentru invitati si spatiu pentru personalizare cu numele copilului. Ideal pentru mesele de dar, completand tematica evenimentului intr-un mod elegant si unitar. Se poate realiza si pe alte culori/teme (roz, bej, safari, floral etc.), la cerere.",
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar pentru botez sau prima aniversare, in nuante bleu cu ursulet si baloane pastel. Are text de multumire si spatiu pentru nume copil/familie, personalizabil pe tema dorita.",
     "images": [
       "/images/marturii/plic-dar-ursulet-baloane-albastru.jpg"
     ],
@@ -1617,12 +1648,10 @@
       "plic de dar",
       "ursulet",
       "baloane albastre",
+      "bleu pastel",
+      "botez baietel",
       "prima aniversare",
-      "botez",
-      "baby boy",
-      "plic bani",
       "masa de dar",
-      "tematica copii",
       "personalizat"
     ],
     "slug": "plic-de-dar-ursulet-cu-baloane-albastre-plic-dar",
@@ -1634,58 +1663,260 @@
     "id": "plic-boho-verde-016",
     "title": "Plic de dar boho verde natur",
     "price": 4.5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar pe carton texturat verde/crem/bej, model cu frunze si flori uscate. Personalizare nume si mesaj.",
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar stil boho, pe carton texturat in tonuri verde-cream, cu frunze si accente florale delicate. Se personalizeaza cu nume si mesaj, potrivit pentru nunti sau botezuri naturale.",
     "images": [
       "/images/plicuri/plic-boho-verde-natur.jpg"
     ],
     "tags": [
-      "plicuri",
+      "plic de dar",
       "boho",
-      "natural",
-      "verde",
+      "verde natur",
       "bej",
-      "flori uscate",
+      "texturat",
       "frunze",
+      "floral",
       "nunta",
       "botez",
       "elegant",
-      "personalizat",
-      "texturat"
+      "personalizat"
     ],
     "slug": "plic-de-dar-boho-verde-natur-plic-boh",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
     "material": "",
     "mpn": ""
   },
   {
-    "id": "set-invitatie-plic-boho-018",
-    "title": "Set invitatie + plic de dar boho natur",
-    "price": 17,
-    "category": "set",
-    "product_type": "set",
-    "desc": "Set coordonat pe carton texturat: invitatie + plic de dar; sigiliu auriu, flori uscate, sfoara subtire. Personalizabil.",
+    "id": "plic-dar-lauri-gri-084",
+    "title": "Plic de dar elegant cu lauri gri-argintiu",
+    "price": 5,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar premium din carton alb texturat, cu cununa de lauri gri-argintiu si detalii florale fine. Personalizare cu nume familie si text la alegere, pentru evenimente elegante.",
     "images": [
-      "/images/seturi/set-invitatie-plic-boho-natur.jpg"
+      "/images/plicuri/plic-dar-lauri-gri.jpg"
     ],
     "tags": [
-      "seturi",
-      "invitatie",
-      "plic",
+      "plic de dar",
+      "plic bani",
+      "lauri",
+      "cununa lauri",
+      "gri argintiu",
+      "carton premium",
+      "personalizat",
+      "nunta",
+      "botez",
+      "minimalist"
+    ],
+    "slug": "plic-de-dar-elegant-cu-lauri-gri-argintiu-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-ursulet-059",
+    "title": "Plic de dar cu ursulet pentru botez",
+    "price": 4.5,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar pentru botez, cu ursulet pastel intr-un cos impletit si design cald, delicat. Printat pe carton premium, cu text si nume familie personalizabile, ideal pentru tematici baby.",
+    "images": [
+      "/images/plicuri/plic-dar-ursulet.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "botez",
+      "ursulet pastel",
+      "baby",
+      "bleu/roz",
+      "elegant",
+      "personalizat",
+      "carton premium",
+      "masa de dar"
+    ],
+    "slug": "plic-de-dar-cu-ursulet-pentru-botez-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-miri-greenery-062",
+    "title": "Plic de dar miri cu greenery",
+    "price": 4.5,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar pentru nunta, cu ilustratie miri in nuante calde si coronita greenery. Realizat pe carton alb premium, cu mesaj si nume familie personalizabile, potrivit pentru decoruri moderne.",
+    "images": [
+      "/images/plicuri/plic-dar-miri-greenery.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "nunta",
+      "miri",
+      "greenery",
+      "floral verde",
+      "romantic",
+      "elegant",
+      "personalizat",
+      "carton premium"
+    ],
+    "slug": "plic-de-dar-miri-cu-greenery-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-boho-auriu-019",
+    "title": "Plic de dar boho auriu elegant",
+    "price": 6,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar boho pe carton texturat, cu accente aurii discrete si print elegant fata-verso. Se personalizeaza cu nume si mesaj, ideal pentru evenimente premium cu stil minimalist.",
+    "images": [
+      "/images/plicuri/plic-boho-auriu-elegant.jpg"
+    ],
+    "tags": [
+      "plic de dar",
       "boho",
       "auriu",
-      "sigiliu",
-      "flori uscate",
-      "natur",
-      "elegant",
-      "rustic",
-      "handmade",
+      "texturat",
+      "minimalist",
+      "premium",
       "nunta",
+      "botez",
+      "elegant",
       "personalizat"
     ],
-    "slug": "set-invitatie-plic-de-dar-boho-natur-set-invi",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "slug": "plic-de-dar-boho-auriu-elegant-plic-boh",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-ursulet-baloane-albastru-multumim-079",
+    "title": "Plic de dar ursulet cu baloane albastre – mesaj multumire",
+    "price": 5,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar bleu cu ursulet si baloane pastel, cu mesaj de multumire imprimat. Include spatiu pentru nume familie si se poate adapta pe alte culori/texte, la cerere.",
+    "images": [
+      "/images/plicuri/plic-dar-ursulet-baloane-albastru-079.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "ursulet",
+      "baloane albastre",
+      "mesaj multumire",
+      "bleu pastel",
+      "botez baiat",
+      "masa de dar",
+      "personalizat"
+    ],
+    "slug": "plic-de-dar-ursulet-cu-baloane-albastre-mesaj-multumire-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-ursulet-petrecere-bebe-multumire-080",
+    "title": "Plic de dar ursulet petrecere bebe – mesaj multumire",
+    "price": 5,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar pentru botez sau petrecerea bebelusului, cu ursulet, stegulete festive si stelute aurii. Textul de multumire este inclus, plus zona pentru nume familie.",
+    "images": [
+      "/images/plicuri/plic-dar-ursulet-petrecere-bebe-multumire.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "ursulet",
+      "petrecere bebe",
+      "mesaj multumire",
+      "botez",
+      "prima aniversare",
+      "baby shower",
+      "masa de dar"
+    ],
+    "slug": "plic-de-dar-ursulet-petrecere-bebe-mesaj-multumire-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-botez-baietel-veverite-020",
+    "title": "Plic botez baietel cu veverite jucause",
+    "price": 5,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar pentru botez baietel, cu ilustratie vesela de veverite si accente pastel. Printat pe carton mat premium, cu mesaj si nume personalizabile, potrivit pentru masa de dar.",
+    "images": [
+      "/images/plicuri/plic-botez-baietel-veverite.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "botez baietel",
+      "veverite",
+      "animale",
+      "pastel",
+      "tematic copii",
+      "personalizat",
+      "carton premium"
+    ],
+    "slug": "plic-botez-baietel-cu-veverite-jucause-plic-bot",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-verighete-multumire-001",
+    "title": "Plic de dar cu verighete si mesaj multumim",
+    "price": 5,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar pentru nunta, cu verighete aurii si design floral pastel, plus mesaj „Multumim!”. Printat pe carton premium mat, cu spatiu pentru nume familie, ideal pentru masa de dar.",
+    "images": [
+      "/images/plicuri/plic-dar-verighete-multumim.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "nunta",
+      "verighete",
+      "multumim",
+      "floral pastel",
+      "romantic",
+      "elegant",
+      "personalizat",
+      "masa de dar"
+    ],
+    "slug": "plic-de-dar-cu-verighete-si-mesaj-multumim-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-botez-bleu-ursulet-024",
+    "title": "Plic botez bleu cu ursulet si Mickey",
+    "price": 4.5,
+    "category": "plicuri dar",
+    "product_type": "plicuri dar",
+    "desc": "Plic de dar bleu pentru botez, cu ursulet si Mickey in stil jucaus, pe carton mat premium. Are text si zona pentru nume familie/copil, personalizabile pentru tematica evenimentului.",
+    "images": [
+      "/images/plicuri/plic-botez-bleu-ursulet.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "botez",
+      "bleu pastel",
+      "ursulet",
+      "mickey",
+      "tematic copii",
+      "personalizat",
+      "elegant",
+      "masa de dar"
+    ],
+    "slug": "plic-botez-bleu-cu-ursulet-si-mickey-plic-bot",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopesset-invitatie-plic-boho-018",
     "material": "",
     "mpn": ""
   },
@@ -1742,193 +1973,6 @@
     ],
     "slug": "set-invitatie-meniu-plic-de-dar-cu-lamai-set-invi",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "plic-dar-ursulet-059",
-    "title": "Plic de dar cu ursulet pentru botez",
-    "price": 4.5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar elegant pentru botez, ilustrat cu ursuleț pastel într-un coș împletit. Printat pe carton premium alb, cu text personalizabil și spațiu dedicat pentru numele familiei. Potrivit pentru tematici delicate și evenimente rafinate.",
-    "images": [
-      "/images/plicuri/plic-dar-ursulet.jpg"
-    ],
-    "tags": [
-      "plicuri",
-      "botez",
-      "ursulet",
-      "baietel",
-      "pastel",
-      "elegant",
-      "personalizat",
-      "carton premium"
-    ],
-    "slug": "plic-de-dar-cu-ursulet-pentru-botez-plic-dar",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "plic-dar-miri-greenery-062",
-    "title": "Plic de dar miri cu greenery",
-    "price": 4.5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar elegant pentru nunta, ilustrat cu un cuplu de miri în nuanțe calde și coronită greenery în partea superioară. Printat pe carton premium alb, text personalizabil și spațiu dedicat pentru numele familiei. Model rafinat, modern și potrivit pentru nunți.",
-    "images": [
-      "/images/plicuri/plic-dar-miri-greenery.jpg"
-    ],
-    "tags": [
-      "plicuri",
-      "nunta",
-      "miri",
-      "greenery",
-      "floral",
-      "elegant",
-      "personalizat",
-      "carton premium",
-      "romantic"
-    ],
-    "slug": "plic-de-dar-miri-cu-greenery-plic-dar",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "plic-boho-auriu-019",
-    "title": "Plic de dar boho auriu elegant",
-    "price": 6,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar pe carton texturat cu nuante aurii, print fata-verso. Stil minimalist si elegant pentru evenimente.",
-    "images": [
-      "/images/plicuri/plic-boho-auriu-elegant.jpg"
-    ],
-    "tags": [
-      "plicuri",
-      "boho",
-      "bej",
-      "gri",
-      "texturat",
-      "floral",
-      "elegant",
-      "minimalist",
-      "nunta",
-      "botez",
-      "handmade",
-      "premium"
-    ],
-    "slug": "plic-de-dar-boho-auriu-elegant-plic-boh",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "plic-dar-ursulet-baloane-albastru-multumim-079",
-    "title": "Plic de dar ursulet cu baloane albastre – mesaj multumire",
-    "price": 5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar pentru botez sau prima aniversare, cu fundal bleu, ursulet simpatic si baloane in nuante pastel. Are imprimat mesajul de multumire pentru invitati si spatiu pentru completarea numelui familiei, fiind perfect pentru masa de dar. Designul delicat se potriveste tematicilor baby boy/primul an si poate fi personalizat pe culori sau texte diferite, la cerere.",
-    "images": [
-      "/images/plicuri/plic-dar-ursulet-baloane-albastru-079.jpg"
-    ],
-    "tags": [
-      "plic de dar",
-      "ursulet",
-      "baloane albastre",
-      "mesaj multumire",
-      "botez baiat",
-      "baby shower",
-      "plic bani",
-      "masa de dar",
-      "personalizat"
-    ],
-    "slug": "plic-de-dar-ursulet-cu-baloane-albastre-mesaj-multumire-plic-dar",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "plic-dar-ursulet-petrecere-bebe-multumire-080",
-    "title": "Plic de dar ursulet petrecere bebe – mesaj multumire",
-    "price": 5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar cu tematica delicata pentru botez sau prima petrecere a bebelusului, decorat cu ursulet simpatic, stegulete festive si stelute aurii. Textul de multumire este potrivit pentru evenimente de copii si include spatiu pentru completarea numelui familiei. Aspectul cald si neutru il face usor de asortat cu orice decor pastel, fiind ideal pentru masa de dar.",
-    "images": [
-      "/images/plicuri/plic-dar-ursulet-petrecere-bebe-multumire.jpg"
-    ],
-    "tags": [
-      "plic de dar",
-      "ursulet",
-      "petrecere bebe",
-      "mesaj multumire",
-      "botez",
-      "prima aniversare",
-      "baby shower",
-      "plic bani",
-      "masa de dar",
-      "personalizat"
-    ],
-    "slug": "plic-de-dar-ursulet-petrecere-bebe-mesaj-multumire-plic-dar",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "plic-botez-baietel-veverite-020",
-    "title": "Plic botez baietel cu veverite jucause",
-    "price": 5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic pe carton mat premium, ilustratie doua veverite; mesaj de multumire personalizat. Tematica vesela pentru copii.",
-    "images": [
-      "/images/plicuri/plic-botez-baietel-veverite.jpg"
-    ],
-    "tags": [
-      "plicuri",
-      "botez",
-      "baietel",
-      "veverite",
-      "animale",
-      "tematic",
-      "personalizat",
-      "cadou",
-      "copii",
-      "multumire",
-      "elegant"
-    ],
-    "slug": "plic-botez-baietel-cu-veverite-jucause-plic-bot",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "plic-dar-verighete-multumire-001",
-    "title": "Plic de dar cu verighete si mesaj multumim",
-    "price": 5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar elegant pentru nunta, cu design floral pastel si verighete aurii, plus mesaj imprimat de multumire. Printat pe carton premium mat, cu spatiu pentru personalizare nume familie. Ideal pentru masa de dar si evenimente romantice.",
-    "images": [
-      "/images/plicuri/plic-dar-verighete-multumim.jpg"
-    ],
-    "tags": [
-      "plic de dar",
-      "nunta",
-      "verighete",
-      "multumim",
-      "floral pastel",
-      "elegant",
-      "romantic",
-      "personalizat",
-      "masa de dar"
-    ],
-    "slug": "plic-de-dar-cu-verighete-si-mesaj-multumim-plic-dar",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
     "material": "",
     "mpn": ""
   },
@@ -2119,34 +2163,6 @@
     ],
     "slug": "set-invitatie-plic-botez-bleu-cu-fundita-si-ursulet-set-invi",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "plic-botez-bleu-ursulet-024",
-    "title": "Plic botez bleu cu ursulet si Mickey",
-    "price": 4.5,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de botez pe carton mat premium; ilustratii ursulet si Mickey; nuante bleu pastel. Personalizare nume si data.",
-    "images": [
-      "/images/plicuri/plic-botez-bleu-ursulet.jpg"
-    ],
-    "tags": [
-      "plicuri",
-      "botez",
-      "baietel",
-      "ursulet",
-      "mickey",
-      "bleu pastel",
-      "personalizat",
-      "elegant",
-      "copii",
-      "tematic",
-      "handmade"
-    ],
-    "slug": "plic-botez-bleu-cu-ursulet-si-mickey-plic-bot",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
   },
