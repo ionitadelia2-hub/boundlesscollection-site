@@ -2039,24 +2039,52 @@
     "mpn": ""
   },
   {
+    "id": "meniu-balerina-roz-089",
+    "title": "Meniu botez balerina roz pliant",
+    "price": 7,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de botez tip carte, in nuante roz pastel, cu ilustratie balerina si accente delicate. Printat pe carton premium si personalizabil complet cu preparate, nume si data; textul poate fi usor distorsionat in imaginea de prezentare.",
+    "images": [
+      "/images/meniuri/meniu-balerina-roz.jpg"
+    ],
+    "tags": [
+      "meniuri",
+      "botez",
+      "balerina",
+      "roz pastel",
+      "fetite",
+      "delicat",
+      "elegant",
+      "personalizat",
+      "carton premium"
+    ],
+    "slug": "meniu-botez-balerina-roz-pliant-meniu-ba",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "meniu-botez-elefantel-bleu-053",
     "title": "Meniu botez elefantel bleu",
     "price": 7,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu pentru botez cu ilustratii elefant si fundal bleu pastel, printat pe carton premium. Un design delicat si elegant, potrivit pentru evenimente tematice pentru baietei.",
+    "desc": "Meniu pentru botez in nuante bleu pastel, cu elefantel si baloane, printat pe carton premium. Se personalizeaza integral cu preparatele si detaliile evenimentului, oferind mesei un look baby boy elegant si unitar.",
     "images": [
       "/images/meniuri/meniu-botez-elefant-bleu.jpg"
     ],
     "tags": [
       "meniuri",
       "botez",
-      "ursulet",
-      "bleu",
-      "baietel",
+      "elefantel",
+      "bleu pastel",
+      "baby boy",
       "pastel",
-      "elegant",
-      "carton premium"
+      "personalizat",
+      "carton premium",
+      "delicat",
+      "elegant"
     ],
     "slug": "meniu-botez-elefantel-bleu-meniu-bo",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
@@ -2069,7 +2097,7 @@
     "price": 9,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu botez tematica Safari, cu animale de jungla si frunze tropicale la partea superioara, printat pe carton premium alb si pliat tip carte. Textul meniului se personalizeaza integral pentru evenimentul tău; imaginea din fotografii este exemplu de design.",
+    "desc": "Meniu de botez cu tematica Safari, decorat cu animale de jungla si frunze tropicale, pliat tip carte. Print pe carton premium alb, cu personalizare completa a meniului, numelui si datei pentru un decor fresh si vesel.",
     "images": [
       "/images/meniuri/meniu-botez-safari-verde.jpg"
     ],
@@ -2079,6 +2107,7 @@
       "safari",
       "jungla",
       "animale",
+      "frunze tropicale",
       "verde",
       "tematic",
       "personalizat",
@@ -2096,18 +2125,21 @@
     "price": 9.5,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu elegant printat pe carton premium, decorat cu sigiliu roz pudrat si aranjament floral uscat. Ideal pentru botezuri si evenimente cu tematica pastel.",
+    "desc": "Meniu elegant pentru botez, printat pe carton premium si accesorizat cu sigiliu roz pudrat si flori uscate. Personalizabil cu preparatele si detaliile evenimentului, ideal pentru decoruri pastel si mese rafinate.",
     "images": [
       "/images/meniuri/meniu-botez-roz-sigiliu.jpg"
     ],
     "tags": [
       "meniuri",
       "botez",
-      "roz",
+      "roz pudrat",
       "sigiliu",
-      "elegant",
+      "flori uscate",
       "pastel",
-      "carton premium"
+      "personalizat",
+      "carton premium",
+      "elegant",
+      "handmade"
     ],
     "slug": "meniu-botez-roz-cu-sigiliu-meniu-bo",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
@@ -2120,7 +2152,7 @@
     "price": 7,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu personalizat pe carton mat premium; grafica cu veverite si ghinde. Se asorteaza cu invitatie/plic din colectie.",
+    "desc": "Meniu personalizat pentru botez baietel, cu grafica veverite si ghinde in stil jucaus. Printat pe carton mat premium, pliat tip carte, iar textul se adapteaza complet meniului si tematicii evenimentului.",
     "images": [
       "/images/meniuri/meniu-botez-baietel-veverite.jpg"
     ],
@@ -2133,8 +2165,9 @@
       "tematic",
       "personalizat",
       "copii",
-      "elegant",
-      "carton premium"
+      "carton premium",
+      "delicat",
+      "elegant"
     ],
     "slug": "meniu-botez-baietel-cu-veverite-meniu-bo",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
