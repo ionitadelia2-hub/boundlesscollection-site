@@ -1921,58 +1921,86 @@
     "mpn": ""
   },
   {
-    "id": "set-invitatie-plic-ursulet-060",
-    "title": "Set invitatie + plic de dar cu ursulet",
-    "price": 14,
-    "category": "set",
-    "product_type": "set",
-    "desc": "Set coordonat pentru botez, format din invitație pe carton premium alb cu ilustratie ursuleț pastel și detalii delicate, plus plic de dar asortat cu același design. Atât invitația cât și plicul se personalizează integral cu nume, dată și textul dorit. Invitatia vine rulata sul si legata cu panglica de satin",
+    "id": "plic-dar-carusel-vintage-085",
+    "title": "Plic de dar botez carusel vintage bej",
+    "price": 5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru botez sau petrecere de copii, cu ilustratie tip carusel in stil vintage, in nuante calde bej-ivory. Printat pe carton premium mat, cu mesaj de multumire si spatiu pentru numele familiei. Se personalizeaza cu nume, data si text la alegere, fiind perfect pentru o masa de dar unitara si rafinata.",
     "images": [
-      "/images/seturi/set-invitatie-plic-ursulet.jpg"
+      "/images/plicuri/plic-dar-carusel-vintage.jpg"
     ],
     "tags": [
-      "seturi",
+      "plic de dar",
       "botez",
-      "ursulet",
-      "invitatie",
-      "plic",
-      "baietel",
-      "pastel",
-      "elegant",
+      "carusel",
+      "vintage",
+      "bej",
+      "ivory",
+      "copii",
+      "masa de dar",
       "personalizat",
+      "elegant",
       "carton premium"
     ],
-    "slug": "set-invitatie-plic-de-dar-cu-ursulet-set-invi",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "slug": "plic-de-dar-botez-carusel-vintage-bej-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
     "material": "",
     "mpn": ""
   },
   {
-    "id": "set-invitatie-meniu-plic-lamai-063",
-    "title": "Set invitatie + meniu + plic de dar cu lamai",
-    "price": 29,
-    "category": "set",
-    "product_type": "set",
-    "desc": "Set complet pentru nunta cu tematica mediteraneana: invitatie pe carton premium cu grafica lămâi și flori albastre, meniu asortat în același stil vibrant și plic de dar decorat cu motive citrus și detalii elegante. Toate elementele sunt complet personalizabile cu nume, dată și textul dorit. Un set luminos, rafinat și perfect pentru evenimente fresh, de vară.",
+    "id": "plic-dar-iepuras-baloane-roz-085",
+    "title": "Plic de dar iepuras cu baloane roz pastel",
+    "price": 4.5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar delicat pentru botez sau aniversare, cu ilustratie de iepuras si baloane in nuante roz pastel. Printat pe carton premium alb, cu mesaj de multumire si spatiu pentru completarea numelui familiei. Ideal pentru masa de dar si pentru tematici baby girl, cu posibilitate de personalizare la cerere.",
     "images": [
-      "/images/seturi/set-invitatie-meniu-plic-lamai.jpg"
+      "/images/plicuri/plic-dar-iepuras-baloane-roz.jpg"
     ],
     "tags": [
-      "seturi",
-      "nunta",
-      "lamai",
-      "citrus",
-      "invitație",
-      "meniu",
-      "plic dar",
-      "mediteranean",
-      "vara",
-      "colorat",
-      "elegant",
-      "personalizat"
+      "plic de dar",
+      "iepuras",
+      "baloane",
+      "roz pastel",
+      "botez fetita",
+      "baby girl",
+      "plic bani",
+      "masa de dar",
+      "personalizat",
+      "tematica copii",
+      "elegant"
     ],
-    "slug": "set-invitatie-meniu-plic-de-dar-cu-lamai-set-invi",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "slug": "plic-de-dar-iepuras-cu-baloane-roz-pastel-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-elefantel-bleu-bine-ati-venit-086",
+    "title": "Plic de dar elefantel bleu cu balon – mesaj bine ati venit",
+    "price": 5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar pentru botez sau prima aniversare, cu tematica baby boy si ilustratie simpatica de elefantel bleu cu balon. Designul include mesaj de intampinare „Bine ati venit!” si spatiu pentru completarea numelui familiei, fiind perfect pentru masa de dar si un decor unitar la eveniment. Printat pe carton premium mat, cu posibilitate de personalizare a textului si culorilor la cerere.",
+    "images": [
+      "/images/plicuri/plic-dar-elefantel-bleu-bine-ati-venit.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "elefantel",
+      "bleu",
+      "balon",
+      "bine ati venit",
+      "botez baietel",
+      "baby boy",
+      "plic bani",
+      "masa de dar",
+      "personalizat",
+      "tematica copii"
+    ],
+    "slug": "plic-de-dar-elefantel-bleu-cu-balon-mesaj-bine-ati-venit-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
     "material": "",
     "mpn": ""
   },
@@ -2113,7 +2141,7 @@
     "price": 14,
     "category": "set",
     "product_type": "set",
-    "desc": "Set coordonat pentru botez cu tematica Safari: meniu fata-verso pe carton premium, cu animale de jungla si frunze tropicale, plus plic asortat pentru dar sau mesaj. Textul de pe meniu si etichete se personalizeaza integral cu nume, data si detalii de eveniment.",
+    "desc": "Set coordonat pentru botez cu tematica Safari: meniu fata-verso pe carton premium, cu animale gingase de jungla si frunze tropicale, plus plic asortat pentru dar sau mesaj. Personalizare completa cu nume, data si detalii de eveniment, pentru un decor unitar.",
     "images": [
       "/images/seturi/set-meniu-plic-botez-safari.jpg"
     ],
@@ -2140,9 +2168,9 @@
     "id": "set-invitatie-plic-botez-bleu-023",
     "title": "Set invitatie + plic botez bleu cu fundita si ursulet",
     "price": 14,
-    "category": "seturi",
-    "product_type": "seturi",
-    "desc": "Invitatie si plic asortate in bleu pastel; fundita organza, ilustratii ursulet/Mickey. Carton premium mat, personalizabile.",
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set delicat pentru botez baietel: invitatie si plic asortat in bleu pastel, cu ursulet simpatic si fundita organza. Tiparit pe carton premium mat, cu grafica fina si text personalizabil integral (nume, data, locatie, mesaj).",
     "images": [
       "/images/seturi/set-invitatie-plic-botez-bleu.jpg"
     ],
@@ -2167,28 +2195,147 @@
     "mpn": ""
   },
   {
-    "id": "sticker-oglinda-auriu-caligrafic-001",
-    "title": "Sticker oglinda personalizat auriu (nume + data)",
-    "price": 85,
-    "category": "stickere oglinda",
-    "product_type": "stickere oglinda",
-    "desc": "Autocolant caligrafic pentru oglinda de intampinare: nume mirii + data, vinil auriu lucios. Se livreaza gata de aplicat, cu folie de transfer. Dimensiuni si text personalizabile.",
+    "id": "set-invitatie-plic-ursulet-060",
+    "title": "Set invitatie + plic de dar cu ursulet",
+    "price": 14,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat pentru botez, format din invitatie pe carton premium alb cu ilustratie ursulet pastel si plic de dar in acelasi design. Ambele piese se personalizeaza complet cu nume, data si textul dorit; invitatia se livreaza rulata sul, legata cu panglica satin.",
     "images": [
-      "/images/stickere/sticker-oglinda-auriu-mara-alexandru-2025.jpg"
+      "/images/seturi/set-invitatie-plic-ursulet.jpg"
     ],
     "tags": [
-      "stickere oglinda",
-      "oglinda intampinare",
-      "nunta",
-      "autocolant text",
-      "caligrafic",
-      "auriu",
+      "seturi",
+      "botez",
+      "ursulet",
+      "invitatie",
+      "plic",
+      "baietel",
+      "pastel",
+      "elegant",
       "personalizat",
-      "eveniment",
-      "semnalistica eleganta"
+      "carton premium"
     ],
-    "slug": "sticker-oglinda-personalizat-auriu-nume-data-sticker-",
-    "google_product_category": "Home & Garden > Decor > Decals & Stickers",
+    "slug": "set-invitatie-plic-de-dar-cu-ursulet-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-invitatie-meniu-plic-lamai-063",
+    "title": "Set invitatie + meniu + plic de dar cu lamai",
+    "price": 29,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set complet pentru nunta cu tematica mediteraneana: invitatie pe carton premium cu grafica lamai si flori albastre, meniu asortat si plic de dar in acelasi stil citrus. Personalizare integrala cu nume, data si text, ideal pentru evenimente de vara luminoase.",
+    "images": [
+      "/images/seturi/set-invitatie-meniu-plic-lamai.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "nunta",
+      "lamai",
+      "citrus",
+      "invitatie",
+      "meniu",
+      "plic dar",
+      "mediteranean",
+      "vara",
+      "colorat",
+      "elegant",
+      "personalizat"
+    ],
+    "slug": "set-invitatie-meniu-plic-de-dar-cu-lamai-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitationssticker-oglinda-auriu-caligrafic-001",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-invitatie-meniu-plic-travel-085",
+    "title": "Set invitatie + meniu + plic de dar Travel cu avion",
+    "price": 29,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set complet pentru nunta cu tematica travel: invitatie, meniu si plic de dar coordonate, cu grafica vintage inspirata din harti, pasapoarte si avion. Tiparit pe carton premium, cu layout elegant si detalii fine, ideal pentru evenimente cu vibe de calatorie. Textele se personalizeaza integral cu nume, data si mesajul dorit.",
+    "images": [
+      "/images/seturi/set-invitatie-meniu-plic-travel.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "nunta",
+      "travel",
+      "calatorie",
+      "avion",
+      "pasaport",
+      "harti vintage",
+      "invitatie",
+      "meniu",
+      "plic dar",
+      "tematic",
+      "personalizat",
+      "elegant"
+    ],
+    "slug": "set-invitatie-meniu-plic-de-dar-travel-cu-avion-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-invitatie-plicuri-meniu-elefant-086",
+    "title": "Set invitatie + plic invitatie + plic de dar + meniu Elefant bleu",
+    "price": 29,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set complet pentru botez in nuante bleu, cu grafica delicata de elefantel si balonase: invitatie, plic pentru invitatie, plic de dar si meniu coordonate in acelasi stil. Tiparit pe carton premium, cu panglica satin pentru un plus de eleganta. Toate textele se personalizeaza integral cu nume, data si mesajul dorit, pentru o papetarie unitara la eveniment.",
+    "images": [
+      "/images/seturi/set-invitatie-plicuri-meniu-elefant-bleu.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "botez",
+      "elefantel",
+      "bleu pastel",
+      "baby boy",
+      "invitatie",
+      "plic invitatie",
+      "plic dar",
+      "meniu",
+      "tematic",
+      "personalizat",
+      "elegant",
+      "carton premium"
+    ],
+    "slug": "set-invitatie-plic-invitatie-plic-de-dar-meniu-elefant-bleu-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-marturie-plic-dar-fluture-087",
+    "title": "Set marturie + plic de dar Fluture roz floral",
+    "price": 14,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat pentru evenimente delicate, format din marturie parfumabila tip fluture din ceara de soia, prezentata pe card floral in ambalaj transparent, si plic de dar asortat in acelasi design romantic. Culorile, aroma si textele se personalizeaza cu nume si data, iar pentru protectia datelor, scrisul poate fi usor distorsionat in imaginile de prezentare. Un set fin si unitar pentru botez, nunta sau aniversari.",
+    "images": [
+      "/images/seturi/set-marturie-plic-dar-fluture-roz-floral.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "marturie",
+      "fluture",
+      "roz pastel",
+      "floral",
+      "botez",
+      "nunta",
+      "plic de dar",
+      "set coordonat",
+      "personalizat",
+      "elegant",
+      "handmade"
+    ],
+    "slug": "set-marturie-plic-de-dar-fluture-roz-floral-set-mart",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
