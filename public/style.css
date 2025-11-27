@@ -1119,3 +1119,14 @@ form input[type="submit"]:active {
   margin-bottom: 0.75rem !important;
 }
 
+.note-marturii{
+  margin: 14px 0 22px;
+  padding: 14px 16px;
+  background: #faf7f5;
+  border: 1px solid #eee3dd;
+  border-radius: 12px;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+.note-marturii strong{ font-weight: 600; }
+
