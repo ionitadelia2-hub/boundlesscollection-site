@@ -5,7 +5,7 @@
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie eleganta pe carton ivory, legata manual cu sfoara aurie si sigiliu roz, decorata cu flori uscate naturale. Text personalizabil complet; in imaginile de prezentare scrisul poate fi usor distorsionat pentru protectia datelor.",
+    "desc": "Invitatie eleganta pe carton ivory, legata manual cu sfoara aurie si sigiliu roz, decorata cu flori uscate naturale.",
     "images": [
       "/images/invitatii/invitatie-botez-sigiliu-roz-flori-uscate.jpg"
     ],
@@ -31,7 +31,7 @@
     "price": 10,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie pe carton foto, acoperita cu foaie de calc imprimata si fundita organza roz. Se personalizeaza cu text, poza si data; pentru protectia datelor, in poze scrisul poate fi discret distorsionat.",
+    "desc": "Invitatie pe carton foto, acoperita cu foaie de calc imprimata si fundita organza roz.",
     "images": [
       "/images/invitatii/invitatie-botez-foto-foaie-de-calc-roz.jpg"
     ],
@@ -57,7 +57,7 @@
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie delicata pentru botez baietel, pe carton premium cu ilustratie ursulet si fundita bleu aplicata manual. Design pastel, personalizabil integral; textul din prezentari poate fi usor distorsionat.",
+    "desc": "Invitatie delicata pentru botez baietel, pe carton premium cu ilustratie ursulet si fundita bleu aplicata manual. Design pastel, personalizabil integral.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-bleu.jpg"
     ],
@@ -83,7 +83,7 @@
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie pe carton premium cu invelis calc semitransparent si fundita rosie din organza. Stil elegant pentru evenimente tematice. Se personalizeaza complet; in poze scrisul poate fi discret distorsionat.",
+    "desc": "Invitatie pe carton premium cu invelis calc semitransparent si fundita rosie din organza. Stil elegant pentru evenimente tematice.",
     "images": [
       "/images/invitatii/invitatie-botez-fundita-rosie-foaie-calc.jpg"
     ],
@@ -109,7 +109,7 @@
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie tip carticica pe carton premium, cu fotogratie si detalii de eveniment, legata cu fundita albastra din organza. Personalizare completa; textul din imagini poate fi usor distorsionat.",
+    "desc": "Invitatie tip carticica pe carton premium, cu fotogratie si detalii de eveniment, legata cu fundita albastra din organza.",
     "images": [
       "/images/invitatii/invitatie-botez-tip-carticica-fundita-albastra.jpg"
     ],
@@ -135,7 +135,7 @@
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie pe carton premium cu ursulet si nori pastel, completata cu fundita ivoire din organza. Look delicat pentru baietei. Text personalizabil integral; in poze poate fi discret distorsionat.",
+    "desc": "Invitatie pe carton premium cu ursulet si nori pastel, completata cu fundita ivoire din organza. Look delicat pentru baietei.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-ivoire.jpg"
     ],
@@ -162,7 +162,7 @@
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie pentru botez fetita, pe carton premium cu ursulet si baloane pastel, legata cu fundita roz din satin. Design dulce si elegant. Personalizare completa; in imagini scrisul poate fi usor distorsionat.",
+    "desc": "Invitatie pentru botez fetita, pe carton premium cu ursulet si baloane pastel, legata cu fundita roz din satin. Design dulce si elegant.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-roz.jpg"
     ],
@@ -190,7 +190,7 @@
     "price": 8.5,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie tip pergament, rulata si legata manual cu fundita verde smarald din organza. Stil minimalist cu vibe natural, ideal pentru nunta. Text complet personalizabil; in poze poate fi discret distorsionat.",
+    "desc": "Invitatie tip pergament, rulata si legata manual cu fundita verde smarald din organza. Stil minimalist cu vibe natural, ideal pentru nunta.",
     "images": [
       "/images/invitatii/invitatie-pergament-verde-smarald.jpg"
     ],
@@ -218,7 +218,7 @@
     "price": 13,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie botez Safari pe carton premium mat, cu animale de jungla si frunze tropicale, plus plic verde decupat tip frunza. Design vesel si unitar. Se personalizeaza complet; textul din imagini poate fi usor distorsionat.",
+    "desc": "Invitatie botez Safari pe carton premium mat, cu animale de jungla si frunze tropicale, plus plic verde decupat tip frunza. Design vesel si unitar.",
     "images": [
       "/images/invitatii/invitatie-botez-safari-plic-verde.jpg"
     ],
@@ -246,7 +246,7 @@
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie de nunta tip ziar/revista retro, printata pe carton mat si legata cu sfoara natur. Model creativ care spune povestea mirilor. Personalizare completa; pentru protectia datelor, in poze scrisul poate fi discret distorsionat.",
+    "desc": "Invitatie de nunta tip ziar/revista retro, printata pe carton mat si legata cu sfoara natur. Model creativ care spune povestea mirilor. Personalizare completa.",
     "images": [
       "/images/invitatii/invitatie-nunta-jurnal.jpg"
     ],
@@ -273,7 +273,7 @@
     "price": 10,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie delicata pentru botez baietel, in nuante bleu pastel, cu ursulet adormit pe norisori si fundita satin, printata pe carton premium. Textul se personalizeaza complet cu nume, data si detalii; in imaginile de prezentare scrisul poate fi usor distorsionat pentru protectia datelor.",
+    "desc": "Invitatie delicata pentru botez baietel, in nuante bleu pastel, cu ursulet adormit pe norisori si fundita satin, printata pe carton premium.",
     "images": [
       "/images/invitatii/invitatie-ursulet-bleu-norisori.jpg"
     ],
@@ -291,6 +291,90 @@
       "elegant"
     ],
     "slug": "invitatie-botez-ursulet-bleu-cu-norisori-si-funda-satin-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-pegrament-printesa-bleu-091",
+    "title": "Invitatie pergament tematica printesa bleu cu fundita satin",
+    "price": 9,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitatie tip pergament pentru botez sau aniversare, in nuante bleu pastel, cu grafica de basm si ilustratii elegante, rulata manual si prinsa cu fundita delicata. Se realizeaza pe carton premium si se personalizeaza complet cu nume, data si text.",
+    "images": [
+      "/images/invitatii/invitatie-pergament-printesa-bleu.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "aniversare copii",
+      "pergament",
+      "printesa",
+      "bleu pastel",
+      "tematica basm",
+      "fundita satin",
+      "personalizat",
+      "delicat",
+      "elegant",
+      "carton premium"
+    ],
+    "slug": "invitatie-pergament-tematica-printesa-bleu-cu-fundita-satin-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-absolvire-bleu-pergament-092",
+    "title": "Invitatie pergament absolvire cu fundita satin",
+    "price": 9,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitatie pentru absolvire, cu design modern in nuante bleu marble si accente aurii fine, imprimata pe carton premium si finisata elegant. Poate fi oferita plata sau rulata tip pergament si legata cu fundita satin, iar textul se personalizeaza complet.",
+    "images": [
+      "/images/invitatii/invitatie-absolvire-bleu-pergament.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "absolvire",
+      "graduare",
+      "bleu marble",
+      "accente aurii",
+      "fundita satin",
+      "carton premium",
+      "personalizat",
+      "elegant",
+      "modern"
+    ],
+    "slug": "invitatie-pergament-absolvire-cu-fundita-satin-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-pergament-fundita-aurie-093",
+    "title": "Invitatie pergament cu fundita aurie",
+    "price": 8.5,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitatie tip pergament, realizata pe carton premium cu aspect elegant si rulata manual, apoi legata cu fundita aurie stralucitoare pentru un plus de rafinament. Textul se personalizeaza complet cu nume, data si detalii de eveniment, iar modelul poate fi adaptat cromatic la tematica aleasa.",
+    "images": [
+      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "pergament",
+      "fundita aurie",
+      "nunta",
+      "botez",
+      "elegant",
+      "handmade",
+      "carton premium",
+      "personalizat",
+      "minimalist",
+      "lux"
+    ],
+    "slug": "invitatie-pergament-cu-fundita-aurie-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
@@ -1591,6 +1675,37 @@
     "mpn": ""
   },
   {
+    "id": "marturie-leut-safari-098",
+    "title": "Marturie leut Safari in cutiuta cu fundita verde",
+    "price": 25,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie in tematica Safari, cu figurina leut realizata manual din ceara de soia si ambalata individual in cutiuta cu design jungle. Este decorata cu fundita satin verde si eticheta personalizata cu nume si data, fiind perfecta pentru botezuri sau petreceri de copii cu tematica safari.",
+    "images": [
+      "/images/marturii/marturie-leut-safari.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "leut",
+      "safari",
+      "jungla",
+      "animalute",
+      "verde",
+      "botez",
+      "baietel",
+      "cutiuta",
+      "fundita satin",
+      "personalizat",
+      "handmade",
+      "soia",
+      "cadou invitati"
+    ],
+    "slug": "marturie-leut-safari-in-cutiuta-cu-fundita-verde-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-dar-balerina-roz-052",
     "title": "Plic de dar balerina roz",
     "price": 4.5,
@@ -2039,6 +2154,64 @@
     "mpn": ""
   },
   {
+    "id": "plic-dar-floral-roz-099",
+    "title": "Plic de dar floral roz pastel",
+    "price": 5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant, cu grafica florala in nuante roz pastel si accente fine, potrivit pentru nunta, botez sau aniversari. Este printat pe carton premium mat, cu spatiu dedicat pentru numele familiei si mesaj de multumire, pentru un decor unitar si rafinat la masa de dar.",
+    "images": [
+      "/images/plicuri/plic-dar-floral-roz.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "plic bani",
+      "floral",
+      "roz pastel",
+      "elegant",
+      "carton premium",
+      "personalizat",
+      "nunta",
+      "botez",
+      "aniversare",
+      "masa de dar",
+      "papetarie eveniment"
+    ],
+    "slug": "plic-de-dar-floral-roz-pastel-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-ursulet-balerina-roz-100",
+    "title": "Plic de dar ursulet balerina roz pastel",
+    "price": 5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar delicat, in nuante roz pastel, cu ilustratie ursulet balerina si baloane fine. Printat pe carton premium mat, cu spatiu pentru numele familiei si mesaj de multumire, ideal pentru botezuri, aniversari sau evenimente cu tematica baby girl. Completeaza armonios decorul mesei de dar si restul papetariei din colectie.",
+    "images": [
+      "/images/plicuri/plic-dar-ursulet-balerina-roz.jpg"
+    ],
+    "tags": [
+      "plic de dar",
+      "plic bani",
+      "ursulet balerina",
+      "roz pastel",
+      "baloane",
+      "baby girl",
+      "botez",
+      "aniversare",
+      "elegant",
+      "personalizat",
+      "carton premium",
+      "masa de dar"
+    ],
+    "slug": "plic-de-dar-ursulet-balerina-roz-pastel-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "meniu-balerina-roz-089",
     "title": "Meniu botez balerina roz carte",
     "price": 7,
@@ -2407,12 +2580,124 @@
     "mpn": ""
   },
   {
+    "id": "set-meniu-invitatie-auriu-094",
+    "title": "Set meniu + plic de dar tematica auriu",
+    "price": 16,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat de papetarie pentru nunta sau botez, cu meniu si plic de dar in acelasi stil elegant cu accente aurii si grafica fina. Printate pe carton premium, cu aspect luminos si rafinat, iar textul se personalizeaza integral pentru un rezultat unitar si memorabil.",
+    "images": [
+      "/images/seturi/set-meniu-plic-auriu.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "set meniu invitatie",
+      "auriu",
+      "elegant",
+      "carton premium",
+      "nunta",
+      "botez",
+      "personalizat",
+      "papetarie",
+      "minimalist chic"
+    ],
+    "slug": "set-meniu-plic-de-dar-tematica-auriu-set-meni",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-invitatie-pergament-plic-dar-bleu-095",
+    "title": "Set invitatie pergament + plic de dar bleu cu fundita",
+    "price": 14,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat pentru botez sau nunta, format din invitatie tip pergament in nuante bleu pastel si plic de dar asortat, rulata sul si legata cu fundita satin. Grafica delicata si aerul romantic il fac ideal pentru evenimente elegante, iar textul se personalizeaza integral dupa preferinte.",
+    "images": [
+      "/images/seturi/set-invitatie-pergament-plic-dar-bleu.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "invitatie pergament",
+      "plic de dar",
+      "bleu pastel",
+      "fundita satin",
+      "set coordonat",
+      "botez",
+      "nunta",
+      "personalizat",
+      "elegant"
+    ],
+    "slug": "set-invitatie-pergament-plic-de-dar-bleu-cu-fundita-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-invitatie-carte-plic-dar-bleu-096",
+    "title": "Set invitatie tip carte + plic de dar bleu",
+    "price": 14,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat pentru botez, format din invitatie tip carte in nuante bleu pastel, cu grafica jucausa si fundita satin, plus plic de dar asortat. Printate pe carton premium, ambele piese se personalizeaza complet cu nume, data si textul evenimentului, pentru un decor unitar si elegant.",
+    "images": [
+      "/images/seturi/set-invitatie-carte-plic-dar-bleu.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "invitatie tip carte",
+      "plic de dar",
+      "bleu pastel",
+      "fundita satin",
+      "botez baietel",
+      "set coordonat",
+      "personalizat",
+      "carton premium",
+      "elegant"
+    ],
+    "slug": "set-invitatie-tip-carte-plic-de-dar-bleu-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-marturie-invitatie-lamai-097",
+    "title": "Set marturie + invitatie cu lamai",
+    "price": 29,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat cu tematica mediteraneana, format din marturie parfumata si invitatie asortata, decorate cu felii de lamai si accente galben-aurii. Realizate manual pe materiale premium, cu grafica fresca de vara; elementele se personalizeaza complet cu nume, data si textul evenimentului, pentru un look unitar si luminos.",
+    "images": [
+      "/images/seturi/set-marturie-invitatie-lamai.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "marturie",
+      "invitatie",
+      "lamai",
+      "citrus",
+      "galben",
+      "auriu",
+      "mediteranean",
+      "vara",
+      "nunta",
+      "botez",
+      "set coordonat",
+      "personalizat",
+      "elegant"
+    ],
+    "slug": "set-marturie-invitatie-cu-lamai-set-mart",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "brad-floral-verde-ingeras-030",
     "title": "Brad floral Craciun cu ingeras si flori uscate",
     "price": 299.99,
     "category": "craciun",
     "product_type": "craciun",
-    "desc": "Bradut decorativ de Craciun, realizat manual din floricele din ceara de soia. Model tip brad bogat in flori de iarna verde-menta, accente aurii, flori uscate si funda imprimata tematica; varf cu ingeras delicat. Piesa spectaculoasa pentru decor sau cadou premium de sarbatori. Ideal pentru decorul mesei de Craciun. Disponibila imediat bucata prezentata in imagine. Se realizeaza pe orice culoare la comanda. Timpul de lucru pentru o bucata este de 4 zile.",
+    "desc": "Bradut decorativ de Craciun, realizat manual din floricele din ceara de soia. Model tip brad bogat in flori de iarna verde-menta, accente aurii, flori uscate si funda imprimata tematica; varf cu ingeras delicat. Piesa spectaculoasa pentru decor sau cadou premium de sarbatori. Ideal pentru decorul mesei de Craciun. Disponibila imediat bucata prezentata in imagine.",
     "images": [
       "/images/craciun/brad-floral-verde-ingeras.jpg"
     ],
@@ -2673,6 +2958,33 @@
       "colorate"
     ],
     "slug": "set-macarons-wax-melts-10-bucati-box-maca",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "box-craciun-waxmelts-ciorap-001",
+    "title": "Box Craciun tip ciorap cu wax melts parfumate",
+    "price": 59.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Cutie cadou tip ciorap de Craciun cu wax melts din ceara de soia, in forme festive (fulg, cadou, turta dulce, Mos). Parfum intens, ideal pentru cadou sau aromaterapie de sarbatori.",
+    "images": [
+      "/images/craciun/box-waxmelts-ciorap.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "box wax melts",
+      "ciorap craciun",
+      "wax melts",
+      "ceara soia",
+      "parfumate",
+      "cadou",
+      "handmade",
+      "festiv",
+      "aromaterapie"
+    ],
+    "slug": "box-craciun-tip-ciorap-cu-wax-melts-parfumate-box-crac",
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
