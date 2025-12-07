@@ -4046,7 +4046,7 @@
   {
     "id": "ev-0001",
     "title": "Evantai personalizat inimioara – Botez / Nunta",
-    "price": 9.5,
+    "price": 6,
     "category": "evantaie",
     "product_type": "evantaie",
     "desc": "Evantai personalizat pentru evenimente, cu forma inimioara si maner din lemn. Se poate personaliza cu nume, data si tematica evenimentului.",
@@ -4064,6 +4064,30 @@
     ],
     "slug": "evantai-personalizat-inimioara-botez-nunta-ev-0001",
     "google_product_category": "Arts & Entertainment > Hobbies & Creative Arts > Party Supplies > Hand Fans",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "tablou-toy-shop-luminos-001",
+    "title": "Tablou luminos din carton cu luminite – Toy Shop",
+    "price": 100,
+    "category": "tablouri luminoase",
+    "product_type": "tablouri luminoase",
+    "desc": "Tablou tip shadow box din carton decupat in straturi, cu luminite LED calde integrate. Realizat manual, ideal pentru decor de iarna sau cadou special.",
+    "images": [
+      "/images/tablouri/tablou-toy-shop-1.jpg",
+      "/images/tablouri/tablou-toy-shop-2.jpg"
+    ],
+    "tags": [
+      "tablou luminos",
+      "shadow box",
+      "carton decupat",
+      "luminite led",
+      "decor iarna",
+      "cadou handmade"
+    ],
+    "slug": "tablou-luminos-din-carton-cu-luminite-toy-shop-tablou-t",
+    "google_product_category": "Home & Garden > Decor > Wall Decor > Wall Art",
     "material": "",
     "mpn": ""
   }

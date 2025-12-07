@@ -81,6 +81,7 @@ const CATEGORY_MAP = {
   "marturii soia": { name: "Mărturii", url: "/marturii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
   "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
+  "tablouri luminoase": { name: "Tablouri luminoase", url: "/tablouri-luminoase.html" },
   "cani personalizate": { name: "Căni personalizate", url: "/cani.html" }
   };
 
@@ -220,6 +221,7 @@ function pageTemplate(prod) {
               <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
               <li><a href="/seturi.html">Prezentare Seturi</a></li>
               <li><a href="/craciun.html">Prezentare Colectia de Crăciun</a></li>
+              <li><a href="/tablouri-luminoase.html">Tablouri luminoase</a></li>
               <li><a href="/cani.html">Prezentare Căni personalizate</a></li>
             </ul>
           </li>
@@ -271,6 +273,7 @@ function pageTemplate(prod) {
       else if(ref.includes("/seturi")) back="/seturi.html";
       else if(ref.includes("/stickere-oglinda")) back="/stickere-oglinda.html";
       else if(ref.includes("/craciun")) back="/craciun.html";
+      else if(ref.includes("/tablouri-luminoase")) back="/tablouri-luminoase.html";
       else if(ref.includes("/cani")) back="/cani.html";
       var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
