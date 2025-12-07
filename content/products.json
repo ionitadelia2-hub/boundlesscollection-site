@@ -28,7 +28,7 @@
   {
     "id": "invitatie-poza-calc-roz-002",
     "title": "Invitatie botez cu poza si foaie de calc",
-    "price": 10,
+    "price": 7.99,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie pe carton foto, acoperita cu foaie de calc imprimata si fundita organza roz.",
@@ -54,7 +54,7 @@
   {
     "id": "invitatie-ursulet-bleu-003",
     "title": "Invitatie botez baietel cu ursulet si fundita bleu",
-    "price": 9,
+    "price": 7.99,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie delicata pentru botez baietel, pe carton premium cu ilustratie ursulet si fundita bleu aplicata manual. Design pastel, personalizabil integral.",
@@ -106,7 +106,7 @@
   {
     "id": "invitatie-carticica-albastra-005",
     "title": "Invitatie botez tip carticica cu fundita albastra",
-    "price": 9,
+    "price": 6.99,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie tip carticica pe carton premium, cu fotogratie si detalii de eveniment, legata cu fundita albastra din organza.",
@@ -132,7 +132,7 @@
   {
     "id": "invitatie-ursulet-ivoire-006",
     "title": "Invitatie botez cu ursulet si fundita ivoire",
-    "price": 9,
+    "price": 7.99,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie pe carton premium cu ursulet si nori pastel, completata cu fundita ivoire din organza. Look delicat pentru baietei.",
@@ -159,7 +159,7 @@
   {
     "id": "invitatie-ursulet-roz-007",
     "title": "Invitatie botez cu ursulet si fundita roz",
-    "price": 9,
+    "price": 8,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie pentru botez fetita, pe carton premium cu ursulet si baloane pastel, legata cu fundita roz din satin. Design dulce si elegant.",
@@ -187,7 +187,7 @@
   {
     "id": "invitatie-pergament-smarald-008",
     "title": "Invitatie pergament cu fundita verde smarald",
-    "price": 8.5,
+    "price": 8,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie tip pergament, rulata si legata manual cu fundita verde smarald din organza. Stil minimalist cu vibe natural, ideal pentru nunta.",
@@ -243,7 +243,7 @@
   {
     "id": "invitatie-nunta-ziar-010",
     "title": "Invitatie nunta tip Ziar",
-    "price": 9,
+    "price": 6.99,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie de nunta tip ziar/revista retro, printata pe carton mat si legata cu sfoara natur. Model creativ care spune povestea mirilor. Personalizare completa.",
@@ -270,7 +270,7 @@
   {
     "id": "invitatie-ursulet-bleu-norisori-088",
     "title": "Invitatie botez ursulet bleu cu norisori si funda satin",
-    "price": 10,
+    "price": 8.99,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie delicata pentru botez baietel, in nuante bleu pastel, cu ursulet adormit pe norisori si fundita satin, printata pe carton premium.",
@@ -298,7 +298,7 @@
   {
     "id": "invitatie-pegrament-printesa-bleu-091",
     "title": "Invitatie pergament tematica printesa bleu cu fundita satin",
-    "price": 9,
+    "price": 8,
     "category": "invitatii",
     "product_type": "invitatii",
     "desc": "Invitatie tip pergament pentru botez sau aniversare, in nuante bleu pastel, cu grafica de basm si ilustratii elegante, rulata manual si prinsa cu fundita delicata. Se realizeaza pe carton premium si se personalizeaza complet cu nume, data si text.",
@@ -382,7 +382,7 @@
   {
     "id": "aranjament-pastel-011",
     "title": "Aranjament floral din lumanari parfumate pastel",
-    "price": 95,
+    "price": 74.99,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
     "desc": "Lumanari din ceara de soia modelate flori, nuante roz pudrat/ivoire/piersica. Piesa de decor sau cadou elegant.",
@@ -410,7 +410,7 @@
   {
     "id": "aranjament-inima-roz-012",
     "title": "Aranjament floral cu inima si lumanari parfumate",
-    "price": 95,
+    "price": 74.99,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
     "desc": "Lumanari din soia in nuante roz/alb, accente cu inima si flori uscate. Cadou elegant sau decor de interior.",
@@ -437,7 +437,7 @@
   {
     "id": "aranjament-mov-alb-013",
     "title": "Aranjament floral cu lumanari mov si albe",
-    "price": 145,
+    "price": 225,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
     "desc": "Lumanari de soia mov/alb/roz pal, stil rafinat. Potrivit pentru cadouri si ambient elegant acasa.",
@@ -465,7 +465,7 @@
   {
     "id": "aranjament-roz-iepuras-014",
     "title": "Aranjament floral roz cu figurina si lumanari parfumate",
-    "price": 165,
+    "price": 235,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
     "desc": "Compozitie premium din soia, nuante roz/alb/crem; figurina decorativa si flori sculptate. Cadou deosebit.",
@@ -494,7 +494,7 @@
   {
     "id": "aranjament-bleu-cos-015",
     "title": "Aranjament bleu in cos impletit cu lumanari parfumate",
-    "price": 89,
+    "price": 34.99,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
     "desc": "Lumanari din soia in flori alb-bleu, cos tip piatra (praf de marmura), accente puf. Decor curat, aroma delicata.",
@@ -523,7 +523,7 @@
   {
     "id": "aranjament-iepuras-roz-016",
     "title": "Aranjament roz cu iepuras si lumanari parfumate",
-    "price": 105,
+    "price": 65,
     "category": "aranjamente-florale",
     "product_type": "aranjamente-florale",
     "desc": "Lumanari din soia model flori + figurina iepuras; roz pudrat/alb. Decor de primavara sau cadou rafinat.",
@@ -690,7 +690,7 @@
   {
     "id": "marturie-ursulet-maro-001",
     "title": "Marturie ursulet maro din ceara de soia",
-    "price": 30,
+    "price": 14.99,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie in forma de ursulet sezand, realizata manual din ceara de soia si finisata atent pentru un aspect premium. Ideala la botez, aniversare sau nunta cu tematica cozy, iar la comanda se poate personaliza.",
@@ -827,7 +827,7 @@
   {
     "id": "marturie-fluture-alb-006",
     "title": "Marturie lumanare fluture alba din ceara de soia",
-    "price": 12,
+    "price": 19.99,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie fluture delicat, turnat manual din ceara de soia cu aripi in relief si doua fitiluri pentru efect decorativ. O alegere rafinata pentru botez, nunta sau aniversari, cu ambalare personalizabila.",
@@ -908,7 +908,7 @@
   {
     "id": "marturie-fluture-roz-cutie-069",
     "title": "Marturie fluture roz in cutie cu eticheta personalizata",
-    "price": 25,
+    "price": 16.99,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie fluture din ceara de soia, ambalata in cutie kraft cu capac transparent si decor cu flori uscate. Eticheta se personalizeaza cu nume si data, fiind potrivita pentru botez, nunta sau baby shower.",
@@ -996,7 +996,7 @@
   {
     "id": "marturie-trandafir-ivory-cutie-inima-072",
     "title": "Marturie lumanare trandafir ivory in cutie cu eticheta inimioare",
-    "price": 25,
+    "price": 30,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie trandafir sculptat din ceara de soia in nuanta ivory, cu accente sidefate si look elegant. Ambalata in cutie alba cu flori uscate si eticheta inimioare, ideala pentru nunta.",
@@ -1090,7 +1090,7 @@
   {
     "id": "marturie-inima-roz-cutie-transparenta-075",
     "title": "Marturie lumanare in forma de inima roz texturata in cutie transparenta cu eticheta personalizata",
-    "price": 32,
+    "price": 34.99,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie inima texturata tip fagure, realizata manual din ceara de soia in nuanta roz pudrat. Vine in cutie transparenta cu funda si eticheta personalizata, ideala pentru nunta sau logodna.",
@@ -1121,7 +1121,7 @@
   {
     "id": "marturie-inima-roz-neteda-cutie-transparenta-074",
     "title": "Marturie lumanare in forma de inima roz neteda in cutie transparenta cu eticheta personalizata",
-    "price": 30,
+    "price": 20,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie inima cu finisaj neted si linii moderne, turnata manual din ceara de soia in roz pastel. Ambalata in cutie transparenta cu umplutura decorativa si eticheta personalizata, perfecta pentru nunta.",
@@ -1180,7 +1180,7 @@
   {
     "id": "marturie-talpite-bebe-card-076",
     "title": "Marturie talpite bebe roz si litera personalizata pe card tematic",
-    "price": 20,
+    "price": 12,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie set cu talpite de bebe si litera initialei, turnate manual din ceara de soia parfumabila si asezate pe card personalizat. Un suvenir emotionant pentru botez sau aniversare, cu text la alegere.",
@@ -1236,7 +1236,7 @@
   {
     "id": "marturie-scoica-perla-015",
     "title": "Marturie lumanare scoica cu perla",
-    "price": 12,
+    "price": 15,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie tip scoica cu perla decorativa, turnata manual din ceara de soia si finisata elegant. Se livreaza in cutie transparenta cu fundita si eticheta personalizata, ideala pentru nunta sau botez.",
@@ -1291,7 +1291,7 @@
   {
     "id": "marturie-bebelus-tulle-roz-bleu-001",
     "title": "Marturie lumanare bebelus in tulle roz sau bleu",
-    "price": 30,
+    "price": 40,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie cu figurina bebelus din ceara de soia, ambalata in saculet tulle cu fundita satin si eticheta personalizata. Ideala pentru botez, baby shower sau prima aniversare; la comanda se adapteaza tematicii.",
@@ -1319,7 +1319,7 @@
   {
     "id": "marturie-familie-ursuleti-ivory-001",
     "title": "Marturie lumanare familie ursuleti ivory din ceara de soia",
-    "price": 30,
+    "price": 45,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie familie de ursuleti din ceara de soia in nuanta ivory, cu design jucaus si emotiv. Potrivita pentru botez, nunta sau aniversari de copii, iar ambalarea si eticheta se personalizeaza.",
@@ -1347,7 +1347,7 @@
   {
     "id": "marturie-ursulet-roz-064",
     "title": "Marturie ursulet roz in cutie transparenta",
-    "price": 30,
+    "price": 35,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie ursulet roz sculptat din ceara de soia, cu detalii florale fine si finisaj curat. Ambalata in cutie transparenta cu funda si flori uscate, perfecta pentru botezuri si evenimente elegante.",
@@ -1376,7 +1376,7 @@
   {
     "id": "marturie-adidas-bleu-058",
     "title": "Marturie adidas bleu in tulle",
-    "price": 25,
+    "price": 30,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie in forma de adidas bleu, realizata manual din ceara de soia si ambalata in tulle cu funda satin. Eticheta se personalizeaza cu nume si data, fiind un cadou tematic pentru botez baietel.",
@@ -1405,7 +1405,7 @@
   {
     "id": "marturie-botosei-bebe-roz-tulle-083",
     "title": "Marturie botosei bebe roz in saculet tulle",
-    "price": 30,
+    "price": 20,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie adorabila in forma de botosei roz pentru bebe, realizata manual din ceara de soia si finisata delicat pentru un aspect catifelat. Este ambalata individual in saculet de tulle cu fundita satin si eticheta personalizata cu nume si data, fiind ideala pentru botez, baby shower sau prima aniversare.",
@@ -1489,7 +1489,7 @@
   {
     "id": "marturie-capsunici-suport-auriu-tulle-077",
     "title": "Marturie capsunici rosii in suport auriu cu tulle",
-    "price": 25,
+    "price": 20,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie cu capsunici mici din ceara de soia, in nuanta rosu intens, asezate intr-un cerc auriu delicat si ambalate in saculet de tulle cu fundita satin. Eticheta este personalizata cu nume si data, ideala pentru nunta, botez sau petreceri tematice.",
@@ -1519,7 +1519,7 @@
   {
     "id": "marturie-felii-lamai-suport-auriu-tulle-078",
     "title": "Marturie felii lamai in suport auriu cu tulle",
-    "price": 25,
+    "price": 20,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie cu felii de lamai din ceara de soia, in nuanta galben solar, asezate intr-un cerc auriu elegant si ambalate in saculet de tulle cu fundita satin. Eticheta este personalizata cu nume si data, potrivita pentru nunta, botez sau evenimente cu tematica fresh de vara.",
@@ -1550,7 +1550,7 @@
   {
     "id": "marturie-felii-portocala-suport-auriu-tulle-079",
     "title": "Marturie felii portocala in suport auriu cu tulle",
-    "price": 25,
+    "price": 20,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie cu felii de portocala din ceara de soia, in nuante calde orange-roscat, asezate intr-un cerc auriu elegant si ambalate in saculet de tulle cu fundita satin. Eticheta este personalizata cu nume si data, ideala pentru nunta, botez sau evenimente cu tematica citrus/vara.",
@@ -1575,39 +1575,6 @@
       "citrus"
     ],
     "slug": "marturie-felii-portocala-in-suport-auriu-cu-tulle-marturie",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "marturie-bebelusi-pe-perna-tulle-080",
-    "title": "Marturie bebelusi pe perna in saculet tulle",
-    "price": 30,
-    "category": "marturii soia",
-    "product_type": "marturii soia",
-    "desc": "Marturie cu bebelusi pe pernuta, turnati manual din ceara de soia in nuante ivory, asezati in saculet de tulle cu fundita satin roz sau bleu. Include eticheta personalizata cu nume si data, fiind un suvenir delicat pentru botez, baby shower sau prima aniversare.",
-    "images": [
-      "/images/marturii/marturie-bebelusi-pe-perna-tulle.jpg"
-    ],
-    "tags": [
-      "marturii",
-      "bebelusi pe perna",
-      "bebelus",
-      "perna",
-      "ivory",
-      "tulle",
-      "fundita satin",
-      "roz",
-      "bleu",
-      "botez",
-      "baby shower",
-      "prima aniversare",
-      "soia",
-      "handmade",
-      "cadou invitati",
-      "personalizata"
-    ],
-    "slug": "marturie-bebelusi-pe-perna-in-saculet-tulle-marturie",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
@@ -1647,7 +1614,7 @@
   {
     "id": "marturie-ursulet-mini-tulle-082",
     "title": "Marturie ursulet mini in saculet tulle",
-    "price": 30,
+    "price": 20,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie delicata in forma de ursulet mini, turnata manual din ceara de soia in nuanta ivory si asezata pe o baza rotunda decorativa. Este ambalata individual in saculet de tulle cu fundita satin alba si eticheta personalizata cu nume si data, fiind potrivita pentru botezuri, baby shower sau aniversari de copii.",
@@ -1677,7 +1644,7 @@
   {
     "id": "marturie-leut-safari-098",
     "title": "Marturie leut Safari in cutiuta cu fundita verde",
-    "price": 25,
+    "price": 20,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Marturie in tematica Safari, cu figurina leut realizata manual din ceara de soia si ambalata individual in cutiuta cu design jungle. Este decorata cu fundita satin verde si eticheta personalizata cu nume si data, fiind perfecta pentru botezuri sau petreceri de copii cu tematica safari.",
@@ -1708,7 +1675,7 @@
   {
     "id": "plic-dar-balerina-roz-052",
     "title": "Plic de dar balerina roz",
-    "price": 4.5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar in roz pastel, cu ilustratie delicata de balerina si accente fine. Printat pe carton premium, cu spatiu pentru nume familie si text personalizabil, ideal pentru botezuri elegante.",
@@ -1734,7 +1701,7 @@
   {
     "id": "plic-dar-miri-silueta-061",
     "title": "Plic de dar cu silueta miri si flori alb-verde",
-    "price": 4.5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru nunta, cu silueta de miri si coronita florala alb-verde. Realizat pe carton alb premium, cu mesaj si nume familie personalizabile, potrivit pentru mese de dar rafinate.",
@@ -1759,7 +1726,7 @@
   {
     "id": "plic-dar-safari-bine-ati-venit-001",
     "title": "Plic de dar botez Safari cu mesaj bine ati venit",
-    "price": 5,
+    "price": 4,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez cu tematica Safari, ilustrat cu animale de jungla si frunze tropicale. Include mesajul „Bine ati venit!” si zona pentru personalizare cu nume familie/copil.",
@@ -1786,7 +1753,7 @@
   {
     "id": "plic-dar-ursulet-baloane-albastru-078",
     "title": "Plic de dar ursulet cu baloane albastre",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez sau prima aniversare, in nuante bleu cu ursulet si baloane pastel. Are text de multumire si spatiu pentru nume copil/familie, personalizabil pe tema dorita.",
@@ -1811,7 +1778,7 @@
   {
     "id": "plic-boho-verde-016",
     "title": "Plic de dar boho verde natur",
-    "price": 4.5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar stil boho, pe carton texturat in tonuri verde-cream, cu frunze si accente florale delicate. Se personalizeaza cu nume si mesaj, potrivit pentru nunti sau botezuri naturale.",
@@ -1839,7 +1806,7 @@
   {
     "id": "plic-dar-lauri-gri-084",
     "title": "Plic de dar elegant cu lauri gri-argintiu",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar premium din carton alb texturat, cu cununa de lauri gri-argintiu si detalii florale fine. Personalizare cu nume familie si text la alegere, pentru evenimente elegante.",
@@ -1866,7 +1833,7 @@
   {
     "id": "plic-dar-ursulet-059",
     "title": "Plic de dar cu ursulet pentru botez",
-    "price": 4.5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez, cu ursulet pastel intr-un cos impletit si design cald, delicat. Printat pe carton premium, cu text si nume familie personalizabile, ideal pentru tematici baby.",
@@ -1892,7 +1859,7 @@
   {
     "id": "plic-dar-miri-greenery-062",
     "title": "Plic de dar miri cu greenery",
-    "price": 4.5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru nunta, cu ilustratie miri in nuante calde si coronita greenery. Realizat pe carton alb premium, cu mesaj si nume familie personalizabile, potrivit pentru decoruri moderne.",
@@ -1918,7 +1885,7 @@
   {
     "id": "plic-boho-auriu-019",
     "title": "Plic de dar boho auriu elegant",
-    "price": 6,
+    "price": 4.99,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar boho pe carton texturat, cu accente aurii discrete si print elegant fata-verso. Se personalizeaza cu nume si mesaj, ideal pentru evenimente premium cu stil minimalist.",
@@ -1945,7 +1912,7 @@
   {
     "id": "plic-dar-ursulet-baloane-albastru-multumim-079",
     "title": "Plic de dar ursulet cu baloane albastre – mesaj multumire",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar bleu cu ursulet si baloane pastel, cu mesaj de multumire imprimat. Include spatiu pentru nume familie si se poate adapta pe alte culori/texte, la cerere.",
@@ -1970,7 +1937,7 @@
   {
     "id": "plic-dar-ursulet-petrecere-bebe-multumire-080",
     "title": "Plic de dar ursulet petrecere bebe – mesaj multumire",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez sau petrecerea bebelusului, cu ursulet, stegulete festive si stelute aurii. Textul de multumire este inclus, plus zona pentru nume familie.",
@@ -1995,7 +1962,7 @@
   {
     "id": "plic-botez-baietel-veverite-020",
     "title": "Plic botez baietel cu veverite jucause",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez baietel, cu ilustratie vesela de veverite si accente pastel. Printat pe carton mat premium, cu mesaj si nume personalizabile, potrivit pentru masa de dar.",
@@ -2020,7 +1987,7 @@
   {
     "id": "plic-dar-verighete-multumire-001",
     "title": "Plic de dar cu verighete si mesaj multumim",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru nunta, cu verighete aurii si design floral pastel, plus mesaj „Multumim!”. Printat pe carton premium mat, cu spatiu pentru nume familie, ideal pentru masa de dar.",
@@ -2046,7 +2013,7 @@
   {
     "id": "plic-botez-bleu-ursulet-024",
     "title": "Plic botez bleu cu ursulet si Mickey",
-    "price": 4.5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar bleu pentru botez, cu ursulet si Mickey in stil jucaus, pe carton mat premium. Are text si zona pentru nume familie/copil, personalizabile pentru tematica evenimentului.",
@@ -2072,7 +2039,7 @@
   {
     "id": "plic-dar-carusel-vintage-085",
     "title": "Plic de dar botez carusel vintage bej",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru botez sau petrecere de copii, cu ilustratie tip carusel in stil vintage, in nuante calde bej-ivory. Printat pe carton premium mat, cu mesaj de multumire si spatiu pentru numele familiei. Se personalizeaza cu nume, data si text la alegere, fiind perfect pentru o masa de dar unitara si rafinata.",
@@ -2100,7 +2067,7 @@
   {
     "id": "plic-dar-iepuras-baloane-roz-085",
     "title": "Plic de dar iepuras cu baloane roz pastel",
-    "price": 4.5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar delicat pentru botez sau aniversare, cu ilustratie de iepuras si baloane in nuante roz pastel. Printat pe carton premium alb, cu mesaj de multumire si spatiu pentru completarea numelui familiei. Ideal pentru masa de dar si pentru tematici baby girl, cu posibilitate de personalizare la cerere.",
@@ -2128,7 +2095,7 @@
   {
     "id": "plic-dar-elefantel-bleu-bine-ati-venit-086",
     "title": "Plic de dar elefantel bleu cu balon – mesaj bine ati venit",
-    "price": 5,
+    "price": 4,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez sau prima aniversare, cu tematica baby boy si ilustratie simpatica de elefantel bleu cu balon. Designul include mesaj de intampinare „Bine ati venit!” si spatiu pentru completarea numelui familiei, fiind perfect pentru masa de dar si un decor unitar la eveniment. Printat pe carton premium mat, cu posibilitate de personalizare a textului si culorilor la cerere.",
@@ -2156,7 +2123,7 @@
   {
     "id": "plic-dar-floral-roz-099",
     "title": "Plic de dar floral roz pastel",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant, cu grafica florala in nuante roz pastel si accente fine, potrivit pentru nunta, botez sau aniversari. Este printat pe carton premium mat, cu spatiu dedicat pentru numele familiei si mesaj de multumire, pentru un decor unitar si rafinat la masa de dar.",
@@ -2185,7 +2152,7 @@
   {
     "id": "plic-dar-ursulet-balerina-roz-100",
     "title": "Plic de dar ursulet balerina roz pastel",
-    "price": 5,
+    "price": 3.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar delicat, in nuante roz pastel, cu ilustratie ursulet balerina si baloane fine. Printat pe carton premium mat, cu spatiu pentru numele familiei si mesaj de multumire, ideal pentru botezuri, aniversari sau evenimente cu tematica baby girl. Completeaza armonios decorul mesei de dar si restul papetariei din colectie.",
@@ -2240,7 +2207,7 @@
   {
     "id": "meniu-botez-elefantel-bleu-053",
     "title": "Meniu botez elefantel bleu",
-    "price": 7,
+    "price": 6,
     "category": "meniuri",
     "product_type": "meniuri",
     "desc": "Meniu pentru botez in nuante bleu pastel, cu elefantel si baloane, printat pe carton premium. Se personalizeaza integral cu preparatele si detaliile evenimentului, oferind mesei un look baby boy elegant si unitar.",
@@ -2267,7 +2234,7 @@
   {
     "id": "meniu-botez-safari-verde-054",
     "title": "Meniu botez Safari cu frunze verzi",
-    "price": 9,
+    "price": 7,
     "category": "meniuri",
     "product_type": "meniuri",
     "desc": "Meniu de botez cu tematica Safari, decorat cu animale de jungla si frunze tropicale, pliat tip carte. Print pe carton premium alb, cu personalizare completa a meniului, numelui si datei pentru un decor fresh si vesel.",
@@ -2295,7 +2262,7 @@
   {
     "id": "meniu-botez-roz-sigiliu-049",
     "title": "Meniu botez roz cu sigiliu",
-    "price": 9.5,
+    "price": 8.5,
     "category": "meniuri",
     "product_type": "meniuri",
     "desc": "Meniu elegant pentru botez, printat pe carton premium si accesorizat cu sigiliu roz pudrat si flori uscate. Personalizabil cu preparatele si detaliile evenimentului, ideal pentru decoruri pastel si mese rafinate.",
@@ -2350,7 +2317,7 @@
   {
     "id": "marturie-lumanare-roz-022",
     "title": "Marturie lumanare roz pastel cu flori uscate",
-    "price": 15,
+    "price": 25,
     "category": "marturii soia",
     "product_type": "marturii soia",
     "desc": "Lumanare din soia roz pastel cu panglica satin, puf decorativ si eticheta personalizata. Potrivita pentru nunta/botez.",
@@ -2486,7 +2453,32 @@
       "personalizat"
     ],
     "slug": "set-invitatie-meniu-plic-de-dar-cu-lamai-set-invi",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitationssticker-oglinda-auriu-caligrafic-001",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "sticker-oglinda-auriu-caligrafic-001",
+    "title": "Sticker oglinda personalizat auriu (nume + data)",
+    "price": 85,
+    "category": "stickere oglinda",
+    "product_type": "stickere oglinda",
+    "desc": "Autocolant caligrafic pentru oglinda de intampinare: nume mirii + data, vinil auriu lucios. Se livreaza gata de aplicat, cu folie de transfer. Dimensiuni si text personalizabile.",
+    "images": [
+      "/images/stickere/sticker-oglinda-auriu-mara-alexandru-2025.jpg"
+    ],
+    "tags": [
+      "stickere oglinda",
+      "oglinda intampinare",
+      "nunta",
+      "autocolant text",
+      "caligrafic",
+      "auriu",
+      "personalizat",
+      "eveniment"
+    ],
+    "slug": "sticker-oglinda-personalizat-auriu-nume-data-sticker-",
+    "google_product_category": "Home & Garden > Decor > Decals & Stickers",
     "material": "",
     "mpn": ""
   },
@@ -2913,7 +2905,7 @@
   {
     "id": "gift-set-craciun-odorizante-portocala-scortisoara",
     "title": "Gift Set Crăciun – Odorizante dulap Portocală & Scorțișoară (2 buc)",
-    "price": 74.99,
+    "price": 84.99,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Set festiv cu 2 odorizante pentru dulap din ceară de soia, decorate cu portocală deshidratată, baton de scorțișoară și elemente clasice de Crăciun. Parfum cald, condimentat și intens – ideal pentru dressing, dulap sau cadou rafinat de sărbători.",
@@ -2965,7 +2957,7 @@
   {
     "id": "box-craciun-waxmelts-ciorap-001",
     "title": "Box Craciun tip ciorap cu wax melts parfumate",
-    "price": 59.99,
+    "price": 64.99,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Cutie cadou tip ciorap de Craciun cu wax melts din ceara de soia, in forme festive (fulg, cadou, turta dulce, Mos). Parfum intens, ideal pentru cadou sau aromaterapie de sarbatori.",
@@ -3019,7 +3011,7 @@
   {
     "id": "lumanare-glob-mos-sanie-002",
     "title": "Lumanare Craciun glob cu Mos Craciun in sanie",
-    "price": 35,
+    "price": 55,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa de Craciun in forma de glob cu Mos Craciun in sanie si ren, cu detalii reliefate. Turnata manual din ceara de soia, aspect premium si tema clasica de sarbatori. Potrivita pentru decorul mesei sau cadou festiv. Culoarea si aroma pot fi personalizate.",
@@ -3100,7 +3092,7 @@
   {
     "id": "lumanare-casuta-home-craciun-052",
     "title": "Lumanare decorativa casuta HOME",
-    "price": 42,
+    "price": 55,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de casuta cu text HOME in relief. Stil minimalist si cozy, ideala pentru decorul casei in sezonul rece sau ca dar de Craciun.",
@@ -3153,7 +3145,7 @@
   {
     "id": "lumanare-brad-stativ-craciun-053",
     "title": "Lumanare decorativa brad Craciun model cu suport",
-    "price": 30,
+    "price": 17,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa turnata manual din ceara de soia, in forma de brad cu straturi si suport. Aspect minimalist si elegant, perfecta pentru decorul de sarbatori sau cadou festiv.",
@@ -3180,7 +3172,7 @@
   {
     "id": "lumanare-brad-relief-craciun-004",
     "title": "Lumanare decorativa brad de Craciun in relief",
-    "price": 40,
+    "price": 35,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia, model brad de Craciun cu straturi suprapuse si ramuri stilizate in relief fin. Turnata manual, cu finisaj mat si aspect elegant. Ideala pentru decorul de iarna, aranjamente festive sau cadouri de sarbatori. Este disponibila si in varianta mai mica.",
@@ -3262,7 +3254,7 @@
   {
     "id": "lumanare-glob-arabesque-craciun-001",
     "title": "Lumanare Craciun glob decorativ cu model arabesque",
-    "price": 35,
+    "price": 45,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa de Craciun in forma de glob, cu model arabesque in relief fin. Turnata manual din ceara de soia, cu finisaj mat si detalii elegante. Ideala ca piesa de decor pe masa de sarbatori sau cadou festiv.",
@@ -3318,7 +3310,7 @@
   {
     "id": "lumanare-fulg-craciun-041",
     "title": "Lumanare decorativa fulg de zapada Craciun",
-    "price": 30,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, realizata manual. O piesa eleganta si festiva, perfecta pentru decorul de iarna sau cadouri de sezon.",
@@ -3371,7 +3363,7 @@
   {
     "id": "lumanare-brad-flat-craciun-043",
     "title": "Lumanare decorativa brad de Craciun flat",
-    "price": 30,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de brad stilizat, turnata manual si decorata cu fundita aurie. Un element festiv perfect pentru decoruri de iarna sau cadouri de sezon.",
@@ -3398,7 +3390,7 @@
   {
     "id": "lumanare-brad-craciun-025",
     "title": "Lumanare parfumata brad de Craciun",
-    "price": 30,
+    "price": 35,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare parfumata turnata manual din ceara de soia, in forma de brad de Craciun, cu detalii in relief (brazi, ren, fulgi de zapada). Ideala pentru decorul de iarna sau cadouri festive. Pretul este pentru 1 bucata, fara aroma, iar culoarea si aroma pot fi personalizate.",
@@ -3451,7 +3443,7 @@
   {
     "id": "lumanare-brad-fulgi-029",
     "title": "Lumanare brad Craciun",
-    "price": 28,
+    "price": 20,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa turnata manual din ceara de soia, model brad cu textura tip frunza. Decorata cu funda argintie si colpotel auriu. Ideala pentru decorul de sarbatori sau cadouri de Craciun. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate.",
@@ -3478,7 +3470,7 @@
   {
     "id": "lumanare-om-zapada-craciun-044",
     "title": "Lumanare decorativa om de zapada Craciun",
-    "price": 35,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de om de zapada, cu detalii fine tip tricot si fular de iarna. Un decor adorabil si festiv, perfect pentru cadouri si atmosfera de sarbatori.",
@@ -3504,7 +3496,7 @@
   {
     "id": "lumanare-gnom-fulg-auriu-045",
     "title": "Lumanare decorativa gnom cu fulg auriu",
-    "price": 38,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de gnom de Craciun, cu nas rosu si fulg auriu aplicat manual. O piesa festiva si adorabila, perfecta pentru decoruri de iarna sau cadouri speciale.",
@@ -3531,7 +3523,7 @@
   {
     "id": "lumanare-ren-auriu-046",
     "title": "Lumanare decorativa ren cu funda aurie",
-    "price": 34,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de ren, impodobit cu funda aurie si clopotel. Un decor elegant si festiv, perfect pentru aranjamente de Craciun sau cadouri de sezon.",
@@ -3557,7 +3549,7 @@
   {
     "id": "lumanare-gnom-fulg-argintiu-047",
     "title": "Lumanare decorativa gnom cu fulg argintiu",
-    "price": 38,
+    "price": 30,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de gnom de Craciun, cu palarie inalta decorata cu fulg argintiu si nas rosu. Un decor festiv si elegant, ideal pentru cadouri si aranjamente de sezon.",
@@ -3584,7 +3576,7 @@
   {
     "id": "lumanare-gnom-fetita-028",
     "title": "Lumanare parfumata gnom fetita cu codite",
-    "price": 25,
+    "price": 30,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare turnata manual din ceara de soia, in forma de gnomita cu codite si palarie decorata cu fulgi argintii. Ideala pentru decorul de iarna sau cadouri festive. Pretul este pentru 1 bucata, fara aroma; culoarea si aroma pot fi personalizate.",
@@ -3641,7 +3633,7 @@
   {
     "id": "gnom-brad-cana-027",
     "title": "Lumanare gnom cu brad si cana Craciun",
-    "price": 30,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare turnata manual din ceara de soia, model gnom de Craciun cu brad si cana in mana. Detalii fine, aspect decorativ elegant. Culoarea si aroma pot fi personalizate.",
@@ -3669,7 +3661,7 @@
   {
     "id": "lumanare-con-brad-con-de-pin-030",
     "title": "Lumanare decorativa con de brad Craciun",
-    "price": 28,
+    "price": 30,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa turnata manual din ceara de soia, model con de brad cu textura realista. Accesorizata cu fundita aurie si clopotel metalic, perfecta pentru decorul de iarna, aranjamente festive si cadouri tematice.",
@@ -3696,7 +3688,7 @@
   {
     "id": "lumanare-brad-nivele-031",
     "title": "Lumanare decorativa brad in straturi Craciun",
-    "price": 28,
+    "price": 30,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa turnata manual din ceara de soia, model brad cu straturi ondulate si detalii in relief. Accesorizata cu fundita aurie si clopotel metalic. Ideala pentru decorul de iarna, aranjamente de Craciun si cadouri festive.",
@@ -3750,7 +3742,7 @@
   {
     "id": "lumanare-fulg-turcoaz-craciun-002",
     "title": "Lumanare decorativa fulg de zapada turcoaz-alb Craciun",
-    "price": 30,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, in doua nuante (alb si turcoaz). Realizata manual, cu detalii fine in relief si finisaj mat. Perfecta pentru decorul de iarna, cadouri de sezon sau aranjamente festive.",
@@ -3778,7 +3770,7 @@
   {
     "id": "lumanare-fulg-roz-craciun-003",
     "title": "Lumanare decorativa fulg de zapada roz-alb Craciun",
-    "price": 30,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, in doua nuante (alb si roz intens). Realizata manual, cu model decupat fin si aspect elegant, ideala pentru decoruri de iarna, cadouri festive sau aranjamente de Craciun.",
@@ -3806,7 +3798,7 @@
   {
     "id": "lumanare-fulg-rosu-craciun-004",
     "title": "Lumanare decorativa fulg de zapada rosu-alb Craciun",
-    "price": 30,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, bicolora (alb cu accente rosu intens pe laterale). Lucrata manual, cu detalii fine si aspect modern, perfecta pentru decor de iarna, aranjamente festive sau cadouri de Craciun.",
@@ -3834,7 +3826,7 @@
   {
     "id": "lumanare-fulg-bleu-craciun-005",
     "title": "Lumanare decorativa fulg de zapada bleu-alb Craciun",
-    "price": 30,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, bicolora (alb cu accente bleu pe laterale). Realizata manual, cu detalii geometrice fine si aspect elegant de iarna. Ideala pentru decor festiv, aranjamente de Craciun sau cadou sezonier.",
@@ -3862,7 +3854,7 @@
   {
     "id": "lumanare-fulg-verde-craciun-006",
     "title": "Lumanare decorativa fulg de zapada verde-alb Craciun",
-    "price": 30,
+    "price": 25,
     "category": "craciun",
     "product_type": "craciun",
     "desc": "Lumanare decorativa din ceara de soia in forma de fulg de zapada, bicolora (alb cu accente verde/turcoaz pe laterale). Turnata manual, cu model geometric bine definit si finisaj mat. Perfecta pentru decorul de iarna, aranjamente festive sau cadou de Craciun.",
