@@ -4020,5 +4020,27 @@
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "cani-0001",
+    "title": "Cana personalizata din sticla cu nume auriu",
+    "price": 30,
+    "category": "cani personalizate",
+    "product_type": "cani personalizate",
+    "desc": "Cana eleganta din sticla, personalizata cu nume in vinil auriu. Potrivita pentru nunti, botezuri sau cadouri speciale. Personalizarea se face la cerere cu nume/mesaj si font la alegere.",
+    "images": [
+      "/images/cani/cana-perso-02.png"
+    ],
+    "tags": [
+      "cana sticla",
+      "personalizata",
+      "vinil auriu",
+      "cadou nunta",
+      "cadou botez"
+    ],
+    "slug": "cana-personalizata-din-sticla-cu-nume-auriu-cani-000",
+    "google_product_category": "Home & Garden > Kitchen & Dining > Tableware > Drinkware > Mugs",
+    "material": "",
+    "mpn": ""
   }
 ]
