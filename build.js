@@ -79,7 +79,8 @@ const CATEGORY_MAP = {
   "seturi": { name: "Seturi", url: "/seturi.html" },
   "marturii soia": { name: "Mărturii", url: "/marturii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
-  "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" }
+  "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
+  "cani personalizate": { name: "Căni personalizate", url: "/cani.html" }
 };
 
 // ---------------- template pagină produs ----------------
@@ -217,6 +218,7 @@ function pageTemplate(prod) {
               <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
               <li><a href="/seturi.html">Prezentare Seturi</a></li>
               <li><a href="/craciun.html">Prezentare Colectia de Crăciun</a></li>
+              <li><a href="/cani.html">Prezentare Căni personalizate</a></li>
             </ul>
           </li>
           <li><a href="/index.html">Acasă</a></li>
@@ -264,6 +266,9 @@ function pageTemplate(prod) {
       else if(ref.includes("/numere-masa")) back="/numere-masa.html";
       else if(ref.includes("/aranjamente-florale")) back="/aranjamente-florale.html";
       else if(ref.includes("/seturi")) back="/seturi.html";
+      else if(ref.includes("/stickere-oglinda")) back="/stickere-oglinda.html";
+      else if(ref.includes("/craciun")) back="/craciun.html";
+      else if(ref.includes("/cani")) back="/cani.html";
       var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
     (function(){
