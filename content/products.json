@@ -1673,6 +1673,92 @@
     "mpn": ""
   },
   {
+    "id": "marturie-lamaie-soia-001",
+    "title": "Marturie lumanare lamaie din ceara de soia",
+    "price": 20,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie parfumata in forma de lamaie, realizata manual din ceara de soia. Aspect fresh de vara, ideala pentru nunta, botez sau evenimente cu tematica citrus/mediteraneana.",
+    "images": [
+      "/images/marturii/marturie-lamaie-soia.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "lamaie",
+      "citrus",
+      "vara",
+      "mediteranean",
+      "lumanare soia",
+      "handmade",
+      "parfumata",
+      "cadou invitati",
+      "nunta",
+      "botez",
+      "personalizata"
+    ],
+    "slug": "marturie-lumanare-lamaie-din-ceara-de-soia-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-portocala-soia-001",
+    "title": "Marturie lumanare portocala din ceara de soia",
+    "price": 20,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie parfumata in forma de portocala, realizata manual din ceara de soia. Look vesel si fresh, perfect pentru nunti, botezuri sau evenimente cu tematica citrus/vara.",
+    "images": [
+      "/images/marturii/marturie-portocala-soia.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "portocala",
+      "citrus",
+      "orange",
+      "vara",
+      "lumanare soia",
+      "handmade",
+      "cadou invitati",
+      "nunta",
+      "botez",
+      "personalizata"
+    ],
+    "slug": "marturie-lumanare-portocala-din-ceara-de-soia-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-luna-soare-cuplu-001",
+    "title": "Marturie lumanare luna-si-soare din ceara de soia",
+    "price": 25,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie romantica in forma de luna si soare cu chipuri imbinate, turnata manual din ceara de soia in nuante ivory si roz pudrat.",
+    "images": [
+      "/images/marturii/marturie-luna-soare-cuplu.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "luna si soare",
+      "cuplu",
+      "romantic",
+      "ivory",
+      "roz pudrat",
+      "lumanare soia",
+      "handmade",
+      "cadou invitati",
+      "nunta",
+      "logodna",
+      "cutie transparenta"
+    ],
+    "slug": "marturie-lumanare-luna-si-soare-din-ceara-de-soia-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-dar-balerina-roz-052",
     "title": "Plic de dar balerina roz",
     "price": 3.5,
@@ -2032,7 +2118,37 @@
       "masa de dar"
     ],
     "slug": "plic-botez-bleu-cu-ursulet-si-mickey-plic-bot",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopesset-invitatie-plic-boho-018",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "set-invitatie-plic-boho-018",
+    "title": "Set invitatie + plic de dar boho natur",
+    "price": 17,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set coordonat pe carton texturat: invitatie + plic de dar; sigiliu auriu, flori uscate, sfoara subtire. Personalizabil.",
+    "images": [
+      "/images/seturi/set-invitatie-plic-boho-natur.jpg"
+    ],
+    "tags": [
+      "seturi",
+      "invitatie",
+      "plic",
+      "boho",
+      "auriu",
+      "sigiliu",
+      "flori uscate",
+      "natur",
+      "elegant",
+      "rustic",
+      "handmade",
+      "nunta",
+      "personalizat"
+    ],
+    "slug": "set-invitatie-plic-de-dar-boho-natur-set-invi",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
