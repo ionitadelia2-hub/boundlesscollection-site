@@ -75,13 +75,14 @@ const CATEGORY_MAP = {
   "invitatii": { name: "Invitații", url: "/invitatii.html" },
   "plicuri": { name: "Plicuri de dar", url: "/plicuri.html" },
   "meniuri": { name: "Meniuri", url: "/meniuri.html" },
+  "evantaie": { name: "Evantaie", url: "/evantaie.html" },
   "aranjamente-florale": { name: "Aranjamente florale", url: "/aranjamente-florale.html" },
   "seturi": { name: "Seturi", url: "/seturi.html" },
   "marturii soia": { name: "Mărturii", url: "/marturii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
   "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
   "cani personalizate": { name: "Căni personalizate", url: "/cani.html" }
-};
+  };
 
 // ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
@@ -213,6 +214,7 @@ function pageTemplate(prod) {
               <li><a href="/invitatii.html">Prezentare Invitații</a></li>
               <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
               <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
+              <li><a href="/evantaie.html">Prezentare Evantaie</a></li>
               <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
               <li><a href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
               <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
@@ -263,6 +265,7 @@ function pageTemplate(prod) {
       else if(ref.includes("/invitatii")) back="/invitatii.html";
       else if(ref.includes("/plicuri")) back="/plicuri.html";
       else if(ref.includes("/meniuri")) back="/meniuri.html";
+      else if(ref.includes("/evantaie")) back="/evantaie.html";
       else if(ref.includes("/numere-masa")) back="/numere-masa.html";
       else if(ref.includes("/aranjamente-florale")) back="/aranjamente-florale.html";
       else if(ref.includes("/seturi")) back="/seturi.html";

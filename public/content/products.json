@@ -4042,5 +4042,29 @@
     "google_product_category": "Home & Garden > Kitchen & Dining > Tableware > Drinkware > Mugs",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "ev-0001",
+    "title": "Evantai personalizat inimioara – Botez / Nunta",
+    "price": 9.5,
+    "category": "evantaie",
+    "product_type": "evantaie",
+    "desc": "Evantai personalizat pentru evenimente, cu forma inimioara si maner din lemn. Se poate personaliza cu nume, data si tematica evenimentului.",
+    "images": [
+      "/images/evantaie/ev-0001.png"
+    ],
+    "tags": [
+      "evantai",
+      "personalizat",
+      "botez",
+      "nunta",
+      "inimioara",
+      "carton",
+      "lemn"
+    ],
+    "slug": "evantai-personalizat-inimioara-botez-nunta-ev-0001",
+    "google_product_category": "Arts & Entertainment > Hobbies & Creative Arts > Party Supplies > Hand Fans",
+    "material": "",
+    "mpn": ""
   }
 ]
