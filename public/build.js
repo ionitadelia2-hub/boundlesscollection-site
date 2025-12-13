@@ -273,6 +273,7 @@ function pageTemplate(prod) {
       else if(ref.includes("/aranjamente-florale")) back="/aranjamente-florale.html";
       else if(ref.includes("/seturi")) back="/seturi.html";
       else if(ref.includes("/stickere-oglinda")) back="/stickere-oglinda.html";
+      else if(ref.includes("/toppere-tort")) back="/toppere-tort.html";
       else if(ref.includes("/craciun")) back="/craciun.html";
       else if(ref.includes("/tablouri-luminoase")) back="/tablouri-luminoase.html";
       else if(ref.includes("/cani")) back="/cani.html";
