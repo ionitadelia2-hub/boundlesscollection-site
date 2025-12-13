@@ -80,6 +80,7 @@ const CATEGORY_MAP = {
   "seturi": { name: "Seturi", url: "/seturi.html" },
   "marturii soia": { name: "Mărturii", url: "/marturii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
+  "toppere tort": { name: "Toppere tort", url: "/toppere-tort.html" },
   "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
   "tablouri luminoase": { name: "Tablouri luminoase", url: "/tablouri-luminoase.html" },
   "cani personalizate": { name: "Căni personalizate", url: "/cani.html" }

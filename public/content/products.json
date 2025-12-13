@@ -4089,5 +4089,34 @@
     "google_product_category": "Home & Garden > Decor > Wall Decor > Wall Art",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "topper-tort-set-its-a-girl-boy-001",
+    "title": "Set toppere tort It’s a Girl / It’s a Boy (baby shower / botez)",
+    "price": 10,
+    "category": "toppere tort",
+    "product_type": "toppere tort",
+    "desc": "Set toppere pentru tort realizate din carton printat, cu mesaje It’s a Girl si It’s a Boy, in nuante roz si bleu, cu simbol talpite. Ideal pentru baby shower, botez sau gender reveal. Se poate personaliza la cerere cu nume, data sau cromatica.",
+    "images": [
+      "/images/toppere/toppere-its-a-girl-boy.jpg"
+    ],
+    "tags": [
+      "topper tort",
+      "toppere tort",
+      "its a girl",
+      "its a boy",
+      "baby shower",
+      "botez",
+      "gender reveal",
+      "roz",
+      "bleu",
+      "talpite bebe",
+      "decor tort",
+      "personalizat"
+    ],
+    "slug": "set-toppere-tort-its-a-girl-its-a-boy-baby-shower-botez-topper-t",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Cake Toppers",
+    "material": "",
+    "mpn": ""
   }
 ]
