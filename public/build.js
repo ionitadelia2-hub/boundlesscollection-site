@@ -269,6 +269,7 @@ function pageTemplate(prod) {
       var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
       if(ref.includes("/marturii")) back="/marturii.html";
       else if(ref.includes("/invitatii")) back="/invitatii.html";
+      else if(ref.includes("/invitatii-digitale")) back="/invitatii-digitale.html";
       else if(ref.includes("/plicuri")) back="/plicuri.html";
       else if(ref.includes("/meniuri")) back="/meniuri.html";
       else if(ref.includes("/evantaie")) back="/evantaie.html";
