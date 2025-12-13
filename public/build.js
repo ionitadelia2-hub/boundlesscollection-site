@@ -73,6 +73,7 @@ const jsTagIfExists  = (filename) => exists(ROOT, filename)
 // ---- map categorii pentru breadcrumbs ----
 const CATEGORY_MAP = {
   "invitatii": { name: "Invitații", url: "/invitatii.html" },
+  "invitatii digitale": { name: "Invitații", url: "/invitatii-digitale.html" },
   "plicuri": { name: "Plicuri de dar", url: "/plicuri.html" },
   "meniuri": { name: "Meniuri", url: "/meniuri.html" },
   "evantaie": { name: "Evantaie", url: "/evantaie.html" },
@@ -214,6 +215,7 @@ function pageTemplate(prod) {
             <ul class="menu" role="menu">
               <li><a href="/marturii.html">Prezentare Mărturii</a></li>
               <li><a href="/invitatii.html">Prezentare Invitații</a></li>
+              <li><a href="/invitatii-digitale.html">Invitații digitale</a></li>
               <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
               <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
               <li><a href="/evantaie.html">Prezentare Evantaie</a></li>
