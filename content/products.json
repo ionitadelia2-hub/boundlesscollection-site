@@ -1673,6 +1673,32 @@
     "mpn": ""
   },
   {
+    "id": "marturie-leu-soia-001",
+    "title": "Marturie leu din ceara de soia in cutie personalizata",
+    "price": 14.99,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Marturie din ceara de soia 100% naturala, in forma de leu, turnata manual si ambalata intr-o cutie decorativa cu tematica safari. Ideala pentru botez, baby shower sau evenimente tematice pentru copii.",
+    "images": [
+      "/images/marturii/marturie-leu-safari.jpg"
+    ],
+    "tags": [
+      "marturii soia",
+      "marturie botez",
+      "leu",
+      "safari",
+      "baby shower",
+      "ceara soia",
+      "handmade",
+      "personalizat",
+      "cadou invitati"
+    ],
+    "slug": "marturie-leu-din-ceara-de-soia-in-cutie-personalizata-marturie",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "marturie-lamaie-soia-001",
     "title": "Marturie lumanare lamaie din ceara de soia",
     "price": 20,
