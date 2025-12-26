@@ -1,4 +1,4 @@
-// script.js – catalog + navigație (paginare: Home 4, Categorii 12 + buton HTML #loadMoreBtn)
+// script.js – catalog + navigație (paginare stabila cu buton din HTML)
 (function () {
   'use strict';
 
@@ -6,16 +6,17 @@
   const $  = (s, d = document) => d.querySelector(s);
   const $$ = (s, d = document) => Array.from(d.querySelectorAll(s));
 
-  if (!window.$)  window.$  = $;
-  if (!window.$$ ) window.$$ = $$;
-
-  const grid       = $('#grid') || null;
-  const q          = $('#q') || null;
+  const grid       = $('#grid');
+  const q          = $('#q');
   const filterBtns = $$('.filter .pill');
-  let PRODUCTS     = [];
+
+  const loadWrap = $('#loadMoreWrap');
+  const loadBtn  = $('#loadMoreBtn');
+
+  let PRODUCTS = [];
   let activeFilter = 'toate';
 
-  // ===== Normalizări robuste (spații/liniuțe/diacritice) =====
+  // ===== Normalizare =====
   const key = (s) => (s || '')
     .toString()
     .normalize('NFD')
@@ -28,59 +29,33 @@
   const norm = key;
   const slug = (s) => key(s).replace(/\s+/g, '-').slice(0, 80);
 
-  // ===== Filtru setat de pagină (ex: invitatii.html) =====
+  // ===== Filtru pagina categorie =====
   const PAGE_FILTER = (typeof window.PAGE_CATEGORY === 'string' && window.PAGE_CATEGORY.trim())
     ? key(window.PAGE_CATEGORY)
     : null;
 
-  if (PAGE_FILTER && grid) grid.classList.add('category');
-
   // ===== PAGINARE =====
-  const isCategoryPage = !!PAGE_FILTER;
-  const PAGE_SIZE = isCategoryPage ? 12 : 4;
+  // vrei 12 pe home + buton
+  const HOME_PAGE_SIZE = 12;
+  const CAT_PAGE_SIZE  = 12;
+
+  const PAGE_SIZE = PAGE_FILTER ? CAT_PAGE_SIZE : HOME_PAGE_SIZE;
   let visibleCount = PAGE_SIZE;
 
-  const loadWrap = document.getElementById('loadMoreWrap');
-  const loadBtn  = document.getElementById('loadMoreBtn');
-
-  function showLoadMore() {
-    if (loadWrap) loadWrap.style.display = 'flex';
-    if (loadBtn)  loadBtn.style.display = 'inline-flex';
-  }
-
-  function hideLoadMore() {
-    if (loadWrap) loadWrap.style.display = 'none';
-    if (loadBtn)  loadBtn.style.display = 'none';
-  }
-
-  function updateLoadMore(total) {
-    if (!loadBtn && !loadWrap) return;
-
-    const remaining = total - visibleCount;
-
-    if (total === 0 || remaining <= 0) {
-      hideLoadMore();
-      return;
-    }
-
-    showLoadMore();
-    if (loadBtn) {
-      loadBtn.textContent = `Incarca inca ${Math.min(PAGE_SIZE, remaining)} produse`;
-    }
-  }
-
-  const money = (n) => {
+  function money(n) {
     const v = Number(n);
     return Number.isFinite(v) ? `${v.toFixed(2)} RON` : '';
-  };
+  }
 
-  // ===== Card produs (cu slider dacă are >1 imagine) =====
+  // ===== Card produs =====
   function card(p) {
     const imgs = Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'];
     const hasMany = imgs.length > 1;
 
     const slides = imgs
-      .map((src, i) => `<img src="${src}" alt="${p.title} – imagine ${i + 1}" class="slide ${i === 0 ? 'is-active' : ''}" loading="lazy" decoding="async">`)
+      .map((src, i) =>
+        `<img src="${src}" alt="${p.title} – imagine ${i + 1}" class="slide ${i === 0 ? 'is-active' : ''}" loading="lazy" decoding="async">`
+      )
       .join('');
 
     const dots = hasMany
@@ -126,13 +101,22 @@
     return `<div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">${message}</div>`;
   }
 
-  // ===== Render + bind =====
-  function render() {
-    if (!grid) return;
+  function showLoadMore(show, remaining) {
+    if (!loadWrap || !loadBtn) return;
 
+    if (!show) {
+      loadWrap.style.display = 'none';
+      return;
+    }
+
+    loadWrap.style.display = 'flex';
+    loadBtn.textContent = `Incarca inca ${Math.min(PAGE_SIZE, remaining)} produse`;
+  }
+
+  function getFilteredItems() {
     const term = norm(q?.value || '');
 
-    const items = PRODUCTS.filter((p) => {
+    return PRODUCTS.filter((p) => {
       const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
       const hitTerm = !term || hay.includes(term);
 
@@ -148,7 +132,13 @@
 
       return hitTerm && hitCatToggle && hitPage;
     });
+  }
 
+  // ===== Render =====
+  function render() {
+    if (!grid) return;
+
+    const items = getFilteredItems();
     const total = items.length;
     const shown = items.slice(0, visibleCount);
 
@@ -156,9 +146,10 @@
       ? shown.map(card).join('')
       : emptyState('Nu am găsit produse pentru această categorie.');
 
-    updateLoadMore(total);
+    const remaining = total - visibleCount;
+    showLoadMore(remaining > 0, remaining);
 
-    // Acțiuni card
+    // Actiuni
     grid.querySelectorAll('.actions .btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -199,7 +190,7 @@
     });
   }
 
-  // ===== Încărcare produse =====
+  // ===== Load products =====
   async function loadProducts() {
     const url = '/content/products.json?cb=' + Date.now();
     try {
@@ -230,7 +221,7 @@
     }
   }
 
-  // ===== Acțiuni publice =====
+  // ===== Actions =====
   function inquire(title, slugVal) {
     const url = `${location.origin}/p/${slugVal}.html`;
     const wa = `https://wa.me/40760617724?text=${encodeURIComponent(
@@ -253,15 +244,13 @@
 
   // ===== Init =====
   window.addEventListener('DOMContentLoaded', async () => {
-    const year = $('#year');
-    if (year) year.textContent = new Date().getFullYear();
+    if (!grid) return;
 
-    if (grid) {
-      await loadProducts();
-      visibleCount = PAGE_SIZE;
-      render();
-    }
+    await loadProducts();
+    visibleCount = PAGE_SIZE;
+    render();
 
+    // load more
     if (loadBtn) {
       loadBtn.addEventListener('click', () => {
         visibleCount += PAGE_SIZE;
@@ -269,7 +258,8 @@
       });
     }
 
-    filterBtns.forEach((btn) =>
+    // filters
+    filterBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
         filterBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
         btn.setAttribute('aria-pressed', 'true');
@@ -279,9 +269,10 @@
 
         visibleCount = PAGE_SIZE;
         render();
-      })
-    );
+      });
+    });
 
+    // search
     q?.addEventListener('input', () => {
       visibleCount = PAGE_SIZE;
       render();
