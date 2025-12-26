@@ -1,4 +1,4 @@
-// script.js – catalog + navigație (stabil, cu suport pagini categorie) + "load more"
+// script.js – catalog + navigație (cu paginare: Home 4, Categorii 12 + buton "...")
 (function () {
   'use strict';
 
@@ -9,20 +9,11 @@
   if (!window.$)  window.$  = $;
   if (!window.$$ ) window.$$ = $$;
 
-  const grid         = $('#grid') || null;
-  const q            = $('#q') || null;
-  const filterBtns   = $$('.filter .pill');
-
-  const loadMoreWrap = $('#loadMoreWrap') || null;
-  const loadMoreBtn  = $('#loadMoreBtn') || null;
-
-  let PRODUCTS       = [];
-  let activeFilter   = 'toate';
-
-  // ===== Paginare (Load more) =====
-  const PAGE_SIZE = 4;
-  let visibleCount = PAGE_SIZE;
-  let LAST_ITEMS = []; // lista curenta (dupa filtre + search + page filter)
+  const grid       = $('#grid') || null;
+  const q          = $('#q') || null;
+  const filterBtns = $$('.filter .pill');
+  let PRODUCTS     = [];
+  let activeFilter = 'toate';
 
   // ===== Normalizări robuste (spații/liniuțe/diacritice) =====
   const key = (s) => (s || '')
@@ -44,6 +35,63 @@
 
   // Dacă e pagină de categorie, marchează grila pt layout-ul aerisit
   if (PAGE_FILTER && grid) grid.classList.add('category');
+
+  // ===== PAGINARE =====
+  const isCategoryPage = !!PAGE_FILTER;      // paginile de categorie
+  const PAGE_SIZE = isCategoryPage ? 12 : 4; // categorie: 12, home: 4
+  let visibleCount = PAGE_SIZE;
+
+  // UI "Load more" (se creeaza automat sub grila)
+  let loadWrap = null;
+  let loadBtn = null;
+
+  function ensureLoadMoreUI() {
+    if (!grid) return;
+    if (loadWrap && loadBtn) return;
+
+    loadWrap = document.createElement('div');
+    loadWrap.id = 'loadMoreWrap';
+    loadWrap.style.cssText = 'display:flex;justify-content:center;margin:1.2rem 0 0;';
+
+    loadBtn = document.createElement('button');
+    loadBtn.id = 'loadMoreBtn';
+    loadBtn.type = 'button';
+    loadBtn.className = 'btn'; // foloseste stilul tau existent
+    loadBtn.textContent = '...';
+
+    loadBtn.addEventListener('click', () => {
+      visibleCount += PAGE_SIZE;
+      render();
+    });
+
+    loadWrap.appendChild(loadBtn);
+
+    // insereaza dupa grid
+    grid.parentNode.insertBefore(loadWrap, grid.nextSibling);
+  }
+
+  function updateLoadMore(total) {
+    if (!loadBtn || !loadWrap) return;
+
+    const remaining = total - visibleCount;
+
+    if (total === 0) {
+      loadWrap.style.display = 'none';
+      return;
+    }
+
+    if (remaining <= 0) {
+      loadWrap.style.display = 'none';
+      return;
+    }
+
+    loadWrap.style.display = 'flex';
+
+    // buton "..." (si optional informativ)
+    // daca vrei sa scrie text clar, inlocuieste cu:
+    // loadBtn.textContent = `Incarca inca ${Math.min(PAGE_SIZE, remaining)}`;
+    loadBtn.textContent = '...';
+  }
 
   const money = (n) => {
     const v = Number(n);
@@ -102,26 +150,38 @@
     return `<div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">${message}</div>`;
   }
 
-  function updateLoadMoreUI(total) {
-  if (!loadMoreWrap || !loadMoreBtn) return;
-
-  const remaining = total - visibleCount;
-  const hasMore = remaining > 0;
-
-  loadMoreWrap.hidden = !hasMore;
-
-  if (hasMore) {
-    loadMoreBtn.textContent =
-      remaining >= PAGE_SIZE
-        ? `Incarca inca ${PAGE_SIZE} produse`
-        : `Incarca ultimele ${remaining} produse`;
-  }
-}
-
-
-  // ===== Bind pe carduri (actiuni + slider) =====
-  function bindCardActions() {
+  // ===== Render + bind pe carduri =====
+  function render() {
     if (!grid) return;
+    ensureLoadMoreUI();
+
+    const term = norm(q?.value || '');
+
+    const items = PRODUCTS.filter((p) => {
+      const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
+      const hitTerm = !term || hay.includes(term);
+
+      const hitCatToggle =
+        activeFilter === 'toate' ||
+        p.categoryKey === activeFilter ||
+        (p.tagsKey && p.tagsKey.includes(activeFilter));
+
+      const hitPage =
+        !PAGE_FILTER ||
+        p.categoryKey === PAGE_FILTER ||
+        (p.tagsKey && p.tagsKey.includes(PAGE_FILTER));
+
+      return hitTerm && hitCatToggle && hitPage;
+    });
+
+    const total = items.length;
+    const shown = items.slice(0, visibleCount);
+
+    grid.innerHTML = shown.length
+      ? shown.map(card).join('')
+      : emptyState('Nu am găsit produse pentru această categorie.');
+
+    updateLoadMore(total);
 
     // Acțiuni card
     grid.querySelectorAll('.actions .btn').forEach((btn) => {
@@ -162,43 +222,6 @@
       next?.addEventListener('click', (e) => { e.preventDefault(); setIndex(++idx); });
       dots.forEach((d, k) => d.addEventListener('click', (e) => { e.preventDefault(); idx = k; setIndex(idx); }));
     });
-  }
-
-  // ===== Render (cu limitare la 4 + load more) =====
-  function render(reset = false) {
-    if (!grid) return;
-
-    if (reset) visibleCount = PAGE_SIZE;
-
-    const term = norm(q?.value || '');
-
-    const items = PRODUCTS.filter((p) => {
-      const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
-      const hitTerm = !term || hay.includes(term);
-
-      const hitCatToggle =
-        activeFilter === 'toate' ||
-        p.categoryKey === activeFilter ||
-        (p.tagsKey && p.tagsKey.includes(activeFilter));
-
-      const hitPage =
-        !PAGE_FILTER ||
-        p.categoryKey === PAGE_FILTER ||
-        (p.tagsKey && p.tagsKey.includes(PAGE_FILTER));
-
-      return hitTerm && hitCatToggle && hitPage;
-    });
-
-    LAST_ITEMS = items;
-
-    const slice = items.slice(0, visibleCount);
-
-    grid.innerHTML = slice.length
-      ? slice.map(card).join('')
-      : emptyState('Nu am găsit produse pentru această categorie.');
-
-    bindCardActions();
-    updateLoadMoreUI(items.length);
   }
 
   // ===== Încărcare produse =====
@@ -258,28 +281,28 @@
     const year = $('#year');
     if (year) year.textContent = new Date().getFullYear();
 
-    if (loadMoreBtn) {
-      loadMoreBtn.addEventListener('click', () => {
-        visibleCount += PAGE_SIZE;
-        render(false); // NU resetam, doar marim
-      });
-    }
-
     if (grid) {
       await loadProducts();
-      render(true); // reset la 4 la initial
+      visibleCount = PAGE_SIZE; // reset la incarcare initiala
+      render();
     }
 
     filterBtns.forEach((btn) =>
       btn.addEventListener('click', () => {
         filterBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
         btn.setAttribute('aria-pressed', 'true');
+
         const keyVal = btn.dataset.filter || btn.textContent;
         activeFilter = key(keyVal || 'toate');
-        render(true); // reset la 4 la schimbare filtru
+
+        visibleCount = PAGE_SIZE; // reset la schimbare filtru
+        render();
       })
     );
 
-    q?.addEventListener('input', () => render(true)); // reset la 4 la cautare
+    q?.addEventListener('input', () => {
+      visibleCount = PAGE_SIZE; // reset la cautare
+      render();
+    });
   });
 })();
