@@ -1147,9 +1147,18 @@ form input[type="submit"]:active {
 .loadmore-wrap{
   display:flex;
   justify-content:center;
-  margin: 18px 0 10px;
+  margin: 1rem 0 0;
 }
-#loadMoreBtn{
-  font-weight: 500;
-  padding: 10px 22px;
+
+#loadMore{
+  min-width: 140px;
+  border-radius: 999px;
+}
+#loadMore.btn{
+  background: linear-gradient(180deg, var(--rose), #ffdced);
+  border-color: #ffcfe6;
+  color: var(--text);
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  transition: transform .1s ease, box-shadow .2s ease;
 }

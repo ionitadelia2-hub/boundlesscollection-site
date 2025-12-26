@@ -11,6 +11,15 @@
 
   const grid       = $('#grid') || null;
   const q          = $('#q') || null;
+  const loadMoreBtn = $('#loadMore') || null;
+
+const PAGE_SIZE = 4;
+let visibleCount = PAGE_SIZE;
+
+function resetPagination() {
+  visibleCount = PAGE_SIZE;
+}
+
   const filterBtns = $$('.filter .pill');
   let PRODUCTS     = [];
   let activeFilter = 'toate';
@@ -98,26 +107,35 @@
     if (!grid) return;
     const term = norm(q?.value || '');
 
-    const items = PRODUCTS.filter((p) => {
-      const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
-      const hitTerm = !term || hay.includes(term);
+    const filtered = PRODUCTS.filter((p) => {
+  const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
+  const hitTerm = !term || hay.includes(term);
 
-      const hitCatToggle =
-        activeFilter === 'toate' ||
-        p.categoryKey === activeFilter ||
-        (p.tagsKey && p.tagsKey.includes(activeFilter));
+  const hitCatToggle =
+    activeFilter === 'toate' ||
+    p.categoryKey === activeFilter ||
+    (p.tagsKey && p.tagsKey.includes(activeFilter));
 
-      const hitPage =
-        !PAGE_FILTER ||
-        p.categoryKey === PAGE_FILTER ||
-        (p.tagsKey && p.tagsKey.includes(PAGE_FILTER));
+  const hitPage =
+    !PAGE_FILTER ||
+    p.categoryKey === PAGE_FILTER ||
+    (p.tagsKey && p.tagsKey.includes(PAGE_FILTER));
 
-      return hitTerm && hitCatToggle && hitPage;
-    });
+  return hitTerm && hitCatToggle && hitPage;
+});
 
-    grid.innerHTML = items.length
-      ? items.map(card).join('')
-      : emptyState('Nu am găsit produse pentru această categorie.');
+const visible = filtered.slice(0, visibleCount);
+
+grid.innerHTML = visible.length
+  ? visible.map(card).join('')
+  : emptyState('Nu am găsit produse pentru această categorie.');
+
+// buton "..."
+if (loadMoreBtn) {
+  const hasMore = filtered.length > visibleCount;
+  loadMoreBtn.hidden = !hasMore;
+}
+
 
     // Acțiuni card
     grid.querySelectorAll('.actions .btn').forEach((btn) => {
@@ -220,6 +238,13 @@
     if (grid) {
       await loadProducts();
       render();
+      if (loadMoreBtn) {
+  loadMoreBtn.addEventListener('click', () => {
+    visibleCount += PAGE_SIZE;
+    render();
+  });
+}
+
     }
 
     filterBtns.forEach((btn) =>
@@ -228,10 +253,15 @@
         btn.setAttribute('aria-pressed', 'true');
         const keyVal = btn.dataset.filter || btn.textContent;
         activeFilter = key(keyVal || 'toate');
+        resetPagination();
         render();
       })
     );
 
-    q?.addEventListener('input', render);
+    q?.addEventListener('input', () => {
+  resetPagination();
+  render();
+});
+
   });
 })();
