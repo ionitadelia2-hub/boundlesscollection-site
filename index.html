@@ -241,11 +241,7 @@
       </div>
     </div>
 
-    <div class="loadmore-wrap" id="loadMoreWrap">
-  <button id="loadMoreBtn" class="btn" type="button">Incarca mai multe produse</button>
-</div>
-
-
+    <div class="grid products" id="grid" aria-live="polite"></div>
   </section>
 
   <!-- DESPRE & CONTACT -->
@@ -277,16 +273,19 @@
       </p>
 
       <form id="contactForm" action="https://formsubmit.co/ionitadelia@yahoo.com" method="POST">
+        <!-- setări FormSubmit -->
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="Mesaj nou — Boundless Collection">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_next" value="https://boundlesscollection.ro/multumesc.html">
 
-        <input name="name" required placeholder="Nume" />
-        <input name="email" required type="email" placeholder="Email" />
-        <input name="phone" placeholder="Telefon" />
+        <!-- câmpuri -->
+        <input name="name"   required placeholder="Nume" />
+        <input name="email"  required type="email" placeholder="Email" />
+        <input name="phone"  placeholder="Telefon" />
         <textarea name="message" required placeholder="Mesajul tău"></textarea>
 
+        <!-- honeypot anti-spam -->
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
         <button id="sendBtn" class="btn primary" type="submit">Trimite</button>
@@ -335,56 +334,6 @@
 
       <a class="btn primary xmas-popup-cta" href="/craciun.html">
         Vezi colectia de Craciun
-      </a>
-
-      <button class="btn ghost xmas-popup-later" type="button">
-        Poate mai tarziu
-      </button>
-    </div>
-  </div>
-
-  <!-- POPUP COLECTIA DE PASTE (pregatit, NEACTIV acum) -->
-  <div class="xmas-popup-backdrop" id="easterPopupBackdrop" hidden></div>
-
-  <div class="xmas-popup" id="easterPopup" role="dialog" aria-modal="true"
-       aria-labelledby="easterPopupTitle" hidden>
-    <div class="xmas-popup-card">
-      <button class="xmas-popup-close" type="button" aria-label="Inchide anuntul">&times;</button>
-
-      <div class="xmas-popup-badge">NOU</div>
-
-      <h2 id="easterPopupTitle">Colectia de Paste</h2>
-      <p>
-        Cadouri si decoratiuni de Paste realizate manual – detalii delicate, perfecte pentru masa festiva si surprize speciale.
-      </p>
-
-      <a class="btn primary xmas-popup-cta" href="/paste.html">
-        Vezi colectia de Paste
-      </a>
-
-      <button class="btn ghost xmas-popup-later" type="button">
-        Poate mai tarziu
-      </button>
-    </div>
-  </div>
-
-  <!-- POPUP COLECTIA DE MARTISOR (pregatit, NEACTIV acum) -->
-  <div class="xmas-popup-backdrop" id="martisorPopupBackdrop" hidden></div>
-
-  <div class="xmas-popup" id="martisorPopup" role="dialog" aria-modal="true"
-       aria-labelledby="martisorPopupTitle" hidden>
-    <div class="xmas-popup-card">
-      <button class="xmas-popup-close" type="button" aria-label="Inchide anuntul">&times;</button>
-
-      <div class="xmas-popup-badge">NOU</div>
-
-      <h2 id="martisorPopupTitle">Colectia de Martisor</h2>
-      <p>
-        Martisoare si cadouri delicate, realizate manual – elegante, feminine si perfecte pentru inceput de primavara.
-      </p>
-
-      <a class="btn primary xmas-popup-cta" href="/martisor.html">
-        Vezi colectia de Martisor
       </a>
 
       <button class="btn ghost xmas-popup-later" type="button">
@@ -485,15 +434,10 @@
     }
   })();
   </script>
-
-  <script>
-  // POPUP CAMPANII (Craciun / Paste / Martisor)
+    <script>
+  // POPUP COLECTIA DE CRACIUN
   (function () {
     window.addEventListener('DOMContentLoaded', function () {
-      // Alege campania activa:
-      // 'xmas' | 'easter' | 'martisor' | null
-      var ACTIVE_CAMPAIGN = null; // <-- acum nu afisam niciun popup
-
       // aratam popup doar pe home
       var path = location.pathname.replace(/\/+$/, '');
       var isHome =
@@ -503,40 +447,19 @@
         path === '/index.html';
 
       if (!isHome) return;
-      if (!ACTIVE_CAMPAIGN) return;
 
-      var CAMPAIGNS = {
-        xmas: {
-          popupId: 'xmasPopup',
-          backdropId: 'xmasPopupBackdrop',
-          storageKey: 'bc_popup_closed_xmas_v1',
-          delayMs: 2000
-        },
-        easter: {
-          popupId: 'easterPopup',
-          backdropId: 'easterPopupBackdrop',
-          storageKey: 'bc_popup_closed_easter_v1',
-          delayMs: 2000
-        },
-        martisor: {
-          popupId: 'martisorPopup',
-          backdropId: 'martisorPopupBackdrop',
-          storageKey: 'bc_popup_closed_martisor_v1',
-          delayMs: 2000
-        }
-      };
-
-      var cfg = CAMPAIGNS[ACTIVE_CAMPAIGN];
-      if (!cfg) return;
-
-      var popup    = document.getElementById(cfg.popupId);
-      var backdrop = document.getElementById(cfg.backdropId);
+      var popup    = document.getElementById('xmasPopup');
+      var backdrop = document.getElementById('xmasPopupBackdrop');
       if (!popup || !backdrop) return;
+
+      var CLOSE_KEY = 'bc_xmas_popup_closed_v1';
 
       // daca utilizatorul l-a inchis, nu il mai aratam
       try {
-        if (localStorage.getItem(cfg.storageKey) === '1') return;
-      } catch (e) {}
+        if (localStorage.getItem(CLOSE_KEY) === '1') return;
+      } catch (e) {
+        // daca localStorage e blocat, continuam fara persistenta
+      }
 
       var btnClose = popup.querySelector('.xmas-popup-close');
       var btnLater = popup.querySelector('.xmas-popup-later');
@@ -561,10 +484,13 @@
           popup.hidden = true;
         }, 260);
 
-        try { localStorage.setItem(cfg.storageKey, '1'); } catch (e) {}
+        try {
+          localStorage.setItem(CLOSE_KEY, '1');
+        } catch (e) {}
       }
 
-      setTimeout(openPopup, cfg.delayMs || 2000);
+      // deschidem dupa 2 secunde
+      setTimeout(openPopup, 2000);
 
       if (btnClose) btnClose.addEventListener('click', closePopup);
       if (btnLater) btnLater.addEventListener('click', closePopup);
@@ -575,7 +501,9 @@
 
       if (btnCta) {
         btnCta.addEventListener('click', function () {
-          try { localStorage.setItem(cfg.storageKey, '1'); } catch (e) {}
+          try {
+            localStorage.setItem(CLOSE_KEY, '1');
+          } catch (e) {}
         });
       }
 
@@ -587,6 +515,5 @@
     });
   })();
   </script>
-
 </body>
 </html>
