@@ -1150,6 +1150,6 @@ form input[type="submit"]:active {
   margin: 18px 0 10px;
 }
 #loadMoreBtn{
-  min-width: 120px;
-  border-radius: 999px;
+  font-weight: 500;
+  padding: 10px 22px;
 }

@@ -103,14 +103,21 @@
   }
 
   function updateLoadMoreUI(total) {
-    if (!loadMoreWrap || !loadMoreBtn) return;
+  if (!loadMoreWrap || !loadMoreBtn) return;
 
-    const hasMore = visibleCount < total;
-    loadMoreWrap.hidden = !hasMore;
+  const remaining = total - visibleCount;
+  const hasMore = remaining > 0;
 
-    // daca vrei text in loc de "...", schimba aici
-    // loadMoreBtn.textContent = hasMore ? `Incarca inca ${Math.min(PAGE_SIZE, total - visibleCount)}` : '';
+  loadMoreWrap.hidden = !hasMore;
+
+  if (hasMore) {
+    loadMoreBtn.textContent =
+      remaining >= PAGE_SIZE
+        ? `Incarca inca ${PAGE_SIZE} produse`
+        : `Incarca ultimele ${remaining} produse`;
   }
+}
+
 
   // ===== Bind pe carduri (actiuni + slider) =====
   function bindCardActions() {
