@@ -41,6 +41,7 @@ function resetPagination() {
   const PAGE_FILTER = (typeof window.PAGE_CATEGORY === 'string' && window.PAGE_CATEGORY.trim())
     ? key(window.PAGE_CATEGORY)
     : null;
+    const PAGINATION_ENABLED = !PAGE_FILTER; // doar pe home
 
   // Dacă e pagină de categorie, marchează grila pt layout-ul aerisit
   if (PAGE_FILTER && grid) grid.classList.add('category');
@@ -124,7 +125,8 @@ function resetPagination() {
   return hitTerm && hitCatToggle && hitPage;
 });
 
-const visible = filtered.slice(0, visibleCount);
+const visible = PAGINATION_ENABLED ? filtered.slice(0, visibleCount) : filtered;
+
 
 grid.innerHTML = visible.length
   ? visible.map(card).join('')
@@ -132,7 +134,7 @@ grid.innerHTML = visible.length
 
 // buton "..."
 if (loadMoreBtn) {
-  const hasMore = filtered.length > visibleCount;
+  const hasMore = PAGINATION_ENABLED && filtered.length > visibleCount;
   loadMoreBtn.hidden = !hasMore;
 }
 
