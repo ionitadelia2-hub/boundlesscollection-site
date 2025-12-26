@@ -19,43 +19,54 @@
   const key = (s) => (s || '')
     .toString()
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')   // fără diacritice
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')       // orice separator devine spațiu
+    .replace(/[^a-z0-9]+/g, ' ')
     .trim()
-    .replace(/\s+/g, ' ');             // spațiu unic
+    .replace(/\s+/g, ' ');
 
   const norm = key;
   const slug = (s) => key(s).replace(/\s+/g, '-').slice(0, 80);
 
-  // ===== Filtru setat de pagină (ex: marturii.html) =====
+  // ===== Filtru setat de pagină (ex: invitatii.html) =====
   const PAGE_FILTER = (typeof window.PAGE_CATEGORY === 'string' && window.PAGE_CATEGORY.trim())
     ? key(window.PAGE_CATEGORY)
     : null;
 
-  // Dacă e pagină de categorie, marchează grila pt layout-ul aerisit
   if (PAGE_FILTER && grid) grid.classList.add('category');
 
   // ===== PAGINARE =====
-  const isCategoryPage = !!PAGE_FILTER;      // paginile de categorie
-  const PAGE_SIZE = isCategoryPage ? 12 : 4; // categorie: 12, home: 4
+  const isCategoryPage = !!PAGE_FILTER;
+  const PAGE_SIZE = isCategoryPage ? 12 : 4;
   let visibleCount = PAGE_SIZE;
 
-  // folosim butonul EXISTENT din HTML
-  const loadBtn = document.getElementById('loadMoreBtn');
+  const loadWrap = document.getElementById('loadMoreWrap');
+  const loadBtn  = document.getElementById('loadMoreBtn');
+
+  function showLoadMore() {
+    if (loadWrap) loadWrap.style.display = 'flex';
+    if (loadBtn)  loadBtn.style.display = 'inline-flex';
+  }
+
+  function hideLoadMore() {
+    if (loadWrap) loadWrap.style.display = 'none';
+    if (loadBtn)  loadBtn.style.display = 'none';
+  }
 
   function updateLoadMore(total) {
-    if (!loadBtn) return;
+    if (!loadBtn && !loadWrap) return;
 
     const remaining = total - visibleCount;
 
     if (total === 0 || remaining <= 0) {
-      loadBtn.style.display = 'none';
+      hideLoadMore();
       return;
     }
 
-    loadBtn.style.display = 'inline-flex';
-    loadBtn.textContent = `Incarca inca ${Math.min(PAGE_SIZE, remaining)} produse`;
+    showLoadMore();
+    if (loadBtn) {
+      loadBtn.textContent = `Incarca inca ${Math.min(PAGE_SIZE, remaining)} produse`;
+    }
   }
 
   const money = (n) => {
@@ -115,7 +126,7 @@
     return `<div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">${message}</div>`;
   }
 
-  // ===== Render + bind pe carduri =====
+  // ===== Render + bind =====
   function render() {
     if (!grid) return;
 
@@ -162,7 +173,7 @@
       });
     });
 
-    // Slider pe card (dacă există)
+    // Slider
     grid.querySelectorAll('.item .slide-track').forEach((track) => {
       const slides = $$('.slide', track);
       if (slides.length <= 1) return;
@@ -198,20 +209,20 @@
       const data = await res.json();
       PRODUCTS = Array.isArray(data)
         ? data.map((p) => {
-          const tags = Array.isArray(p.tags) ? p.tags : [];
-          return {
-            id: p.id || String(Math.random()).slice(2),
-            title: p.title || '',
-            price: Number(p.price ?? NaN),
-            category: p.category || '',
-            categoryKey: key(p.category || ''),
-            desc: p.desc || '',
-            images: Array.isArray(p.images) ? p.images : [],
-            slug: p.slug || slug(p.title),
-            tags,
-            tagsKey: tags.map(key),
-          };
-        })
+            const tags = Array.isArray(p.tags) ? p.tags : [];
+            return {
+              id: p.id || String(Math.random()).slice(2),
+              title: p.title || '',
+              price: Number(p.price ?? NaN),
+              category: p.category || '',
+              categoryKey: key(p.category || ''),
+              desc: p.desc || '',
+              images: Array.isArray(p.images) ? p.images : [],
+              slug: p.slug || slug(p.title),
+              tags,
+              tagsKey: tags.map(key),
+            };
+          })
         : [];
     } catch (err) {
       console.error('loadProducts:', err);
@@ -247,11 +258,10 @@
 
     if (grid) {
       await loadProducts();
-      visibleCount = PAGE_SIZE; // reset la incarcare initiala
+      visibleCount = PAGE_SIZE;
       render();
     }
 
-    // click pe butonul HTML
     if (loadBtn) {
       loadBtn.addEventListener('click', () => {
         visibleCount += PAGE_SIZE;
@@ -267,13 +277,13 @@
         const keyVal = btn.dataset.filter || btn.textContent;
         activeFilter = key(keyVal || 'toate');
 
-        visibleCount = PAGE_SIZE; // reset la schimbare filtru
+        visibleCount = PAGE_SIZE;
         render();
       })
     );
 
     q?.addEventListener('input', () => {
-      visibleCount = PAGE_SIZE; // reset la cautare
+      visibleCount = PAGE_SIZE;
       render();
     });
   });
