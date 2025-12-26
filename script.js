@@ -1,4 +1,4 @@
-// script.js – catalog + navigație (cu paginare: Home 4, Categorii 12 + buton "...")
+// script.js – catalog + navigație (paginare: Home 4, Categorii 12 + buton HTML #loadMoreBtn)
 (function () {
   'use strict';
 
@@ -41,56 +41,21 @@
   const PAGE_SIZE = isCategoryPage ? 12 : 4; // categorie: 12, home: 4
   let visibleCount = PAGE_SIZE;
 
-  // UI "Load more" (se creeaza automat sub grila)
-  let loadWrap = null;
-  let loadBtn = null;
-
-  function ensureLoadMoreUI() {
-    if (!grid) return;
-    if (loadWrap && loadBtn) return;
-
-    loadWrap = document.createElement('div');
-    loadWrap.id = 'loadMoreWrap';
-    loadWrap.style.cssText = 'display:flex;justify-content:center;margin:1.2rem 0 0;';
-
-    loadBtn = document.createElement('button');
-    loadBtn.id = 'loadMoreBtn';
-    loadBtn.type = 'button';
-    loadBtn.className = 'btn'; // foloseste stilul tau existent
-    loadBtn.textContent = '...';
-
-    loadBtn.addEventListener('click', () => {
-      visibleCount += PAGE_SIZE;
-      render();
-    });
-
-    loadWrap.appendChild(loadBtn);
-
-    // insereaza dupa grid
-    grid.parentNode.insertBefore(loadWrap, grid.nextSibling);
-  }
+  // folosim butonul EXISTENT din HTML
+  const loadBtn = document.getElementById('loadMoreBtn');
 
   function updateLoadMore(total) {
-    if (!loadBtn || !loadWrap) return;
+    if (!loadBtn) return;
 
     const remaining = total - visibleCount;
 
-    if (total === 0) {
-      loadWrap.style.display = 'none';
+    if (total === 0 || remaining <= 0) {
+      loadBtn.style.display = 'none';
       return;
     }
 
-    if (remaining <= 0) {
-      loadWrap.style.display = 'none';
-      return;
-    }
-
-    loadWrap.style.display = 'flex';
-
-    // buton "..." (si optional informativ)
-    // daca vrei sa scrie text clar, inlocuieste cu:
-    // loadBtn.textContent = `Incarca inca ${Math.min(PAGE_SIZE, remaining)}`;
-    loadBtn.textContent = '...';
+    loadBtn.style.display = 'inline-flex';
+    loadBtn.textContent = `Incarca inca ${Math.min(PAGE_SIZE, remaining)} produse`;
   }
 
   const money = (n) => {
@@ -104,14 +69,14 @@
     const hasMany = imgs.length > 1;
 
     const slides = imgs
-      .map((src, i) => `<img src="${src}" alt="${p.title} – imagine ${i+1}" class="slide ${i===0?'is-active':''}" loading="lazy" decoding="async">`)
+      .map((src, i) => `<img src="${src}" alt="${p.title} – imagine ${i + 1}" class="slide ${i === 0 ? 'is-active' : ''}" loading="lazy" decoding="async">`)
       .join('');
 
     const dots = hasMany
-      ? `<div class="slider-dots">${imgs.map((_,i)=>`<i class="${i===0?'is-active':''}"></i>`).join('')}</div>`
+      ? `<div class="slider-dots">${imgs.map((_, i) => `<i class="${i === 0 ? 'is-active' : ''}"></i>`).join('')}</div>`
       : '';
 
-    const nav  = hasMany
+    const nav = hasMany
       ? `<div class="slider-nav">
            <button class="prev" type="button" aria-label="Imagine anterioară">‹</button>
            <button class="next" type="button" aria-label="Imagine următoare">›</button>
@@ -153,7 +118,6 @@
   // ===== Render + bind pe carduri =====
   function render() {
     if (!grid) return;
-    ensureLoadMoreUI();
 
     const term = norm(q?.value || '');
 
@@ -189,8 +153,8 @@
         e.preventDefault();
         e.stopPropagation();
         const wrap = e.currentTarget.closest('.item');
-        const id   = wrap?.dataset.id;
-        const p    = PRODUCTS.find((x) => x.id === id);
+        const id = wrap?.dataset.id;
+        const p = PRODUCTS.find((x) => x.id === id);
         if (!p) return;
 
         if (btn.dataset.act === 'share') share(p.title, p.slug);
@@ -203,9 +167,9 @@
       const slides = $$('.slide', track);
       if (slides.length <= 1) return;
 
-      const dots  = track.parentElement.querySelectorAll('.slider-dots i');
-      const prev  = track.parentElement.querySelector('.prev');
-      const next  = track.parentElement.querySelector('.next');
+      const dots = track.parentElement.querySelectorAll('.slider-dots i');
+      const prev = track.parentElement.querySelector('.prev');
+      const next = track.parentElement.querySelector('.next');
 
       const setIndex = (i) => {
         const n = slides.length;
@@ -234,20 +198,20 @@
       const data = await res.json();
       PRODUCTS = Array.isArray(data)
         ? data.map((p) => {
-            const tags = Array.isArray(p.tags) ? p.tags : [];
-            return {
-              id: p.id || String(Math.random()).slice(2),
-              title: p.title || '',
-              price: Number(p.price ?? NaN),
-              category: p.category || '',
-              categoryKey: key(p.category || ''),
-              desc: p.desc || '',
-              images: Array.isArray(p.images) ? p.images : [],
-              slug: p.slug || slug(p.title),
-              tags,
-              tagsKey: tags.map(key),
-            };
-          })
+          const tags = Array.isArray(p.tags) ? p.tags : [];
+          return {
+            id: p.id || String(Math.random()).slice(2),
+            title: p.title || '',
+            price: Number(p.price ?? NaN),
+            category: p.category || '',
+            categoryKey: key(p.category || ''),
+            desc: p.desc || '',
+            images: Array.isArray(p.images) ? p.images : [],
+            slug: p.slug || slug(p.title),
+            tags,
+            tagsKey: tags.map(key),
+          };
+        })
         : [];
     } catch (err) {
       console.error('loadProducts:', err);
@@ -256,16 +220,16 @@
   }
 
   // ===== Acțiuni publice =====
-  function inquire(title, slug) {
-    const url = `${location.origin}/p/${slug}.html`;
+  function inquire(title, slugVal) {
+    const url = `${location.origin}/p/${slugVal}.html`;
     const wa = `https://wa.me/40760617724?text=${encodeURIComponent(
       `Bună! Mă interesează produsul: ${title} (${url})`
     )}`;
     window.open(wa, '_blank', 'noopener');
   }
 
-  async function share(title, slug) {
-    const url = `${location.origin}/p/${slug}.html`;
+  async function share(title, slugVal) {
+    const url = `${location.origin}/p/${slugVal}.html`;
     const data = { title: 'Boundless Collection', text: `Îți recomand: ${title}`, url };
     try {
       if (navigator.share) await navigator.share(data);
@@ -285,6 +249,14 @@
       await loadProducts();
       visibleCount = PAGE_SIZE; // reset la incarcare initiala
       render();
+    }
+
+    // click pe butonul HTML
+    if (loadBtn) {
+      loadBtn.addEventListener('click', () => {
+        visibleCount += PAGE_SIZE;
+        render();
+      });
     }
 
     filterBtns.forEach((btn) =>
