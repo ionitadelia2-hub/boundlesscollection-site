@@ -1,4 +1,4 @@
-// script.js – catalog + navigație (paginare stabila cu buton din HTML)
+// script.js – catalog + navigație (stabil, cu suport pagini categorie)
 (function () {
   'use strict';
 
@@ -6,63 +6,55 @@
   const $  = (s, d = document) => d.querySelector(s);
   const $$ = (s, d = document) => Array.from(d.querySelectorAll(s));
 
-  const grid       = $('#grid');
-  const q          = $('#q');
+  if (!window.$)  window.$  = $;
+  if (!window.$$ ) window.$$ = $$;
+
+  const grid       = $('#grid') || null;
+  const q          = $('#q') || null;
   const filterBtns = $$('.filter .pill');
-
-  const loadWrap = $('#loadMoreWrap');
-  const loadBtn  = $('#loadMoreBtn');
-
-  let PRODUCTS = [];
+  let PRODUCTS     = [];
   let activeFilter = 'toate';
 
-  // ===== Normalizare =====
+  // ===== Normalizări robuste (spații/liniuțe/diacritice) =====
   const key = (s) => (s || '')
     .toString()
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[\u0300-\u036f]/g, '')   // fără diacritice
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ')       // orice separator devine spațiu
     .trim()
-    .replace(/\s+/g, ' ');
+    .replace(/\s+/g, ' ');             // spațiu unic
 
   const norm = key;
   const slug = (s) => key(s).replace(/\s+/g, '-').slice(0, 80);
 
-  // ===== Filtru pagina categorie =====
+  // ===== Filtru setat de pagină (ex: marturii.html) =====
   const PAGE_FILTER = (typeof window.PAGE_CATEGORY === 'string' && window.PAGE_CATEGORY.trim())
     ? key(window.PAGE_CATEGORY)
     : null;
 
-  // ===== PAGINARE =====
-  // vrei 12 pe home + buton
-  const HOME_PAGE_SIZE = 12;
-  const CAT_PAGE_SIZE  = 12;
+  // Dacă e pagină de categorie, marchează grila pt layout-ul aerisit
+  if (PAGE_FILTER && grid) grid.classList.add('category');
 
-  const PAGE_SIZE = PAGE_FILTER ? CAT_PAGE_SIZE : HOME_PAGE_SIZE;
-  let visibleCount = PAGE_SIZE;
-
-  function money(n) {
+  const money = (n) => {
     const v = Number(n);
     return Number.isFinite(v) ? `${v.toFixed(2)} RON` : '';
-  }
+  };
 
-  // ===== Card produs =====
+  // ===== Card produs (cu slider dacă are >1 imagine) =====
   function card(p) {
     const imgs = Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'];
     const hasMany = imgs.length > 1;
 
     const slides = imgs
-      .map((src, i) =>
-        `<img src="${src}" alt="${p.title} – imagine ${i + 1}" class="slide ${i === 0 ? 'is-active' : ''}" loading="lazy" decoding="async">`
-      )
+      .map((src, i) => `<img src="${src}" alt="${p.title} – imagine ${i+1}" class="slide ${i===0?'is-active':''}" loading="lazy" decoding="async">`)
       .join('');
 
     const dots = hasMany
-      ? `<div class="slider-dots">${imgs.map((_, i) => `<i class="${i === 0 ? 'is-active' : ''}"></i>`).join('')}</div>`
+      ? `<div class="slider-dots">${imgs.map((_,i)=>`<i class="${i===0?'is-active':''}"></i>`).join('')}</div>`
       : '';
 
-    const nav = hasMany
+    const nav  = hasMany
       ? `<div class="slider-nav">
            <button class="prev" type="button" aria-label="Imagine anterioară">‹</button>
            <button class="next" type="button" aria-label="Imagine următoare">›</button>
@@ -101,22 +93,12 @@
     return `<div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">${message}</div>`;
   }
 
-  function showLoadMore(show, remaining) {
-    if (!loadWrap || !loadBtn) return;
-
-    if (!show) {
-      loadWrap.style.display = 'none';
-      return;
-    }
-
-    loadWrap.style.display = 'flex';
-    loadBtn.textContent = `Incarca inca ${Math.min(PAGE_SIZE, remaining)} produse`;
-  }
-
-  function getFilteredItems() {
+  // ===== Render + bind pe carduri =====
+  function render() {
+    if (!grid) return;
     const term = norm(q?.value || '');
 
-    return PRODUCTS.filter((p) => {
+    const items = PRODUCTS.filter((p) => {
       const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
       const hitTerm = !term || hay.includes(term);
 
@@ -132,31 +114,19 @@
 
       return hitTerm && hitCatToggle && hitPage;
     });
-  }
 
-  // ===== Render =====
-  function render() {
-    if (!grid) return;
-
-    const items = getFilteredItems();
-    const total = items.length;
-    const shown = items.slice(0, visibleCount);
-
-    grid.innerHTML = shown.length
-      ? shown.map(card).join('')
+    grid.innerHTML = items.length
+      ? items.map(card).join('')
       : emptyState('Nu am găsit produse pentru această categorie.');
 
-    const remaining = total - visibleCount;
-    showLoadMore(remaining > 0, remaining);
-
-    // Actiuni
+    // Acțiuni card
     grid.querySelectorAll('.actions .btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
         const wrap = e.currentTarget.closest('.item');
-        const id = wrap?.dataset.id;
-        const p = PRODUCTS.find((x) => x.id === id);
+        const id   = wrap?.dataset.id;
+        const p    = PRODUCTS.find((x) => x.id === id);
         if (!p) return;
 
         if (btn.dataset.act === 'share') share(p.title, p.slug);
@@ -164,14 +134,14 @@
       });
     });
 
-    // Slider
+    // Slider pe card (dacă există)
     grid.querySelectorAll('.item .slide-track').forEach((track) => {
       const slides = $$('.slide', track);
       if (slides.length <= 1) return;
 
-      const dots = track.parentElement.querySelectorAll('.slider-dots i');
-      const prev = track.parentElement.querySelector('.prev');
-      const next = track.parentElement.querySelector('.next');
+      const dots  = track.parentElement.querySelectorAll('.slider-dots i');
+      const prev  = track.parentElement.querySelector('.prev');
+      const next  = track.parentElement.querySelector('.next');
 
       const setIndex = (i) => {
         const n = slides.length;
@@ -190,7 +160,7 @@
     });
   }
 
-  // ===== Load products =====
+  // ===== Încărcare produse =====
   async function loadProducts() {
     const url = '/content/products.json?cb=' + Date.now();
     try {
@@ -221,17 +191,17 @@
     }
   }
 
-  // ===== Actions =====
-  function inquire(title, slugVal) {
-    const url = `${location.origin}/p/${slugVal}.html`;
+  // ===== Acțiuni publice =====
+  function inquire(title, slug) {
+    const url = `${location.origin}/p/${slug}.html`;
     const wa = `https://wa.me/40760617724?text=${encodeURIComponent(
       `Bună! Mă interesează produsul: ${title} (${url})`
     )}`;
     window.open(wa, '_blank', 'noopener');
   }
 
-  async function share(title, slugVal) {
-    const url = `${location.origin}/p/${slugVal}.html`;
+  async function share(title, slug) {
+    const url = `${location.origin}/p/${slug}.html`;
     const data = { title: 'Boundless Collection', text: `Îți recomand: ${title}`, url };
     try {
       if (navigator.share) await navigator.share(data);
@@ -244,38 +214,24 @@
 
   // ===== Init =====
   window.addEventListener('DOMContentLoaded', async () => {
-    if (!grid) return;
+    const year = $('#year');
+    if (year) year.textContent = new Date().getFullYear();
 
-    await loadProducts();
-    visibleCount = PAGE_SIZE;
-    render();
-
-    // load more
-    if (loadBtn) {
-      loadBtn.addEventListener('click', () => {
-        visibleCount += PAGE_SIZE;
-        render();
-      });
+    if (grid) {
+      await loadProducts();
+      render();
     }
 
-    // filters
-    filterBtns.forEach((btn) => {
+    filterBtns.forEach((btn) =>
       btn.addEventListener('click', () => {
         filterBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
         btn.setAttribute('aria-pressed', 'true');
-
         const keyVal = btn.dataset.filter || btn.textContent;
         activeFilter = key(keyVal || 'toate');
-
-        visibleCount = PAGE_SIZE;
         render();
-      });
-    });
+      })
+    );
 
-    // search
-    q?.addEventListener('input', () => {
-      visibleCount = PAGE_SIZE;
-      render();
-    });
+    q?.addEventListener('input', render);
   });
 })();
