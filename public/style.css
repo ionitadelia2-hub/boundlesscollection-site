@@ -1186,3 +1186,27 @@ form input[type="submit"]:active {
   box-shadow: 0 6px 16px rgba(0,0,0,.08);
   transition: transform .1s ease, box-shadow .2s ease;
 }
+
+/* ===== FIX iPhone: evita "scroll in scroll" la dropdown ===== */
+@media (max-width: 900px){
+  /* submeniul "Produse" sa NU mai fie un dropdown absolut cu scroll intern */
+  .dropdown .menu{
+    position: static !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin-top: .25rem;
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+    padding: .25rem 0;
+  }
+
+  /* cand dropdown e deschis, sa ramana in fluxul meniului */
+  .dropdown.open .menu{ display:block; }
+
+  /* scroll se face pe tot meniul mobil */
+  #mainmenu{
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
