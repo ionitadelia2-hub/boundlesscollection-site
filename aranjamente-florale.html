@@ -28,25 +28,28 @@
       <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
       <nav class="site-nav" aria-label="Meniu principal">
   <ul id="mainmenu">
-    <li class="has-sub">
-      <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
+    <li class="dropdown">
+  <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">
+    Produse
+  </button>
 
-      <ul class="sub">
-        <li><a href="/marturii.html">Prezentare Mărturii</a></li>
-        <li><a href="/invitatii.html">Prezentare Invitații</a></li>
-        <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-        <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
-        <li><a href="/evantaie.html">Prezentare Evantaie</a></li>
-        <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
-        <li><a href="/stickere.html">Prezentare Stickere oglindă</a></li>
-        <li><a href="/toppere-tort.html">Prezentare Toppere Tort</a></li>
-        <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-        <li><a href="/seturi.html">Prezentare Seturi</a></li>
-        <li><a href="/craciun.html">Prezentare Colecția de Crăciun</a></li>
-        <li><a href="/tablouri-luminoase.html">Tablouri luminoase</a></li>
-        <li><a href="/cani.html">Prezentare Cani personalizate</a></li>
-      </ul>
-    </li>
+  <ul class="menu" role="menu" aria-label="Submeniu Produse">
+    <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
+    <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
+    <li role="none"><a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a></li>
+    <li role="none"><a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a></li>
+    <li role="none"><a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a></li>
+    <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
+    <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
+    <li role="none"><a role="menuitem" href="/toppere-tort.html">Prezentare Toppere Tort</a></li>
+    <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
+    <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
+    <li role="none"><a role="menuitem" href="/craciun.html">Prezentare Colecția de Crăciun</a></li>
+    <li role="none"><a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a></li>
+    <li role="none"><a role="menuitem" href="/cani.html">Prezentare Cani personalizate</a></li>
+  </ul>
+</li>
+
 
     <li><a href="/index.html">Acasă</a></li>
     <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
@@ -111,25 +114,40 @@
     window.PAGE_CATEGORY = 'aranjamente-florale';
   </script>
 <script>
-  // Dropdown "Produse" – deschide/închide la click
-  (function () {
-    const item = document.querySelector('.has-sub');          // <li class="has-sub">
-    const btn  = document.getElementById('productsToggle');   // linkul "Produse"
-    if (!item || !btn) return;
+(function () {
+  const item = document.querySelector('.dropdown');
+  const btn  = document.getElementById('productsToggle');
+  if (!item || !btn) return;
 
-    function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-    function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-    function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+  function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
+  function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  function toggle(){
+    item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+  }
 
-    btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
-    document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggle();
+  });
 
-    // (opțional) hover pe desktop
-    item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
-    item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
-  })();
+  document.addEventListener('click', (e) => {
+    if (!item.contains(e.target)) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+
+  // Hover doar pe desktop (unde exista hover real)
+  if (matchMedia('(hover: hover)').matches) {
+    item.addEventListener('mouseenter', open);
+    item.addEventListener('mouseleave', close);
+  }
+})();
 </script>
+
 
   <!-- script global care citește /content/products.json și populează #grid -->
   <script defer src="/script.js"></script>
