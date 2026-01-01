@@ -206,26 +206,59 @@
     })();
   </script>
 
-  <!-- Dropdown "Produse" -->
-  <script>
-    (function () {
-      const item = document.querySelector('.has-sub');
-      const btn  = document.getElementById('productsToggle');
-      if (!item || !btn) return;
+<!-- Dropdown "Produse" (fix: nu mai fuge, desktop=hover, mobil=click) -->
+<script>
+(function () {
+  const item = document.querySelector('.has-sub');
+  const btn  = document.getElementById('productsToggle');
+  if (!item || !btn) return;
 
-      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+  const hasHover = window.matchMedia('(hover: hover)').matches;
 
-      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
-      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  function open() {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
 
-      // hover pe desktop
-      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
-      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
-    })();
-  </script>
+  function close() {
+    item.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }
+
+  // DESKTOP: hover
+  if (hasHover) {
+    item.addEventListener('mouseenter', open);
+    item.addEventListener('mouseleave', close);
+
+    // click pe desktop doar previne jump + nu lasa "document click" sa-l inchida instant
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  }
+
+  // MOBILE / touch: click toggle
+  if (!hasHover) {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+    });
+  }
+
+  // click in afara -> inchide (si pe desktop, si pe mobil)
+  document.addEventListener('click', (e) => {
+    if (!item.contains(e.target)) close();
+  });
+
+  // ESC -> inchide
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+})();
+</script>
+
 
   <!-- Filtru: afișează DOAR categoria "marturii soia" (slug din grila ta) -->
   <script>
