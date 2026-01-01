@@ -119,35 +119,42 @@
   const btn  = document.getElementById('productsToggle');
   if (!item || !btn) return;
 
-  function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-  function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-  function toggle(){
+  const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
+
+  function open() {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+  function close() {
+    item.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }
+  function toggle() {
     item.classList.toggle('open');
     btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
   }
 
+  // CLICK: toggle peste tot (desktop + mobil)
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     toggle();
   });
 
+  // click in afara inchide
   document.addEventListener('click', (e) => {
     if (!item.contains(e.target)) close();
   });
 
+  // ESC inchide
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') close();
   });
 
-  // Hover doar pe desktop (unde exista hover real)
-  if (matchMedia('(hover: hover)').matches) {
-    item.addEventListener('mouseenter', open);
-    item.addEventListener('mouseleave', close);
-  }
+  // OPTIONAL: pe desktop, hover-ul doar deschide (dar nu inchide imediat daca ai dat click)
+  item.addEventListener('mouseenter', () => { if (isDesktop()) open(); });
 })();
 </script>
-
 
   <!-- script global care citește /content/products.json și populează #grid -->
   <script defer src="/script.js"></script>
