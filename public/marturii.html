@@ -215,31 +215,42 @@
   const btn  = document.getElementById('productsToggle');
   if (!item || !btn) return;
 
-  const isMobile = () => window.matchMedia('(max-width: 900px)').matches;
+  const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
 
-  function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-  function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-  function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+  function open() {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+  function close() {
+    item.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }
+  function toggle() {
+    item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+  }
 
-  // Click pe buton: pe mobil deschide/inchide. Pe desktop doar previne “focus/jump”.
+  // CLICK: toggle peste tot (desktop + mobil)
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
-    if (isMobile()) toggle();
+    toggle();
   });
 
-  // Click in afara inchide (util pe mobil)
+  // click in afara inchide
   document.addEventListener('click', (e) => {
-    if (isMobile() && !item.contains(e.target)) close();
+    if (!item.contains(e.target)) close();
   });
 
   // ESC inchide
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') close();
   });
+
+  // OPTIONAL: pe desktop, hover-ul doar deschide (dar nu inchide imediat daca ai dat click)
+  item.addEventListener('mouseenter', () => { if (isDesktop()) open(); });
 })();
 </script>
-
 
   <!-- Filtru: afișează DOAR categoria "marturii soia" (slug din grila ta) -->
   <script>
