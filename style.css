@@ -74,6 +74,30 @@ a{color:inherit; text-decoration:none}
   min-width:220px; padding:.4rem; margin-top:.35rem;
   display:none; background:#fff; border:1px solid #ffe1ee; border-radius:12px; box-shadow:var(--shadow);
 }
+
+/* ===== FIX: Dropdown Produse cu scroll (sa se vada TOATE categoriile) ===== */
+.dropdown .menu{
+  max-height: min(70vh, 520px);  /* nu depaseste ecranul */
+  overflow-y: auto;              /* permite scroll */
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* optional: scrollbar mai discret (Chrome/Edge) */
+.dropdown .menu::-webkit-scrollbar{ width:10px; }
+.dropdown .menu::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background: rgba(0,0,0,.18);
+}
+.dropdown .menu::-webkit-scrollbar-track{ background: transparent; }
+@media (min-width: 900px){
+  .dropdown .menu{
+    columns: 2;
+    column-gap: 18px;
+  }
+  .dropdown .menu li{ break-inside: avoid; }
+}
+
 .dropdown .menu li{list-style:none}
 .dropdown .menu a{display:block; padding:.6rem .8rem; border-radius:8px}
 .dropdown .menu a:hover{background:var(--rose-2)}
