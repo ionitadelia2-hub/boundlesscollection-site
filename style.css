@@ -698,3 +698,19 @@ footer{
   }
   .has-sub.open .sub{ display:block; }
 }
+/* ===== FIX: centreaza textul pe paginile de categorie ===== */
+#produse .section-title,
+#produse .section-sub,
+#produse .note,
+#produse .note-marturii {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* limiteaza latimea ca sa arate elegant pe desktop */
+#produse .section-sub,
+#produse .note,
+#produse .note-marturii {
+  max-width: 820px;
+}
