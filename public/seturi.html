@@ -112,9 +112,9 @@
       <!-- MENIU cu dropdown „Produse” -->
       <nav class="site-nav" aria-label="Meniu principal">
         <ul id="mainmenu" role="menubar">
-          <li class="has-sub" role="none">
-            <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
-            <ul class="sub" role="menu" aria-label="Submeniu Produse">
+          <li class="dropdown" role="none">
+            <button class="dropbtn" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false">Produse</button>
+            <ul class="menu" role="menu" aria-label="Submeniu Produse">
               <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
               <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
               <li role="none"><a role="menuitem" href="/invitatii-digitale.html">Invitații digitale</a></li>
@@ -132,7 +132,7 @@
             </ul>
           </li>
 
-          <li><a href="/">Acasă</a></li>
+          <li><a href="/index.html">Acasă</a></li>
           <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -196,22 +196,45 @@
 
     // Dropdown „Produse” – click/hover/Esc
     (function () {
-      const item = document.querySelector('.has-sub');
-      const btn  = document.getElementById('productsToggle');
-      if (!item || !btn) return;
+  const item = document.querySelector('.dropdown');
+  const btn  = document.getElementById('productsToggle');
+  if (!item || !btn) return;
 
-      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+  const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
 
-      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
-      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  function open() {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+  function close() {
+    item.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }
+  function toggle() {
+    item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+  }
 
-      // hover pe desktop
-      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
-      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
-    })();
+  // CLICK: toggle peste tot (desktop + mobil)
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggle();
+  });
+
+  // click in afara inchide
+  document.addEventListener('click', (e) => {
+    if (!item.contains(e.target)) close();
+  });
+
+  // ESC inchide
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+
+  // OPTIONAL: pe desktop, hover-ul doar deschide (dar nu inchide imediat daca ai dat click)
+  item.addEventListener('mouseenter', () => { if (isDesktop()) open(); });
+})();
 
     // ⚠️ Slug EXACT ca în butonul din homepage (data-filter="set")
     window.PAGE_CATEGORY = 'set';
