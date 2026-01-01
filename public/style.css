@@ -693,7 +693,7 @@ footer{
     padding: .25rem 0;
     columns: 1;
   }
-  .has-sub.open .sub{ display:block; transition: all 0.2s ease; transition-delay: 0.1s; }
+  .has-sub.open .sub{ display:block; transition: all 0.2s ease;}
 }
 /* ===== FIX: centreaza textul pe paginile de categorie ===== */
 #produse .section-title,
