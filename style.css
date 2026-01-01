@@ -608,3 +608,93 @@ footer{
   transform: translateY(-1px);
   box-shadow:0 8px 18px rgba(0,0,0,.12);
 }
+
+/* ===========================
+   FIX pentru paginile cu .has-sub/.sub (ex: marturii.html)
+   =========================== */
+
+.site-nav ul, .site-nav li { list-style: none; margin: 0; padding: 0; }
+
+/* butonul "Produse" */
+#productsToggle{
+  font-family:"Playfair Display", serif;
+  font-weight:500;
+  font-size:1rem;
+  letter-spacing:.3px;
+  color:var(--text);
+  padding:.6rem 1rem;
+  border-radius:999px;
+  background:transparent;
+  border:0;
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  transition: color .2s ease, background .2s ease;
+}
+#productsToggle:hover{
+  color:#d56c91;
+  background: rgba(245,180,200,.15);
+  border-radius:8px;
+}
+#productsToggle::after{
+  content:"▼";
+  font-size:.6rem;
+  margin-top:1px;
+  transition:transform .15s ease;
+}
+.has-sub.open > #productsToggle::after,
+#productsToggle[aria-expanded="true"]::after{ transform: rotate(180deg); }
+
+/* dropdown-ul real (submeniul) */
+.has-sub{ position: relative; }
+.has-sub .sub{
+  position:absolute;
+  top:100%;
+  left:0;
+  z-index:1100;
+  min-width:260px;
+  padding:.4rem;
+  margin-top:.35rem;
+  display:none;
+  background:#fff;
+  border:1px solid #ffe1ee;
+  border-radius:12px;
+  box-shadow:var(--shadow);
+}
+.has-sub .sub a{
+  display:block;
+  padding:.6rem .8rem;
+  border-radius:8px;
+  white-space:nowrap;
+}
+.has-sub .sub a:hover{ background: var(--rose-2); }
+.has-sub.open .sub{ display:block; }
+
+/* desktop: 2 coloane + scroll */
+@media (min-width: 901px){
+  .has-sub .sub{
+    max-height: min(70vh, 520px);
+    overflow-y:auto;
+    columns:2;
+    column-gap:18px;
+  }
+  .has-sub .sub li{ break-inside: avoid; }
+}
+
+/* mobil: fara scroll intern (evita “scuipatul” pe iPhone) */
+@media (max-width: 900px){
+  .has-sub .sub{
+    position: static;
+    display: none;
+    max-height: none;
+    overflow: visible;
+    margin: .25rem 0 0;
+    box-shadow: none;
+    border: 0;
+    background: transparent;
+    padding: .25rem 0;
+    columns: 1;
+  }
+  .has-sub.open .sub{ display:block; }
+}
