@@ -115,26 +115,29 @@
       </button>
 
       <nav class="site-nav" aria-label="Meniu principal">
-        <ul id="mainmenu" role="menubar">
-          <li class="has-sub" role="none">
-            <a href="#" id="productsToggle" role="button" aria-haspopup="true" aria-expanded="false">Produse</a>
-            <ul class="sub" role="menu" aria-label="Submeniu Produse">
-              <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
-              <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
-              <li role="none"><a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-              <li role="none"><a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a></li>
-              <li role="none"><a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a></li>
-              <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
-              <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
-              <li role="none"><a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a></li>
-              <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-              <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
-              <li role="none"><a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a></li>
-              <li role="none"><a role="menuitem" href="/tablouri-luminoase.html">Tablouri Luminoase</a></li>
-              <li role="none"><a role="menuitem" href="/cani.html">Prezentare Căni personalizate</a></li>
-          </li>
+        <ul id="mainmenu">
+    <li class="dropdown">
+  <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">
+    Produse
+  </button>
 
-          <li><a href="/">Acasă</a></li>
+  <ul class="menu" role="menu" aria-label="Submeniu Produse">
+    <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
+    <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
+    <li role="none"><a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a></li>
+    <li role="none"><a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a></li>
+    <li role="none"><a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a></li>
+    <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
+    <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
+    <li role="none"><a role="menuitem" href="/toppere-tort.html">Prezentare Toppere Tort</a></li>
+    <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
+    <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
+    <li role="none"><a role="menuitem" href="/craciun.html">Prezentare Colecția de Crăciun</a></li>
+    <li role="none"><a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a></li>
+    <li role="none"><a role="menuitem" href="/cani.html">Prezentare Cani personalizate</a></li>
+  </ul>
+</li>
+          <li><a href="/index.html">Acasă</a></li>
           <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -171,13 +174,12 @@
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- Anul din footer -->
+  <!-- JS: anul + meniu mobil + dropdown + categoria -->
   <script>
+    // Anul în footer
     document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 
-  <!-- Meniu mobil -->
-  <script>
+    // Meniu mobil (hamburger)
     (function(){
       const btn  = document.querySelector('.nav-toggle');
       const menu = document.getElementById('mainmenu');
@@ -202,36 +204,54 @@
         if (!inside) closeAll();
       });
     })();
-  </script>
 
-  <!-- Dropdown "Produse" -->
-  <script>
+    // Dropdown „Produse” – click/hover/Esc
     (function () {
-      const item = document.querySelector('.has-sub');
-      const btn  = document.getElementById('productsToggle');
-      if (!item || !btn) return;
+  const item = document.querySelector('.dropdown');
+  const btn  = document.getElementById('productsToggle');
+  if (!item || !btn) return;
 
-      function open()  { item.classList.add('open');  btn.setAttribute('aria-expanded','true'); }
-      function close() { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
-      function toggle(){ item.classList.toggle('open'); btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false'); }
+  const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
 
-      btn.addEventListener('click', (e) => { e.preventDefault(); toggle(); });
-      document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
-      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  function open() {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+  function close() {
+    item.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }
+  function toggle() {
+    item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
+  }
 
-      // hover pe desktop
-      item.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) open(); });
-      item.addEventListener('mouseleave', () => { if (matchMedia('(hover: hover)').matches) close(); });
-    })();
-  </script>
+  // CLICK: toggle peste tot (desktop + mobil)
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    toggle();
+  });
 
-  <!-- Filtru: afișează DOAR categoria evantaie -->
-  <script>
-    // IMPORTANT: trebuie sa fie EXACT slug-ul din CSV la category
+  // click in afara inchide
+  document.addEventListener('click', (e) => {
+    if (!item.contains(e.target)) close();
+  });
+
+  // ESC inchide
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
+
+  // OPTIONAL: pe desktop, hover-ul doar deschide (dar nu inchide imediat daca ai dat click)
+  item.addEventListener('mouseenter', () => { if (isDesktop()) open(); });
+})();
+
+    // Categoria pentru script.js (filtrare produse)
     window.PAGE_CATEGORY = 'evantaie';
   </script>
 
-  <!-- script global care încarcă produsele -->
+  <!-- Catalog produse -->
   <script defer src="/script.js"></script>
 </body>
 </html>
