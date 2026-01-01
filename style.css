@@ -124,10 +124,7 @@ a{color:inherit; text-decoration:none}
 .dropdown .menu a:hover{background:var(--rose-2)}
 .dropdown.open .menu{display:block}
 
-/* hover doar pe device-uri care chiar au hover */
-@media (hover:hover){
-  .dropdown:hover .menu{display:block}
-}
+
 
 /* ---------- Dropdown Produse (DESKTOP) ---------- */
 @media (min-width: 901px){
