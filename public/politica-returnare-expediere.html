@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#ffffff" />
   <title>Politică de expediere & returnare | Boundless Collection</title>
 
   <!-- Canonical -->
@@ -70,7 +71,7 @@
         "name":"Cât costă transportul?",
         "acceptedAnswer":{
           "@type":"Answer",
-          "text":"23 RON pentru comenzi sub 250 RON. Transport gratuit pentru comenzi de minimum 2000 RON."
+          "text":"25 RON pentru comenzi sub 250 RON. Transport gratuit pentru comenzi de minimum 2000 RON."
         }
       },
       {
@@ -101,45 +102,79 @@
   }
   </script>
 </head>
+
 <body>
-  <!-- HEADER (identic cu index) -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="/index.html">
-        <div class="brand-logo"><img src="/images/delia-avatar.png" alt="Delia – Boundless Collection" width="64" height="64"></div>
+      <a class="brand" href="/index.html" aria-label="Boundless Collection - Acasă">
+        <div class="brand-logo">
+          <img src="/images/delia-avatar.png" alt="Delia – Boundless Collection" width="64" height="64" loading="eager" decoding="async">
+        </div>
         <div class="brand-title">Boundless Collection</div>
       </a>
 
-      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Deschide meniul">
+        <span></span>
+      </button>
 
       <nav class="site-nav" aria-label="Meniu principal">
         <ul id="mainmenu" role="menubar">
           <li class="dropdown" role="none">
-            <button class="dropbtn" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false">Produse</button>
-            <ul class="menu" role="menu" aria-label="Submeniu Produse">
-              <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
-              <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
-              <li role="none"><a role="menuitem" href="/invitatii-digitale.html">Invitații digitale</a></li>
-              <li role="none"><a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-              <li role="none"><a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a></li>
-              <li role="none"><a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a></li>
-              <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
-              <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
-              <li role="none"><a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a></li>
-              <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-              <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
-              <li role="none"><a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a></li>
-              <li role="none"><a role="menuitem" href="/tablouri-luminoase.html">Tablouri Luminoase</a></li>
-              <li role="none"><a role="menuitem" href="/cani.html">Prezentare Căni personalizate</a></li>
+            <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">
+              Produse
+            </button>
+
+            <!-- MEGA MENU -->
+            <ul class="menu menu-mega" role="menu" aria-label="Submeniu Produse">
+              <li class="menu-group" role="none">
+                <div class="menu-title">Papetarie</div>
+                <a role="menuitem" href="/invitatii.html">Prezentare Invitatii</a>
+                <a role="menuitem" href="/invitatii-digitale.html">Invitatii digitale</a>
+                <a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a>
+                <a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a>
+                <a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a>
+                <a role="menuitem" href="/numere-masa.html">Prezentare Numere de masa</a>
+                <a role="menuitem" href="/seturi.html">Prezentare Seturi</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Marturii</div>
+                <a role="menuitem" href="/marturii.html">Prezentare Marturii</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Aranjamente florale</div>
+                <a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Decor & accesorii</div>
+                <a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglinda</a>
+                <a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Cadouri</div>
+                <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
+                <a role="menuitem" href="/cani.html">Cani personalizate</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Colectii</div>
+                <a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a>
+                <a role="menuitem" href="/paste.html">Prezentare Colectia de Paste</a>
+                <a role="menuitem" href="/martisor.html">Prezentare Colectia de Martisor</a>
+              </li>
             </ul>
           </li>
 
-          <li><a href="/index.html#servicii">Servicii</a></li>
-          <li><a href="/index.html#produse">Galerie/Produse</a></li>
-          <li><a href="/index.html#despre">Despre</a></li>
-          <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li role="none"><a role="menuitem" href="/index.html#servicii">Servicii</a></li>
+          <li role="none"><a role="menuitem" href="/index.html#produse">Galerie/Produse</a></li>
+          <li role="none"><a role="menuitem" href="/index.html#despre">Despre</a></li>
+          <li role="none"><a role="menuitem" href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
+          <li role="none"><a role="menuitem" href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
+          <li role="none"><a role="menuitem" class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </nav>
     </div>
@@ -186,7 +221,6 @@
         <li>produsul a fost <strong>livrat greșit</strong> față de comanda confirmată.</li>
       </ul>
 
-      <!-- FRAZE cerute de Merchant Center -->
       <p><strong>Perioada de retur:</strong> 14 zile calendaristice de la data primirii produsului.</p>
       <p><strong>Costul returului este suportat de client</strong>, cu excepția cazurilor în care produsul este defect sau a fost livrat greșit.</p>
 
@@ -257,39 +291,58 @@
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- JS global -->
-  <script defer src="/script.js"></script>
-
-  <!-- burger + dropdown -->
+  <!-- Anul din footer -->
   <script>
-    (function(){
-      const btnHamb  = document.querySelector('.nav-toggle');
-      const mainMenu = document.querySelector('#mainmenu');
-      const dd       = document.querySelector('.dropdown');
-      const ddBtn    = dd?.querySelector('.dropbtn');
-      if(!btnHamb || !mainMenu) return;
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-      function closeAll(){
-        document.body.classList.remove('menu-open');
-        btnHamb.setAttribute('aria-expanded','false');
-        if(dd){ dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }
-      }
-      btnHamb.addEventListener('click', (e)=>{
-        e.preventDefault(); e.stopPropagation();
-        const open = document.body.classList.toggle('menu-open');
-        btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
-        if(!open && dd){ dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }
+  <!-- JS: meniu (hamburger + dropdown Produse) - varianta "safe" -->
+  <script>
+  (function () {
+    const btnHamb  = document.querySelector('.nav-toggle');
+    const mainMenu = document.querySelector('#mainmenu');
+    const dd       = document.querySelector('.dropdown');
+    const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
+
+    if (!btnHamb || !mainMenu) return;
+
+    function setDropdown(open) {
+      if (!dd) return;
+      dd.classList.toggle('open', !!open);
+      if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    function closeAll() {
+      document.body.classList.remove('menu-open');
+      btnHamb.setAttribute('aria-expanded','false');
+      setDropdown(false);
+    }
+
+    window.addEventListener('pageshow', closeAll);
+    window.addEventListener('DOMContentLoaded', closeAll);
+
+    btnHamb.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const open = document.body.classList.toggle('menu-open');
+      btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open) setDropdown(false);
+    });
+
+    if (dd && ddBtn) {
+      ddBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const now = dd.classList.toggle('open');
+        ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
       });
-      if(dd && ddBtn){
-        ddBtn.addEventListener('click', (e)=>{ e.preventDefault(); e.stopPropagation();
-          const now = dd.classList.toggle('open'); ddBtn.setAttribute('aria-expanded', now ? 'true':'false'); });
-        mainMenu.addEventListener('click', (e)=> e.stopPropagation());
-      }
-      document.addEventListener('click', closeAll);
-      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeAll(); });
 
-      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
-    })();
+      mainMenu.addEventListener('click', (e) => e.stopPropagation());
+    }
+
+    document.addEventListener('click', closeAll);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+  })();
   </script>
 </body>
 </html>

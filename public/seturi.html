@@ -2,7 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#ffffff" />
   <title>Seturi • Boundless Collection</title>
@@ -11,14 +11,14 @@
   <link rel="canonical" href="https://boundlesscollection.ro/seturi.html" />
 
   <!-- SEO -->
-  <meta name="description" content="Seturi asortate pentru evenimente: invitații, plicuri de dar, meniuri, numere de masă și accesorii coordonate, realizate manual.">
+  <meta name="description" content="Seturi asortate pentru evenimente: invitatii, plicuri de dar, meniuri, numere de masa si accesorii coordonate, realizate manual.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ro_RO">
   <meta property="og:url" content="https://boundlesscollection.ro/seturi.html">
   <meta property="og:title" content="Seturi • Boundless Collection">
-  <meta property="og:description" content="Seturi complete și asortate: invitații, plicuri, meniuri și accesorii elegante.">
+  <meta property="og:description" content="Seturi complete si asortate: invitatii, plicuri, meniuri si accesorii elegante.">
   <meta property="og:image" content="https://boundlesscollection.ro/images/delia-avatar-1200x630.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -26,7 +26,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Seturi • Boundless Collection">
-  <meta name="twitter:description" content="Seturi asortate pentru evenimente — realizate manual, coordonate cu tema aleasă.">
+  <meta name="twitter:description" content="Seturi asortate pentru evenimente — realizate manual, coordonate cu tema aleasa.">
   <meta name="twitter:image" content="https://boundlesscollection.ro/images/delia-avatar-1200x630.jpg">
 
   <!-- Fonturi -->
@@ -77,7 +77,7 @@
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      { "@type":"ListItem", "position":1, "name":"Acasă", "item":"https://boundlesscollection.ro/" },
+      { "@type":"ListItem", "position":1, "name":"Acasa", "item":"https://boundlesscollection.ro/" },
       { "@type":"ListItem", "position":2, "name":"Seturi", "item":"https://boundlesscollection.ro/seturi.html" }
     ]
   }
@@ -92,47 +92,79 @@
     "url":"https://boundlesscollection.ro/seturi.html",
     "about":{
       "@type":"Thing",
-      "name":"Seturi coordonate: invitații, plicuri, meniuri și numere de masă"
+      "name":"Seturi coordonate: invitatii, plicuri, meniuri si numere de masa"
     },
     "isPartOf":"https://boundlesscollection.ro/"
   }
   </script>
 </head>
+
 <body>
   <!-- HEADER -->
   <header class="header">
     <div class="container nav">
-      <a class="brand" href="/" aria-label="Boundless Collection - Acasă">
-        <div class="brand-logo"><img src="/images/delia-avatar.png" alt="Delia – Boundless Collection" width="64" height="64" loading="eager" decoding="async"></div>
+      <a class="brand" href="/" aria-label="Boundless Collection - Acasa">
+        <div class="brand-logo">
+          <img src="/images/delia-avatar.png" alt="Delia – Boundless Collection" width="64" height="64" loading="eager" decoding="async">
+        </div>
         <div class="brand-title">Boundless Collection</div>
       </a>
 
-      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
+      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Deschide meniul">
+        <span></span>
+      </button>
 
-      <!-- MENIU cu dropdown „Produse” -->
       <nav class="site-nav" aria-label="Meniu principal">
-        <ul id="mainmenu" role="menubar">
-          <li class="dropdown" role="none">
-            <button class="dropbtn" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false">Produse</button>
-            <ul class="menu" role="menu" aria-label="Submeniu Produse">
-              <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
-              <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
-              <li role="none"><a role="menuitem" href="/invitatii-digitale.html">Invitații digitale</a></li>
-              <li role="none"><a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-              <li role="none"><a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a></li>
-              <li role="none"><a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a></li>
-              <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
-              <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
-              <li role="none"><a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a></li>
-              <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-              <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
-              <li role="none"><a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a></li>
-              <li role="none"><a role="menuitem" href="/tablouri-luminoase.html">Tablouri Luminoase</a></li>
-              <li role="none"><a role="menuitem" href="/cani.html">Prezentare Căni personalizate</a></li>
+        <ul id="mainmenu">
+          <li class="dropdown">
+            <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">
+              Produse
+            </button>
+
+            <ul class="menu menu-mega" role="menu" aria-label="Submeniu Produse">
+              <li class="menu-group" role="none">
+                <div class="menu-title">Papetarie</div>
+                <a role="menuitem" href="/invitatii.html">Prezentare Invitatii</a>
+                <a role="menuitem" href="/invitatii-digitale.html">Invitatii digitale</a>
+                <a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a>
+                <a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a>
+                <a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a>
+                <a role="menuitem" href="/numere-masa.html">Prezentare Numere de masa</a>
+                <a role="menuitem" href="/seturi.html">Prezentare Seturi</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Marturii</div>
+                <a role="menuitem" href="/marturii.html">Prezentare Marturii</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Aranjamente florale</div>
+                <a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Decor & accesorii</div>
+                <a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglinda</a>
+                <a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Cadouri</div>
+                <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
+                <a role="menuitem" href="/cani.html">Cani personalizate</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Colectii</div>
+                <a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a>
+                <a role="menuitem" href="/paste.html">Prezentare Colectia de Paste</a>
+                <a role="menuitem" href="/martisor.html">Prezentare Colectia de Martisor</a>
+              </li>
             </ul>
           </li>
 
-          <li><a href="/index.html">Acasă</a></li>
+          <li><a href="/index.html">Acasa</a></li>
           <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -141,12 +173,13 @@
     </div>
   </header>
 
-  <!-- CONȚINUT -->
+  <!-- CONTINUT -->
   <section class="container" id="produse">
     <h1 class="section-title">Prezentare Seturi</h1>
-    <p class="section-sub">Seturi asortate: invitații, plicuri de dar, meniuri, numere de masă și accesorii coordonate cu tema evenimentului.</p>
+    <p class="section-sub">
+      Seturi asortate: invitatii, plicuri de dar, meniuri, numere de masa si accesorii coordonate cu tema evenimentului.
+    </p>
 
-    <!-- grilă populată automat din /content/products.json -->
     <div id="grid" class="grid products" aria-live="polite"></div>
   </section>
 
@@ -163,84 +196,75 @@
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- JS: anul + meniu mobil + dropdown + CATEGORIA + încărcarea produselor -->
+  <!-- JS: anul + burger + dropdown (SAFE) -->
   <script>
-    // Anul în footer
-    document.getElementById('year').textContent = new Date().getFullYear();
+  (function () {
+    const btnHamb  = document.querySelector('.nav-toggle');
+    const mainMenu = document.querySelector('#mainmenu');
+    const dd       = document.querySelector('.dropdown');
+    const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
 
-    // Meniu mobil (hamburger)
-    (function(){
-      const btn  = document.querySelector('.nav-toggle');
-      const menu = document.getElementById('mainmenu');
-      if(!btn || !menu) return;
+    // anul in footer
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
 
-      function closeAll(){
-        document.body.classList.remove('menu-open');
-        btn.setAttribute('aria-expanded','false');
-        document.querySelector('.has-sub')?.classList.remove('open');
-        document.getElementById('productsToggle')?.setAttribute('aria-expanded','false');
-      }
+    if (!btnHamb || !mainMenu) return;
 
-      btn.addEventListener('click', (e)=>{
+    function setDropdown(open) {
+      if (!dd) return;
+      dd.classList.toggle('open', !!open);
+      if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    function closeAll() {
+      document.body.classList.remove('menu-open');
+      btnHamb.setAttribute('aria-expanded','false');
+      setDropdown(false);
+    }
+
+    // inchide meniul cand revii cu Back/Forward sau cand se re-incarca din cache
+    window.addEventListener('pageshow', closeAll);
+    window.addEventListener('DOMContentLoaded', closeAll);
+
+    // hamburger
+    btnHamb.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const open = document.body.classList.toggle('menu-open');
+      btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open) setDropdown(false);
+    });
+
+    // dropdown Produse
+    if (dd && ddBtn) {
+      ddBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        const open = document.body.classList.toggle('menu-open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        e.stopPropagation();
+        const now = dd.classList.toggle('open');
+        ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
       });
 
-      document.addEventListener('click', (e)=>{
-        if (!document.body.classList.contains('menu-open')) return;
-        const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
-        if (!inside) closeAll();
-      });
-    })();
+      // click in meniu sa nu inchida tot instant
+      mainMenu.addEventListener('click', (e) => e.stopPropagation());
+    }
 
-    // Dropdown „Produse” – click/hover/Esc
-    (function () {
-  const item = document.querySelector('.dropdown');
-  const btn  = document.getElementById('productsToggle');
-  if (!item || !btn) return;
+    // click in afara inchide tot
+    document.addEventListener('click', closeAll);
 
-  const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
+    // ESC inchide tot
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
+  </script>
 
-  function open() {
-    item.classList.add('open');
-    btn.setAttribute('aria-expanded','true');
-  }
-  function close() {
-    item.classList.remove('open');
-    btn.setAttribute('aria-expanded','false');
-  }
-  function toggle() {
-    item.classList.toggle('open');
-    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
-  }
-
-  // CLICK: toggle peste tot (desktop + mobil)
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggle();
-  });
-
-  // click in afara inchide
-  document.addEventListener('click', (e) => {
-    if (!item.contains(e.target)) close();
-  });
-
-  // ESC inchide
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') close();
-  });
-
-  // OPTIONAL: pe desktop, hover-ul doar deschide (dar nu inchide imediat daca ai dat click)
-  item.addEventListener('mouseenter', () => { if (isDesktop()) open(); });
-})();
-
-    // ⚠️ Slug EXACT ca în butonul din homepage (data-filter="set")
+  <!-- Categoria (filtrare in script.js) -->
+  <script>
+    // ⚠️ lasa EXACT cum ai in products.json
     window.PAGE_CATEGORY = 'set';
   </script>
 
-  <!-- Script global: încarcă /content/products.json și populează #grid -->
+  <!-- Script global -->
   <script defer src="/script.js"></script>
 </body>
 </html>
