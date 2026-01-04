@@ -115,24 +115,52 @@
       </button>
 
       <nav class="site-nav" aria-label="Meniu principal">
-        <ul id="mainmenu" role="menubar">
-          <li class="dropdown" role="none">
-            <button class="dropbtn" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false">Produse</button>
-            <ul class="menu" role="menu" aria-label="Submeniu Produse">
-              <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
-              <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
-              <li role="none"><a role="menuitem" href="/invitatii-digitale.html">Invitații digitale</a></li>
-              <li role="none"><a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-              <li role="none"><a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a></li>
-              <li role="none"><a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a></li>
-              <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
-              <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
-              <li role="none"><a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a></li>
-              <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-              <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
-              <li role="none"><a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a></li>
-              <li role="none"><a role="menuitem" href="/tablouri-luminoase.html">Tablouri Luminoase</a></li>
-              <li role="none"><a role="menuitem" href="/cani.html">Prezentare Căni personalizate</a></li>
+        <ul id="mainmenu">
+          <li class="dropdown">
+            <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">
+              Produse
+            </button>
+
+            <ul class="menu menu-mega" role="menu" aria-label="Submeniu Produse">
+              <li class="menu-group" role="none">
+                <div class="menu-title">Papetarie</div>
+                <a role="menuitem" href="/invitatii.html">Prezentare Invitatii</a>
+                <a role="menuitem" href="/invitatii-digitale.html">Invitatii digitale</a>
+                <a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a>
+                <a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a>
+                <a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a>
+                <a role="menuitem" href="/numere-masa.html">Prezentare Numere de masa</a>
+                <a role="menuitem" href="/seturi.html">Prezentare Seturi</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Marturii</div>
+                <a role="menuitem" href="/marturii.html">Prezentare Marturii</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Aranjamente florale</div>
+                <a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Decor & accesorii</div>
+                <a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglinda</a>
+                <a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Cadouri</div>
+                <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
+                <a role="menuitem" href="/cani.html">Cani personalizate</a>
+              </li>
+
+              <li class="menu-group" role="none">
+                <div class="menu-title">Colectii</div>
+                <a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a>
+                <a role="menuitem" href="/paste.html">Prezentare Colectia de Paste</a>
+                <a role="menuitem" href="/martisor.html">Prezentare Colectia de Martisor</a>
+              </li>
             </ul>
           </li>
 
@@ -157,7 +185,6 @@
       Fiecare tablou poate fi personalizat: nume, data, mesaj, tematica, culori si dimensiuni.
     </p>
 
-    <!-- Grila dinamica -->
     <div id="grid" class="grid products category" aria-live="polite"></div>
   </section>
 
@@ -169,90 +196,69 @@
     </div>
   </footer>
 
-  <!-- Buton WhatsApp plutitor -->
+  <!-- WhatsApp plutitor -->
   <a href="https://wa.me/40760617724" class="whatsapp-wrapper" target="_blank" rel="noopener" title="Scrie pe WhatsApp">
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- Anul din footer -->
+  <!-- JS: anul + burger + dropdown (SAFE) -->
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  (function () {
+    const btnHamb  = document.querySelector('.nav-toggle');
+    const mainMenu = document.querySelector('#mainmenu');
+    const dd       = document.querySelector('.dropdown');
+    const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
 
-  <!-- Meniu mobil -->
-  <script>
-    (function(){
-      const btn  = document.querySelector('.nav-toggle');
-      const menu = document.getElementById('mainmenu');
-      if(!btn || !menu) return;
+    // anul in footer
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
 
-      function closeAll(){
-        document.body.classList.remove('menu-open');
-        btn.setAttribute('aria-expanded','false');
-        document.querySelector('.has-sub')?.classList.remove('open');
-        document.getElementById('productsToggle')?.setAttribute('aria-expanded','false');
-      }
+    if (!btnHamb || !mainMenu) return;
 
-      btn.addEventListener('click', (e)=>{
+    function setDropdown(open) {
+      if (!dd) return;
+      dd.classList.toggle('open', !!open);
+      if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    function closeAll() {
+      document.body.classList.remove('menu-open');
+      btnHamb.setAttribute('aria-expanded','false');
+      setDropdown(false);
+    }
+
+    window.addEventListener('pageshow', closeAll);
+    window.addEventListener('DOMContentLoaded', closeAll);
+
+    btnHamb.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const open = document.body.classList.toggle('menu-open');
+      btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (!open) setDropdown(false);
+    });
+
+    if (dd && ddBtn) {
+      ddBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        const open = document.body.classList.toggle('menu-open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        e.stopPropagation();
+        const now = dd.classList.toggle('open');
+        ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
       });
 
-      document.addEventListener('click', (e)=>{
-        if (!document.body.classList.contains('menu-open')) return;
-        const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
-        if (!inside) closeAll();
-      });
-    })();
-  </script>
+      mainMenu.addEventListener('click', (e) => e.stopPropagation());
+    }
 
-  <!-- Dropdown "Produse" -->
-  <script>
-    (function () {
-  const item = document.querySelector('.dropdown');
-  const btn  = document.getElementById('productsToggle');
-  if (!item || !btn) return;
-
-  const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
-
-  function open() {
-    item.classList.add('open');
-    btn.setAttribute('aria-expanded','true');
-  }
-  function close() {
-    item.classList.remove('open');
-    btn.setAttribute('aria-expanded','false');
-  }
-  function toggle() {
-    item.classList.toggle('open');
-    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
-  }
-
-  // CLICK: toggle peste tot (desktop + mobil)
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggle();
-  });
-
-  // click in afara inchide
-  document.addEventListener('click', (e) => {
-    if (!item.contains(e.target)) close();
-  });
-
-  // ESC inchide
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') close();
-  });
-
-  // OPTIONAL: pe desktop, hover-ul doar deschide (dar nu inchide imediat daca ai dat click)
-  item.addEventListener('mouseenter', () => { if (isDesktop()) open(); });
-})();
+    document.addEventListener('click', closeAll);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
+  })();
   </script>
 
   <!-- Filtru: doar categoria tablouri luminoase -->
   <script>
+    // ⚠️ trebuie sa fie IDENTIC cu categoria din products.json
     window.PAGE_CATEGORY = 'tablouri luminoase';
   </script>
 

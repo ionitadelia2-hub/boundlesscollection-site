@@ -6,20 +6,20 @@
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#ffffff" />
 
-  <title>Toppere tort personalizate • Boundless Collection</title>
+  <title>Toppere personalizate • Boundless Collection</title>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://boundlesscollection.ro/toppere-tort.html" />
 
   <!-- SEO -->
-  <meta name="description" content="Toppere de tort personalizate din carton, plexiglas sau lemn – pentru botez, nunta, aniversari si evenimente speciale. Realizate manual.">
+  <meta name="description" content="Toppere personalizate din carton pentru botez, nunta, aniversari si evenimente speciale. Realizate manual.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ro_RO">
   <meta property="og:url" content="https://boundlesscollection.ro/toppere-tort.html">
   <meta property="og:title" content="Toppere tort personalizate • Boundless Collection">
-  <meta property="og:description" content="Toppere elegante pentru tort – personalizate cu nume, data si tematica evenimentului.">
+  <meta property="og:description" content="Toppere elegante – potrivite pentru orice Candy Bar sau tort">
   <meta property="og:image" content="https://boundlesscollection.ro/images/delia-avatar-1200x630.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -89,7 +89,7 @@
   {
     "@context":"https://schema.org",
     "@type":"CollectionPage",
-    "name":"Toppere tort personalizate • Boundless Collection",
+    "name":"Toppere personalizate • Boundless Collection",
     "url":"https://boundlesscollection.ro/toppere-tort.html",
     "about":{
       "@type":"Thing",
@@ -118,7 +118,10 @@
       <nav class="site-nav" aria-label="Meniu principal">
         <ul id="mainmenu" role="menubar">
           <li class="dropdown" role="none">
-            <button class="dropbtn" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false">Produse</button>
+            <button class="dropbtn" id="productsToggle" type="button" aria-haspopup="true" aria-expanded="false">
+              Produse
+            </button>
+
             <ul class="menu" role="menu" aria-label="Submeniu Produse">
               <li role="none"><a role="menuitem" href="/marturii.html">Prezentare Mărturii</a></li>
               <li role="none"><a role="menuitem" href="/invitatii.html">Prezentare Invitații</a></li>
@@ -128,7 +131,7 @@
               <li role="none"><a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a></li>
               <li role="none"><a role="menuitem" href="/numere-masa.html">Prezentare Numere de masă</a></li>
               <li role="none"><a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
-              <li role="none"><a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a></li>
+              <li role="none"><a role="menuitem" href="/toppere-tort.html">Prezentare Toppere</a></li>
               <li role="none"><a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
               <li role="none"><a role="menuitem" href="/seturi.html">Prezentare Seturi</a></li>
               <li role="none"><a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a></li>
@@ -148,10 +151,10 @@
 
   <!-- CONTINUT -->
   <section class="container" id="produse">
-    <h1 class="section-title">Toppere tort personalizate</h1>
+    <h1 class="section-title">Toppere personalizate</h1>
 
     <p class="section-sub">
-      Toppere elegante pentru tort, realizate manual din carton, plexiglas sau lemn,
+      Toppere elegante, realizate manual din carton,
       personalizate cu nume, data sau mesaj special.
     </p>
 
@@ -176,81 +179,62 @@
     💬 <span>Scrie-mi pe WhatsApp</span>
   </a>
 
-  <!-- Anul din footer -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Meniu mobil -->
+  <!-- JS: anul + meniu mobil + dropdown (SAFE, ca la celelalte pagini) -->
   <script>
     (function(){
-      const btn  = document.querySelector('.nav-toggle');
-      const menu = document.getElementById('mainmenu');
-      if(!btn || !menu) return;
+      const btnHamb  = document.querySelector('.nav-toggle');
+      const mainMenu = document.getElementById('mainmenu');
+      const dd       = document.querySelector('.dropdown');
+      const ddBtn    = document.getElementById('productsToggle');
+
+      // anul in footer
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+
+      if(!btnHamb || !mainMenu) return;
+
+      function setDropdown(open){
+        if (!dd || !ddBtn) return;
+        dd.classList.toggle('open', !!open);
+        ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
 
       function closeAll(){
         document.body.classList.remove('menu-open');
-        btn.setAttribute('aria-expanded','false');
-        document.querySelector('.has-sub')?.classList.remove('open');
-        document.getElementById('productsToggle')?.setAttribute('aria-expanded','false');
+        btnHamb.setAttribute('aria-expanded','false');
+        setDropdown(false);
       }
 
-      btn.addEventListener('click', (e)=>{
+      // burger
+      btnHamb.addEventListener('click', (e)=>{
         e.preventDefault();
+        e.stopPropagation();
         const open = document.body.classList.toggle('menu-open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if(!open) setDropdown(false);
       });
 
+      // dropdown
+      if(dd && ddBtn){
+        ddBtn.addEventListener('click', (e)=>{
+          e.preventDefault();
+          e.stopPropagation();
+          const now = dd.classList.toggle('open');
+          ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
+        });
+      }
+
+      // click in afara inchide TOT
       document.addEventListener('click', (e)=>{
-        if (!document.body.classList.contains('menu-open')) return;
         const inside = e.target.closest('.nav-toggle') || e.target.closest('nav');
-        if (!inside) closeAll();
+        if(!inside) closeAll();
+      });
+
+      // ESC inchide TOT
+      document.addEventListener('keydown', (e)=>{
+        if(e.key === 'Escape') closeAll();
       });
     })();
-  </script>
-
-  <!-- Dropdown "Produse" -->
-  <script>
-    (function () {
-  const item = document.querySelector('.dropdown');
-  const btn  = document.getElementById('productsToggle');
-  if (!item || !btn) return;
-
-  const isDesktop = () => window.matchMedia('(min-width: 901px)').matches;
-
-  function open() {
-    item.classList.add('open');
-    btn.setAttribute('aria-expanded','true');
-  }
-  function close() {
-    item.classList.remove('open');
-    btn.setAttribute('aria-expanded','false');
-  }
-  function toggle() {
-    item.classList.toggle('open');
-    btn.setAttribute('aria-expanded', item.classList.contains('open') ? 'true' : 'false');
-  }
-
-  // CLICK: toggle peste tot (desktop + mobil)
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    toggle();
-  });
-
-  // click in afara inchide
-  document.addEventListener('click', (e) => {
-    if (!item.contains(e.target)) close();
-  });
-
-  // ESC inchide
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') close();
-  });
-
-  // OPTIONAL: pe desktop, hover-ul doar deschide (dar nu inchide imediat daca ai dat click)
-  item.addEventListener('mouseenter', () => { if (isDesktop()) open(); });
-})();
   </script>
 
   <!-- Categoria paginii -->
