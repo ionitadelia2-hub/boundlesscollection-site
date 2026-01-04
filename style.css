@@ -746,3 +746,104 @@ footer{
     max-width: 90%;
   }
 }
+
+/* ===========================
+   MEGA DROPDOWN CU SECTIUNI
+   =========================== */
+
+.dropdown .menu.menu-mega{
+  min-width: min(820px, calc(100vw - 28px));
+  padding: 14px;
+  margin-top: .5rem;
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid #ffe1ee;
+  border-radius: 18px;
+  box-shadow: 0 18px 55px rgba(0,0,0,.14);
+}
+
+/* Desktop: grid in loc de columns */
+@media (min-width: 901px){
+  .dropdown .menu.menu-mega{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 14px;
+    max-height: min(70vh, 560px);
+    overflow: auto;
+
+    columns: unset;     /* anuleaza regula ta veche cu columns */
+  }
+  .dropdown .menu.menu-mega li{ break-inside: unset; }
+}
+
+/* Grup */
+.dropdown .menu.menu-mega .menu-group{
+  list-style: none;
+  padding: 10px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(247,207,225,.22), rgba(255,255,255,.95));
+  border: 1px solid rgba(255, 216, 231, .9);
+}
+
+/* Titlu grup */
+.dropdown .menu.menu-mega .menu-title{
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  color: #a23366;
+  margin: 2px 6px 8px;
+  opacity: .95;
+}
+
+/* Linkuri */
+.dropdown .menu.menu-mega a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: .55rem .7rem;
+  border-radius: 12px;
+  transition: background .15s ease, transform .15s ease;
+}
+
+/* Bullet mic elegant */
+.dropdown .menu.menu-mega a::before{
+  content:"";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(213,108,145,.55);
+  box-shadow: 0 0 0 3px rgba(247,207,225,.45);
+  flex: 0 0 auto;
+}
+
+.dropdown .menu.menu-mega a:hover{
+  background: var(--rose-2);
+  transform: translateX(2px);
+}
+
+/* Mobile: ramane comportamentul tau de drawer */
+@media (max-width: 900px){
+  .dropdown .menu.menu-mega{
+    min-width: 0;
+    padding: .25rem 0;
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    backdrop-filter: none;
+    display: block;
+    max-height: none;
+    overflow: visible;
+  }
+  .dropdown .menu.menu-mega .menu-group{
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+  .dropdown .menu.menu-mega .menu-title{
+    margin: .6rem 0 .25rem;
+    padding: 0 .1rem;
+    opacity: .8;
+  }
+}

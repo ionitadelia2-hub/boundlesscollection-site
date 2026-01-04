@@ -83,9 +83,59 @@ const CATEGORY_MAP = {
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
   "toppere tort": { name: "Toppere tort", url: "/toppere-tort.html" },
   "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
+  "paste": { name: "Colecția de Paște", url: "/paste.html" },
+  "martisor": { name: "Colecția de Mărțișor", url: "/martisor.html" },
   "tablouri luminoase": { name: "Tablouri luminoase", url: "/tablouri-luminoase.html" },
   "cani personalizate": { name: "Căni personalizate", url: "/cani.html" }
   };
+
+// --- Dropdown Produse (MEGA, grupat) ---
+// Nota: folosim ESC pentru caractere speciale in template string si pastram structura identica peste tot.
+const PRODUCTS_DROPDOWN_HTML = `
+<ul class="menu menu-mega" role="menu" aria-label="Submeniu Produse">
+
+  <li class="menu-group" role="none">
+    <div class="menu-title">Papetarie</div>
+    <a role="menuitem" href="/invitatii.html">Prezentare Invitatii</a>
+    <a role="menuitem" href="/invitatii-digitale.html">Invitatii digitale</a>
+    <a role="menuitem" href="/plicuri.html">Prezentare Plicuri de dar</a>
+    <a role="menuitem" href="/meniuri.html">Prezentare Meniuri</a>
+    <a role="menuitem" href="/evantaie.html">Prezentare Evantaie</a>
+    <a role="menuitem" href="/numere-masa.html">Prezentare Numere de masa</a>
+    <a role="menuitem" href="/seturi.html">Prezentare Seturi</a>
+  </li>
+
+  <li class="menu-group" role="none">
+    <div class="menu-title">Marturii</div>
+    <a role="menuitem" href="/marturii.html">Prezentare Marturii</a>
+  </li>
+
+  <li class="menu-group" role="none">
+    <div class="menu-title">Aranjamente florale</div>
+    <a role="menuitem" href="/aranjamente-florale.html">Prezentare Aranjamente florale</a>
+  </li>
+
+  <li class="menu-group" role="none">
+    <div class="menu-title">Decor & accesorii</div>
+    <a role="menuitem" href="/stickere-oglinda.html">Prezentare Stickere oglinda</a>
+    <a role="menuitem" href="/toppere-tort.html">Prezentare Toppere tort</a>
+  </li>
+
+  <li class="menu-group" role="none">
+    <div class="menu-title">Cadouri</div>
+    <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
+  </li>
+
+  <li class="menu-group" role="none">
+    <div class="menu-title">Colectii</div>
+    <a role="menuitem" href="/craciun.html">Prezentare Colectia de Craciun</a>
+    <a role="menuitem" href="/paste.html">Prezentare Colectia de Paste</a>
+    <a role="menuitem" href="/martisor.html">Prezentare Colectia de Martisor</a>
+  </li>
+
+</ul>
+`.trim();
+
 
 // ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
@@ -211,24 +261,10 @@ function pageTemplate(prod) {
       <nav aria-label="Meniu principal">
         <ul id="mainmenu">
           <li class="dropdown">
-            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Produse</button>
-            <ul class="menu" role="menu">
-              <li><a href="/marturii.html">Prezentare Mărturii</a></li>
-              <li><a href="/invitatii.html">Prezentare Invitații</a></li>
-              <li><a href="/invitatii-digitale.html">Invitații digitale</a></li>
-              <li><a href="/plicuri.html">Prezentare Plicuri de dar</a></li>
-              <li><a href="/meniuri.html">Prezentare Meniuri</a></li>
-              <li><a href="/evantaie.html">Prezentare Evantaie</a></li>
-              <li><a href="/numere-masa.html">Prezentare Numere de masă</a></li>
-              <li><a href="/stickere-oglinda.html">Prezentare Stickere oglindă</a></li>
-              <li><a href="/toppere-tort.html">Prezentare Toppere tort</a></li>
-              <li><a href="/aranjamente-florale.html">Prezentare Aranjamente florale</a></li>
-              <li><a href="/seturi.html">Prezentare Seturi</a></li>
-              <li><a href="/craciun.html">Prezentare Colectia de Crăciun</a></li>
-              <li><a href="/tablouri-luminoase.html">Tablouri luminoase</a></li>
-              <li><a href="/cani.html">Prezentare Căni personalizate</a></li>
-            </ul>
-          </li>
+  <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">Produse</button>
+  ${PRODUCTS_DROPDOWN_HTML}
+</li>
+
           <li><a href="/index.html">Acasă</a></li>
           <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
