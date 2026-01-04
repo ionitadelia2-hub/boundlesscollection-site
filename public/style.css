@@ -871,3 +871,17 @@ footer{
     display: block;
   }
 }
+
+/* ===== MEGA dropdown: centrat sub buton (desktop) ===== */
+@media (min-width: 901px){
+  .dropdown{ position: relative; }
+
+  .dropdown .menu.menu-mega{
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+
+    /* optional: ca sa nu fie “prea lat” */
+    max-width: 920px;
+  }
+}
