@@ -319,15 +319,53 @@ function pageTemplate(prod) {
       else if(ref.includes("/cani")) back="/cani.html";
       var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
-    (function(){
-      const btn=document.querySelector('.nav-toggle'), menu=document.querySelector('#mainmenu'),
-            dd=document.querySelector('.dropdown'), ddBtn=dd?.querySelector('.dropbtn');
-      if(!btn||!menu) return;
-      function closeAll(){ document.body.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); if(dd){ dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); } }
-      btn.addEventListener('click',e=>{ e.preventDefault(); e.stopPropagation(); const open=document.body.classList.toggle('menu-open'); btn.setAttribute('aria-expanded', open?'true':'false'); if(!open&&dd){ dd.classList.remove('open'); ddBtn?.setAttribute('aria-expanded','false'); }});
-      if(dd&&ddBtn){ ddBtn.addEventListener('click',e=>{ e.preventDefault(); e.stopPropagation(); const now=dd.classList.toggle('open'); ddBtn.setAttribute('aria-expanded', now?'true':'false'); }); menu.addEventListener('click',e=>e.stopPropagation()); }
-      document.addEventListener('click', closeAll); document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeAll(); });
-    })();
+    (function () {
+  const btnHamb  = document.querySelector('.nav-toggle');
+  const mainMenu = document.querySelector('#mainmenu');
+  const dd       = document.querySelector('.dropdown');
+  const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
+
+  if (!btnHamb || !mainMenu) return;
+
+  function setDropdown(open) {
+    if (!dd) return;
+    dd.classList.toggle('open', !!open);
+    if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  function closeAll() {
+    document.body.classList.remove('menu-open');
+    btnHamb.setAttribute('aria-expanded','false');
+    setDropdown(false);
+  }
+
+  // ✅ inchis sigur la load + cand revii din back/forward cache
+  window.addEventListener('DOMContentLoaded', closeAll);
+  window.addEventListener('pageshow', closeAll);
+
+  btnHamb.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const open = document.body.classList.toggle('menu-open');
+    btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (!open) setDropdown(false);
+  });
+
+  if (dd && ddBtn) {
+    ddBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const now = dd.classList.toggle('open');
+      ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
+    });
+
+    mainMenu.addEventListener('click', (e) => e.stopPropagation());
+  }
+
+  document.addEventListener('click', closeAll);
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+})();
+
   </script>
   ${jsGlobal}${jsGallery}${jsProduct}
 </body>

@@ -448,35 +448,41 @@
   </script>
 
   <script>
-  // meniu: burger + dropdown
+  // meniu: burger + dropdown (cu reset la load)
   (function () {
     const btnHamb  = document.querySelector('.nav-toggle');
     const mainMenu = document.querySelector('#mainmenu');
     const dd       = document.querySelector('.dropdown');
-    const ddBtn    = dd?.querySelector('.dropbtn');
+    const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
 
     if (!btnHamb || !mainMenu) return;
+
+    function setDropdown(open) {
+      if (!dd) return;
+      dd.classList.toggle('open', !!open);
+      if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
 
     function closeAll() {
       document.body.classList.remove('menu-open');
       btnHamb.setAttribute('aria-expanded','false');
-      if (dd) {
-        dd.classList.remove('open');
-        ddBtn?.setAttribute('aria-expanded','false');
-      }
+      setDropdown(false);
     }
 
+    // ✅ IMPORTANT: fortam inchis la load (rezolva “deschis din start”)
+    window.addEventListener('pageshow', closeAll); // si la back/forward cache
+    window.addEventListener('DOMContentLoaded', closeAll);
+
+    // hamburger
     btnHamb.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       const open = document.body.classList.toggle('menu-open');
       btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
-      if (!open && dd) {
-        dd.classList.remove('open');
-        ddBtn?.setAttribute('aria-expanded','false');
-      }
+      if (!open) setDropdown(false);
     });
 
+    // dropdown Produse (click)
     if (dd && ddBtn) {
       ddBtn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -484,13 +490,20 @@
         const now = dd.classList.toggle('open');
         ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
       });
+
+      // click in meniul mare sa nu inchida instant
       mainMenu.addEventListener('click', (e) => e.stopPropagation());
     }
 
+    // click in afara inchide tot
     document.addEventListener('click', closeAll);
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+
+    // ESC inchide
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAll();
+    });
   })();
-  </script>
+</script>
 
   <script>
   // form UX
