@@ -1,4 +1,4 @@
-// script.js – catalog + navigație (stabil, cu suport pagini categorie)
+// script.js – catalog + navigație (stabil, cu suport pagini categorie + MULTI-IMAGINI robust)
 (function () {
   'use strict';
 
@@ -7,18 +7,18 @@
   const $$ = (s, d = document) => Array.from(d.querySelectorAll(s));
 
   if (!window.$)  window.$  = $;
-  if (!window.$$ ) window.$$ = $$;
+  if (!window.$$) window.$$ = $$;
 
-  const grid       = $('#grid') || null;
-  const q          = $('#q') || null;
+  const grid        = $('#grid') || null;
+  const q           = $('#q') || null;
   const loadMoreBtn = $('#loadMore') || null;
 
-const PAGE_SIZE = 4;
-let visibleCount = PAGE_SIZE;
+  const PAGE_SIZE = 4;
+  let visibleCount = PAGE_SIZE;
 
-function resetPagination() {
-  visibleCount = PAGE_SIZE;
-}
+  function resetPagination() {
+    visibleCount = PAGE_SIZE;
+  }
 
   const filterBtns = $$('.filter .pill');
   let PRODUCTS     = [];
@@ -41,7 +41,8 @@ function resetPagination() {
   const PAGE_FILTER = (typeof window.PAGE_CATEGORY === 'string' && window.PAGE_CATEGORY.trim())
     ? key(window.PAGE_CATEGORY)
     : null;
-    const PAGINATION_ENABLED = !PAGE_FILTER; // doar pe home
+
+  const PAGINATION_ENABLED = !PAGE_FILTER; // doar pe home
 
   // Dacă e pagină de categorie, marchează grila pt layout-ul aerisit
   if (PAGE_FILTER && grid) grid.classList.add('category');
@@ -51,20 +52,38 @@ function resetPagination() {
     return Number.isFinite(v) ? `${v.toFixed(2)} RON` : '';
   };
 
+  // ===== IMAGINI: suport array / string "a;b;c" / "a|b|c" + normalize "/" =====
+  function parseImages(input) {
+    let arr = [];
+
+    if (Array.isArray(input)) {
+      arr = input;
+    } else if (typeof input === 'string') {
+      const s = input.trim();
+      if (s) arr = s.split(/[;|]/).map(x => x.trim()).filter(Boolean);
+    }
+
+    arr = arr.map(src => (src.startsWith('/') ? src : '/' + src.replace(/^\.?\//, '')));
+
+    return arr.length ? arr : ['/images/preview.jpg'];
+  }
+
   // ===== Card produs (cu slider dacă are >1 imagine) =====
   function card(p) {
-    const imgs = Array.isArray(p.images) && p.images.length ? p.images : ['/images/preview.jpg'];
+    const imgs = parseImages(p.images);
     const hasMany = imgs.length > 1;
 
     const slides = imgs
-      .map((src, i) => `<img src="${src}" alt="${p.title} – imagine ${i+1}" class="slide ${i===0?'is-active':''}" loading="lazy" decoding="async">`)
+      .map((src, i) =>
+        `<img src="${src}" alt="${p.title} – imagine ${i + 1}" class="slide ${i === 0 ? 'is-active' : ''}" loading="lazy" decoding="async">`
+      )
       .join('');
 
     const dots = hasMany
-      ? `<div class="slider-dots">${imgs.map((_,i)=>`<i class="${i===0?'is-active':''}"></i>`).join('')}</div>`
+      ? `<div class="slider-dots">${imgs.map((_, i) => `<i class="${i === 0 ? 'is-active' : ''}"></i>`).join('')}</div>`
       : '';
 
-    const nav  = hasMany
+    const nav = hasMany
       ? `<div class="slider-nav">
            <button class="prev" type="button" aria-label="Imagine anterioară">‹</button>
            <button class="next" type="button" aria-label="Imagine următoare">›</button>
@@ -109,35 +128,33 @@ function resetPagination() {
     const term = norm(q?.value || '');
 
     const filtered = PRODUCTS.filter((p) => {
-  const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
-  const hitTerm = !term || hay.includes(term);
+      const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
+      const hitTerm = !term || hay.includes(term);
 
-  const hitCatToggle =
-    activeFilter === 'toate' ||
-    p.categoryKey === activeFilter ||
-    (p.tagsKey && p.tagsKey.includes(activeFilter));
+      const hitCatToggle =
+        activeFilter === 'toate' ||
+        p.categoryKey === activeFilter ||
+        (p.tagsKey && p.tagsKey.includes(activeFilter));
 
-  const hitPage =
-    !PAGE_FILTER ||
-    p.categoryKey === PAGE_FILTER ||
-    (p.tagsKey && p.tagsKey.includes(PAGE_FILTER));
+      const hitPage =
+        !PAGE_FILTER ||
+        p.categoryKey === PAGE_FILTER ||
+        (p.tagsKey && p.tagsKey.includes(PAGE_FILTER));
 
-  return hitTerm && hitCatToggle && hitPage;
-});
+      return hitTerm && hitCatToggle && hitPage;
+    });
 
-const visible = PAGINATION_ENABLED ? filtered.slice(0, visibleCount) : filtered;
+    const visible = PAGINATION_ENABLED ? filtered.slice(0, visibleCount) : filtered;
 
+    grid.innerHTML = visible.length
+      ? visible.map(card).join('')
+      : emptyState('Nu am găsit produse pentru această categorie.');
 
-grid.innerHTML = visible.length
-  ? visible.map(card).join('')
-  : emptyState('Nu am găsit produse pentru această categorie.');
-
-// buton "..."
-if (loadMoreBtn) {
-  const hasMore = PAGINATION_ENABLED && filtered.length > visibleCount;
-  loadMoreBtn.hidden = !hasMore;
-}
-
+    // buton "..."
+    if (loadMoreBtn) {
+      const hasMore = PAGINATION_ENABLED && filtered.length > visibleCount;
+      loadMoreBtn.hidden = !hasMore;
+    }
 
     // Acțiuni card
     grid.querySelectorAll('.actions .btn').forEach((btn) => {
@@ -159,9 +176,11 @@ if (loadMoreBtn) {
       const slides = $$('.slide', track);
       if (slides.length <= 1) return;
 
-      const dots  = track.parentElement.querySelectorAll('.slider-dots i');
-      const prev  = track.parentElement.querySelector('.prev');
-      const next  = track.parentElement.querySelector('.next');
+      // IMPORTANT: scope pe card-ul curent
+      const media = track.closest('.media');
+      const dots  = media ? Array.from(media.querySelectorAll('.slider-dots i')) : [];
+      const prev  = media ? media.querySelector('.prev') : null;
+      const next  = media ? media.querySelector('.next') : null;
 
       const setIndex = (i) => {
         const n = slides.length;
@@ -176,7 +195,9 @@ if (loadMoreBtn) {
 
       prev?.addEventListener('click', (e) => { e.preventDefault(); setIndex(--idx); });
       next?.addEventListener('click', (e) => { e.preventDefault(); setIndex(++idx); });
-      dots.forEach((d, k) => d.addEventListener('click', (e) => { e.preventDefault(); idx = k; setIndex(idx); }));
+      dots.forEach((d, k) =>
+        d.addEventListener('click', (e) => { e.preventDefault(); idx = k; setIndex(idx); })
+      );
     });
   }
 
@@ -198,7 +219,8 @@ if (loadMoreBtn) {
               category: p.category || '',
               categoryKey: key(p.category || ''),
               desc: p.desc || '',
-              images: Array.isArray(p.images) ? p.images : [],
+              // FIX: multi-imagini robust (array sau string)
+              images: parseImages(p.images),
               slug: p.slug || slug(p.title),
               tags,
               tagsKey: tags.map(key),
@@ -212,16 +234,16 @@ if (loadMoreBtn) {
   }
 
   // ===== Acțiuni publice =====
-  function inquire(title, slug) {
-    const url = `${location.origin}/p/${slug}.html`;
+  function inquire(title, slugVal) {
+    const url = `${location.origin}/p/${slugVal}.html`;
     const wa = `https://wa.me/40760617724?text=${encodeURIComponent(
       `Bună! Mă interesează produsul: ${title} (${url})`
     )}`;
     window.open(wa, '_blank', 'noopener');
   }
 
-  async function share(title, slug) {
-    const url = `${location.origin}/p/${slug}.html`;
+  async function share(title, slugVal) {
+    const url = `${location.origin}/p/${slugVal}.html`;
     const data = { title: 'Boundless Collection', text: `Îți recomand: ${title}`, url };
     try {
       if (navigator.share) await navigator.share(data);
@@ -240,13 +262,13 @@ if (loadMoreBtn) {
     if (grid) {
       await loadProducts();
       render();
-      if (loadMoreBtn) {
-  loadMoreBtn.addEventListener('click', () => {
-    visibleCount += PAGE_SIZE;
-    render();
-  });
-}
 
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+          visibleCount += PAGE_SIZE;
+          render();
+        });
+      }
     }
 
     filterBtns.forEach((btn) =>
@@ -261,9 +283,8 @@ if (loadMoreBtn) {
     );
 
     q?.addEventListener('input', () => {
-  resetPagination();
-  render();
-});
-
+      resetPagination();
+      render();
+    });
   });
 })();
