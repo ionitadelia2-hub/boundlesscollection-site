@@ -235,7 +235,7 @@ const href = `/produs/${encodeURIComponent(p.slug || slug(p.title))}`;
 
   // ===== Acțiuni publice =====
   function inquire(title, slugVal) {
-const url = `${location.origin}/produs/${encodeURIComponent(slugVal)}`;
+    const url = `${location.origin}/p/${slugVal}.html`;
     const wa = `https://wa.me/40760617724?text=${encodeURIComponent(
       `Bună! Mă interesează produsul: ${title} (${url})`
     )}`;
@@ -243,7 +243,7 @@ const url = `${location.origin}/produs/${encodeURIComponent(slugVal)}`;
   }
 
   async function share(title, slugVal) {
-const url = `${location.origin}/produs/${encodeURIComponent(slugVal)}`;
+    const url = `${location.origin}/p/${slugVal}.html`;
     const data = { title: 'Boundless Collection', text: `Îți recomand: ${title}`, url };
     try {
       if (navigator.share) await navigator.share(data);
