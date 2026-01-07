@@ -90,7 +90,7 @@
          </div>`
       : '';
 
-    const href = `/p/${encodeURIComponent(p.slug || slug(p.title))}.html`;
+const href = `/produs/${encodeURIComponent(p.slug || slug(p.title))}`;
 
     return `
     <article class="item" data-id="${p.id || ''}">
@@ -235,7 +235,7 @@
 
   // ===== Acțiuni publice =====
   function inquire(title, slugVal) {
-    const url = `${location.origin}/p/${slugVal}.html`;
+const url = `${location.origin}/produs/${encodeURIComponent(slugVal)}`;
     const wa = `https://wa.me/40760617724?text=${encodeURIComponent(
       `Bună! Mă interesează produsul: ${title} (${url})`
     )}`;
@@ -243,7 +243,7 @@
   }
 
   async function share(title, slugVal) {
-    const url = `${location.origin}/p/${slugVal}.html`;
+const url = `${location.origin}/produs/${encodeURIComponent(slugVal)}`;
     const data = { title: 'Boundless Collection', text: `Îți recomand: ${title}`, url };
     try {
       if (navigator.share) await navigator.share(data);
