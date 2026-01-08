@@ -380,6 +380,31 @@
     "mpn": ""
   },
   {
+    "id": "aranjament-floral-9-lalele-soia-roz-001",
+    "title": "Aranjament floral cu 9 lumanari din ceara de soia – buchet de lalele roz si ivoire",
+    "price": 69,
+    "category": "aranjamente-florale",
+    "product_type": "aranjamente-florale",
+    "desc": "Aranjament floral realizat manual, tip buchet elegant, compus din 9 lumanari din ceara de soia sub forma de lalele, in nuante delicate de roz si ivoire. Ambalat in hartie decorativa premium si accesorizat cu funda satinata. Un cadou parfumat si rafinat, ideal pentru doamne, profesoare sau decor primavaratic.",
+    "images": [
+      "/images/aranjamente/aranjament-9-lalele-roz-ivoire.png"
+    ],
+    "tags": [
+      "aranjament floral",
+      "lumanari soia",
+      "lalele",
+      "handmade",
+      "buchet",
+      "cadou",
+      "primavara",
+      "elegant"
+    ],
+    "slug": "aranjament-floral-cu-9-lumanari-din-ceara-de-soia-buchet-de-lalele-roz-si-ivoire-aranjame",
+    "google_product_category": "Home & Garden > Decor > Floral Arrangements",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "aranjament-pastel-011",
     "title": "Aranjament floral din lumanari parfumate pastel",
     "price": 74.99,
