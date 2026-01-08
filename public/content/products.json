@@ -4306,5 +4306,139 @@
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "martisor-inima-001",
+    "title": "Martisor inima tip buchet",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade in forma de inima, decorat cu flori uscate si elemente naturale delicate, ambalat sub forma de mini buchet si accesorizat cu snur traditional alb-rosu. Un cadou simbolic si elegant de 1 Martie, realizat manual, perfect pentru a celebra primavara.",
+    "images": [
+      "/images/martisor/martisor-inima-flori-uscate.JPEG",
+      "/images/martisor/martisor-inima-flori-uscate-1.JPEG"
+    ],
+    "tags": [
+      "martisor",
+      "1 martie",
+      "inima",
+      "flori uscate",
+      "natural",
+      "handmade",
+      "cadou primavara",
+      "snur martisor",
+      "decorativ"
+    ],
+    "slug": "martisor-inima-tip-buchet-martisor",
+    "google_product_category": "Home & Garden > Decor > Decorative Accessories",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "buchet-martisor-3-trandafiri-001",
+    "title": "Buchet martisor cu 3 trandafiri",
+    "price": 29.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Buchet delicat de martisor realizat manual, cu 3 trandafiri decorativi si flori uscate asortate. Ambalat elegant in hartie pastelata si accesorizat cu panglica satinata. Un cadou simbolic si rafinat pentru 1 Martie sau 8 Martie.",
+    "images": [
+      "/images/martisor/buchet-3-trandafiri.JPEG",
+      "/images/martisor/buchet-3-trandafiri-1.JPEG"
+    ],
+    "tags": [
+      "martisor",
+      "buchet",
+      "trandafiri",
+      "flori uscate",
+      "cadou martisor",
+      "handmade",
+      "primavara",
+      "1 martie",
+      "8 martie"
+    ],
+    "slug": "buchet-martisor-cu-3-trandafiri-buchet-m",
+    "google_product_category": "Home & Garden > Decor > Decorative Objects",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-buchet-1-trandafir-soia-001",
+    "title": "Buchet martisor cu 1 trandafir din ceara de soia",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual sub forma de buchet elegant cu un trandafir din ceara de soia, decorat cu flori uscate si ambalat individual in hartie decorativa. Un cadou delicat si simbolic pentru 1 Martie, ideal pentru a oferi primavara si bucurie.",
+    "images": [
+      "/images/martisor/buchet-1-trandafir.JPEG",
+      "/images/martisor/buchet-1-trandafir-1.JPEG"
+    ],
+    "tags": [
+      "martisor",
+      "trandafir",
+      "ceara soia",
+      "handmade",
+      "cadou 1 martie",
+      "flori uscate",
+      "buchet",
+      "primavara"
+    ],
+    "slug": "buchet-martisor-cu-1-trandafir-din-ceara-de-soia-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-buchet-trandafir-mini-001",
+    "title": "Buchet martisor cu trandafir din ceara – MINI",
+    "price": 11.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Buchet martisor realizat manual, cu trandafir din ceara de soia in dimensiune mini, decorat cu flori uscate si ambalat individual in hartie eleganta. Ideal pentru a fi oferit de Martisor, ca simbol al primaverii si al feminitatii.",
+    "images": [
+      "/images/martisor/buchet-trandafir-mini.JPEG",
+      "/images/martisor/buchet-trandafir-mini-1.JPG"
+    ],
+    "tags": [
+      "martisor",
+      "buchet martisor",
+      "trandafir ceara",
+      "ceara soia",
+      "handmade",
+      "flori uscate",
+      "cadou 1 martie",
+      "primavara"
+    ],
+    "slug": "buchet-martisor-cu-trandafir-din-ceara-mini-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-trandafir-delicat-001",
+    "title": "Martisor Trandafir delicat",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual sub forma de trandafir delicat din ceara de soia, decorat cu flori uscate si accesoriu buburuza pentru noroc. Ambalat elegant in hartie alba si legat cu snur traditional de martisor. Un cadou fin si simbolic pentru 1 Martie sau 8 Martie.",
+    "images": [
+      "/images/martisor/trandafir-delicat.JPEG",
+      "/images/martisor/trandafir-delicat-1.JPEG"
+    ],
+    "tags": [
+      "martisor",
+      "trandafir",
+      "trandafir delicat",
+      "flori uscate",
+      "buburuza",
+      "cadou martisor",
+      "handmade",
+      "primavara",
+      "1 martie",
+      "8 martie"
+    ],
+    "slug": "martisor-trandafir-delicat-martisor",
+    "google_product_category": "Home & Garden > Decor > Decorative Objects",
+    "material": "",
+    "mpn": ""
   }
 ]
