@@ -24,18 +24,21 @@
     }
 
     function layout() {
-      const w = viewportWidth();
-      // fiecare slide = lățimea viewport-ului
-      slides.forEach(s => {
-        s.style.width = w + "px";
-        s.style.minWidth = w + "px";
-        s.style.flexBasis = w + "px";
-      });
-      // track = suma slide-urilor
-      track.style.width = (w * slides.length) + "px";
-      // repoziționează pe slide-ul curent
-      track.style.transform = `translateX(${-index * w}px)`;
-    }
+  const w = viewportWidth();
+
+  // ✅ LOCK: pătrat stabil pe mobil (iOS address bar / resize)
+  vp.style.height = w + "px";
+
+  slides.forEach(s => {
+    s.style.width = w + "px";
+    s.style.minWidth = w + "px";
+    s.style.flexBasis = w + "px";
+  });
+
+  track.style.width = (w * slides.length) + "px";
+  track.style.transform = `translateX(${-index * w}px)`;
+}
+
 
     function render() {
       const w = viewportWidth();
@@ -56,8 +59,18 @@
     function stop() { if (timer) { clearInterval(timer); timer = null; } }
 
     // butoane
-    prevBtn && prevBtn.addEventListener("click", () => goTo(index - 1));
-    nextBtn && nextBtn.addEventListener("click", () => goTo(index + 1));
+    prevBtn && prevBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  goTo(index - 1);
+});
+
+nextBtn && nextBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+  goTo(index + 1);
+});
+
     thumbs.forEach((t, i) => t.addEventListener("click", () => goTo(i)));
 
     // swipe touch (fără scroll)
