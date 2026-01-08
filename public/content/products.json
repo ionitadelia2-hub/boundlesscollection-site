@@ -4442,6 +4442,81 @@
     "mpn": ""
   },
   {
+    "id": "martisor-trandafir-mini-mov-001",
+    "title": "Martisor trandafir mini din ceara de soia cu funda mov",
+    "price": 10,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual din ceara de soia naturala, sub forma de trandafir mini alb, montat pe bat de lemn si accesorizat cu funda satinata mov. Varianta fara ambalaj, ideala pentru martisor clasic de 1 Martie.",
+    "images": [
+      "/images/martisor/trandafir-mini-mov.JPEG"
+    ],
+    "tags": [
+      "martisor",
+      "trandafir",
+      "ceara soia",
+      "alb",
+      "mov",
+      "handmade",
+      "floral",
+      "primavara"
+    ],
+    "slug": "martisor-trandafir-mini-din-ceara-de-soia-cu-funda-mov-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-lalea-alba-verde-002",
+    "title": "Martisor lalea alba din ceara de soia cu funda verde",
+    "price": 10,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade din ceara de soia naturala, in forma de lalea alba, montata pe bat de lemn si decorata cu funda verde satinata. Varianta fara ambalaj, simbol delicat al primaverii.",
+    "images": [
+      "/images/martisor/lalea-alba-verde.JPEG"
+    ],
+    "tags": [
+      "martisor",
+      "lalea",
+      "ceara soia",
+      "alb",
+      "verde",
+      "handmade",
+      "martisor",
+      "floral"
+    ],
+    "slug": "martisor-lalea-alba-din-ceara-de-soia-cu-funda-verde-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-lalea-alba-rosu-003",
+    "title": "Martisor lalea alba din ceara de soia cu funda rosie",
+    "price": 10,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor din ceara de soia 100% naturala, realizat manual sub forma de lalea alba, montata pe bat de lemn si accesorizata cu funda rosie satinata. Varianta fara ambalaj, potrivita pentru 1 Martie.",
+    "images": [
+      "/images/martisor/lalea-alba-rosu.JPEG"
+    ],
+    "tags": [
+      "martisor",
+      "lalea",
+      "ceara soia",
+      "alb",
+      "rosu",
+      "handmade",
+      "1 martie",
+      "cadou"
+    ],
+    "slug": "martisor-lalea-alba-din-ceara-de-soia-cu-funda-rosie-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "tablou-parfumat-inima-soia-001",
     "title": "Tablou parfumat personalizat cu inima din ceara de soia",
     "price": 149,
