@@ -4440,5 +4440,50 @@
     "google_product_category": "Home & Garden > Decor > Decorative Objects",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "tablou-parfumat-inima-soia-001",
+    "title": "Tablou parfumat personalizat cu inima din ceara de soia",
+    "price": 189,
+    "category": "tablouri parfumate",
+    "product_type": "tablouri parfumate",
+    "desc": "Tablou decorativ personalizat, realizat manual, cu lumanare in forma de inima din ceara de soia naturala si elemente florale delicate. Ideal pentru cadouri emotionante, aniversari, nunta sau decor elegant pentru casa.",
+    "images": [
+      "/images/tablouri-parfumate/tablou-inima-soia.PNG"
+    ],
+    "tags": [
+      "tablou parfumate",
+      "ceara soia",
+      "inima",
+      "cadou personalizat",
+      "decor elegant",
+      "handmade"
+    ],
+    "slug": "tablou-parfumat-personalizat-cu-inima-din-ceara-de-soia-tablou-p",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "tablou-parfumat-portret-soia-002",
+    "title": "Tablou parfumat personalizat cu lumanare din ceara de soia",
+    "price": 179,
+    "category": "tablouri parfumate",
+    "product_type": "tablouri parfumate",
+    "desc": "Tablou artistic realizat manual, cu ilustratie minimalista si lumanare decorativa din ceara de soia, completat cu flori uscate si detalii fine. Un cadou special, personalizabil, perfect pentru momente cu semnificatie.",
+    "images": [
+      "/images/tablouri-parfumate/tablou-portret-soia.PNG"
+    ],
+    "tags": [
+      "tablou parfumate",
+      "ceara soia",
+      "personalizat",
+      "cadou handmade",
+      "decor interior"
+    ],
+    "slug": "tablou-parfumat-personalizat-cu-lumanare-din-ceara-de-soia-tablou-p",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
   }
 ]
