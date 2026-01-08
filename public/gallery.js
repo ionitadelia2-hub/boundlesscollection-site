@@ -19,14 +19,16 @@
 
     const clamp = (i) => (i + slides.length) % slides.length;
 
-    function viewportWidth() {
-      return vp.clientWidth || root.clientWidth || 0;
-    }
+   function viewportWidth() {
+  // ✅ mai stabil pe mobil decat clientWidth
+  return Math.round(vp.getBoundingClientRect().width || root.getBoundingClientRect().width || 0);
+}
 
-    function layout() {
+function layout() {
   const w = viewportWidth();
+  if (w < 2) return; // ✅ guard: nu recalcula pe width 0/1px
 
-  // ✅ LOCK: pătrat stabil pe mobil (iOS address bar / resize)
+  // ✅ LOCK: pastreaza viewport-ul perfect patrat (fix iOS shrink)
   vp.style.height = w + "px";
 
   slides.forEach(s => {
@@ -40,8 +42,10 @@
 }
 
 
+
     function render() {
       const w = viewportWidth();
+      if (w < 2) return;
       track.style.transform = `translateX(${-index * w}px)`;
       thumbs.forEach((t, i) => t.classList.toggle("is-active", i === index));
       const single = slides.length <= 1;
