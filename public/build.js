@@ -124,6 +124,8 @@ const PRODUCTS_DROPDOWN_HTML = `
   <li class="menu-group" role="none">
     <div class="menu-title">Cadouri</div>
     <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
+    <a role="menuitem" href="/tablouri-parfumate.html">Tablouri parfumate</a>
+    <a role="menuitem" href="/cani.html">Cani personalizate</a>
   </li>
 
   <li class="menu-group" role="none">
