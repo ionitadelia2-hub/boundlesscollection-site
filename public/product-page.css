@@ -93,3 +93,35 @@
   .product-head{ justify-content:center; gap:.6rem; }
   .actions{ flex-direction:column; }
 }
+
+/* ===== FIX: galeria noua (build.js) - .gallery-viewport / .g-slide ===== */
+
+.gallery{
+  width: 100%;
+}
+
+/* viewport-ul sa nu poata colapsa pe mobil */
+.gallery-viewport{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 260px;
+  max-height: 80vh;
+
+  display: grid;
+  place-items: center;
+}
+
+/* pe mobil: minim proportional */
+@media (max-width: 960px){
+  .gallery-viewport{
+    min-height: 60vw;
+  }
+}
+
+/* imaginea trebuie sa umple viewport-ul (nu width:auto/height:auto) */
+.gallery-viewport img.g-slide{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
