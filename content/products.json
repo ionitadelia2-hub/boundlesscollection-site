@@ -4201,5 +4201,110 @@
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Cake Toppers",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "martisor-margareta-alb-rosu-001",
+    "title": "Martisor margareta din ceara de soia alb cu rosu",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual din ceara de soia 100% naturala, sub forma de margareta alba cu centru rosu, ambalat ca mini buchet floral si accesorizat cu snur traditional de martisor. Cadou delicat si parfumat pentru 1 Martie.",
+    "images": [
+      "/images/martisor/margareta-alb-rosu.jpg",
+      "/margareta-alb-rosu-1.jpg"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "ceara soia",
+      "floral",
+      "handmade",
+      "1 martie",
+      "cadou",
+      "primavara"
+    ],
+    "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-rosu-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-margareta-alb-verde-002",
+    "title": "Martisor margareta din ceara de soia alb cu verde",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade din ceara de soia naturala, in forma de margareta alba cu centru verde, ambalat elegant in stil mini buchet. Ideal pentru a oferi un simbol al primaverii de 1 Martie.",
+    "images": [
+      "/images/martisor/margareta-alb-verde.jpg",
+      "/margareta-alb-verde-1.jpg"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "ceara soia",
+      "verde",
+      "floral",
+      "handmade",
+      "martisor",
+      "primavara"
+    ],
+    "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-verde-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-margareta-alb-albastru-003",
+    "title": "Martisor margareta din ceara de soia alb cu albastru",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual din ceara de soia 100% naturala, in forma de margareta roz cu centru galben, ambalat ca mini buchet floral. Un cadou parfumat si delicat pentru 1 Martie.",
+    "images": [
+      "/images/martisor/margareta-alb-albastru.jpg",
+      "/margareta-alb-albastru-1.jpg"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "ceara soia",
+      "roz",
+      "floral",
+      "handmade",
+      "1 martie",
+      "cadou",
+      "primavara"
+    ],
+    "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-albastru-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-margareta-alb-portocaliu-004",
+    "title": "Martisor margareta din ceara de soia alb cu portocaliu",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade din ceara de soia naturala, in forma de margareta roz cu centru galben, ambalat elegant in stil mini buchet. Ideal pentru a oferi un simbol al primaverii de 1 Martie.",
+    "images": [
+      "/images/martisor/margareta-alb-portocaliu.jpg",
+      "/margareta-alb-portocaliu-1.jpg"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "ceara soia",
+      "roz",
+      "floral",
+      "handmade",
+      "martisor",
+      "primavara"
+    ],
+    "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-portocaliu-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
   }
 ]
