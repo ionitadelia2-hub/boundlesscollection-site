@@ -160,7 +160,8 @@ function pageTemplate(prod) {
   const brandAvatar = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
 
   const cssGlobal  = cssTagIfExists("style.css");
-  const cssGallery = cssTagIfExists("gallery.css");
+  /*const cssGallery = cssTagIfExists("gallery.css");*/
+  const cssGallery = "";
   const cssProduct = cssTagIfExists("product-page.css");
 
   const jsGlobal   = jsTagIfExists("script.js");
