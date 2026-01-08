@@ -145,7 +145,7 @@ function pageTemplate(prod) {
   const priceStr = Number(prod.price || 0).toFixed(2);
   const price = priceStr + " RON";
 
-  const relImgs = (prod.images || []).map(toRootAbs);
+  const relImgs = (prod.images || []);
   const imagesAbsForMeta = (prod.images || []).map(toAbs);
   const ogImg = imagesAbsForMeta[0] || `${ORIGIN}/content/preview.jpg`;
   const firstImg = relImgs[0] || "/content/preview.jpg";
@@ -241,14 +241,58 @@ function pageTemplate(prod) {
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   ${cssGlobal}${cssGallery}${cssProduct}
   <style>
-    .single-media{ width:100%; max-width:720px; margin:0 auto; }
-    .single-viewport{
-      width:100%; aspect-ratio:1/1; background:#fff; border-radius:14px;
-      box-shadow:0 6px 24px rgba(0,0,0,.06); overflow:hidden; display:grid; place-items:center;
-    }
-    .single-viewport img{ max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; display:block; }
-    @media (max-width:960px){ .single-media{ max-width:94%; } }
-  </style>
+  .single-media{ width:100%; max-width:720px; margin:0 auto; }
+  .gallery{ width:100%; display:grid; gap:.6rem; }
+  .gallery-viewport{
+    width:100%;
+    aspect-ratio:1/1;
+    background:#fff;
+    border-radius:14px;
+    box-shadow:0 6px 24px rgba(0,0,0,.06);
+    overflow:hidden;
+    position:relative;
+    display:grid;
+    place-items:center;
+  }
+  .gallery-viewport img{
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    display:block;
+  }
+  .g-nav{
+    position:absolute; inset:0;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:0 .5rem;
+    pointer-events:none;
+  }
+  .g-nav button{
+    pointer-events:auto;
+    border:0;
+    border-radius:999px;
+    width:38px; height:38px;
+    background:rgba(255,255,255,.9);
+    box-shadow:0 6px 18px rgba(0,0,0,.10);
+    cursor:pointer;
+  }
+  .g-dots{ display:flex; gap:.35rem; justify-content:center; padding:.25rem .5rem; }
+  .g-dots i{ width:7px; height:7px; border-radius:999px; display:inline-block; background:currentColor; }
+  .g-thumbs{ display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; }
+  .g-thumb{
+    border:1px solid rgba(0,0,0,.08);
+    border-radius:12px;
+    padding:0;
+    overflow:hidden;
+    background:#fff;
+    cursor:pointer;
+  }
+  .g-thumb img{ width:72px; height:72px; object-fit:cover; display:block; }
+  .g-thumb.is-active{ outline:2px solid rgba(0,0,0,.25); }
+  @media (max-width:960px){ .single-media{ max-width:94%; } }
+</style>
+
 </head>
 <body>
   <header class="header">
@@ -277,10 +321,49 @@ function pageTemplate(prod) {
   <main class="container product-page">
     <section class="product-hero">
       <div class="hero-media">
-        <figure class="single-media">
-          <div class="single-viewport"><img src="${firstImg}" alt="${esc(title)}" loading="eager" decoding="async"></div>
-        </figure>
+  <figure class="single-media">
+    <div class="gallery" data-gallery>
+      <div class="gallery-viewport">
+        <div class="gallery-track" data-index="0">
+          ${relImgs.length ? relImgs.map((src,i)=>`
+            <img
+              src="${src}"
+              alt="${esc(title)} – imagine ${i+1}"
+              class="g-slide ${i===0?'is-active':''}"
+              style="display:${i===0?'block':'none'};"
+              loading="${i===0?'eager':'lazy'}"
+              decoding="async"
+            >
+          `).join("") : `
+            <img src="${firstImg}" alt="${esc(title)}" class="g-slide is-active" style="display:block;" loading="eager" decoding="async">
+          `}
+        </div>
+
+        ${relImgs.length > 1 ? `
+          <div class="g-nav">
+            <button class="g-prev" type="button" aria-label="Imagine anterioara">‹</button>
+            <button class="g-next" type="button" aria-label="Imagine urmatoare">›</button>
+          </div>
+        ` : ``}
       </div>
+
+      ${relImgs.length > 1 ? `
+        <div class="g-dots">
+          ${relImgs.map((_,i)=>`<i data-dot="${i}" style="opacity:${i===0?1:.35}"></i>`).join("")}
+        </div>
+
+        <div class="g-thumbs">
+          ${relImgs.map((src,i)=>`
+            <button class="g-thumb ${i===0?'is-active':''}" type="button" data-thumb="${i}" aria-label="Imagine ${i+1}">
+              <img src="${src}" alt="${esc(title)} miniatura ${i+1}">
+            </button>
+          `).join("")}
+        </div>
+      ` : ``}
+    </div>
+  </figure>
+</div>
+
       <div class="hero-text">
         <h1 class="product-title">${title}</h1>
         <p class="product-desc">${desc}</p>
@@ -364,6 +447,57 @@ function pageTemplate(prod) {
 
   document.addEventListener('click', closeAll);
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+})();
+// === galerie produs (2+ imagini) ===
+(function(){
+  const g = document.querySelector('[data-gallery]');
+  if (!g) return;
+
+  const track = g.querySelector('.gallery-track');
+  const slides = Array.from(g.querySelectorAll('.g-slide'));
+  if (slides.length <= 1) return;
+
+  const prev = g.querySelector('.g-prev');
+  const next = g.querySelector('.g-next');
+  const dots = Array.from(g.querySelectorAll('.g-dots i'));
+  const thumbs = Array.from(g.querySelectorAll('.g-thumb'));
+
+  let idx = 0;
+
+  function setIndex(i){
+    const n = slides.length;
+    idx = ((i % n) + n) % n;
+
+    track?.setAttribute('data-index', String(idx));
+
+    slides.forEach((img,k)=>{
+      const on = k === idx;
+      img.classList.toggle('is-active', on);
+      img.style.display = on ? 'block' : 'none';
+    });
+
+    dots.forEach((d,k)=> d.style.opacity = (k===idx ? '1' : '.35'));
+    thumbs.forEach((b,k)=> b.classList.toggle('is-active', k===idx));
+  }
+
+  prev?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx-1); });
+  next?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx+1); });
+
+  dots.forEach(d=>{
+    d.addEventListener('click', (e)=>{
+      e.preventDefault();
+      setIndex(Number(d.dataset.dot || 0));
+    });
+  });
+
+  thumbs.forEach(b=>{
+    b.addEventListener('click', (e)=>{
+      e.preventDefault();
+      setIndex(Number(b.dataset.thumb || 0));
+    });
+  });
+
+  setIndex(0);
 })();
 
   </script>
