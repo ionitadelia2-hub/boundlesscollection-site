@@ -4,6 +4,7 @@
     const vp      = root.querySelector(".bc-viewport");
     const track   = root.querySelector(".bc-track");
     const slides  = Array.from(root.querySelectorAll(".bc-slide"));
+    root.classList.toggle("is-single", slides.length <= 1);
     const thumbs  = Array.from(root.querySelectorAll(".bc-thumb"));
     const prevBtn = root.querySelector(".bc-prev");
     const nextBtn = root.querySelector(".bc-next");
