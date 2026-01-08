@@ -36,7 +36,19 @@
   box-shadow: 0 6px 24px rgba(0,0,0,.06);
   background: #fff;
   width: 100%;
-  aspect-ratio: auto; /* JS controleaza height */          /* pătrat perfect */
+
+  /* JS controleaza height (patrat), DAR:
+     ✅ plasa de siguranta ca sa nu ajunga la 0 pe mobil (iOS/Android UI resize) */
+  aspect-ratio: auto;
+  min-height: 320px;                /* desktop fallback */
+}
+
+/* mobil: viewport-ul sa aiba mereu un minim proportional (nu dispare) */
+@media (max-width: 960px){
+  .bc-viewport{
+    min-height: 60vw;               /* ~patrat pe mobil */
+    max-height: 80vh;               /* evita sa devina urias */
+  }
 }
 
 /* TRACK absolut, lățime setată din JS */
@@ -47,6 +59,9 @@
   height: 100%;
   will-change: transform;
   transition: transform .35s ease;
+
+  /* ✅ evita glitch-uri de compozitie */
+  transform: translate3d(0,0,0);
 }
 
 /* fiecare SLIDE ocupă exact viewport-ul */
@@ -57,6 +72,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* ✅ nu lasa browserul sa “stranga” slide-ul */
+  flex-shrink: 0;
 }
 
 /* IMAGINI – nu se taie; schimbă în cover dacă vrei full-bleed */
@@ -141,6 +159,7 @@
   .bc-thumb img{ width:84px; height:84px; }
   .actions{ flex-direction: column; }
 }
+
 /* ——— One-photo mode (ascunde butoanele/thumbnail-urile) ——— */
 .bc-gallery.is-single .bc-nav,
 .bc-gallery.is-single .bc-thumbs { display:none !important; }
@@ -148,6 +167,7 @@
 /* ✅ JS controleaza inaltimea viewport-ului (patrat) */
 .bc-viewport{ aspect-ratio: auto !important; }
 
+/* pastreaza consistenta */
 .bc-slide{ min-width:100% !important; height:100% !important; }
 
 .bc-slide img{
@@ -160,7 +180,6 @@
   display: block;
   border-radius: 10px;
 }
-
 
 /* ===== Poza unică (fără slider) ===== */
 .single-photo{
@@ -185,6 +204,7 @@
   object-fit: contain;
   display: block;
 }
+
 .bc-gallery,
 .bc-viewport,
 .bc-nav,

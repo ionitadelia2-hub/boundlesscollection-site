@@ -24,11 +24,19 @@
   return Math.round(vp.getBoundingClientRect().width || root.getBoundingClientRect().width || 0);
 }
 
+let layoutTries = 0;
+
 function layout() {
   const w = viewportWidth();
-  if (w < 2) return; // ✅ guard: nu recalcula pe width 0/1px
 
-  // ✅ LOCK: pastreaza viewport-ul perfect patrat (fix iOS shrink)
+  // daca e 0/1px, nu renunta: reincearca cateva frame-uri
+  if (w < 2) {
+    if (layoutTries++ < 20) requestAnimationFrame(layout);
+    return;
+  }
+  layoutTries = 0;
+
+  // LOCK patrat
   vp.style.height = w + "px";
 
   slides.forEach(s => {
@@ -40,8 +48,6 @@ function layout() {
   track.style.width = (w * slides.length) + "px";
   track.style.transform = `translateX(${-index * w}px)`;
 }
-
-
 
     function render() {
       const w = viewportWidth();
@@ -105,6 +111,21 @@ nextBtn && nextBtn.addEventListener("click", (e) => {
       requestAnimationFrame(() => { layout(); resizing = false; });
     }
     window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onResize);
+window.addEventListener("pageshow", onResize);
+
+// iOS: bara de sus/jos schimba viewport-ul vizual
+if (window.visualViewport) {
+  visualViewport.addEventListener("resize", onResize);
+  visualViewport.addEventListener("scroll", onResize);
+}
+
+// cel mai stabil: reactia la schimbarea dimensiunii reale a viewport-ului
+if (window.ResizeObserver) {
+  const ro = new ResizeObserver(() => onResize());
+  ro.observe(vp);
+}
+
 
     // după încărcarea imaginilor (în caz că schimbă layout-ul)
     slides.forEach(sl => {
