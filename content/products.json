@@ -130,11 +130,11 @@
   },
   {
     "id": "invitatie-ursulet-ivoire-006",
-    "title": "Invitatie botez cu ursulet si fundita ivoire",
+    "title": "Invitație de botez cu ursuleț și fundiță ivoire",
     "price": 7.99,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie pe carton premium cu ursulet si nori pastel, completata cu fundita ivoire din organza. Look delicat pentru baietei.",
+    "desc": "Invitație realizată pe carton premium, decorată cu ursuleț și nori în tonuri pastel, completată cu fundiță ivoire din organza. Design delicat, ideal pentru botez de băiețel.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-ivoire.jpg"
     ],
@@ -147,21 +147,20 @@
       "baietel",
       "elegant",
       "nori",
-      "pastel",
-      "personalizat"
+      "pastel"
     ],
-    "slug": "invitatie-botez-cu-ursulet-si-fundita-ivoire-invitati",
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
   {
     "id": "invitatie-ursulet-roz-007",
-    "title": "Invitatie botez cu ursulet si fundita roz",
+    "title": "Invitație de botez cu ursuleț și fundiță roz",
     "price": 8,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie pentru botez fetita, pe carton premium cu ursulet si baloane pastel, legata cu fundita roz din satin. Design dulce si elegant.",
+    "desc": "Invitație realizată pe carton premium, decorată cu ursuleț și baloane în tonuri pastel, legată cu fundiță roz din satin. Design dulce și elegant, ideal pentru botez de fetiță.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-roz.jpg"
     ],
@@ -175,23 +174,23 @@
       "pastel",
       "satin",
       "balon",
-      "roz pudrat",
-      "personalizat"
+      "roz pudrat"
     ],
-    "slug": "invitatie-botez-cu-ursulet-si-fundita-roz-invitati",
+    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-roz-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
   {
     "id": "invitatie-pergament-smarald-008",
-    "title": "Invitatie pergament cu fundita verde smarald",
+    "title": "Invitație pergament cu fundiță verde smarald",
     "price": 8,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie tip pergament, rulata si legata manual cu fundita verde smarald din organza. Stil minimalist cu vibe natural, ideal pentru nunta.",
+    "desc": "Invitație tip pergament, rulată și legată manual cu fundiță verde smarald din organza. Stil minimalist cu vibe natural, ideal pentru nuntă.",
     "images": [
-      "/images/invitatii/invitatie-pergament-verde-smarald.jpg"
+      "/images/invitatii/invitatie-pergament-verde-smarald.jpg",
+      "/images/invitatii/invitatie-pergament-verde-smarald-1.JPEG"
     ],
     "tags": [
       "invitatii",
@@ -203,8 +202,7 @@
       "elegant",
       "minimalist",
       "rustic",
-      "natural",
-      "personalizat"
+      "natural"
     ],
     "slug": "invitatie-pergament-cu-fundita-verde-smarald-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
