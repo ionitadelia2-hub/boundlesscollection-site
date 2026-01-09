@@ -27,26 +27,26 @@
   },
   {
     "id": "invitatie-poza-calc-roz-002",
-    "title": "Invitatie botez cu poza si foaie de calc",
+    "title": "Invitație de botez cu fotografie și foaie de calc",
     "price": 7.99,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie pe carton foto, acoperita cu foaie de calc imprimata si fundita organza roz.",
+    "desc": "Invitație de botez cu design modern și delicat, realizată pe carton foto, completată de o foaie de calc imprimată care adaugă un efect elegant și aerisit. Fotografia este integrată armonios în design, iar invitația este finisată cu o fundiță din organza, pentru un plus de rafinament.",
     "images": [
       "/images/invitatii/invitatie-botez-foto-foaie-de-calc-roz.jpg"
     ],
     "tags": [
       "invitatii",
       "botez",
-      "foto",
-      "calc",
+      "fotografie",
+      "foaie de calc",
       "transparent",
-      "fundita roz",
+      "organza",
       "personalizat",
       "modern",
       "elegant"
     ],
-    "slug": "invitatie-botez-cu-poza-si-foaie-de-calc-invitati",
+    "slug": "invitatie-de-botez-cu-fotografie-si-foaie-de-calc-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
