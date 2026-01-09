@@ -53,39 +53,39 @@
   },
   {
     "id": "invitatie-ursulet-bleu-003",
-    "title": "Invitatie botez baietel cu ursulet si fundita bleu",
+    "title": "Invitație de botez pentru băiețel cu ursuleț și fundiță bleu",
     "price": 7.99,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie delicata pentru botez baietel, pe carton premium cu ilustratie ursulet si fundita bleu aplicata manual. Design pastel, personalizabil integral.",
+    "desc": "Invitație delicată pentru botezul băiețelului, realizată pe carton premium, cu ilustrație de ursuleț în tonuri pastel și fundiță bleu aplicată manual. Designul aerisit și cromatica blândă creează o invitație elegantă, potrivită unui eveniment special dedicat celor mici.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-bleu.jpg"
     ],
     "tags": [
       "invitatii",
       "botez",
-      "baiat",
+      "baietel",
       "ursulet",
       "fundita bleu",
       "pastel",
       "delicat",
-      "copii",
-      "personalizat"
+      "elegant"
     ],
-    "slug": "invitatie-botez-baietel-cu-ursulet-si-fundita-bleu-invitati",
+    "slug": "invitatie-de-botez-pentru-baietel-cu-ursulet-si-fundita-bleu-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
   {
     "id": "invitatie-fundita-rosie-calc-004",
-    "title": "Invitatie botez cu fundita rosie si foaie de calc",
+    "title": "Invitație de botez cu fundiță roșie și foaie de calc",
     "price": 9,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie pe carton premium cu invelis calc semitransparent si fundita rosie din organza. Stil elegant pentru evenimente tematice.",
+    "desc": "Invitație elegantă realizată pe carton premium, completată de un înveliș din foaie de calc semitransparentă și fundiță roșie din organza. Designul clasic, cu accente fine, oferă o prezentare rafinată și potrivită pentru evenimente tematice.",
     "images": [
-      "/images/invitatii/invitatie-botez-fundita-rosie-foaie-calc.jpg"
+      "/images/invitatii/invitatie-botez-fundita-rosie-foaie-calc.jpg",
+      "/images/invitatii/invitatie-botez-fundita-rosie-foaie-calc-1.JPEG"
     ],
     "tags": [
       "invitatii",
@@ -94,11 +94,10 @@
       "organza",
       "calc",
       "elegant",
-      "handmade",
       "clasic",
-      "personalizat"
+      "eveniment"
     ],
-    "slug": "invitatie-botez-cu-fundita-rosie-si-foaie-de-calc-invitati",
+    "slug": "invitatie-de-botez-cu-fundita-rosie-si-foaie-de-calc-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
