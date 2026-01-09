@@ -211,11 +211,11 @@
   },
   {
     "id": "invitatie-safari-plic-verde-009",
-    "title": "Invitatie botez Safari cu plic verde",
+    "title": "Invitație botez Safari cu plic verde",
     "price": 13,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie botez Safari pe carton premium mat, cu animale de jungla si frunze tropicale, plus plic verde decupat tip frunza. Design vesel si unitar.",
+    "desc": "Invitație de botez tematică Safari, realizată pe carton premium mat, cu animale de junglă și frunze tropicale. Completată de plic verde decupat tip frunză, pentru un aspect vesel și unitar.",
     "images": [
       "/images/invitatii/invitatie-botez-safari-plic-verde.jpg"
     ],
@@ -227,10 +227,8 @@
       "animale",
       "verde",
       "plic",
-      "baietel",
       "natur",
-      "tematica",
-      "personalizat"
+      "tematica"
     ],
     "slug": "invitatie-botez-safari-cu-plic-verde-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
@@ -239,13 +237,14 @@
   },
   {
     "id": "invitatie-nunta-ziar-010",
-    "title": "Invitatie nunta tip Ziar",
+    "title": "Invitație nuntă tip Ziar",
     "price": 6.99,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie de nunta tip ziar/revista retro, printata pe carton mat si legata cu sfoara natur. Model creativ care spune povestea mirilor. Personalizare completa.",
+    "desc": "Invitație de nuntă tip ziar, cu design retro inspirat din reviste, printată pe carton mat și legată cu sfoară naturală. Un model creativ, cu aspect editorial, care spune povestea mirilor într-un mod original.",
     "images": [
-      "/images/invitatii/invitatie-nunta-jurnal.jpg"
+      "/images/invitatii/invitatie-nunta-jurnal.jpg",
+      "/images/invitatii/invitatie-nunta-jurnal-1.JPEG"
     ],
     "tags": [
       "invitatii",
@@ -254,7 +253,6 @@
       "retro",
       "newspaper",
       "creativa",
-      "personalizata",
       "originala",
       "carton mat",
       "sfoara"
@@ -266,13 +264,14 @@
   },
   {
     "id": "invitatie-ursulet-bleu-norisori-088",
-    "title": "Invitatie botez ursulet bleu cu norisori si funda satin",
+    "title": "Invitație botez ursuleț bleu cu norișori și fundă satin",
     "price": 8.99,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie delicata pentru botez baietel, in nuante bleu pastel, cu ursulet adormit pe norisori si fundita satin, printata pe carton premium.",
+    "desc": "Invitație delicată pentru botez băiețel, realizată în nuanțe bleu pastel, cu ursuleț adormit pe norișori și fundă din satin. Printată pe carton premium, cu un design blând și elegant, ideal pentru un eveniment de suflet.",
     "images": [
-      "/images/invitatii/invitatie-ursulet-bleu-norisori.jpg"
+      "/images/invitatii/invitatie-ursulet-bleu-norisori.jpg",
+      "/images/invitatii/invitatie-ursulet-bleu-norisori-1.JPEG"
     ],
     "tags": [
       "invitatii",
@@ -281,9 +280,8 @@
       "bleu pastel",
       "norisori",
       "baby boy",
-      "fundita satin",
+      "funda satin",
       "carton premium",
-      "personalizat",
       "delicat",
       "elegant"
     ],
@@ -293,14 +291,15 @@
     "mpn": ""
   },
   {
-    "id": "invitatie-pegrament-printesa-bleu-091",
-    "title": "Invitatie pergament tematica printesa bleu cu fundita satin",
+    "id": "invitatie-pergament-printesa-bleu-091",
+    "title": "Invitație pergament tematică prințesă bleu cu fundă satin",
     "price": 8,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie tip pergament pentru botez sau aniversare, in nuante bleu pastel, cu grafica de basm si ilustratii elegante, rulata manual si prinsa cu fundita delicata. Se realizeaza pe carton premium si se personalizeaza complet cu nume, data si text.",
+    "desc": "Invitație tip pergament pentru botez sau aniversare, realizată în nuanțe bleu pastel, cu grafică de basm și ilustrații elegante. Rulată manual și prinsă cu o fundă delicată din satin, pe carton premium, pentru un aspect rafinat și de poveste.",
     "images": [
-      "/images/invitatii/invitatie-pergament-printesa-bleu.jpg"
+      "/images/invitatii/invitatie-pergament-printesa-bleu.jpg",
+      "/images/invitatii/invitatie-pergament-printesa-bleu-1.JPG"
     ],
     "tags": [
       "invitatii",
@@ -310,13 +309,12 @@
       "printesa",
       "bleu pastel",
       "tematica basm",
-      "fundita satin",
-      "personalizat",
+      "funda satin",
       "delicat",
       "elegant",
       "carton premium"
     ],
-    "slug": "invitatie-pergament-tematica-printesa-bleu-cu-fundita-satin-invitati",
+    "slug": "invitatie-pergament-tematica-printesa-bleu-cu-funda-satin-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
