@@ -104,26 +104,26 @@
   },
   {
     "id": "invitatie-carticica-albastra-005",
-    "title": "Invitatie botez tip carticica cu fundita albastra",
+    "title": "Invitație de botez tip cărticică cu fundiță albastră",
     "price": 6.99,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie tip carticica pe carton premium, cu fotogratie si detalii de eveniment, legata cu fundita albastra din organza.",
+    "desc": "Invitație tip cărticică realizată pe carton premium, cu fotografie și detalii de eveniment, legată cu fundiță albastră din organza. Design delicat, potrivit pentru botez de băiețel.",
     "images": [
-      "/images/invitatii/invitatie-botez-tip-carticica-fundita-albastra.jpg"
+      "/images/invitatii/invitatie-botez-tip-carticica-fundita-albastra.jpg",
+      "/images/invitatii/invitatie-botez-tip-carticica-fundita-albastra-1.JPEG"
     ],
     "tags": [
       "invitatii",
       "botez",
       "fundita albastra",
       "carticica",
-      "personalizat",
       "fotografie",
       "elegant",
       "baietel",
       "organza"
     ],
-    "slug": "invitatie-botez-tip-carticica-cu-fundita-albastra-invitati",
+    "slug": "invitatie-de-botez-tip-carticica-cu-fundita-albastra-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
