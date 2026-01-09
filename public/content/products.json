@@ -271,7 +271,7 @@
     "desc": "Invitație delicată pentru botez băiețel, realizată în nuanțe bleu pastel, cu ursuleț adormit pe norișori și fundă din satin. Printată pe carton premium, cu un design blând și elegant, ideal pentru un eveniment de suflet.",
     "images": [
       "/images/invitatii/invitatie-ursulet-bleu-norisori.jpg",
-      "/images/invitatii/invitatie-ursulet-bleu-norisori-1.JPEG"
+      "/images/invitatii/invitatie-ursulet-bleu-norisori-1.JPG"
     ],
     "tags": [
       "invitatii",
@@ -347,28 +347,27 @@
   },
   {
     "id": "invitatie-pergament-fundita-aurie-093",
-    "title": "Invitatie pergament cu fundita aurie",
+    "title": "Invitație pergament cu fundă aurie",
     "price": 8.5,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie tip pergament, realizata pe carton premium cu aspect elegant si rulata manual, apoi legata cu fundita aurie stralucitoare pentru un plus de rafinament. Textul se personalizeaza complet cu nume, data si detalii de eveniment, iar modelul poate fi adaptat cromatic la tematica aleasa.",
+    "desc": "Invitație tip pergament, realizată pe carton premium cu aspect elegant, rulată manual și legată cu o fundă aurie strălucitoare. Design rafinat, potrivit pentru evenimente speciale, cu un aer minimalist și luxos.",
     "images": [
-      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg"
+      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg",
+      "/images/invitatii/invitatie-pergament-fundita-aurie-1.jpg"
     ],
     "tags": [
       "invitatii",
       "pergament",
-      "fundita aurie",
+      "funda aurie",
       "nunta",
       "botez",
       "elegant",
-      "handmade",
       "carton premium",
-      "personalizat",
       "minimalist",
       "lux"
     ],
-    "slug": "invitatie-pergament-cu-fundita-aurie-invitati",
+    "slug": "invitatie-pergament-cu-funda-aurie-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
