@@ -58,8 +58,8 @@
     "id": "invitatie-carte-aurie-001",
     "title": "Invitatie de nunta aurie tip carte",
     "price": 4,
-    "category": "invitatie",
-    "product_type": "invitatie",
+    "category": "invitatii",
+    "product_type": "invitatii",
     "desc": "Invitatie de nunta eleganta, cu accente aurii rafinate si design romantic. Invitatie personalizabila cu numele mirilor, data evenimentului si detaliile ceremoniei, realizata pe carton premium, cu funda satinata aurie. Alegerea ideala pentru nunti clasice, elegante si rafinate.",
     "images": [
       "/images/invitatii/invitatie-carte-aurie.jpg",
@@ -84,8 +84,8 @@
     "id": "invitatie-carte-albastra-001",
     "title": "Invitatie de nunta albastra",
     "price": 4,
-    "category": "invitatie",
-    "product_type": "invitatie",
+    "category": "invitatii",
+    "product_type": "invitatii",
     "desc": "Invitatie de nunta eleganta cu flori albastrei. Design romantic cu ilustratie miri, calendar personalizat si fundita satinata albastra. Ideala pentru o nunta rafinata si memorabila.",
     "images": [
       "/images/invitatii/invitatie-albastra.jpg",
