@@ -4683,6 +4683,33 @@
     "mpn": ""
   },
   {
+    "id": "martisor-margareta-bordo-bat-001",
+    "title": "Martisor Margareta pe bat cu funda bordo",
+    "price": 12.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade cu margareta alba si centru galben, montata pe bat din lemn si accesorizata cu tulle fin, funda satinata bordo si snur traditional alb-rosu. Un model elegant si delicat, perfect pentru 1 Martie, cadouri pentru doamne sau colege.",
+    "images": [
+      "/images/martisor/martisor-margareta-bordo-baton.png"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "funda bordo",
+      "bat lemn",
+      "snur alb rosu",
+      "handmade",
+      "1 martie",
+      "cadou primavara",
+      "delicat",
+      "elegant"
+    ],
+    "slug": "martisor-margareta-pe-bat-cu-funda-bordo-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "martisor-inima-001",
     "title": "Martisor inima tip buchet",
     "price": 14.99,
