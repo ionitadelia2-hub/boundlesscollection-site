@@ -1944,8 +1944,8 @@
     "id": "plic-dar-nunta-albastru-auriu-001",
     "title": "Plic de dar nunta albastru si auriu",
     "price": 3.5,
-    "category": "plic dar",
-    "product_type": "plic dar",
+    "category": "plicuri",
+    "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru nunta, realizat din carton de calitate, decorat cu elemente florale albastre si accente aurii, personalizabil cu initiale si mesaj.",
     "images": [
       "/images/plicuri/plic-dar-albastru-auriu.jpeg"
@@ -1967,8 +1967,8 @@
     "id": "plic-dar-nunta-albastru-coronita-auriu-001",
     "title": "Plic de dar nunta albastru cu coronita si accente aurii",
     "price": 3.5,
-    "category": "plic dar",
-    "product_type": "plic dar",
+    "category": "plicuri",
+    "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru nunta, realizat din carton alb de calitate, decorat cu coronita florala in nuante de albastru si accente aurii fine.",
     "images": [
       "/images/plicuri/plic-dar-albastru-inim-albastru.jpeg"
