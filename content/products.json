@@ -1941,6 +1941,53 @@
     "mpn": ""
   },
   {
+    "id": "plic-dar-nunta-albastru-auriu-001",
+    "title": "Plic de dar nunta albastru si auriu",
+    "price": 3.5,
+    "category": "plic dar",
+    "product_type": "plic dar",
+    "desc": "Plic de dar elegant pentru nunta, realizat din carton de calitate, decorat cu elemente florale albastre si accente aurii, personalizabil cu initiale si mesaj.",
+    "images": [
+      "/images/plicuri/plic-dar-albastru-auriu.jpeg"
+    ],
+    "tags": [
+      "plic dar",
+      "nunta",
+      "albastru",
+      "auriu",
+      "personalizat",
+      "eveniment"
+    ],
+    "slug": "plic-de-dar-nunta-albastru-si-auriu-plic-dar",
+    "google_product_category": "Home & Garden > Decor > Decorative Objects",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-nunta-albastru-coronita-auriu-001",
+    "title": "Plic de dar nunta albastru cu coronita si accente aurii",
+    "price": 3.5,
+    "category": "plic dar",
+    "product_type": "plic dar",
+    "desc": "Plic de dar elegant pentru nunta, realizat din carton alb de calitate, decorat cu coronita florala in nuante de albastru si accente aurii fine.",
+    "images": [
+      "/images/plicuri/plic-dar-albastru-inim-albastru.jpeg"
+    ],
+    "tags": [
+      "plic dar",
+      "nunta",
+      "albastru",
+      "auriu",
+      "coronita florala",
+      "personalizat",
+      "eveniment"
+    ],
+    "slug": "plic-de-dar-nunta-albastru-cu-coronita-si-accente-aurii-plic-dar",
+    "google_product_category": "Home & Garden > Decor > Decorative Objects",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-boho-auriu-019",
     "title": "Plic de dar boho auriu elegant",
     "price": 3.5,
