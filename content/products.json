@@ -4413,7 +4413,7 @@
   },
   {
     "id": "martisor-margareta-alb-mov-carton-001",
-    "title": "Martisor Margareta alb cu centru mov – pe carton",
+    "title": "Martisor Margareta alb cu centru mov pe carton",
     "price": 15.99,
     "category": "martisor",
     "product_type": "martisor",
@@ -4433,6 +4433,81 @@
       "1 martie"
     ],
     "slug": "martisor-margareta-alb-cu-centru-mov-pe-carton-martisor",
+    "google_product_category": "Home & Garden > Decor > Decorative Objects",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-margareta-galben-carton-001",
+    "title": "Martisor Margareta cu centru galben pe carton",
+    "price": 15.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade cu lumanare decorativa din ceara, sub forma de margareta cu centru galben, asezata pe carton ilustrat cu tematica de primavara si ambalata individual in punga transparenta cu margarete.",
+    "images": [
+      "/images/martisor/margareta-galben-carton.png",
+      "/images/martisor/margareta-galben-carton-1.png"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "galben",
+      "ceara",
+      "handmade",
+      "carton ilustrat",
+      "primavara"
+    ],
+    "slug": "martisor-margareta-cu-centru-galben-pe-carton-martisor",
+    "google_product_category": "Home & Garden > Decor > Decorative Objects",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-margareta-albastra-carton-001",
+    "title": "Martisor Margareta albastra pe carton",
+    "price": 15.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade sub forma de margareta cu petale ivoire si centru albastru, realizat din ceara, montat pe carton decorativ cu mesaj de primavara si ambalat individual in folie transparenta cu margarete.",
+    "images": [
+      "/images/martisor/margareta-albastra-carton.png",
+      "/images/martisor/margareta-albastra-carton-1.png"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "albastru",
+      "ceara",
+      "handmade",
+      "carton decorativ",
+      "1 martie"
+    ],
+    "slug": "martisor-margareta-albastra-pe-carton-martisor",
+    "google_product_category": "Home & Garden > Decor > Decorative Objects",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-margareta-maro-carton-001",
+    "title": "Martisor Margareta maro pe carton",
+    "price": 15.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade din ceara de soia, sub forma de margareta cu petale ivoire si centru maro, montata pe carton decorativ cu mesaj de primavara si ambalata individual.",
+    "images": [
+      "/images/martisor/margareta-maro-carton.png",
+      "/images/martisor/margareta-maro-carton-1.png"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "maro",
+      "ceara soia",
+      "handmade",
+      "carton",
+      "1 martie"
+    ],
+    "slug": "martisor-margareta-maro-pe-carton-martisor",
     "google_product_category": "Home & Garden > Decor > Decorative Objects",
     "material": "",
     "mpn": ""
