@@ -2039,32 +2039,6 @@
     "mpn": ""
   },
   {
-    "id": "plic-dar-balerina-roz-052",
-    "title": "Plic de dar balerina roz",
-    "price": 3,
-    "category": "plicuri",
-    "product_type": "plicuri",
-    "desc": "Plic de dar in roz pastel, cu ilustratie delicata de balerina si accente fine. Printat pe carton premium, cu spatiu pentru nume familie si text personalizabil, ideal pentru botezuri elegante.",
-    "images": [
-      "/images/plicuri/plic-dar-balerina-roz.jpg"
-    ],
-    "tags": [
-      "plic de dar",
-      "plic bani",
-      "balerina",
-      "roz pastel",
-      "botez",
-      "fetita",
-      "elegant",
-      "personalizat",
-      "carton premium"
-    ],
-    "slug": "plic-de-dar-balerina-roz-plic-dar",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Gift Giving > Money Envelopes",
-    "material": "",
-    "mpn": ""
-  },
-  {
     "id": "plic-dar-miri-silueta-061",
     "title": "Plic de dar cu silueta miri si flori alb-verde",
     "price": 3,
@@ -2442,7 +2416,7 @@
     "product_type": "plicuri",
     "desc": "Plic de dar delicat pentru botez sau aniversare, cu ilustratie de iepuras si baloane in nuante roz pastel. Printat pe carton premium alb, cu mesaj de multumire si spatiu pentru completarea numelui familiei. Ideal pentru masa de dar si pentru tematici baby girl, cu posibilitate de personalizare la cerere.",
     "images": [
-      "/images/plicuri/plic-dar-iepuras-baloane-roz.jpg"
+      "/images/plicuri/plic-dar-iepuras-baloane-roz.jpeg"
     ],
     "tags": [
       "plic de dar",
