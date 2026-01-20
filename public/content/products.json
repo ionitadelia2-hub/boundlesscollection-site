@@ -3,8 +3,8 @@
     "id": "invitatie-nunta-aurie-pliabila-001",
     "title": "Invitatie nunta eleganta cu accente aurii",
     "price": 4.99,
-    "category": "invitatie",
-    "product_type": "invitatie",
+    "category": "invitatii",
+    "product_type": "invitatii",
     "desc": "Invitatie de nunta eleganta, realizata din carton premium, cu aurii rafinate. Model pliabil, cu layout aerisit si sectiuni clare pentru programul evenimentului, confirmare si dress code.",
     "images": [
       "/images/invitatii/invitatie-nunta-aurie-pliabila.jpeg"
@@ -2307,7 +2307,7 @@
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez baietel, cu ilustratie vesela de veverite si accente pastel. Printat pe carton mat premium, cu mesaj si nume personalizabile, potrivit pentru masa de dar.",
     "images": [
-      "/images/plicuri/plic-botez-baietel-veverite.jpg"
+      "/images/plicuri/plic-botez-baietel-veverite.jpeg"
     ],
     "tags": [
       "plic de dar",
