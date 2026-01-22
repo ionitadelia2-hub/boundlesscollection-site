@@ -4742,6 +4742,34 @@
     "mpn": ""
   },
   {
+    "id": "martisor-buchet-margareta-kraft-001",
+    "title": "Martisor Buchet Margareta Kraft",
+    "price": 15.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade sub forma de buchet mini cu margareta alba, ambalat in con din hartie kraft si decorat cu elemente naturale, buburuza decorativa si snur traditional alb-rosu. Disponibil in mai multe variante de culoare pentru centrul florii. Un cadou de primavara delicat si vesel.",
+    "images": [
+      "/images/martisor/margareta-alb-roz.jpeg",
+      "/images/martisor/margareta-alb-verde.jpeg",
+      "/images/martisor/margareta-alb-albastru.jpeg",
+      "/images/martisor/margareta-alb-portocaliu.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "buchet",
+      "margareta",
+      "kraft",
+      "handmade",
+      "snur alb rosu",
+      "cadou primavara",
+      "1 martie"
+    ],
+    "slug": "martisor-buchet-margareta-kraft-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "martisor-inima-001",
     "title": "Martisor inima tip buchet",
     "price": 14.99,
