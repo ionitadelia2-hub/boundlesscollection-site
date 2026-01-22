@@ -4624,6 +4624,67 @@
     "mpn": ""
   },
   {
+    "id": "martisor-margareta-bat-mixt-001",
+    "title": "Martisor Margareta pe bat cu funda culori diverse",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade cu margareta alba din ceara de soia, montata pe bat din lemn si accesorizata cu tulle fin, snur traditional alb-rosu si funda satinata in diverse culori. Un martisor elegant si vesel, ideal pentru 1 Martie, cadouri de primavara pentru doamne, colege sau educatoare.",
+    "images": [
+      "/images/martisor/margareta-bat.jpeg",
+      "/images/martisor/margareta-bat-1.jpeg",
+      "/images/martisor/margareta-bat-2.jpeg",
+      "/images/martisor/margareta-bat-3.jpeg",
+      "/images/martisor/margareta-bat-4.jpeg",
+      "/images/martisor/margareta-bat-5.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "bat lemn",
+      "funda satinata",
+      "ceara soia",
+      "handmade",
+      "1 martie",
+      "cadou primavara",
+      "delicat",
+      "elegant"
+    ],
+    "slug": "martisor-margareta-pe-bat-cu-funda-culori-diverse-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-lalea-bat-001",
+    "title": "Martisor Lalea pe bat",
+    "price": 14.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade din ceara de soia, sub forma de lalea stilizata, montata pe bat din lemn si decorata cu tulle delicat, funda satinata in culori diverse si snur traditional alb-rosu. Un martisor elegant, potrivit pentru 1 Martie si cadouri de primavara cu un aer special.",
+    "images": [
+      "/images/martisor/lalea-bat.jpeg",
+      "/images/martisor/lalea-bat-1.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "lalea",
+      "bat lemn",
+      "ceara soia",
+      "handmade",
+      "tulle",
+      "funda satinata",
+      "snur alb rosu",
+      "1 martie",
+      "cadou primavara",
+      "elegant"
+    ],
+    "slug": "martisor-lalea-pe-bat-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "martisor-margareta-mov-001",
     "title": "Martisor Margareta mov",
     "price": 15.99,
@@ -4945,38 +5006,6 @@
     ],
     "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-portocaliu-martisor",
     "google_product_category": "Home & Garden > Decor > Candles",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-bat-mixt-001",
-    "title": "Martisor Margareta pe bat cu funda culori diverse",
-    "price": 14.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor handmade cu margareta alba din ceara de soia, montata pe bat din lemn si accesorizata cu tulle fin, snur traditional alb-rosu si funda satinata in diverse culori. Un martisor elegant si vesel, ideal pentru 1 Martie, cadouri de primavara pentru doamne, colege sau educatoare.",
-    "images": [
-      "/images/martisor/margareta-bat.jpeg",
-      "/images/martisor/margareta-bat-1.jpeg",
-      "/images/martisor/margareta-bat-2.jpeg",
-      "/images/martisor/margareta-bat-3.jpeg",
-      "/images/martisor/margareta-bat-4.jpeg",
-      "/images/martisor/margareta-bat-5.jpeg"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "bat lemn",
-      "funda satinata",
-      "ceara soia",
-      "handmade",
-      "1 martie",
-      "cadou primavara",
-      "delicat",
-      "elegant"
-    ],
-    "slug": "martisor-margareta-pe-bat-cu-funda-culori-diverse-martisor",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
   },
