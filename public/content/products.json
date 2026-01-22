@@ -2111,6 +2111,175 @@
     "mpn": ""
   },
   {
+    "id": "plic-de-dar-botez-gemeni-ursuleti-avioane-001",
+    "title": "Plic botez gemeni cu ursuleti si avion",
+    "price": 3,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar deosebit pentru botez gemeni, cu ilustratie adorabila de ursuleti si avion, realizat pe carton premium cu textura fina. Ideal ca plic de dar sau card de masa pentru botez gemeni, personalizabil cu numele copiilor si mesaj special. Design cald si elegant, perfect pentru botez gemeni baieti sau fata si baiat, decor de masa botez si aranjamente festive.",
+    "images": [
+      "/images/plicuri/plic-gemeni-ursuleti-avioane.jpg"
+    ],
+    "tags": [
+      "place card botez gemeni",
+      "plic dar botez gemeni",
+      "place card botez personalizat gemeni",
+      "plic bani botez gemeni",
+      "decor masa botez gemeni",
+      "ursuleti botez gemeni",
+      "tema avion botez gemeni",
+      "card masa botez gemeni"
+    ],
+    "slug": "plic-botez-gemeni-cu-ursuleti-si-avion-plic-de-",
+    "google_product_category": "Home & Garden > Decor > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-de-dar-ingeras-baietel-001",
+    "title": "Plic botez baietel Ingeras",
+    "price": 3,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic elegant pentru botez baietel cu ilustratie delicata de ingeras, realizat pe carton premium cu textura fina. Ideal ca plic de dar sau card de masa pentru botez, personalizabil cu numele copilului si mesaj special.",
+    "images": [
+      "/images/plicuri/plic-botez-ingeras-baietel.jpg"
+    ],
+    "tags": [
+      "place card botez baietel",
+      "plic dar botez ingeras",
+      "place card botez personalizat",
+      "plic bani botez baiat",
+      "decor masa botez baietel",
+      "tema ingeras botez",
+      "card masa botez baietel"
+    ],
+    "slug": "plic-botez-baietel-ingeras-plic-de-",
+    "google_product_category": "Home & Garden > Decor > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-de-dar-ingeras-fetita-001",
+    "title": "Plic de dar botez cu ingeras",
+    "price": 3,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar delicat pentru botez, decorat cu ilustratie eleganta de ingeras si stele, ideal pentru evenimente speciale dedicate fetitelor. Realizat din carton premium cu textura fina, acest plic pentru bani la botez este personalizabil cu nume si mesaj, fiind alegerea perfecta pentru botez, petrecere de crestinare sau masa festiva.",
+    "images": [
+      "/images/plicuri/plic-dar-botez-ingeras-fetita.jpg"
+    ],
+    "tags": [
+      "plic dar botez",
+      "plic bani botez fetita",
+      "plic dar ingeras",
+      "plic botez personalizat",
+      "plicuri botez elegante",
+      "plic bani crestinare",
+      "plic cadou botez"
+    ],
+    "slug": "plic-de-dar-botez-cu-ingeras-plic-de-",
+    "google_product_category": "Home & Garden > Decor > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-de-dar-lamai-mediteranean-001",
+    "title": "Plic de dar nunta cu lamai – model elegant mediteranean",
+    "price": 3,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru nunta, decorat cu model rafinat cu lamai si motive florale in stil mediteranean. Realizat din carton premium, acest plic pentru bani este ideal pentru mese festive, nunti elegante sau evenimente speciale. Plicul este personalizabil cu initiale si mesaj, oferind o nota distincta si sofisticata decorului de eveniment.",
+    "images": [
+      "/images/plicuri/plic-dar-nunta-lamai-mediteranean.jpg"
+    ],
+    "tags": [
+      "plic dar nunta",
+      "plic bani nunta",
+      "plic dar elegant",
+      "plic nunta personalizat",
+      "plicuri nunta moderne",
+      "plic dar evenimente",
+      "plic model lamaie"
+    ],
+    "slug": "plic-de-dar-nunta-cu-lamai-model-elegant-mediteranean-plic-de-",
+    "google_product_category": "Home & Garden > Decor > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-nunta-vintage-travel-001",
+    "title": "Plic de dar nunta vintage travel – model elegant cu avion",
+    "price": 3,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru nunta, realizat in stil vintage travel, cu design inspirat din harti vechi si elemente grafice clasice. Ideal pentru nunti cu tematica calatorii, boho sau rustica, acest plic pentru bani este confectionat din carton premium si poate fi personalizat cu initiale si mesaj. Un accesoriu rafinat pentru mesele invitatilor, care adauga personalitate si stil decorului de eveniment.",
+    "images": [
+      "/images/plicuri/plic-dar-nunta-vintage-travel.jpg"
+    ],
+    "tags": [
+      "plic dar nunta",
+      "plic bani nunta",
+      "plic dar vintage",
+      "plic nunta personalizat",
+      "plic dar travel",
+      "plic nunta tematica calatorii",
+      "plicuri nunta elegante"
+    ],
+    "slug": "plic-de-dar-nunta-vintage-travel-model-elegant-cu-avion-plic-dar",
+    "google_product_category": "Home & Garden > Decor > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-nuntez-nunta-botez-001",
+    "title": "Plic de dar nuntez – nunta si botez model elegant personalizat",
+    "price": 3,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru nuntez, eveniment special care imbina nunta si botezul intr-o singura celebrare. Designul delicat, in tonuri pastel, este ideal pentru mesele invitatilor si pune in valoare atat mirii, cat si copilul botezat. Acest plic pentru bani este realizat din carton premium si poate fi personalizat cu nume, mesaj si datele evenimentului. Alegerea perfecta pentru nuntezuri moderne, elegante si pline de emotie.",
+    "images": [
+      "/images/plicuri/plic-dar-nuntez-nunta-botez.jpg"
+    ],
+    "tags": [
+      "plic dar nuntez",
+      "plic bani nuntez",
+      "plic nunta si botez",
+      "plic dar nunta botez",
+      "plic personalizat nuntez",
+      "plicuri nuntez elegante",
+      "plic dar eveniment dublu"
+    ],
+    "slug": "plic-de-dar-nuntez-nunta-si-botez-model-elegant-personalizat-plic-dar",
+    "google_product_category": "Home & Garden > Decor > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "plic-dar-nunta-elegant-gri-auriu-001",
+    "title": "Plic de dar nunta elegant gri cu auriu personalizat",
+    "price": 3.5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar elegant pentru nunta, cu design modern in nuante de gri si accente aurii, ideal pentru evenimente rafinate si mese festive premium. Acest plic pentru bani este realizat din carton de calitate superioara si poate fi personalizat cu numele mirilor si mesajul dorit. O alegere perfecta pentru nunti elegante, sofisticate si atent organizate, unde fiecare detaliu conteaza.",
+    "images": [
+      "/images/plicuri/plic-dar-nunta-gri-auriu.jpg"
+    ],
+    "tags": [
+      "plic dar nunta",
+      "plic bani nunta",
+      "plic dar elegant",
+      "plic nunta personalizat",
+      "plicuri nunta moderne",
+      "plic dar eveniment nunta",
+      "plic bani masa invitati"
+    ],
+    "slug": "plic-de-dar-nunta-elegant-gri-cu-auriu-personalizat-plic-dar",
+    "google_product_category": "Home & Garden > Decor > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-dar-ursulet-baloane-albastru-078",
     "title": "Plic de dar ursulet cu baloane albastre",
     "price": 3,
