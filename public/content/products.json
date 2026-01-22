@@ -4600,13 +4600,13 @@
     "product_type": "martisor",
     "desc": "Martisor realizat manual din ceara de soia, sub forma de margareta, disponibil in modele si culori diferite. Fiecare martisor este ambalat individual cu tematica de primavara, accesorizat cu snur traditional alb-rosu si sticker personalizat. Un cadou simbolic si elegant pentru 1 Martie, potrivit pentru a fi oferit colegelor, prietenelor, educatoarelor sau persoanelor dragi.",
     "images": [
-      "/images/martisor/margareta-colorata-1.jpeg",
-      "/images/martisor/margareta-colorata-2.jpeg",
+      "/images/martisor/margareta-colorata-7.jpeg",
+      "/images/martisor/margareta-colorata-6.jpeg",
       "/images/martisor/margareta-colorata-3.jpeg",
       "/images/martisor/margareta-colorata-4.jpeg",
       "/images/martisor/margareta-colorata-5.jpeg",
-      "/images/martisor/margareta-colorata-6.jpeg",
-      "/images/martisor/margareta-colorata-7.jpeg"
+      "/images/martisor/margareta-colorata-2.jpeg",
+      "/images/martisor/margareta-colorata-1.jpeg"
     ],
     "tags": [
       "martisor",
@@ -4949,28 +4949,32 @@
     "mpn": ""
   },
   {
-    "id": "martisor-margareta-bordo-bat-001",
-    "title": "Martisor Margareta pe bat cu funda bordo",
-    "price": 12.99,
+    "id": "martisor-margareta-bat-mixt-001",
+    "title": "Martisor Margareta pe bat cu funda culori diverse",
+    "price": 14.99,
     "category": "martisor",
     "product_type": "martisor",
-    "desc": "Martisor handmade cu margareta alba si centru galben, montata pe bat din lemn si accesorizata cu tulle fin, funda satinata bordo si snur traditional alb-rosu. Un model elegant si delicat, perfect pentru 1 Martie, cadouri pentru doamne sau colege.",
+    "desc": "Martisor handmade cu margareta alba din ceara de soia, montata pe bat din lemn si accesorizata cu tulle fin, snur traditional alb-rosu si funda satinata in diverse culori. Un martisor elegant si vesel, ideal pentru 1 Martie, cadouri de primavara pentru doamne, colege sau educatoare.",
     "images": [
-      "/images/martisor/martisor-margareta-bordo-baton.PNG"
+      "/images/martisor/margareta-bat.jpeg",
+      "/images/martisor/margareta-bat-1.jpeg",
+      "/images/martisor/margareta-bat-2.jpeg",
+      "/images/martisor/margareta-bat-3.jpeg",
+      "/images/martisor/margareta-bat-4.jpeg"
     ],
     "tags": [
       "martisor",
       "margareta",
-      "funda bordo",
       "bat lemn",
-      "snur alb rosu",
+      "funda satinata",
+      "ceara soia",
       "handmade",
       "1 martie",
       "cadou primavara",
       "delicat",
       "elegant"
     ],
-    "slug": "martisor-margareta-pe-bat-cu-funda-bordo-martisor",
+    "slug": "martisor-margareta-pe-bat-cu-funda-culori-diverse-martisor",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
