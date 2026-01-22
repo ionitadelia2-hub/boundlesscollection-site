@@ -4624,6 +4624,31 @@
     "mpn": ""
   },
   {
+    "id": "martisor-margareta-tulle-001",
+    "title": "Martisor Margareta in tulle",
+    "price": 10,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade cu margareta alba si centru colorat, ambalata individual in saculet fin din tulle si accesorizata cu snur traditional alb-rosu cu ciucuri decorativi. Un martisor delicat si elegant, ideal pentru 1 Martie, cadouri simbolice de primavara sau atentii pentru doamne si colege.",
+    "images": [
+      "/images/martisor/margareta-tulle.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "tulle",
+      "handmade",
+      "snur alb rosu",
+      "cadou primavara",
+      "1 martie",
+      "delicat"
+    ],
+    "slug": "martisor-margareta-in-tulle-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "martisor-margareta-bat-mixt-001",
     "title": "Martisor Margareta pe bat cu funda culori diverse",
     "price": 14.99,
@@ -4749,10 +4774,10 @@
     "product_type": "martisor",
     "desc": "Martisor handmade sub forma de buchet mini cu margareta alba, ambalat in con din hartie kraft si decorat cu elemente naturale, buburuza decorativa si snur traditional alb-rosu. Disponibil in mai multe variante de culoare pentru centrul florii. Un cadou de primavara delicat si vesel.",
     "images": [
-      "/images/martisor/margareta-alb-roz.jpeg",
-      "/images/martisor/margareta-alb-verde.jpeg",
-      "/images/martisor/margareta-alb-albastru.jpeg",
-      "/images/martisor/margareta-alb-portocaliu.jpeg"
+      "/images/martisor/margareta-alb-roz-1.jpeg",
+      "/images/martisor/margareta-alb-verde-1.jpeg",
+      "/images/martisor/margareta-alb-albastru-1.jpeg",
+      "/images/martisor/margareta-alb-portocaliu-1.jpeg"
     ],
     "tags": [
       "martisor",
