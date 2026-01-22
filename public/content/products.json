@@ -4685,327 +4685,59 @@
     "mpn": ""
   },
   {
-    "id": "martisor-margareta-mov-001",
-    "title": "Martisor Margareta mov",
+    "id": "martisor-margareta-calba-001",
+    "title": "Martisor Margareta in cutie alba",
     "price": 15.99,
     "category": "martisor",
     "product_type": "martisor",
-    "desc": "Martisor realizat manual din ceara de soia, sub forma de margareta cu centru mov, ambalat intr-o cutie alba eleganta cu fereastra si decorat cu funda satinata mov. Un cadou delicat pentru inceputul primaverii.",
+    "desc": "Martisor realizat manual din ceara de soia, sub forma de margareta, ambalat intr-o cutie alba eleganta cu fereastra si accesorizat cu funda satinata si snur traditional alb-rosu. Culorile si detaliile decorative pot varia. Un cadou delicat si rafinat pentru 1 Martie.",
     "images": [
-      "/images/martisor/margareta-mov-alb.jpg"
+      "/images/martisor/margareta-calba.jpg",
+      "/images/martisor/margareta-calba-1.jpg",
+      "/images/martisor/margareta-calba-2.jpg",
+      "/images/martisor/margareta-calba-3.jpg"
     ],
     "tags": [
       "martisor",
       "margareta",
-      "mov",
-      "ceara soia",
-      "handmade",
       "cutie alba",
-      "cadou primavara"
-    ],
-    "slug": "martisor-margareta-mov-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-aurie-alb-001",
-    "title": "Martisor Margareta aurie",
-    "price": 15.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor handmade din ceara de soia, sub forma de margareta cu centru galben, ambalat intr-o cutie alba cu fereastra si funda satinata aurie. Cadou luminos si elegant de Martisor.",
-    "images": [
-      "/images/martisor/margareta-aurie-alb.jpg"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "auriu",
       "ceara soia",
       "handmade",
-      "cutie alba",
-      "1 martie"
-    ],
-    "slug": "martisor-margareta-aurie-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-lila-kraft-001",
-    "title": "Martisor Margareta lila",
-    "price": 15.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor din ceara de soia, realizat manual sub forma de margareta cu centru lila, ambalat intr-o cutie kraft cu fereastra si funda satinata lila. Cadou delicat pentru primavara.",
-    "images": [
-      "/images/martisor/margareta-lila-kraft.jpg"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "lila",
-      "ceara soia",
-      "handmade",
-      "cutie kraft",
-      "primavara"
-    ],
-    "slug": "martisor-margareta-lila-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-verde-001",
-    "title": "Martisor Margareta verde",
-    "price": 15.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor handmade din ceara de soia, in forma de margareta cu accente verzi, ambalat intr-o cutie cu fereastra si funda verde satinata. Inspirat de prospetimea primaverii.",
-    "images": [
-      "/images/martisor/margareta-verde.jpg"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "verde",
-      "floare",
-      "handmade",
-      "primavara",
-      "cadou 1 martie"
-    ],
-    "slug": "martisor-margareta-verde-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-aurie-001",
-    "title": "Martisor Margareta aurie",
-    "price": 15.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor realizat manual din ceara de soia, sub forma de margareta cu centru galben, ambalat intr-o cutie kraft eleganta si decorat cu funda satinata aurie. Cadou luminos pentru inceput de primavara.",
-    "images": [
-      "/images/martisor/margareta-aurie-kraft.jpg"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "auriu",
-      "floare",
-      "ceara soia",
-      "handmade",
-      "cadou primavara"
-    ],
-    "slug": "martisor-margareta-aurie-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-bordo-001",
-    "title": "Martisor Margareta bordo",
-    "price": 15.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor din ceara de soia, realizat manual sub forma de margareta cu centru bordo, prezentat intr-o cutie natur cu fereastra si funda satinata bordo. Un martisor elegant si deosebit.",
-    "images": [
-      "/images/martisor/margareta-bordo.jpg"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "bordo",
-      "floare",
-      "ceara soia",
-      "handmade",
-      "cadou martisor"
-    ],
-    "slug": "martisor-margareta-bordo-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-alb-002",
-    "title": "Martisor Margareta portocaliu",
-    "price": 15.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor realizat manual din ceara de soia sub forma de margareta, ambalat elegant in cutie alba cu fereastra si decorat cu fundita satinata. Un cadou delicat si luminos, ideal pentru a celebra venirea primaverii, 1 Martie sau 8 Martie.",
-    "images": [
-      "/images/martisor/margareta-portocaliu.jpg"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "floare ceara",
-      "cutie alba",
+      "1 martie",
       "cadou primavara",
-      "handmade",
-      "1 martie",
-      "8 martie",
-      "primavara"
+      "elegant"
     ],
-    "slug": "martisor-margareta-portocaliu-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
+    "slug": "martisor-margareta-in-cutie-alba-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
   },
   {
-    "id": "martisor-margareta-alb-001",
-    "title": "Martisor Margareta lime",
+    "id": "martisor-margareta-kraft-001",
+    "title": "Martisor Margareta in cutie kraft",
     "price": 15.99,
     "category": "martisor",
     "product_type": "martisor",
-    "desc": "Martisor realizat manual din ceara de soia sub forma de margareta, ambalat in cutie alba cu fereastra si decorat cu fundita satinata. Un martisor cu aspect natural si cald, perfect pentru cadouri de primavara.",
+    "desc": "Martisor realizat manual din ceara de soia, sub forma de margareta, ambalat intr-o cutie kraft eleganta cu fereastra si accesorizat cu funda satinata in diverse culori. Un cadou delicat si natural, perfect pentru 1 Martie si pentru a celebra inceputul primaverii.",
     "images": [
-      "/images/martisor/margareta-cutie-lime.jpg"
+      "/images/martisor/margareta-kraft.jpg",
+      "/images/martisor/margareta-kraft-1.jpg",
+      "/images/martisor/margareta-kraft-2.jpg",
+      "/images/martisor/margareta-kraft-3.jpg"
     ],
     "tags": [
       "martisor",
       "margareta",
-      "floare ceara",
       "cutie kraft",
+      "ceara soia",
+      "handmade",
+      "1 martie",
       "cadou primavara",
-      "handmade",
-      "1 martie",
-      "8 martie",
-      "primavara"
+      "natural",
+      "elegant"
     ],
-    "slug": "martisor-margareta-lime-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-inel-bordo-001",
-    "title": "Martisor Margareta inel",
-    "price": 19.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor handmade din ceara de soia, sub forma de margareta montata intr-un inel decorativ si legata cu fundita satinata bordo. Un cadou elegant si rafinat de Martisor, ideal pentru 1 Martie.",
-    "images": [
-      "/images/martisor/margareta-inel-bordo.jpg"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "bordo",
-      "ceara soia",
-      "handmade",
-      "inel decorativ",
-      "1 martie"
-    ],
-    "slug": "martisor-margareta-inel-martisor",
-    "google_product_category": "Home & Garden > Decor > Decorative Objects",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-alb-rosu-001",
-    "title": "Martisor margareta din ceara de soia alb cu rosu",
-    "price": 14.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor realizat manual din ceara de soia 100% naturala, sub forma de margareta alba cu centru rosu, ambalat ca mini buchet floral si accesorizat cu snur traditional de martisor. Cadou delicat si parfumat pentru 1 Martie.",
-    "images": [
-      "/images/martisor/margareta-alb-rosu.JPEG",
-      "/images/martisor/margareta-alb-rosu-1.JPG"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "ceara soia",
-      "floral",
-      "handmade",
-      "1 martie",
-      "cadou",
-      "primavara"
-    ],
-    "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-rosu-martisor",
-    "google_product_category": "Home & Garden > Decor > Candles",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-alb-verde-002",
-    "title": "Martisor margareta din ceara de soia alb cu verde",
-    "price": 14.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor handmade din ceara de soia naturala, in forma de margareta alba cu centru verde, ambalat elegant in stil mini buchet. Ideal pentru a oferi un simbol al primaverii de 1 Martie.",
-    "images": [
-      "/images/martisor/margareta-alb-verde.JPEG",
-      "/images/martisor/margareta-alb-verde-1.JPG"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "ceara soia",
-      "verde",
-      "floral",
-      "handmade",
-      "martisor",
-      "primavara"
-    ],
-    "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-verde-martisor",
-    "google_product_category": "Home & Garden > Decor > Candles",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-alb-albastru-003",
-    "title": "Martisor margareta din ceara de soia alb cu albastru",
-    "price": 14.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor realizat manual din ceara de soia 100% naturala, in forma de margareta roz cu centru galben, ambalat ca mini buchet floral. Un cadou parfumat si delicat pentru 1 Martie.",
-    "images": [
-      "/images/martisor/margareta-alb-albastru.JPEG",
-      "/images/martisor/margareta-alb-albastru-1.JPEG"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "ceara soia",
-      "roz",
-      "floral",
-      "handmade",
-      "1 martie",
-      "cadou",
-      "primavara"
-    ],
-    "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-albastru-martisor",
-    "google_product_category": "Home & Garden > Decor > Candles",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "martisor-margareta-alb-portocaliu-004",
-    "title": "Martisor margareta din ceara de soia alb cu portocaliu",
-    "price": 14.99,
-    "category": "martisor",
-    "product_type": "martisor",
-    "desc": "Martisor handmade din ceara de soia naturala, in forma de margareta roz cu centru galben, ambalat elegant in stil mini buchet. Ideal pentru a oferi un simbol al primaverii de 1 Martie.",
-    "images": [
-      "/images/martisor/margareta-alb-portocaliu.JPEG",
-      "/images/martisor/margareta-alb-portocaliu-1.JPG"
-    ],
-    "tags": [
-      "martisor",
-      "margareta",
-      "ceara soia",
-      "roz",
-      "floral",
-      "handmade",
-      "martisor",
-      "primavara"
-    ],
-    "slug": "martisor-margareta-din-ceara-de-soia-alb-cu-portocaliu-martisor",
-    "google_product_category": "Home & Garden > Decor > Candles",
+    "slug": "martisor-margareta-in-cutie-kraft-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
   },
