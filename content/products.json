@@ -4649,6 +4649,82 @@
     "mpn": ""
   },
   {
+    "id": "martisor-fluturas-celofan-001",
+    "title": "Martisor Fluturas din ceara in ambalaj celofan",
+    "price": 10,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual din ceara, sub forma de fluturasi decorativi, ambalati in punga din celofan transparent cu model floral si accesorizati cu snur traditional alb-rosu. Un cadou vesel si delicat de 1 Martie, potrivit pentru doamne, domnisoare sau copii.",
+    "images": [
+      "/images/martisor/fluturas-celofan.jpeg",
+      "/images/martisor/fluturas-celofan-1.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "fluturasi",
+      "ceara",
+      "handmade",
+      "celofan",
+      "snur alb rosu",
+      "cadou primavara",
+      "1 martie"
+    ],
+    "slug": "martisor-fluturas-din-ceara-in-ambalaj-celofan-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-bujorel-celofan-001",
+    "title": "Martisor Bujorel din ceara in ambalaj celofan",
+    "price": 8,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual din ceara, sub forma de bujorel decorativ, ambalat in punga din celofan transparent cu model floral si accesorizat cu snur traditional alb-rosu. Un cadou delicat si vesel de 1 Martie, potrivit pentru doamne, domnisoare sau copii.",
+    "images": [
+      "/images/martisor/bujorel-celofan.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "bujorel",
+      "ceara",
+      "handmade",
+      "celofan",
+      "snur alb rosu",
+      "cadou primavara",
+      "1 martie"
+    ],
+    "slug": "martisor-bujorel-din-ceara-in-ambalaj-celofan-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-margareta-tulle-rotund-001",
+    "title": "Martisor Margareta din ceara in vas ceramic",
+    "price": 24.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual din ceara, sub forma de margareta in vas de ceramic, ambalat in saculet fin din tulle, accesorizat cu snur traditional alb-rosu. Un cadou delicat si elegant de 1 Martie, potrivit pentru doamne, domnisoare sau colege.",
+    "images": [
+      "/images/martisor/margareta-tulle-rotund.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "margareta",
+      "ceara",
+      "handmade",
+      "tulle",
+      "snur alb rosu",
+      "cadou primavara",
+      "1 martie"
+    ],
+    "slug": "martisor-margareta-din-ceara-in-vas-ceramic-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "martisor-margareta-bat-mixt-001",
     "title": "Martisor Margareta pe bat cu funda culori diverse",
     "price": 14.99,
