@@ -1,5 +1,33 @@
 [
   {
+    "id": "invitatie-nunta-poarta-basm-011",
+    "title": "Invitație de nuntă tip poartă de basm cu fundă albă",
+    "price": 9.5,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitație de nuntă elegantă, cu design ilustrat în stil acuarelă, reprezentând o poartă de piatră îmbrăcată în flori albe și frunziș verde, inspirată din povești romantice. Model pliabil tip porțiță, legat la exterior cu fundă satinată albă, pentru un efect delicat și rafinat. La deschidere, invitația dezvăluie o bisericuță ilustrată în stil de poveste și un layout aerisit pentru textul personalizat al evenimentului.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-poarta-basm-funda-alba.jpg",
+      "/images/invitatii/invitatie-nunta-poarta-basm-funda-alba-1.jpg"
+    ],
+    "tags": [
+      "invitatie nunta",
+      "basm",
+      "romantic",
+      "elegant",
+      "fundita alba",
+      "acuarela",
+      "invitatie pliabila",
+      "nunta clasica",
+      "nunta eleganta",
+      "personalizata"
+    ],
+    "slug": "invitatie-de-nunta-tip-poarta-de-basm-cu-funda-alba-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-nunta-aurie-pliabila-001",
     "title": "Invitatie nunta eleganta cu accente aurii",
     "price": 4.99,
@@ -5007,7 +5035,7 @@
   {
     "id": "tablou-parfumat-inima-soia-001",
     "title": "Tablou parfumat personalizat cu inima din ceara de soia",
-    "price": 149,
+    "price": 80,
     "category": "tablouri parfumate",
     "product_type": "tablouri parfumate",
     "desc": "Tablou decorativ personalizat, realizat manual, cu lumanare in forma de inima din ceara de soia naturala si elemente florale delicate. Ideal pentru cadouri emotionante, aniversari, nunta sau decor elegant pentru casa.",
@@ -5030,7 +5058,7 @@
   {
     "id": "tablou-parfumat-portret-soia-002",
     "title": "Tablou parfumat personalizat cu lumanare din ceara de soia",
-    "price": 109,
+    "price": 60,
     "category": "tablouri parfumate",
     "product_type": "tablouri parfumate",
     "desc": "Tablou artistic realizat manual, cu ilustratie minimalista si lumanare decorativa din ceara de soia, completat cu flori uscate si detalii fine. Un cadou special, personalizabil, perfect pentru momente cu semnificatie.",
