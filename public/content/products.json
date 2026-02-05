@@ -4650,6 +4650,106 @@
     "mpn": ""
   },
   {
+    "id": "martisor-lalele-buchet-001",
+    "title": "Martisor Buchet de Lalele din ceara",
+    "price": 55.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual din ceara, sub forma unui buchet delicat de lalele, legat la baza si plin de detalii fine. Un cadou deosebit de 1 Martie, care aduce farmecul primaverii in orice casa. Ideal pentru doamne, domnisoare, educatoare sau colege.",
+    "images": [
+      "/images/martisor/buchet-lalele.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "lalele",
+      "buchet",
+      "ceara",
+      "handmade",
+      "cadou primavara",
+      "1 martie",
+      "decor floral"
+    ],
+    "slug": "martisor-buchet-de-lalele-din-ceara-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-lalele-buchet-002",
+    "title": "Martisor Aranjament Lalele din ceara",
+    "price": 35.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor lucrat manual din ceara, reprezentand un aranjament cu lalele elegante, in nuante de primavara. O alegere rafinata pentru a oferi un martisor special, care poate fi pastrat ca decor sau aprins in momente de liniste.",
+    "images": [
+      "/images/martisor/aranjament-lalele.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "lalele",
+      "aranjament floral",
+      "ceara",
+      "handmade",
+      "cadou femei",
+      "primavara",
+      "1 martie"
+    ],
+    "slug": "martisor-aranjament-lalele-din-ceara-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-lalea-simpla-003",
+    "title": "Martisor Lalea din ceara",
+    "price": 11.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade din ceara, in forma de lalea delicata, simbol al primaverii si al feminitatii. Mic, fin si elegant, este cadoul perfect de 1 Martie pentru colege, prietene sau invatatoare.",
+    "images": [
+      "/images/martisor/lalea-simpla.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "lalea",
+      "floare",
+      "ceara",
+      "handmade",
+      "martisor floral",
+      "cadou primavara",
+      "1 martie"
+    ],
+    "slug": "martisor-lalea-din-ceara-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-floare-lotus-004",
+    "title": "Martisor Floare tip Lotus din ceara",
+    "price": 31.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual din ceara, in forma unei flori cu petale larg deschise, inspirata de eleganta lotusului. Delicat si deosebit, acest martisor aduce un aer rafinat de primavara si poate fi pastrat ca decor sau aprins pentru o atmosfera calda si relaxanta. Un cadou special de 1 Martie pentru femei care iubesc florile si lucrurile fine.",
+    "images": [
+      "/images/martisor/floare-lotus.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "floare lotus",
+      "floare decorativa",
+      "ceara",
+      "handmade",
+      "cadou elegant",
+      "primavara",
+      "1 martie"
+    ],
+    "slug": "martisor-floare-tip-lotus-din-ceara-martisor",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "martisor-margareta-variat-001",
     "title": "Martisor Margareta handmade – culori diverse",
     "price": 12,
