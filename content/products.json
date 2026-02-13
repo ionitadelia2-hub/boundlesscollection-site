@@ -4794,6 +4794,59 @@
     "mpn": ""
   },
   {
+    "id": "martisor-buchet-floral-001",
+    "title": "Buchet Martisor Premium cu trandafiri din ceara si flori uscate",
+    "price": 54.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual sub forma de buchet floral bogat, cu flori din ceara in nuante de roz si alb, completati de flori uscate decorative. Elegant si rafinat, acest buchet este accesorizat cu snur traditional alb-rosu si reprezinta un cadou special pentru 1 Martie.",
+    "images": [
+      "/images/martisor/buchet-premium-floral-1.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "buchet martisor",
+      "trandafiri",
+      "ceara",
+      "flori uscate",
+      "premium",
+      "cadou 1 martie",
+      "primavara",
+      "handmade"
+    ],
+    "slug": "buchet-martisor-premium-cu-trandafiri-din-ceara-si-flori-uscate-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-aranjament-premium-flori-soia-001",
+    "title": "Martisor Aranjament Premium cu flori din ceara de soia in vas ceramic",
+    "price": 54.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual sub forma de aranjament floral premium, cu flori din ceara de soia in nuante de roz si crem, completate de flori uscate decorative atent alese. Asezat intr-un vas ceramic alb texturat si accesorizat cu snur traditional alb-rosu, acest martisor este un cadou elegant si rafinat pentru 1 Martie.",
+    "images": [
+      "/images/martisor/aranjament-premium-flori-soia-1.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "flori din ceara de soia",
+      "martisor premium",
+      "aranjament floral",
+      "vas ceramic",
+      "flori uscate",
+      "snur alb rosu",
+      "cadou 1 martie",
+      "primavara",
+      "handmade"
+    ],
+    "slug": "martisor-aranjament-premium-cu-flori-din-ceara-de-soia-in-vas-ceramic-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "martisor-lalele-buchet-001",
     "title": "Martisor Buchet de Lalele din ceara",
     "price": 55.99,
