@@ -5162,6 +5162,37 @@
     "mpn": ""
   },
   {
+    "id": "martisor-floral-aranjament-vas-001",
+    "title": "Martisor sub forma de floare din ceara de soia in vas decorativ cu flori uscate",
+    "price": 24.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisoare realizate manual din ceara, sub forma de flori delicate, asezate intr-un vas decorativ alb si inconjurat de flori uscate atent alese. Fiecare aranjament este accesorizat cu snur traditional alb-rosu, buburuza decorativa si ciucuri fini, fiind un cadou elegant si simbolic pentru 1 Martie.",
+    "images": [
+      "/images/martisor/trandafir-aranjament-1.jpeg",
+      "/images/martisor/trandafir-aranjament-2.jpeg",
+      "/images/martisor/trandafir-aranjament-3.jpeg",
+      "/images/martisor/trandafir-aranjament-4.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "trandafir",
+      "ceara",
+      "aranjament floral",
+      "flori uscate",
+      "vas decorativ",
+      "buburuza",
+      "snur alb rosu",
+      "cadou 1 martie",
+      "decor primavara",
+      "handmade"
+    ],
+    "slug": "martisor-sub-forma-de-floare-din-ceara-de-soia-in-vas-decorativ-cu-flori-uscate-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "tablou-parfumat-inima-soia-001",
     "title": "Tablou parfumat personalizat cu inima din ceara de soia",
     "price": 80,
