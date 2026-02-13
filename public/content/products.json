@@ -4712,6 +4712,88 @@
     "mpn": ""
   },
   {
+    "id": "martisor-aranjament-margareta-lalea-001",
+    "title": "Martisor Aranjament Floral cu Margareta si Lalea din ceara in vas ceramic",
+    "price": 34.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual, sub forma de aranjament floral, completat de flori uscate decorative in nuante de roz si natural. Asezat intr-un vas ceramic alb cu design elegant si accesorizat cu snur traditional alb-rosu cu ciucuri, acest martisor este un cadou delicat si vesel pentru 1 Martie.",
+    "images": [
+      "/images/martisor/aranjament-margareta-lalea-1.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "martisoare",
+      "margareta",
+      "lalea",
+      "ceara",
+      "aranjament in vas",
+      "flori uscate",
+      "snur alb rosu",
+      "cadou 1 martie",
+      "primavara",
+      "handmade"
+    ],
+    "slug": "martisor-aranjament-floral-cu-margareta-si-lalea-din-ceara-in-vas-ceramic-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-aranjament-inima-floral-001",
+    "title": "Martisor Aranjament cu Inima si flori din ceara in vas decorativ",
+    "price": 79.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor realizat manual, sub forma de aranjament floral cu flori din ceara in nuante de roz si crem, completat de o inima decorativa centrala. Asezat intr-un vas ceramic alb si accesorizat cu snur traditional alb-rosu cu ciucuri eleganti, acest martisor este un cadou delicat si romantic pentru 1 Martie.",
+    "images": [
+      "/images/martisor/aranjament-inima-1.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "martisoare",
+      "inima",
+      "flori din ceara",
+      "aranjament floral",
+      "vas ceramic",
+      "snur alb rosu",
+      "cadou 1 martie",
+      "romantic",
+      "handmade"
+    ],
+    "slug": "martisor-aranjament-cu-inima-si-flori-din-ceara-in-vas-decorativ-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "martisor-aranjament-floral-rotund-001",
+    "title": "Martisor Aranjament Floral Rotund cu flori din ceara",
+    "price": 79.99,
+    "category": "martisor",
+    "product_type": "martisor",
+    "desc": "Martisor handmade realizat sub forma de aranjament rotund cu trandafir central din ceara si flori decorative in nuante de roz si crem. Decorat cu flori uscate delicate si snur traditional alb-rosu cu ciucuri, acest martisor poate fi oferit ca simbol al primaverii si al feminitatii.",
+    "images": [
+      "/images/martisor/aranjament-rotund-trandafir-1.jpeg"
+    ],
+    "tags": [
+      "martisor",
+      "martisor floral",
+      "trandafir",
+      "flori uscate",
+      "aranjament rotund",
+      "ceara",
+      "snur alb rosu",
+      "cadou primavara",
+      "1 martie",
+      "handmade"
+    ],
+    "slug": "martisor-aranjament-floral-rotund-cu-flori-din-ceara-martisor",
+    "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "martisor-lalele-buchet-001",
     "title": "Martisor Buchet de Lalele din ceara",
     "price": 55.99,
