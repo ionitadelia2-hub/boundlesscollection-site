@@ -88,7 +88,11 @@
     "product_type": "invitatii",
     "desc": "Invitatie de nunta eleganta, cu design floral romantic in stil acuarela, personalizata cu numele mirilor si data evenimentului sub forma de calendar. Invitatie tip card pliat, decorata cu fundita roz delicata.",
     "images": [
-      "/images/invitatii/invitatie-florala-calendar-roz.jpeg"
+      "/images/invitatii/invitatie-florala-calendar-roz.jpeg",
+      "/images/invitatii/invitatie-albastra.jpeg",
+      "/images/invitatii/invitatie-carte-aurie.jpeg",
+      "/images/invitatii/invitatie-eucalipt-verde.jpeg",
+      "/images/invitatii/invitatie-florala-calendar-mov.jpeg"
     ],
     "tags": [
       "invitatie nunta",
@@ -101,81 +105,6 @@
       "invitatia mirilor"
     ],
     "slug": "invitatie-de-nunta-florala-cu-calendar-si-fundita-roz-invitati",
-    "google_product_category": "Arts & Entertainment > Party Supplies > Invitations",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "invitatie-nunta-eucalipt-verde-001",
-    "title": "Invitatie de nunta Eucalipt verde cu cerc auriu",
-    "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
-    "desc": "Invitatie de nunta eleganta, cu design floral in nuante de verde eucalipt si cerc auriu, ilustratie cu miri si detalii fine. Invitatie personalizabila cu nume, data si text, legata cu fundita verde satinata. Ideala pentru o nunta moderna, naturala si rafinata.",
-    "images": [
-      "/images/invitatii/invitatie-eucalipt-verde.jpeg"
-    ],
-    "tags": [
-      "invitatie nunta",
-      "eucalipt",
-      "verde",
-      "auriu",
-      "invitatie personalizata",
-      "nunta eleganta",
-      "floral",
-      "handmade",
-      "papetarie nunta"
-    ],
-    "slug": "invitatie-de-nunta-eucalipt-verde-cu-cerc-auriu-invitati",
-    "google_product_category": "Arts & Entertainment > Hobbies & Creative Arts > Party Supplies > Invitations",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "invitatie-carte-aurie-001",
-    "title": "Invitatie de nunta aurie tip carte",
-    "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
-    "desc": "Invitatie de nunta eleganta, cu accente aurii rafinate si design romantic. Invitatie personalizabila cu numele mirilor, data evenimentului si detaliile ceremoniei, realizata pe carton premium, cu funda satinata aurie. Alegerea ideala pentru nunti clasice, elegante si rafinate.",
-    "images": [
-      "/images/invitatii/invitatie-carte-aurie.jpeg"
-    ],
-    "tags": [
-      "invitatie nunta",
-      "auriu",
-      "invitatie personalizata",
-      "nunta eleganta",
-      "carton premium",
-      "handmade",
-      "design clasic"
-    ],
-    "slug": "invitatie-de-nunta-aurie-tip-carte-invitati",
-    "google_product_category": "Arts & Entertainment > Party Supplies > Invitations",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "invitatie-carte-albastra-001",
-    "title": "Invitatie de nunta albastra",
-    "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
-    "desc": "Invitatie de nunta eleganta cu flori albastrei. Design romantic cu ilustratie miri, calendar personalizat si fundita satinata albastra. Ideala pentru o nunta rafinata si memorabila.",
-    "images": [
-      "/images/invitatii/invitatie-albastra.JPG"
-    ],
-    "tags": [
-      "invitatie",
-      "nunta",
-      "acuarela",
-      "albastru",
-      "auriu",
-      "flori",
-      "elegant",
-      "personalizat"
-    ],
-    "slug": "invitatie-de-nunta-albastra-invitati",
     "google_product_category": "Arts & Entertainment > Party Supplies > Invitations",
     "material": "",
     "mpn": ""
@@ -2016,7 +1945,7 @@
   {
     "id": "plic-dar-nunta-albastru-auriu-001",
     "title": "Plic de dar nunta albastru si auriu",
-    "price": 3.5,
+    "price": 3,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru nunta, realizat din carton de calitate, decorat cu elemente florale albastre si accente aurii, personalizabil cu initiale si mesaj.",
@@ -2063,7 +1992,7 @@
   {
     "id": "plic-boho-auriu-019",
     "title": "Plic de dar boho auriu elegant",
-    "price": 3.5,
+    "price": 3,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar boho pe carton texturat, cu accente aurii discrete si print elegant fata-verso. Se personalizeaza cu nume si mesaj, ideal pentru evenimente premium cu stil minimalist.",
@@ -2090,7 +2019,7 @@
   {
     "id": "plic-dar-nunta-verde-smarald-auriu-001",
     "title": "Plic de dar nunta verde smarald cu accente aurii",
-    "price": 3.5,
+    "price": 3,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru nunta, realizat din carton premium, cu design greenery in nuante de verde smarald si accente aurii fine. Model ideal pentru masa de dar, personalizabil cu numele mirilor, mesaj de multumire si spatiu dedicat completarii numelui familiei.",
@@ -2117,7 +2046,7 @@
   {
     "id": "plic-dar-miri-silueta-061",
     "title": "Plic de dar cu silueta miri si flori alb-verde",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru nunta, cu silueta de miri si coronita florala alb-verde. Realizat pe carton alb premium, cu mesaj si nume familie personalizabile, potrivit pentru mese de dar rafinate.",
@@ -2142,7 +2071,7 @@
   {
     "id": "plic-dar-safari-bine-ati-venit-001",
     "title": "Plic de dar botez Safari cu mesaj bine ati venit",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez cu tematica Safari, ilustrat cu animale de jungla si frunze tropicale. Include mesajul „Bine ati venit!” si zona pentru personalizare cu nume familie/copil.",
@@ -2170,7 +2099,7 @@
   {
     "id": "plic-de-dar-botez-gemeni-ursuleti-avioane-001",
     "title": "Plic botez gemeni cu ursuleti si avion",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar deosebit pentru botez gemeni, cu ilustratie adorabila de ursuleti si avion, realizat pe carton premium cu textura fina. Ideal ca plic de dar sau card de masa pentru botez gemeni, personalizabil cu numele copiilor si mesaj special. Design cald si elegant, perfect pentru botez gemeni baieti sau fata si baiat, decor de masa botez si aranjamente festive.",
@@ -2195,7 +2124,7 @@
   {
     "id": "plic-de-dar-ingeras-baietel-001",
     "title": "Plic botez baietel Ingeras",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic elegant pentru botez baietel cu ilustratie delicata de ingeras, realizat pe carton premium cu textura fina. Ideal ca plic de dar sau card de masa pentru botez, personalizabil cu numele copilului si mesaj special.",
@@ -2219,7 +2148,7 @@
   {
     "id": "plic-de-dar-ingeras-fetita-001",
     "title": "Plic de dar botez cu ingeras",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar delicat pentru botez, decorat cu ilustratie eleganta de ingeras si stele, ideal pentru evenimente speciale dedicate fetitelor. Realizat din carton premium cu textura fina, acest plic pentru bani la botez este personalizabil cu nume si mesaj, fiind alegerea perfecta pentru botez, petrecere de crestinare sau masa festiva.",
@@ -2243,7 +2172,7 @@
   {
     "id": "plic-de-dar-lamai-mediteranean-001",
     "title": "Plic de dar nunta cu lamai – model elegant mediteranean",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru nunta, decorat cu model rafinat cu lamai si motive florale in stil mediteranean. Realizat din carton premium, acest plic pentru bani este ideal pentru mese festive, nunti elegante sau evenimente speciale. Plicul este personalizabil cu initiale si mesaj, oferind o nota distincta si sofisticata decorului de eveniment.",
@@ -2267,7 +2196,7 @@
   {
     "id": "plic-dar-nunta-vintage-travel-001",
     "title": "Plic de dar nunta vintage travel – model elegant cu avion",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru nunta, realizat in stil vintage travel, cu design inspirat din harti vechi si elemente grafice clasice. Ideal pentru nunti cu tematica calatorii, boho sau rustica, acest plic pentru bani este confectionat din carton premium si poate fi personalizat cu initiale si mesaj. Un accesoriu rafinat pentru mesele invitatilor, care adauga personalitate si stil decorului de eveniment.",
@@ -2291,7 +2220,7 @@
   {
     "id": "plic-dar-nuntez-nunta-botez-001",
     "title": "Plic de dar nuntez – nunta si botez model elegant personalizat",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru nuntez, eveniment special care imbina nunta si botezul intr-o singura celebrare. Designul delicat, in tonuri pastel, este ideal pentru mesele invitatilor si pune in valoare atat mirii, cat si copilul botezat. Acest plic pentru bani este realizat din carton premium si poate fi personalizat cu nume, mesaj si datele evenimentului. Alegerea perfecta pentru nuntezuri moderne, elegante si pline de emotie.",
@@ -2315,7 +2244,7 @@
   {
     "id": "plic-dar-nunta-elegant-gri-auriu-001",
     "title": "Plic de dar nunta elegant gri cu auriu personalizat",
-    "price": 3.5,
+    "price": 3,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru nunta, cu design modern in nuante de gri si accente aurii, ideal pentru evenimente rafinate si mese festive premium. Acest plic pentru bani este realizat din carton de calitate superioara si poate fi personalizat cu numele mirilor si mesajul dorit. O alegere perfecta pentru nunti elegante, sofisticate si atent organizate, unde fiecare detaliu conteaza.",
@@ -2339,7 +2268,7 @@
   {
     "id": "plic-dar-ursulet-baloane-albastru-078",
     "title": "Plic de dar ursulet cu baloane albastre",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez sau prima aniversare, in nuante bleu cu ursulet si baloane pastel. Are text de multumire si spatiu pentru nume copil/familie, personalizabil pe tema dorita.",
@@ -2364,7 +2293,7 @@
   {
     "id": "plic-boho-verde-016",
     "title": "Plic de dar boho verde natur",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar stil boho, pe carton texturat in tonuri verde-cream, cu frunze si accente florale delicate. Se personalizeaza cu nume si mesaj, potrivit pentru nunti sau botezuri naturale.",
@@ -2392,7 +2321,7 @@
   {
     "id": "plic-dar-lauri-gri-084",
     "title": "Plic de dar elegant cu lauri gri-argintiu",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar premium din carton alb texturat, cu cununa de lauri gri-argintiu si detalii florale fine. Personalizare cu nume familie si text la alegere, pentru evenimente elegante.",
@@ -2419,7 +2348,7 @@
   {
     "id": "plic-dar-ursulet-059",
     "title": "Plic de dar cu ursulet pentru botez",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez, cu ursulet pastel intr-un cos impletit si design cald, delicat. Printat pe carton premium, cu text si nume familie personalizabile, ideal pentru tematici baby.",
@@ -2445,7 +2374,7 @@
   {
     "id": "plic-dar-miri-greenery-062",
     "title": "Plic de dar miri cu greenery",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru nunta, cu ilustratie miri in nuante calde si coronita greenery. Realizat pe carton alb premium, cu mesaj si nume familie personalizabile, potrivit pentru decoruri moderne.",
@@ -2471,7 +2400,7 @@
   {
     "id": "plic-dar-ursulet-baloane-albastru-multumim-079",
     "title": "Plic de dar ursulet cu baloane albastre – mesaj multumire",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar bleu cu ursulet si baloane pastel, cu mesaj de multumire imprimat. Include spatiu pentru nume familie si se poate adapta pe alte culori/texte, la cerere.",
@@ -2496,7 +2425,7 @@
   {
     "id": "plic-dar-ursulet-petrecere-bebe-multumire-080",
     "title": "Plic de dar ursulet petrecere bebe – mesaj multumire",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez sau petrecerea bebelusului, cu ursulet, stegulete festive si stelute aurii. Textul de multumire este inclus, plus zona pentru nume familie.",
@@ -2521,7 +2450,7 @@
   {
     "id": "plic-botez-baietel-veverite-020",
     "title": "Plic botez baietel cu veverite jucause",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru botez baietel, cu ilustratie vesela de veverite si accente pastel. Printat pe carton mat premium, cu mesaj si nume personalizabile, potrivit pentru masa de dar.",
@@ -2546,7 +2475,7 @@
   {
     "id": "plic-dar-verighete-multumire-001",
     "title": "Plic de dar cu verighete si mesaj multumim",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar pentru nunta, cu verighete aurii si design floral pastel, plus mesaj „Multumim!”. Printat pe carton premium mat, cu spatiu pentru nume familie, ideal pentru masa de dar.",
@@ -2572,7 +2501,7 @@
   {
     "id": "plic-botez-bleu-ursulet-024",
     "title": "Plic botez bleu cu ursulet si Mickey",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar bleu pentru botez, cu ursulet si Mickey in stil jucaus, pe carton mat premium. Are text si zona pentru nume familie/copil, personalizabile pentru tematica evenimentului.",
@@ -2628,7 +2557,7 @@
   {
     "id": "plic-dar-carusel-vintage-085",
     "title": "Plic de dar botez carusel vintage bej",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant pentru botez sau petrecere de copii, cu ilustratie tip carusel in stil vintage, in nuante calde bej-ivory. Printat pe carton premium mat, cu mesaj de multumire si spatiu pentru numele familiei. Se personalizeaza cu nume, data si text la alegere, fiind perfect pentru o masa de dar unitara si rafinata.",
@@ -2656,7 +2585,7 @@
   {
     "id": "plic-dar-iepuras-baloane-roz-085",
     "title": "Plic de dar iepuras cu baloane roz pastel",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar delicat pentru botez sau aniversare, cu ilustratie de iepuras si baloane in nuante roz pastel. Printat pe carton premium alb, cu mesaj de multumire si spatiu pentru completarea numelui familiei. Ideal pentru masa de dar si pentru tematici baby girl, cu posibilitate de personalizare la cerere.",
@@ -2712,7 +2641,7 @@
   {
     "id": "plic-dar-floral-roz-099",
     "title": "Plic de dar floral roz pastel",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar elegant, cu grafica florala in nuante roz pastel si accente fine, potrivit pentru nunta, botez sau aniversari. Este printat pe carton premium mat, cu spatiu dedicat pentru numele familiei si mesaj de multumire, pentru un decor unitar si rafinat la masa de dar.",
@@ -2742,7 +2671,7 @@
   {
     "id": "plic-dar-ursulet-balerina-roz-100",
     "title": "Plic de dar ursulet balerina roz pastel",
-    "price": 3,
+    "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
     "desc": "Plic de dar delicat, in nuante roz pastel, cu ilustratie ursulet balerina si baloane fine. Printat pe carton premium mat, cu spatiu pentru numele familiei si mesaj de multumire, ideal pentru botezuri, aniversari sau evenimente cu tematica baby girl. Completeaza armonios decorul mesei de dar si restul papetariei din colectie.",
