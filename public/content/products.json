@@ -82,11 +82,11 @@
   },
   {
     "id": "invitatie-nunta-calendar-roz-001",
-    "title": "Invitatie de nunta florala cu calendar si fundita roz",
+    "title": "Invitatie de nunta florala cu calendar",
     "price": 4,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie de nunta eleganta, cu design floral romantic in stil acuarela, personalizata cu numele mirilor si data evenimentului sub forma de calendar. Invitatie tip card pliat, decorata cu fundita roz delicata.",
+    "desc": "Invitatie de nunta eleganta, cu design floral romantic in stil acuarela, personalizata cu numele mirilor si data evenimentului sub forma de calendar. Invitatie tip card pliat.",
     "images": [
       "/images/invitatii/invitatie-florala-calendar-roz.jpeg",
       "/images/invitatii/invitatie-albastra.jpeg",
@@ -104,7 +104,7 @@
       "handmade",
       "invitatia mirilor"
     ],
-    "slug": "invitatie-de-nunta-florala-cu-calendar-si-fundita-roz-invitati",
+    "slug": "invitatie-de-nunta-florala-cu-calendar-invitati",
     "google_product_category": "Arts & Entertainment > Party Supplies > Invitations",
     "material": "",
     "mpn": ""
