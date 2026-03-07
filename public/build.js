@@ -73,6 +73,8 @@ const jsTagIfExists  = (filename) => exists(ROOT, filename)
 // ---- map categorii pentru breadcrumbs ----
 const CATEGORY_MAP = {
   "invitatii": { name: "Invitații", url: "/invitatii.html" },
+  "invitatii nunta": { name: "Invitații nuntă", url: "/invitatii-nunta.html" },
+  "invitatii botez": { name: "Invitații botez", url: "/invitatii-botez.html" },
   "invitatii digitale": { name: "Invitații", url: "/invitatii-digitale.html" },
   "plicuri": { name: "Plicuri de dar", url: "/plicuri.html" },
   "meniuri": { name: "Meniuri", url: "/meniuri.html" },
@@ -97,6 +99,8 @@ const PRODUCTS_DROPDOWN_HTML = `
   <li class="menu-group" role="none">
     <div class="menu-title">Papetarie</div>
     <a role="menuitem" href="/invitatii.html">Invitatii</a>
+    <a role="menuitem" href="/invitatii-nunta.html">Invitatii nunta</a>
+    <a role="menuitem" href="/invitatii-botez.html">Invitatii botez</a>
     <a role="menuitem" href="/invitatii-digitale.html">Invitatii digitale</a>
     <a role="menuitem" href="/plicuri.html">Plicuri de dar</a>
     <a role="menuitem" href="/meniuri.html">Meniuri</a>
@@ -390,6 +394,8 @@ function pageTemplate(prod) {
     (function(){
       var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
       if(ref.includes("/marturii")) back="/marturii.html";
+      else if(ref.includes("/invitatii-nunta")) back="/invitatii-nunta.html";
+      else if(ref.includes("/invitatii-botez")) back="/invitatii-botez.html";
       else if(ref.includes("/invitatii")) back="/invitatii.html";
       else if(ref.includes("/invitatii-digitale")) back="/invitatii-digitale.html";
       else if(ref.includes("/plicuri")) back="/plicuri.html";

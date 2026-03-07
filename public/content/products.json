@@ -3,8 +3,8 @@
     "id": "invitatie-botez-ursuleti-roz-eleganta-094",
     "title": "Invitație de botez fetiță cu ursuleți roz și fundă satin",
     "price": 5.99,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație de botez pentru fetiță, realizată într-un format special cu clapete decorative și închidere elegantă cu fundă dublu satinată roz pudrat. Designul include ilustrații adorabile cu ursuleți în stil acuarelă, elemente baby (biberon, hăinuțe, jucării) și accente aurii fine, pentru un aspect delicat și de poveste.",
     "images": [
       "/images/invitatii/invitatie-botez-ursuleti-roz-funda-satin.JPEG",
@@ -32,8 +32,8 @@
     "id": "invitatie-nunta-poarta-basm-011",
     "title": "Invitație de nuntă tip poartă de basm cu fundă albă",
     "price": 9.5,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
     "desc": "Invitație de nuntă elegantă, cu design ilustrat în stil acuarelă, reprezentând o poartă de piatră îmbrăcată în flori albe și frunziș verde, inspirată din povești romantice. Model pliabil tip porțiță, legat la exterior cu fundă satinată albă, pentru un efect delicat și rafinat. La deschidere, invitația dezvăluie o bisericuță ilustrată în stil de poveste și un layout aerisit pentru textul personalizat al evenimentului.",
     "images": [
       "/images/invitatii/invitatie-nunta-poarta-basm-funda-alba.jpg",
@@ -60,8 +60,8 @@
     "id": "invitatie-nunta-aurie-pliabila-001",
     "title": "Invitatie nunta eleganta cu accente aurii",
     "price": 4.99,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
     "desc": "Invitatie de nunta eleganta, realizata din carton premium, cu aurii rafinate. Model pliabil, cu layout aerisit si sectiuni clare pentru programul evenimentului, confirmare si dress code.",
     "images": [
       "/images/invitatii/invitatie-nunta-aurie-pliabila.jpeg"
@@ -84,8 +84,8 @@
     "id": "invitatie-nunta-calendar-roz-001",
     "title": "Invitatie de nunta florala cu calendar",
     "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
     "desc": "Invitatie de nunta eleganta, cu design floral romantic in stil acuarela, personalizata cu numele mirilor si data evenimentului sub forma de calendar. Invitatie tip card pliat.",
     "images": [
       "/images/invitatii/invitatie-florala-calendar-roz.jpeg",
@@ -113,8 +113,8 @@
     "id": "invitatie-sigiliu-ceara-flori-uscate-001",
     "title": "Invitație de botez cu sigiliu din ceară și flori uscate",
     "price": 6.99,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație de botez realizată manual, pe carton premium în nuanțe delicate, legată cu sfoară decorativă și sigilată cu ceară. Decorată cu flori uscate naturale, atent selecționate, pentru un aspect elegant și rafinat.",
     "images": [
       "/images/invitatii/invitatie-botez-sigiliu-flori-uscate-1.jpg",
@@ -139,8 +139,8 @@
     "id": "invitatie-poza-calc-roz-002",
     "title": "Invitație de botez cu fotografie și foaie de calc",
     "price": 4.5,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație de botez cu design modern și delicat, realizată pe carton foto, completată de o foaie de calc imprimată care adaugă un efect elegant și aerisit. Fotografia este integrată armonios în design, iar invitația este finisată cu o fundiță din organza, pentru un plus de rafinament.",
     "images": [
       "/images/invitatii/invitatie-botez-foto-foaie-de-calc-roz.jpg"
@@ -165,8 +165,8 @@
     "id": "invitatie-ursulet-bleu-003",
     "title": "Invitație de botez pentru băiețel cu ursuleț și fundiță bleu",
     "price": 4.5,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație delicată pentru botezul băiețelului, realizată pe carton premium, cu ilustrație de ursuleț în tonuri pastel și fundiță bleu aplicată manual. Designul aerisit și cromatica blândă creează o invitație elegantă, potrivită unui eveniment special dedicat celor mici.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-bleu.jpg"
@@ -190,8 +190,8 @@
     "id": "invitatie-fundita-rosie-calc-004",
     "title": "Invitație de botez cu fundiță roșie și foaie de calc",
     "price": 6,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație elegantă realizată pe carton premium, completată de un înveliș din foaie de calc semitransparentă și fundiță roșie din organza. Designul clasic, cu accente fine, oferă o prezentare rafinată și potrivită pentru evenimente tematice.",
     "images": [
       "/images/invitatii/invitatie-botez-fundita-rosie-foaie-calc.jpg",
@@ -216,8 +216,8 @@
     "id": "invitatie-carticica-albastra-005",
     "title": "Invitație de botez tip cărticică cu fundiță albastră",
     "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație tip cărticică realizată pe carton premium, cu fotografie și detalii de eveniment, legată cu fundiță albastră din organza. Design delicat, potrivit pentru botez de băiețel.",
     "images": [
       "/images/invitatii/invitatie-botez-tip-carticica-fundita-albastra.jpg",
@@ -242,8 +242,8 @@
     "id": "invitatie-ursulet-ivoire-006",
     "title": "Invitație de botez cu ursuleț și fundiță ivoire",
     "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație realizată pe carton premium, decorată cu ursuleț și nori în tonuri pastel, completată cu fundiță ivoire din organza. Design delicat, ideal pentru botez de băiețel.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-ivoire.jpg"
@@ -268,8 +268,8 @@
     "id": "invitatie-ursulet-roz-007",
     "title": "Invitație de botez cu ursuleț și fundiță roz",
     "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație realizată pe carton premium, decorată cu ursuleț și baloane în tonuri pastel, legată cu fundiță roz din satin. Design dulce și elegant, ideal pentru botez de fetiță.",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-roz.jpg"
@@ -323,8 +323,8 @@
     "id": "invitatie-safari-plic-verde-009",
     "title": "Invitație botez Safari cu plic verde",
     "price": 9,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație de botez tematică Safari, realizată pe carton premium mat, cu animale de junglă și frunze tropicale. Completată de plic verde decupat tip frunză, pentru un aspect vesel și unitar.",
     "images": [
       "/images/invitatii/invitatie-botez-safari-plic-verde.jpg"
@@ -349,8 +349,8 @@
     "id": "invitatie-nunta-ziar-010",
     "title": "Invitație nuntă tip Ziar",
     "price": 5.99,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
     "desc": "Invitație de nuntă tip ziar, cu design retro inspirat din reviste, printată pe carton mat și legată cu sfoară naturală. Un model creativ, cu aspect editorial, care spune povestea mirilor într-un mod original.",
     "images": [
       "/images/invitatii/invitatie-nunta-jurnal.jpg",
@@ -376,8 +376,8 @@
     "id": "invitatie-ursulet-bleu-norisori-088",
     "title": "Invitație botez ursuleț bleu cu norișori și fundă satin",
     "price": 6.99,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație delicată pentru botez băiețel, realizată în nuanțe bleu pastel, cu ursuleț adormit pe norișori și fundă din satin. Printată pe carton premium, cu un design blând și elegant, ideal pentru un eveniment de suflet.",
     "images": [
       "/images/invitatii/invitatie-ursulet-bleu-norisori.jpg",
@@ -404,8 +404,8 @@
     "id": "invitatie-pergament-printesa-bleu-091",
     "title": "Invitație pergament tematică prințesă bleu cu fundă satin",
     "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
     "desc": "Invitație tip pergament pentru botez sau aniversare, realizată în nuanțe bleu pastel, cu grafică de basm și ilustrații elegante. Rulată manual și prinsă cu o fundă delicată din satin, pe carton premium, pentru un aspect rafinat și de poveste.",
     "images": [
       "/images/invitatii/invitatie-pergament-printesa-bleu.jpg",
@@ -433,8 +433,8 @@
     "id": "invitatie-absolvire-bleu-pergament-092",
     "title": "Invitație pergament absolvire cu fundă satin",
     "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
     "desc": "Invitație pentru absolvire, cu design modern în nuanțe bleu marble și accente aurii fine, imprimată pe carton premium și finisată elegant. Poate fi oferită plată sau rulată tip pergament și legată cu o fundă din satin, pentru un aspect festiv și rafinat.",
     "images": [
       "/images/invitatii/invitatie-absolvire-bleu-pergament.jpg"
@@ -459,8 +459,8 @@
     "id": "invitatie-pergament-fundita-aurie-093",
     "title": "Invitație pergament cu fundă aurie",
     "price": 4.5,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
     "desc": "Invitație tip pergament, realizată pe carton premium cu aspect elegant, rulată manual și legată cu o fundă aurie strălucitoare. Design rafinat, potrivit pentru evenimente speciale, cu un aer minimalist și luxos.",
     "images": [
       "/images/invitatii/invitatie-pergament-fundita-aurie.jpg",
