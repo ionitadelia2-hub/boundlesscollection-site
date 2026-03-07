@@ -114,6 +114,8 @@ const PRODUCTS_DROPDOWN_HTML = `
   <li class="menu-group" role="none">
     <div class="menu-title">Marturii</div>
     <a role="menuitem" href="/marturii.html">Marturii</a>
+    <a role="menuitem" href="/marturii-nunta.html">Marturii nuntă</a>
+    <a role="menuitem" href="/marturii-botez.html">Marturii botez</a>
   </li>
 
   <li class="menu-group" role="none">
