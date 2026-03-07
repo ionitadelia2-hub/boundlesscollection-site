@@ -52,25 +52,38 @@
   };
 
   // ===== Grupuri categorii =====
-  const INVITATII_GROUP = ['invitatii', 'invitatii nunta', 'invitatii botez'];
+const INVITATII_GROUP = ['invitatii', 'invitatii nunta', 'invitatii botez'];
+const MARTURII_GROUP = ['marturii', 'marturii nunta', 'marturii botez'];
 
-  const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
-    if (!filterKey || filterKey === 'toate') return true;
+const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
+  if (!filterKey || filterKey === 'toate') return true;
 
-    // Pagina / butonul "Invitatii" trebuie sa includa si nunta + botez
-    if (filterKey === 'invitatii') {
-      return (
-        INVITATII_GROUP.includes(productKey) ||
-        tagsKey.includes('invitatii') ||
-        tagsKey.includes('invitatie nunta') ||
-        tagsKey.includes('invitatii nunta') ||
-        tagsKey.includes('invitatie botez') ||
-        tagsKey.includes('invitatii botez')
-      );
-    }
+  // Pagina / butonul "Invitatii" trebuie sa includa si nunta + botez
+  if (filterKey === 'invitatii') {
+    return (
+      INVITATII_GROUP.includes(productKey) ||
+      tagsKey.includes('invitatii') ||
+      tagsKey.includes('invitatie nunta') ||
+      tagsKey.includes('invitatii nunta') ||
+      tagsKey.includes('invitatie botez') ||
+      tagsKey.includes('invitatii botez')
+    );
+  }
 
-    return productKey === filterKey || tagsKey.includes(filterKey);
-  };
+  // Pagina / butonul "Marturii" trebuie sa includa si nunta + botez
+  if (filterKey === 'marturii') {
+    return (
+      MARTURII_GROUP.includes(productKey) ||
+      tagsKey.includes('marturii') ||
+      tagsKey.includes('marturie nunta') ||
+      tagsKey.includes('marturii nunta') ||
+      tagsKey.includes('marturie botez') ||
+      tagsKey.includes('marturii botez')
+    );
+  }
+
+  return productKey === filterKey || tagsKey.includes(filterKey);
+};
 
   // ===== Card produs =====
   function card(p) {

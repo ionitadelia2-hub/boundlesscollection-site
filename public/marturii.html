@@ -138,6 +138,8 @@
               <li class="menu-group" role="none">
                 <div class="menu-title">Marturii</div>
                 <a role="menuitem" href="/marturii.html">Marturii</a>
+                <a role="menuitem" href="/marturii-nunta.html">Marturii nunta</a>
+                <a role="menuitem" href="/marturii-botez.html">Marturii botez</a>
               </li>
 
               <li class="menu-group" role="none">
@@ -190,6 +192,11 @@
         <strong>Preturile afisate sunt pentru varianta fara parfum (fara aroma).</strong> Pentru adaugarea aromei, costul se calculeaza separat, in functie de preferinte.
       </p>
     </div>
+    <div class="category-switch" aria-label="Navigare mărturii">
+  <a class="btn primary" href="/marturii.html">Toate marturiile</a>
+  <a class="btn" href="/marturii-nunta.html">Marturii nunta</a>
+  <a class="btn" href="/marturii-botez.html">Marturii botez</a>
+</div>
 
     <!-- Grilă dinamică -->
     <div id="grid" class="grid products category" aria-live="polite"></div>
@@ -213,7 +220,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // IMPORTANT: exact cum este in CSV/JSON
-    window.PAGE_CATEGORY = 'marturii soia';
+    window.PAGE_CATEGORY = 'marturii';
   </script>
 
   <!-- JS: meniu (hamburger + dropdown Produse) -->
