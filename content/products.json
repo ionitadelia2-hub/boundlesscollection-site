@@ -323,27 +323,30 @@
     "mpn": ""
   },
   {
-    "id": "invitatie-ursulet-ivoire-006",
-    "title": "Invitație de botez cu ursuleț și fundiță ivoire",
+    "id": "invitatie-botez-ursulet-baietel",
+    "title": "Invitație de botez cu ursuleț pentru băiețel",
     "price": 4,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație realizată pe carton premium, decorată cu ursuleț și nori în tonuri pastel, completată cu fundiță ivoire din organza. Design delicat, ideal pentru botez de băiețel.",
+    "desc": "Invitație de botez cu design delicat ilustrat cu ursuleț simpatic și elemente pastelate, ideală pentru botezul unui băiețel. Realizată pe carton premium, invitația oferă un aspect elegant și cald, potrivit pentru evenimente cu tematică ursuleț, baby sau poveste.",
     "images": [
-      "/images/invitatii/invitatie-botez-ursulet-fundita-ivoire.jpg"
+      "/images/invitatii/invitatie-botez-ursulet-baietel.jpg",
+      "/images/invitatii/invitatie-botez-ursulet-baietel-1.jpg"
     ],
     "tags": [
       "invitatii",
       "botez",
       "ursulet",
-      "fundita ivoire",
-      "organza",
-      "baietel",
+      "baby boy",
+      "tematica ursulet",
+      "pastel",
+      "carton premium",
+      "botez baietel",
+      "eveniment",
       "elegant",
-      "nori",
-      "pastel"
+      "dulce"
     ],
-    "slug": "invitatie-de-botez-cu-ursulet-si-fundita-ivoire-invitati",
+    "slug": "invitatie-de-botez-cu-ursulet-pentru-baietel-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
@@ -410,7 +413,7 @@
     "desc": "Invitație de nuntă elegantă cu design floral inspirat de frunze de eucalipt și accente naturale. Realizată pe carton premium, invitația oferă un stil rafinat și modern, perfect pentru nunți cu tematică greenery, natură sau rustic elegant.",
     "images": [
       "/images/invitatii/invitatie-nunta-eucalipt-greenery.jpg",
-      "/images/invitatii/images/invitatii/invitatie-nunta-eucalipt-greenery-1.JPEG"
+      "/images/invitatii/images/invitatii/invitatie-nunta-eucalipt-greenery-1.jpg"
     ],
     "tags": [
       "invitatii",
