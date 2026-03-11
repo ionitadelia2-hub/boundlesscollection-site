@@ -376,34 +376,6 @@
     "mpn": ""
   },
   {
-    "id": "invitatie-pergament-smarald-008",
-    "title": "Invitație pergament cu fundiță verde smarald",
-    "price": 4,
-    "category": "invitatii",
-    "product_type": "invitatii",
-    "desc": "Invitație tip pergament, rulată și legată manual cu fundiță verde smarald din organza. Stil minimalist cu vibe natural, ideal pentru nuntă.",
-    "images": [
-      "/images/invitatii/invitatie-pergament-verde-smarald.jpg",
-      "/images/invitatii/invitatie-pergament-verde-smarald-1.JPEG"
-    ],
-    "tags": [
-      "invitatii",
-      "nunta",
-      "verde",
-      "smarald",
-      "fundita",
-      "pergament",
-      "elegant",
-      "minimalist",
-      "rustic",
-      "natural"
-    ],
-    "slug": "invitatie-pergament-cu-fundita-verde-smarald-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
-    "material": "",
-    "mpn": ""
-  },
-  {
     "id": "invitatie-safari-plic-verde-009",
     "title": "Invitație botez Safari cu plic verde",
     "price": 9,
@@ -425,6 +397,34 @@
       "tematica"
     ],
     "slug": "invitatie-botez-safari-cu-plic-verde-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-eucalipt-greenery",
+    "title": "Invitație de nuntă elegantă cu frunze de eucalipt",
+    "price": 4,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitație de nuntă elegantă cu design floral inspirat de frunze de eucalipt și accente naturale. Realizată pe carton premium, invitația oferă un stil rafinat și modern, perfect pentru nunți cu tematică greenery, natură sau rustic elegant.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-eucalipt-greenery.jpg",
+      "/images/invitatii/images/invitatii/invitatie-nunta-eucalipt-greenery-1.JPEG"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "eucalipt",
+      "greenery",
+      "floral",
+      "verde pastel",
+      "rustic elegant",
+      "nunta eleganta",
+      "carton premium",
+      "eveniment"
+    ],
+    "slug": "invitatie-de-nunta-eleganta-cu-frunze-de-eucalipt-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
