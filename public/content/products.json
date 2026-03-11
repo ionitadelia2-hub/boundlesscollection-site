@@ -29,6 +29,63 @@
     "mpn": ""
   },
   {
+    "id": "invitatie-botez-tematica-ursulet-005",
+    "title": "Invitație de botez cu ursuleț și tematică miere",
+    "price": 6,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitație de botez cu design delicat inspirat de tematica ursuleț și miere, realizată pe carton premium cu elemente grafice calde și elegante. Include variantă digitală pentru telefon și este ideală pentru evenimente cu temă ursuleț, natură sau honey.",
+    "images": [
+      "/images/invitatii/invitatie-botez-ursulet-borcan-miere.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "ursulet",
+      "miere",
+      "honey",
+      "tematica ursulet",
+      "digital",
+      "carton premium",
+      "baby boy",
+      "eveniment",
+      "elegant"
+    ],
+    "slug": "invitatie-de-botez-cu-ursulet-si-tematica-miere-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-botez-ratusca-fetita-006",
+    "title": "Invitație de botez cu rățușcă și mesaj It's a Girl",
+    "price": 6,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitație de botez cu design delicat ilustrat cu o rățușcă simpatică și elemente pastelate, ideală pentru botezul unei fetițe. Realizată pe carton premium, invitația oferă un aspect dulce și elegant, perfect pentru evenimente cu tematică baby, rățușcă sau poveste.",
+    "images": [
+      "/images/invitatii/invitatie-botez-ratusca.JPEG"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "ratusca",
+      "its a girl",
+      "baby girl",
+      "tematica baby",
+      "pastel",
+      "carton premium",
+      "fetita",
+      "eveniment",
+      "dulce",
+      "elegant"
+    ],
+    "slug": "invitatie-de-botez-cu-ratusca-si-mesaj-its-a-girl-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-nunta-poarta-basm-011",
     "title": "Invitație de nuntă tip poartă de basm cu fundă albă",
     "price": 9.5,
@@ -299,7 +356,7 @@
     "product_type": "invitatii botez",
     "desc": "Invitație realizată pe carton premium, decorată cu ursuleț și baloane în tonuri pastel, legată cu fundiță roz din satin. Design dulce și elegant, ideal pentru botez de fetiță.",
     "images": [
-      "/images/invitatii/invitatie-botez-ursulet-fundita-roz.jpg"
+      "/images/invitatii/invitatie-botez-ursulet-fundita-roz.JPEG"
     ],
     "tags": [
       "invitatii",
@@ -1017,7 +1074,7 @@
     "product_type": "marturii botez",
     "desc": "Marturie fluture delicat, turnat manual din ceara de soia cu aripi in relief si doua fitiluri pentru efect decorativ. O alegere rafinata pentru botez, nunta sau aniversari, cu ambalare personalizabila.",
     "images": [
-      "/images/marturii/marturie-fluture-alb.jpg"
+      "/images/marturii/marturie-fluture-alb.JPEG"
     ],
     "tags": [
       "marturii",
@@ -1667,6 +1724,35 @@
       "cadou invitati"
     ],
     "slug": "marturie-lumanare-norisor-bleu-in-saculet-tulle-cu-eticheta-personalizata-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-cuplu-bebe-soia-ivoriu-078",
+    "title": "Marturie cuplu cu bebe din ceara de soia in nuanta crem",
+    "price": 18,
+    "category": "marturii nunta",
+    "product_type": "marturii nunta",
+    "desc": "Marturie eleganta in forma de cuplu cu bebe, realizata din ceara de soia in nuanta ivoriu. Potrivita pentru nunta, botez sau evenimente speciale cu tematica de familie, poate fi oferita ca marturie delicata si simbolica pentru invitati.",
+    "images": [
+      "/images/marturii/marturie-cuplu-bebe-soia-crem.JPEG"
+    ],
+    "tags": [
+      "marturii",
+      "cuplu",
+      "bebe",
+      "familie",
+      "ivoriu",
+      "ceara de soia",
+      "handmade",
+      "nunta",
+      "botez",
+      "baby shower",
+      "cadou invitati",
+      "simbolica"
+    ],
+    "slug": "marturie-cuplu-cu-bebe-din-ceara-de-soia-in-nuanta-crem-marturie",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
