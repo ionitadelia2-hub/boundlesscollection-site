@@ -1,5 +1,33 @@
 [
   {
+    "id": "invitatie-botez-albinute-miere-floarea-soarelui",
+    "title": "Invitatie botez albinute cu miere si floarea soarelui",
+    "price": 6,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitatie de botez cu design vesel inspirat de albinute, fagure de miere si floarea soarelui. Realizata pe carton premium, invitatia este ideala pentru botezuri cu tematica honey, albinute sau natura.",
+    "images": [
+      "/images/invitatii/invitatie-botez-albinute-miere.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "albinute",
+      "miere",
+      "honey theme",
+      "fagure",
+      "floarea soarelui",
+      "botez fetita",
+      "tematica albinute",
+      "carton premium",
+      "eveniment"
+    ],
+    "slug": "invitatie-botez-albinute-cu-miere-si-floarea-soarelui-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-botez-ursuleti-roz-eleganta-094",
     "title": "Invitație de botez fetiță cu ursuleți roz și fundă satin",
     "price": 5.99,
