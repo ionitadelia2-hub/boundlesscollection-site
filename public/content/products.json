@@ -337,7 +337,7 @@
     "product_type": "invitatii botez",
     "desc": "Invitatie de botez pentru baietel cu design delicat ilustrat cu ursulet simpatic si fundita albastra eleganta. Realizata pe carton premium, invitatia este perfecta pentru botezuri cu tematica ursulet, baby boy sau poveste.",
     "images": [
-      "/images/invitatii/invitatie-botez-ursulet-fundita-albastra.jpeg"
+      "/images/invitatii/invitatie-botez-ursulet-fundita-albastra.jpg"
     ],
     "tags": [
       "invitatii",
@@ -568,34 +568,6 @@
       "sfoara"
     ],
     "slug": "invitatie-nunta-tip-ziar-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "invitatie-ursulet-bleu-norisori-088",
-    "title": "Invitație botez ursuleț bleu cu norișori și fundă satin",
-    "price": 6.99,
-    "category": "invitatii botez",
-    "product_type": "invitatii botez",
-    "desc": "Invitație delicată pentru botez băiețel, realizată în nuanțe bleu pastel, cu ursuleț adormit pe norișori și fundă din satin. Printată pe carton premium, cu un design blând și elegant, ideal pentru un eveniment de suflet.",
-    "images": [
-      "/images/invitatii/invitatie-ursulet-bleu-norisori.jpg",
-      "/images/invitatii/invitatie-ursulet-bleu-norisori-1.JPG"
-    ],
-    "tags": [
-      "invitatii",
-      "botez",
-      "ursulet",
-      "bleu pastel",
-      "norisori",
-      "baby boy",
-      "funda satin",
-      "carton premium",
-      "delicat",
-      "elegant"
-    ],
-    "slug": "invitatie-botez-ursulet-bleu-cu-norisori-si-funda-satin-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
