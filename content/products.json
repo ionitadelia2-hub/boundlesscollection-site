@@ -302,26 +302,28 @@
     "mpn": ""
   },
   {
-    "id": "invitatie-ursulet-bleu-003",
-    "title": "Invitație de botez pentru băiețel cu ursuleț și fundiță bleu",
-    "price": 4.5,
+    "id": "invitatie-botez-ursulet-fundita-albastra",
+    "title": "Invitatie botez ursulet cu fundita albastra pentru baietel",
+    "price": 6,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație delicată pentru botezul băiețelului, realizată pe carton premium, cu ilustrație de ursuleț în tonuri pastel și fundiță bleu aplicată manual. Designul aerisit și cromatica blândă creează o invitație elegantă, potrivită unui eveniment special dedicat celor mici.",
+    "desc": "Invitatie de botez pentru baietel cu design delicat ilustrat cu ursulet simpatic si fundita albastra eleganta. Realizata pe carton premium, invitatia este perfecta pentru botezuri cu tematica ursulet, baby boy sau poveste.",
     "images": [
-      "/images/invitatii/invitatie-botez-ursulet-fundita-bleu.jpg"
+      "/images/invitatii/invitatie-botez-ursulet-fundita-albastra.jpeg"
     ],
     "tags": [
       "invitatii",
       "botez",
-      "baietel",
       "ursulet",
-      "fundita bleu",
-      "pastel",
-      "delicat",
-      "elegant"
+      "botez baietel",
+      "baby boy",
+      "fundita albastra",
+      "tematica ursulet",
+      "carton premium",
+      "eveniment",
+      "invitatia botez"
     ],
-    "slug": "invitatie-de-botez-pentru-baietel-cu-ursulet-si-fundita-bleu-invitati",
+    "slug": "invitatie-botez-ursulet-cu-fundita-albastra-pentru-baietel-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
@@ -906,7 +908,7 @@
   {
     "id": "marturie-nunta-borcanel-miere-50ml-fundita-satin",
     "title": "Marturie nunta borcanel cu miere 50ml si fundita satin",
-    "price": 17,
+    "price": 18,
     "category": "marturii nunta",
     "product_type": "marturii nunta",
     "desc": "Marturie de nunta cu borcanel de miere naturala 50ml decorat cu fundita eleganta din satin si eticheta personalizata cu numele mirilor si data evenimentului. Un cadou dulce si rafinat pentru invitati, ideal pentru nunti elegante sau romantice.",
@@ -935,7 +937,7 @@
   {
     "id": "marturie-nunta-borcanel-miere-55ml-sfoara-rustica",
     "title": "Marturie nunta borcanel cu miere 55ml cu sfoara rustica",
-    "price": 17,
+    "price": 18,
     "category": "marturii nunta",
     "product_type": "marturii nunta",
     "desc": "Marturie de nunta cu borcanel de miere naturala 55ml decorat cu sfoara rustica si eticheta personalizata. Perfecta pentru nunti cu tematica rustica, boho sau naturala, oferind invitatilor un cadou dulce si memorabil.",
@@ -965,7 +967,7 @@
   {
     "id": "marturie-nunta-borcanel-miere-40ml-capac-carouri",
     "title": "Marturie nunta borcanel cu miere 40ml capac carouri",
-    "price": 18.5,
+    "price": 17,
     "category": "marturii nunta",
     "product_type": "marturii nunta",
     "desc": "Marturie de nunta cu borcanel de miere naturala 40ml decorat cu capac cu model carouri si sfoara rustica, completat de eticheta personalizata. Un cadou dulce si original pentru invitati, ideal pentru nunti rustice sau tematice.",
@@ -994,7 +996,7 @@
   {
     "id": "marturie-nunta-borcanel-miere-40ml-hexagon",
     "title": "Marturie nunta borcanel hexagonal cu miere 40ml",
-    "price": 18.5,
+    "price": 17,
     "category": "marturii nunta",
     "product_type": "marturii nunta",
     "desc": "Marturie de nunta cu borcanel hexagonal de miere naturala 40ml decorat cu sfoara naturala si eticheta personalizata cu numele mirilor si data evenimentului. O marturie eleganta si simbolica inspirata de fagurele de miere.",
