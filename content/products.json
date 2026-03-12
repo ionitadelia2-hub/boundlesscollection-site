@@ -86,6 +86,62 @@
     "mpn": ""
   },
   {
+    "id": "invitatie-botez-ratusca-baietel-norisori",
+    "title": "Invitatie botez ratusca pentru baietel cu norisori",
+    "price": 6,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitatie de botez pentru baietel cu design delicat ilustrat cu ratusca simpatica pe leagan intre norisori. Realizata pe carton premium, invitatia este perfecta pentru botezuri cu tematica baby, ratusca sau poveste.",
+    "images": [
+      "/images/invitatii/invitatie-botez-ratusca-baietel-norisori.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "ratusca",
+      "botez baietel",
+      "baby boy",
+      "tematica ratusca",
+      "norisori",
+      "baby shower",
+      "carton premium",
+      "eveniment",
+      "invitatia botez"
+    ],
+    "slug": "invitatie-botez-ratusca-pentru-baietel-cu-norisori-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-florala-albastra-minimalista",
+    "title": "Invitatie nunta florala albastra minimalista cu monograma",
+    "price": 7,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitatie de nunta eleganta cu design floral minimalist in nuante de albastru pastel si monograma personalizata. Realizata pe carton premium, invitatia este ideala pentru nunti moderne, romantice sau cu tematica floral minimal.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-florala-albastra-minimalista.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "invitatie nunta",
+      "floral",
+      "albastru pastel",
+      "minimalist",
+      "monograma",
+      "nunta eleganta",
+      "carton premium",
+      "eveniment",
+      "romantic"
+    ],
+    "slug": "invitatie-nunta-florala-albastra-minimalista-cu-monograma-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-nunta-poarta-basm-011",
     "title": "Invitație de nuntă tip poartă de basm cu fundă albă",
     "price": 9.5,
@@ -516,55 +572,27 @@
     "mpn": ""
   },
   {
-    "id": "invitatie-absolvire-bleu-pergament-092",
-    "title": "Invitație pergament absolvire cu fundă satin",
-    "price": 4,
-    "category": "invitatii nunta",
-    "product_type": "invitatii nunta",
-    "desc": "Invitație pentru absolvire, cu design modern în nuanțe bleu marble și accente aurii fine, imprimată pe carton premium și finisată elegant. Poate fi oferită plată sau rulată tip pergament și legată cu o fundă din satin, pentru un aspect festiv și rafinat.",
+    "id": "invitatie-absolvire-eleganta-bleu",
+    "title": "Invitatie absolvire eleganta bleu cu accente aurii",
+    "price": 6,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitatie eleganta pentru absolvire realizata pe carton premium, cu design artistic in nuante de bleu si accente aurii. Ideala pentru ceremonii de absolvire, banchet sau evenimente scolare speciale.",
     "images": [
-      "/images/invitatii/invitatie-absolvire-bleu-pergament.jpg"
+      "/images/invitatii/invitatie-absolvire-bleu.jpeg"
     ],
     "tags": [
       "invitatii",
       "absolvire",
-      "graduare",
-      "bleu marble",
-      "accente aurii",
-      "funda satin",
-      "carton premium",
-      "elegant",
-      "modern"
+      "invitatie absolvire",
+      "banchet",
+      "eveniment scolar",
+      "festivitate absolvire",
+      "design elegant",
+      "carton premium"
     ],
-    "slug": "invitatie-pergament-absolvire-cu-funda-satin-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "invitatie-pergament-fundita-aurie-093",
-    "title": "Invitație pergament cu fundă aurie",
-    "price": 4.5,
-    "category": "invitatii nunta",
-    "product_type": "invitatii nunta",
-    "desc": "Invitație tip pergament, realizată pe carton premium cu aspect elegant, rulată manual și legată cu o fundă aurie strălucitoare. Design rafinat, potrivit pentru evenimente speciale, cu un aer minimalist și luxos.",
-    "images": [
-      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg",
-      "/images/invitatii/invitatie-pergament-fundita-aurie-1.jpg"
-    ],
-    "tags": [
-      "invitatii",
-      "pergament",
-      "funda aurie",
-      "nunta",
-      "botez",
-      "elegant",
-      "carton premium",
-      "minimalist",
-      "lux"
-    ],
-    "slug": "invitatie-pergament-cu-funda-aurie-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "slug": "invitatie-absolvire-eleganta-bleu-cu-accente-aurii-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitationsinvitatie-pergament-fundita-aurie-093",
     "material": "",
     "mpn": ""
   },
@@ -871,6 +899,124 @@
       "elegant"
     ],
     "slug": "marturie-macaron-roz-in-cutie-kraft-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-nunta-borcanel-miere-50ml-fundita-satin",
+    "title": "Marturie nunta borcanel cu miere 50ml si fundita satin",
+    "price": 17,
+    "category": "marturii nunta",
+    "product_type": "marturii nunta",
+    "desc": "Marturie de nunta cu borcanel de miere naturala 50ml decorat cu fundita eleganta din satin si eticheta personalizata cu numele mirilor si data evenimentului. Un cadou dulce si rafinat pentru invitati, ideal pentru nunti elegante sau romantice.",
+    "images": [
+      "/images/marturii/marturie-nunta-borcanel-miere-50ml-fundita.jpeg"
+    ],
+    "tags": [
+      "marturii",
+      "nunta",
+      "borcanel miere",
+      "marturie miere",
+      "miere 50ml",
+      "miere naturala",
+      "fundita satin",
+      "eticheta personalizata",
+      "cadou invitati",
+      "nunta eleganta",
+      "dulce",
+      "handmade"
+    ],
+    "slug": "marturie-nunta-borcanel-cu-miere-50ml-si-fundita-satin-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-nunta-borcanel-miere-55ml-sfoara-rustica",
+    "title": "Marturie nunta borcanel cu miere 55ml cu sfoara rustica",
+    "price": 17,
+    "category": "marturii nunta",
+    "product_type": "marturii nunta",
+    "desc": "Marturie de nunta cu borcanel de miere naturala 55ml decorat cu sfoara rustica si eticheta personalizata. Perfecta pentru nunti cu tematica rustica, boho sau naturala, oferind invitatilor un cadou dulce si memorabil.",
+    "images": [
+      "/images/marturii/marturie-nunta-borcanel-miere-55ml-rustic.jpeg"
+    ],
+    "tags": [
+      "marturii",
+      "nunta",
+      "borcanel miere",
+      "marturie miere",
+      "miere 45ml",
+      "miere naturala",
+      "rustic",
+      "sfoara iuta",
+      "eticheta personalizata",
+      "cadou invitati",
+      "nunta rustica",
+      "dulce",
+      "handmade"
+    ],
+    "slug": "marturie-nunta-borcanel-cu-miere-55ml-cu-sfoara-rustica-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-nunta-borcanel-miere-40ml-capac-carouri",
+    "title": "Marturie nunta borcanel cu miere 40ml capac carouri",
+    "price": 18.5,
+    "category": "marturii nunta",
+    "product_type": "marturii nunta",
+    "desc": "Marturie de nunta cu borcanel de miere naturala 40ml decorat cu capac cu model carouri si sfoara rustica, completat de eticheta personalizata. Un cadou dulce si original pentru invitati, ideal pentru nunti rustice sau tematice.",
+    "images": [
+      "/images/marturii/marturie-nunta-borcanel-miere-40ml-capac-carouri.jpeg"
+    ],
+    "tags": [
+      "marturii",
+      "nunta",
+      "borcanel miere",
+      "marturie miere",
+      "miere 40ml",
+      "miere naturala",
+      "capac carouri",
+      "rustic",
+      "eticheta personalizata",
+      "cadou invitati",
+      "dulce",
+      "handmade"
+    ],
+    "slug": "marturie-nunta-borcanel-cu-miere-40ml-capac-carouri-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-nunta-borcanel-miere-40ml-hexagon",
+    "title": "Marturie nunta borcanel hexagonal cu miere 40ml",
+    "price": 18.5,
+    "category": "marturii nunta",
+    "product_type": "marturii nunta",
+    "desc": "Marturie de nunta cu borcanel hexagonal de miere naturala 40ml decorat cu sfoara naturala si eticheta personalizata cu numele mirilor si data evenimentului. O marturie eleganta si simbolica inspirata de fagurele de miere.",
+    "images": [
+      "/images/marturii/marturie-nunta-borcanel-miere-40ml-hexagon.jpeg"
+    ],
+    "tags": [
+      "marturii",
+      "nunta",
+      "borcanel miere",
+      "marturie miere",
+      "miere 40ml",
+      "miere naturala",
+      "hexagon",
+      "fagure",
+      "rustic",
+      "eticheta personalizata",
+      "cadou invitati",
+      "dulce",
+      "handmade"
+    ],
+    "slug": "marturie-nunta-borcanel-hexagonal-cu-miere-40ml-marturie",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
