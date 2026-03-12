@@ -329,6 +329,34 @@
     "mpn": ""
   },
   {
+    "id": "invitatie-botez-stelute-norisori-baietel",
+    "title": "Invitatie botez stelute si norisori pentru baietel",
+    "price": 6,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitatie de botez pentru baietel cu design delicat ilustrat cu stelute, norisori si curcubeu in nuante pastel. Realizata pe carton premium, invitatia este perfecta pentru botezuri cu tematica stelute, cer instelat sau poveste.",
+    "images": [
+      "/images/invitatii/invitatie-botez-stelute-norisori-baietel.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "stelute",
+      "norisori",
+      "curcubeu",
+      "botez baietel",
+      "baby boy",
+      "tematica stelute",
+      "carton premium",
+      "eveniment",
+      "invitatia botez"
+    ],
+    "slug": "invitatie-botez-stelute-si-norisori-pentru-baietel-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-fundita-rosie-calc-004",
     "title": "Invitație de botez cu fundiță roșie și foaie de calc",
     "price": 6,
@@ -594,7 +622,34 @@
       "carton premium"
     ],
     "slug": "invitatie-absolvire-eleganta-bleu-cu-accente-aurii-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitationsinvitatie-pergament-fundita-aurie-093",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-pergament-fundita-aurie-093",
+    "title": "Invitație pergament cu fundă aurie",
+    "price": 4.5,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitație tip pergament, realizată pe carton premium cu aspect elegant, rulată manual și legată cu o fundă aurie strălucitoare. Design rafinat, potrivit pentru evenimente speciale, cu un aer minimalist și luxos.",
+    "images": [
+      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg",
+      "/images/invitatii/invitatie-pergament-fundita-aurie-1.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "pergament",
+      "funda aurie",
+      "nunta",
+      "botez",
+      "elegant",
+      "carton premium",
+      "minimalist",
+      "lux"
+    ],
+    "slug": "invitatie-pergament-cu-funda-aurie-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
