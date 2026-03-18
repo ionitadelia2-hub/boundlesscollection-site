@@ -1,5 +1,33 @@
 [
   {
+    "id": "invitatie-botez-fetita-ursulet-baloane",
+    "title": "Invitatie botez fetita cu ursulet si baloane pastel",
+    "price": 6,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitatie de botez pentru fetita cu design delicat ilustrat cu ursulet simpatic si baloane in nuante pastel. Realizata pe carton premium, invitatia este perfecta pentru botezuri cu tematica baby girl, ursulet sau poveste.",
+    "images": [
+      "/images/invitatii/invitatie-botez-fetita-ursulet-baloane.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "fetita",
+      "ursulet",
+      "baby girl",
+      "baloane",
+      "tematica ursulet",
+      "pastel",
+      "carton premium",
+      "eveniment",
+      "invitatie botez"
+    ],
+    "slug": "invitatie-botez-fetita-cu-ursulet-si-baloane-pastel-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-botez-albinute-miere-floarea-soarelui",
     "title": "Invitatie botez albinute cu miere si floarea soarelui",
     "price": 6,
@@ -52,6 +80,34 @@
       "handmade"
     ],
     "slug": "invitatie-de-botez-fetita-cu-ursuleti-roz-si-funda-satin-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-botez-ursulet-miere-plic-galben",
+    "title": "Invitatie botez ursulet cu miere in plic galben",
+    "price": 7,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitatie de botez pentru baietel cu design vesel ilustrat cu ursulet si tematica miere, prezentata intr-un plic galben decorativ. Realizata pe carton premium, invitatia este ideala pentru botezuri cu tematica ursulet, albinute sau honey.",
+    "images": [
+      "/images/invitatii/invitatie-botez-ursulet-miere-plic.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "ursulet",
+      "miere",
+      "albinute",
+      "honey theme",
+      "botez baietel",
+      "plic decorativ",
+      "tematica ursulet",
+      "carton premium",
+      "eveniment"
+    ],
+    "slug": "invitatie-botez-ursulet-cu-miere-in-plic-galben-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
@@ -137,6 +193,121 @@
       "invitatia botez"
     ],
     "slug": "invitatie-botez-ratusca-pentru-baietel-cu-norisori-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-pasaport-boarding-pass-tematica-calatorie",
+    "title": "Invitatie nunta pasaport cu boarding pass tematica calatorie",
+    "price": 8,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitatie de nunta originala tip pasaport cu boarding pass, inspirata de tematica calatorie si aventura. Realizata pe carton premium, invitatia include design personalizat si este ideala pentru cupluri pasionate de calatorii sau nunti tematice travel.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-pasaport-calatorie.jpeg",
+      "/images/invitatii/invitatie-nunta-pasaport-calatorie-1.jpeg",
+      "/images/invitatii/invitatie-nunta-pasaport-calatorie-2.jpeg",
+      "/images/invitatii/invitatie-nunta-pasaport-calatorie-3.jpeg",
+      "/images/invitatii/invitatie-nunta-pasaport-calatorie-4.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "pasaport nunta",
+      "boarding pass",
+      "invitatie nunta travel",
+      "tematica calatorie",
+      "travel theme",
+      "invitatia nunta originala",
+      "carton premium",
+      "nunta tematica",
+      "aventura"
+    ],
+    "slug": "invitatie-nunta-pasaport-cu-boarding-pass-tematica-calatorie-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-foaie-calc-sigiliu-ceara",
+    "title": "Invitatie nunta pe foaie de calc cu sigiliu de ceara",
+    "price": 8.5,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitatie de nunta eleganta realizata pe foaie de calc semitransparenta, decorata cu sigiliu de ceara si elemente florale delicate. Designul rafinat si minimalist este ideal pentru nunti romantice, elegante sau vintage.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-calc-sigiliu-ceara.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "invitatie nunta calc",
+      "foaie de calc",
+      "sigiliu ceara",
+      "invitatie eleganta",
+      "nunta romantica",
+      "nunta vintage",
+      "minimalist",
+      "carton premium",
+      "eveniment"
+    ],
+    "slug": "invitatie-nunta-pe-foaie-de-calc-cu-sigiliu-de-ceara-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-lamaie-tematica-mediteraneana",
+    "title": "Invitatie nunta cu lamaie tematica mediteraneana eleganta",
+    "price": 7.5,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitatie de nunta eleganta cu design inspirat de lamaie si elemente mediteraneene, ideala pentru nunti de vara sau tematica fresh. Realizata pe carton premium, invitatia ofera un aspect modern, luminos si rafinat.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-lamaie-mediteraneana.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "invitatie nunta lamaie",
+      "tematica lamaie",
+      "mediteranean",
+      "lemon wedding",
+      "nunta vara",
+      "nunta fresh",
+      "nunta eleganta",
+      "carton premium",
+      "eveniment"
+    ],
+    "slug": "invitatie-nunta-cu-lamaie-tematica-mediteraneana-eleganta-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-save-the-date-foto-eleganta",
+    "title": "Invitatie nunta save the date cu poza eleganta",
+    "price": 9.5,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitatie de nunta tip save the date personalizata cu fotografie, realizata pe carton premium. Design elegant si modern, ideal pentru nunti romantice, minimaliste sau clasice.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-save-the-date-foto.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "save the date",
+      "invitatie nunta foto",
+      "invitatie personalizata",
+      "nunta eleganta",
+      "minimalist",
+      "invitatia nunta moderna",
+      "carton premium",
+      "eveniment"
+    ],
+    "slug": "invitatie-nunta-save-the-date-cu-poza-eleganta-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
