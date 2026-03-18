@@ -205,7 +205,7 @@
     "product_type": "invitatii nunta",
     "desc": "Invitatie de nunta originala tip pasaport cu boarding pass, inspirata de tematica calatorie si aventura. Realizata pe carton premium, invitatia include design personalizat si este ideala pentru cupluri pasionate de calatorii sau nunti tematice travel.",
     "images": [
-      "/images/invitatii/invitatie-nunta-pasaport-calatorie.jpeg",
+      "/images/invitatii/invitatie-nunta-pasaport-calatorie.jpg",
       "/images/invitatii/invitatie-nunta-pasaport-calatorie-1.jpeg",
       "/images/invitatii/invitatie-nunta-pasaport-calatorie-2.jpeg",
       "/images/invitatii/invitatie-nunta-pasaport-calatorie-3.jpeg",
@@ -348,8 +348,7 @@
     "product_type": "invitatii nunta",
     "desc": "Invitație de nuntă elegantă, cu design ilustrat în stil acuarelă, reprezentând o poartă de piatră îmbrăcată în flori albe și frunziș verde, inspirată din povești romantice. Model pliabil tip porțiță, legat la exterior cu fundă satinată albă, pentru un efect delicat și rafinat. La deschidere, invitația dezvăluie o bisericuță ilustrată în stil de poveste și un layout aerisit pentru textul personalizat al evenimentului.",
     "images": [
-      "/images/invitatii/invitatie-nunta-poarta-basm-funda-alba.jpg",
-      "/images/invitatii/invitatie-nunta-poarta-basm-funda-alba-1.jpg"
+      "/images/invitatii/invitatie-nunta-poarta-basm-funda-alba.jpeg"
     ],
     "tags": [
       "invitatie nunta",
@@ -364,6 +363,62 @@
       "personalizata"
     ],
     "slug": "invitatie-de-nunta-tip-poarta-de-basm-cu-funda-alba-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-eleganta-florala-sigiliu",
+    "title": "Invitatie nunta eleganta florala cu sigiliu",
+    "price": 10,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitatie de nunta eleganta cu design floral delicat si sigiliu decorativ, realizata pe carton premium texturat. Stil rafinat si romantic, perfecta pentru nunti clasice, elegante sau cu tematica florala.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-florala-sigiliu.jpg"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "invitatie nunta eleganta",
+      "florala",
+      "sigiliu",
+      "invitatia nunta premium",
+      "nunta romantica",
+      "nunta clasica",
+      "carton texturat",
+      "invitatia nunta cu flori",
+      "eveniment"
+    ],
+    "slug": "invitatie-nunta-eleganta-florala-cu-sigiliu-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-eleganta-aurie-monograma",
+    "title": "Invitatie nunta eleganta aurie cu monograma",
+    "price": 8.5,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitatie de nunta eleganta cu design clasic in nuante ivoire si accente aurii, personalizata cu monograma. Realizata pe carton premium, invitatia este ideala pentru nunti rafinate, romantice sau stil clasic.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-aurie-monograma.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "nunta",
+      "invitatie nunta eleganta",
+      "auriu",
+      "monograma",
+      "nunta clasica",
+      "nunta rafinata",
+      "invitatia nunta premium",
+      "carton premium",
+      "eveniment",
+      "romantic"
+    ],
+    "slug": "invitatie-nunta-eleganta-aurie-cu-monograma-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
