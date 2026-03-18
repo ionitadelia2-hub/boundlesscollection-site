@@ -87,7 +87,7 @@
   {
     "id": "invitatie-botez-ursulet-miere-plic-galben",
     "title": "Invitatie botez ursulet cu miere in plic galben",
-    "price": 7,
+    "price": 5.99,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
     "desc": "Invitatie de botez pentru baietel cu design vesel ilustrat cu ursulet si tematica miere, prezentata intr-un plic galben decorativ. Realizata pe carton premium, invitatia este ideala pentru botezuri cu tematica ursulet, albinute sau honey.",
@@ -108,6 +108,33 @@
       "eveniment"
     ],
     "slug": "invitatie-botez-ursulet-cu-miere-in-plic-galben-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-botez-baietel-elefant-bleu",
+    "title": "Invitatie botez baietel cu elefant bleu",
+    "price": 7.9,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitatie de botez pentru baietel cu design delicat in nuante bleu si ilustratie cu elefant simpatic. Realizata pe carton premium, invitatia este perfecta pentru un eveniment plin de gingasie si emotie.",
+    "images": [
+      "/images/invitatii/invitatie-botez-elefant-bleu.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "invitatie botez baietel",
+      "elefant",
+      "bleu",
+      "invitatia botez personalizata",
+      "botez baiat",
+      "invitatia botez haioasa",
+      "carton premium",
+      "eveniment"
+    ],
+    "slug": "invitatie-botez-baietel-cu-elefant-bleu-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
@@ -375,7 +402,7 @@
     "product_type": "invitatii nunta",
     "desc": "Invitatie de nunta eleganta cu design floral delicat si sigiliu decorativ, realizata pe carton premium texturat. Stil rafinat si romantic, perfecta pentru nunti clasice, elegante sau cu tematica florala.",
     "images": [
-      "/images/invitatii/invitatie-nunta-florala-sigiliu.jpg"
+      "/images/invitatii/invitatie-nunta-florala-sigiliu.JPG"
     ],
     "tags": [
       "invitatii",
