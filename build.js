@@ -90,7 +90,7 @@ const CATEGORY_MAP = {
   "paste": { name: "Colecția de Paște", url: "/paste.html" },
   "martisor": { name: "Colecția de Mărțișor", url: "/martisor.html" },
   "tablouri luminoase": { name: "Tablouri luminoase", url: "/tablouri-luminoase.html" },
-  "cani personalizate": { name: "Căni personalizate", url: "/cani.html" }
+  "cani personalizate": { name: "Pahare miri & căni personalizate", url: "/cani.html" }
   };
 
 // --- Dropdown Produse (MEGA, grupat) ---

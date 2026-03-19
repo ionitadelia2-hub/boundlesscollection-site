@@ -5305,6 +5305,58 @@
     "mpn": ""
   },
   {
+    "id": "pahare-miri-personalizate-auriu",
+    "title": "Pahare miri personalizate cu nume auriu",
+    "price": 50,
+    "category": "cani personalizate",
+    "product_type": "cani personalizate",
+    "desc": "Set de pahare elegante pentru miri, realizate din sticla premium si decorate cu fundita satinata alba si nume personalizate in vinil auriu. Ideale pentru masa mirilor, sedinta foto sau ca amintire speciala de nunta. Personalizarea se face la cerere cu nume si font la alegere.",
+    "images": [
+      "/images/cani/pahare-miri-auriu.jpeg"
+    ],
+    "tags": [
+      "pahare miri",
+      "personalizate",
+      "vinil auriu",
+      "nunta",
+      "set pahare",
+      "elegant",
+      "fundita satin",
+      "decor masa miri",
+      "foto wedding"
+    ],
+    "slug": "pahare-miri-personalizate-cu-nume-auriu-pahare-m",
+    "google_product_category": "Home & Garden > Kitchen & Dining > Tableware > Drinkware > Glassware",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "pahare-nasi-personalizate-auriu",
+    "title": "Pahare nasi personalizate cu nume auriu",
+    "price": 50,
+    "category": "cani personalizatee",
+    "product_type": "cani personalizatee",
+    "desc": "Set de pahare elegante pentru nasi, realizate din sticla premium si decorate cu fundita satinata alba si nume personalizate in vinil auriu. Ideale pentru masa nasilor sau ca amintire speciala de nunta. Personalizarea se face la cerere cu nume si font la alegere.",
+    "images": [
+      "/images/cani/pahare-nasi-auriu.jpeg"
+    ],
+    "tags": [
+      "pahare nasi",
+      "personalizate",
+      "vinil auriu",
+      "nunta",
+      "set pahare",
+      "elegant",
+      "fundita satin",
+      "decor masa nasi",
+      "cadou nasi"
+    ],
+    "slug": "pahare-nasi-personalizate-cu-nume-auriu-pahare-n",
+    "google_product_category": "Home & Garden > Kitchen & Dining > Tableware > Drinkware > Glassware",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "cani-0001",
     "title": "Cana personalizata din sticla cu nume auriu",
     "price": 30,
