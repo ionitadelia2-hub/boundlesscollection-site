@@ -3265,6 +3265,263 @@
     "mpn": ""
   },
   {
+    "id": "meniu-nunta-rustic-eucalipt-slim",
+    "title": "Meniu nunta rustic cu eucalipt slim",
+    "price": 2.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta in stil rustic elegant, cu accente naturale si ilustratii cu frunze de eucalipt, ideal pentru evenimente in aer liber sau decoruri boho. Realizat pe carton premium gros, personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, perfect pentru mese festive naturale si moderne.",
+    "images": [
+      "/images/meniuri/meniu-nunta-rustic-eucalipt.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu nunta rustic",
+      "eucalipt",
+      "greenery",
+      "slim",
+      "9.9x21 cm",
+      "boho",
+      "natural",
+      "carton premium",
+      "eveniment",
+      "modern"
+    ],
+    "slug": "meniu-nunta-rustic-cu-eucalipt-slim-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-minimalist-slim-alb",
+    "title": "Meniu nunta minimalist alb slim",
+    "price": 6.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta cu design minimalist si elegant, realizat in stil clean, fara elemente grafice incarcate. Ideal pentru evenimente moderne si rafinate, cu accent pe simplitate si tipografie fina. Printat pe carton premium 300-350g, personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, perfect pentru aranjamente de masa elegante.",
+    "images": [
+      "/images/meniuri/meniu-nunta-minimalist-alb.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu minimalist",
+      "alb",
+      "simplu",
+      "elegant",
+      "slim",
+      "9.9x21 cm",
+      "modern",
+      "clean",
+      "premium",
+      "carton gros",
+      "personalizat"
+    ],
+    "slug": "meniu-nunta-minimalist-alb-slim-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-floral-elegant-nude",
+    "title": "Meniu nunta floral elegant nude",
+    "price": 6.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant, decorat cu ilustratii florale in tonuri nude si accente fine aurii, perfect pentru evenimente romantice si rafinate. Design echilibrat, feminin si modern, realizat pe carton premium 300-350g. Personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, ideal pentru aranjamente de masa elegante.",
+    "images": [
+      "/images/meniuri/meniu-nunta-floral-nude.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu floral",
+      "nude",
+      "bej",
+      "elegant",
+      "romantic",
+      "slim",
+      "9.9x21 cm",
+      "flori",
+      "delicat",
+      "premium",
+      "personalizat"
+    ],
+    "slug": "meniu-nunta-floral-elegant-nude-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-elegant-slim-minimalist",
+    "title": "Meniu nunta elegant slim minimalist",
+    "price": 2.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant, in stil minimalist, cu design rafinat si tipografie fina. Realizat pe carton premium gros, personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, ideal pentru mese festive moderne, elegante sau romantice.",
+    "images": [
+      "/images/meniuri/meniu-nunta-elegant-slim-minimalist.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu nunta elegant",
+      "minimalist",
+      "slim",
+      "9.9x21 cm",
+      "personalizat",
+      "carton premium",
+      "modern",
+      "rafinat",
+      "romantic"
+    ],
+    "slug": "meniu-nunta-elegant-slim-minimalist-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-lux-elegant-auriu-slim",
+    "title": "Meniu nunta lux elegant auriu slim",
+    "price": 2.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant in stil lux, cu accente aurii si design floral fin, ideal pentru evenimente rafinate si sofisticate. Realizat pe carton premium gros, personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, perfect pentru mese festive elegante si exclusiviste.",
+    "images": [
+      "/images/meniuri/meniu-nunta-lux-auriu-slim.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu nunta lux",
+      "elegant",
+      "auriu",
+      "floral",
+      "slim",
+      "9.9x21 cm",
+      "premium",
+      "rafinat",
+      "eveniment",
+      "exclusiv"
+    ],
+    "slug": "meniu-nunta-lux-elegant-auriu-slim-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-elegant-romantic-slim",
+    "title": "Meniu nunta elegant romantic slim",
+    "price": 2.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant in stil romantic, cu design minimalist si accente fine, ideal pentru decoruri rafinate. Realizat pe carton premium gros, personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, perfect pentru mese festive elegante si moderne.",
+    "images": [
+      "/images/meniuri/meniu-nunta-elegant-romantic-slim.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu nunta elegant",
+      "romantic",
+      "slim",
+      "9.9x21 cm",
+      "personalizat",
+      "carton premium",
+      "rafinat",
+      "modern",
+      "eveniment"
+    ],
+    "slug": "meniu-nunta-elegant-romantic-slim-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-elegant-minimalist-a5",
+    "title": "Meniu nunta elegant minimalist A5",
+    "price": 4,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant in stil minimalist, cu design rafinat si tipografie fina. Realizat pe carton premium, format A5 (14.8 x 21 cm), ideal pentru mese festive moderne, clasice sau romantice.",
+    "images": [
+      "/images/meniuri/meniu-nunta-minimalist.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu nunta elegant",
+      "minimalist",
+      "a5",
+      "meniu nunta premium",
+      "modern",
+      "rafinat",
+      "carton premium",
+      "eveniment"
+    ],
+    "slug": "meniu-nunta-elegant-minimalist-a5-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-elegant-floral-minimalist-a5",
+    "title": "Meniu nunta elegant floral minimalist A5",
+    "price": 4,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant cu design minimalist si accente florale fine, ideal pentru evenimente rafinate. Realizat pe carton premium, format A5 (14.8 x 21 cm), perfect pentru mese festive moderne, clasice sau romantice.",
+    "images": [
+      "/images/meniuri/meniu-nunta-floral-minimalist.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu nunta elegant",
+      "floral",
+      "minimalist",
+      "a5",
+      "meniu nunta premium",
+      "rafinat",
+      "carton premium",
+      "eveniment",
+      "romantic"
+    ],
+    "slug": "meniu-nunta-elegant-floral-minimalist-a5-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-elegant-monograma-a5",
+    "title": "Meniu nunta elegant cu monograma A5",
+    "price": 4,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant cu design clasic si monograma personalizata, ideal pentru evenimente rafinate. Realizat pe carton premium, format A5 (14.8 x 21 cm), perfect pentru mese festive elegante si moderne.",
+    "images": [
+      "/images/meniuri/meniu-nunta-monograma.jpeg"
+    ],
+    "tags": [
+      "meniuri",
+      "nunta",
+      "meniu nunta elegant",
+      "monograma",
+      "a5",
+      "meniu nunta premium",
+      "clasic",
+      "rafinat",
+      "carton premium",
+      "eveniment",
+      "personalizat"
+    ],
+    "slug": "meniu-nunta-elegant-cu-monograma-a5-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "meniu-balerina-roz-089",
     "title": "Meniu botez balerina roz carte",
     "price": 6,
