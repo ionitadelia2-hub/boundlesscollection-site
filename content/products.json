@@ -3299,7 +3299,7 @@
     "price": 2.5,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu de nunta cu design minimalist si elegant, realizat in stil clean, fara elemente grafice incarcate. Ideal pentru evenimente moderne si rafinate, cu accent pe simplitate si tipografie fina. Printat pe carton premium 300-350g, personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, perfect pentru aranjamente de masa elegante.",
+    "desc": "Meniu de nunta cu design minimalist si elegant, realizat in stil clean, fara elemente grafice incarcate. Ideal pentru evenimente moderne si rafinate, cu accent pe simplitate si tipografie fina. Printat pe carton premium 250g, personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, perfect pentru aranjamente de masa elegante.",
     "images": [
       "/images/meniuri/meniu-nunta-minimalist-alb.jpeg"
     ],
@@ -3329,7 +3329,7 @@
     "price": 2.5,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu de nunta elegant, decorat cu ilustratii florale in tonuri nude si accente fine aurii, perfect pentru evenimente romantice si rafinate. Design echilibrat, feminin si modern, realizat pe carton premium 300-350g. Personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, ideal pentru aranjamente de masa elegante.",
+    "desc": "Meniu de nunta elegant, decorat cu ilustratii florale in tonuri nude si accente fine aurii, perfect pentru evenimente romantice si rafinate. Design echilibrat, feminin si modern, realizat pe carton premium 250g. Personalizabil complet cu preparate, nume si data. Format slim 9.9 x 21 cm, ideal pentru aranjamente de masa elegante.",
     "images": [
       "/images/meniuri/meniu-nunta-floral-nude.jpeg"
     ],
@@ -3517,6 +3517,62 @@
       "personalizat"
     ],
     "slug": "meniu-nunta-elegant-cu-monograma-a5-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-lamaie-mediteranean-010",
+    "title": "Meniu nunta lamaie mediteranean",
+    "price": 2.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant cu design mediteranean, decorat cu lamaie si motive florale albastre. Dimensiunea modelului: 9.9 x 21 cm (Lățime x inălțime), printat pe carton premium 250g, ideal pentru evenimente rafinate in aer liber sau tematica mediteraneana. Personalizabil complet cu preparate, nume si data.",
+    "images": [
+      "/images/meniuri/meniu-lamaie-mediteranean.jpg"
+    ],
+    "tags": [
+      "meniu nunta",
+      "meniuri nunta",
+      "lamaie",
+      "mediteranean",
+      "blue floral",
+      "elegant",
+      "A5",
+      "carton 250g",
+      "personalizat",
+      "eveniment vara",
+      "garden party"
+    ],
+    "slug": "meniu-nunta-lamaie-mediteranean-meniu-la",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-botez-ursulet-albastru-011",
+    "title": "Meniu botez ursulet albastru baietel",
+    "price": 3.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de botez pentru baieti cu design delicat in nuante de albastru pastel, ilustratie cu ursulet si baloane. Dimensiunea modelului: 9.9 x 21 cm (Lățime x inălțime), realizat pe carton premium 250g, perfect pentru evenimente elegante si tematice. Personalizabil complet cu preparate, nume si data.",
+    "images": [
+      "/images/meniuri/meniu-botez-ursulet-albastru.jpg"
+    ],
+    "tags": [
+      "meniu botez",
+      "meniuri botez",
+      "baietel",
+      "ursulet",
+      "albastru pastel",
+      "baby shower",
+      "baloane",
+      "A5",
+      "carton 250g",
+      "personalizat",
+      "eveniment copii"
+    ],
+    "slug": "meniu-botez-ursulet-albastru-baietel-meniu-bo",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
