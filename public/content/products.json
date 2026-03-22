@@ -2616,6 +2616,33 @@
     "mpn": ""
   },
   {
+    "id": "plic-dar-nunta-001",
+    "title": "Plic de dar nunta - card masa invitati elegant",
+    "price": 3.5,
+    "category": "plicuri",
+    "product_type": "plicuri",
+    "desc": "Plic de dar pentru nunta, elegant si personalizat, ideal pentru organizarea invitatilor la masa si oferirea darului. Realizat din carton premium, cu design delicat si elemente fine, perfect pentru evenimente rafinate. Se personalizeaza cu nume, initiale sau mesaj special si poate fi folosit si ca place card sau card de masa.",
+    "images": [
+      "/images/plicuri/plic-dar-nunta.jpg"
+    ],
+    "tags": [
+      "plic de dar nunta",
+      "plic bani nunta",
+      "plic nunta personalizat",
+      "card masa invitati",
+      "plic nunta",
+      "plic de dar",
+      "plic bani elegant",
+      "decor masa nunta",
+      "carton premium",
+      "plic de nunta"
+    ],
+    "slug": "plic-de-dar-nunta-card-masa-invitati-elegant-plic-dar",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "plic-dar-nunta-verde-smarald-auriu-001",
     "title": "Plic de dar nunta verde smarald cu accente aurii",
     "price": 3,
