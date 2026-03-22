@@ -1155,57 +1155,34 @@
     "mpn": ""
   },
   {
-    "id": "marturie-iepuras-roz-048",
-    "title": "Marturie iepuras roz in saculet tulle",
-    "price": 30,
-    "category": "marturii botez",
-    "product_type": "marturii botez",
-    "desc": "Marturie in forma de iepuras, turnata manual din ceara de soia si asezata in saculet de tulle cu fundita satin. Include eticheta personalizata si este ideala pentru botezuri si evenimente delicate.",
+    "id": "marturie-mir-iconita-001",
+    "title": "Marturii botez si nunta cu mir si iconita personalizate - cadou invitati",
+    "price": 17,
+    "category": "marturii",
+    "product_type": "marturii",
+    "desc": "Marturii elegante pentru botez sau nunta, compuse din sticluta cu mir si iconita religioasa, ambalate intr-o cutie decorativa cu funda satinata. Disponibile in mai multe culori (roz, bleu, verde, lila). Ideale ca marturii pentru invitati, oferind o amintire simbolica si deosebita. Dimensiune produs: 6.5 x 11.5 x 2.7 cm (Lățime x înălțime x grosime).",
     "images": [
-      "/images/marturii/marturie-iepuras-roz.jpg"
+      "/images/marturii/marturie-mir-iconita.jpeg",
+      "/images/marturii/marturie-mir-iconita-1.jpeg",
+      "/images/marturii/marturie-mir-iconita-2.jpeg",
+      "/images/marturii/marturie-mir-iconita-3.jpeg",
+      "/images/marturii/marturie-mir-iconita-4.jpeg",
+      "/images/marturii/marturie-mir-iconita-5.jpeg"
     ],
     "tags": [
-      "marturii",
-      "iepuras",
-      "roz",
-      "botez",
-      "fetita",
-      "tulle",
-      "fundita",
-      "handmade",
-      "soia",
-      "cadou"
+      "marturii botez",
+      "marturii nunta",
+      "marturie botez cu mir",
+      "marturie iconita",
+      "marturii religioase",
+      "cadou invitati nunta",
+      "cadou invitati botez",
+      "marturii personalizate",
+      "cutie cadou",
+      "fundita satin"
     ],
-    "slug": "marturie-iepuras-roz-in-saculet-tulle-marturie",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "marturie-macaron-roz-055",
-    "title": "Marturie macaron roz in cutie kraft",
-    "price": 20,
-    "category": "marturii botez",
-    "product_type": "marturii botez",
-    "desc": "Marturie tip macaron, realizata manual din ceara de soia si ambalata in cutie kraft cu fereastra. Decorul cu panglica si flori uscate plus eticheta personalizata o fac perfecta pentru botez sau petreceri elegante.",
-    "images": [
-      "/images/marturii/marturie-macaron-roz.jpg"
-    ],
-    "tags": [
-      "marturii",
-      "macaron",
-      "roz pastel",
-      "botez",
-      "fetita",
-      "flori uscate",
-      "cutie kraft",
-      "handmade",
-      "soia",
-      "cadou",
-      "elegant"
-    ],
-    "slug": "marturie-macaron-roz-in-cutie-kraft-marturie",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "slug": "marturii-botez-si-nunta-cu-mir-si-iconita-personalizate-cadou-invitati-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
   },
@@ -1323,6 +1300,61 @@
       "handmade"
     ],
     "slug": "marturie-nunta-borcanel-hexagonal-cu-miere-40ml-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-iepuras-roz-048",
+    "title": "Marturie iepuras roz in saculet tulle",
+    "price": 30,
+    "category": "marturii botez",
+    "product_type": "marturii botez",
+    "desc": "Marturie in forma de iepuras, turnata manual din ceara de soia si asezata in saculet de tulle cu fundita satin. Include eticheta personalizata si este ideala pentru botezuri si evenimente delicate.",
+    "images": [
+      "/images/marturii/marturie-iepuras-roz.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "iepuras",
+      "roz",
+      "botez",
+      "fetita",
+      "tulle",
+      "fundita",
+      "handmade",
+      "soia",
+      "cadou"
+    ],
+    "slug": "marturie-iepuras-roz-in-saculet-tulle-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-macaron-roz-055",
+    "title": "Marturie macaron roz in cutie kraft",
+    "price": 20,
+    "category": "marturii botez",
+    "product_type": "marturii botez",
+    "desc": "Marturie tip macaron, realizata manual din ceara de soia si ambalata in cutie kraft cu fereastra. Decorul cu panglica si flori uscate plus eticheta personalizata o fac perfecta pentru botez sau petreceri elegante.",
+    "images": [
+      "/images/marturii/marturie-macaron-roz.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "macaron",
+      "roz pastel",
+      "botez",
+      "fetita",
+      "flori uscate",
+      "cutie kraft",
+      "handmade",
+      "soia",
+      "cadou",
+      "elegant"
+    ],
+    "slug": "marturie-macaron-roz-in-cutie-kraft-marturie",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
