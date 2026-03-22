@@ -3557,7 +3557,7 @@
     "product_type": "meniuri",
     "desc": "Meniu de botez pentru baieti cu design delicat in nuante de albastru pastel, ilustratie cu ursulet si baloane. Dimensiunea modelului: 9.9 x 21 cm (Lățime x inălțime), realizat pe carton premium 250g, perfect pentru evenimente elegante si tematice. Personalizabil complet cu preparate, nume si data.",
     "images": [
-      "/images/meniuri/meniu-botez-ursulet-albastru.jpg"
+      "/images/meniuri/meniu-botez-ursulet-albastru.jpeg"
     ],
     "tags": [
       "meniu botez",
@@ -3578,166 +3578,88 @@
     "mpn": ""
   },
   {
-    "id": "meniu-balerina-roz-089",
-    "title": "Meniu botez balerina roz carte",
-    "price": 6,
+    "id": "meniu-botez-elefant-albastru-012",
+    "title": "Meniu botez elefant albastru 9.9x21 cm",
+    "price": 2.5,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu de botez tip carte, in nuante roz pastel, cu ilustratie balerina si accente delicate. Printat pe carton premium si personalizabil complet cu preparate, nume si data",
+    "desc": "Meniu de botez pentru baieti cu design delicat in nuante de albastru pastel si ilustratii cu elefant. Format dreptunghiular 9.9x21 cm, realizat pe carton premium 250g, ideal pentru evenimente elegante si tematice. Personalizabil complet cu preparate, nume si data.",
     "images": [
-      "/images/meniuri/meniu-balerina-roz.jpg"
+      "/images/meniuri/meniu-botez-elefant-albastru.jpg"
     ],
     "tags": [
-      "meniuri",
-      "botez",
-      "balerina",
-      "roz pastel",
-      "fetite",
-      "delicat",
-      "elegant",
+      "meniu botez",
+      "meniuri botez",
+      "baietel",
+      "elefant",
+      "albastru pastel",
+      "baby",
+      "9.9x21 cm",
+      "carton 250g",
       "personalizat",
-      "carton premium"
+      "eveniment copii",
+      "tematica baby"
     ],
-    "slug": "meniu-botez-balerina-roz-carte-meniu-ba",
+    "slug": "meniu-botez-elefant-albastru-99x21-cm-meniu-bo",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
   },
   {
-    "id": "meniu-botez-elefantel-bleu-053",
-    "title": "Meniu botez elefantel bleu",
-    "price": 6,
+    "id": "meniu-botez-safari-jungla-013",
+    "title": "Meniu botez safari jungla A5",
+    "price": 4,
     "category": "meniuri",
     "product_type": "meniuri",
-    "desc": "Meniu pentru botez in nuante bleu pastel, cu elefantel si baloane, printat pe carton premium. Se personalizeaza integral cu preparatele si detaliile evenimentului, oferind mesei un look baby boy elegant si unitar.",
+    "desc": "Meniu de botez cu tematica safari si jungla, decorat cu animale simpatice si frunze tropicale. Format A5, printat pe carton premium 250g, ideal pentru evenimente tematice moderne. Personalizabil complet cu preparate, nume si data.",
     "images": [
-      "/images/meniuri/meniu-botez-elefant-bleu.jpg"
+      "/images/meniuri/meniu-botez-safari-jungla.jpg"
     ],
     "tags": [
-      "meniuri",
-      "botez",
-      "elefantel",
-      "bleu pastel",
-      "baby boy",
-      "pastel",
-      "personalizat",
-      "carton premium",
-      "delicat",
-      "elegant"
-    ],
-    "slug": "meniu-botez-elefantel-bleu-meniu-bo",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "meniu-botez-safari-verde-054",
-    "title": "Meniu botez Safari cu frunze verzi",
-    "price": 6,
-    "category": "meniuri",
-    "product_type": "meniuri",
-    "desc": "Meniu de botez cu tematica Safari, decorat cu animale de jungla si frunze tropicale, pliat tip carte. Print pe carton premium alb, cu personalizare completa a meniului, numelui si datei pentru un decor fresh si vesel.",
-    "images": [
-      "/images/meniuri/meniu-botez-safari-verde.jpg"
-    ],
-    "tags": [
-      "meniuri",
-      "botez",
+      "meniu botez",
+      "meniuri botez",
       "safari",
       "jungla",
       "animale",
-      "frunze tropicale",
-      "verde",
-      "tematic",
-      "personalizat",
-      "carton premium",
-      "elegant"
-    ],
-    "slug": "meniu-botez-safari-cu-frunze-verzi-meniu-bo",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "meniu-botez-roz-sigiliu-049",
-    "title": "Meniu botez roz cu sigiliu",
-    "price": 7,
-    "category": "meniuri",
-    "product_type": "meniuri",
-    "desc": "Meniu elegant pentru botez, printat pe carton premium si accesorizat cu sigiliu roz pudrat si flori uscate. Personalizabil cu preparatele si detaliile evenimentului, ideal pentru decoruri pastel si mese rafinate.",
-    "images": [
-      "/images/meniuri/meniu-botez-roz-sigiliu.jpg"
-    ],
-    "tags": [
-      "meniuri",
-      "botez",
-      "roz pudrat",
-      "sigiliu",
-      "flori uscate",
-      "pastel",
-      "personalizat",
-      "carton premium",
-      "elegant",
-      "handmade"
-    ],
-    "slug": "meniu-botez-roz-cu-sigiliu-meniu-bo",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "meniu-botez-baietel-veverite-021",
-    "title": "Meniu botez baietel cu veverite",
-    "price": 6,
-    "category": "meniuri",
-    "product_type": "meniuri",
-    "desc": "Meniu personalizat pentru botez baietel, cu grafica veverite si ghinde in stil jucaus. Printat pe carton mat premium, pliat tip carte, iar textul se adapteaza complet meniului si tematicii evenimentului.",
-    "images": [
-      "/images/meniuri/meniu-botez-baietel-veverite.jpg"
-    ],
-    "tags": [
-      "meniuri",
-      "botez",
+      "tropical",
       "baietel",
-      "veverite",
-      "animale",
-      "tematic",
+      "A5",
+      "carton 250g",
       "personalizat",
-      "copii",
-      "carton premium",
-      "delicat",
-      "elegant"
+      "tematica safari",
+      "eveniment copii"
     ],
-    "slug": "meniu-botez-baietel-cu-veverite-meniu-bo",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "slug": "meniu-botez-safari-jungla-a5-meniu-bo",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Suppliesmeniu-botez-roz-sigiliu-049",
     "material": "",
     "mpn": ""
   },
   {
-    "id": "marturie-lumanare-roz-022",
-    "title": "Marturie lumanare roz pastel cu flori uscate",
-    "price": 20,
-    "category": "marturii soia",
-    "product_type": "marturii soia",
-    "desc": "Lumanare din soia roz pastel cu panglica satin, puf decorativ si eticheta personalizata. Potrivita pentru nunta/botez.",
+    "id": "meniu-botez-toamna-veverita-014",
+    "title": "Meniu botez toamna woodland veverita A4",
+    "price": 5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de botez cu tematica de toamna si woodland, decorat cu veverite simpatice si elemente naturale precum ghinde si frunze. Format A4, realizat pe carton premium 250g, ideal pentru evenimente calde si elegante in sezonul de toamna. Personalizabil complet cu preparate, nume si data.",
     "images": [
-      "/images/marturii/marturie-lumanare-roz.jpg"
+      "/images/meniuri/meniu-botez-toamna-veverita.png"
     ],
     "tags": [
-      "marturii",
-      "lumanare",
-      "roz pastel",
-      "pene",
-      "eticheta personalizata",
-      "handmade",
-      "soia naturala",
-      "elegant",
-      "botez",
-      "nunta",
-      "cadou"
+      "meniu botez",
+      "meniuri botez",
+      "toamna",
+      "woodland",
+      "veverita",
+      "ghinde",
+      "frunze",
+      "baietel",
+      "A5",
+      "carton 300g",
+      "personalizat",
+      "tematica toamna"
     ],
-    "slug": "marturie-lumanare-roz-pastel-cu-flori-uscate-marturie",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "slug": "meniu-botez-toamna-woodland-veverita-a4-meniu-bo",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Suppliesmarturie-lumanare-roz-022",
     "material": "",
     "mpn": ""
   },
