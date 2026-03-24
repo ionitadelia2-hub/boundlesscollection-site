@@ -1,5 +1,31 @@
 [
   {
+    "id": "invitatie-roz-gold-001",
+    "title": "Invitatie nunta eleganta roz si auriu personalizata",
+    "price": 5,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitatie de nunta eleganta, cu design modern in nuante de roz pastel si accente aurii. Realizata pe carton premium, ideala pentru evenimente rafinate. Personalizabila cu toate detaliile evenimentului si disponibila cu plic inclus.",
+    "images": [
+      "/images/invitatii/invitatie-roz-gold.jpg"
+    ],
+    "tags": [
+      "invitatie nunta",
+      "invitatii nunta elegante",
+      "invitatie roz auriu",
+      "invitatii personalizate",
+      "invitatie premium",
+      "invitatie moderna",
+      "nunta eleganta",
+      "carton premium",
+      "plic inclus"
+    ],
+    "slug": "invitatie-nunta-eleganta-roz-si-auriu-personalizata-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-botez-fetita-ursulet-baloane",
     "title": "Invitatie botez fetita cu ursulet si baloane pastel",
     "price": 6,
@@ -3324,6 +3350,32 @@
     "mpn": ""
   },
   {
+    "id": "meniu-roz-gold-001",
+    "title": "Meniu nunta elegant roz si auriu personalizat",
+    "price": 2.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nunta elegant, realizat in nuante delicate de roz pastel cu accente aurii, perfect pentru evenimente rafinate. Printat pe carton premium si personalizabil cu preparate, nume si data evenimentului. Design modern si elegant, ideal pentru un decor armonios.",
+    "images": [
+      "/images/meniuri/meniu-roz-gold.jpg"
+    ],
+    "tags": [
+      "meniu nunta",
+      "meniu elegant",
+      "meniu roz auriu",
+      "meniuri personalizate",
+      "meniu nunta premium",
+      "decor masa nunta",
+      "carton premium",
+      "meniu modern",
+      "meniu eveniment"
+    ],
+    "slug": "meniu-nunta-elegant-roz-si-auriu-personalizat-meniu-ro",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "meniu-nunta-rustic-eucalipt-slim",
     "title": "Meniu nunta rustic cu eucalipt slim",
     "price": 2.5,
@@ -5312,6 +5364,148 @@
     ],
     "slug": "lumanare-decorativa-fulg-de-zapada-verde-alb-craciun-lumanare",
     "google_product_category": "Home & Garden > Decor > Candles",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "numar-masa-roz-gold-001",
+    "title": "Numar masa nunta elegant roz si auriu",
+    "price": 4,
+    "category": "numere de masa",
+    "product_type": "numere de masa",
+    "desc": "Numar de masa pentru nunta, realizat intr-un design elegant cu accente roz pastel si detalii aurii. Ideal pentru organizarea meselor intr-un mod stilat si coerent cu restul decorului. Printat pe carton premium, perfect pentru evenimente rafinate.",
+    "images": [
+      "/images/numere/numar-masa-roz-gold.jpg"
+    ],
+    "tags": [
+      "numar masa nunta",
+      "numere masa nunta",
+      "decor masa nunta",
+      "numar masa elegant",
+      "numar masa roz auriu",
+      "organizare mese nunta",
+      "carton premium",
+      "decor eveniment"
+    ],
+    "slug": "numar-masa-nunta-elegant-roz-si-auriu-numar-ma",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "numar-masa-floral-grey-001",
+    "title": "Numar masa nunta elegant floral gri",
+    "price": 4,
+    "category": "numere de masa",
+    "product_type": "numere de masa",
+    "desc": "Numar de masa elegant cu design floral gri minimalist, perfect pentru nunti rafinate. Realizat pe carton premium, ideal pentru organizarea meselor si un decor armonios.",
+    "images": [
+      "/images/numere-masa/numar-masa-floral-grey.jpeg"
+    ],
+    "tags": [
+      "numar masa nunta",
+      "numere masa elegante",
+      "numar masa floral",
+      "decor nunta elegant",
+      "numar masa minimalist",
+      "carton premium",
+      "organizare mese"
+    ],
+    "slug": "numar-masa-nunta-elegant-floral-gri-numar-ma",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "numar-masa-floral-roz-002",
+    "title": "Numar masa nunta floral roz elegant",
+    "price": 4,
+    "category": "numere de masa",
+    "product_type": "numere de masa",
+    "desc": "Numar de masa cu design floral delicat in nuante de roz si accente elegante. Perfect pentru nunti romantice si decoruri fine. Personalizabil la cerere.",
+    "images": [
+      "/images/numere/numar-masa-floral-roz.jpeg"
+    ],
+    "tags": [
+      "numar masa nunta",
+      "numar masa roz",
+      "numere masa elegante",
+      "decor masa nunta",
+      "numar masa floral",
+      "nunta romantica",
+      "carton premium"
+    ],
+    "slug": "numar-masa-nunta-floral-roz-elegant-numar-ma",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "numar-masa-traditional-003",
+    "title": "Numar masa nunta traditional colorat",
+    "price": 4,
+    "category": "numere de masa",
+    "product_type": "numere de masa",
+    "desc": "Numar de masa inspirat din motive traditionale romanesti, ideal pentru nunti autentice si evenimente cu tematica populara. Design vesel si unic.",
+    "images": [
+      "/images/numere/numar-masa-traditional.jpeg"
+    ],
+    "tags": [
+      "numar masa traditional",
+      "numar masa nunta",
+      "decor traditional nunta",
+      "numere masa colorate",
+      "nunta romaneasca",
+      "decor masa eveniment"
+    ],
+    "slug": "numar-masa-nunta-traditional-colorat-numar-ma",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "numar-masa-olive-004",
+    "title": "Numar masa nunta verde olive minimalist",
+    "price": 4,
+    "category": "numere de masa",
+    "product_type": "numere de masa",
+    "desc": "Numar de masa elegant cu design minimalist si elemente botanice in nuante de verde olive si auriu. Ideal pentru nunti moderne si naturale.",
+    "images": [
+      "/images/numere/numar-masa-olive.jpeg"
+    ],
+    "tags": [
+      "numar masa nunta",
+      "numar masa verde",
+      "numere masa minimaliste",
+      "decor nunta modern",
+      "numar masa elegant",
+      "olive wedding"
+    ],
+    "slug": "numar-masa-nunta-verde-olive-minimalist-numar-ma",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "numar-masa-boho-gold-005",
+    "title": "Numar masa nunta boho cu accente aurii",
+    "price": 4,
+    "category": "numere de masa",
+    "product_type": "numere de masa",
+    "desc": "Numar de masa in stil boho cu detalii aurii si elemente florale fine, perfect pentru nunti in aer liber sau decoruri romantice.",
+    "images": [
+      "/images/numere/numar-masa-boho-gold.jpeg"
+    ],
+    "tags": [
+      "numar masa nunta",
+      "numar masa boho",
+      "numere masa aurii",
+      "decor nunta elegant",
+      "numar masa romantic",
+      "decor masa"
+    ],
+    "slug": "numar-masa-nunta-boho-cu-accente-aurii-numar-ma",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
   },
