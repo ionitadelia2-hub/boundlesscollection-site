@@ -33,7 +33,7 @@
     "product_type": "invitatii",
     "desc": "Invitatie de nunta eleganta, cu design minimalist si fotografie personalizata a mirilor. Realizata pe carton premium, ideala pentru evenimente moderne si rafinate. Personalizabila cu poza, nume, data si toate detaliile evenimentului, disponibila cu plic inclus.",
     "images": [
-      "/images/invitatii/invitatie-foto-minimal-006.jpg"
+      "/images/invitatii/invitatie-foto-minimal-006.jpeg"
     ],
     "tags": [
       "invitatie nunta",
@@ -55,7 +55,7 @@
   {
     "id": "invitatie-botez-fetita-ursulet-baloane",
     "title": "Invitatie botez fetita cu ursulet si baloane pastel",
-    "price": 6,
+    "price": 5,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
     "desc": "Invitatie de botez pentru fetita cu design delicat ilustrat cu ursulet simpatic si baloane in nuante pastel. Realizata pe carton premium, invitatia este perfecta pentru botezuri cu tematica baby girl, ursulet sau poveste.",
