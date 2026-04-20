@@ -33,7 +33,7 @@
     "product_type": "invitatii",
     "desc": "Invitatie de nunta premium, realizata pe carton texturat albastru regal, decorata cu sigiliu elegant, snur auriu si flori uscate. Designul sofisticat ofera un aspect rafinat, ideal pentru nunti elegante si evenimente deosebite. Caracteristici: Material: carton texturat albastru regal|Grosime carton: 250-300g/mp|Dimensiune: 13 x 18 cm (inchisa)|Accesorii: sigiliu decorativ, snur auriu, flori uscate|Personalizare: nume, data, locatie, text integral|Plic inclus",
     "images": [
-      "/images/invitatii/invitatie-albastru-regal-007.jpg"
+      "/images/invitatii/invitatie-albastru-regal-007.jpeg"
     ],
     "tags": [
       "invitatie nunta",
@@ -48,35 +48,7 @@
       "plic inclus"
     ],
     "slug": "invitatie-nunta-albastru-regal-cu-sigiliu-si-flori-uscate-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Suppliesinvitatie-foto-minimal-006",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "invitatie-botez-fetita-ursulet-baloane",
-    "title": "Invitatie botez fetita cu ursulet si baloane pastel",
-    "price": 5,
-    "category": "invitatii botez",
-    "product_type": "invitatii botez",
-    "desc": "Invitatie de botez pentru fetita cu design delicat ilustrat cu ursulet simpatic si baloane in nuante pastel. Realizata pe carton premium, invitatia este perfecta pentru botezuri cu tematica baby girl, ursulet sau poveste.",
-    "images": [
-      "/images/invitatii/invitatie-botez-fetita-ursulet-baloane.jpeg"
-    ],
-    "tags": [
-      "invitatii",
-      "botez",
-      "fetita",
-      "ursulet",
-      "baby girl",
-      "baloane",
-      "tematica ursulet",
-      "pastel",
-      "carton premium",
-      "eveniment",
-      "invitatie botez"
-    ],
-    "slug": "invitatie-botez-fetita-cu-ursulet-si-baloane-pastel-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Suppliesinvitatie-botez-fetita-ursulet-baloane",
     "material": "",
     "mpn": ""
   },

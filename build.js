@@ -50,6 +50,31 @@ const esc = (s) => (s || "").replace(/[&<>"']/g, c => (
   { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
 ));
 
+function formatProductDesc(descRaw) {
+  const raw = String(descRaw || "").trim();
+  if (!raw) return "";
+
+  const marker = "Caracteristici:";
+  if (!raw.includes(marker)) {
+    return `<p class="product-desc">${esc(raw)}</p>`;
+  }
+
+  const [introPart, featuresPartRaw] = raw.split(marker);
+  const intro = introPart.trim();
+  const items = featuresPartRaw
+    .split("|")
+    .map(s => s.trim())
+    .filter(Boolean);
+
+  return `
+    ${intro ? `<p class="product-desc">${esc(intro)}</p>` : ""}
+    <div class="product-features">
+      <strong>Caracteristici:</strong>
+      ${items.map(item => `<div class="product-feature-item">${esc(item)}</div>`).join("")}
+    </div>
+  `;
+}
+
 // root-absolute pentru servire web
 const toRootAbs = (u) => {
   if (!u) return "";
@@ -149,10 +174,12 @@ const PRODUCTS_DROPDOWN_HTML = `
 
 // ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
-  const brand = "Boundless Collection";
-  const title = esc(prod.title || "");
-  const desc  = esc(prod.desc || title);
-  const priceStr = Number(prod.price || 0).toFixed(2);
+const brand = "Boundless Collection";
+const title = esc(prod.title || "");
+const descPlain = prod.desc || prod.title || "";
+const desc = esc(descPlain);
+const descHtml = formatProductDesc(descPlain);
+const priceStr = Number(prod.price || 0).toFixed(2);
   const price = priceStr + " RON";
 
   const relImgs = (prod.images || []);
@@ -377,7 +404,7 @@ function pageTemplate(prod) {
 
       <div class="hero-text">
         <h1 class="product-title">${title}</h1>
-        <p class="product-desc">${desc}</p>
+        <p class="product-desc">${descHtml}</p>
         <p class="price price-badge">${price}</p>
         <div class="tags">${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
         <div class="actions">
