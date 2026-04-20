@@ -31,9 +31,9 @@
     "price": 10,
     "category": "invitatii",
     "product_type": "invitatii",
-    "desc": "Invitatie de nunta premium, realizata pe carton texturat albastru regal, decorata cu sigiliu elegant, snur auriu si flori uscate. Designul sofisticat ofera un aspect rafinat, ideal pentru nunti elegante si evenimente deosebite. Caracteristici: Material: carton texturat albastru regal; Grosime carton: 250-300g/mp; Dimensiune: 13 x 18 cm (inchisa); Accesorii: sigiliu decorativ, snur auriu, flori uscate; Personalizare: nume, data, locatie, text integral; Plic inclus.",
+    "desc": "Invitatie de nunta premium, realizata pe carton texturat albastru regal, decorata cu sigiliu elegant, snur auriu si flori uscate. Designul sofisticat ofera un aspect rafinat, ideal pentru nunti elegante si evenimente deosebite. Caracteristici: Material: carton texturat albastru regal|Grosime carton: 250-300g/mp|Dimensiune: 13 x 18 cm (inchisa)|Accesorii: sigiliu decorativ, snur auriu, flori uscate|Personalizare: nume, data, locatie, text integral|Plic inclus",
     "images": [
-      "/images/invitatii/invitatie-albastru-regal-007.jpeg"
+      "/images/invitatii/invitatie-albastru-regal-007.jpg"
     ],
     "tags": [
       "invitatie nunta",
@@ -48,35 +48,7 @@
       "plic inclus"
     ],
     "slug": "invitatie-nunta-albastru-regal-cu-sigiliu-si-flori-uscate-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
-    "material": "",
-    "mpn": ""
-  },
-  {
-    "id": "invitatie-foto-minimal-006",
-    "title": "Invitatie nunta cu poza personalizata",
-    "price": 5,
-    "category": "invitatii",
-    "product_type": "invitatii",
-    "desc": "Invitatie de nunta eleganta, cu design minimalist si fotografie personalizata a mirilor. Realizata pe carton premium, ideala pentru evenimente moderne si rafinate. Personalizabila cu poza, nume, data si toate detaliile evenimentului, disponibila cu plic inclus.",
-    "images": [
-      "/images/invitatii/invitatie-foto-minimal-006.jpeg",
-      "/images/invitatii/invitatie-foto-minimal-006-1.jpeg"
-    ],
-    "tags": [
-      "invitatie nunta",
-      "invitatie cu poza",
-      "invitatii nunta personalizate",
-      "invitatie foto",
-      "invitatie eleganta",
-      "invitatie minimalista",
-      "invitatie moderna",
-      "nunta eleganta",
-      "carton premium",
-      "plic inclus"
-    ],
-    "slug": "invitatie-nunta-cu-poza-personalizata-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Suppliesinvitatie-foto-minimal-006",
     "material": "",
     "mpn": ""
   },
