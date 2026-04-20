@@ -26,6 +26,33 @@
     "mpn": ""
   },
   {
+    "id": "invitatie-nunta-albastru-regal-sigiliu-007",
+    "title": "Invitatie nunta albastru regal cu sigiliu si flori uscate",
+    "price": 10,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitatie de nunta premium, realizata pe carton texturat albastru regal, decorata cu sigiliu elegant, snur auriu si flori uscate. Designul sofisticat ofera un aspect rafinat, ideal pentru nunti elegante si evenimente deosebite. Caracteristici: Material: carton texturat albastru regal; Grosime carton: 250-300g/mp; Dimensiune: 13 x 18 cm (inchisa); Accesorii: sigiliu decorativ, snur auriu, flori uscate; Personalizare: nume, data, locatie, text integral; Plic inclus.",
+    "images": [
+      "/images/invitatii/invitatie-albastru-regal-007.jpg"
+    ],
+    "tags": [
+      "invitatie nunta",
+      "invitatie albastru regal",
+      "invitatie cu sigiliu",
+      "invitatie flori uscate",
+      "invitatie premium",
+      "invitatie carton texturat",
+      "invitatie eleganta",
+      "nunta eleganta",
+      "invitatie lux",
+      "plic inclus"
+    ],
+    "slug": "invitatie-nunta-albastru-regal-cu-sigiliu-si-flori-uscate-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-foto-minimal-006",
     "title": "Invitatie nunta cu poza personalizata",
     "price": 5,
@@ -318,7 +345,7 @@
     "product_type": "invitatii nunta",
     "desc": "Invitatie de nunta eleganta realizata pe foaie de calc semitransparenta, decorata cu sigiliu de ceara si elemente florale delicate. Designul rafinat si minimalist este ideal pentru nunti romantice, elegante sau vintage.",
     "images": [
-      "/images/invitatii/invitatie-nunta-calc-sigiliu-ceara.jpeg"
+      "/images/invitatii/invitatie-nunta-calc-sigiliu-ceara.jpg"
     ],
     "tags": [
       "invitatii",
