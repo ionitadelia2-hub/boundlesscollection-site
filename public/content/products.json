@@ -1,5 +1,32 @@
 [
   {
+    "id": "invitatie-nunta-amprenta-inima-verde-008",
+    "title": "Invitatie nunta eleganta cu funda verde si inimioara amprenta",
+    "price": 7.5,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitatie de nunta eleganta, realizata pe carton premium texturat, decorata cu funda satinata verde si design original cu inimioara tip amprenta. Ideala pentru nunti, aceasta invitatie impresioneaza prin aspectul delicat si personalitatea aparte. Caracteristici: Material: carton premium texturat|Dimensiune: 14x10 cm|Accesorii: funda satinata verde|Design: inimioara amprenta, aspect elegant si romantic",
+    "images": [
+      "/images/invitatii/invitatie-nunta-amprenta-verde-008.jpeg"
+    ],
+    "tags": [
+      "invitatie nunta",
+      "invitatie eleganta",
+      "invitatie cu funda verde",
+      "invitatie amprenta",
+      "invitatie inimioara",
+      "invitatie carton texturat",
+      "invitatie romantica",
+      "nunta eleganta",
+      "invitatie personalizata",
+      "plic inclus"
+    ],
+    "slug": "invitatie-nunta-eleganta-cu-funda-verde-si-inimioara-amprenta-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-roz-gold-001",
     "title": "Invitatie nunta eleganta roz si auriu personalizata",
     "price": 5,
