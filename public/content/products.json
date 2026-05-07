@@ -1,28 +1,28 @@
 [
   {
-    "id": "invitatie-botez-ursulet-miere-plic-galben",
-    "title": "Invitație Botez Ursuțel și Miere - Include Plic Galben Decorativ",
-    "price": 5.99,
-    "category": "invitatii botez",
-    "product_type": "invitatii botez",
-    "desc": "Invitație de botez veselă și luminoasă, cu un design adorabil ilustrat cu un ursuleț și tematică de miere (Honey Theme). Această invitație este realizată pe carton alb premium de 250g și vine prezentată într-un plic galben decorativ, oferind un impact vizual deosebit. Este ideală pentru botezul unui băiețel, potrivindu-se perfect tematicilor cu ursuleți, albinuțe sau natură. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: Plic galben colorat inclus | Design: Ursuțel și miere în stil acuarelă",
+    "id": "invitatie-nunta-amprenta-inima-verde-008",
+    "title": "Invitație Nuntă Personalizată - Inimă Amprentă și Fundă Verde Smarald",
+    "price": 7,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitație de nuntă originală și plină de personalitate, realizată pe carton alb premium texturat de 250g, decorată manual cu o fundă satinată verde smarald și un design grafic simbolic cu inimioară tip amprentă. Este alegerea ideală pentru nuntă sau logodnă, impresionând prin aspectul său delicat și tactil. Designul minimalist și culorile naturale se potrivesc perfect unei tematici botanice, rustice sau elegante. Caracteristici: Material: carton premium texturat | Grosime carton: 250g | Dimensiune: 14 x 10 cm | Accesorii: fundă satinată verde smarald, design personalizat amprentă",
     "images": [
-      "/images/invitatii/invitatie-botez-ursulet-miere-plic.jpg"
+      "/images/invitatii/invitatie-nunta-amprenta-verde-008.JPG"
     ],
     "tags": [
-      "invitatie botez",
-      "botez baietel",
-      "invitatie ursulet",
-      "tematica miere",
-      "honey theme",
-      "plic galben",
-      "invitatie albinute",
-      "carton 250g",
-      "invitatie vesela",
-      "papetarie botez"
+      "invitatie nunta",
+      "invitatie amprenta",
+      "invitatie verde smarald",
+      "invitatie inima",
+      "invitatie personalizata",
+      "invitatie carton texturat",
+      "nunta botanica",
+      "nunta rustica",
+      "invitatie eleganta",
+      "plic inclus"
     ],
-    "slug": "invitatie-botez-ursutel-si-miere-include-plic-galben-decorativ-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "slug": "invitatie-nunta-personalizata-inima-amprenta-si-funda-verde-smarald-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
   },
