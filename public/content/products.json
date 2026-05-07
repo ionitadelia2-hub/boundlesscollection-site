@@ -3767,7 +3767,34 @@
       "eveniment copii"
     ],
     "slug": "meniu-botez-safari-jungla-a5-meniu-bo",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Suppliesmeniu-botez-roz-sigiliu-049",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-botez-roz-sigiliu-049",
+    "title": "Meniu botez roz cu sigiliu",
+    "price": 7,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu elegant pentru botez, printat pe carton premium si accesorizat cu sigiliu roz pudrat si flori uscate. Personalizabil cu preparatele si detaliile evenimentului, ideal pentru decoruri pastel si mese rafinate.",
+    "images": [
+      "/images/meniuri/meniu-botez-roz-sigiliu.jpg"
+    ],
+    "tags": [
+      "meniuri",
+      "botez",
+      "roz pudrat",
+      "sigiliu",
+      "flori uscate",
+      "pastel",
+      "personalizat",
+      "carton premium",
+      "elegant",
+      "handmade"
+    ],
+    "slug": "meniu-botez-roz-cu-sigiliu-meniu-bo",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
     "material": "",
     "mpn": ""
   },
@@ -3796,7 +3823,35 @@
       "tematica toamna"
     ],
     "slug": "meniu-botez-toamna-woodland-veverita-a4-meniu-bo",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Suppliesmarturie-lumanare-roz-022",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "marturie-lumanare-roz-022",
+    "title": "Marturie lumanare roz pastel cu flori uscate",
+    "price": 20,
+    "category": "marturii soia",
+    "product_type": "marturii soia",
+    "desc": "Lumanare din soia roz pastel cu panglica satin, puf decorativ si eticheta personalizata. Potrivita pentru nunta/botez.",
+    "images": [
+      "/images/marturii/marturie-lumanare-roz.jpg"
+    ],
+    "tags": [
+      "marturii",
+      "lumanare",
+      "roz pastel",
+      "pene",
+      "eticheta personalizata",
+      "handmade",
+      "soia naturala",
+      "elegant",
+      "botez",
+      "nunta",
+      "cadou"
+    ],
+    "slug": "marturie-lumanare-roz-pastel-cu-flori-uscate-marturie",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
     "material": "",
     "mpn": ""
   },
@@ -3936,6 +3991,33 @@
       "eveniment"
     ],
     "slug": "sticker-oglinda-personalizat-auriu-nume-data-sticker-",
+    "google_product_category": "Home & Garden > Decor > Decals & Stickers",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "sticker-panou-botez-auriu-nume-data-001",
+    "title": "Sticker panou botez personalizat auriu (nume + data)",
+    "price": 300,
+    "category": "stickere oglinda",
+    "product_type": "stickere oglinda",
+    "desc": "Autocolant personalizat pentru panou de botez: nume copil + data evenimentului, realizat din vinil auriu mat cu aspect elegant. Se livreaza gata de aplicat, cu folie de transfer, ideal pentru panou de intampinare, decor botez sau photo corner. Caracteristici: Material: vinil auriu mat|Utilizare: panou botez, panou intampinare, decor eveniment|Dimensiune nume: latime 40-50 cm, inaltime 20 cm|Dimensiune data: latime 50 cm, inaltime 20 cm|Personalizare: nume copil si data botezului|Aplicare: se livreaza cu folie de transfer",
+    "images": [
+      "/images/stickere/sticker-panou-botez-auriu-aris-nicolas.jpg"
+    ],
+    "tags": [
+      "sticker panou botez",
+      "sticker botez",
+      "panou botez personalizat",
+      "autocolant nume botez",
+      "nume panou botez",
+      "sticker auriu",
+      "vinil auriu",
+      "decor botez",
+      "panou intampinare botez",
+      "personalizat"
+    ],
+    "slug": "sticker-panou-botez-personalizat-auriu-nume-data-sticker-",
     "google_product_category": "Home & Garden > Decor > Decals & Stickers",
     "material": "",
     "mpn": ""
