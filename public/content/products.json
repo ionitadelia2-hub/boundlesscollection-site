@@ -1,28 +1,28 @@
 [
   {
-    "id": "invitatie-nunta-amprenta-inima-verde-008",
-    "title": "Invitatie nunta eleganta cu funda verde si inimioara amprenta",
-    "price": 7,
-    "category": "invitatii nunta",
-    "product_type": "invitatii nunta",
-    "desc": "Invitatie de nunta eleganta, realizata pe carton premium texturat, decorata cu funda satinata verde si design original cu inimioara tip amprenta. Ideala pentru nunti, aceasta invitatie impresioneaza prin aspectul delicat si personalitatea aparte. Caracteristici: Material: carton premium texturat|Dimensiune: 14x10 cm|Accesorii: funda satinata verde|Design: inimioara amprenta",
+    "id": "invitatie-botez-ursulet-miere-plic-galben",
+    "title": "Invitație Botez Ursuțel și Miere - Include Plic Galben Decorativ",
+    "price": 5.99,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitație de botez veselă și luminoasă, cu un design adorabil ilustrat cu un ursuleț și tematică de miere (Honey Theme). Această invitație este realizată pe carton alb premium de 250g și vine prezentată într-un plic galben decorativ, oferind un impact vizual deosebit. Este ideală pentru botezul unui băiețel, potrivindu-se perfect tematicilor cu ursuleți, albinuțe sau natură. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: Plic galben colorat inclus | Design: Ursuțel și miere în stil acuarelă",
     "images": [
-      "/images/invitatii/invitatie-nunta-amprenta-verde-008.JPG"
+      "/images/invitatii/invitatie-botez-ursulet-miere-plic.jpg"
     ],
     "tags": [
-      "invitatie nunta",
-      "invitatie eleganta",
-      "invitatie cu funda verde",
-      "invitatie amprenta",
-      "invitatie inimioara",
-      "invitatie carton texturat",
-      "invitatie romantica",
-      "nunta eleganta",
-      "invitatie personalizata",
-      "plic inclus"
+      "invitatie botez",
+      "botez baietel",
+      "invitatie ursulet",
+      "tematica miere",
+      "honey theme",
+      "plic galben",
+      "invitatie albinute",
+      "carton 250g",
+      "invitatie vesela",
+      "papetarie botez"
     ],
-    "slug": "invitatie-nunta-eleganta-cu-funda-verde-si-inimioara-amprenta-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "slug": "invitatie-botez-ursutel-si-miere-include-plic-galben-decorativ-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
@@ -75,7 +75,35 @@
       "plic inclus"
     ],
     "slug": "invitatie-nunta-albastru-regal-cu-sigiliu-si-flori-uscate-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Suppliesinvitatie-botez-fetita-ursulet-baloane",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-botez-fetita-ursulet-baloane",
+    "title": "Invitatie botez fetita cu ursulet si baloane pastel",
+    "price": 5,
+    "category": "invitatii botez",
+    "product_type": "invitatii botez",
+    "desc": "Invitatie de botez pentru fetita cu design delicat ilustrat cu ursulet simpatic si baloane in nuante pastel. Realizata pe carton premium, invitatia este perfecta pentru botezuri cu tematica baby girl, ursulet sau poveste.",
+    "images": [
+      "/images/invitatii/invitatie-botez-fetita-ursulet-baloane.jpeg"
+    ],
+    "tags": [
+      "invitatii",
+      "botez",
+      "fetita",
+      "ursulet",
+      "baby girl",
+      "baloane",
+      "tematica ursulet",
+      "pastel",
+      "carton premium",
+      "eveniment",
+      "invitatie botez"
+    ],
+    "slug": "invitatie-botez-fetita-cu-ursulet-si-baloane-pastel-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
