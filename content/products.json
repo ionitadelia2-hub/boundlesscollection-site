@@ -59,7 +59,7 @@
     "price": 10,
     "category": "invitatii nunta",
     "product_type": "invitatii nunta",
-    "desc": "Invitație de nuntă premium, realizată pe carton mat alb de 250g, îmbrăcată cu o copertă texturată deosebită în nuanța albastru regal. Designul sofisticat este decorat manual cu un sigiliu elegant din ceară, șnur auriu delicat și flori uscate naturale, oferind un aspect rafinat și tactil. Ideală pentru nunti de lux și evenimente care impun eleganță. Caracteristici: Material: carton texturat albastru regal și carton alb mat | Grosime carton: 250g | Dimensiune: 13 x 18 cm (închisă) | Accesorii: sigiliu decorativ ceară, șnur auriu, flori uscate naturale | Plic inclus: Da",
+    "desc": "Invitație de nuntă premium, realizată pe carton mat alb de 250g, îmbrăcată cu o copertă texturată deosebită în nuanța albastru regal. Designul este decorat manual cu un sigiliu elegant din ceară, șnur auriu delicat și flori uscate naturale, oferind un aspect rafinat și tactil. Ideală pentru nunti de lux și evenimente care impun eleganță. Caracteristici: Material: carton texturat albastru regal și carton alb mat | Grosime carton: 250g | Dimensiune: 13 x 18 cm (închisă) | Accesorii: sigiliu decorativ ceară, șnur auriu, flori uscate naturale",
     "images": [
       "/images/invitatii/invitatie-albastru-regal-007.jpg"
     ],
@@ -82,11 +82,11 @@
   },
   {
     "id": "invitatie-botez-fetita-ursulet-baloane",
-    "title": "Invitație Botez Fetiță - Tematică Ursuțel cu Baloane Roz Pastel",
+    "title": "Invitație Botez Fetiță - Tematică Ursuleț cu Baloane Roz Pastel",
     "price": 5,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez delicată pentru fetiță, cu o ilustrație adorabilă în stil acuarelă reprezentând un ursuleț simpatic și baloane în nuanțe pastelate. Realizată pe carton alb premium de 250g, această invitație este alegerea perfectă pentru evenimente cu tematică Baby Girl sau Ursuțel. Designul cald și jucăuș va impresiona invitații încă de la prima atingere. Caracteristici: Material: carton alb premium neted | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: design ilustrat pastel | Plic inclus în preț: Da",
+    "desc": "Invitație de botez delicată pentru fetiță, cu o ilustrație adorabilă în stil acuarelă reprezentând un ursuleț simpatic și baloane în nuanțe pastelate. Realizată pe carton alb premium de 250g, această invitație este alegerea perfectă pentru evenimente cu tematică Baby Girl sau Ursuleț. Designul cald și jucăuș va impresiona invitații încă de la prima atingere. Caracteristici: Material: carton alb premium neted | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: design ilustrat pastel | Plic inclus în preț: Da",
     "images": [
       "/images/invitatii/invitatie-botez-fetita-ursulet-baloane.jpeg"
     ],
@@ -102,7 +102,7 @@
       "invitatie acuarela",
       "plic inclus"
     ],
-    "slug": "invitatie-botez-fetita-tematica-ursutel-cu-baloane-roz-pastel-invitati",
+    "slug": "invitatie-botez-fetita-tematica-ursulet-cu-baloane-roz-pastel-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
     "material": "",
     "mpn": ""
@@ -140,9 +140,10 @@
     "price": 5.99,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez premium pentru fetiță, realizată într-un format special cu clapete decorative și închidere elegantă cu fundă dublu satinată roz pudrat. Designul include ilustrații adorabile cu ursuleți în stil acuarelă și accente aurii fine. Este o piesă de papetărie lucrată manual, ideală pentru o tematică delicată și de poveste. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm (închisă) | Accesorii: fundă dublu satinată roz pudrat, format tip copertă | Plic inclus în preț: Da",
+    "desc": "Invitație de botez premium pentru fetiță, realizată într-un format special cu clapete decorative și închidere elegantă cu fundă dublu satinată roz pudrat. Designul include ilustrații adorabile cu ursuleți în stil acuarelă și accente aurii fine. Este o piesă de papetărie lucrată manual, ideală pentru o tematică delicată și de poveste. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm (închisă) | Accesorii: fundă dublu satinată roz pudrat, format tip copertă",
     "images": [
-      "/images/invitatii/invitatie-botez-ursuleti-roz-funda-satin.jpg"
+      "/images/invitatii/invitatie-botez-ursuleti-roz-funda-satin.jpg",
+      "/images/invitatii/invitatie-botez-ursuleti-roz-funda-satin-1.jpg"
     ],
     "tags": [
       "invitatii botez",
@@ -167,7 +168,7 @@
     "price": 5.99,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez veselă și luminoasă, cu un design adorabil ilustrat cu un ursuleț și tematică de miere (Honey Theme). Această invitație este realizată pe carton alb premium de 250g și vine prezentată într-un plic galben decorativ, oferind un impact vizual deosebit. Este ideală pentru botezul unui băiețel, potrivindu-se perfect tematicilor cu ursuleți, albinuțe sau natură. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: Plic galben colorat inclus | Design: Ursuțel și miere în stil acuarelă",
+    "desc": "Invitație de botez veselă și luminoasă, cu un design adorabil ilustrat cu un ursuleț și tematică de miere (Honey Theme). Această invitație este realizată pe carton alb premium de 250g și vine prezentată într-o copertă galbenă decorativă, oferind un impact vizual deosebit. Este ideală pentru botezul unui băiețel, potrivindu-se perfect tematicilor cu ursuleți, albinuțe sau natură. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: Copertă, panglică și sticker | Design: Ursuleț și miere în stil acuarelă",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-miere-plic.jpg"
     ],
@@ -194,7 +195,7 @@
     "price": 5.99,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez delicată pentru băiețel, cu o ilustrație adorabilă în stil acuarelă reprezentând un elefănțel simpatic în nuanțe de bleu ciel. Realizată pe carton alb premium de 250g, această invitație este alegerea perfectă pentru un eveniment plin de gingășie și emoție. Designul jucăuș și culorile calde se potrivesc ideal unei tematici Baby Boy sau Animalute din Poveste. Caracteristici: Material: carton alb premium neted | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: design ilustrat bleu | Plic inclus în preț: Da",
+    "desc": "Invitație de botez delicată pentru băiețel, cu o ilustrație adorabilă în stil acuarelă reprezentând un elefănțel simpatic în nuanțe de bleu ciel. Realizată pe carton alb premium de 250g, această invitație este alegerea perfectă pentru un eveniment plin de gingășie și emoție. Designul jucăuș și culorile calde se potrivesc ideal unei tematici Baby Boy sau Animalute din Poveste. Caracteristici: Material: carton alb premium neted | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: Copertă, panglică și sticker",
     "images": [
       "/images/invitatii/invitatie-botez-elefant-bleu.jpg"
     ],
@@ -333,7 +334,7 @@
     "price": 8.5,
     "category": "invitatii nunta",
     "product_type": "invitatii nunta",
-    "desc": "Invitație de nuntă exclusivistă realizată pe foaie de calc semitransparentă (vellum), decorată manual cu un sigiliu din ceară reală și elemente florale delicate. Designul minimalist și rafinat oferă o experiență tactilă deosebită, fiind perfectă pentru nunti romantice sau vintage. Caracteristici: Material: foaie de calc premium (vellum) | Accesorii: sigiliu ceară, flori uscate | Stil: Minimalist / Elegant | Include plic premium: Da",
+    "desc": "Invitație de nuntă exclusivistă realizată pe foaie de calc semitransparentă (vellum), decorată manual cu un sigiliu din ceară reală și elemente florale delicate. Designul minimalist și rafinat oferă o experiență tactilă deosebită, fiind perfectă pentru nunti romantice sau vintage. Caracteristici: Material: foaie de calc premium (vellum) | Accesorii: sigiliu ceară, flori uscate | Stil: Minimalist / Elegant",
     "images": [
       "/images/invitatii/invitatie-nunta-calc-sigiliu-ceara.JPG"
     ],
@@ -387,7 +388,7 @@
     "price": 9.5,
     "category": "invitatii nunta",
     "product_type": "invitatii nunta",
-    "desc": "Invitație de nuntă tip Save the Date, personalizată cu fotografia voastră preferată, realizată pe carton foto premium de 250g. Design elegant și minimalist, ideal pentru a anunța data marelui eveniment într-un mod modern și personal. Caracteristici: Material: carton premium mat/glossy | Grosime: 250g | Dimensiune: 12 x 17 cm | Personalizare: Fotografie inclusă",
+    "desc": "Invitație de nuntă tip Save the Date, personalizată cu fotografia voastră preferată, realizată pe carton foto premium de 250g. Design elegant și minimalist, ideal pentru a anunța data marelui eveniment într-un mod modern și personal. Caracteristici: Material: carton premium mat/glossy | Grosime: 250g | Dimensiune: 12 x 17 cm",
     "images": [
       "/images/invitatii/invitatie-nunta-save-the-date-foto.jpg"
     ],
@@ -464,7 +465,7 @@
     "price": 10,
     "category": "invitatii nunta",
     "product_type": "invitatii nunta",
-    "desc": "Invitație de nuntă exclusivistă realizată pe carton premium texturat, decorată manual cu un sigiliu de ceară rafinat. Designul floral delicat oferă un aspect clasic și romantic, perfect pentru evenimente de lux. Caracteristici: Material: carton premium texturat | Accesorii: sigiliu ceară reală, design floral | Stil: Romantic / Clasic | Dimensiune: 13 x 18 cm | Plic inclus: Da",
+    "desc": "Invitație de nuntă exclusivistă realizată pe carton premium texturat, decorată manual cu un sigiliu de ceară rafinat. Designul floral delicat oferă un aspect clasic și romantic, perfect pentru evenimente de lux. Caracteristici: Material: carton premium texturat | Accesorii: sigiliu ceară reală, design floral | Stil: Romantic / Clasic | Dimensiune: 13 x 18 cm",
     "images": [
       "/images/invitatii/invitatie-nunta-florala-sigiliu.JPG"
     ],
@@ -541,9 +542,12 @@
     "price": 4,
     "category": "invitatii nunta",
     "product_type": "invitatii nunta",
-    "desc": "Invitație de nuntă originală, personalizată cu data evenimentului evidențiată sub formă de calendar. Design floral romantic în stil acuarelă, tip card pliat, perfect pentru o nuntă feminină și caldă. Caracteristici: Tip: Card pliat | Material: carton premium | Design: Calendar personalizat | Stil: Acuarelă roz | Plic inclus: Da",
+    "desc": "Invitație de nuntă originală, personalizată cu data evenimentului evidențiată sub formă de calendar. Design floral romantic în stil acuarelă, tip card pliat, perfect pentru o nuntă feminină și caldă. Caracteristici: Tip: Card pliat | Material: carton premium | Design: Calendar personalizat | Stil: Acuarelă roz",
     "images": [
-      "/images/invitatii/invitatie-florala-calendar-roz.jpeg"
+      "/images/invitatii/invitatie-florala-calendar-roz.jpeg",
+      "/images/invitatii/invitatie-carte-aurie.jpeg",
+      "/images/invitatii/invitatie-eucalipt-verde.jpeg",
+      "/images/invitatii/invitatie-florala-calendar-mov.jpeg"
     ],
     "tags": [
       "invitatie nunta",
@@ -566,9 +570,10 @@
     "price": 6.99,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez premium realizată manual, pe carton mat de 250g în nuanțe delicate. Invitația este legată cu sfoară decorativă și personalizată cu un sigiliu din ceară autentică și flori uscate naturale, atent selecționate. Designul oferă un aspect elegant, rafinat și un vibe organic, fiind ideală pentru tematici de botez boho-chic, rustice sau minimaliste. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: sigiliu din ceară, sfoară iută, flori naturale uscate | Plic inclus: Da",
+    "desc": "Invitație de botez premium realizată manual, pe carton mat de 250g în nuanțe delicate. Invitația este legată cu sfoară decorativă și personalizată cu un sigiliu din ceară autentică și flori uscate naturale, atent selecționate. Designul oferă un aspect elegant, rafinat și un vibe organic, fiind ideală pentru tematici de botez boho-chic, rustice sau minimaliste. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: sigiliu din ceară, sfoară iută, flori naturale uscate",
     "images": [
-      "/images/invitatii/invitatie-botez-sigiliu-flori-uscate.jpg"
+      "/images/invitatii/invitatie-botez-sigiliu-flori-uscate.jpg",
+      "/images/invitatii/invitatie-botez-sigiliu-flori-uscate-1.jpg"
     ],
     "tags": [
       "invitatie botez",
@@ -593,7 +598,7 @@
     "price": 4.5,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez modernă și extrem de delicată, realizată pe carton foto premium (250g), completată de o foaie de calc (vellum) semitransparentă care oferă un aspect aerisit și sofisticat. Fotografia micuței tale este integrată armonios, iar invitația este finisată manual cu o fundiță fină din organza roz. Este alegerea perfectă pentru părinții care își doresc o amintire fotografică specială pentru invitați. Caracteristici: Material: carton foto premium și foaie de calc transparentă | Grosime: 250g | Dimensiune: 12 x 17 cm | Accesorii: fundiță organza roz | Personalizare: Include poza copilului | Plic inclus: Da",
+    "desc": "Invitație de botez modernă și extrem de delicată, realizată pe carton foto premium (250g), completată de o foaie de calc (vellum) semitransparentă care oferă un aspect aerisit și elegant. Fotografia micuței tale este integrată armonios, iar invitația este finisată manual cu o fundiță fină din organza roz. Este alegerea perfectă pentru părinții care își doresc o amintire fotografică specială pentru invitați. Caracteristici: Material: carton foto premium și foaie de calc transparentă | Grosime: 250g | Dimensiune: 12 x 17 cm | Accesorii: fundiță organza roz | Personalizare: Include poza copilului",
     "images": [
       "/images/invitatii/invitatie-botez-foto-foaie-de-calc-roz.jpg"
     ],
@@ -616,11 +621,11 @@
   },
   {
     "id": "invitatie-botez-ursulet-fundita-albastra",
-    "title": "Invitație Botez Băiețel - Tematică Ursuțel cu Fundiță Albastră și Carton Premium",
+    "title": "Invitație Botez Băiețel - Tematică Ursuleț cu Fundiță Albastră și Carton Premium",
     "price": 6,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez delicată pentru băiețel, cu un design adorabil ilustrat cu un ursuleț simpatic și o fundiță elegantă albastru bleu. Realizată pe carton alb premium de 250g, această invitație este alegerea ideală pentru evenimente cu tematică Baby Boy sau Ursuțel. Designul cald, în culori pastelate, oferă o primă impresie plină de tandrețe. Caracteristici: Material: carton alb mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: design ilustrat baby boy | Plic inclus în preț: Da",
+    "desc": "Invitație de botez delicată pentru băiețel, cu un design adorabil ilustrat cu un ursuleț simpatic și o fundiță elegantă albastru bleu. Realizată pe carton alb premium de 250g, această invitație este alegerea ideală pentru evenimente cu tematică Baby Boy sau Ursuleț. Designul cald, în culori pastelate, oferă o primă impresie plină de tandrețe. Caracteristici: Material: carton alb mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: design ilustrat baby boy | Plic inclus în preț: Da",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-fundita-albastra.jpg"
     ],
@@ -636,7 +641,7 @@
       "invitatie eleganta",
       "plic inclus"
     ],
-    "slug": "invitatie-botez-baietel-tematica-ursutel-cu-fundita-albastra-si-carton-premium-invitati",
+    "slug": "invitatie-botez-baietel-tematica-ursulet-cu-fundita-albastra-si-carton-premium-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
     "material": "",
     "mpn": ""
@@ -674,7 +679,7 @@
     "price": 6,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez premium cu un design clasic și rafinat, realizată pe carton alb mat de 250g. Invitația este îmbrăcată într-un înveliș delicat din foaie de calc (vellum) semitransparentă, oferind un aspect sofisticat și aerisit. Detaliul final este oferit de fundița roșie din organza, care adaugă o pată de culoare vibrantă și prețioasă. Este ideală pentru botezuri elegante sau evenimente tematice cu accente roșii. Caracteristici: Material: carton mat premium și foaie de calc transparentă | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: fundiță organza roșie, înveliș vellum | Plic inclus: Da",
+    "desc": "Invitație de botez premium cu un design clasic și rafinat, realizată pe carton alb mat de 250g. Invitația este îmbrăcată într-un înveliș delicat din foaie de calc (vellum) semitransparentă, oferind un aspect elegant și aerisit. Detaliul final este oferit de fundița roșie din organza, care adaugă o pată de culoare vibrantă și prețioasă. Este ideală pentru botezuri elegante sau evenimente tematice cu accente roșii. Caracteristici: Material: carton mat premium și foaie de calc transparentă | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: fundiță organza roșie, înveliș vellum",
     "images": [
       "/images/invitatii/invitatie-botez-fundita-rosie-foaie-calc.jpg"
     ],
@@ -701,7 +706,7 @@
     "price": 4,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez specială, realizată sub formă de cărticică pe carton premium mat (250g). Designul include personalizarea cu fotografia micuțului tău și toate detaliile evenimentului într-un format compact și elegant. Invitația este finisată manual cu o fundiță delicată din organza albastră, fiind ideală pentru un botez de băiețel cu tematică clasică sau modernă. Caracteristici: Material: carton alb mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm (deschisă) | Accesorii: fundiță organza albastră | Personalizare: include poză bebe | Plic inclus: Da",
+    "desc": "Invitație de botez specială, realizată sub formă de cărticică pe carton premium mat (250g). Designul include personalizarea cu fotografia micuțului tău și toate detaliile evenimentului într-un format compact și elegant. Invitația este finisată manual cu o fundiță delicată din organza albastră, fiind ideală pentru un botez de băiețel cu tematică clasică sau modernă. Caracteristici: Material: carton alb mat premium | Grosime carton: 250g | Dimensiune: 14.8 x 21 cm (închisă) | Accesorii: fundiță organza albastră | Personalizare: include poză bebe | Plic inclus: Da",
     "images": [
       "/images/invitatii/invitatie-botez-tip-carticica-fundita-albastra.jpg"
     ],
@@ -724,11 +729,11 @@
   },
   {
     "id": "invitatie-botez-ursulet-baietel",
-    "title": "Invitație Botez Băiețel - Tematică Ursuțel și Detalii Bleu Pastel",
+    "title": "Invitație Botez Băiețel - Tematică Ursuleț și Detalii Bleu Pastel",
     "price": 4,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez adorabilă pentru băiețel, cu un design delicat ilustrat în stil acuarelă cu un ursuleț simpatic și elemente grafice pastelate. Realizată pe carton alb mat premium de 250g, această invitație oferă un aspect cald și elegant, fiind alegerea ideală pentru evenimente cu tematică Ursuțel, Baby Boy sau Lumea Poveștilor. Caracteristici: Material: carton alb mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: design ilustrat bleu | Plic inclus în preț: Da",
+    "desc": "Invitație de botez adorabilă pentru băiețel, cu un design delicat ilustrat în stil acuarelă cu un ursuleț simpatic și elemente grafice pastelate. Realizată pe carton alb mat premium de 250g, această invitație oferă un aspect cald și elegant, fiind alegerea ideală pentru evenimente cu tematică Ursuleț, Baby Boy sau Lumea Poveștilor. Caracteristici: Material: carton alb mat premium | Grosime carton: 250g | Dimensiune: 12 x 17 cm | Accesorii: design ilustrat bleu",
     "images": [
       "/images/invitatii/invitatie-botez-ursulet-baietel.jpg"
     ],
@@ -744,14 +749,14 @@
       "invitatie eleganta",
       "plic inclus"
     ],
-    "slug": "invitatie-botez-baietel-tematica-ursutel-si-detalii-bleu-pastel-invitati",
+    "slug": "invitatie-botez-baietel-tematica-ursulet-si-detalii-bleu-pastel-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
     "material": "",
     "mpn": ""
   },
   {
     "id": "invitatie-ursulet-roz-007",
-    "title": "Invitație Botez Fetiță - Tematică Ursuțel cu Baloane și Fundiță Roz",
+    "title": "Invitație Botez Fetiță - Tematică Ursuleț cu Baloane și Fundiță Roz",
     "price": 4,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
@@ -771,7 +776,7 @@
       "invitatie acuarela",
       "plic inclus"
     ],
-    "slug": "invitatie-botez-fetita-tematica-ursutel-cu-baloane-si-fundita-roz-invitati",
+    "slug": "invitatie-botez-fetita-tematica-ursulet-cu-baloane-si-fundita-roz-invitati",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
     "material": "",
     "mpn": ""
@@ -907,28 +912,28 @@
   },
   {
     "id": "invitatie-pergament-fundita-aurie-093",
-    "title": "Invitație pergament cu fundă aurie",
+    "title": "Invitație Nuntă tip Pergament (Scroll) - Fundă Aurie și Design Regal",
     "price": 4.5,
     "category": "invitatii nunta",
     "product_type": "invitatii nunta",
-    "desc": "Invitație tip pergament, realizată pe carton premium cu aspect elegant, rulată manual și legată cu o fundă aurie strălucitoare. Design rafinat, potrivit pentru evenimente speciale, cu un aer minimalist și luxos.",
+    "desc": "Invitație de nuntă sau botez realizată în format de pergament (scroll), pe carton alb premium mat de 250g. Invitația este rulată manual și finisată cu o fundă aurie strălucitoare din satin, oferind un aspect luxos și atemporal. Designul minimalist, dar de impact, este perfect pentru evenimente cu tematică elegantă, royal sau clasică. Formatul rulat oferă o experiență de deschidere memorabilă pentru invitați. Caracteristici: Material: carton mat premium | Grosime: 250g | Tip: Pergament rulat manual | Accesorii: Fundă satinată aurie | Plic inclus: Da",
     "images": [
-      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg",
-      "/images/invitatii/invitatie-pergament-fundita-aurie-1.jpg"
+      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg"
     ],
     "tags": [
-      "invitatii",
-      "pergament",
+      "invitatie pergament",
+      "invitatie scroll",
+      "nunta regala",
       "funda aurie",
-      "nunta",
-      "botez",
-      "elegant",
-      "carton premium",
-      "minimalist",
-      "lux"
+      "invitatie rulata",
+      "nunta eleganta",
+      "invitatie lux",
+      "carton 250g",
+      "papetarie nunta",
+      "invitatie medievala"
     ],
-    "slug": "invitatie-pergament-cu-funda-aurie-invitati",
-    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
+    "slug": "invitatie-nunta-tip-pergament-scroll-funda-aurie-si-design-regal-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
     "material": "",
     "mpn": ""
   },
