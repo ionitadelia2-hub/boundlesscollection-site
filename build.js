@@ -13,6 +13,17 @@ const JSON_OUT  = path.join(ROOT, "content", "products.json");
 
 const ORIGIN = (process.env.SITE_ORIGIN || "https://boundlesscollection.ro").replace(/\/+$/, "");
 
+const GOOGLE_TAG = `
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18147990553"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18147990553');
+  </script>
+`;
+
 // ---------------- fs utils ----------------
 function rimrafSync(p) {
   if (!fs.existsSync(p)) return;
@@ -255,6 +266,7 @@ const priceStr = Number(prod.price || 0).toFixed(2);
   return `<!doctype html>
 <html lang="ro">
 <head>
+  ${GOOGLE_TAG}
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${title} – ${brand}</title>
   <meta name="description" content="${desc}">
