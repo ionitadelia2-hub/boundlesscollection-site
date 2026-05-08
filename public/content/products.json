@@ -27,6 +27,34 @@
     "mpn": ""
   },
   {
+    "id": "invitatie-foto-minimal-006",
+    "title": "Invitație Nuntă Minimalistă cu Fotografie - Stil Polaroid și Plic Craft",
+    "price": 5.5,
+    "category": "invitatii nunta",
+    "product_type": "invitatii nunta",
+    "desc": "Invitație de nuntă cu design minimalist și modern, pusă în valoare de fotografia voastră preferată într-un format stil Polaroid. Realizată pe carton mat premium de 250g, această invitație pune accent pe emoție și simplitate. Setul include un plic din hârtie craft reciclată, oferind un aspect rustic-elegant și autentic. Este alegerea ideală pentru cuplurile care își doresc o invitație personalizată, curată și plină de însemnătate. Caracteristici: Material: carton mat premium | Grosime: 250g | Accesorii: plic craft inclus | Personalizare: include fotografia mirilor | Stil: Minimalist / Rustic",
+    "images": [
+      "/images/invitatii/invitatie-foto-minimal-006.jpeg",
+      "/images/invitatii/invitatie-foto-minimal-006-1.jpeg"
+    ],
+    "tags": [
+      "invitatie nunta cu poza",
+      "invitatie polaroid",
+      "nunta minimalista",
+      "plic craft",
+      "invitatie rustica",
+      "invitatie foto personalizata",
+      "nunta moderna",
+      "invitatie simpla",
+      "carton 250g",
+      "papetarie nunta"
+    ],
+    "slug": "invitatie-nunta-minimalista-cu-fotografie-stil-polaroid-si-plic-craft-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-roz-gold-001",
     "title": "Invitație Nuntă Premium Roz Pastel și Auriu - Design Modern",
     "price": 5,
@@ -787,7 +815,7 @@
     "price": 9,
     "category": "invitatii botez",
     "product_type": "invitatii botez",
-    "desc": "Invitație de botez premium cu tematică Safari, ilustrată cu animale vesele din junglă și vegetație tropicală. Elementul spectaculos al acestui model este plicul verde special, decupat creativ în formă de frunză, care oferă un aspect unitar și exotic. Realizată pe carton mat de 250g, este alegerea ideală pentru părinții care își doresc un design jucăuș, dar extrem de rafinat și tactil. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 13 x 18 cm (închisă) | Accesorii: plic special verde decupat laser | Design: Animale exotice (leu, girafă, elefant)",
+    "desc": "Invitație de botez premium cu tematică Safari, ilustrată cu animale vesele din junglă și vegetație tropicală. Elementul spectaculos al acestui model este plicul verde special, decupat creativ în formă de frunză, care oferă un aspect unitar și exotic. Realizată pe carton mat de 250g, este alegerea ideală pentru părinții care își doresc un design jucăuș, dar extrem de rafinat și tactil. Caracteristici: Material: carton mat premium | Grosime carton: 250g | Dimensiune: 13 x 18 cm (închisă) | Accesorii: plic special verde decupat | Design: Animale exotice (leu, girafă, elefant)",
     "images": [
       "/images/invitatii/invitatie-botez-safari-plic-verde.jpg"
     ],
@@ -916,9 +944,10 @@
     "price": 4.5,
     "category": "invitatii nunta",
     "product_type": "invitatii nunta",
-    "desc": "Invitație de nuntă sau botez realizată în format de pergament (scroll), pe carton alb premium mat de 250g. Invitația este rulată manual și finisată cu o fundă aurie strălucitoare din satin, oferind un aspect luxos și atemporal. Designul minimalist, dar de impact, este perfect pentru evenimente cu tematică elegantă, royal sau clasică. Formatul rulat oferă o experiență de deschidere memorabilă pentru invitați. Caracteristici: Material: carton mat premium | Grosime: 250g | Tip: Pergament rulat manual | Accesorii: Fundă satinată aurie | Plic inclus: Da",
+    "desc": "Invitație de nuntă sau botez realizată în format de pergament (scroll), pe carton alb premium mat de 250g. Invitația este rulată manual și finisată cu o fundă aurie strălucitoare din satin, oferind un aspect luxos și atemporal. Designul minimalist, dar de impact, este perfect pentru evenimente cu tematică elegantă, royal sau clasică. Formatul rulat oferă o experiență de deschidere memorabilă pentru invitați. Caracteristici: Material: carton mat premium | Grosime: 250g | Tip: Pergament rulat manual | Accesorii: Fundă satinată aurie",
     "images": [
-      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg"
+      "/images/invitatii/invitatie-pergament-fundita-aurie.jpg",
+      "/images/invitatii/invitatie-pergament-fundita-aurie-1.jpg"
     ],
     "tags": [
       "invitatie pergament",
