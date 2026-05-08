@@ -126,7 +126,7 @@ const CATEGORY_MAP = {
   "paste": { name: "Colecția de Paște", url: "/paste.html" },
   "martisor": { name: "Colecția de Mărțișor", url: "/martisor.html" },
   "tablouri luminoase": { name: "Tablouri luminoase", url: "/tablouri-luminoase.html" },
-  "cani personalizate": { name: "Pahare miri & căni personalizate", url: "/cani.html" }
+  "pahare miri personalizate": { name: "Pahare miri & căni personalizate", url: "/pahare-miri.html" }
   };
 
 // --- Dropdown Produse (MEGA, grupat) ---
@@ -169,7 +169,7 @@ const PRODUCTS_DROPDOWN_HTML = `
     <div class="menu-title">Cadouri</div>
     <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
     <a role="menuitem" href="/tablouri-parfumate.html">Tablouri parfumate</a>
-    <a role="menuitem" href="/cani.html">Pahare miri & cani personalizate</a>
+    <a role="menuitem" href="/pahare-miri.html">Pahare miri personalizate</a>
   </li>
 
   <li class="menu-group" role="none">
@@ -451,7 +451,7 @@ const priceStr = Number(prod.price || 0).toFixed(2);
       else if(ref.includes("/toppere-tort")) back="/toppere-tort.html";
       else if(ref.includes("/craciun")) back="/craciun.html";
       else if(ref.includes("/tablouri-luminoase")) back="/tablouri-luminoase.html";
-      else if(ref.includes("/cani")) back="/cani.html";
+      else if(ref.includes("/pahare-miri")) back="/pahare-miri.html";
       var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
     (function () {
