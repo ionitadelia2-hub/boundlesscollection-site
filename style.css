@@ -906,3 +906,47 @@ footer{
   min-width:220px;
   text-align:center;
 }
+/* =========================================================
+   STILIZARE COȘ DE CUMPĂRĂTURI & ELEMENTE PRODUSE (Boundless)
+   ========================================================= */
+
+/* Badge-ul cu numărul de produse din meniu */
+.cart-count-badge {
+  background: var(--text); /* Culoarea neagră/închisă nativă a site-ului */
+  color: var(--white) !important;
+  font-size: 0.7rem;
+  padding: 1px 5px;
+  border-radius: 50%;
+  margin-left: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Butonul modern de Adăugare în Coș pentru paginile de produs */
+.add-to-cart {
+  background: var(--text) !important;
+  color: var(--white) !important;
+  border: none !important;
+  padding: 12px 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.25s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background: #111 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Stil pentru link-ul de coș din interiorul meniului mobil la hover/active */
+#mainmenu a[href="/cart.html"]:hover {
+  color: var(--text);
+  opacity: 0.8;
+}
