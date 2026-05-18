@@ -15,12 +15,13 @@
     .form-group { margin-bottom: 22px; display: flex; flex-direction: column; }
     .form-group label { font-weight: 600; margin-bottom: 8px; font-size: 0.95rem; color: #222; }
     .form-group input, .form-group textarea, .form-group select { padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.98rem; font-family: inherit; transition: border 0.2s; }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #d9a74a; outline: none; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #111; outline: none; }
     .summary-box { background: #fafafa; padding: 22px; border-radius: 4px; margin-bottom: 35px; border: 1px solid #eaeaea; }
     .summary-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 15px; color: #111; }
+    .summary-row { font-size: 0.95rem; color: #555; margin-top: 6px; }
     .btn-submit { background: #111; color: white; border: none; padding: 15px; font-size: 1.05rem; font-weight: 600; cursor: pointer; border-radius: 4px; width: 100%; transition: background 0.2s; letter-spacing: 0.5px; }
-    .btn-submit:hover { background: #d9a74a; }
-    .legal-notice { font-size: 0.85rem; color: #555; margin-top: 20px; background: #fffdf6; padding: 14px; border-left: 4px solid #d9a74a; line-height: 1.5; border-radius: 0 4px 4px 0; }
+    .btn-submit:hover { background: #333; }
+    .legal-notice { font-size: 0.85rem; color: #555; margin-top: 20px; background: #fffdf6; padding: 14px; border-left: 4px solid #111; line-height: 1.5; border-radius: 0 4px 4px 0; }
   </style>
 </head>
 <body>
@@ -31,13 +32,18 @@
     <div class="summary-box">
         <h3 class="summary-title">Sumar coș</h3>
         <div id="checkout-items" style="line-height: 1.7; margin-bottom: 12px; color: #444;"></div>
-        <hr style="border: 0; border-top: 1px solid #e5e5e5; margin: 15px 0;">
+        
+        <div class="summary-row" id="checkout-subtotal-row">Produse: 0.00 RON</div>
+        <div class="summary-row" id="checkout-shipping-row">Transport (max. 5kg): 25.00 RON</div>
+        
+        <hr style="border: 0; border-top: 1px dashed #ddd; margin: 15px 0;">
         <strong style="font-size: 1.1rem; color: #000;">Total de plată: <span id="checkout-total">0.00</span> RON</strong>
     </div>
 
     <form action="https://formspree.io/f/mzdwblkp" method="POST" id="checkout-form">
         <input type="hidden" name="Produse Comandate" id="hidden-cart-data">
-        <input type="hidden" name="Total Plata" id="hidden-total-data">
+        <input type="hidden" name="Taxa Transport" id="hidden-shipping-data" value="25.00 RON">
+        <input type="hidden" name="Total Plata (cu Transport)" id="hidden-total-data">
 
         <div class="form-group">
             <label for="name">Nume și Prenume *</label>
@@ -69,7 +75,7 @@
         <div class="legal-notice">
             <strong>Informații privind Returul:</strong> Conform legislației privind vânzările la distanță (OUG 34/2014), dreptul de retragere de 14 zile nu se aplică produselor realizate la comandă sau clar personalizate. Returnările se acceptă doar pentru produse defecte sau livrate greșit, în conformitate cu legislația română privind protecția consumatorilor.
 
-Produsele sunt ambalate corespunzător (folie cu bule, pufuleți din polistiren și cutii rezistente) pentru a preveni deteriorarea în timpul transportului. Responsabilitatea pentru eventuale daune survenite ulterior predării coletului revine firmei de curierat.Facem totuși înlocuire sau rambursare în următoarele situații:
+Produsele sunt ambalate corespunzător (folie cu bule, pufuleți din polistiren și cutii rezistente) pentru a preveni deteriorarea în timpul transportului. Responsabilitatea pentru eventuale daune survenite ulterior predării coletului revine firmei de curierat. Facem totuși înlocuire sau rambursare în următoarele situații:
 
 există o eroare de execuție față de varianta aprobată (text, model, culori etc.);
 produsul a fost livrat greșit față de comanda confirmată. Prin finalizarea comenzii, confirmați acceptarea acestor condiții.
@@ -85,19 +91,32 @@ produsul a fost livrat greșit față de comanda confirmată. Prin finalizarea c
         const cart = getCart();
         if(cart.length === 0) { window.location.href = "/cart.html"; return; }
 
-        let total = 0; let summaryText = ""; let html = "";
+        let subtotal = 0; 
+        let summaryText = ""; 
+        let html = "";
+        const taxaTransport = 25.00; // Definim aceeasi taxa fixa de transport
+
         cart.forEach(item => {
-            const subtotal = item.price * item.quantity;
-            total += subtotal;
-            html += `<div>• <strong>${item.title}</strong> (x${item.quantity}) - ${subtotal.toFixed(2)} RON</div>`;
+            const itemSubtotal = item.price * item.quantity;
+            subtotal += itemSubtotal;
+            html += `<div>• <strong>${item.title}</strong> (x${item.quantity}) - ${itemSubtotal.toFixed(2)} RON</div>`;
             summaryText += `[ID: ${item.id}] ${item.title} x${item.quantity}; `;
         });
 
-        document.getElementById("checkout-items").innerHTML = html;
-        document.getElementById("checkout-total").textContent = total.toFixed(2);
-        document.getElementById("hidden-cart-data").value = summaryText;
-        document.getElementById("hidden-total-data").value = total.toFixed(2) + " RON";
+        // Calculăm totalul adăugând transportul
+        const totalFinal = subtotal + taxaTransport;
 
+        // Afișăm detaliat pe ecran în caseta gri de sumar
+        document.getElementById("checkout-items").innerHTML = html;
+        document.getElementById("checkout-subtotal-row").innerHTML = `Produse: <strong>${subtotal.toFixed(2)} RON</strong>`;
+        document.getElementById("checkout-shipping-row").innerHTML = `Transport (max. 5kg): <strong>${taxaTransport.toFixed(2)} RON</strong>`;
+        document.getElementById("checkout-total").textContent = totalFinal.toFixed(2);
+        
+        // Salvăm datele corecte în câmpurile ascunse pentru Formspree
+        document.getElementById("hidden-cart-data").value = summaryText;
+        document.getElementById("hidden-total-data").value = totalFinal.toFixed(2) + " RON";
+
+        // Golește coșul după plasarea cu succes a comenzii
         document.getElementById("checkout-form").addEventListener("submit", () => {
             setTimeout(() => { localStorage.removeItem("boundless_cart"); }, 400);
         });
