@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,follow" />
+  <title>Finalizare Comandă • Boundless Collection</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .checkout-container { max-width: 650px; margin: 50px auto; padding: 25px; font-family: 'Poppins', sans-serif; }
+    .checkout-title { font-family: 'Playfair Display', serif; font-size: 2rem; border-bottom: 1px solid #eaeaea; padding-bottom: 15px; margin-bottom: 30px; text-align: center; }
+    .form-group { margin-bottom: 22px; display: flex; flex-direction: column; }
+    .form-group label { font-weight: 600; margin-bottom: 8px; font-size: 0.95rem; color: #222; }
+    .form-group input, .form-group textarea, .form-group select { padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.98rem; font-family: inherit; transition: border 0.2s; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: #d9a74a; outline: none; }
+    .summary-box { background: #fafafa; padding: 22px; border-radius: 4px; margin-bottom: 35px; border: 1px solid #eaeaea; }
+    .summary-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 15px; color: #111; }
+    .btn-submit { background: #111; color: white; border: none; padding: 15px; font-size: 1.05rem; font-weight: 600; cursor: pointer; border-radius: 4px; width: 100%; transition: background 0.2s; letter-spacing: 0.5px; }
+    .btn-submit:hover { background: #d9a74a; }
+    .legal-notice { font-size: 0.85rem; color: #555; margin-top: 20px; background: #fffdf6; padding: 14px; border-left: 4px solid #d9a74a; line-height: 1.5; border-radius: 0 4px 4px 0; }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-container">
+    <h1 class="checkout-title">Detalii Comandă</h1>
+    
+    <div class="summary-box">
+        <h3 class="summary-title">Sumar coș</h3>
+        <div id="checkout-items" style="line-height: 1.7; margin-bottom: 12px; color: #444;"></div>
+        <hr style="border: 0; border-top: 1px solid #e5e5e5; margin: 15px 0;">
+        <strong style="font-size: 1.1rem; color: #000;">Total de plată: <span id="checkout-total">0.00</span> RON</strong>
+    </div>
+
+    <form action="https://formspree.io/f/mzdwblkp" method="POST" id="checkout-form">
+        <input type="hidden" name="Produse Comandate" id="hidden-cart-data">
+        <input type="hidden" name="Total Plata" id="hidden-total-data">
+
+        <div class="form-group">
+            <label for="name">Nume și Prenume *</label>
+            <input type="text" id="name" name="Nume Client" required autocomplete="name">
+        </div>
+        <div class="form-group">
+            <label for="email">Adresă de Email *</label>
+            <input type="email" id="email" name="Email" required autocomplete="email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Număr de Telefon *</label>
+            <input type="tel" id="phone" name="Telefon" required autocomplete="tel">
+        </div>
+        <div class="form-group">
+            <label for="address">Adresă completă de livrare *</label>
+            <textarea id="address" name="Adresa de Livrare" rows="3" placeholder="Localitate, județ, stradă, număr, bloc..." required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="customization">Detalii text și personalizare (Nume, dată, culori ceară) *</label>
+            <textarea id="customization" name="Detalii Personalizare" rows="4" placeholder="Ex: Text invitație: Mădălina & Iulian, 20.06.2026. Sigiliu din ceară ivory." required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="payment">Modalitate de plată *</label>
+            <select id="payment" name="Modalitate Plata" required>
+                <option value="Ramburs">Plată la livrare (Ramburs la curier)</option>
+                <option value="Ordin de Plata">Transfer bancar (Ordin de plată avans)</option>
+            </select>
+        </div>
+
+        <div class="legal-notice">
+            <strong>Informații privind Returul:</strong> Având în vedere că produsele sunt realizate manual și personalizate în mod clar conform specificațiilor trimise, acestea sunt exceptate de la dreptul de retur (conform OUG 34/2014 Art. 16 lit. c). Prin finalizarea comenzii, confirmați acceptarea acestor condiții.
+        </div>
+
+        <button type="submit" class="btn-submit">Plasează Comanda fermă</button>
+    </form>
+  </div>
+
+  <script src="/cart.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const cart = getCart();
+        if(cart.length === 0) { window.location.href = "/cart.html"; return; }
+
+        let total = 0; let summaryText = ""; let html = "";
+        cart.forEach(item => {
+            const subtotal = item.price * item.quantity;
+            total += subtotal;
+            html += `<div>• <strong>${item.title}</strong> (x${item.quantity}) - ${subtotal.toFixed(2)} RON</div>`;
+            summaryText += `[ID: ${item.id}] ${item.title} x${item.quantity}; `;
+        });
+
+        document.getElementById("checkout-items").innerHTML = html;
+        document.getElementById("checkout-total").textContent = total.toFixed(2);
+        document.getElementById("hidden-cart-data").value = summaryText;
+        document.getElementById("hidden-total-data").value = total.toFixed(2) + " RON";
+
+        document.getElementById("checkout-form").addEventListener("submit", () => {
+            setTimeout(() => { localStorage.removeItem("boundless_cart"); }, 400);
+        });
+    });
+  </script>
+</body>
+</html>

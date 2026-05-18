@@ -2,7 +2,6 @@
 <html lang="ro">
 <head>
   
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18147990553"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -99,8 +98,8 @@
       <nav aria-label="Meniu principal">
         <ul id="mainmenu">
           <li class="dropdown">
-  <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">Produse</button>
-  <ul class="menu menu-mega" role="menu" aria-label="Submeniu Produse">
+            <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">Produse</button>
+            <ul class="menu menu-mega" role="menu" aria-label="Submeniu Produse">
 
   <li class="menu-group" role="none">
     <div class="menu-title">Papetarie</div>
@@ -149,9 +148,9 @@
   </li>
 
 </ul>
-</li>
-
+          </li>
           <li><a href="/index.html">Acasă</a></li>
+          <li><a href="/cart.html" style="font-weight: 600;">🛒 Coș (<span id="cart-count-badge" class="cart-count-badge" style="display:none; color: #d9a74a; font-weight: bold;">0</span>)</a></li>
           <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -192,9 +191,26 @@
         <p class="product-desc"><p class="product-desc">Cutie cadou de Craciun cu aprox. 85g wax melts parfumate din ceara de soia, in forme de braduti. Aromă festiva, perfectă pentru aromaterapie si cadouri elegante de sezon.</p></p>
         <p class="price price-badge">40.00 RON</p>
         <div class="tags"><span class="tag">craciun</span><span class="tag">wax melts</span><span class="tag">arome</span><span class="tag">cadou</span><span class="tag">craciun</span><span class="tag">braduti</span><span class="tag">ceara soia</span><span class="tag">handmade</span><span class="tag">aromaterapie</span><span class="tag">festiv</span></div>
-        <div class="actions">
-          <a class="btn" href="/index.html#produse" id="backBtn">← Înapoi</a>
-          <a class="btn btn-primary" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Box%20Craciun%2085g%20cu%20wax%20melts%20parfumate%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Fbox-craciun-85g-cu-wax-melts-parfumate-box-crac.html)" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+        
+        <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
+          <a class="btn" href="/index.html#produse" id="backBtn" style="border: 1px solid #ccc; padding: 10px 20px; text-decoration: none; border-radius: 4px; color: #333; font-family: 'Poppins', sans-serif;">← Înapoi</a>
+          
+          <button 
+            class="btn btn-primary add-to-cart" 
+            type="button"
+            data-id="box-craciun-waxmelts-85g-033"
+            data-title="Box Craciun 85g cu wax melts parfumate"
+            data-price="40.00"
+            data-image="/images/craciun/box-waxmelts-85g.jpg"
+            data-url="https://boundlesscollection.ro/p/box-craciun-85g-cu-wax-melts-parfumate-box-crac.html"
+            style="background: #111; color: #fff; border: none; padding: 12px 25px; cursor: pointer; font-weight: 600; border-radius: 4px; transition: background 0.2s; font-family: 'Poppins', sans-serif;"
+          >
+            Adaugă în coș
+          </button>
+
+          <a class="btn" href="https://wa.me/40760617724?text=Bun%C4%83!%20M%C4%83%20intereseaz%C4%83%20produsul%3A%20Box%20Craciun%2085g%20cu%20wax%20melts%20parfumate%20(https%3A%2F%2Fboundlesscollection.ro%2Fp%2Fbox-craciun-85g-cu-wax-melts-parfumate-box-crac.html)" target="_blank" rel="noopener" style="border: 1px solid #25D366; background: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; color: #25D366; font-weight: 500; font-family: 'Poppins', sans-serif; display: inline-flex; align-items: center;">
+            Întreabă pe WhatsApp
+          </a>
         </div>
       </div>
     </section>
@@ -205,6 +221,7 @@
     <small>Realizat cu pasiune ✨</small>
   </div></footer>
 
+  <script src="/cart.js" defer></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     (function(){
@@ -229,103 +246,97 @@
       var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
     (function () {
-  const btnHamb  = document.querySelector('.nav-toggle');
-  const mainMenu = document.querySelector('#mainmenu');
-  const dd       = document.querySelector('.dropdown');
-  const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
+      const btnHamb  = document.querySelector('.nav-toggle');
+      const mainMenu = document.querySelector('#mainmenu');
+      const dd       = document.querySelector('.dropdown');
+      const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
 
-  if (!btnHamb || !mainMenu) return;
+      if (!btnHamb || !mainMenu) return;
 
-  function setDropdown(open) {
-    if (!dd) return;
-    dd.classList.toggle('open', !!open);
-    if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
+      function setDropdown(open) {
+        if (!dd) return;
+        dd.classList.toggle('open', !!open);
+        if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
 
-  function closeAll() {
-    document.body.classList.remove('menu-open');
-    btnHamb.setAttribute('aria-expanded','false');
-    setDropdown(false);
-  }
+      function closeAll() {
+        document.body.classList.remove('menu-open');
+        btnHamb.setAttribute('aria-expanded','false');
+        setDropdown(false);
+      }
 
-  // ✅ inchis sigur la load + cand revii din back/forward cache
-  window.addEventListener('DOMContentLoaded', closeAll);
-  window.addEventListener('pageshow', closeAll);
+      window.addEventListener('DOMContentLoaded', closeAll);
+      window.addEventListener('pageshow', closeAll);
 
-  btnHamb.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const open = document.body.classList.toggle('menu-open');
-    btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (!open) setDropdown(false);
-  });
+      btnHamb.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const open = document.body.classList.toggle('menu-open');
+        btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (!open) setDropdown(false);
+      });
+      if (dd && ddBtn) {
+        ddBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const now = dd.classList.toggle('open');
+          ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
+        });
+        mainMenu.addEventListener('click', (e) => e.stopPropagation());
+      }
 
-  if (dd && ddBtn) {
-    ddBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const now = dd.classList.toggle('open');
-      ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
-    });
+      document.addEventListener('click', closeAll);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+    })();
+    // === galerie produs (2+ imagini) ===
+    (function(){
+      const g = document.querySelector('[data-gallery]');
+      if (!g) return;
 
-    mainMenu.addEventListener('click', (e) => e.stopPropagation());
-  }
+      const track = g.querySelector('.gallery-track');
+      const slides = Array.from(g.querySelectorAll('.g-slide'));
+      if (slides.length <= 1) return;
 
-  document.addEventListener('click', closeAll);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
-})();
-// === galerie produs (2+ imagini) ===
-(function(){
-  const g = document.querySelector('[data-gallery]');
-  if (!g) return;
+      const prev = g.querySelector('.g-prev');
+      const next = g.querySelector('.g-next');
+      const dots = Array.from(g.querySelectorAll('.g-dots i'));
+      const thumbs = Array.from(g.querySelectorAll('.g-thumb'));
 
-  const track = g.querySelector('.gallery-track');
-  const slides = Array.from(g.querySelectorAll('.g-slide'));
-  if (slides.length <= 1) return;
+      let idx = 0;
 
-  const prev = g.querySelector('.g-prev');
-  const next = g.querySelector('.g-next');
-  const dots = Array.from(g.querySelectorAll('.g-dots i'));
-  const thumbs = Array.from(g.querySelectorAll('.g-thumb'));
+      function setIndex(i){
+        const n = slides.length;
+        idx = ((i % n) + n) % n;
 
-  let idx = 0;
+        track?.setAttribute('data-index', String(idx));
 
-  function setIndex(i){
-    const n = slides.length;
-    idx = ((i % n) + n) % n;
+        slides.forEach((img,k)=>{
+          const on = k === idx;
+          img.classList.toggle('is-active', on);
+          img.style.display = on ? 'block' : 'none';
+        });
 
-    track?.setAttribute('data-index', String(idx));
+        dots.forEach((d,k)=> d.style.opacity = (k===idx ? '1' : '.35'));
+        thumbs.forEach((b,k)=> b.classList.toggle('is-active', k===idx));
+      }
 
-    slides.forEach((img,k)=>{
-      const on = k === idx;
-      img.classList.toggle('is-active', on);
-      img.style.display = on ? 'block' : 'none';
-    });
+      prev?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx-1); });
+      next?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx+1); });
 
-    dots.forEach((d,k)=> d.style.opacity = (k===idx ? '1' : '.35'));
-    thumbs.forEach((b,k)=> b.classList.toggle('is-active', k===idx));
-  }
-
-  prev?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx-1); });
-  next?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx+1); });
-
-  dots.forEach(d=>{
-    d.addEventListener('click', (e)=>{
-      e.preventDefault();
-      setIndex(Number(d.dataset.dot || 0));
-    });
-  });
-
-  thumbs.forEach(b=>{
-    b.addEventListener('click', (e)=>{
-      e.preventDefault();
-      setIndex(Number(b.dataset.thumb || 0));
-    });
-  });
-
-  setIndex(0);
-})();
-
+      dots.forEach(d=>{
+        d.addEventListener('click', (e)=>{
+          e.preventDefault();
+          setIndex(Number(d.dataset.dot || 0));
+        });
+      });
+      thumbs.forEach(b=>{
+        b.addEventListener('click', (e)=>{
+          e.preventDefault();
+          setIndex(Number(b.dataset.thumb || 0));
+        });
+      });
+      setIndex(0);
+    })();
   </script>
   <script defer src="/script.js"></script>
 </body>

@@ -10,11 +10,9 @@ const OUT  = path.join(ROOT, "public");         // directorul servit de hosting 
 
 const CSV_FILE  = path.join(ROOT, "content", "products.csv");
 const JSON_OUT  = path.join(ROOT, "content", "products.json");
-
 const ORIGIN = (process.env.SITE_ORIGIN || "https://boundlesscollection.ro").replace(/\/+$/, "");
 
 const GOOGLE_TAG = `
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18147990553"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -89,9 +87,11 @@ function formatProductDesc(descRaw) {
 // root-absolute pentru servire web
 const toRootAbs = (u) => {
   if (!u) return "";
-  if (/^https?:\/\//i.test(u)) return u.replace(ORIGIN, ""); // normalizează spre root
+  if (/^https?:\/\//i.test(u)) return u.replace(ORIGIN, "");
+  // normalizează spre root
   return "/" + String(u).replace(/^\/+/, "");
 };
+
 // absolute (cu ORIGIN) pentru meta / feed
 const toAbs = (u) => {
   if (!u) return `${ORIGIN}/content/preview.jpg`;
@@ -128,10 +128,9 @@ const CATEGORY_MAP = {
   "martisor": { name: "Colecția de Mărțișor", url: "/martisor.html" },
   "tablouri luminoase": { name: "Tablouri luminoase", url: "/tablouri-luminoase.html" },
   "pahare miri personalizate": { name: "Pahare miri & căni personalizate", url: "/pahare-miri.html" }
-  };
+};
 
 // --- Dropdown Produse (MEGA, grupat) ---
-// Nota: folosim ESC pentru caractere speciale in template string si pastram structura identica peste tot.
 const PRODUCTS_DROPDOWN_HTML = `
 <ul class="menu menu-mega" role="menu" aria-label="Submeniu Produse">
 
@@ -184,46 +183,40 @@ const PRODUCTS_DROPDOWN_HTML = `
 </ul>
 `.trim();
 
-
 // ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
-const brand = "Boundless Collection";
-const title = esc(prod.title || "");
-const descPlain = prod.desc || prod.title || "";
-const desc = esc(descPlain);
-const descHtml = formatProductDesc(descPlain);
-const priceStr = Number(prod.price || 0).toFixed(2);
+  const brand = "Boundless Collection";
+  const title = esc(prod.title || "");
+  const descPlain = prod.desc || prod.title || "";
+  const desc = esc(descPlain);
+  const descHtml = formatProductDesc(descPlain);
+  const priceStr = Number(prod.price || 0).toFixed(2);
   const price = priceStr + " RON";
 
   const relImgs = (prod.images || []);
   const imagesAbsForMeta = (prod.images || []).map(toAbs);
   const ogImg = imagesAbsForMeta[0] || `${ORIGIN}/content/preview.jpg`;
   const firstImg = relImgs[0] || "/content/preview.jpg";
-
   const url = `${ORIGIN}/p/${prod.slug}.html`;
 
   const waMsg  = encodeURIComponent(`Bună! Mă interesează produsul: ${prod.title} (${url})`);
   const waLink = `https://wa.me/40760617724?text=${waMsg}`;
-
   const faviconPng  = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
   const faviconIco  = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
   const brandAvatar = exists(ROOT, "images", "delia-avatar.png") ? `/images/delia-avatar.png` : "";
 
   const cssGlobal  = cssTagIfExists("style.css");
-  /*const cssGallery = cssTagIfExists("gallery.css");*/
   const cssGallery = "";
   const cssProduct = cssTagIfExists("product-page.css");
 
   const jsGlobal   = jsTagIfExists("script.js");
-  const jsGallery  = ""; // jsTagIfExists("gallery.js");
-  const jsProduct  = ""; // jsTagIfExists("product.js");
+  const jsGallery  = ""; 
+  const jsProduct  = ""; 
 
   // -------- JSON-LD: Product + BreadcrumbList --------
   const priceValidUntil = new Date(new Date().getFullYear() + 1, 11, 31)
     .toISOString().slice(0, 10);
-
   const bc = CATEGORY_MAP[prod.product_type || prod.category] || { name: "Produse", url: "/index.html#produse" };
-
   const productLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -254,7 +247,6 @@ const priceStr = Number(prod.price || 0).toFixed(2);
       }
     }
   };
-
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -357,11 +349,11 @@ const priceStr = Number(prod.price || 0).toFixed(2);
       <nav aria-label="Meniu principal">
         <ul id="mainmenu">
           <li class="dropdown">
-  <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">Produse</button>
-  ${PRODUCTS_DROPDOWN_HTML}
-</li>
-
+            <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">Produse</button>
+            ${PRODUCTS_DROPDOWN_HTML}
+          </li>
           <li><a href="/index.html">Acasă</a></li>
+          <li><a href="/cart.html" style="font-weight: 600;">🛒 Coș (<span id="cart-count-badge" class="cart-count-badge" style="display:none; color: #d9a74a; font-weight: bold;">0</span>)</a></li>
           <li><a href="https://www.instagram.com/marturiiboundlesscollection_" target="_blank" rel="noopener">Instagram</a></li>
           <li><a href="https://www.facebook.com/share/16TEGEfgGs/" target="_blank" rel="noopener">Facebook</a></li>
           <li><a class="cta" href="https://wa.me/40760617724" target="_blank" rel="noopener">WhatsApp</a></li>
@@ -421,9 +413,26 @@ const priceStr = Number(prod.price || 0).toFixed(2);
         <p class="product-desc">${descHtml}</p>
         <p class="price price-badge">${price}</p>
         <div class="tags">${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
-        <div class="actions">
-          <a class="btn" href="/index.html#produse" id="backBtn">← Înapoi</a>
-          <a class="btn btn-primary" href="${waLink}" target="_blank" rel="noopener">Scrie-ne pe WhatsApp</a>
+        
+        <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
+          <a class="btn" href="/index.html#produse" id="backBtn" style="border: 1px solid #ccc; padding: 10px 20px; text-decoration: none; border-radius: 4px; color: #333; font-family: 'Poppins', sans-serif;">← Înapoi</a>
+          
+          <button 
+            class="btn btn-primary add-to-cart" 
+            type="button"
+            data-id="${esc(prod.id)}"
+            data-title="${esc(prod.title)}"
+            data-price="${priceStr}"
+            data-image="${esc(firstImg)}"
+            data-url="${esc(url)}"
+            style="background: #111; color: #fff; border: none; padding: 12px 25px; cursor: pointer; font-weight: 600; border-radius: 4px; transition: background 0.2s; font-family: 'Poppins', sans-serif;"
+          >
+            Adaugă în coș
+          </button>
+
+          <a class="btn" href="${waLink}" target="_blank" rel="noopener" style="border: 1px solid #25D366; background: #fff; padding: 10px 20px; text-decoration: none; border-radius: 4px; color: #25D366; font-weight: 500; font-family: 'Poppins', sans-serif; display: inline-flex; align-items: center;">
+            Întreabă pe WhatsApp
+          </a>
         </div>
       </div>
     </section>
@@ -434,6 +443,7 @@ const priceStr = Number(prod.price || 0).toFixed(2);
     <small>Realizat cu pasiune ✨</small>
   </div></footer>
 
+  <script src="/cart.js" defer></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     (function(){
@@ -458,103 +468,97 @@ const priceStr = Number(prod.price || 0).toFixed(2);
       var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
     (function () {
-  const btnHamb  = document.querySelector('.nav-toggle');
-  const mainMenu = document.querySelector('#mainmenu');
-  const dd       = document.querySelector('.dropdown');
-  const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
+      const btnHamb  = document.querySelector('.nav-toggle');
+      const mainMenu = document.querySelector('#mainmenu');
+      const dd       = document.querySelector('.dropdown');
+      const ddBtn    = document.getElementById('productsToggle') || dd?.querySelector('.dropbtn');
 
-  if (!btnHamb || !mainMenu) return;
+      if (!btnHamb || !mainMenu) return;
 
-  function setDropdown(open) {
-    if (!dd) return;
-    dd.classList.toggle('open', !!open);
-    if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
+      function setDropdown(open) {
+        if (!dd) return;
+        dd.classList.toggle('open', !!open);
+        if (ddBtn) ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
 
-  function closeAll() {
-    document.body.classList.remove('menu-open');
-    btnHamb.setAttribute('aria-expanded','false');
-    setDropdown(false);
-  }
+      function closeAll() {
+        document.body.classList.remove('menu-open');
+        btnHamb.setAttribute('aria-expanded','false');
+        setDropdown(false);
+      }
 
-  // ✅ inchis sigur la load + cand revii din back/forward cache
-  window.addEventListener('DOMContentLoaded', closeAll);
-  window.addEventListener('pageshow', closeAll);
+      window.addEventListener('DOMContentLoaded', closeAll);
+      window.addEventListener('pageshow', closeAll);
 
-  btnHamb.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const open = document.body.classList.toggle('menu-open');
-    btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
-    if (!open) setDropdown(false);
-  });
+      btnHamb.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const open = document.body.classList.toggle('menu-open');
+        btnHamb.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (!open) setDropdown(false);
+      });
+      if (dd && ddBtn) {
+        ddBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          const now = dd.classList.toggle('open');
+          ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
+        });
+        mainMenu.addEventListener('click', (e) => e.stopPropagation());
+      }
 
-  if (dd && ddBtn) {
-    ddBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const now = dd.classList.toggle('open');
-      ddBtn.setAttribute('aria-expanded', now ? 'true' : 'false');
-    });
+      document.addEventListener('click', closeAll);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
+    })();
+    // === galerie produs (2+ imagini) ===
+    (function(){
+      const g = document.querySelector('[data-gallery]');
+      if (!g) return;
 
-    mainMenu.addEventListener('click', (e) => e.stopPropagation());
-  }
+      const track = g.querySelector('.gallery-track');
+      const slides = Array.from(g.querySelectorAll('.g-slide'));
+      if (slides.length <= 1) return;
 
-  document.addEventListener('click', closeAll);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeAll(); });
-})();
-// === galerie produs (2+ imagini) ===
-(function(){
-  const g = document.querySelector('[data-gallery]');
-  if (!g) return;
+      const prev = g.querySelector('.g-prev');
+      const next = g.querySelector('.g-next');
+      const dots = Array.from(g.querySelectorAll('.g-dots i'));
+      const thumbs = Array.from(g.querySelectorAll('.g-thumb'));
 
-  const track = g.querySelector('.gallery-track');
-  const slides = Array.from(g.querySelectorAll('.g-slide'));
-  if (slides.length <= 1) return;
+      let idx = 0;
 
-  const prev = g.querySelector('.g-prev');
-  const next = g.querySelector('.g-next');
-  const dots = Array.from(g.querySelectorAll('.g-dots i'));
-  const thumbs = Array.from(g.querySelectorAll('.g-thumb'));
+      function setIndex(i){
+        const n = slides.length;
+        idx = ((i % n) + n) % n;
 
-  let idx = 0;
+        track?.setAttribute('data-index', String(idx));
 
-  function setIndex(i){
-    const n = slides.length;
-    idx = ((i % n) + n) % n;
+        slides.forEach((img,k)=>{
+          const on = k === idx;
+          img.classList.toggle('is-active', on);
+          img.style.display = on ? 'block' : 'none';
+        });
 
-    track?.setAttribute('data-index', String(idx));
+        dots.forEach((d,k)=> d.style.opacity = (k===idx ? '1' : '.35'));
+        thumbs.forEach((b,k)=> b.classList.toggle('is-active', k===idx));
+      }
 
-    slides.forEach((img,k)=>{
-      const on = k === idx;
-      img.classList.toggle('is-active', on);
-      img.style.display = on ? 'block' : 'none';
-    });
+      prev?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx-1); });
+      next?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx+1); });
 
-    dots.forEach((d,k)=> d.style.opacity = (k===idx ? '1' : '.35'));
-    thumbs.forEach((b,k)=> b.classList.toggle('is-active', k===idx));
-  }
-
-  prev?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx-1); });
-  next?.addEventListener('click', (e)=>{ e.preventDefault(); setIndex(idx+1); });
-
-  dots.forEach(d=>{
-    d.addEventListener('click', (e)=>{
-      e.preventDefault();
-      setIndex(Number(d.dataset.dot || 0));
-    });
-  });
-
-  thumbs.forEach(b=>{
-    b.addEventListener('click', (e)=>{
-      e.preventDefault();
-      setIndex(Number(b.dataset.thumb || 0));
-    });
-  });
-
-  setIndex(0);
-})();
-
+      dots.forEach(d=>{
+        d.addEventListener('click', (e)=>{
+          e.preventDefault();
+          setIndex(Number(d.dataset.dot || 0));
+        });
+      });
+      thumbs.forEach(b=>{
+        b.addEventListener('click', (e)=>{
+          e.preventDefault();
+          setIndex(Number(b.dataset.thumb || 0));
+        });
+      });
+      setIndex(0);
+    })();
   </script>
   ${jsGlobal}${jsGallery}${jsProduct}
 </body>
@@ -566,7 +570,8 @@ function parseCSV(text) {
   const lines = text.split(/\r?\n/).filter(l => l.trim().length);
   if (!lines.length) return [];
   const split = (line) => {
-    const out = []; let cur = "", q = false;
+    const out = [];
+    let cur = "", q = false;
     for (let i = 0; i < line.length; i++) {
       const ch = line[i];
       if (ch === '"') {
@@ -617,7 +622,7 @@ function exportMerchantCSV(products) {
       "in stock",
       "new",
       "Boundless Collection",
-      p.mpn || p.id, // mpn (fallback id)
+      p.mpn || p.id,
       p.google_product_category || "",
       p.product_type || p.category || ""
     ]);
@@ -642,7 +647,6 @@ function main() {
 
   // 1) CSV -> produse
   const rows = parseCSV(fs.readFileSync(CSV_FILE, "utf8"));
-
   const products = rows.map((r) => {
     const id    = r.id || crypto.randomUUID();
     const title = r.title || "";
@@ -650,17 +654,14 @@ function main() {
 
     const images = (r.images || "")
       .split("|").map(s => s.trim()).filter(Boolean)
-      .map(toRootAbs);  // => "/images/.."
+      .map(toRootAbs);
 
     const tags = (r.tags || "")
       .split("|").map(s => s.trim()).filter(Boolean);
 
-    // nou: citim și păstrăm google_product_category și product_type (egale cu category)
     const category = r.category || "";
     const product_type = r.product_type || category || "";
     const gpc = r.google_product_category || "";
-
-    // opțional: material dacă există în CSV (altfel omis din JSON-LD)
     const material = r.material || "";
 
     return {
@@ -675,7 +676,7 @@ function main() {
       slug,
       google_product_category: gpc,
       material,
-      mpn: r.mpn || "" // dacă vrei să treci MPNe reale în CSV, altfel rămâne fallback la id
+      mpn: r.mpn || ""
     };
   });
 
@@ -713,7 +714,7 @@ function main() {
 </urlset>`;
   fs.writeFileSync(path.join(OUT, "sitemap.xml"), sitemap, "utf8");
 
-  // 7) feed Merchant (include google_product_category + product_type + mpn)
+  // 7) feed Merchant
   console.log("DEBUG: export Merchant – produse:", products.length);
   exportMerchantCSV(products);
 
