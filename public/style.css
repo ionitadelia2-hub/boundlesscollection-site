@@ -912,14 +912,14 @@ footer{
 
 /* Badge-ul cu numărul de produse din meniu */
 .cart-count-badge {
-  background: var(--text); /* Culoarea neagră/închisă nativă a site-ului */
-  color: var(--white) !important;
-  font-size: 0.7rem;
-  padding: 1px 5px;
-  border-radius: 50%;
-  margin-left: 3px;
+  background: #111; /* Negru elegant */
+  color: #fff !important;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  margin-left: 5px;
   display: inline-block;
-  vertical-align: middle;
   line-height: 1;
   font-family: 'Poppins', sans-serif;
 }
