@@ -1033,72 +1033,50 @@ footer{
 }
 
 /* =========================================================
-   STILIZARE BUTOANE PAGINI CATEGORIE (PRODUSE) - REVIZUIT
+   STILIZARE RAFINATĂ BUTON „ADAUGĂ ÎN COȘ” (PAGINI CATEGORII)
    ========================================================= */
 
-/* Forțăm containerul de sub preț să așeze butoanele pe verticală, cu spațiu între ele */
+/* Containerul de sub preț */
 .product-card .product-info div,
 .grid.products .product-info div,
 .product-info div {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 10px !important; /* Spațiu elegant de 10px între butoane */
-  margin-top: 16px !important;
+  margin-top: 15px !important;
   width: 100% !important;
+  display: block !important;
 }
 
-/* Butonul principal: Adaugă în coș (clase globale + specifice) */
+/* Butonul în sine: mai subțire, elegant și discret */
 .add-to-cart,
 .product-card button.add-to-cart,
 .grid.products button.add-to-cart {
   background-color: #111111 !important;
   color: #ffffff !important;
   border: 1px solid #111111 !important;
-  padding: 12px 20px !important;
+  
+  /* Reducem înălțimea și spațiul din interior pentru a fi finuț */
+  padding: 8px 16px !important; 
+  
   font-family: 'Poppins', sans-serif !important;
-  font-size: 0.85rem !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
-  border-radius: 6px !important;
+  font-size: 0.8rem !important; /* Font discret, curat */
+  font-weight: 500 !important; /* Nu foarte gros */
+  text-transform: none !important; /* Fără majuscule agresive */
+  letter-spacing: 0.3px !important;
+  
+  /* Colțuri ușor finisate (nu foarte rotunde, păstrând stilul minimalist) */
+  border-radius: 4px !important; 
+  
   cursor: pointer !important;
-  transition: all 0.25s ease !important;
   width: 100% !important;
   display: block !important;
   text-align: center !important;
+  box-shadow: none !important; /* Fără umbre încărcate */
+  transition: background-color 0.2s ease !important;
 }
 
+/* Schimbare fină la hover */
 .add-to-cart:hover,
 .product-card button.add-to-cart:hover,
 .grid.products button.add-to-cart:hover {
   background-color: #333333 !important;
   border-color: #333333 !important;
-  transform: translateY(-1px) !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
-}
-
-/* Butonul secundar: Vezi detalii (Ochiul) */
-.btn-view,
-.product-card a.btn-view,
-.grid.products a.btn-view {
-  background-color: transparent !important;
-  color: #555555 !important;
-  border: 1px solid #dddddd !important;
-  padding: 10px 20px !important;
-  font-family: 'Poppins', sans-serif !important;
-  font-size: 0.85rem !important;
-  font-weight: 500 !important;
-  border-radius: 6px !important;
-  text-align: center !important;
-  display: block !important;
-  transition: all 0.25s ease !important;
-  width: 100% !important;
-}
-
-.btn-view:hover,
-.product-card a.btn-view:hover,
-.grid.products a.btn-view:hover {
-  background-color: #f9f9f9 !important;
-  border-color: #111111 !important;
-  color: #111111 !important;
 }
