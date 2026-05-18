@@ -5,29 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,follow" />
   <title>Coșul tău • Boundless Collection</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
+  
   <style>
-    .cart-page-container { max-width: 800px; margin: 60px auto; padding: 20px; font-family: 'Poppins', sans-serif; }
-    .cart-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 500; border-bottom: 1px solid #eaeaea; padding-bottom: 15px; margin-bottom: 30px; text-align: center; }
-    .cart-item { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid #f5f5f5; gap: 20px; }
-    .cart-item img { width: 90px; height: 90px; object-fit: cover; border-radius: 4px; border: 1px solid #eee; }
+    .cart-page-container { max-width: 800px; margin: 50px auto; padding: 20px; font-family: 'Poppins', sans-serif; }
+    .cart-title { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 500; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 20px; margin-bottom: 30px; text-align: center; color: #111; }
+    
+    /* Elemente cos */
+    .cart-item { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; border-bottom: 1px solid rgba(0,0,0,0.05); gap: 20px; }
+    .cart-item img { width: 95px; height: 95px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(0,0,0,0.05); }
     .item-details { flex: 1; }
-    .item-title { font-weight: 600; font-size: 1.05rem; margin-bottom: 6px; color: #111; line-height: 1.4; }
-    .item-price { color: #666; font-size: 0.95rem; }
-    .item-actions { display: flex; align-items: center; gap: 12px; }
-    .qty-btn { background: #fff; border: 1px solid #ccc; padding: 4px 12px; cursor: pointer; border-radius: 4px; font-weight: bold; font-size: 1rem; transition: all 0.2s; }
-    .qty-btn:hover { background: #f5f5f5; border-color: #000; }
-    .remove-btn { background: none; border: none; color: #b32d2d; cursor: pointer; font-size: 0.85rem; text-decoration: underline; margin-left: 10px; font-family: inherit; }
-    .cart-summary { margin-top: 40px; text-align: right; border-top: 1px solid #eaeaea; padding-top: 25px; }
-    .cart-total { font-size: 1.5rem; font-weight: 500; margin-bottom: 25px; font-family: 'Playfair Display', serif; }
-    .cart-buttons { display: flex; align-items: center; justify-content: flex-end; gap: 20px; flex-wrap: wrap; }
-    .btn-checkout { background: #111; color: #fff; padding: 14px 30px; text-decoration: none; display: inline-block; border-radius: 4px; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px; transition: background 0.2s; border: none; cursor: pointer; }
-    .btn-checkout:hover { background: #d9a74a; }
-    .empty-cart-msg { text-align: center; padding: 80px 20px; color: #666; }
-    .empty-cart-msg p { font-size: 1.1rem; margin-bottom: 25px; }
+    .item-title { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.15rem; margin-bottom: 6px; color: #111; line-height: 1.4; }
+    .item-price { color: #555; font-size: 0.95rem; font-weight: 400; }
+    
+    /* Actiuni cantitate */
+    .item-actions { display: flex; align-items: center; gap: 14px; }
+    .qty-wrapper { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 6px; background: #fff; overflow: hidden; }
+    .qty-btn { background: #fff; border: none; padding: 6px 14px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: background 0.2s; color: #111; }
+    .qty-btn:hover { background: #f5f5f5; }
+    .qty-text { padding: 0 4px; min-width: 24px; text-align: center; font-size: 0.95rem; }
+    .remove-btn { background: none; border: none; color: #b32d2d; cursor: pointer; font-size: 0.85rem; text-decoration: underline; font-family: inherit; transition: color 0.2s; }
+    .remove-btn:hover { color: #d93838; }
+    
+    /* Sumar si butoane finalizare */
+    .cart-summary { margin-top: 40px; text-align: right; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 30px; }
+    .cart-total { font-size: 1.6rem; font-weight: 500; margin-bottom: 25px; font-family: 'Playfair Display', serif; color: #111; }
+    .cart-buttons { display: flex; align-items: center; justify-content: flex-end; gap: 25px; flex-wrap: wrap; }
+    
+    .btn-checkout { background: #111; color: #fff; padding: 14px 32px; text-decoration: none; display: inline-block; border-radius: 6px; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.25s ease; border: none; cursor: pointer; }
+    .btn-checkout:hover { background: #333; transform: translateY(-1px); }
+    
+    /* Stil pentru starea cand cosul este GOL */
+    .cart-empty-state { text-align: center; padding: 60px 20px; max-width: 520px; margin: 0 auto; }
+    .cart-empty-icon { font-size: 4rem; margin-bottom: 20px; display: inline-block; }
+    .cart-empty-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 12px; color: #111; }
+    .cart-empty-text { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px; }
   </style>
 </head>
 <body>
@@ -49,8 +65,8 @@
       <div class="cart-summary" id="cart-summary" style="display: none;">
         <div class="cart-total">Total de plată: <span id="cart-total-val">0.00</span> RON</div>
         <div class="cart-buttons">
-          <a href="/index.html#produse" style="color: #666; text-decoration: none; font-size: 0.95rem; border-bottom: 1px solid #ccc; padding-bottom: 2px;">← Înapoi la produse</a>
-          <a href="/checkout.html" class="btn-checkout">Continuă cu finalizarea comenzii</a>
+          <a href="/index.html#produse" style="color: #666; text-decoration: none; font-size: 0.95rem; border-bottom: 1px solid #ccc; padding-bottom: 2px; transition: color 0.2s;">← Înapoi la produse</a>
+          <a href="/checkout.html" class="btn-checkout">Finalizează comanda</a>
         </div>
       </div>
     </div>
@@ -59,13 +75,21 @@
   <script src="/cart.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", renderCart);
+    
     function renderCart() {
         const cart = getCart();
         const container = document.getElementById("cart-content");
         const summary = document.getElementById("cart-summary");
 
         if (cart.length === 0) {
-            container.innerHTML = `<div class="empty-cart-msg"><p>Coșul tău este gol în acest moment.</p><a href="/index.html#produse" class="btn-checkout">Explorează produsele</a></div>`;
+            container.innerHTML = `
+                <div class="cart-empty-state">
+                    <span class="cart-empty-icon">🛒</span>
+                    <h2 class="cart-empty-title">Coșul tău este gol</h2>
+                    <p class="cart-empty-text">Încă nu ai adăugat niciun produs. Explorează invitațiile noastre elegante și accesoriile realizate manual pentru a da startul evenimentului tău.</p>
+                    <a href="/index.html#produse" class="btn-checkout">Explorează produsele</a>
+                </div>
+            `;
             summary.style.display = "none";
             return;
         }
@@ -83,9 +107,11 @@
                         <div class="item-price">${item.price.toFixed(2)} RON</div>
                     </div>
                     <div class="item-actions">
-                        <button class="qty-btn" onclick="changeQty(${index}, -1)">-</button>
-                        <span><strong>${item.quantity}</strong></span>
-                        <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
+                        <div class="qty-wrapper">
+                            <button class="qty-btn" onclick="changeQty(${index}, -1)">-</button>
+                            <span class="qty-text"><strong>${item.quantity}</strong></span>
+                            <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
+                        </div>
                         <button class="remove-btn" onclick="removeItem(${index})">Elimină</button>
                     </div>
                 </div>
@@ -94,12 +120,14 @@
         container.innerHTML = html;
         document.getElementById("cart-total-val").textContent = total.toFixed(2);
     }
+    
     function changeQty(index, delta) {
         let cart = getCart();
         cart[index].quantity += delta;
         if (cart[index].quantity <= 0) cart.splice(index, 1);
         saveCart(cart); renderCart();
     }
+    
     function removeItem(index) {
         let cart = getCart();
         cart.splice(index, 1);
