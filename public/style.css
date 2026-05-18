@@ -950,3 +950,27 @@ footer{
   color: var(--text);
   opacity: 0.8;
 }
+/* =========================================================
+   FINISAJE PENTRU ECRANE MARI (Laptop / Desktop)
+   ========================================================= */
+@media (min-width: 901px) {
+  /* Oferă spațiu flexibil și previne trecerea pe rândul doi */
+  #mainmenu {
+    display: flex !important;
+    align-items: center;
+    gap: 14px; /* Distanță curată între elemente */
+  }
+
+  /* Micșorăm discret textul și marginile butoanelor doar pe laptop */
+  #mainmenu a, .dropbtn {
+    font-size: 0.95rem !important;
+    padding: 6px 10px !important;
+    white-space: nowrap; /* Împiedică cuvintele gen "Galerie/Produse" să se rupă în două */
+  }
+
+  /* Butonul final de WhatsApp (CTA) îl facem o idee mai compact pe laptop */
+  #mainmenu a.cta {
+    padding: 8px 16px !important;
+    font-size: 0.95rem !important;
+  }
+}
