@@ -1031,3 +1031,74 @@ footer{
   border-color: #111111 !important;
   color: #111111 !important;
 }
+
+/* =========================================================
+   STILIZARE BUTOANE PAGINI CATEGORIE (PRODUSE) - REVIZUIT
+   ========================================================= */
+
+/* Forțăm containerul de sub preț să așeze butoanele pe verticală, cu spațiu între ele */
+.product-card .product-info div,
+.grid.products .product-info div,
+.product-info div {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important; /* Spațiu elegant de 10px între butoane */
+  margin-top: 16px !important;
+  width: 100% !important;
+}
+
+/* Butonul principal: Adaugă în coș (clase globale + specifice) */
+.add-to-cart,
+.product-card button.add-to-cart,
+.grid.products button.add-to-cart {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #111111 !important;
+  padding: 12px 20px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  width: 100% !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+.add-to-cart:hover,
+.product-card button.add-to-cart:hover,
+.grid.products button.add-to-cart:hover {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+}
+
+/* Butonul secundar: Vezi detalii (Ochiul) */
+.btn-view,
+.product-card a.btn-view,
+.grid.products a.btn-view {
+  background-color: transparent !important;
+  color: #555555 !important;
+  border: 1px solid #dddddd !important;
+  padding: 10px 20px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  display: block !important;
+  transition: all 0.25s ease !important;
+  width: 100% !important;
+}
+
+.btn-view:hover,
+.product-card a.btn-view:hover,
+.grid.products a.btn-view:hover {
+  background-color: #f9f9f9 !important;
+  border-color: #111111 !important;
+  color: #111111 !important;
+}
