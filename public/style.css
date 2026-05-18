@@ -974,3 +974,60 @@ footer{
     font-size: 0.95rem !important;
   }
 }
+
+/* =========================================================
+   STILIZARE BUTOANE PAGINI CATEGORIE (PRODUSE)
+   ========================================================= */
+
+/* Containerul care ține cele două butoane */
+.product-card .product-info div[style*="display: flex"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important; /* Spațiu elegant între cele două butoane */
+  margin-top: 16px !important;
+}
+
+/* Butonul principal: Adăugă în coș */
+.product-card button.add-to-cart {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border: 1px solid #111111 !important;
+  padding: 12px 20px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  width: 100% !important;
+}
+
+.product-card button.add-to-cart:hover {
+  background-color: #333333 !important;
+  border-color: #333333 !important;
+  transform: translateY(-1px);
+}
+
+/* Butonul secundar: Vezi detalii (Ochiul) */
+.product-card a.btn-view {
+  background-color: transparent !important;
+  color: #555555 !important;
+  border: 1px solid #dddddd !important;
+  padding: 10px 20px !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+  border-radius: 6px !important;
+  text-align: center !important;
+  display: block !important;
+  transition: all 0.25s ease !important;
+  width: 100% !important;
+}
+
+.product-card a.btn-view:hover {
+  background-color: #f9f9f9 !important;
+  border-color: #111111 !important;
+  color: #111111 !important;
+}
