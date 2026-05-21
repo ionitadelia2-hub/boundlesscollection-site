@@ -22,6 +22,7 @@
     .btn-submit { background: #111; color: white; border: none; padding: 15px; font-size: 1.05rem; font-weight: 600; cursor: pointer; border-radius: 4px; width: 100%; transition: background 0.2s; letter-spacing: 0.5px; }
     .btn-submit:hover { background: #333; }
     .legal-notice { font-size: 0.85rem; color: #555; margin-top: 20px; background: #fffdf6; padding: 14px; border-left: 4px solid #111; line-height: 1.5; border-radius: 0 4px 4px 0; }
+    .empty-cart-message { text-align: center; padding: 20px; font-size: 1.1rem; color: #666; }
   </style>
 </head>
 <body>
@@ -38,6 +39,10 @@
         
         <hr style="border: 0; border-top: 1px dashed #ddd; margin: 15px 0;">
         <strong style="font-size: 1.1rem; color: #000;">Total de plată: <span id="checkout-total">0.00</span> RON</strong>
+    </div>
+
+    <div id="empty-cart-alert" class="empty-cart-message" style="display: none;">
+        Coșul tău este gol. <a href="/" style="color: #111; font-weight: 600;">Click aici pentru a continua cumpărăturile.</a>
     </div>
 
     <form action="https://formspree.io/f/mzdwblkp" method="POST" id="checkout-form">
@@ -61,13 +66,16 @@
             <label for="address">Adresă completă de livrare *</label>
             <textarea id="address" name="Adresa de Livrare" rows="3" placeholder="Localitate, județ, stradă, număr, bloc, cod postal..." required></textarea>
         </div>
+        
         <div class="form-group">
-            <label for="customization">Detalii text și personalizare (Nume, dată, text) *</label>
-            <textarea id="customization" name="Detalii Personalizare" rows="4" placeholder="Ex: Text invitație: Mădălina & Iulian, 20.06.2026." ></textarea>
+            <label for="customization">Detalii text și personalizare (Opțional)</label>
+            <textarea id="customization" name="Detalii Personalizare" rows="4" placeholder="Ex: Text invitație: Mădălina & Iulian, 20.06.2026. (Dacă doriți personalizare, puteți lăsa detaliile aici sau ne puteți trimite ulterior pe WhatsApp/Email)"></textarea>
         </div>
+        
         <div class="form-group">
             <label for="payment">Modalitate de plată *</label>
             <select id="payment" name="Modalitate Plata" required>
+                <option value="Plata la Livrare (Ramburs)">Plată la livrare (Ramburs)</option>
                 <option value="Ordin de Plata">Transfer bancar (Ordin de plată avans)</option>
             </select>
         </div>
@@ -89,12 +97,18 @@ produsul a fost livrat greșit față de comanda confirmată. Prin finalizarea c
   <script>
     document.addEventListener("DOMContentLoaded", () => {
         const cart = getCart();
-        if(cart.length === 0) { window.location.href = "/cart.html"; return; }
+        
+        // MODIFICARE: Nu mai facem redirect agresiv care sperie Googlebot-ul, ci doar ascundem formularul și afișăm un mesaj prietenos
+        if(cart.length === 0) { 
+            document.getElementById("checkout-form").style.display = "none";
+            document.getElementById("empty-cart-alert").style.display = "block";
+            return; 
+        }
 
         let subtotal = 0; 
         let summaryText = ""; 
         let html = "";
-        const taxaTransport = 25.00; // Definim aceeasi taxa fixa de transport
+        const taxaTransport = 25.00; 
 
         cart.forEach(item => {
             const itemSubtotal = item.price * item.quantity;
@@ -103,20 +117,16 @@ produsul a fost livrat greșit față de comanda confirmată. Prin finalizarea c
             summaryText += `[ID: ${item.id}] ${item.title} x${item.quantity}; `;
         });
 
-        // Calculăm totalul adăugând transportul
         const totalFinal = subtotal + taxaTransport;
 
-        // Afișăm detaliat pe ecran în caseta gri de sumar
         document.getElementById("checkout-items").innerHTML = html;
         document.getElementById("checkout-subtotal-row").innerHTML = `Produse: <strong>${subtotal.toFixed(2)} RON</strong>`;
         document.getElementById("checkout-shipping-row").innerHTML = `Transport (max. 5kg): <strong>${taxaTransport.toFixed(2)} RON</strong>`;
         document.getElementById("checkout-total").textContent = totalFinal.toFixed(2);
         
-        // Salvăm datele corecte în câmpurile ascunse pentru Formspree
         document.getElementById("hidden-cart-data").value = summaryText;
         document.getElementById("hidden-total-data").value = totalFinal.toFixed(2) + " RON";
 
-        // Golește coșul după plasarea cu succes a comenzii
         document.getElementById("checkout-form").addEventListener("submit", () => {
             setTimeout(() => { localStorage.removeItem("boundless_cart"); }, 400);
         });
