@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex,follow" />
+  <meta name="robots" content="index,follow">
   <title>Finalizare Comandă • Boundless Collection</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +46,7 @@
     </div>
 
     <form action="https://formspree.io/f/mzdwblkp" method="POST" id="checkout-form">
+        <input type="hidden" name="_next" value="https://boundlesscollection.ro/multumesc.html">
         <input type="hidden" name="Produse Comandate" id="hidden-cart-data">
         <input type="hidden" name="Taxa Transport" id="hidden-shipping-data" value="25.00 RON">
         <input type="hidden" name="Total Plata (cu Transport)" id="hidden-total-data">
