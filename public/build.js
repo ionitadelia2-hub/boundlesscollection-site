@@ -123,6 +123,7 @@ const CATEGORY_MAP = {
   "marturii botez": { name: "Mărturii botez", url: "/marturii-botez.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
   "toppere tort": { name: "Toppere tort", url: "/toppere-tort.html" },
+  "accesorii pregatiri nunta": { name: "Accesorii pregătiri nuntă", url: "/accesorii-pregatiri-nunta.html" },
   "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
   "paste": { name: "Colecția de Paște", url: "/paste.html" },
   "martisor": { name: "Colecția de Mărțișor", url: "/martisor.html" },
@@ -164,6 +165,7 @@ const PRODUCTS_DROPDOWN_HTML = `
     <div class="menu-title">Decor & accesorii</div>
     <a role="menuitem" href="/stickere-oglinda.html">Stickere oglinda</a>
     <a role="menuitem" href="/toppere-tort.html">Toppere tort</a>
+    <a role="menuitem" href="/accesorii-pregatiri-nunta.html">Accesorii pregătiri nuntă</a>
   </li>
 
   <li class="menu-group" role="none">
