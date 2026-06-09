@@ -2982,7 +2982,7 @@
     "product_type": "plicuri",
     "desc": "Completează decorul meselor de nuntă cu un plic de dar elegant și practic, ce îndeplinește și rolul de place card (card de masă). Acest model deosebit este realizat manual din carton premium rezistent și este decorat cu motive superbe în stil greenery în nuanțe de verde smarald și accente grafice aurii fine. Plicul este complet personalizabil cu numele mirilor, data evenimentului, un mesaj de mulțumire pentru invitați și spațiu special pentru scrierea numelui familiei. Caracteristici: Material: Carton premium calitativ de 250g | Dimensiuni: 10.5 x 21 (cm) | Personalizare inclusă | Tip închidere: Clapetă sigură cu deschidere ușoară.",
     "images": [
-      "/images/plicuri/plic-dar-nunta-verde-smarald-auriu-personalizat.jpg"
+      "/images/plicuri/plic-dar-nunta-verde-smarald-auriu-personalizat.jpeg"
     ],
     "tags": [
       "plic dar nunta",
@@ -3081,13 +3081,13 @@
   },
   {
     "id": "plic-de-dar-ingeras-baietel-001",
-    "title": "Plic botez baietel Ingeras",
+    "title": "Plic de Dar Botez Băiețel Îngeraș",
     "price": 2.5,
     "category": "plicuri",
     "product_type": "plicuri",
-    "desc": "Plic elegant pentru botez baietel cu ilustratie delicata de ingeras, realizat pe carton premium cu textura fina. Ideal ca plic de dar sau card de masa pentru botez, personalizabil cu numele copilului si mesaj special.",
+    "desc": "Completează decorul meselor de botez cu un plic de dar elegant și practic, ce îndeplinește și rolul de place card (card de masă). Acest model deosebit este realizat manual din carton premium rezistent și este decorat cu o ilustrație delicată cu un îngeraș, perfectă pentru un eveniment pur și rafinat. Plicul este complet personalizabil cu numele copilului, data evenimentului, un mesaj de mulțumire pentru invitați și spațiu special pentru scrierea numelui familiei. Caracteristici: Material: Carton premium calitativ de 250g | Dimensiuni: 10.5 x 21 (cm) | Personalizare inclusă | Tip închidere: Clapetă sigură cu deschidere ușoară.",
     "images": [
-      "/images/plicuri/plic-botez-ingeras-baietel.jpg"
+      "/images/plicuri/plic-dar-botez-ingeras-baietel-personalizat.jpg"
     ],
     "tags": [
       "place card botez baietel",
@@ -3096,10 +3096,11 @@
       "plic bani botez baiat",
       "decor masa botez baietel",
       "tema ingeras botez",
-      "card masa botez baietel"
+      "card masa botez baietel",
+      "boundless collection plicuri"
     ],
-    "slug": "plic-botez-baietel-ingeras-plic-de-",
-    "google_product_category": "Home & Garden > Decor > Party Supplies",
+    "slug": "plic-de-dar-botez-baietel-ingeras-plic-de-",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Party Favors",
     "material": "",
     "mpn": ""
   },
