@@ -123,6 +123,7 @@ const CATEGORY_MAP = {
   "marturii botez": { name: "Mărturii botez", url: "/marturii-botez.html" },
   "articole petreceri copii": { name: "Petreceri Copii 🎈", url: "/articole-petreceri-copii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
+  "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
   "toppere tort": { name: "Toppere tort", url: "/toppere-tort.html" },
   "accesorii pregatiri nunta": { name: "Accesorii pregătiri nuntă", url: "/accesorii-pregatiri-nunta.html" },
   "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
@@ -165,6 +166,7 @@ const PRODUCTS_DROPDOWN_HTML = `
   <li class="menu-group" role="none">
     <div class="menu-title">Decor & accesorii</div>
     <a role="menuitem" href="/stickere-oglinda.html">Stickere oglinda</a>
+    <a role="menuitem" href="/panouri-intampinare-sevalete.html">Panouri intampinare & Șevalete</a>
     <a role="menuitem" href="/toppere-tort.html">Toppere tort</a>
     <a role="menuitem" href="/accesorii-pregatiri-nunta.html">Accesorii pregătiri nuntă</a>
   </li>
@@ -466,6 +468,7 @@ function pageTemplate(prod) {
       else if(ref.includes("/seturi")) back="/seturi.html";
       else if(ref.includes("/articole-petreceri-copii")) back="/articole-petreceri-copii.html";
       else if(ref.includes("/stickere-oglinda")) back="/stickere-oglinda.html";
+      else if(ref.includes("/panouri-intampinare-sevalete")) back="/panouri-intampinare-sevalete.html";
       else if(ref.includes("/toppere-tort")) back="/toppere-tort.html";
       else if(ref.includes("/accesorii-pregatiri-nunta")) back="/accesorii-pregatiri-nunta.html";
       else if(ref.includes("/craciun")) back="/craciun.html";
