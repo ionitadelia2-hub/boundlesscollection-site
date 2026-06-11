@@ -1,5 +1,55 @@
 [
   {
+    "id": "invitatie-nunta-greenery-chenar-auriu-002",
+    "title": "Invitație de Nuntă Greenery cu Chenar Auriu",
+    "price": 4.5,
+    "category": "invitatii-nunta",
+    "product_type": "invitatii-nunta",
+    "desc": "Anunță-ți povestea de dragoste cu o invitație de nuntă elegantă și rafinată, realizată într-un stil botanic deosebit. Acest model deosebit este realizat manual din carton premium rezistent și este decorat cu frunze delicate în nuanțe proaspete de verde și un chenar oval auriu fin, fiind perfect pentru evenimente elegante, naturale sau în stil greenery. Invitația este complet personalizabilă cu textul vostru preferat, numele mirilor, părinților, nașilor, detaliile ceremoniei și datele de confirmare. Caracteristici: Material: Carton premium calitativ de 250g | Dimensiuni: 13 x 18 (cm) | Personalizare text inclusă | Design botanic cu accente aurii.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-greenery-chenar-auriu-personalizata.jpeg"
+    ],
+    "tags": [
+      "invitatii nunta",
+      "invitatie nunta eleganta",
+      "invitatii greenery",
+      "invitatie frunze verzi",
+      "invitatii nunti elegante",
+      "invitatie nunta chenar auriu",
+      "papetarie nunta botanica",
+      "boundless collection invitatii"
+    ],
+    "slug": "invitatie-de-nunta-greenery-cu-chenar-auriu-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Wedding Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "invitatie-nunta-boho-floral-crem-001",
+    "title": "Invitație de Nuntă Boho cu Flori în Nuanțe Calde",
+    "price": 4.5,
+    "category": "invitatii-nunta",
+    "product_type": "invitatii-nunta",
+    "desc": "Anunță-ți povestea de dragoste cu o invitație de nuntă elegantă și rafinată, realizată în stil boho-chic cu motive florale deosebite. Acest model deosebit este realizat manual din carton premium rezistent și este decorat cu ilustrații delicate în nuanțe calde de crem, teracotă și bej, fiind perfect pentru evenimente romantice și pline de stil. Invitația este complet personalizabilă cu textul vostru preferat, numele mirilor, părinților, nașilor, detaliile ceremoniei și datele de confirmare. Caracteristici: Material: Carton premium calitativ de 250g | Dimensiuni: 13 x 18 (cm) | Personalizare text inclusă | Design floral atemporal.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-boho-floral-crem-personalizata.jpeg"
+    ],
+    "tags": [
+      "invitatii nunta",
+      "invitatie nunta eleganta",
+      "invitatii nunti boho",
+      "invitatie flori crem",
+      "invitatii teracota",
+      "invitatie nunta personalizata",
+      "papetarie nunta eleganta",
+      "boundless collection invitatii"
+    ],
+    "slug": "invitatie-de-nunta-boho-cu-flori-in-nuante-calde-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Wedding Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "invitatie-botez-premium-seline-010",
     "title": "Invitație Botez Premium cu Norisor și Panglică - Model Seline",
     "price": 10.5,
