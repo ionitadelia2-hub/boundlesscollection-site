@@ -113,6 +113,8 @@ const CATEGORY_MAP = {
   "invitatii botez": { name: "Invitații botez", url: "/invitatii-botez.html" },
   "invitatii digitale": { name: "Invitații", url: "/invitatii-digitale.html" },
   "plicuri": { name: "Plicuri de dar", url: "/plicuri.html" },
+  "plicuri nunta": { name: "Plicuri de dar nuntă", url: "/plicuri-nunta.html" },
+  "plicuri botez": { name: "Plicuri de dar botez", url: "/plicuri-botez.html" },
   "cutie de dar": { name: "Cutii de dar", url: "/cutie-de-dar.html" },
   "meniuri": { name: "Meniuri", url: "/meniuri.html" },
   "evantaie": { name: "Evantaie", url: "/evantaie.html" },
@@ -144,6 +146,8 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/invitatii-botez.html">Invitatii botez</a>
     <a role="menuitem" href="/invitatii-digitale.html">Invitatii digitale</a>
     <a role="menuitem" href="/plicuri.html">Plicuri de dar</a>
+    <a role="menuitem" href="/plicuri-nunta.html">Plicuri de dar nuntă</a>
+    <a role="menuitem" href="/plicuri-botez.html">Plicuri de dar botez</a>
     <a role="menuitem" href="/cutie-de-dar.html">Cutii de dar</a>
     <a role="menuitem" href="/meniuri.html">Meniuri</a>
     <a role="menuitem" href="/evantaie.html">Evantaie</a>
@@ -460,6 +464,8 @@ function pageTemplate(prod) {
       else if(ref.includes("/invitatii")) back="/invitatii.html";
       else if(ref.includes("/invitatii-digitale")) back="/invitatii-digitale.html";
       else if(ref.includes("/plicuri")) back="/plicuri.html";
+      else if(ref.includes("/plicuri-nunta")) back="/plicuri-nunta.html";
+      else if(ref.includes("/plicuri-botez")) back="/plicuri-botez.html";
       else if(ref.includes("/cutie-de-dar")) back="/cutie-de-dar.html";
       else if(ref.includes("/meniuri")) back="/meniuri.html";
       else if(ref.includes("/evantaie")) back="/evantaie.html";
