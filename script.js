@@ -54,6 +54,7 @@
   // ===== Grupuri categorii =====
 const INVITATII_GROUP = ['invitatii', 'invitatii nunta', 'invitatii botez'];
 const MARTURII_GROUP = ['marturii', 'marturii nunta', 'marturii botez'];
+const PLICURI_GROUP = ['plicuri', 'plicuri nunta', 'plicuri botez'];
 
 const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
   if (!filterKey || filterKey === 'toate') return true;
@@ -79,6 +80,16 @@ const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
       tagsKey.includes('marturii nunta') ||
       tagsKey.includes('marturie botez') ||
       tagsKey.includes('marturii botez')
+    );
+  }
+
+  // Pagina / butonul "Plicuri" trebuie sa includa si nunta + botez (REVOLVAREA PROBLEMEI)
+  if (filterKey === 'plicuri') {
+    return (
+      PLICURI_GROUP.includes(productKey) ||
+      tagsKey.includes('plicuri') ||
+      tagsKey.includes('plicuri nunta') ||
+      tagsKey.includes('plicuri botez')
     );
   }
 
