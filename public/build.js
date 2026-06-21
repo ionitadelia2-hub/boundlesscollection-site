@@ -126,7 +126,7 @@ const CATEGORY_MAP = {
   "articole petreceri copii": { name: "Petreceri Copii 🎈", url: "/articole-petreceri-copii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
   "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
-  "toppere tort": { name: "Toppere tort", url: "/toppere-tort.html" },
+  "toppere tort": { name: "Toppere tort & cupcakes", url: "/toppere-tort.html" },
   "accesorii pregatiri nunta": { name: "Accesorii pregătiri nuntă", url: "/accesorii-pregatiri-nunta.html" },
   "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
   "paste": { name: "Colecția de Paște", url: "/paste.html" },
