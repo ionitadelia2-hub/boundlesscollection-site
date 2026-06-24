@@ -123,6 +123,12 @@ const CATEGORY_MAP = {
   "marturii": { name: "Mărturii", url: "/marturii.html" },
   "marturii nunta": { name: "Mărturii nuntă", url: "/marturii-nunta.html" },
   "marturii botez": { name: "Mărturii botez", url: "/marturii-botez.html" },
+  "tricouri personalizate": { name: "Tricouri personalizate", url: "/tricouri-personalizate.html" },
+  "tricouri femei": { name: "Tricouri damă personalizate", url: "/tricouri-femei.html" },
+  "tricouri barbati": { name: "Tricouri bărbați personalizate", url: "/tricouri-barbati.html" },
+  "body bebelusi": { name: "Body-uri & hăinuțe bebe", url: "/body-bebelusi.html" },
+  "tricouri copii adolescenti": { name: "Tricouri copii & adolescenți", url: "/tricouri-copii-adolescenti.html" },
+  "tricouri scolare": { name: "Colecția școlară", url: "/tricouri-scolare.html" },
   "articole petreceri copii": { name: "Petreceri Copii 🎈", url: "/articole-petreceri-copii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
   "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
@@ -160,6 +166,16 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/marturii.html">Marturii</a>
     <a role="menuitem" href="/marturii-nunta.html">Marturii nuntă</a>
     <a role="menuitem" href="/marturii-botez.html">Marturii botez</a>
+  </li>
+
+  <li class="menu-group" role="none">
+    <div class="menu-title">Tricouri personalizate</div>
+    <a role="menuitem" href="/tricouri-personalizate.html">Toate produsele</a>
+    <a role="menuitem" href="/tricouri-femei.html">Tricouri damă personalizate</a>
+    <a role="menuitem" href="/tricouri-barbati.html">Tricouri bărbați personalizate</a>
+    <a role="menuitem" href="/body-bebelusi.html">Body-uri & hăinuțe bebe</a>
+    <a role="menuitem" href="/tricouri-copii-adolescenti.html" style="font-weight: 600;">Tricouri copii & adolescenți</a>
+    <a role="menuitem" href="/tricouri-scolare.html" style="font-weight: 600;">Colecția școlară</a>
   </li>
 
   <li class="menu-group" role="none">
@@ -466,6 +482,12 @@ function pageTemplate(prod) {
       else if(ref.includes("/plicuri")) back="/plicuri.html";
       else if(ref.includes("/plicuri-nunta")) back="/plicuri-nunta.html";
       else if(ref.includes("/plicuri-botez")) back="/plicuri-botez.html";
+      else if(ref.includes("/tricouri-personalizate")) back="/tricouri-personalizate.html";
+      else if(ref.includes("/tricouri-femei")) back="/tricouri-femei.html";
+      else if(ref.includes("/tricouri-barbati")) back="/tricouri-barbati.html";
+      else if(ref.includes("/body-bebelusi")) back="/body-bebelusi.html";
+      else if(ref.includes("/tricouri-copii-adolescenti")) back="/tricouri-copii-adolescenti.html";
+      else if(ref.includes("/tricouri-scolare")) back="/tricouri-scolare.html";
       else if(ref.includes("/cutie-de-dar")) back="/cutie-de-dar.html";
       else if(ref.includes("/meniuri")) back="/meniuri.html";
       else if(ref.includes("/evantaie")) back="/evantaie.html";
