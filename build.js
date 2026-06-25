@@ -178,13 +178,10 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/tricouri-scolare.html" style="font-weight: 600;">Colecția școlară</a>
   </li>
 
-  <li class="menu-group" role="none">
-    <div class="menu-title">Aranjamente florale</div>
-    <a role="menuitem" href="/aranjamente-florale.html">Aranjamente florale</a>
-  </li>
 
   <li class="menu-group" role="none">
     <div class="menu-title">Decor & accesorii</div>
+    <a role="menuitem" href="/aranjamente-florale.html">Aranjamente florale</a>
     <a role="menuitem" href="/stickere-oglinda.html">Stickere oglinda</a>
     <a role="menuitem" href="/panouri-intampinare-sevalete.html">Panouri intampinare & Șevalete</a>
     <a role="menuitem" href="/toppere-tort.html">Toppere tort</a>

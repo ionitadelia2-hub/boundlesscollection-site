@@ -93,6 +93,16 @@ const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
     );
   }
 
+  // Pagina / butonul "Tricouri scolare" trebuie sa includa si nunta + botez (REVOLVAREA PROBLEMEI)
+  if (filterKey === 'tricouri scolare') {
+    return (
+      TRICOURI_GROUP.includes(productKey) ||
+      tagsKey.includes('tricouri scolare') ||
+      tagsKey.includes('tricouri elevi') ||
+      tagsKey.includes('tricouri profesori')
+    );
+  }
+
   return productKey === filterKey || tagsKey.includes(filterKey);
 };
 
