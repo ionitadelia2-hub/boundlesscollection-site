@@ -7531,6 +7531,31 @@
     "mpn": ""
   },
   {
+    "id": "tricou-copii-amuzant-capybara-capy",
+    "title": "Tricou Copii și Adolescenți Capybara - Capy to Be Here",
+    "price": 85,
+    "category": "tricouri copii adolescenti",
+    "product_type": "tricouri copii adolescenti",
+    "desc": "Intră în trend cu cel mai cool tricou al momentului! Tricoul pentru copii și adolescenți este personalizat cu simpatica mascotă Capybara purtând ochelari de soare și mesajul haios „Capy to Be Here”. Realizat din bumbac 100% de calitate superioară, acest tricou este extrem de confortabil, moale și perfect pentru școală, ieșiri în parc sau activități zilnice. Este cadoul ideal pentru fanii capibara, oferind un look modern și plin de personalitate. Caracteristici: Material: 100% Bumbac premium | Imprimeu: Rezistent la spălări multiple, culori vii | Croială: Modernă, potrivită pentru băieți și fete (unisex) | Tematică: Capybara meme, haine cool copii.",
+    "images": [
+      "/images/tricouri-copii/tricou-copii-amuzant-capybara-capy.jpeg"
+    ],
+    "tags": [
+      "tricou capybara copii",
+      "tricouri capibara",
+      "haine cool adolescenti",
+      "tricou amuzant copii",
+      "tricouri bumbac scoala",
+      "tricou capy to be here",
+      "cadou copii capybara",
+      "boundless collection haine"
+    ],
+    "slug": "tricou-copii-si-adolescenti-capybara-capy-to-be-here-tricou-c",
+    "google_product_category": "Apparel & Accessories > Clothing > Shirts & Tops",
+    "material": "",
+    "mpn": ""
+  },
+  {
     "id": "body-bebelusi-amuzant-ordering-dinner",
     "title": "Body Bebelusi Amuzant - I'm Not Crying I'm Ordering Dinner",
     "price": 85,
@@ -7760,6 +7785,56 @@
     ],
     "slug": "body-bebelusi-unisex-new-to-the-crew-cu-talpite-body-beb",
     "google_product_category": "Apparel & Accessories > Clothing > Baby & Toddler Clothing > Baby One-Pieces",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "body-bebelusi-retro-little-love-bug",
+    "title": "Body Bebelusi Groovy - Little Love Bug cu Buburuză",
+    "price": 85,
+    "category": "body bebelusi",
+    "product_type": "body bebelusi",
+    "desc": "Adu un strop de culoare și veselie în garderoba micuțului tău cu acest body pentru bebeluși din bumbac 100%, personalizat cu designul retro-chic „Little Love Bug”. Ilustrația colorată în stil groovy, completată de o buburuză simpatică și steluțe, face ca acest body să fie o alegere ideală pentru ședințe foto deosebite, plimbări zilnice sau un cadou memorabil de baby shower. Materialul premium din bumbac este extrem de fin, respirabil și confortabil, protejând pielea sensibilă a bebelușului, iar capsele practice de la bază permit o îmbrăcare rapidă. Caracteristici: Material: 100% Bumbac premium | Stil: Retro groovy colorat | Închidere: Capse metalice la bază | Destinație: Haine vesele bebeluși, cadou deosebit nou-născut.",
+    "images": [
+      "/images/body-bebe/body-bebelusi-retro-little-love-bug.jpeg"
+    ],
+    "tags": [
+      "body bebelusi amuzant",
+      "body haios bebe",
+      "body little love bug",
+      "haine retro bebelusi",
+      "body buburuza",
+      "body bumbac colorat",
+      "cadou baby shower fetita baiat",
+      "boundless collection haine"
+    ],
+    "slug": "body-bebelusi-groovy-little-love-bug-cu-buburuza-body-beb",
+    "google_product_category": "Apparel & Accessories > Clothing > Baby & Toddler Clothing > Baby One-Pieces",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "tricou-aniversar-copii-capybara-bday",
+    "title": "Tricou Aniversar Copii Capybara - Cappy B-Day To Me",
+    "price": 90,
+    "category": "tricouri aniversare",
+    "product_type": "tricouri aniversare",
+    "desc": "Sărbătorește ziua de naștere în cel mai cool mod posibil cu tricoul aniversar pentru copii personalizat cu celebra mascotă Capybara! Cu un design festiv, colorat și mesaje vesele precum „Cappy B-Day To Me!”, acest tricou este piesa vestimentară ideală pentru petrecerea de zi de naștere, ședința foto aniversară sau un cadou surpriză deosebit pentru fanii capibara. Realizat din bumbac 100% de calitate premium, materialul este extrem de moale, confortabil și lasă pielea să respire pe parcursul întregii zile pline de joacă. Caracteristici: Material: 100% Bumbac premium | Tema: Tricou aniversare copii, petrecere Capybara | Croială: Modernă, potrivită pentru băieți și fete (unisex) | Imprimeu: Culori vibrante, rezistente la spălări multiple.",
+    "images": [
+      "/images/tricouri-aniversare/tricou-aniversar-copii-capybara-bday.jpeg"
+    ],
+    "tags": [
+      "tricou aniversar copii",
+      "tricou capybara",
+      "tricouri capibara",
+      "tricou aniversare copii",
+      "haine aniversare copii",
+      "tricou cappy bday to me",
+      "cadou zi de nastere copii",
+      "boundless collection haine"
+    ],
+    "slug": "tricou-aniversar-copii-capybara-cappy-b-day-to-me-tricou-a",
+    "google_product_category": "Apparel & Accessories > Clothing > Shirts & Tops",
     "material": "",
     "mpn": ""
   }
