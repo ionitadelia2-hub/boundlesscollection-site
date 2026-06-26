@@ -128,7 +128,10 @@ const CATEGORY_MAP = {
   "tricouri barbati": { name: "Tricouri bărbați personalizate", url: "/tricouri-barbati.html" },
   "body bebelusi": { name: "Body-uri & hăinuțe bebe", url: "/body-bebelusi.html" },
   "tricouri copii adolescenti": { name: "Tricouri copii & adolescenți", url: "/tricouri-copii-adolescenti.html" },
+  "tricouri aniversare": { name: "Tricouri aniversare", url: "/tricouri-aniversare.html" },
   "tricouri scolare": { name: "Colecția școlară", url: "/tricouri-scolare.html" },
+  "tricouri scolare profesori": { name: "Pentru Profesori / Învățători", url: "/tricouri-scolare-profesori.html" },
+  "tricouri scolare elevi": { name: "Pentru Elevi / Absolvenți", url: "/tricouri-scolare-elevi.html" },
   "articole petreceri copii": { name: "Petreceri Copii 🎈", url: "/articole-petreceri-copii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
   "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
@@ -175,7 +178,10 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/tricouri-barbati.html">Tricouri bărbați personalizate</a>
     <a role="menuitem" href="/body-bebelusi.html">Body-uri & hăinuțe bebe</a>
     <a role="menuitem" href="/tricouri-copii-adolescenti.html" style="font-weight: 600;">Tricouri copii & adolescenți</a>
+    <a role="menuitem" href="/tricouri-aniversare.html" style="font-weight: 600;">Tricouri aniversare</a>
     <a role="menuitem" href="/tricouri-scolare.html" style="font-weight: 600;">Colecția școlară</a>
+    <a role="menuitem" href="/tricouri-scolare-profesori.html" style="font-weight: 600;">Pentru Profesori / Învățători</a>
+    <a role="menuitem" href="/tricouri-scolare-elevi.html" style="font-weight: 600;">Pentru Elevi / Absolvenți</a>
   </li>
 
 
@@ -471,19 +477,24 @@ function pageTemplate(prod) {
     document.getElementById('year').textContent = new Date().getFullYear();
     (function(){
       var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
-      if(ref.includes("/marturii")) back="/marturii.html";
+      if(ref.includes("/marturii-nunta")) back="/marturii-nunta.html";
+      else if(ref.includes("/marturii-botez")) back="/marturii-botez.html";
+      else if(ref.includes("/marturii")) back="/marturii.html";
       else if(ref.includes("/invitatii-nunta")) back="/invitatii-nunta.html";
       else if(ref.includes("/invitatii-botez")) back="/invitatii-botez.html";
       else if(ref.includes("/invitatii")) back="/invitatii.html";
-      else if(ref.includes("/invitatii-digitale")) back="/invitatii-digitale.html";
-      else if(ref.includes("/plicuri")) back="/plicuri.html";
+      else if(ref.includes("/invitatii-digitale")) back="/invitatii-digitale.html";      
       else if(ref.includes("/plicuri-nunta")) back="/plicuri-nunta.html";
       else if(ref.includes("/plicuri-botez")) back="/plicuri-botez.html";
+      else if(ref.includes("/plicuri")) back="/plicuri.html";
       else if(ref.includes("/tricouri-personalizate")) back="/tricouri-personalizate.html";
       else if(ref.includes("/tricouri-femei")) back="/tricouri-femei.html";
       else if(ref.includes("/tricouri-barbati")) back="/tricouri-barbati.html";
       else if(ref.includes("/body-bebelusi")) back="/body-bebelusi.html";
       else if(ref.includes("/tricouri-copii-adolescenti")) back="/tricouri-copii-adolescenti.html";
+      else if(ref.includes("/tricouri-aniversare")) back="/tricouri-aniversare.html";
+      else if(ref.includes("/tricouri-scolare-profesori")) back="/tricouri-scolare-profesori.html";
+      else if(ref.includes("/tricouri-scolare-elevi")) back="/tricouri-scolare-elevi.html";
       else if(ref.includes("/tricouri-scolare")) back="/tricouri-scolare.html";
       else if(ref.includes("/cutie-de-dar")) back="/cutie-de-dar.html";
       else if(ref.includes("/meniuri")) back="/meniuri.html";
