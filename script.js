@@ -55,6 +55,8 @@
 const INVITATII_GROUP = ['invitatii', 'invitatii nunta', 'invitatii botez'];
 const MARTURII_GROUP = ['marturii', 'marturii nunta', 'marturii botez'];
 const PLICURI_GROUP = ['plicuri', 'plicuri nunta', 'plicuri botez'];
+const TRICOURI_GROUP = ['tricouri femei', 'tricouri barbati', 'body bebelusi', 'tricouri copii adolescenti', 'tricouri scolare', 'tricouri elevi', 'tricouri profesori', 'tricouri aniversare'];
+const TRICOURI_SCOLARE_GROUP = ['tricouri scolare', 'tricouri elevi', 'tricouri profesori'];
 
 const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
   if (!filterKey || filterKey === 'toate') return true;
@@ -93,15 +95,21 @@ const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
     );
   }
 
-  // Pagina / butonul "Tricouri scolare" trebuie sa includa si nunta + botez (REVOLVAREA PROBLEMEI)
-  if (filterKey === 'tricouri scolare') {
-    return (
-      TRICOURI_GROUP.includes(productKey) ||
-      tagsKey.includes('tricouri scolare') ||
-      tagsKey.includes('tricouri elevi') ||
-      tagsKey.includes('tricouri profesori')
-    );
-  }
+  // Pagina "Toate textilele"
+if (filterKey === 'tricouri' || filterKey === 'tricouri personalizate') {
+  return (
+    TRICOURI_GROUP.includes(productKey) ||
+    tagsKey.some(t => TRICOURI_GROUP.includes(t))
+  );
+}
+
+// Pagina "Colecția școlară"
+if (filterKey === 'tricouri scolare') {
+  return (
+    TRICOURI_SCOLARE_GROUP.includes(productKey) ||
+    tagsKey.some(t => TRICOURI_SCOLARE_GROUP.includes(t))
+  );
+}
 
   return productKey === filterKey || tagsKey.includes(filterKey);
 };
