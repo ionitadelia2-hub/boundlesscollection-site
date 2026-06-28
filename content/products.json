@@ -4083,7 +4083,7 @@
   {
     "id": "meniu-lamaie-mediteranean-010",
     "title": "Meniu Nuntă Lămâie Mediteranean Personalizat",
-    "price": 2.5,
+    "price": 4,
     "category": "meniuri",
     "product_type": "meniuri",
     "desc": "Inspirat de farmecul litoralului mediteranean, acest meniu de nuntă personalizat completează perfect decorurile luminoase și elegante. Ilustrațiile cu lămâi și motive florale albastre creează o atmosferă proaspătă și rafinată, fiind ideale pentru nunți de vară, garden party-uri și evenimente organizate în aer liber. Meniul poate fi personalizat cu preparatele servite, numele mirilor, data evenimentului și alte informații specifice, oferind invitaților o prezentare premium. Caracteristici: Material: Carton premium calitativ de 300g | Dimensiuni: 9.9 × 21 cm (format slim) | Personalizare inclusă | Design mediteranean cu lămâi și motive florale | Face parte dintr-o colecție completă de papetărie personalizată Boundless Collection.",
@@ -4108,7 +4108,7 @@
   {
     "id": "meniu-botez-ursulet-albastru-011",
     "title": "Meniu Botez Ursuleț Albastru Personalizat",
-    "price": 3.5,
+    "price": 7,
     "category": "meniuri",
     "product_type": "meniuri",
     "desc": "Completează decorul meselor festive cu un meniu de botez personalizat, decorat cu un ursuleț simpatic și baloane în nuanțe delicate de albastru pastel. Acest model este alegerea ideală pentru botezul unui băiețel, contribuind la crearea unei atmosfere calde, elegante și pline de gingășie. Meniul poate fi personalizat cu preparatele servite, numele copilului, data evenimentului și alte informații importante, integrându-se perfect în întreaga colecție de papetărie. Caracteristici: Material: Carton premium calitativ de 300g | Dimensiuni: 9.9 × 21 cm (format slim) | Personalizare inclusă | Design cu ursuleț și baloane bleu | Poate fi realizat în aceeași colecție cu invitațiile, plicurile de dar, numerele de masă și celelalte produse personalizate Boundless Collection.",
@@ -4133,7 +4133,7 @@
   {
     "id": "meniu-botez-elefant-albastru-012",
     "title": "Meniu Botez Elefănțel Albastru Personalizat",
-    "price": 2.5,
+    "price": 4,
     "category": "meniuri",
     "product_type": "meniuri",
     "desc": "Adaugă un plus de eleganță și veselie decorului meselor festive cu un meniu de botez personalizat, ilustrat cu un elefănțel simpatic în nuanțe de albastru pastel. Designul delicat este potrivit pentru botezul unui băiețel și completează armonios o tematică baby sau safari. Meniul poate fi personalizat cu preparatele servite, numele copilului, data evenimentului și alte informații specifice, oferind invitaților o prezentare elegantă. Caracteristici: Material: Carton premium calitativ de 300g | Dimensiuni: 9.9 × 21 cm (format slim) | Personalizare inclusă | Design cu elefănțel albastru | Completează armonios colecția de invitații, plicuri de dar, numere de masă și celelalte produse personalizate Boundless Collection.",
@@ -4158,7 +4158,7 @@
   {
     "id": "meniu-botez-safari-jungla-013",
     "title": "Meniu Botez Safari Junglă Personalizat A5",
-    "price": 4,
+    "price": 5,
     "category": "meniuri",
     "product_type": "meniuri",
     "desc": "Transformă decorul meselor festive într-o adevărată aventură cu un meniu de botez personalizat în tematică Safari. Ilustrațiile cu animale simpatice și frunze tropicale creează o atmosferă veselă și plină de culoare, fiind alegerea ideală pentru botezul unui băiețel sau pentru petreceri inspirate din lumea junglei. Meniul poate fi personalizat cu preparatele servite, numele copilului, data evenimentului și alte informații importante, completând armonios întreaga colecție de papetărie. Caracteristici: Material: Carton premium calitativ de 300g | Dimensiuni: 14.8 × 21 cm (format A5) | Personalizare inclusă | Design Safari cu animale și frunze tropicale | Poate fi realizat în aceeași colecție cu invitațiile, plicurile de dar, numerele de masă și celelalte produse personalizate Boundless Collection.",
@@ -4226,6 +4226,31 @@
       "boundless collection meniuri"
     ],
     "slug": "meniu-botez-woodland-cu-veverita-personalizat-a4-meniu-bo",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "meniu-nunta-floral-nude-bumbac-015",
+    "title": "Meniu Nuntă Floral Nude Personalizat Slim",
+    "price": 2.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Completează decorul meselor festive cu un meniu de nuntă personalizat, decorat cu ilustrații florale elegante în nuanțe nude și accente fine aurii. Designul minimalist și rafinat este ideal pentru nunți romantice, moderne sau clasice, integrându-se armonios în orice decor de eveniment. Meniul poate fi personalizat cu preparatele servite, numele mirilor, data evenimentului și alte informații importante, oferind invitaților o experiență elegantă încă din momentul în care iau loc la masă. Caracteristici: Material: Carton premium calitativ de 300g | Dimensiuni: 9.9 × 21 cm (format slim) | Personalizare inclusă | Design floral nude cu accente aurii | Poate fi realizat în aceeași colecție cu invitațiile, plicurile de dar, numerele de masă și celelalte produse personalizate Boundless Collection.",
+    "images": [
+      "/images/meniuri/meniu-nunta-floral-nude-bumbac.jpeg"
+    ],
+    "tags": [
+      "meniu nunta personalizat",
+      "meniuri nunta personalizate",
+      "meniu floral nude",
+      "meniu nunta elegant",
+      "meniu slim nunta",
+      "papetarie nunta",
+      "decor masa nunta",
+      "boundless collection meniuri"
+    ],
+    "slug": "meniu-nunta-floral-nude-personalizat-slim-meniu-nu",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
     "material": "",
     "mpn": ""
