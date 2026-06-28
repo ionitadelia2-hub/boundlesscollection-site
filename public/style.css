@@ -1124,3 +1124,19 @@ footer{
   color: #ffffff;
   border-color: #d47a96;
 }
+
+.products .item .muted {
+  display: -webkit-box;
+  line-clamp: 4;           /* proprietatea standard */
+  -webkit-line-clamp: 4;   /* pentru Chrome, Edge, Safari */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.products .item .content {
+  min-height: 210px;
+}
+
+.products .item h3 {
+  min-height: 48px;
+}
