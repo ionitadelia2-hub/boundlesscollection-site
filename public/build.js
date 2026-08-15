@@ -118,8 +118,10 @@ const CATEGORY_MAP = {
   "cutie de dar": { name: "Cutii de dar", url: "/cutie-de-dar.html" },
   "meniuri": { name: "Meniuri", url: "/meniuri.html" },
   "evantaie": { name: "Evantaie", url: "/evantaie.html" },
+  "semne de carte": { name: "Semne de carte", url: "/semne-de-carte.html" },
   "aranjamente-florale": { name: "Aranjamente florale", url: "/aranjamente-florale.html" },
   "seturi": { name: "Seturi", url: "/seturi.html" },
+  "rechizite scolare personalizate": { name: "Rechizite școlare personalizate", url: "/rechizite-scolare-personalizate.html" },
   "marturii": { name: "Mărturii", url: "/marturii.html" },
   "marturii nunta": { name: "Mărturii nuntă", url: "/marturii-nunta.html" },
   "marturii botez": { name: "Mărturii botez", url: "/marturii-botez.html" },
@@ -134,6 +136,7 @@ const CATEGORY_MAP = {
   "tricouri scolare elevi": { name: "Pentru Elevi / Absolvenți", url: "/tricouri-scolare-elevi.html" },
   "articole petreceri copii": { name: "Petreceri Copii 🎈", url: "/articole-petreceri-copii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
+  "odorizante dulap": { name: "Odorizante pentru dulap", url: "/odorizante-dulap.html" },
   "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
   "toppere tort": { name: "Toppere tort & cupcakes", url: "/toppere-tort.html" },
   "accesorii pregatiri nunta": { name: "Accesorii pregătiri nuntă", url: "/accesorii-pregatiri-nunta.html" },
@@ -160,8 +163,10 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/cutie-de-dar.html">Cutii de dar</a>
     <a role="menuitem" href="/meniuri.html">Meniuri</a>
     <a role="menuitem" href="/evantaie.html">Evantaie</a>
+    <a role="menuitem" href="/semne-de-carte.html">Semne de carte</a>
     <a role="menuitem" href="/numere-masa.html">Numere de masa</a>
     <a role="menuitem" href="/seturi.html">Seturi</a>
+    <a role="menuitem" href="/rechizite-scolare-personalizate.html">Rechizite școlare personalizate</a>
   </li>
 
   <li class="menu-group" role="none">
@@ -189,6 +194,7 @@ const PRODUCTS_DROPDOWN_HTML = `
     <div class="menu-title">Decor & accesorii</div>
     <a role="menuitem" href="/aranjamente-florale.html">Aranjamente florale</a>
     <a role="menuitem" href="/stickere-oglinda.html">Stickere oglinda</a>
+    <a role="menuitem" href="/odorizante-dulap.html">Odorizante pentru dulap</a>
     <a role="menuitem" href="/panouri-intampinare-sevalete.html">Panouri intampinare & Șevalete</a>
     <a role="menuitem" href="/toppere-tort.html">Toppere tort</a>
     <a role="menuitem" href="/accesorii-pregatiri-nunta.html">Accesorii pregătiri nuntă</a>
@@ -499,11 +505,14 @@ function pageTemplate(prod) {
       else if(ref.includes("/cutie-de-dar")) back="/cutie-de-dar.html";
       else if(ref.includes("/meniuri")) back="/meniuri.html";
       else if(ref.includes("/evantaie")) back="/evantaie.html";
+      else if(ref.includes("/semne-de-carte")) back="/semne-de-carte.html";
       else if(ref.includes("/numere-masa")) back="/numere-masa.html";
       else if(ref.includes("/aranjamente-florale")) back="/aranjamente-florale.html";
       else if(ref.includes("/seturi")) back="/seturi.html";
+      else if(ref.includes("/rechizite-scolare-personalizate")) back="/rechizite-scolare-personalizate.html";
       else if(ref.includes("/articole-petreceri-copii")) back="/articole-petreceri-copii.html";
       else if(ref.includes("/stickere-oglinda")) back="/stickere-oglinda.html";
+      else if(ref.includes("/odorizante-dulap")) back="/odorizante-dulap.html";
       else if(ref.includes("/panouri-intampinare-sevalete")) back="/panouri-intampinare-sevalete.html";
       else if(ref.includes("/toppere-tort")) back="/toppere-tort.html";
       else if(ref.includes("/accesorii-pregatiri-nunta")) back="/accesorii-pregatiri-nunta.html";

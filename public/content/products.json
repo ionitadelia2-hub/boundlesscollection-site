@@ -8398,5 +8398,39 @@
     "google_product_category": "Apparel & Accessories > Clothing > Shirts & Tops",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "set-scolar-personalizat-sirene-orar-etichete-semne-carte",
+    "title": "Set Școlar Personalizat Sirene - Orar Etichete și Semne de Carte",
+    "price": 70,
+    "category": "rechizite scolare personalizate",
+    "product_type": "rechizite scolare personalizate",
+    "desc": "Set școlar personalizat cu tematică sirene, ideal pentru începutul de an școlar. Include orar colorat, etichete școlare pentru rechizite, autocolante pentru materii și semne de carte cu mesaje motivaționale și elemente educative. Designul este vesel, pastelat și potrivit pentru copii care iubesc universul marin. Etichetele pot fi folosite pentru caiete, cărți, penar, sticlă, caserolă și alte obiecte școlare, iar semnele de carte completează setul cu un accesoriu practic pentru lectură. Personalizare disponibilă cu numele copilului, în funcție de model. Potrivit pentru școală, cadou de început de an școlar sau surpriză pentru un copil pasionat de sirene.",
+    "images": [
+      "/images/rechizite/set-scolar-personalizat-sirene.png"
+    ],
+    "tags": [
+      "set scolar personalizat",
+      "rechizite scolare personalizate",
+      "set rechizite copii",
+      "orar scolar personalizat",
+      "etichete scolare cu nume",
+      "etichete pentru rechizite",
+      "autocolante materii scolare",
+      "semne de carte copii",
+      "semn de carte educativ",
+      "set scoala fete",
+      "rechizite sirene",
+      "set scolar sirene",
+      "back to school",
+      "inceput an scolar",
+      "cadou copil scoala",
+      "cadou fetita scoala",
+      "boundless collection"
+    ],
+    "slug": "set-scolar-personalizat-sirene-orar-etichete-si-semne-de-carte-set-scol",
+    "google_product_category": "Office Supplies > School Supplies",
+    "material": "",
+    "mpn": ""
   }
 ]
