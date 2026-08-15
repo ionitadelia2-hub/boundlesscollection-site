@@ -8533,5 +8533,37 @@
     "google_product_category": "Office Supplies > School Supplies",
     "material": "",
     "mpn": ""
+  },
+  {
+    "id": "caiet-exercitii-tabla-inmultirii",
+    "title": "Caiet de Exerciții + Tabla Înmulțirii pentru Copii",
+    "price": 30,
+    "category": "rechizite scolare personalizate",
+    "product_type": "rechizite scolare personalizate",
+    "desc": "Set educativ pentru copii format din caiet de exerciții și tabla înmulțirii, creat pentru exersarea matematicii într-un mod clar și atractiv. Caietul oferă activități pentru consolidarea operațiilor, iar tabla înmulțirii îi ajută pe elevi să verifice rapid rezultatele și să învețe mai ușor. Potrivit pentru studiu acasă, recapitulare, teme, exerciții suplimentare și activități educative. Un material practic pentru școlari și o idee utilă de cadou educativ pentru copii.",
+    "images": [
+      "/images/rechizite/caiet-exercitii-tabla-inmultirii.png"
+    ],
+    "tags": [
+      "caiet exercitii copii",
+      "caiet exercitii matematica",
+      "tabla inmultirii",
+      "tabla inmultirii copii",
+      "caiet tabla inmultirii",
+      "exercitii tabla inmultirii",
+      "set educativ matematica",
+      "materiale educative copii",
+      "rechizite scolare personalizate",
+      "rechizite copii",
+      "matematica copii",
+      "exercitii matematica copii",
+      "cadou educativ copii",
+      "set scolar educativ",
+      "boundless collection"
+    ],
+    "slug": "caiet-de-exercitii-tabla-inmultirii-pentru-copii-caiet-ex",
+    "google_product_category": "Office Supplies > School Supplies",
+    "material": "",
+    "mpn": ""
   }
 ]
