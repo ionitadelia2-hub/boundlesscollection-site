@@ -218,6 +218,27 @@ const PRODUCTS_DROPDOWN_HTML = `
 </ul>
 `.trim();
 
+// ============================================================
+// Injectează automat meniul Produse în toate paginile statice
+// ============================================================
+function injectProductsMenu(html, filename = "") {
+  const menuRegex =
+    /<ul\s+class=["'][^"']*\bmenu\b[^"']*\bmenu-mega\b[^"']*["'][^>]*>[\s\S]*?<\/ul>/i;
+
+  if (!menuRegex.test(html)) {
+    return html;
+  }
+
+  const updatedHtml = html.replace(
+    menuRegex,
+    PRODUCTS_DROPDOWN_HTML
+  );
+
+  console.log(`✔ Meniu actualizat automat: ${filename}`);
+
+  return updatedHtml;
+}
+
 // ---------------- template pagină produs ----------------
 function pageTemplate(prod) {
   const brand = "Boundless Collection";
@@ -740,14 +761,39 @@ function main() {
   copyFileSync(JSON_OUT, path.join(OUT, "content", "products.json"));
 
   // 3) copiere fișiere statice (din rădăcină => OUT)
-  for (const entry of fs.readdirSync(ROOT)) {
-    if (["node_modules", "public", ".git", ".vercel"].includes(entry)) continue;
-    const s = path.join(ROOT, entry);
-    const st = fs.lstatSync(s);
-    if (st.isFile() && /\.(html|css|js|txt|ico|png|svg|webmanifest|json|xml)$/i.test(entry)) {
-      copyFileSync(s, path.join(OUT, entry));
+// 3) copiere fișiere statice (din rădăcină => OUT)
+// Pentru HTML injectăm automat meniul central de Produse.
+for (const entry of fs.readdirSync(ROOT)) {
+  if (["node_modules", "public", ".git", ".vercel"].includes(entry)) continue;
+
+  const s = path.join(ROOT, entry);
+  const d = path.join(OUT, entry);
+  const st = fs.lstatSync(s);
+
+  if (
+    st.isFile() &&
+    /\.(html|css|js|txt|ico|png|svg|webmanifest|json|xml)$/i.test(entry)
+  ) {
+
+    // HTML -> procesăm meniul înainte să-l punem în /public
+    if (/\.html$/i.test(entry)) {
+      const html = fs.readFileSync(s, "utf8");
+
+      const processedHtml = injectProductsMenu(
+        html,
+        entry
+      );
+
+      ensureDir(path.dirname(d));
+      fs.writeFileSync(d, processedHtml, "utf8");
+    }
+
+    // Restul fișierelor -> copiere normală
+    else {
+      copyFileSync(s, d);
     }
   }
+}
 
   // 4) directoare media/content
   copyDirSync(path.join(ROOT, "images"),  path.join(OUT, "images"));
