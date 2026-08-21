@@ -112,6 +112,8 @@ const CATEGORY_MAP = {
   "invitatii nunta": { name: "Invitații nuntă", url: "/invitatii-nunta.html" },
   "invitatii botez": { name: "Invitații botez", url: "/invitatii-botez.html" },
   "invitatii digitale": { name: "Invitații", url: "/invitatii-digitale.html" },
+  "invitatii digitale nunta": { name: "Invitații digitale nuntă", url: "/invitatii-digitale-nunta.html" },
+  "invitatii digitale botez": { name: "Invitații digitale botez", url: "/invitatii-digitale-botez.html" },
   "plicuri": { name: "Plicuri de dar", url: "/plicuri.html" },
   "plicuri nunta": { name: "Plicuri de dar nuntă", url: "/plicuri-nunta.html" },
   "plicuri botez": { name: "Plicuri de dar botez", url: "/plicuri-botez.html" },
@@ -157,6 +159,8 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/invitatii-nunta.html">Invitatii nunta</a>
     <a role="menuitem" href="/invitatii-botez.html">Invitatii botez</a>
     <a role="menuitem" href="/invitatii-digitale.html">Invitatii digitale</a>
+    <a role="menuitem" href="/invitatii-digitale-nunta.html">Invitații digitale nuntă</a>
+    <a role="menuitem" href="/invitatii-digitale-botez.html">Invitații digitale botez</a>
     <a role="menuitem" href="/plicuri.html">Plicuri de dar</a>
     <a role="menuitem" href="/plicuri-nunta.html">Plicuri de dar nuntă</a>
     <a role="menuitem" href="/plicuri-botez.html">Plicuri de dar botez</a>
@@ -581,7 +585,9 @@ function pageTemplate(prod) {
       else if(ref.includes("/invitatii-nunta")) back="/invitatii-nunta.html";
       else if(ref.includes("/invitatii-botez")) back="/invitatii-botez.html";
       else if(ref.includes("/invitatii")) back="/invitatii.html";
-      else if(ref.includes("/invitatii-digitale")) back="/invitatii-digitale.html";      
+      else if(ref.includes("/invitatii-digitale-nunta")) back="/invitatii-digitale-nunta.html";
+      else if(ref.includes("/invitatii-digitale-botez")) back="/invitatii-digitale-botez.html";
+      else if(ref.includes("/invitatii-digitale")) back="/invitatii-digitale.html";   
       else if(ref.includes("/plicuri-nunta")) back="/plicuri-nunta.html";
       else if(ref.includes("/plicuri-botez")) back="/plicuri-botez.html";
       else if(ref.includes("/plicuri")) back="/plicuri.html";
@@ -896,6 +902,8 @@ const staticPagesForSitemap = [
   "/invitatii-nunta.html",
   "/invitatii-botez.html",
   "/invitatii-digitale.html",
+  "/invitatii-digitale-nunta.html",
+  "/invitatii-digitale-botez.html",
   "/plicuri.html",
   "/plicuri-nunta.html",
   "/plicuri-botez.html",
