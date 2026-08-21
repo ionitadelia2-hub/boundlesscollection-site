@@ -144,7 +144,7 @@ const CATEGORY_MAP = {
   "paste": { name: "Colecția de Paște", url: "/paste.html" },
   "martisor": { name: "Colecția de Mărțișor", url: "/martisor.html" },
   "tablouri luminoase": { name: "Tablouri luminoase", url: "/tablouri-luminoase.html" },
-  "pahare miri personalizate": { name: "Pahare miri & căni personalizate", url: "/pahare-miri.html" }
+  "pahare miri personalizate": { name: "Pahare nuntă personalizate", url: "/pahare-nunta-personalizate.html"}
 };
 
 // --- Dropdown Produse (MEGA, grupat) ---
@@ -205,7 +205,7 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/articole-petreceri-copii.html" style="font-weight:600; color:#d47a96;">Petreceri Copii 🎈</a>
     <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
     <a role="menuitem" href="/tablouri-parfumate.html">Tablouri parfumate</a>
-    <a role="menuitem" href="/pahare-miri.html">Pahare miri personalizate</a>
+    <a role="menuitem" href="/pahare-nunta-personalizate.html">Pahare nuntă personalizate</a>
   </li>
 
   <li class="menu-group" role="none">
@@ -237,6 +237,77 @@ function injectProductsMenu(html, filename = "") {
   console.log(`✔ Meniu actualizat automat: ${filename}`);
 
   return updatedHtml;
+}
+
+// ============================================================
+// Navigare automată: Accesorii pregătiri nuntă
+// ============================================================
+
+const WEDDING_ACCESSORIES_PAGES = {
+  "accesorii-pregatiri-nunta.html": "all",
+  "stickere-oglinda.html": "stickere",
+  "pahare-nunta-personalizate.html": "pahare"
+};
+
+function getWeddingAccessoriesNav(filename) {
+  const active = WEDDING_ACCESSORIES_PAGES[filename];
+
+  if (!active) return "";
+
+  return `
+    <div class="category-switch" aria-label="Navigare rapidă accesorii">
+      <a
+        class="btn${active === "all" ? " primary" : ""}"
+        href="/accesorii-pregatiri-nunta.html"
+        ${active === "all" ? 'aria-current="page"' : ""}
+      >Toate accesoriile</a>
+
+      <a
+        class="btn${active === "stickere" ? " primary" : ""}"
+        href="/stickere-oglinda.html"
+        ${active === "stickere" ? 'aria-current="page"' : ""}
+      >Stickere oglindă</a>
+
+      <a
+        class="btn${active === "pahare" ? " primary" : ""}"
+        href="/pahare-nunta-personalizate.html"
+        ${active === "pahare" ? 'aria-current="page"' : ""}
+      >Pahare nuntă personalizate</a>
+    </div>
+  `.trim();
+}
+
+function injectWeddingAccessoriesNav(html, filename = "") {
+  if (!WEDDING_ACCESSORIES_PAGES[filename]) {
+    return html;
+  }
+
+  const navHtml = getWeddingAccessoriesNav(filename);
+
+  // Înlocuiește bara existentă, dacă pagina o are deja.
+  const navRegex =
+    /<(?:div|nav)\s+class=["'][^"']*\b(?:category-switch|category-subnav)\b[^"']*["'][^>]*>[\s\S]*?<\/(?:div|nav)>/i;
+
+  if (navRegex.test(html)) {
+    console.log(`✔ Navigare accesorii actualizată: ${filename}`);
+    return html.replace(navRegex, navHtml);
+  }
+
+  // Dacă nu există încă, o introduce înaintea gridului de produse.
+  const gridRegex =
+    /(<div\s+id=["']grid["'][^>]*>)/i;
+
+  if (gridRegex.test(html)) {
+    console.log(`✔ Navigare accesorii adăugată: ${filename}`);
+    return html.replace(
+      gridRegex,
+      `${navHtml}\n\n$1`
+    );
+  }
+
+  console.warn(`⚠ Nu am găsit grid pentru navigarea accesorii: ${filename}`);
+
+  return html;
 }
 
 // ---------------- template pagină produs ----------------
@@ -539,7 +610,7 @@ function pageTemplate(prod) {
       else if(ref.includes("/accesorii-pregatiri-nunta")) back="/accesorii-pregatiri-nunta.html";
       else if(ref.includes("/craciun")) back="/craciun.html";
       else if(ref.includes("/tablouri-luminoase")) back="/tablouri-luminoase.html";
-      else if(ref.includes("/pahare-miri")) back="/pahare-miri.html";
+      else if(ref.includes("/pahare-nunta-personalizate")) back="/pahare-nunta-personalizate.html";
       var b=document.getElementById('backBtn'); if(b) b.href=back;
     })();
     (function () {
@@ -779,10 +850,15 @@ for (const entry of fs.readdirSync(ROOT)) {
     if (/\.html$/i.test(entry)) {
       const html = fs.readFileSync(s, "utf8");
 
-      const processedHtml = injectProductsMenu(
-        html,
-        entry
-      );
+      let processedHtml = injectProductsMenu(
+  html,
+  entry
+);
+
+processedHtml = injectWeddingAccessoriesNav(
+  processedHtml,
+  entry
+);
 
       ensureDir(path.dirname(d));
       fs.writeFileSync(d, processedHtml, "utf8");
@@ -807,12 +883,110 @@ for (const entry of fs.readdirSync(ROOT)) {
   });
 
   // 6) sitemap simplu
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>${ORIGIN}/</loc></url>
-  ${products.map(p => `<url><loc>${ORIGIN}/p/${p.slug}.html</loc></url>`).join("\n  ")}
-</urlset>`;
-  fs.writeFileSync(path.join(OUT, "sitemap.xml"), sitemap, "utf8");
+  // ============================================================
+// 6) SITEMAP SEO
+// Homepage + pagini statice importante + pagini de produs
+// ============================================================
+
+const staticPagesForSitemap = [
+  "/",
+
+  // Papetarie
+  "/invitatii.html",
+  "/invitatii-nunta.html",
+  "/invitatii-botez.html",
+  "/invitatii-digitale.html",
+  "/plicuri.html",
+  "/plicuri-nunta.html",
+  "/plicuri-botez.html",
+  "/cutie-de-dar.html",
+  "/meniuri.html",
+  "/evantaie.html",
+  "/semne-de-carte.html",
+  "/numere-masa.html",
+  "/seturi.html",
+  "/rechizite-scolare-personalizate.html",
+
+  // Marturii
+  "/marturii.html",
+  "/marturii-nunta.html",
+  "/marturii-botez.html",
+
+  // Tricouri
+  "/tricouri-personalizate.html",
+  "/tricouri-femei.html",
+  "/tricouri-barbati.html",
+  "/body-bebelusi.html",
+  "/tricouri-copii-adolescenti.html",
+  "/tricouri-aniversare.html",
+  "/tricouri-scolare.html",
+  "/tricouri-scolare-profesori.html",
+  "/tricouri-scolare-elevi.html",
+
+  // Decor & accesorii
+  "/aranjamente-florale.html",
+  "/stickere-oglinda.html",
+  "/odorizante-dulap.html",
+  "/panouri-intampinare-sevalete.html",
+  "/toppere-tort.html",
+  "/accesorii-pregatiri-nunta.html",
+  "/pahare-nunta-personalizate.html",
+
+  // Cadouri
+  "/articole-petreceri-copii.html",
+  "/tablouri-luminoase.html",
+  "/tablouri-parfumate.html",
+
+  // Colectii
+  "/craciun.html",
+  "/paste.html",
+  "/martisor.html"
+];
+
+// Verificam ca pagina statica exista efectiv in /public
+const existingStaticPages = staticPagesForSitemap.filter((url) => {
+  if (url === "/") return true;
+
+  const filename = url.replace(/^\//, "");
+  const fullPath = path.join(OUT, filename);
+
+  return fs.existsSync(fullPath);
+});
+
+// Paginile produselor sunt adaugate automat din products.csv
+const productPagesForSitemap = products.map(
+  (p) => `/p/${p.slug}.html`
+);
+
+// Combinam paginile statice + produsele si eliminam duplicatele
+const sitemapPages = [
+  ...new Set([
+    ...existingStaticPages,
+    ...productPagesForSitemap
+  ])
+];
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapPages
+  .map(
+    (url) => `  <url>
+    <loc>${ORIGIN}${url}</loc>
+  </url>`
+  )
+  .join("\n")}
+</urlset>
+`;
+
+fs.writeFileSync(
+  path.join(OUT, "sitemap.xml"),
+  sitemap,
+  "utf8"
+);
+
+console.log(
+  `✔ sitemap.xml generat cu ${sitemapPages.length} URL-uri`
+);
 
   // 7) feed Merchant
   console.log("DEBUG: export Merchant – produse:", products.length);
