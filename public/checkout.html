@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="noindex,follow">
   <title>Finalizare Comandă • Boundless Collection</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +50,7 @@
         <input type="hidden" name="Produse Comandate" id="hidden-cart-data">
         <input type="hidden" name="Taxa Transport" id="hidden-shipping-data" value="25.00 RON">
         <input type="hidden" name="Total Plata (cu Transport)" id="hidden-total-data">
+        <input type="hidden" name="ID Comanda" id="hidden-order-id">
 
         <div class="form-group">
             <label for="name">Nume și Prenume *</label>
@@ -129,8 +130,44 @@ produsul a fost livrat greșit față de comanda confirmată. Prin finalizarea c
         document.getElementById("hidden-total-data").value = totalFinal.toFixed(2) + " RON";
 
         document.getElementById("checkout-form").addEventListener("submit", () => {
-            setTimeout(() => { localStorage.removeItem("boundless_cart"); }, 400);
-        });
+
+            const submitButton = document.querySelector(".btn-submit");
+if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = "Se trimite comanda...";
+}
+
+    // Generăm un ID unic pentru comandă
+    const transactionId =
+        "BC-" +
+        Date.now() +
+        "-" +
+        Math.random().toString(36).substring(2, 8).toUpperCase();
+
+    // Îl trimitem și prin Formspree, ca să apară în emailul comenzii
+    document.getElementById("hidden-order-id").value = transactionId;
+
+    // Salvăm datele necesare conversiei Google Ads
+    sessionStorage.setItem(
+        "boundless_purchase_value",
+        totalFinal.toFixed(2)
+    );
+
+    sessionStorage.setItem(
+        "boundless_transaction_id",
+        transactionId
+    );
+
+    sessionStorage.setItem(
+        "boundless_purchase_time",
+        Date.now().toString()
+    );
+
+    // Golim coșul după trimiterea formularului
+    setTimeout(() => {
+        localStorage.removeItem("boundless_cart");
+    }, 400);
+});
     });
   </script>
 </body>

@@ -3,6 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,follow">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18147990553"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18147990553');
+</script>
   <title>Mulțumesc! – Boundless Collection</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/delia-avatar.png">
@@ -43,13 +54,71 @@
 </head>
 <body>
   <img src="/images/delia-avatar.png" alt="Boundless Collection" width="90" style="border-radius:50%; margin-bottom:1rem;">
-  <h1>Mulțumesc pentru mesaj! 💌</h1>
-  <p>Am primit mesajul tău și îți voi răspunde în cel mai scurt timp posibil.  
-  Mă bucur că ai ales să faci parte din povestea <strong>Boundless Collection</strong>.</p>
+  <h1>Mulțumesc pentru comandă! 💌</h1>
+
+<p>
+  Comanda ta a fost înregistrată cu succes.
+  Te voi contacta în cel mai scurt timp pentru confirmare și,
+  dacă este cazul, pentru detaliile de personalizare.
+  <br><br>
+  Îți mulțumesc că ai ales <strong>Boundless Collection</strong>.
+</p>
 
   <a href="/" class="btn">Înapoi la pagină</a>
   <!-- stratul pentru inimioare -->
 <div id="floating-hearts" aria-hidden="true"></div>
+<!-- Google Ads Purchase Conversion -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const purchaseValue =
+        sessionStorage.getItem("boundless_purchase_value");
+
+    const transactionId =
+        sessionStorage.getItem("boundless_transaction_id");
+
+    const purchaseTime =
+        sessionStorage.getItem("boundless_purchase_time");
+
+    // Pagina a fost accesată direct, fără checkout
+    if (!purchaseValue || !transactionId || !purchaseTime) {
+        return;
+    }
+
+    // Acceptăm doar o comandă recentă.
+    // Evită folosirea accidentală a unor date vechi din sesiune.
+    const age = Date.now() - Number(purchaseTime);
+
+    if (!Number.isFinite(age) || age > 30 * 60 * 1000) {
+        sessionStorage.removeItem("boundless_purchase_value");
+        sessionStorage.removeItem("boundless_transaction_id");
+        sessionStorage.removeItem("boundless_purchase_time");
+        return;
+    }
+
+    const value = parseFloat(purchaseValue);
+
+    if (!Number.isFinite(value) || value <= 0) {
+        return;
+    }
+
+    if (typeof gtag === "function") {
+
+        gtag("event", "conversion", {
+            send_to: "AW-18147990553/V_-rCIrFguccEJm40c1D",
+            value: value,
+            currency: "RON",
+            transaction_id: transactionId
+        });
+
+        // Curățăm datele după conversie pentru ca refresh-ul
+        // să nu mai trimită aceeași comandă.
+        sessionStorage.removeItem("boundless_purchase_value");
+        sessionStorage.removeItem("boundless_transaction_id");
+        sessionStorage.removeItem("boundless_purchase_time");
+    }
+});
+</script>
 <script>
 (function(){
   const layer = document.getElementById('floating-hearts');
