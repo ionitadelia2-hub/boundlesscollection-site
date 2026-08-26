@@ -101,7 +101,17 @@ const STICKER_FILTER_GROUPS = {
     'cupe',
     'cupa',
     'flute'
-  ]
+  ],
+
+  absolvire: [
+  'absolvire',
+  'promotia',
+  'promotie',
+  'scoala',
+  'liceu',
+  'facultate',
+  'absolvent'
+]
 };
 
 function matchesStickerSubfilter(p, filter) {
@@ -110,21 +120,66 @@ function matchesStickerSubfilter(p, filter) {
   const title = key(p.title || '');
   const tags = Array.isArray(p.tagsKey) ? p.tagsKey : [];
 
+  // PAHARE
   if (filter === 'pahare') {
     return (
       title.includes('pahar') ||
       title.includes('pahare') ||
-      tags.includes('pahar') ||
-      tags.includes('pahare') ||
-      tags.some(t => t.includes('pahar') || t.includes('pahare'))
+      tags.some(t =>
+        t.includes('pahar') ||
+        t.includes('pahare')
+      )
     );
   }
 
+  // ABSOLVIRE / PROMOTIE / SCOALA
+  if (filter === 'absolvire') {
+    const words = [
+      'absolvire',
+      'absolvent',
+      'absolventi',
+      'promotia',
+      'promotie',
+      'scoala',
+      'liceu',
+      'facultate',
+      'clasa a 8',
+      'clasa a 12'
+    ];
+
+    return words.some(word => {
+      const w = key(word);
+      return (
+        title.includes(w) ||
+        tags.some(t => t.includes(w))
+      );
+    });
+  }
+
+  // OGLINDA MIRESEI
+  if (filter === 'oglinda miresei') {
+    const words = [
+      'oglinda miresei',
+      'oglinda mireasa',
+      'oglinda pentru mireasa',
+      'mirror bride',
+      'bride mirror'
+    ];
+
+    return words.some(word => {
+      const w = key(word);
+      return (
+        title.includes(w) ||
+        tags.some(t => t.includes(w))
+      );
+    });
+  }
+
+  // NUNTA / BOTEZ / ANIVERSARE / EVENIMENTE
   const words = STICKER_FILTER_GROUPS[filter] || [];
 
   return words.some(word => {
     const w = key(word);
-
     return (
       title.includes(w) ||
       tags.some(t => t.includes(w))
@@ -394,15 +449,22 @@ if (filterKey === 'tricouri scolare') {
     }
 
     filterBtns.forEach((btn) =>
-      btn.addEventListener('click', () => {
-        filterBtns.forEach((b) => b.setAttribute('aria-pressed', 'false'));
-        btn.setAttribute('aria-pressed', 'true');
-        const keyVal = btn.dataset.filter || btn.textContent;
-        activeFilter = key(keyVal || 'toate');
-        resetPagination();
-        render();
-      })
-    );
+  btn.addEventListener('click', () => {
+    filterBtns.forEach((b) => {
+      b.setAttribute('aria-pressed', 'false');
+      b.classList.remove('active');
+    });
+
+    btn.setAttribute('aria-pressed', 'true');
+    btn.classList.add('active');
+
+    const keyVal = btn.dataset.filter || btn.textContent;
+    activeFilter = key(keyVal || 'toate');
+
+    resetPagination();
+    render();
+  })
+);
 
     q?.addEventListener('input', () => {
       resetPagination();
