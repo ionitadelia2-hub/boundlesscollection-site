@@ -291,6 +291,12 @@
     border: 1px solid #eee;
   }
 
+  .form-group select:disabled {
+  background: #f7f4f5;
+  color: #999;
+  cursor: not-allowed;
+}
+
   @media (max-width: 850px) {
     .checkout-container {
       margin-top: 28px;
@@ -502,17 +508,105 @@
             </div>
 
             <div class="form-group">
-              <label for="address">
-                Adresă completă de livrare *
-              </label>
+  <label for="county">Județ *</label>
+  <select id="county" name="Judet" required>
+    <option value="">Selectează județul</option>
+  </select>
+</div>
 
-              <textarea
-                id="address"
-                name="Adresa de Livrare"
-                rows="3"
-                placeholder="Localitate, județ, stradă, număr, bloc, cod poștal..."
-                required
-              ></textarea>
+<div class="form-group">
+  <label for="city">Localitate *</label>
+  <select id="city" name="Localitate" required disabled>
+    <option value="">Selectează localitatea</option>
+  </select>
+</div>
+
+<div class="form-group full-width">
+  <label for="street">Stradă *</label>
+  <input
+    type="text"
+    id="street"
+    name="Strada"
+    autocomplete="address-line1"
+    required
+    placeholder="Ex: Strada Florilor"
+  >
+</div>
+
+<div class="form-group">
+  <label for="street-number">Număr *</label>
+  <input
+    type="text"
+    id="street-number"
+    name="Numar"
+    required
+    placeholder="Ex: 12"
+  >
+</div>
+
+<div class="form-group">
+  <label for="postal-code">Cod poștal</label>
+  <input
+    type="text"
+    id="postal-code"
+    name="Cod Postal"
+    inputmode="numeric"
+    autocomplete="postal-code"
+    maxlength="6"
+    pattern="[0-9]{6}"
+    placeholder="Ex: 010101"
+  >
+</div>
+
+<div class="form-group">
+  <label for="building">Bloc</label>
+  <input
+    type="text"
+    id="building"
+    name="Bloc"
+    placeholder="Opțional"
+  >
+</div>
+
+<div class="form-group">
+  <label for="entrance">Scară</label>
+  <input
+    type="text"
+    id="entrance"
+    name="Scara"
+    placeholder="Opțional"
+  >
+</div>
+
+<div class="form-group">
+  <label for="floor">Etaj</label>
+  <input
+    type="text"
+    id="floor"
+    name="Etaj"
+    placeholder="Opțional"
+  >
+</div>
+
+<div class="form-group">
+  <label for="apartment">Apartament</label>
+  <input
+    type="text"
+    id="apartment"
+    name="Apartament"
+    placeholder="Opțional"
+  >
+</div>
+
+<div class="form-group full-width">
+  <label for="delivery-notes">Observații pentru livrare</label>
+  <textarea
+    id="delivery-notes"
+    name="Observatii Livrare"
+    rows="2"
+    placeholder="Ex: interfon 12, sunați înainte de livrare..."
+  ></textarea>
+</div>
             </div>
 
             <div class="form-group full-width">
@@ -606,6 +700,91 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+
+      const countySelect = document.getElementById("county");
+const citySelect = document.getElementById("city");
+
+fetch("/data/romania-localitati.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Nu s-a putut încărca lista localităților.");
+    }
+
+    return response.json();
+  })
+
+  .then(data => {
+    if (!data || !Array.isArray(data.judete)) {
+      throw new Error("Structura fișierului localităților nu este validă.");
+    }
+
+    const judete = [...data.judete].sort((a, b) =>
+      String(a.nume || "").localeCompare(
+        String(b.nume || ""),
+        "ro"
+      )
+    );
+
+    judete.forEach(judet => {
+      const option = document.createElement("option");
+
+      option.value = judet.nume;
+      option.textContent = judet.nume;
+
+      countySelect.appendChild(option);
+    });
+
+    countySelect.addEventListener("change", () => {
+      const selectedCounty = countySelect.value;
+
+      citySelect.innerHTML =
+        '<option value="">Selectează localitatea</option>';
+
+      citySelect.disabled = true;
+
+      const judet = judete.find(
+        item => item.nume === selectedCounty
+      );
+
+      if (!judet || !Array.isArray(judet.localitati)) {
+        return;
+      }
+
+      const localitati = [
+        ...new Set(
+          judet.localitati
+            .map(item => item.nume)
+            .filter(Boolean)
+        )
+      ].sort((a, b) =>
+        a.localeCompare(b, "ro")
+      );
+
+      localitati.forEach(localitate => {
+        const option = document.createElement("option");
+
+        option.value = localitate;
+        option.textContent = localitate;
+
+        citySelect.appendChild(option);
+      });
+
+      citySelect.disabled = false;
+    });
+  })
+
+  .catch(error => {
+    console.error("Eroare localități:", error);
+
+    countySelect.innerHTML =
+      '<option value="">Lista județelor nu este disponibilă</option>';
+
+    citySelect.innerHTML =
+      '<option value="">Lista localităților nu este disponibilă</option>';
+
+    countySelect.disabled = true;
+    citySelect.disabled = true;
+  });
 
       const cart = getCart();
 
@@ -893,6 +1072,8 @@ emptyCartAlert.style.display = "block";
 
     });
   </script>
+
+
 
 </body>
 </html>

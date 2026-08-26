@@ -916,6 +916,7 @@ processedHtml = injectGoogleTag(
   // 4) directoare media/content
   copyDirSync(path.join(ROOT, "images"),  path.join(OUT, "images"));
   copyDirSync(path.join(ROOT, "content"), path.join(OUT, "content"));
+  copyDirSync(path.join(ROOT, "data"), path.join(OUT, "data"));
 
   // 5) pagini de produs /public/p/*.html
   const PAGES_DIR = path.join(OUT, "p");
