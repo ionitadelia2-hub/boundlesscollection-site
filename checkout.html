@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/css/tom-select.css" rel="stylesheet">
 
   <style>
   * {
@@ -295,6 +296,65 @@
   background: #f7f4f5;
   color: #999;
   cursor: not-allowed;
+}
+/* Dropdown modern pentru Judet + Localitate */
+.ts-wrapper {
+  width: 100%;
+}
+
+.ts-control {
+  min-height: 44px;
+  border: 1px solid #eadde2 !important;
+  border-radius: 9px !important;
+  padding: 10px 12px !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+}
+
+.ts-wrapper.focus .ts-control {
+  border-color: #e7a8bd !important;
+  box-shadow: 0 0 0 3px rgba(231,168,189,0.12) !important;
+}
+
+.ts-dropdown {
+  border: 1px solid #eadde2;
+  border-radius: 9px;
+  overflow: hidden;
+  margin-top: 5px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  z-index: 9999;
+}
+
+.ts-dropdown .dropdown-input-wrap {
+  padding: 8px;
+  background: #fff8fa;
+}
+
+.ts-dropdown .dropdown-input {
+  border: 1px solid #eadde2;
+  border-radius: 7px;
+  padding: 9px 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ts-dropdown .option {
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.ts-dropdown .option:hover,
+.ts-dropdown .active {
+  background: #fff0f5;
+  color: #111;
+}
+
+.ts-wrapper.disabled .ts-control {
+  background: #fafafa !important;
+  opacity: 0.65;
 }
 
   @media (max-width: 850px) {
@@ -698,11 +758,16 @@
 </div>
   <script src="/cart.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/tom-select@2.4.3/dist/js/tom-select.complete.min.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", () => {
 
       const countySelect = document.getElementById("county");
 const citySelect = document.getElementById("city");
+
+let countyTom;
+let cityTom;
 
 fetch("/data/romania-localitati.json")
   .then(response => {
@@ -714,6 +779,7 @@ fetch("/data/romania-localitati.json")
   })
 
   .then(data => {
+
     if (!data || !Array.isArray(data.judete)) {
       throw new Error("Structura fișierului localităților nu este validă.");
     }
@@ -725,55 +791,120 @@ fetch("/data/romania-localitati.json")
       )
     );
 
-    judete.forEach(judet => {
-      const option = document.createElement("option");
+    /*
+     * LOCALITATE
+     * O inițializăm prima, ca să fie disponibilă
+     * când utilizatorul selectează județul.
+     */
+    cityTom = new TomSelect(citySelect, {
+      valueField: "value",
+      labelField: "text",
+      searchField: ["text"],
 
-      option.value = judet.nume;
-      option.textContent = judet.nume;
+      placeholder: "Selectează localitatea",
 
-      countySelect.appendChild(option);
-    });
+      maxOptions: null,
+      create: false,
+      allowEmptyOption: true,
 
-    countySelect.addEventListener("change", () => {
-      const selectedCounty = countySelect.value;
+      sortField: {
+        field: "text",
+        direction: "asc"
+      },
 
-      citySelect.innerHTML =
-        '<option value="">Selectează localitatea</option>';
-
-      citySelect.disabled = true;
-
-      const judet = judete.find(
-        item => item.nume === selectedCounty
-      );
-
-      if (!judet || !Array.isArray(judet.localitati)) {
-        return;
+      render: {
+        no_results: function() {
+          return `
+            <div class="no-results">
+              Nu am găsit localitatea.
+            </div>
+          `;
+        }
       }
-
-      const localitati = [
-        ...new Set(
-          judet.localitati
-            .map(item => item.nume)
-            .filter(Boolean)
-        )
-      ].sort((a, b) =>
-        a.localeCompare(b, "ro")
-      );
-
-      localitati.forEach(localitate => {
-        const option = document.createElement("option");
-
-        option.value = localitate;
-        option.textContent = localitate;
-
-        citySelect.appendChild(option);
-      });
-
-      citySelect.disabled = false;
     });
+
+    cityTom.disable();
+
+    /*
+     * JUDEȚ
+     */
+    countyTom = new TomSelect(countySelect, {
+      valueField: "value",
+      labelField: "text",
+      searchField: ["text"],
+
+      placeholder: "Selectează județul",
+
+      maxOptions: null,
+
+      options: judete.map(judet => ({
+        value: judet.nume,
+        text: judet.nume
+      })),
+
+      create: false,
+      allowEmptyOption: true,
+
+      sortField: {
+        field: "text",
+        direction: "asc"
+      },
+
+      render: {
+        no_results: function() {
+          return `
+            <div class="no-results">
+              Nu am găsit județul.
+            </div>
+          `;
+        }
+      },
+
+      onChange: function(selectedCounty) {
+
+        cityTom.clear(true);
+        cityTom.clearOptions();
+
+        if (!selectedCounty) {
+          cityTom.disable();
+          return;
+        }
+
+        const judet = judete.find(
+          item => item.nume === selectedCounty
+        );
+
+        if (!judet || !Array.isArray(judet.localitati)) {
+          cityTom.disable();
+          return;
+        }
+
+        const localitati = [
+          ...new Set(
+            judet.localitati
+              .map(item => item.nume)
+              .filter(Boolean)
+          )
+        ].sort((a, b) =>
+          a.localeCompare(b, "ro")
+        );
+
+        cityTom.addOptions(
+          localitati.map(localitate => ({
+            value: localitate,
+            text: localitate
+          }))
+        );
+
+        cityTom.enable();
+        cityTom.refreshOptions(false);
+      }
+    });
+
   })
 
   .catch(error => {
+
     console.error("Eroare localități:", error);
 
     countySelect.innerHTML =
@@ -784,6 +915,7 @@ fetch("/data/romania-localitati.json")
 
     countySelect.disabled = true;
     citySelect.disabled = true;
+
   });
 
       const cart = getCart();
