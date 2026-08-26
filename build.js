@@ -22,6 +22,26 @@ const GOOGLE_TAG = `
   </script>
 `;
 
+function injectGoogleTag(html, filename = "") {
+  // Dacă pagina are deja tag-ul Google Ads, nu facem nimic.
+  if (html.includes("AW-18147990553")) {
+    return html;
+  }
+
+  // Injectăm tag-ul imediat după <head>.
+  if (/<head[^>]*>/i.test(html)) {
+    console.log(`✔ Google tag adăugat: ${filename}`);
+
+    return html.replace(
+      /<head([^>]*)>/i,
+      `<head$1>\n${GOOGLE_TAG}`
+    );
+  }
+
+  console.warn(`⚠ Nu am găsit <head> pentru Google tag: ${filename}`);
+  return html;
+}
+
 // ---------------- fs utils ----------------
 function rimrafSync(p) {
   if (!fs.existsSync(p)) return;
@@ -862,6 +882,11 @@ for (const entry of fs.readdirSync(ROOT)) {
 );
 
 processedHtml = injectWeddingAccessoriesNav(
+  processedHtml,
+  entry
+);
+
+processedHtml = injectGoogleTag(
   processedHtml,
   entry
 );
