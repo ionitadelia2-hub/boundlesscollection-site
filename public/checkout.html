@@ -261,24 +261,21 @@
 
       <div class="form-group">
 
-        <label for="payment">
-          Modalitate de plată *
-        </label>
+        <label for="payment">Modalitate de plată *</label>
 
-        <select
-          id="payment"
-          name="Modalitate Plata"
-          required>
+<select id="payment" name="Modalitate Plata" required>
+    <option value="50% avans + 50% inainte de expediere">
+        50% avans + 50% înainte de expediere
+    </option>
+</select>
 
-          <option value="Plata la Livrare (Ramburs)">
-            Plată la livrare (Ramburs)
-          </option>
-
-          <option value="Ordin de Plata">
-            Transfer bancar (Ordin de plată avans)
-          </option>
-
-        </select>
+<p style="font-size:0.85rem;color:#666;line-height:1.6;margin:8px 0 0;">
+  Pentru toate comenzile, plata se efectuează în două tranșe:
+  <strong>50% avans la confirmarea comenzii</strong> și
+  <strong>50% înainte de expediere și emiterea AWB-ului</strong>.
+  După verificarea comenzii vei primi documentul de plată și posibilitatea de
+  achitare online. Comenzile nu se expediază cu plata ramburs.
+</p>
 
       </div>
 
@@ -322,13 +319,7 @@
 
       </div>
 
-      <button
-        type="submit"
-        class="btn-submit">
-
-        Plasează Comanda
-
-      </button>
+      <button type="submit" class="btn-submit">Trimite Comanda</button>
 
     </form>
 
