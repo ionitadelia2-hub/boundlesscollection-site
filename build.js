@@ -563,6 +563,10 @@ function pageTemplate(prod) {
         <h1 class="product-title">${title}</h1>
         <p class="product-desc">${descHtml}</p>
         <p class="price price-badge">${price}</p>
+        ${prod.min_quantity > 1
+  ? `<p class="min-order">Comandă minimă: <strong>${prod.min_quantity} buc.</strong></p>`
+  : ""
+}
         <div class="tags">${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
         
         <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
@@ -576,6 +580,7 @@ function pageTemplate(prod) {
             data-price="${priceStr}"
             data-image="${esc(firstImg)}"
             data-url="${esc(url)}"
+            data-min-quantity="${prod.min_quantity || 1}"
             style="background: #111; color: #fff; border: none; padding: 12px 25px; cursor: pointer; font-weight: 600; border-radius: 4px; transition: background 0.2s; font-family: 'Poppins', sans-serif;"
           >
             Adaugă în coș
@@ -836,6 +841,11 @@ function main() {
     const gpc = r.google_product_category || "";
     const material = r.material || "";
 
+    const min_quantity = Math.max(
+  1,
+  parseInt(r.min_quantity || "1", 10) || 1
+);
+
     return {
       id,
       title,
@@ -848,6 +858,7 @@ function main() {
       slug,
       google_product_category: gpc,
       material,
+      min_quantity,
       mpn: r.mpn || ""
     };
   });

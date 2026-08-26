@@ -24,13 +24,35 @@ function initAddToCartButtons() {
         const image = btn.getAttribute("data-image");
         const url = btn.getAttribute("data-url");
 
+        const minQuantity = Math.max(
+            1,
+            parseInt(btn.getAttribute("data-min-quantity") || "1", 10) || 1
+        );
+
         let cart = getCart();
         const existingIndex = cart.findIndex(item => item.id === id);
 
         if (existingIndex > -1) {
+            // Păstrăm informația despre cantitatea minimă
+            cart[existingIndex].minQuantity = minQuantity;
+
+            // Dacă produsul există deja, mai adăugăm 1 buc.
             cart[existingIndex].quantity += 1;
+
+            // Siguranță: nu permitem niciodată sub minim
+            if (cart[existingIndex].quantity < minQuantity) {
+                cart[existingIndex].quantity = minQuantity;
+            }
         } else {
-            cart.push({ id, title, price, image, url, quantity: 1 });
+            cart.push({
+                id,
+                title,
+                price,
+                image,
+                url,
+                quantity: minQuantity,
+                minQuantity: minQuantity
+            });
         }
 
         saveCart(cart);
@@ -38,9 +60,9 @@ function initAddToCartButtons() {
         // Efect vizual rapid pe buton
         const originalText = btn.innerHTML;
         btn.innerHTML = "✓ Adăugat!";
-        btn.style.backgroundColor = "#d9a74a"; // Nuanță elegantă asortată cu brandul
+        btn.style.backgroundColor = "#d9a74a";
         btn.style.color = "#fff";
-        
+
         setTimeout(() => {
             btn.innerHTML = originalText;
             btn.style.backgroundColor = "";

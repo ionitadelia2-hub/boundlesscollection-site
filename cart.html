@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="noindex,follow">
   <title>Coșul tău • Boundless Collection</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,6 +45,11 @@
     .cart-empty-icon { font-size: 4rem; margin-bottom: 20px; display: inline-block; }
     .cart-empty-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 12px; color: #111; }
     .cart-empty-text { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 30px; }
+    .qty-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  background: #f7f7f7;
+}
   </style>
 </head>
 <body>
@@ -66,14 +71,22 @@
       
       <div class="cart-summary" id="cart-summary" style="display: none;">
         <div class="summary-row">
-          Produs(e): <span id="cart-subtotal-val">0.00</span> RON
-        </div>
-        <div class="summary-row">
-          Transport (max. 5kg): <span id="cart-shipping-val">25.00</span> RON
-        </div>
-        <div class="cart-total">
-          Total de plată: <span id="cart-total-val">0.00</span> RON
-        </div>
+  Produse: <span id="cart-subtotal-val">0.00</span> RON
+</div>
+
+<div class="summary-row">
+  Livrare: <span id="cart-shipping-val">25.00</span> RON
+</div>
+
+<div class="cart-total">
+  Total comandă: <span id="cart-total-val">0.00</span> RON
+</div>
+
+<p style="font-size:0.88rem;color:#666;line-height:1.6;margin:-12px 0 22px;">
+  La confirmarea comenzii se achită
+  <strong>50% avans</strong>, iar diferența de
+  <strong>50% înainte de expediere</strong>.
+</p>
         <div class="cart-buttons">
           <a href="/index.html#produse" style="color: #666; text-decoration: none; font-size: 0.95rem; border-bottom: 1px solid #ccc; padding-bottom: 2px; transition: color 0.2s;">← Înapoi la produse</a>
           <a href="/checkout.html" class="btn-checkout">Finalizează comanda</a>
@@ -109,7 +122,23 @@
         let subtotal = 0;
         const taxaTransport = 25.00; 
 
+        const getMinQuantity = (item) => {
+    return Math.max(
+        1,
+        parseInt(item.minQuantity || item.min_quantity || 1, 10) || 1
+    );
+};
+
         cart.forEach((item, index) => {
+
+          const minQuantity = getMinQuantity(item);
+
+// Siguranță pentru produse vechi deja existente în localStorage
+if (item.quantity < minQuantity) {
+    item.quantity = minQuantity;
+}
+
+
             subtotal += item.price * item.quantity;
             html += `
                 <div class="cart-item">
@@ -117,10 +146,20 @@
                     <div class="item-details">
                         <div class="item-title">${item.title}</div>
                         <div class="item-price">${item.price.toFixed(2)} RON</div>
+                        ${minQuantity > 1
+    ? `<div style="font-size:0.82rem;color:#777;margin-top:4px;">
+         Comandă minimă: <strong>${minQuantity} buc.</strong>
+       </div>`
+    : ""
+}
                     </div>
                     <div class="item-actions">
                         <div class="qty-wrapper">
-                            <button class="qty-btn" onclick="changeQty(${index}, -1)">-</button>
+                            <button
+    class="qty-btn"
+    onclick="changeQty(${index}, -1)"
+    ${item.quantity <= minQuantity ? "disabled" : ""}
+>-</button>
                             <span class="qty-text"><strong>${item.quantity}</strong></span>
                             <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
                         </div>
@@ -142,12 +181,32 @@
     }
 
     function changeQty(index, delta) {
-        let cart = getCart();
-        cart[index].quantity += delta;
-        if (cart[index].quantity <= 0) cart.splice(index, 1);
-        saveCart(cart); 
-        renderCart();
+    let cart = getCart();
+
+    if (!cart[index]) return;
+
+    const minQuantity = Math.max(
+        1,
+        parseInt(
+            cart[index].minQuantity ||
+            cart[index].min_quantity ||
+            1,
+            10
+        ) || 1
+    );
+
+    const newQuantity = cart[index].quantity + delta;
+
+    // Nu permitem coborârea sub cantitatea minimă
+    if (newQuantity < minQuantity) {
+        return;
     }
+
+    cart[index].quantity = newQuantity;
+
+    saveCart(cart);
+    renderCart();
+}
     
     function removeItem(index) {
         let cart = getCart();
