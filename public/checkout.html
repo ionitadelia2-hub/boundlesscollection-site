@@ -21,319 +21,596 @@
   <link rel="stylesheet" href="/style.css">
 
   <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background:
+      linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff9fb 35%,
+        #fff2f7 100%
+      );
+  }
+
+  .checkout-container {
+    max-width: 1180px;
+    margin: 45px auto 80px;
+    padding: 0 24px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .checkout-header {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .checkout-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #171313;
+    margin: 0 0 8px;
+  }
+
+  .checkout-subtitle {
+    color: #777;
+    font-size: 0.92rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .checkout-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 32px;
+    align-items: start;
+  }
+
+  .checkout-left,
+  .checkout-right {
+    min-width: 0;
+  }
+
+  .checkout-card {
+    background: rgba(255,255,255,0.96);
+    border: 1px solid rgba(182,92,124,0.12);
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 12px 36px rgba(70, 40, 50, 0.055);
+  }
+
+  .checkout-left .checkout-card {
+    position: sticky;
+    top: 30px;
+  }
+
+  .section-title,
+  .summary-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #171313;
+    margin: 0 0 20px;
+  }
+
+  .summary-box {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  #checkout-items {
+    line-height: 1.7;
+    margin-bottom: 18px !important;
+    color: #444 !important;
+  }
+
+  #checkout-items > div {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0e7ea;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    font-size: 0.94rem;
+    color: #666;
+    margin-top: 10px;
+  }
+
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border-top: 1px dashed #dfd3d8;
+    margin-top: 18px;
+    padding-top: 18px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #111;
+  }
+
+  .payment-note {
+    margin-top: 20px;
+    padding: 15px 16px;
+    background: #fff7fa;
+    border-radius: 12px;
+    color: #66545b;
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  .trust-list {
+    margin-top: 22px;
+    display: grid;
+    gap: 11px;
+    font-size: 0.85rem;
+    color: #5f5659;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+  }
+
+  .trust-icon {
+    flex: 0 0 auto;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f8dce7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+  }
+
+  #checkout-form {
+    display: block;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.88rem;
+    color: #2a2526;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #e1d7db;
+    border-radius: 10px;
+    background: #fff;
+    color: #222;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .form-group input:hover,
+  .form-group textarea:hover,
+  .form-group select:hover {
+    border-color: #d4c2c9;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: #d38aa5;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(211,138,165,0.12);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 96px;
+  }
+
+  .field-help {
+    font-size: 0.78rem;
+    color: #8a7c81;
+    line-height: 1.55;
+    margin-top: 7px;
+  }
+
+  .legal-notice {
+    font-size: 0.79rem;
+    color: #62595c;
+    margin: 8px 0 22px;
+    background: #fffaf3;
+    padding: 16px 18px;
+    border-left: 3px solid #111;
+    line-height: 1.6;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .btn-submit {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 16px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 999px;
+    width: 100%;
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+    letter-spacing: 0.3px;
+  }
+
+  .btn-submit:hover {
+    background: #2b2527;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  }
+
+  .btn-submit:disabled {
+    opacity: 0.65;
+    cursor: wait;
+    transform: none;
+  }
+
+  .submit-note {
+    text-align: center;
+    font-size: 0.76rem;
+    color: #8a7c81;
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
+  .empty-cart-message {
+    text-align: center;
+    padding: 30px;
+    font-size: 1rem;
+    color: #666;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #eee;
+  }
+
+  @media (max-width: 850px) {
     .checkout-container {
-      max-width: 650px;
-      margin: 50px auto;
-      padding: 25px;
-      font-family: 'Poppins', sans-serif;
+      margin-top: 28px;
+      padding: 0 16px;
+    }
+
+    .checkout-layout {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .checkout-left .checkout-card {
+      position: static;
     }
 
     .checkout-title {
-      font-family: 'Playfair Display', serif;
       font-size: 2rem;
-      border-bottom: 1px solid #eaeaea;
-      padding-bottom: 15px;
-      margin-bottom: 30px;
-      text-align: center;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
     }
 
-    .form-group {
-      margin-bottom: 22px;
-      display: flex;
-      flex-direction: column;
+    .form-group.full-width {
+      grid-column: auto;
     }
 
-    .form-group label {
-      font-weight: 600;
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-      color: #222;
+    .checkout-card {
+      padding: 20px 17px;
+      border-radius: 14px;
     }
 
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 0.98rem;
-      font-family: inherit;
-      transition: border 0.2s;
+    .checkout-title {
+      font-size: 1.8rem;
     }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
-      border-color: #111;
-      outline: none;
-    }
-
-    .summary-box {
-      background: #fafafa;
-      padding: 22px;
-      border-radius: 4px;
-      margin-bottom: 35px;
-      border: 1px solid #eaeaea;
-    }
-
-    .summary-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.25rem;
-      margin-bottom: 15px;
-      color: #111;
-    }
-
-    .summary-row {
-      font-size: 0.95rem;
-      color: #555;
-      margin-top: 6px;
-    }
-
-    .btn-submit {
-      background: #111;
-      color: white;
-      border: none;
-      padding: 15px;
-      font-size: 1.05rem;
-      font-weight: 600;
-      cursor: pointer;
-      border-radius: 4px;
-      width: 100%;
-      transition: background 0.2s;
-      letter-spacing: 0.5px;
-    }
-
-    .btn-submit:hover {
-      background: #333;
-    }
-
-    .btn-submit:disabled {
-      opacity: 0.65;
-      cursor: wait;
-    }
-
-    .legal-notice {
-      font-size: 0.85rem;
-      color: #555;
-      margin-top: 20px;
-      background: #fffdf6;
-      padding: 14px;
-      border-left: 4px solid #111;
-      line-height: 1.5;
-      border-radius: 0 4px 4px 0;
-    }
-
-    .empty-cart-message {
-      text-align: center;
-      padding: 20px;
-      font-size: 1.1rem;
-      color: #666;
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
 
   <div class="checkout-container">
 
-    <h1 class="checkout-title">Detalii Comandă</h1>
-
-    <div class="summary-box">
-
-      <h3 class="summary-title">Sumar coș</h3>
-
-      <div
-        id="checkout-items"
-        style="line-height: 1.7; margin-bottom: 12px; color: #444;">
-      </div>
-
-      <div
-        class="summary-row"
-        id="checkout-subtotal-row">
-        Produse: 0.00 RON
-      </div>
-
-      <div
-        class="summary-row"
-        id="checkout-shipping-row">
-        Transport (max. 5kg): 25.00 RON
-      </div>
-
-      <hr style="border: 0; border-top: 1px dashed #ddd; margin: 15px 0;">
-
-      <strong style="font-size: 1.1rem; color: #000;">
-        Total de plată:
-        <span id="checkout-total">0.00</span> RON
-      </strong>
-
-    </div>
-
-    <div
-      id="empty-cart-alert"
-      class="empty-cart-message"
-      style="display: none;">
-
-      Coșul tău este gol.
-      <a
-        href="/"
-        style="color: #111; font-weight: 600;">
-        Click aici pentru a continua cumpărăturile.
-      </a>
-
-    </div>
-
-    <form
-      action="https://formspree.io/f/mzdwblkp"
-      method="POST"
-      id="checkout-form">
-
-      <input
-        type="hidden"
-        name="Produse Comandate"
-        id="hidden-cart-data">
-
-      <input
-        type="hidden"
-        name="Taxa Transport"
-        id="hidden-shipping-data"
-        value="25.00 RON">
-
-      <input
-        type="hidden"
-        name="Total Plata (cu Transport)"
-        id="hidden-total-data">
-
-      <input
-        type="hidden"
-        name="ID Comanda"
-        id="hidden-order-id">
-
-      <div class="form-group">
-        <label for="name">Nume și Prenume *</label>
-
-        <input
-          type="text"
-          id="name"
-          name="Nume Client"
-          required
-          autocomplete="name">
-      </div>
-
-      <div class="form-group">
-        <label for="email">Adresă de Email *</label>
-
-        <input
-          type="email"
-          id="email"
-          name="Email"
-          required
-          autocomplete="email">
-      </div>
-
-      <div class="form-group">
-        <label for="phone">Număr de Telefon *</label>
-
-        <input
-          type="tel"
-          id="phone"
-          name="Telefon"
-          required
-          autocomplete="tel">
-      </div>
-
-      <div class="form-group">
-        <label for="address">Adresă completă de livrare *</label>
-
-        <textarea
-          id="address"
-          name="Adresa de Livrare"
-          rows="3"
-          placeholder="Localitate, județ, stradă, număr, bloc, cod postal..."
-          required>
-        </textarea>
-      </div>
-
-      <div class="form-group">
-
-        <label for="customization">
-          Detalii text și personalizare (Opțional)
-        </label>
-
-        <textarea
-          id="customization"
-          name="Detalii Personalizare"
-          rows="4"
-          placeholder="Ex: Text invitație: Mădălina & Iulian, 20.06.2026. (Dacă doriți personalizare, puteți lăsa detaliile aici sau ne puteți trimite ulterior pe WhatsApp/Email)">
-        </textarea>
-
-      </div>
-
-      <div class="form-group">
-
-        <label for="payment">Modalitate de plată *</label>
-
-<select id="payment" name="Modalitate Plata" required>
-    <option value="50% avans + 50% inainte de expediere">
-        50% avans + 50% înainte de expediere
-    </option>
-</select>
-
-<p style="font-size:0.85rem;color:#666;line-height:1.6;margin:8px 0 0;">
-  Pentru toate comenzile, plata se efectuează în două tranșe:
-  <strong>50% avans la confirmarea comenzii</strong> și
-  <strong>50% înainte de expediere și emiterea AWB-ului</strong>.
-  După verificarea comenzii vei primi documentul de plată și posibilitatea de
-  achitare online. Comenzile nu se expediază cu plata ramburs.
-</p>
-
-      </div>
-
-      <div class="legal-notice">
-
-        <strong>Informații privind Returul:</strong>
-
-        Conform legislației privind vânzările la distanță
-        (OUG 34/2014), dreptul de retragere de 14 zile nu se aplică
-        produselor realizate la comandă sau clar personalizate.
-
-        Returnările se acceptă doar pentru produse defecte sau
-        livrate greșit, în conformitate cu legislația română
-        privind protecția consumatorilor.
-
-        <br><br>
-
-        Produsele sunt ambalate corespunzător
-        (folie cu bule, pufuleți din polistiren și cutii rezistente)
-        pentru a preveni deteriorarea în timpul transportului.
-
-        Responsabilitatea pentru eventuale daune survenite ulterior
-        predării coletului revine firmei de curierat.
-
-        <br><br>
-
-        Facem totuși înlocuire sau rambursare în următoarele situații:
-
-        <br><br>
-
-        • există o eroare de execuție față de varianta aprobată
-        (text, model, culori etc.);
-
-        <br>
-
-        • produsul a fost livrat greșit față de comanda confirmată.
-
-        <br><br>
-
-        Prin finalizarea comenzii, confirmați acceptarea acestor condiții.
-
-      </div>
-
-      <button type="submit" class="btn-submit">Trimite Comanda</button>
-
-    </form>
-
+  <div class="checkout-header">
+    <h1 class="checkout-title">Finalizare comandă</h1>
+    <p class="checkout-subtitle">
+      Verifică produsele și completează datele necesare pentru confirmarea comenzii.
+    </p>
   </div>
 
+  <div
+    id="empty-cart-alert"
+    class="empty-cart-message"
+    style="display:none;"
+  >
+    Coșul tău este gol.
+    <a href="/" style="color:#111;font-weight:600;">
+      Continuă cumpărăturile
+    </a>
+  </div>
+
+  <div class="checkout-layout" id="checkout-layout">
+
+    <!-- STÂNGA -->
+    <aside class="checkout-left">
+      <div class="checkout-card">
+
+        <div class="summary-box">
+          <h2 class="summary-title">Comanda ta</h2>
+
+          <div id="checkout-items"></div>
+
+          <div
+            class="summary-row"
+            id="checkout-subtotal-row"
+          >
+            <span>Produse</span>
+            <strong>0.00 RON</strong>
+          </div>
+
+          <div
+            class="summary-row"
+            id="checkout-shipping-row"
+          >
+            <span>Livrare</span>
+            <strong>25.00 RON</strong>
+          </div>
+
+          <div class="summary-total">
+            <span>Total comandă</span>
+            <span>
+              <span id="checkout-total">0.00</span> RON
+            </span>
+          </div>
+        </div>
+
+        <div class="payment-note">
+          Plata se efectuează în două tranșe:
+          <strong>50% avans după confirmarea comenzii</strong>
+          și
+          <strong>50% înainte de expediere</strong>.
+        </div>
+
+        <div class="trust-list">
+
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>
+              Comanda este verificată înainte de confirmare.
+            </span>
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>
+              Detaliile de personalizare se confirmă înainte de producție.
+            </span>
+          </div>
+
+          <div class="trust-item">
+            <span class="trust-icon">✓</span>
+            <span>
+              Vei primi ulterior documentul și instrucțiunile pentru plată.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </aside>
+
+
+    <!-- DREAPTA -->
+    <section class="checkout-right">
+      <div class="checkout-card">
+
+        <h2 class="section-title">
+          Date pentru comandă și livrare
+        </h2>
+
+        <form
+          action="https://formspree.io/f/mzdwblkp"
+          method="POST"
+          id="checkout-form"
+        >
+
+          <input
+            type="hidden"
+            name="Produse Comandate"
+            id="hidden-cart-data"
+          >
+
+          <input
+            type="hidden"
+            name="Taxa Transport"
+            id="hidden-shipping-data"
+            value="25.00 RON"
+          >
+
+          <input
+            type="hidden"
+            name="Total Plata (cu Transport)"
+            id="hidden-total-data"
+          >
+
+          <input
+            type="hidden"
+            name="ID Comanda"
+            id="hidden-order-id"
+          >
+
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="name">Nume și prenume *</label>
+              <input
+                type="text"
+                id="name"
+                name="Nume Client"
+                required
+                autocomplete="name"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Adresă de email *</label>
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                required
+                autocomplete="email"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Număr de telefon *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="Telefon"
+                required
+                autocomplete="tel"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="address">
+                Adresă completă de livrare *
+              </label>
+
+              <textarea
+                id="address"
+                name="Adresa de Livrare"
+                rows="3"
+                placeholder="Localitate, județ, stradă, număr, bloc, cod poștal..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group full-width">
+
+              <label for="customization">
+                Detalii pentru personalizare
+                <span style="font-weight:400;color:#888;">
+                  (opțional)
+                </span>
+              </label>
+
+              <textarea
+                id="customization"
+                name="Detalii Personalizare"
+                rows="4"
+                placeholder="Ex: Mădălina & Iulian, data evenimentului, textul dorit, culori sau alte detalii."
+              ></textarea>
+
+              <div class="field-help">
+                Dacă nu ai toate detaliile acum, le putem stabili ulterior prin WhatsApp sau email.
+              </div>
+
+            </div>
+
+            <div class="form-group full-width">
+
+              <label for="payment">
+                Modalitate de plată *
+              </label>
+
+              <select
+                id="payment"
+                name="Modalitate Plata"
+                required
+              >
+                <option value="50% avans + 50% inainte de expediere">
+                  50% avans + 50% înainte de expediere
+                </option>
+              </select>
+
+              <div class="field-help">
+                După verificarea comenzii primești documentul de plată și posibilitatea de achitare online. Comenzile nu se expediază cu plata ramburs.
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="legal-notice">
+
+            <strong>Produse personalizate și retur</strong>
+
+            <br><br>
+
+            Conform OUG 34/2014, dreptul de retragere de 14 zile
+            nu se aplică produselor realizate la comandă sau clar personalizate.
+
+            Returnarea sau înlocuirea este posibilă în cazul
+            produselor defecte, livrate greșit sau executate diferit
+            față de varianta confirmată.
+
+            <br><br>
+
+            Prin trimiterea comenzii confirmi că ai luat la cunoștință
+            aceste condiții.
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn-submit"
+          >
+            Trimite comanda pentru confirmare
+          </button>
+
+          <div class="submit-note">
+            Trimiterea formularului nu presupune plata imediată.
+            Comanda va fi verificată înainte de confirmare.
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+  </div>
+</div>
   <script src="/cart.js"></script>
 
   <script>
@@ -352,8 +629,8 @@
       // ascundem formularul.
       if (!cart || cart.length === 0) {
 
-        checkoutForm.style.display = "none";
-        emptyCartAlert.style.display = "block";
+        document.getElementById("checkout-layout").style.display = "none";
+emptyCartAlert.style.display = "block";
 
         return;
       }
@@ -401,15 +678,15 @@
 
 
       document.getElementById(
-        "checkout-subtotal-row"
-      ).innerHTML =
-        `Produse: <strong>${subtotal.toFixed(2)} RON</strong>`;
+  "checkout-subtotal-row"
+).innerHTML =
+  `<span>Produse</span><strong>${subtotal.toFixed(2)} RON</strong>`;
 
 
       document.getElementById(
-        "checkout-shipping-row"
-      ).innerHTML =
-        `Transport (max. 5kg): <strong>${taxaTransport.toFixed(2)} RON</strong>`;
+  "checkout-shipping-row"
+).innerHTML =
+  `<span>Livrare</span><strong>${taxaTransport.toFixed(2)} RON</strong>`;
 
 
       document.getElementById(
