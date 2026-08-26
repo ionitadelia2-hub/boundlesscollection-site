@@ -20,7 +20,7 @@
     visibleCount = PAGE_SIZE;
   }
 
-  const filterBtns = $$('.filter .pill');
+  const filterBtns = $$('.filter .pill, .sticker-filter');
   let PRODUCTS = [];
   let activeFilter = 'toate';
 
@@ -57,6 +57,80 @@ const MARTURII_GROUP = ['marturii', 'marturii nunta', 'marturii botez'];
 const PLICURI_GROUP = ['plicuri', 'plicuri nunta', 'plicuri botez'];
 const TRICOURI_GROUP = ['tricouri femei', 'tricouri barbati', 'body bebelusi', 'tricouri copii adolescenti', 'tricouri scolare', 'tricouri elevi', 'tricouri profesori', 'tricouri aniversare'];
 const TRICOURI_SCOLARE_GROUP = ['tricouri scolare', 'tricouri elevi', 'tricouri profesori'];
+const STICKER_FILTER_GROUPS = {
+  nunta: [
+    'nunta',
+    'miri',
+    'mireasa',
+    'mire',
+    'wedding',
+    'save the date'
+  ],
+
+  botez: [
+    'botez',
+    'bebelus',
+    'bebe',
+    'baby',
+    'crestinare'
+  ],
+
+  aniversare: [
+    'aniversare',
+    'majorat',
+    '18 ani',
+    '18th',
+    'birthday',
+    'zi de nastere'
+  ],
+
+  evenimente: [
+    'eveniment',
+    'petrecere',
+    'welcome',
+    'bun venit',
+    'corporate',
+    'logodna',
+    'baby shower',
+    'bridal shower'
+  ],
+
+  pahare: [
+    'pahar',
+    'pahare',
+    'cupe',
+    'cupa',
+    'flute'
+  ]
+};
+
+function matchesStickerSubfilter(p, filter) {
+  if (!filter || filter === 'toate') return true;
+
+  const title = key(p.title || '');
+  const tags = Array.isArray(p.tagsKey) ? p.tagsKey : [];
+
+  if (filter === 'pahare') {
+    return (
+      title.includes('pahar') ||
+      title.includes('pahare') ||
+      tags.includes('pahar') ||
+      tags.includes('pahare') ||
+      tags.some(t => t.includes('pahar') || t.includes('pahare'))
+    );
+  }
+
+  const words = STICKER_FILTER_GROUPS[filter] || [];
+
+  return words.some(word => {
+    const w = key(word);
+
+    return (
+      title.includes(w) ||
+      tags.some(t => t.includes(w))
+    );
+  });
+}
 
 const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
   if (!filterKey || filterKey === 'toate') return true;
@@ -175,7 +249,10 @@ if (filterKey === 'tricouri scolare') {
       const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
       const hitTerm = !term || hay.includes(term);
 
-      const hitCatToggle = matchesCategoryGroup(p.categoryKey, activeFilter, p.tagsKey);
+      const hitCatToggle =
+  PAGE_FILTER === 'stickere oglinda'
+    ? matchesStickerSubfilter(p, activeFilter)
+    : matchesCategoryGroup(p.categoryKey, activeFilter, p.tagsKey);
       const hitPage = !PAGE_FILTER || matchesCategoryGroup(p.categoryKey, PAGE_FILTER, p.tagsKey);
 
       return hitTerm && hitCatToggle && hitPage;
