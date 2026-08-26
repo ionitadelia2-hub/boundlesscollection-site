@@ -208,10 +208,38 @@
   Autocolante personalizate pentru oglinzi de intampinare si semnalistica eleganta — fonturi caligrafice, finisaje aurii/albe si dimensiuni la comanda.
 </p>
 
-<div class="category-switch" aria-label="Navigare rapidă accesorii">
-  <a class="btn" href="/accesorii-pregatiri-nunta.html">Toate accesoriile</a>
-  <a class="btn primary" href="/stickere-oglinda.html" aria-current="page">Stickere oglindă</a>
-  <a class="btn" href="/pahare-nunta-personalizate.html">Pahare nuntă personalizate</a>
+<div class="sticker-filter-wrap">
+  <p class="sticker-filter-label">Alege tipul evenimentului</p>
+
+  <div class="sticker-filters" role="group" aria-label="Filtre stickere">
+    <button type="button" class="sticker-filter active" data-filter="toate">
+      Toate
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="nunta">
+      Nuntă
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="botez">
+      Botez
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="aniversare">
+      Aniversare
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="evenimente">
+      Evenimente
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="pahare">
+      Pahare
+    </button>
+  </div>
+</div>
+
+<div id="sticker-filter-empty" class="sticker-filter-empty" hidden>
+  Nu am găsit momentan produse în această categorie.
 </div>
 
 <div id="grid" class="grid products" aria-live="polite"></div>
@@ -294,5 +322,136 @@
   <!-- Script global -->
   <script defer src="/script.js"></script>
   <script src="/cart.js" defer></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.getElementById("grid");
+  const buttons = document.querySelectorAll(".sticker-filter");
+  const emptyState = document.getElementById("sticker-filter-empty");
+
+  if (!grid || !buttons.length) return;
+
+  let activeFilter = "toate";
+
+  function normalizeText(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
+  }
+
+  function getProductText(card) {
+    return normalizeText(card.textContent);
+  }
+
+  function matchesFilter(card, filter) {
+    if (filter === "toate") return true;
+
+    const text = getProductText(card);
+
+    const groups = {
+      nunta: [
+        "nunta",
+        "nunții",
+        "miri",
+        "mireasa",
+        "mire",
+        "wedding",
+        "casatorie",
+        "save the date"
+      ],
+
+      botez: [
+        "botez",
+        "bebelus",
+        "bebe",
+        "baby",
+        "nasi",
+        "nasii",
+        "crestinare"
+      ],
+
+      aniversare: [
+        "aniversare",
+        "majorat",
+        "18 ani",
+        "18th",
+        "birthday",
+        "party",
+        "zi de nastere"
+      ],
+
+      pahare: [
+        "pahar",
+        "pahare",
+        "glass",
+        "cupe",
+        "cupa",
+        "flute"
+      ],
+
+      evenimente: [
+        "eveniment",
+        "petrecere",
+        "welcome",
+        "bun venit",
+        "corporate",
+        "logodna",
+        "baby shower",
+        "bridal shower"
+      ]
+    };
+
+    return (groups[filter] || []).some(keyword =>
+      text.includes(normalizeText(keyword))
+    );
+  }
+
+  function applyStickerFilter(filter) {
+    activeFilter = filter;
+
+    const cards = Array.from(grid.children);
+    let visible = 0;
+
+    cards.forEach(card => {
+      const show = matchesFilter(card, filter);
+
+      card.style.display = show ? "" : "none";
+
+      if (show) visible++;
+    });
+
+    buttons.forEach(button => {
+      const active = button.dataset.filter === filter;
+
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+
+    if (emptyState) {
+      emptyState.hidden = visible !== 0;
+    }
+  }
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      applyStickerFilter(button.dataset.filter);
+    });
+  });
+
+  /*
+   * script.js încarcă produsele dinamic.
+   * Observăm gridul și reaplicăm filtrul după încărcare.
+   */
+  const observer = new MutationObserver(() => {
+    applyStickerFilter(activeFilter);
+  });
+
+  observer.observe(grid, {
+    childList: true
+  });
+
+  applyStickerFilter("toate");
+});
+</script>
 </body>
 </html>

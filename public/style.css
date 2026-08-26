@@ -1769,3 +1769,97 @@ footer{
   opacity: .7;
   cursor: wait;
 }
+
+/* =====================================================
+   FILTRE STICKERE OGLINDA
+===================================================== */
+
+.sticker-filter-wrap {
+  margin: 2rem auto 2.2rem;
+  text-align: center;
+}
+
+.sticker-filter-label {
+  margin: 0 0 .8rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  color: #817276;
+}
+
+.sticker-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+
+.sticker-filter {
+  appearance: none;
+  border: 1px solid #edc9d6;
+  background: #fff;
+  color: #6d4655;
+  padding: .65rem 1.15rem;
+  border-radius: 999px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: .82rem;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background .2s ease,
+    color .2s ease,
+    border-color .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.sticker-filter:hover {
+  transform: translateY(-1px);
+  border-color: #dda4b8;
+  background: #fff7fa;
+}
+
+.sticker-filter.active {
+  background: #f8cddd;
+  border-color: #f0b7cb;
+  color: #3c2530;
+  box-shadow: 0 5px 15px rgba(177, 103, 129, .12);
+}
+
+.sticker-filter-empty {
+  margin: 2rem auto;
+  padding: 1.2rem;
+  max-width: 520px;
+
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: .9rem;
+  color: #796b70;
+
+  border: 1px solid #f0d8e1;
+  border-radius: 14px;
+  background: #fff8fa;
+}
+
+@media (max-width: 600px) {
+  .sticker-filters {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0 4px 8px;
+    scrollbar-width: none;
+  }
+
+  .sticker-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sticker-filter {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
