@@ -892,10 +892,10 @@ for (const entry of fs.readdirSync(ROOT)) {
   entry
 );
 
-processedHtml = injectWeddingAccessoriesNav(
-  processedHtml,
-  entry
-);
+//processedHtml = injectWeddingAccessoriesNav(
+ // processedHtml,
+  //entry
+//);
 
 processedHtml = injectGoogleTag(
   processedHtml,
