@@ -1758,3 +1758,14 @@ footer{
   }
 
 }
+#formStatus {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+#sendBtn:disabled {
+  opacity: .7;
+  cursor: wait;
+}
