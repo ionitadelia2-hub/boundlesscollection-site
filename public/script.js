@@ -119,7 +119,11 @@ const STICKER_FILTER_GROUPS = {
 };
 
 function matchesStickerSubfilter(p, filter) {
-  if (!filter || filter === 'toate') return true;
+  if (!filter || filter === 'toate')
+    
+    
+    
+    return true;
 
   const title = key(p.title || '');
   const tags = Array.isArray(p.tagsKey) ? p.tagsKey : [];
@@ -234,6 +238,47 @@ function matchesMenuSubfilter(p, filter) {
       );
     });
   }
+
+if (filter === 'majorat') {
+  const words = [
+    'majorat',
+    '18 ani',
+    '18th',
+    'aniversare 18',
+    'birthday 18'
+  ];
+
+  return words.some(word => {
+    const w = key(word);
+
+    return (
+      title.includes(w) ||
+      tags.some(t => t.includes(w))
+    );
+  });
+}
+
+if (filter === 'banchet') {
+  const words = [
+    'banchet',
+    'absolvire',
+    'curs festiv',
+    'festivitate',
+    'clasa a 8',
+    'clasa a 12',
+    'liceu',
+    'facultate'
+  ];
+
+  return words.some(word => {
+    const w = key(word);
+
+    return (
+      title.includes(w) ||
+      tags.some(t => t.includes(w))
+    );
+  });
+}
 
   return true;
 }
@@ -470,7 +515,8 @@ if (PAGE_FILTER === 'stickere oglinda') {
 
 } else if (
   PAGE_FILTER === 'meniuri' ||
-  PAGE_FILTER === 'numere de masa'
+  PAGE_FILTER === 'numere de masa'||
+  PAGE_FILTER === 'invitatii'
 ) {
   hitCatToggle = matchesMenuSubfilter(p, activeFilter);
 

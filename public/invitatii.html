@@ -525,11 +525,45 @@
         Fiecare model este realizat cu grijă și poate fi adaptat pentru a spune povestea evenimentului tău într-un mod elegant și memorabil.
       </p>
 
-      <nav class="category-switch" aria-label="Alege tipul de invitații">
-        <a class="btn primary" href="/invitatii" aria-current="page">Toate invitațiile</a>
-        <a class="btn" href="/invitatii-nunta">Invitații nuntă</a>
-        <a class="btn" href="/invitatii-botez">Invitații botez</a>
-      </nav>
+      <!--
+<nav class="category-switch" aria-label="Alege tipul de invitații">
+  <a class="btn primary" href="/invitatii" aria-current="page">Toate invitațiile</a>
+  <a class="btn" href="/invitatii-nunta">Invitații nuntă</a>
+  <a class="btn" href="/invitatii-botez">Invitații botez</a>
+</nav>
+-->
+
+<div class="sticker-filter-wrap">
+  <p class="sticker-filter-label">Alege tipul evenimentului</p>
+
+  <div class="sticker-filters" role="group" aria-label="Filtre invitații">
+
+    <button type="button" class="sticker-filter active" data-filter="toate">
+      Toate
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="nunta">
+      Nuntă
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="botez">
+      Botez
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="majorat">
+      Majorat
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="banchet">
+      Banchet
+    </button>
+
+  </div>
+</div>
+
+<div id="sticker-filter-empty" class="sticker-filter-empty" hidden>
+  Nu am găsit momentan invitații în această categorie.
+</div>
 
       <div id="grid" class="grid products category" aria-live="polite"></div>
 
