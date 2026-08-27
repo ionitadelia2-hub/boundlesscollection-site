@@ -516,7 +516,8 @@ if (PAGE_FILTER === 'stickere oglinda') {
 } else if (
   PAGE_FILTER === 'meniuri' ||
   PAGE_FILTER === 'numere de masa'||
-  PAGE_FILTER === 'invitatii'
+  PAGE_FILTER === 'invitatii' ||
+  PAGE_FILTER === 'plicuri'
 ) {
   hitCatToggle = matchesMenuSubfilter(p, activeFilter);
 

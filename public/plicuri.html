@@ -100,7 +100,7 @@
     "mainEntity":[
       {"@type":"Question","name":"Plicurile de dar pot fi personalizate?","acceptedAnswer":{"@type":"Answer","text":"Da. Textul, culorile, fonturile și elementele grafice pot fi adaptate temei nunții sau botezului, în funcție de modelul ales."}},
       {"@type":"Question","name":"Plicurile de dar pot fi asortate cu invitațiile?","acceptedAnswer":{"@type":"Answer","text":"Da. Plicurile pot fi realizate în același stil cu invitațiile, meniurile, numerele de masă și celelalte elemente de papetărie."}},
-      {"@type":"Question","name":"Ce tip de carton este folosit?","acceptedAnswer":{"@type":"Answer","text":"În funcție de model, plicurile sunt realizate din carton premium de 200 g, 220 g sau 300 g."}},
+      {"@type":"Question","name":"Ce tip de carton este folosit?","acceptedAnswer":{"@type":"Answer","text":"În funcție de model, plicurile sunt realizate din carton premium de 200 g, 220 g sau 250 g."}},
       {"@type":"Question","name":"Realizați plicuri de dar pentru nuntă și botez?","acceptedAnswer":{"@type":"Answer","text":"Da. Colecția include modele personalizabile atât pentru nunți, cât și pentru botezuri."}},
       {"@type":"Question","name":"Cum pot solicita o ofertă?","acceptedAnswer":{"@type":"Answer","text":"Oferta poate fi solicitată prin WhatsApp, împreună cu modelul dorit, cantitatea și detaliile evenimentului."}}
     ]
@@ -239,7 +239,7 @@
         <h2 id="benefits-title">Ce îți oferă colecția noastră de plicuri de dar?</h2>
         <div class="benefits-grid">
           <article class="benefit-card"><strong>Varietate de stiluri</strong>Modele clasice, elegante, florale, romantice, moderne sau minimaliste, potrivite pentru nunți și botezuri.</article>
-          <article class="benefit-card"><strong>Carton premium</strong>Plicurile sunt realizate din carton de 200 g, 220 g sau 300 g, în funcție de model, pentru un aspect elegant și o rezistență bună.</article>
+          <article class="benefit-card"><strong>Carton premium</strong>Plicurile sunt realizate din carton de 200 g, 220 g sau 250 g, în funcție de model, pentru un aspect elegant și o rezistență bună.</article>
           <article class="benefit-card"><strong>Personalizare completă</strong>Textul, culorile, fonturile și elementele grafice pot fi adaptate temei și paletei cromatice a evenimentului.</article>
           <article class="benefit-card"><strong>Set unitar de papetărie</strong>Plicurile pot fi asortate cu invitațiile, meniurile, numerele de masă și celelalte produse din colecție.</article>
         </div>
@@ -247,11 +247,37 @@
 
       <p class="category-summary">Alege plicuri de dar create cu grijă pentru fiecare eveniment. Colecția include modele personalizabile pentru nuntă și botez, realizate astfel încât să se integreze armonios în decor și să completeze întreaga papetărie.</p>
 
-      <nav class="category-switch" aria-label="Alege tipul de plicuri">
-        <a class="btn primary" href="/plicuri" aria-current="page">Toate plicurile</a>
-        <a class="btn" href="/plicuri-nunta">Plicuri nuntă</a>
-        <a class="btn" href="/plicuri-botez">Plicuri botez</a>
-      </nav>
+      <!--
+<nav class="category-switch" aria-label="Alege tipul de plicuri">
+  <a class="btn primary" href="/plicuri" aria-current="page">Toate plicurile</a>
+  <a class="btn" href="/plicuri-nunta">Plicuri nuntă</a>
+  <a class="btn" href="/plicuri-botez">Plicuri botez</a>
+</nav>
+-->
+
+<div class="sticker-filter-wrap">
+  <p class="sticker-filter-label">Alege tipul evenimentului</p>
+
+  <div class="sticker-filters" role="group" aria-label="Filtre plicuri">
+
+    <button type="button" class="sticker-filter active" data-filter="toate">
+      Toate
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="nunta">
+      Nuntă
+    </button>
+
+    <button type="button" class="sticker-filter" data-filter="botez">
+      Botez
+    </button>
+
+  </div>
+</div>
+
+<div id="sticker-filter-empty" class="sticker-filter-empty" hidden>
+  Nu am găsit momentan plicuri în această categorie.
+</div>
 
       <div id="grid" class="grid products category" aria-live="polite"></div>
 
@@ -274,7 +300,7 @@
         <div class="faq-list">
           <details class="faq-item"><summary>Plicurile de dar pot fi personalizate?</summary><p>Da. Textul, culorile, fonturile și elementele grafice pot fi adaptate temei nunții sau botezului, în funcție de modelul ales.</p></details>
           <details class="faq-item"><summary>Pot fi asortate cu invitațiile?</summary><p>Da. Putem realiza plicurile în același stil cu invitațiile, meniurile, numerele de masă și celelalte elemente de papetărie.</p></details>
-          <details class="faq-item"><summary>Ce tip de carton folosiți?</summary><p>În funcție de model, folosim carton premium de 200 g, 220 g sau 300 g. Tipul de carton este ales astfel încât produsul final să aibă un aspect elegant și o rezistență potrivită.</p></details>
+          <details class="faq-item"><summary>Ce tip de carton folosiți?</summary><p>În funcție de model, folosim carton premium de 200 g, 220 g sau 250 g. Tipul de carton este ales astfel încât produsul final să aibă un aspect elegant și o rezistență potrivită.</p></details>
           <details class="faq-item"><summary>Realizați plicuri pentru nuntă și botez?</summary><p>Da. Colecția include modele pentru ambele tipuri de evenimente. Poți consulta separat categoriile dedicate plicurilor de nuntă și plicurilor de botez.</p></details>
           <details class="faq-item"><summary>Există o cantitate minimă?</summary><p>Cantitatea minimă poate varia în funcție de model și de nivelul de personalizare. Pentru informații exacte, trimite modelul și cantitatea dorită prin WhatsApp.</p></details>
           <details class="faq-item"><summary>Cum solicit o ofertă?</summary><p>Trimite prin WhatsApp modelul preferat, cantitatea, data evenimentului și detaliile de personalizare. Vei primi informații despre preț și termenul estimativ de realizare.</p></details>
