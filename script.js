@@ -239,6 +239,24 @@ function matchesMenuSubfilter(p, filter) {
     });
   }
 
+  if (filter === 'nuntez') {
+  const words = [
+    'nuntez',
+    'nunta si botez',
+    'nunta & botez',
+    'nunta botez'
+  ];
+
+  return words.some(word => {
+    const w = key(word);
+
+    return (
+      title.includes(w) ||
+      tags.some(t => t.includes(w))
+    );
+  });
+}
+
 if (filter === 'majorat') {
   const words = [
     'majorat',
