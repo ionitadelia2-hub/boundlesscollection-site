@@ -1845,6 +1845,106 @@ footer{
   background: #fff8fa;
 }
 
+/* =====================================================
+   FILTRE MARTURII
+===================================================== */
+
+.marturii-filter-wrap {
+  max-width: 900px;
+  margin: 2.2rem auto 2.5rem;
+  padding: 1.6rem 1.8rem;
+  border: 1px solid #f0d6df;
+  border-radius: 20px;
+  background: rgba(255, 250, 252, .78);
+}
+
+.marturii-filter-group {
+  text-align: center;
+}
+
+.marturii-filter-group + .marturii-filter-group {
+  margin-top: 1.35rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid #f4dfe6;
+}
+
+.marturii-filter-wrap .sticker-filter-label {
+  margin: 0 0 .8rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #9c7180;
+}
+
+.marturii-filter-wrap .sticker-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .55rem;
+}
+
+.marturii-filter-wrap .sticker-filter {
+  min-height: 40px;
+  padding: .65rem 1.05rem;
+  border: 1px solid #efcbd7;
+  border-radius: 999px;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: .8rem;
+  color: #5f444e;
+  cursor: pointer;
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.marturii-filter-wrap .sticker-filter:hover {
+  transform: translateY(-1px);
+  border-color: #dfa9bb;
+  background: #fff8fa;
+}
+
+.marturii-filter-wrap .sticker-filter.active {
+  background: #f8cddd;
+  border-color: #edaec4;
+  color: #5a2d3d;
+  font-weight: 600;
+  box-shadow: 0 5px 14px rgba(180, 90, 120, .10);
+}
+
+#marturii-filter-empty {
+  max-width: 900px;
+  margin: -1rem auto 2rem;
+  text-align: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .marturii-filter-wrap {
+    margin: 1.6rem auto 2rem;
+    padding: 1.25rem 1rem;
+    border-radius: 16px;
+  }
+
+  .marturii-filter-wrap .sticker-filters {
+    gap: .45rem;
+  }
+
+  .marturii-filter-wrap .sticker-filter {
+    min-height: 38px;
+    padding: .6rem .85rem;
+    font-size: .76rem;
+  }
+}
+
 @media (max-width: 600px) {
   .sticker-filters {
     justify-content: flex-start;
