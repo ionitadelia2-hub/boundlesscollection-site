@@ -1924,6 +1924,109 @@ footer{
   text-align: center;
 }
 
+/* =====================================================
+   HAMBURGER PREMIUM - MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .nav-toggle {
+    width: 52px;
+    height: 52px;
+    padding: 0;
+    border: 1px solid rgba(212, 122, 150, .30);
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255,255,255,.95),
+        rgba(255,238,244,.95)
+      );
+
+    box-shadow:
+      0 8px 24px rgba(180, 90, 120, .12),
+      inset 0 1px 0 rgba(255,255,255,.9);
+
+    cursor: pointer;
+    position: relative;
+    z-index: 1002;
+
+    transition:
+      transform .25s ease,
+      box-shadow .25s ease,
+      background .25s ease;
+  }
+
+  .nav-toggle:active {
+    transform: scale(.94);
+  }
+
+  /* linia din mijloc */
+  .nav-toggle span {
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background: #b44f73;
+    position: relative;
+
+    transition:
+      background .25s ease,
+      transform .25s ease;
+  }
+
+  /* linia de sus + jos */
+  .nav-toggle span::before,
+  .nav-toggle span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background: #b44f73;
+
+    transition:
+      transform .28s ease,
+      top .28s ease,
+      opacity .2s ease;
+  }
+
+  .nav-toggle span::before {
+    top: -7px;
+  }
+
+  .nav-toggle span::after {
+    top: 7px;
+  }
+
+  /* când meniul este deschis */
+  body.menu-open .nav-toggle {
+    background: #fff5f8;
+    box-shadow:
+      0 10px 28px rgba(180, 90, 120, .18);
+  }
+
+  body.menu-open .nav-toggle span {
+    background: transparent;
+  }
+
+  body.menu-open .nav-toggle span::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  body.menu-open .nav-toggle span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
 
 /* MOBILE */
 
@@ -1961,5 +2064,14 @@ footer{
   .sticker-filter {
     flex: 0 0 auto;
     white-space: nowrap;
+  }
+}
+
+/* FIX FINAL - elimina iconita hamburger veche */
+@media (max-width: 900px) {
+  .nav-toggle::after,
+  .menu-open .nav-toggle::after {
+    content: none !important;
+    display: none !important;
   }
 }
