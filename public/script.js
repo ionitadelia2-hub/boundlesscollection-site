@@ -187,6 +187,53 @@ function matchesStickerSubfilter(p, filter) {
   });
 }
 
+function matchesMenuSubfilter(p, filter) {
+  if (!filter || filter === 'toate') return true;
+
+  const title = key(p.title || '');
+  const tags = Array.isArray(p.tagsKey) ? p.tagsKey : [];
+
+  if (filter === 'nunta') {
+    const words = [
+      'nunta',
+      'miri',
+      'mire',
+      'mireasa',
+      'wedding'
+    ];
+
+    return words.some(word => {
+      const w = key(word);
+
+      return (
+        title.includes(w) ||
+        tags.some(t => t.includes(w))
+      );
+    });
+  }
+
+  if (filter === 'botez') {
+    const words = [
+      'botez',
+      'bebelus',
+      'bebe',
+      'baby',
+      'crestinare'
+    ];
+
+    return words.some(word => {
+      const w = key(word);
+
+      return (
+        title.includes(w) ||
+        tags.some(t => t.includes(w))
+      );
+    });
+  }
+
+  return true;
+}
+
 const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
   if (!filterKey || filterKey === 'toate') return true;
 
@@ -304,10 +351,19 @@ if (filterKey === 'tricouri scolare') {
       const hay = norm([p.title, p.desc, p.category, ...(p.tags || [])].join(' '));
       const hitTerm = !term || hay.includes(term);
 
-      const hitCatToggle =
-  PAGE_FILTER === 'stickere oglinda'
-    ? matchesStickerSubfilter(p, activeFilter)
-    : matchesCategoryGroup(p.categoryKey, activeFilter, p.tagsKey);
+      let hitCatToggle;
+
+if (PAGE_FILTER === 'stickere oglinda') {
+  hitCatToggle = matchesStickerSubfilter(p, activeFilter);
+} else if (PAGE_FILTER === 'meniuri') {
+  hitCatToggle = matchesMenuSubfilter(p, activeFilter);
+} else {
+  hitCatToggle = matchesCategoryGroup(
+    p.categoryKey,
+    activeFilter,
+    p.tagsKey
+  );
+}
       const hitPage = !PAGE_FILTER || matchesCategoryGroup(p.categoryKey, PAGE_FILTER, p.tagsKey);
 
       return hitTerm && hitCatToggle && hitPage;
