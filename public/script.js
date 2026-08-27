@@ -21,8 +21,12 @@
   }
 
   const filterBtns = $$('.filter .pill, .sticker-filter');
-  let PRODUCTS = [];
-  let activeFilter = 'toate';
+let PRODUCTS = [];
+let activeFilter = 'toate';
+
+// Filtre speciale pagina Marturii
+let activeMarturiiEvent = 'toate';
+let activeMarturiiType = 'toate';
 
   // ===== Normalizări robuste (spații/liniuțe/diacritice) =====
   const key = (s) => (s || '')
@@ -234,6 +238,92 @@ function matchesMenuSubfilter(p, filter) {
   return true;
 }
 
+function matchesMarturiiFilters(p) {
+  const title = key(p.title || '');
+  const tags = Array.isArray(p.tagsKey) ? p.tagsKey : [];
+
+  const containsAny = (words) =>
+    words.some(word => {
+      const w = key(word);
+      return title.includes(w) || tags.some(t => t.includes(w));
+    });
+
+  // EVENIMENT
+  let hitEvent = true;
+
+  if (activeMarturiiEvent === 'nunta') {
+    hitEvent = containsAny([
+      'nunta',
+      'miri',
+      'mire',
+      'mireasa',
+      'wedding'
+    ]);
+  }
+
+  if (activeMarturiiEvent === 'botez') {
+    hitEvent = containsAny([
+      'botez',
+      'bebelus',
+      'bebe',
+      'baby',
+      'crestinare'
+    ]);
+  }
+
+  if (activeMarturiiEvent === 'nuntez') {
+    hitEvent = containsAny([
+      'nuntez'
+    ]);
+  }
+
+  // TIP MARTURIE
+  let hitType = true;
+
+  if (activeMarturiiType === 'ceara soia') {
+    hitType = containsAny([
+      'ceara de soia',
+      'ceara soia',
+      'lumanare',
+      'lumanari'
+    ]);
+  }
+
+  if (activeMarturiiType === 'iconita mir') {
+    hitType = containsAny([
+      'iconita cu mir',
+      'iconite cu mir',
+      'iconita mir',
+      'iconite mir',
+      'mir'
+    ]);
+  }
+
+  if (activeMarturiiType === 'miere') {
+    hitType = containsAny([
+      'miere',
+      'borcan miere',
+      'borcanas miere'
+    ]);
+  }
+
+  if (activeMarturiiType === 'sare piper') {
+    hitType = containsAny([
+      'sare si piper',
+      'sare piper'
+    ]);
+  }
+
+  if (activeMarturiiType === 'magnet') {
+    hitType = containsAny([
+      'magnet',
+      'magneti'
+    ]);
+  }
+
+  return hitEvent && hitType;
+}
+
 const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
   if (!filterKey || filterKey === 'toate') return true;
 
@@ -355,11 +445,16 @@ if (filterKey === 'tricouri scolare') {
 
 if (PAGE_FILTER === 'stickere oglinda') {
   hitCatToggle = matchesStickerSubfilter(p, activeFilter);
+
 } else if (
   PAGE_FILTER === 'meniuri' ||
   PAGE_FILTER === 'numere de masa'
 ) {
   hitCatToggle = matchesMenuSubfilter(p, activeFilter);
+
+} else if (PAGE_FILTER === 'marturii') {
+  hitCatToggle = matchesMarturiiFilters(p);
+
 } else {
   hitCatToggle = matchesCategoryGroup(
     p.categoryKey,
@@ -507,8 +602,54 @@ if (PAGE_FILTER === 'stickere oglinda') {
       }
     }
 
+if (PAGE_FILTER === 'marturii') {
+  const eventBtns = $$('#marturii-event-filters .sticker-filter');
+  const typeBtns = $$('#marturii-type-filters .sticker-filter');
+
+  eventBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      eventBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      activeMarturiiEvent = key(btn.dataset.event || 'toate');
+
+      resetPagination();
+      render();
+    });
+  });
+
+  typeBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      typeBtns.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+
+      activeMarturiiType = key(btn.dataset.type || 'toate');
+
+      resetPagination();
+      render();
+    });
+  });
+}
+
     filterBtns.forEach((btn) =>
   btn.addEventListener('click', () => {
+
+    if (
+      PAGE_FILTER === 'marturii' &&
+      (btn.dataset.event || btn.dataset.type)
+    ) {
+      return;
+    }
     filterBtns.forEach((b) => {
       b.setAttribute('aria-pressed', 'false');
       b.classList.remove('active');

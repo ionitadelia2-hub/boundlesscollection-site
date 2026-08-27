@@ -237,11 +237,91 @@
   </p>
 </div>
 
-    <div class="category-switch" aria-label="Navigare mărturii">
-      <a class="btn primary" href="/marturii.html">Toate marturiile</a>
-      <a class="btn" href="/marturii-nunta.html">Marturii nunta</a>
-      <a class="btn" href="/marturii-botez.html">Marturii botez</a>
+    <!--
+<div class="category-switch" aria-label="Navigare mărturii">
+  <a class="btn primary" href="/marturii.html">Toate marturiile</a>
+  <a class="btn" href="/marturii-nunta.html">Marturii nunta</a>
+  <a class="btn" href="/marturii-botez.html">Marturii botez</a>
+</div>
+-->
+
+<!-- FILTRE MARTURII -->
+<div class="marturii-filter-wrap">
+
+  <div class="marturii-filter-group">
+    <p class="sticker-filter-label">Alege evenimentul</p>
+
+    <div class="sticker-filters" id="marturii-event-filters"
+         role="group" aria-label="Filtrare după eveniment">
+
+      <button type="button" class="sticker-filter active"
+              data-event="toate">
+        Toate
+      </button>
+
+      <button type="button" class="sticker-filter"
+              data-event="nunta">
+        Nuntă
+      </button>
+
+      <button type="button" class="sticker-filter"
+              data-event="botez">
+        Botez
+      </button>
+
+      <button type="button" class="sticker-filter"
+              data-event="nuntez">
+        Nuntez
+      </button>
+
     </div>
+  </div>
+
+
+  <div class="marturii-filter-group">
+    <p class="sticker-filter-label">Alege tipul mărturiei</p>
+
+    <div class="sticker-filters" id="marturii-type-filters"
+         role="group" aria-label="Filtrare după tipul mărturiei">
+
+      <button type="button" class="sticker-filter active"
+              data-type="toate">
+        Toate
+      </button>
+
+      <button type="button" class="sticker-filter"
+              data-type="ceara-soia">
+        Ceară de soia
+      </button>
+
+      <button type="button" class="sticker-filter"
+              data-type="iconita-mir">
+        Iconițe cu mir
+      </button>
+
+      <button type="button" class="sticker-filter"
+              data-type="miere">
+        Miere
+      </button>
+
+      <button type="button" class="sticker-filter"
+              data-type="sare-piper">
+        Sare &amp; piper
+      </button>
+
+      <button type="button" class="sticker-filter"
+              data-type="magnet">
+        Magnet
+      </button>
+
+    </div>
+  </div>
+
+</div>
+
+<div id="marturii-filter-empty" class="sticker-filter-empty" hidden>
+  Nu am găsit momentan mărturii pentru combinația selectată.
+</div>
 
     <!-- Grilă dinamică -->
     <div id="grid" class="grid products category" aria-live="polite"></div>
