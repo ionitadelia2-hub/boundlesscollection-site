@@ -1,5 +1,39 @@
 [
   {
+    "id": "invitatie-nunta-personalizata-arcuita-flori-001",
+    "title": "Invitație de Nuntă Personalizată Arcuită cu Flori – Model Floral Elegant",
+    "price": 4.5,
+    "category": "invitatii",
+    "product_type": "invitatii",
+    "desc": "Invitație de nuntă personalizată cu formă arcuită și design floral elegant în tonuri ivory, verde delicat și accente calde. Se personalizează cu numele mirilor, data evenimentului, ora și locația ceremoniei, locația petrecerii și textul dorit. Model potrivit pentru nunți elegante, romantice sau minimaliste și poate fi asortat cu meniuri, numere de masă și carduri cu numele invitaților.",
+    "images": [
+      "/images/invitatii/invitatie-nunta-arcuita-florala-andreea-kevin.png",
+      "/images/invitatii/invitatie-nunta-arcuita-florala-andreea-kevin-1.png",
+      "/images/invitatii/invitatie-nunta-arcuita-florala-andreea-kevin-2.png"
+    ],
+    "tags": [
+      "invitatii",
+      "invitatii nunta",
+      "invitatii nunta personalizate",
+      "invitatie nunta",
+      "invitatie de nunta",
+      "invitatie nunta personalizata",
+      "invitatie nunta florala",
+      "invitatii florale",
+      "invitatie nunta eleganta",
+      "invitatii nunta elegante",
+      "invitatie arcuita",
+      "invitatii personalizate",
+      "papetarie nunta",
+      "nunta"
+    ],
+    "slug": "invitatie-de-nunta-personalizata-arcuita-cu-flori-model-floral-elegant-invitati",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
+    "material": "",
+    "min_quantity": 25,
+    "mpn": ""
+  },
+  {
     "id": "invitatie-botez-premium-baby-dior-safari",
     "title": "Invitație Botez Premium Baby Dior Safari - Toile de Jouy Albastru",
     "price": 4.5,
@@ -4492,6 +4526,37 @@
     "mpn": ""
   },
   {
+    "id": "meniu-nunta-personalizat-arcuit-floral-001",
+    "title": "Meniu de Nuntă Personalizat Arcuit cu Flori – Model Floral Elegant",
+    "price": 4.5,
+    "category": "meniuri",
+    "product_type": "meniuri",
+    "desc": "Meniu de nuntă personalizat cu formă arcuită și design floral elegant în tonuri ivory, verde delicat și accente calde. Se personalizează cu numele mirilor, data evenimentului și preparatele alese pentru starter, fel principal și desert. Model rafinat, potrivit pentru nunți elegante, romantice sau minimaliste și poate fi asortat cu invitații, numere de masă și carduri cu numele invitaților.",
+    "images": [
+      "/images/meniuri/meniu-nunta-personalizat-arcuit-floral.png"
+    ],
+    "tags": [
+      "meniuri",
+      "meniuri nunta",
+      "meniu nunta",
+      "meniu de nunta",
+      "meniu nunta personalizat",
+      "meniu nunta floral",
+      "meniuri florale",
+      "meniu nunta elegant",
+      "meniuri nunta elegante",
+      "meniu arcuit",
+      "papetarie nunta",
+      "nunta",
+      "personalizat"
+    ],
+    "slug": "meniu-de-nunta-personalizat-arcuit-cu-flori-model-floral-elegant-meniu-nu",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Tableware > Place Cards & Table Numbers",
+    "material": "",
+    "min_quantity": 25,
+    "mpn": ""
+  },
+  {
     "id": "meniu-botez-ursulet-baby-dior-safari",
     "title": "Meniu Botez Decupat în Formă de Ursuleț - Baby Dior Safari Toile de Jouy",
     "price": 5,
@@ -4964,6 +5029,41 @@
     ],
     "slug": "marturie-lumanare-roz-pastel-din-ceara-de-soia-cu-flori-uscate-si-eticheta-personalizata-marturie",
     "google_product_category": "Arts & Entertainment > Party & Celebration > Favors",
+    "material": "",
+    "min_quantity": 25,
+    "mpn": ""
+  },
+  {
+    "id": "set-papetarie-nunta-personalizat-floral-arcuit-001",
+    "title": "Set Papetărie Nuntă Personalizat Floral – Invitație Meniu Număr Masă și Name Tag",
+    "price": 21.9,
+    "category": "set",
+    "product_type": "set",
+    "desc": "Set de papetărie pentru nuntă personalizat, realizat într-un design floral elegant în tonuri ivory, verde delicat și accente calde. Setul poate include invitație de nuntă, Save the Date, meniu, număr de masă, card cu numele invitatului și card de mulțumire. Toate elementele se personalizează cu numele mirilor, data evenimentului, textele și detaliile nunții, pentru un decor unitar și rafinat. Potrivit pentru nunți elegante, romantice sau minimaliste.",
+    "images": [
+      "/images/seturi/set-papetarie-nunta-floral-arcuit.png"
+    ],
+    "tags": [
+      "set nunta",
+      "set papetarie nunta",
+      "papetarie nunta",
+      "papetarie nunta personalizata",
+      "set nunta personalizat",
+      "invitatie nunta",
+      "meniu nunta",
+      "numar masa nunta",
+      "name tag nunta",
+      "card nume invitati",
+      "place card nunta",
+      "save the date",
+      "card multumire nunta",
+      "nunta",
+      "personalizat",
+      "floral",
+      "elegant"
+    ],
+    "slug": "set-papetarie-nunta-personalizat-floral-invitatie-meniu-numar-masa-si-name-tag-set-pape",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Invitations",
     "material": "",
     "min_quantity": 25,
     "mpn": ""
@@ -6984,6 +7084,37 @@
     "google_product_category": "Home & Garden > Decor > Candles",
     "material": "",
     "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "numar-masa-nunta-personalizat-rotund-floral-001",
+    "title": "Număr de Masă Nuntă Personalizat Rotund cu Flori – Model Floral Elegant",
+    "price": 4,
+    "category": "numere masa",
+    "product_type": "numere masa",
+    "desc": "Număr de masă pentru nuntă, personalizat în format rotund, cu design floral elegant în tonuri ivory, verde delicat și accente calde. Se personalizează cu numărul mesei și poate fi realizat în aceeași tematică cu invitațiile, meniurile și cardurile cu numele invitaților. Potrivit pentru nunți elegante, romantice sau minimaliste.",
+    "images": [
+      "/images/numere-masa/numar-masa-nunta-rotund-floral.png"
+    ],
+    "tags": [
+      "numere masa",
+      "numere masa nunta",
+      "numar masa nunta",
+      "numar de masa",
+      "numar masa personalizat",
+      "numere masa personalizate",
+      "numar masa floral",
+      "numere masa florale",
+      "numar masa elegant",
+      "papetarie nunta",
+      "decor masa nunta",
+      "nunta",
+      "personalizat"
+    ],
+    "slug": "numar-de-masa-nunta-personalizat-rotund-cu-flori-model-floral-elegant-numar-ma",
+    "google_product_category": "Arts & Entertainment > Party & Celebration > Party Supplies > Tableware > Place Cards & Table Numbers",
+    "material": "",
+    "min_quantity": 5,
     "mpn": ""
   },
   {
