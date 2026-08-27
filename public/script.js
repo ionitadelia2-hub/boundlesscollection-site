@@ -355,7 +355,10 @@ if (filterKey === 'tricouri scolare') {
 
 if (PAGE_FILTER === 'stickere oglinda') {
   hitCatToggle = matchesStickerSubfilter(p, activeFilter);
-} else if (PAGE_FILTER === 'meniuri') {
+} else if (
+  PAGE_FILTER === 'meniuri' ||
+  PAGE_FILTER === 'numere de masa'
+) {
   hitCatToggle = matchesMenuSubfilter(p, activeFilter);
 } else {
   hitCatToggle = matchesCategoryGroup(
