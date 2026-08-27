@@ -2,9 +2,9 @@
   {
     "id": "invitatie-nunta-personalizata-arcuita-flori-001",
     "title": "Invitație de Nuntă Personalizată Arcuită cu Flori – Model Floral Elegant",
-    "price": 4.5,
-    "category": "invitatii",
-    "product_type": "invitatii",
+    "price": 7.5,
+    "category": "invitatii-nunta",
+    "product_type": "invitatii-nunta",
     "desc": "Invitație de nuntă personalizată cu formă arcuită și design floral elegant în tonuri ivory, verde delicat și accente calde. Se personalizează cu numele mirilor, data evenimentului, ora și locația ceremoniei, locația petrecerii și textul dorit. Model potrivit pentru nunți elegante, romantice sau minimaliste și poate fi asortat cu meniuri, numere de masă și carduri cu numele invitaților.",
     "images": [
       "/images/invitatii/invitatie-nunta-arcuita-florala-andreea-kevin.png",
@@ -7090,8 +7090,8 @@
     "id": "numar-masa-nunta-personalizat-rotund-floral-001",
     "title": "Număr de Masă Nuntă Personalizat Rotund cu Flori – Model Floral Elegant",
     "price": 4,
-    "category": "numere masa",
-    "product_type": "numere masa",
+    "category": "numere de masa",
+    "product_type": "numere de masa",
     "desc": "Număr de masă pentru nuntă, personalizat în format rotund, cu design floral elegant în tonuri ivory, verde delicat și accente calde. Se personalizează cu numărul mesei și poate fi realizat în aceeași tematică cu invitațiile, meniurile și cardurile cu numele invitaților. Potrivit pentru nunți elegante, romantice sau minimaliste.",
     "images": [
       "/images/numere-masa/numar-masa-nunta-rotund-floral.png"
