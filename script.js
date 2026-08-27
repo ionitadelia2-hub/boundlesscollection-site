@@ -290,14 +290,26 @@ function matchesMarturiiFilters(p) {
   }
 
   if (activeMarturiiType === 'iconita mir') {
-    hitType = containsAny([
-      'iconita cu mir',
-      'iconite cu mir',
-      'iconita mir',
-      'iconite mir',
-      'mir'
-    ]);
-  }
+  const hasIconita =
+    title.includes('iconita') ||
+    title.includes('iconite') ||
+    tags.some(t =>
+      t.includes('iconita') ||
+      t.includes('iconite')
+    );
+
+  const hasMir =
+    title.includes('sticluta mir') ||
+    title.includes('mir roll on') ||
+    title.includes('mir si iconita') ||
+    tags.some(t =>
+      t.includes('sticluta mir') ||
+      t.includes('mir roll on') ||
+      t.includes('mir si iconita')
+    );
+
+  hitType = hasIconita && hasMir;
+}
 
   if (activeMarturiiType === 'miere') {
     hitType = containsAny([
@@ -320,6 +332,16 @@ function matchesMarturiiFilters(p) {
       'magneti'
     ]);
   }
+
+  if (activeMarturiiType === 'sticle') {
+  hitType = containsAny([
+    'sticlute nunta',
+    'sticle nunta',
+    'sticla personalizata',
+    'marturii sticlute',
+    'sticla marturie'
+  ]);
+}
 
   return hitEvent && hitType;
 }
