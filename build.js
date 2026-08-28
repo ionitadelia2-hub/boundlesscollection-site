@@ -139,6 +139,7 @@ const CATEGORY_MAP = {
   "plicuri botez": { name: "Plicuri de dar botez", url: "/plicuri-botez.html" },
   "cutie de dar": { name: "Cutii de dar", url: "/cutie-de-dar.html" },
   "meniuri": { name: "Meniuri", url: "/meniuri.html" },
+  "place-carduri": { name: "Place Carduri", url: "/place-carduri.html" },
   "evantaie": { name: "Evantaie", url: "/evantaie.html" },
   "semne de carte": { name: "Semne de carte", url: "/semne-de-carte.html" },
   "aranjamente-florale": { name: "Aranjamente florale", url: "/aranjamente-florale.html" },
@@ -186,6 +187,7 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/plicuri-botez.html">Plicuri de dar botez</a>
     <a role="menuitem" href="/cutie-de-dar.html">Cutii de dar</a>
     <a role="menuitem" href="/meniuri.html">Meniuri</a>
+    <a role="menuitem" href="/place-carduri.html">Place Carduri</a>
     <a role="menuitem" href="/evantaie.html">Evantaie</a>
     <a role="menuitem" href="/semne-de-carte.html">Semne de carte</a>
     <a role="menuitem" href="/numere-masa.html">Numere de masa</a>
@@ -627,6 +629,7 @@ function pageTemplate(prod) {
       else if(ref.includes("/tricouri-scolare")) back="/tricouri-scolare.html";
       else if(ref.includes("/cutie-de-dar")) back="/cutie-de-dar.html";
       else if(ref.includes("/meniuri")) back="/meniuri.html";
+      else if(ref.includes("/place-carduri")) back="/place-carduri.html";
       else if(ref.includes("/evantaie")) back="/evantaie.html";
       else if(ref.includes("/semne-de-carte")) back="/semne-de-carte.html";
       else if(ref.includes("/numere-masa")) back="/numere-masa.html";
@@ -946,6 +949,7 @@ const staticPagesForSitemap = [
   "/plicuri-botez.html",
   "/cutie-de-dar.html",
   "/meniuri.html",
+  "/place-carduri.html",
   "/evantaie.html",
   "/semne-de-carte.html",
   "/numere-masa.html",
