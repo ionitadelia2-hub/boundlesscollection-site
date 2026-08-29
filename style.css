@@ -2310,3 +2310,80 @@ max-height: calc(100vh - 115px) !important;
     border-radius: 15px !important;
   }
 }
+
+/* =========================================================
+   SELECTOR CANTITATE - PAGINA PRODUS
+========================================================= */
+
+.product-quantity {
+  margin: 22px 0;
+}
+
+.product-quantity-label {
+  display: block;
+  margin-bottom: 9px;
+  font-family: "Poppins", sans-serif;
+  font-size: .85rem;
+  font-weight: 600;
+  color: #6f5961;
+}
+
+.quantity-picker {
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+
+  border: 1px solid #efcbd8;
+  border-radius: 14px;
+  background: #fffafb;
+
+  box-shadow: 0 6px 18px rgba(180, 79, 115, .06);
+}
+
+.quantity-btn {
+  width: 48px;
+  height: 46px;
+
+  border: 0;
+  background: transparent;
+
+  color: #b44f73;
+  font-size: 1.5rem;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.quantity-btn:hover {
+  background: #fff1f6;
+}
+
+.quantity-input {
+  width: 76px;
+  height: 46px;
+
+  border: 0;
+  border-left: 1px solid #f2d7e1;
+  border-right: 1px solid #f2d7e1;
+  outline: none;
+
+  background: #fff;
+
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #332b2e;
+
+  -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input:focus {
+  background: #fff8fb;
+}
