@@ -976,8 +976,16 @@ emptyCartAlert.style.display = "block";
         `;
 
 
-        summaryText +=
-          `[ID: ${item.id}] ${item.title} x${quantity}; `;
+        const imageUrl = new URL(
+  item.image,
+  window.location.origin
+).href;
+
+summaryText +=
+  `Produs: ${item.title}\n` +
+  `Cantitate: ${quantity} buc.\n` +
+  `Poza produs: ${imageUrl}\n` +
+  `ID: ${item.id}\n\n`;
       });
 
 
