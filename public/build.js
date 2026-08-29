@@ -498,8 +498,9 @@ function pageTemplate(prod) {
         <div class="brand-logo">${brandAvatar ? `<img src="${brandAvatar}" alt="Delia – ${brand}">` : ""}</div>
         <div class="brand-title">${brand}</div>
       </a>
-      <button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Meniu"></button>
-      <nav aria-label="Meniu principal">
+<button class="nav-toggle" aria-controls="mainmenu" aria-expanded="false" aria-label="Deschide meniul">
+  <span></span>
+</button>      <nav aria-label="Meniu principal">
         <ul id="mainmenu">
           <li class="dropdown">
             <button class="dropbtn" id="productsToggle" aria-haspopup="true" aria-expanded="false" type="button">Produse</button>
