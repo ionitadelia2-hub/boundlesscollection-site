@@ -36,7 +36,32 @@
     .qty-wrapper { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 6px; background: #fff; overflow: hidden; }
     .qty-btn { background: #fff; border: none; padding: 6px 14px; cursor: pointer; font-weight: 600; font-size: 1rem; transition: background 0.2s; color: #111; }
     .qty-btn:hover { background: #f5f5f5; }
-    .qty-text { padding: 0 4px; min-width: 24px; text-align: center; font-size: 0.95rem; }
+    .qty-input {
+  width: 58px;
+  height: 34px;
+  border: none;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  outline: none;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  background: #fff;
+  appearance: textfield;
+-moz-appearance: textfield;
+}
+
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qty-input:focus {
+  background: #fff7fa;
+}
     .remove-btn { background: none; border: none; color: #b32d2d; cursor: pointer; font-size: 0.85rem; text-decoration: underline; font-family: inherit; transition: color 0.2s; }
     .remove-btn:hover { color: #d93838; }
     
@@ -164,14 +189,30 @@ if (item.quantity < minQuantity) {
                     </div>
                     <div class="item-actions">
                         <div class="qty-wrapper">
-                            <button
-    class="qty-btn"
-    onclick="changeQty(${index}, -1)"
-    ${item.quantity <= minQuantity ? "disabled" : ""}
->-</button>
-                            <span class="qty-text"><strong>${item.quantity}</strong></span>
-                            <button class="qty-btn" onclick="changeQty(${index}, 1)">+</button>
-                        </div>
+    <button
+        class="qty-btn"
+        onclick="changeQty(${index}, -1)"
+        ${item.quantity <= minQuantity ? "disabled" : ""}
+    >−</button>
+
+    <input
+        type="number"
+        class="qty-input"
+        value="${item.quantity}"
+        min="${minQuantity}"
+        step="1"
+        inputmode="numeric"
+        aria-label="Cantitate pentru ${item.title}"
+        onchange="setQty(${index}, this.value)"
+        onblur="setQty(${index}, this.value)"
+        onkeydown="if(event.key === 'Enter'){ this.blur(); }"
+    >
+
+    <button
+        class="qty-btn"
+        onclick="changeQty(${index}, 1)"
+    >+</button>
+</div>
                         <button class="remove-btn" onclick="removeItem(${index})">Elimină</button>
                     </div>
                 </div>
@@ -216,6 +257,35 @@ if (item.quantity < minQuantity) {
     saveCart(cart);
     renderCart();
 }
+
+// AICI LIPEȘTI FUNCȚIA NOUĂ
+function setQty(index, value) {
+    let cart = getCart();
+
+    if (!cart[index]) return;
+
+    const minQuantity = Math.max(
+        1,
+        parseInt(
+            cart[index].minQuantity ||
+            cart[index].min_quantity ||
+            1,
+            10
+        ) || 1
+    );
+
+    let newQuantity = parseInt(value, 10);
+
+    if (!Number.isFinite(newQuantity) || newQuantity < minQuantity) {
+        newQuantity = minQuantity;
+    }
+
+    cart[index].quantity = newQuantity;
+
+    saveCart(cart);
+    renderCart();
+}
+
     
     function removeItem(index) {
         let cart = getCart();

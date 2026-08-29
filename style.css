@@ -2374,7 +2374,7 @@ max-height: calc(100vh - 115px) !important;
   font-size: 1rem;
   font-weight: 600;
   color: #332b2e;
-
+appearance: textfield;
   -moz-appearance: textfield;
 }
 
