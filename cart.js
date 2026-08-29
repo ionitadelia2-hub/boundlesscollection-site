@@ -24,33 +24,53 @@ function initAddToCartButtons() {
         const image = btn.getAttribute("data-image");
         const url = btn.getAttribute("data-url");
 
+        // Cantitatea minimă setată în products.csv
         const minQuantity = Math.max(
             1,
             parseInt(btn.getAttribute("data-min-quantity") || "1", 10) || 1
         );
 
+        // Cantitatea aleasă de client pe pagina produsului
+        const quantityInput = document.getElementById("productQuantity");
+
+        let selectedQuantity = minQuantity;
+
+        if (quantityInput) {
+            selectedQuantity = Math.max(
+                minQuantity,
+                parseInt(quantityInput.value || String(minQuantity), 10) || minQuantity
+            );
+
+            // Corectăm și vizual inputul dacă a introdus sub minim
+            quantityInput.value = selectedQuantity;
+        }
+
         let cart = getCart();
         const existingIndex = cart.findIndex(item => item.id === id);
 
         if (existingIndex > -1) {
-            // Păstrăm informația despre cantitatea minimă
+
+            // Păstrăm cantitatea minimă reală a produsului
             cart[existingIndex].minQuantity = minQuantity;
 
-            // Dacă produsul există deja, mai adăugăm 1 buc.
-            cart[existingIndex].quantity += 1;
+            // Adăugăm cantitatea selectată de client
+            cart[existingIndex].quantity += selectedQuantity;
 
-            // Siguranță: nu permitem niciodată sub minim
+            // Siguranță suplimentară
             if (cart[existingIndex].quantity < minQuantity) {
                 cart[existingIndex].quantity = minQuantity;
             }
+
         } else {
+
+            // Produs nou în coș
             cart.push({
                 id,
                 title,
                 price,
                 image,
                 url,
-                quantity: minQuantity,
+                quantity: selectedQuantity,
                 minQuantity: minQuantity
             });
         }
@@ -59,6 +79,7 @@ function initAddToCartButtons() {
 
         // Efect vizual rapid pe buton
         const originalText = btn.innerHTML;
+
         btn.innerHTML = "✓ Adăugat!";
         btn.style.backgroundColor = "#d9a74a";
         btn.style.color = "#fff";
@@ -67,6 +88,7 @@ function initAddToCartButtons() {
             btn.innerHTML = originalText;
             btn.style.backgroundColor = "";
             btn.style.color = "";
+
             window.location.href = "/cart.html";
         }, 500);
     });

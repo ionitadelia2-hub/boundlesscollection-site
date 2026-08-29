@@ -213,6 +213,35 @@
         <p class="product-desc"><p class="product-desc">Set educativ pentru copii format din caiet de exerciții și tabla înmulțirii, creat pentru exersarea matematicii într-un mod clar și atractiv. Caietul oferă activități pentru consolidarea operațiilor, iar tabla înmulțirii îi ajută pe elevi să verifice rapid rezultatele și să învețe mai ușor. Potrivit pentru studiu acasă, recapitulare, teme, exerciții suplimentare și activități educative. Un material practic pentru școlari și o idee utilă de cadou educativ pentru copii.</p></p>
         <p class="price price-badge">30.00 RON</p>
         
+
+<div class="product-quantity">
+  <span class="product-quantity-label">Cantitate</span>
+
+  <div class="quantity-picker">
+    <button
+      type="button"
+      class="quantity-btn quantity-minus"
+      aria-label="Scade cantitatea"
+    >−</button>
+
+    <input
+      type="number"
+      id="productQuantity"
+      class="quantity-input"
+      value="1"
+      min="1"
+      step="1"
+      inputmode="numeric"
+      aria-label="Cantitate produs"
+    >
+
+    <button
+      type="button"
+      class="quantity-btn quantity-plus"
+      aria-label="Crește cantitatea"
+    >+</button>
+  </div>
+</div>
         <div class="tags"><span class="tag">caiet exercitii copii</span><span class="tag">caiet exercitii matematica</span><span class="tag">tabla inmultirii</span><span class="tag">tabla inmultirii copii</span><span class="tag">caiet tabla inmultirii</span><span class="tag">exercitii tabla inmultirii</span><span class="tag">set educativ matematica</span><span class="tag">materiale educative copii</span><span class="tag">rechizite scolare personalizate</span><span class="tag">rechizite copii</span><span class="tag">matematica copii</span><span class="tag">exercitii matematica copii</span><span class="tag">cadou educativ copii</span><span class="tag">set scolar educativ</span><span class="tag">boundless collection</span></div>
         
         <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
@@ -246,8 +275,46 @@
   </div></footer>
 
   <script src="/cart.js" defer></script>
-  <script>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    // === SELECTOR CANTITATE PRODUS ===
+    (function () {
+      const input = document.getElementById('productQuantity');
+      const minus = document.querySelector('.quantity-minus');
+      const plus = document.querySelector('.quantity-plus');
+
+      if (!input) return;
+
+      const min = Math.max(1, Number(input.min) || 1);
+
+      function normalizeQuantity() {
+        let value = parseInt(input.value, 10);
+
+        if (!Number.isFinite(value) || value < min) {
+          value = min;
+        }
+
+        input.value = value;
+        return value;
+      }
+
+      minus?.addEventListener('click', () => {
+        const current = normalizeQuantity();
+        input.value = Math.max(min, current - 1);
+      });
+
+      plus?.addEventListener('click', () => {
+        const current = normalizeQuantity();
+        input.value = current + 1;
+      });
+
+      input.addEventListener('change', normalizeQuantity);
+      input.addEventListener('blur', normalizeQuantity);
+    })();
+
+
     (function(){
       var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
       if(ref.includes("/marturii-nunta")) back="/marturii-nunta.html";

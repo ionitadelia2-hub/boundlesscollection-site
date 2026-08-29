@@ -213,6 +213,35 @@
         <p class="product-desc"><p class="product-desc">Aranjament handmade cu lumânări parfumate din ceară de soia, realizate în forme florale pastel, într-un suport decorativ din creioane colorate. Decorat cu flori uscate, pampas și fundă din satin. Potrivit ca dar pentru profesoară, educatoare, învățătoare, cadou de început sau sfârșit de an școlar, decor pentru birou ori cadou special pentru iubitorii de produse handmade.</p></p>
         <p class="price price-badge">150.00 RON</p>
         
+
+<div class="product-quantity">
+  <span class="product-quantity-label">Cantitate</span>
+
+  <div class="quantity-picker">
+    <button
+      type="button"
+      class="quantity-btn quantity-minus"
+      aria-label="Scade cantitatea"
+    >−</button>
+
+    <input
+      type="number"
+      id="productQuantity"
+      class="quantity-input"
+      value="1"
+      min="1"
+      step="1"
+      inputmode="numeric"
+      aria-label="Cantitate produs"
+    >
+
+    <button
+      type="button"
+      class="quantity-btn quantity-plus"
+      aria-label="Crește cantitatea"
+    >+</button>
+  </div>
+</div>
         <div class="tags"><span class="tag">aranjament cu lumanari parfumate</span><span class="tag">aranjament lumanari ceara de soia</span><span class="tag">cadou profesoara</span><span class="tag">cadou educatoare</span><span class="tag">cadou invatatoare</span><span class="tag">cadou profesor</span><span class="tag">aranjament creioane colorate</span><span class="tag">cadou sfarsit de an scolar</span><span class="tag">cadou inceput de an scolar</span><span class="tag">decor birou</span><span class="tag">lumanari parfumate handmade</span><span class="tag">aranjament floral handmade</span><span class="tag">ceara de soia</span><span class="tag">flori pastel</span><span class="tag">cadou personalizat</span><span class="tag">cadou original</span></div>
         
         <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
@@ -246,8 +275,46 @@
   </div></footer>
 
   <script src="/cart.js" defer></script>
-  <script>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    // === SELECTOR CANTITATE PRODUS ===
+    (function () {
+      const input = document.getElementById('productQuantity');
+      const minus = document.querySelector('.quantity-minus');
+      const plus = document.querySelector('.quantity-plus');
+
+      if (!input) return;
+
+      const min = Math.max(1, Number(input.min) || 1);
+
+      function normalizeQuantity() {
+        let value = parseInt(input.value, 10);
+
+        if (!Number.isFinite(value) || value < min) {
+          value = min;
+        }
+
+        input.value = value;
+        return value;
+      }
+
+      minus?.addEventListener('click', () => {
+        const current = normalizeQuantity();
+        input.value = Math.max(min, current - 1);
+      });
+
+      plus?.addEventListener('click', () => {
+        const current = normalizeQuantity();
+        input.value = current + 1;
+      });
+
+      input.addEventListener('change', normalizeQuantity);
+      input.addEventListener('blur', normalizeQuantity);
+    })();
+
+
     (function(){
       var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
       if(ref.includes("/marturii-nunta")) back="/marturii-nunta.html";

@@ -213,6 +213,35 @@
         <p class="product-desc"><p class="product-desc">Set școlar personalizat cu tematică sirene, ideal pentru începutul de an școlar. Include orar colorat, etichete școlare pentru rechizite, autocolante pentru materii și semne de carte cu mesaje motivaționale și elemente educative. Designul este vesel, pastelat și potrivit pentru copii care iubesc universul marin. Etichetele pot fi folosite pentru caiete, cărți, penar, sticlă, caserolă și alte obiecte școlare, iar semnele de carte completează setul cu un accesoriu practic pentru lectură. Personalizare disponibilă cu numele copilului, în funcție de model. Potrivit pentru școală, cadou de început de an școlar sau surpriză pentru un copil pasionat de sirene.</p></p>
         <p class="price price-badge">70.00 RON</p>
         
+
+<div class="product-quantity">
+  <span class="product-quantity-label">Cantitate</span>
+
+  <div class="quantity-picker">
+    <button
+      type="button"
+      class="quantity-btn quantity-minus"
+      aria-label="Scade cantitatea"
+    >−</button>
+
+    <input
+      type="number"
+      id="productQuantity"
+      class="quantity-input"
+      value="1"
+      min="1"
+      step="1"
+      inputmode="numeric"
+      aria-label="Cantitate produs"
+    >
+
+    <button
+      type="button"
+      class="quantity-btn quantity-plus"
+      aria-label="Crește cantitatea"
+    >+</button>
+  </div>
+</div>
         <div class="tags"><span class="tag">set scolar personalizat</span><span class="tag">rechizite scolare personalizate</span><span class="tag">set rechizite copii</span><span class="tag">orar scolar personalizat</span><span class="tag">etichete scolare cu nume</span><span class="tag">etichete pentru rechizite</span><span class="tag">autocolante materii scolare</span><span class="tag">semne de carte copii</span><span class="tag">semn de carte educativ</span><span class="tag">set scoala fete</span><span class="tag">rechizite sirene</span><span class="tag">set scolar sirene</span><span class="tag">back to school</span><span class="tag">inceput an scolar</span><span class="tag">cadou copil scoala</span><span class="tag">cadou fetita scoala</span><span class="tag">boundless collection</span></div>
         
         <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
@@ -246,8 +275,46 @@
   </div></footer>
 
   <script src="/cart.js" defer></script>
-  <script>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    // === SELECTOR CANTITATE PRODUS ===
+    (function () {
+      const input = document.getElementById('productQuantity');
+      const minus = document.querySelector('.quantity-minus');
+      const plus = document.querySelector('.quantity-plus');
+
+      if (!input) return;
+
+      const min = Math.max(1, Number(input.min) || 1);
+
+      function normalizeQuantity() {
+        let value = parseInt(input.value, 10);
+
+        if (!Number.isFinite(value) || value < min) {
+          value = min;
+        }
+
+        input.value = value;
+        return value;
+      }
+
+      minus?.addEventListener('click', () => {
+        const current = normalizeQuantity();
+        input.value = Math.max(min, current - 1);
+      });
+
+      plus?.addEventListener('click', () => {
+        const current = normalizeQuantity();
+        input.value = current + 1;
+      });
+
+      input.addEventListener('change', normalizeQuantity);
+      input.addEventListener('blur', normalizeQuantity);
+    })();
+
+
     (function(){
       var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
       if(ref.includes("/marturii-nunta")) back="/marturii-nunta.html";

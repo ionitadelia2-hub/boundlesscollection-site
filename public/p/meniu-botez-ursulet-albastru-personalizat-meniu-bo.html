@@ -219,6 +219,35 @@
   </p>
         <p class="price price-badge">7.00 RON</p>
         <p class="min-order">Comandă minimă: <strong>25 buc.</strong></p>
+
+<div class="product-quantity">
+  <span class="product-quantity-label">Cantitate</span>
+
+  <div class="quantity-picker">
+    <button
+      type="button"
+      class="quantity-btn quantity-minus"
+      aria-label="Scade cantitatea"
+    >−</button>
+
+    <input
+      type="number"
+      id="productQuantity"
+      class="quantity-input"
+      value="25"
+      min="25"
+      step="1"
+      inputmode="numeric"
+      aria-label="Cantitate produs"
+    >
+
+    <button
+      type="button"
+      class="quantity-btn quantity-plus"
+      aria-label="Crește cantitatea"
+    >+</button>
+  </div>
+</div>
         <div class="tags"><span class="tag">meniu botez personalizat</span><span class="tag">meniuri botez personalizate</span><span class="tag">meniu botez baietel</span><span class="tag">meniu ursulet</span><span class="tag">meniu baby boy</span><span class="tag">papetarie botez</span><span class="tag">decor masa botez</span><span class="tag">boundless collection meniuri</span></div>
         
         <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
@@ -252,8 +281,46 @@
   </div></footer>
 
   <script src="/cart.js" defer></script>
-  <script>
+<script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    // === SELECTOR CANTITATE PRODUS ===
+    (function () {
+      const input = document.getElementById('productQuantity');
+      const minus = document.querySelector('.quantity-minus');
+      const plus = document.querySelector('.quantity-plus');
+
+      if (!input) return;
+
+      const min = Math.max(1, Number(input.min) || 1);
+
+      function normalizeQuantity() {
+        let value = parseInt(input.value, 10);
+
+        if (!Number.isFinite(value) || value < min) {
+          value = min;
+        }
+
+        input.value = value;
+        return value;
+      }
+
+      minus?.addEventListener('click', () => {
+        const current = normalizeQuantity();
+        input.value = Math.max(min, current - 1);
+      });
+
+      plus?.addEventListener('click', () => {
+        const current = normalizeQuantity();
+        input.value = current + 1;
+      });
+
+      input.addEventListener('change', normalizeQuantity);
+      input.addEventListener('blur', normalizeQuantity);
+    })();
+
+
     (function(){
       var ref=(document.referrer||"").toLowerCase(), back="/index.html#produse";
       if(ref.includes("/marturii-nunta")) back="/marturii-nunta.html";
