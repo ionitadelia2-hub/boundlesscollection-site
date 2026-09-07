@@ -509,11 +509,7 @@
           Date pentru comandă și livrare
         </h2>
 
-        <form
-          action="https://formspree.io/f/mzdwblkp"
-          method="POST"
-          id="checkout-form"
-        >
+        <form id="checkout-form">
 
           <input
             type="hidden"
@@ -1092,23 +1088,24 @@ summaryText +=
             Trimitem formularul la Formspree
             */
 
-            const formData =
-              new FormData(checkoutForm);
+            const formData = new FormData(checkoutForm);
 
+const orderData = Object.fromEntries(
+  formData.entries()
+);
 
-            const response =
-              await fetch(
-                checkoutForm.action,
-                {
-                  method: "POST",
+const response = await fetch(
+  "/api/send-order",
+  {
+    method: "POST",
 
-                  body: formData,
+    headers: {
+      "Content-Type": "application/json"
+    },
 
-                  headers: {
-                    "Accept": "application/json"
-                  }
-                }
-              );
+    body: JSON.stringify(orderData)
+  }
+);
 
 
             /*
@@ -1117,11 +1114,15 @@ summaryText +=
             */
 
             if (!response.ok) {
+  const errorData = await response
+    .json()
+    .catch(() => ({}));
 
-              throw new Error(
-                "Formspree a returnat o eroare."
-              );
-            }
+  throw new Error(
+    errorData.error ||
+    "Comanda nu a putut fi trimisă."
+  );
+}
 
 
             /*
