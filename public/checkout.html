@@ -1088,11 +1088,67 @@ summaryText +=
             Trimitem formularul la Formspree
             */
 
-            const formData = new FormData(checkoutForm);
+            const orderData = {
+  orderId: transactionId,
 
-const orderData = Object.fromEntries(
-  formData.entries()
-);
+  customer: {
+    name: document.getElementById("name").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    phone: document.getElementById("phone").value.trim(),
+
+    address: [
+      document.getElementById("street").value.trim(),
+      "nr. " + document.getElementById("street-number").value.trim(),
+
+      document.getElementById("building").value.trim()
+        ? "bloc " + document.getElementById("building").value.trim()
+        : "",
+
+      document.getElementById("entrance").value.trim()
+        ? "scara " + document.getElementById("entrance").value.trim()
+        : "",
+
+      document.getElementById("floor").value.trim()
+        ? "etaj " + document.getElementById("floor").value.trim()
+        : "",
+
+      document.getElementById("apartment").value.trim()
+        ? "ap. " + document.getElementById("apartment").value.trim()
+        : "",
+
+      document.getElementById("city").value,
+      document.getElementById("county").value,
+
+      document.getElementById("postal-code").value.trim()
+        ? "cod postal " + document.getElementById("postal-code").value.trim()
+        : ""
+    ]
+      .filter(Boolean)
+      .join(", ")
+  },
+
+  products: cart.map(item => ({
+    id: item.id,
+    title: item.title,
+    price: Number(item.price || 0),
+    quantity: Number(item.quantity || 0),
+    image: item.image || ""
+  })),
+
+  subtotal: subtotal,
+  shipping: taxaTransport,
+  total: totalFinal,
+
+  personalization:
+    document.getElementById("customization").value.trim(),
+
+  deliveryNotes:
+    document.getElementById("delivery-notes").value.trim(),
+
+  payment:
+    document.getElementById("payment").value
+};
+
 
 const response = await fetch(
   "/api/send-order",
