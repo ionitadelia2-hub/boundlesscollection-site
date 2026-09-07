@@ -42,83 +42,97 @@ export default async function handler(req, res) {
     const money = (value) =>
       Number(value || 0).toFixed(2);
 
-    const productRows = products.map((item) => {
-      let imageUrl = "";
+    const productAttachments = [];
 
-if (item.image) {
-  try {
-    imageUrl = new URL(
-      item.image,
-      "https://boundlesscollection.ro"
-    ).href;
-  } catch {
-    imageUrl = "";
+const productRows = products.map((item, index) => {
+  let imageUrl = "";
+
+  if (item.image) {
+    try {
+      imageUrl = new URL(
+        item.image,
+        "https://boundlesscollection.ro"
+      ).href;
+    } catch {
+      imageUrl = "";
+    }
   }
-}
 
-      return `
-        <tr>
-          <td style="
-            padding:18px 0;
-            border-bottom:1px solid #f1dce4;
-          ">
-            <table width="100%" cellpadding="0" cellspacing="0">
-              <tr>
-                <td width="110" valign="top">
-                  ${
-                    imageUrl
-                      ? `<img
-                          src="${escapeHtml(imageUrl)}"
-                          alt="${escapeHtml(item.title)}"
-                          width="90"
-                          height="90"
-                          style="
-                            width:90px;
-                            height:90px;
-                            object-fit:cover;
-                            border-radius:12px;
-                            display:block;
-                          "
-                        >`
-                      : ""
-                  }
-                </td>
+  const imageCid = `product-image-${index}`;
 
-                <td valign="top" style="
-                  font-family:Arial,sans-serif;
-                  color:#222;
-                  line-height:1.6;
-                ">
-                  <strong style="font-size:16px;">
-                    ${escapeHtml(item.title)}
-                  </strong>
+  if (imageUrl) {
+    productAttachments.push({
+      path: imageUrl,
+      filename: `produs-${index + 1}.jpg`,
+      content_id: imageCid
+    });
+  }
 
-                  <br>
+  return `
+    <tr>
+      <td style="
+        padding:18px 0;
+        border-bottom:1px solid #f1dce4;
+      ">
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
 
-                  Cantitate:
-                  <strong>${Number(item.quantity || 1)} buc.</strong>
+            <td width="110" valign="top">
+              ${
+                imageUrl
+                  ? `<img
+                      src="cid:${imageCid}"
+                      alt="${escapeHtml(item.title)}"
+                      width="90"
+                      height="90"
+                      style="
+                        width:90px;
+                        height:90px;
+                        object-fit:cover;
+                        border-radius:12px;
+                        display:block;
+                      "
+                    >`
+                  : ""
+              }
+            </td>
 
-                  <br>
+            <td valign="top" style="
+              font-family:Arial,sans-serif;
+              color:#222;
+              line-height:1.6;
+            ">
+              <strong style="font-size:16px;">
+                ${escapeHtml(item.title)}
+              </strong>
 
-                  Preț:
-                  ${money(item.price)} RON / buc.
+              <br>
 
-                  <br>
+              Cantitate:
+              <strong>${Number(item.quantity || 1)} buc.</strong>
 
-                  <strong>
-                    Subtotal:
-                    ${money(
-                      Number(item.price || 0) *
-                      Number(item.quantity || 0)
-                    )} RON
-                  </strong>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      `;
-    }).join("");
+              <br>
+
+              Preț:
+              ${money(item.price)} RON / buc.
+
+              <br>
+
+              <strong>
+                Subtotal:
+                ${money(
+                  Number(item.price || 0) *
+                  Number(item.quantity || 0)
+                )} RON
+              </strong>
+            </td>
+
+          </tr>
+        </table>
+      </td>
+    </tr>
+  `;
+}).join("");
 
     const customerEmailHtml = `
       <!DOCTYPE html>
@@ -381,7 +395,8 @@ if (item.image) {
           from: "Boundless Collection <comenzi@boundlesscollection.ro>",
           to: [customer.email],
           subject: `Comanda ta ${orderId || ""} • Boundless Collection`,
-          html: customerEmailHtml
+          html: customerEmailHtml,
+attachments: productAttachments
         })
       }
     );
@@ -416,7 +431,8 @@ if (item.image) {
           to: [adminEmail],
           reply_to: customer.email,
           subject: `🛍️ Comandă nouă ${orderId || ""} - ${customer.name || ""}`,
-          html: adminEmailHtml
+          html: adminEmailHtml,
+  attachments: productAttachments
         })
       }
     );
