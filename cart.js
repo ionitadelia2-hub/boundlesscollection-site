@@ -21,7 +21,11 @@ function initAddToCartButtons() {
         const id = btn.getAttribute("data-id");
         const title = btn.getAttribute("data-title");
         const price = parseFloat(btn.getAttribute("data-price"));
-        const image = btn.getAttribute("data-image");
+        const rawImage = btn.getAttribute("data-image");
+
+const image = rawImage
+    ? new URL(rawImage, "https://boundlesscollection.ro").href
+    : "";
         const url = btn.getAttribute("data-url");
 
         // Cantitatea minimă setată în products.csv

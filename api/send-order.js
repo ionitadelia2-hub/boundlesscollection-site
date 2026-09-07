@@ -43,9 +43,18 @@ export default async function handler(req, res) {
       Number(value || 0).toFixed(2);
 
     const productRows = products.map((item) => {
-      const imageUrl = item.image
-        ? new URL(item.image, "https://boundlesscollection.ro").href
-        : "";
+      let imageUrl = "";
+
+if (item.image) {
+  try {
+    imageUrl = new URL(
+      item.image,
+      "https://boundlesscollection.ro"
+    ).href;
+  } catch {
+    imageUrl = "";
+  }
+}
 
       return `
         <tr>
@@ -215,6 +224,15 @@ export default async function handler(req, res) {
                           <strong>${money(total)} RON</strong>
                         </td>
                       </tr>
+
+                      <tr>
+  <td style="font-size:18px;">
+    <strong>Avans 50%</strong>
+  </td>
+  <td align="right" style="font-size:18px;">
+    <strong>${money(Number(total || 0) / 2)} RON</strong>
+  </td>
+</tr>
                     </table>
 
                     <div style="
