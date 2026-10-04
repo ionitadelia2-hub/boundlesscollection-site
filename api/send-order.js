@@ -1,3 +1,16 @@
+import { readFileSync } from "node:fs";
+
+const catalog = JSON.parse(
+  readFileSync(
+    new URL("../content/products.json", import.meta.url),
+    "utf8"
+  )
+);
+
+const productsById = new Map(
+  catalog.map(product => [product.id, product])
+);
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({
@@ -7,7 +20,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const {
+    let {
   orderId,
   customer,
   products,
@@ -32,6 +45,56 @@ export default async function handler(req, res) {
         error: "Comanda nu conține produse"
       });
     }
+
+    const checkedProducts = [];
+const seenIds = new Set();
+
+for (const item of products) {
+  const product = productsById.get(item?.id);
+  const quantity = item?.quantity;
+
+  const minimum = Math.max(
+    1,
+    Number(product?.min_quantity) || 1
+  );
+
+  if (
+    !product ||
+    seenIds.has(item.id) ||
+    !Number.isSafeInteger(quantity) ||
+    quantity < minimum ||
+    quantity > 10000 ||
+    !Number.isFinite(product.price) ||
+    product.price < 0
+  ) {
+    return res.status(400).json({
+      ok: false,
+      error: "Produs sau cantitate invalidă."
+    });
+  }
+
+  seenIds.add(item.id);
+
+  checkedProducts.push({
+    id: product.id,
+    title: product.title,
+    price: product.price,
+    quantity,
+    image: product.images?.[0] || ""
+  });
+}
+
+products = checkedProducts;
+
+const subtotalCents = products.reduce(
+  (sum, item) =>
+    sum + Math.round(item.price * 100) * item.quantity,
+  0
+);
+
+subtotal = subtotalCents / 100;
+shipping = 30;
+total = (subtotalCents + 3000) / 100;
 
     const escapeHtml = (value = "") =>
       String(value)
