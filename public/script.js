@@ -56,7 +56,14 @@ let activeMarturiiType = 'toate';
   };
 
   // ===== Grupuri categorii =====
-const INVITATII_GROUP = ['invitatii', 'invitatii nunta', 'invitatii botez'];
+const INVITATII_GROUP = [
+  'invitatii',
+  'invitatii nunta',
+  'invitatii botez',
+  'invitatii digitale',
+  'invitatii digitale nunta',
+  'invitatii digitale botez'
+];
 const MARTURII_GROUP = ['marturii', 'marturii nunta', 'marturii botez'];
 const PLICURI_GROUP = ['plicuri', 'plicuri nunta', 'plicuri botez'];
 const TRICOURI_GROUP = ['tricouri femei', 'tricouri barbati', 'body bebelusi', 'tricouri copii adolescenti', 'tricouri scolare', 'tricouri elevi', 'tricouri profesori', 'tricouri aniversare'];
