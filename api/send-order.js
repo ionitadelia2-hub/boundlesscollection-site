@@ -8,14 +8,16 @@ export default async function handler(req, res) {
 
   try {
     const {
-      orderId,
-      customer,
-      products,
-      subtotal,
-      shipping,
-      total,
-      personalization
-    } = req.body || {};
+  orderId,
+  customer,
+  products,
+  subtotal,
+  shipping,
+  total,
+  personalization,
+  deliveryNotes,
+  payment
+} = req.body || {};
 
     if (!customer?.email) {
       return res.status(400).json({
@@ -335,6 +337,18 @@ const productRows = products.map((item, index) => {
             <strong>Adresă:</strong>
             ${escapeHtml(customer.address || "")}
           </p>
+
+          <h2>Observații pentru livrare</h2>
+
+<p style="white-space:pre-wrap;">
+  ${escapeHtml(deliveryNotes || "Fără observații")}
+</p>
+
+<h2>Modalitate de plată</h2>
+
+<p>
+  ${escapeHtml(payment || "Nespecificată")}
+</p>
 
           <h2>Produse</h2>
 
