@@ -1,4 +1,9 @@
 {
+    "functions": {
+    "api/send-order.js": {
+      "includeFiles": "content/products.json"
+    }
+  },
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
