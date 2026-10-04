@@ -949,7 +949,15 @@ emptyCartAlert.style.display = "block";
       let summaryText = "";
       let html = "";
 
-      const taxaTransport = 30.00;
+      const digitalProductIds = new Set([
+  "invitatie-digitala-nunta-muzica-animatii-whatsapp"
+]);
+
+const needsShipping = cart.some(
+  item => !digitalProductIds.has(item.id)
+);
+
+const taxaTransport = needsShipping ? 30.00 : 0;
 
 
       cart.forEach(item => {

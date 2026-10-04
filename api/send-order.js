@@ -93,8 +93,16 @@ const subtotalCents = products.reduce(
 );
 
 subtotal = subtotalCents / 100;
-shipping = 30;
-total = (subtotalCents + 3000) / 100;
+const digitalProductIds = new Set([
+  "invitatie-digitala-nunta-muzica-animatii-whatsapp"
+]);
+
+const needsShipping = products.some(
+  item => !digitalProductIds.has(item.id)
+);
+
+shipping = needsShipping ? 30 : 0;
+total = (subtotalCents + shipping * 100) / 100;
 
     const escapeHtml = (value = "") =>
       String(value)
