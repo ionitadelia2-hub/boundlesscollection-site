@@ -722,6 +722,15 @@
 
           </div>
 
+          <div hidden aria-hidden="true">
+  <label for="order-website">Website</label>
+  <input
+    type="text"
+    id="order-website"
+    tabindex="-1"
+    autocomplete="off"
+  >
+</div>
 
           <div class="legal-notice">
 
@@ -1098,6 +1107,7 @@ summaryText +=
 
             const orderData = {
   orderId: transactionId,
+  website: document.getElementById("order-website").value,
 
   customer: {
     name: document.getElementById("name").value.trim(),

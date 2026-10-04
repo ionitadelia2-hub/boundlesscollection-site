@@ -31,6 +31,12 @@ export default async function handler(req, res) {
   deliveryNotes,
   payment
 } = req.body || {};
+if (req.body?.website) {
+  return res.status(400).json({
+    ok: false,
+    error: "Comandă invalidă."
+  });
+}
 
     if (!customer?.email) {
       return res.status(400).json({
