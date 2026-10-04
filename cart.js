@@ -5,7 +5,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function getCart() {
-    return JSON.parse(localStorage.getItem("boundless_cart")) || [];
+    try {
+        const cart = JSON.parse(
+            localStorage.getItem("boundless_cart")
+        );
+
+        if (!Array.isArray(cart)) {
+            return [];
+        }
+
+        return cart.filter(item =>
+            item &&
+            typeof item.id === "string" &&
+            Number.isFinite(item.price) &&
+            item.price >= 0 &&
+            Number.isSafeInteger(item.quantity) &&
+            item.quantity > 0
+        );
+    } catch {
+        return [];
+    }
 }
 
 function saveCart(cart) {
