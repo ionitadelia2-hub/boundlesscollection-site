@@ -462,32 +462,6 @@ const productRows = products.map((item, index) => {
       "Content-Type": "application/json"
     };
 
-    // Email către client
-    const clientResponse = await fetch(
-      "https://api.resend.com/emails",
-      {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          from: "Boundless Collection <comenzi@boundlesscollection.ro>",
-          to: [customer.email],
-          subject: `Comanda ta ${orderId || ""} • Boundless Collection`,
-          html: customerEmailHtml,
-attachments: productAttachments
-        })
-      }
-    );
-
-    if (!clientResponse.ok) {
-      const error = await clientResponse.text();
-
-      console.error(
-        "Eroare email client:",
-        error
-      );
-
-      throw new Error("Emailul clientului nu a putut fi trimis");
-    }
 
     // Email către magazin
     const adminEmail = process.env.ORDER_NOTIFICATION_EMAIL;
@@ -524,6 +498,40 @@ attachments: productAttachments
 
       throw new Error("Emailul magazinului nu a putut fi trimis");
     }
+
+        try {
+  // Email către client
+    const clientResponse = await fetch(
+      "https://api.resend.com/emails",
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          from: "Boundless Collection <comenzi@boundlesscollection.ro>",
+          to: [customer.email],
+          subject: `Comanda ta ${orderId || ""} • Boundless Collection`,
+          html: customerEmailHtml,
+attachments: productAttachments
+        })
+      }
+    );
+
+    if (!clientResponse.ok) {
+      const error = await clientResponse.text();
+
+      console.error(
+        "Eroare email client:",
+        error
+      );
+
+      throw new Error("Emailul clientului nu a putut fi trimis");
+    }
+} catch (clientError) {
+  console.error(
+    "Comanda a fost trimisă magazinului, dar confirmarea clientului a eșuat:",
+    clientError.message
+  );
+}
 
     return res.status(200).json({
       ok: true
