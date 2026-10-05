@@ -110,6 +110,17 @@ const needsShipping = products.some(
 shipping = needsShipping ? 30 : 0;
 total = (subtotalCents + shipping * 100) / 100;
 
+    const advancePercent = needsShipping ? 50 : 100;
+const advanceAmount = total * advancePercent / 100;
+
+payment = needsShipping
+  ? "50% avans + 50% inainte de expediere"
+  : "100% avans - produs digital";
+
+const paymentDescription = needsShipping
+  ? "La confirmarea comenzii se achită 50% avans, iar diferența de 50% înainte de expediere."
+  : "Pentru produsele digitale se achită 100% avans după confirmarea comenzii, înainte de realizare.";
+
     const escapeHtml = (value = "") =>
       String(value)
         .replaceAll("&", "&amp;")
@@ -320,10 +331,10 @@ const productRows = products.map((item, index) => {
 
                       <tr>
   <td style="font-size:18px;">
-    <strong>Avans 50%</strong>
+    <strong>Avans ${advancePercent}%</strong>
   </td>
   <td align="right" style="font-size:18px;">
-    <strong>${money(Number(total || 0) / 2)} RON</strong>
+    <strong>${money(advanceAmount)} RON</strong>
   </td>
 </tr>
                     </table>
@@ -335,10 +346,7 @@ const productRows = products.map((item, index) => {
                       background:#fff4f7;
                       line-height:1.7;
                     ">
-                      La confirmarea comenzii se achită
-                      <strong>50% avans</strong>,
-                      iar diferența de
-                      <strong>50% înainte de expediere</strong>.
+                      ${escapeHtml(paymentDescription)}
                     </div>
 
                     <p style="
@@ -462,8 +470,8 @@ const productRows = products.map((item, index) => {
           </p>
 
           <p>
-            Avans 50%:
-            <strong>${money(Number(total || 0) / 2)} RON</strong>
+            Avans ${advancePercent}%:
+            <strong>${money(advanceAmount)} RON</strong>
           </p>
 
         </div>
