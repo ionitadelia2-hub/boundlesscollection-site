@@ -961,6 +961,26 @@ const needsShipping = cart.some(
 
 const taxaTransport = needsShipping ? 30.00 : 0;
 
+      if (!needsShipping) {
+  document.querySelector(".payment-note").innerHTML =
+    'Pentru produsele digitale se achită <strong>100% avans după confirmarea comenzii</strong>, înainte de realizare.';
+
+  const paymentSelect = document.getElementById("payment");
+
+  paymentSelect.replaceChildren(
+    new Option(
+      "100% avans — produs digital",
+      "100% avans - produs digital",
+      true,
+      true
+    )
+  );
+
+  paymentSelect.closest(".form-group")
+    .querySelector(".field-help").textContent =
+    "După verificarea comenzii primești documentul și instrucțiunile pentru plata integrală. Produsul final se livrează digital.";
+}
+
     if (!needsShipping) {
   const deliveryFieldIds = [
     "county",
