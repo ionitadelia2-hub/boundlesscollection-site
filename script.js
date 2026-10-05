@@ -413,6 +413,14 @@ function matchesMarturiiFilters(p) {
   ]);
 }
 
+if (activeMarturiiType === 'artificii') {
+  hitType = containsAny([
+    'artificii',
+    'scanteietoare',
+    'sparklers'
+  ]);
+}
+  
   return hitEvent && hitType;
 }
 
