@@ -213,7 +213,7 @@
   Total comandă: <span id="cart-total-val">0.00</span> RON
 </div>
 
-<p style="font-size:0.88rem;color:#666;line-height:1.6;margin:-12px 0 22px;">
+<p id="cart-payment-note" style="font-size:0.88rem;color:#666;line-height:1.6;margin:-12px 0 22px;">
   La confirmarea comenzii se achită
   <strong>50% avans</strong>, iar diferența de
   <strong>50% înainte de expediere</strong>.
@@ -260,6 +260,10 @@ const needsShipping = cart.some(
 );
 
 const taxaTransport = needsShipping ? 30.00 : 0;
+      document.getElementById("cart-payment-note").innerHTML =
+  needsShipping
+    ? 'La confirmarea comenzii se achită <strong>50% avans</strong>, iar diferența de <strong>50% înainte de expediere</strong>.'
+    : 'Pentru produsele digitale se achită <strong>100% avans după confirmarea comenzii</strong>, înainte de realizare.';
 
         const getMinQuantity = (item) => {
     return Math.max(
