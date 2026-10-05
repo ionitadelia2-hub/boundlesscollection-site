@@ -546,7 +546,7 @@ if (PAGE_FILTER === 'stickere oglinda') {
 ) {
   hitCatToggle = matchesMenuSubfilter(p, activeFilter);
 
-} else if (PAGE_FILTER === 'marturii') {
+} else if (['marturii', 'marturii nunta', 'marturii botez'].includes(PAGE_FILTER)) {
   hitCatToggle = matchesMarturiiFilters(p);
 
 } else {
@@ -696,7 +696,7 @@ if (PAGE_FILTER === 'stickere oglinda') {
       }
     }
 
-if (PAGE_FILTER === 'marturii') {
+if (['marturii', 'marturii nunta', 'marturii botez'].includes(PAGE_FILTER)) {
   const eventBtns = $$('#marturii-event-filters .sticker-filter');
   const typeBtns = $$('#marturii-type-filters .sticker-filter');
 
@@ -739,7 +739,7 @@ if (PAGE_FILTER === 'marturii') {
   btn.addEventListener('click', () => {
 
     if (
-      PAGE_FILTER === 'marturii' &&
+      ['marturii', 'marturii nunta', 'marturii botez'].includes(PAGE_FILTER) &&
       (btn.dataset.event || btn.dataset.type)
     ) {
       return;
