@@ -227,6 +227,11 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/accesorii-pregatiri-nunta.html">Accesorii pregătiri nuntă</a>
   </li>
 
+    <li class="menu-group" role="none">
+    <div class="menu-title">Stickere auto</div>
+    <a role="menuitem" href="/stickere-auto.html">Stickere auto personalizate</a>
+  </li>
+
   <li class="menu-group" role="none">
     <div class="menu-title">Cadouri</div>
     <a role="menuitem" href="/articole-petreceri-copii.html" style="font-weight:600; color:#d47a96;">Petreceri Copii 🎈</a>
