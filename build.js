@@ -159,6 +159,7 @@ const CATEGORY_MAP = {
   "tricouri scolare elevi": { name: "Pentru Elevi / Absolvenți", url: "/tricouri-scolare-elevi.html" },
   "articole petreceri copii": { name: "Petreceri Copii 🎈", url: "/articole-petreceri-copii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
+  "stickere auto": { name: "Stickere auto", url: "/stickere-auto.html" },
   "odorizante dulap": { name: "Odorizante pentru dulap", url: "/odorizante-dulap.html" },
   "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
   "toppere tort": { name: "Toppere tort & cupcakes", url: "/toppere-tort.html" },
@@ -1043,6 +1044,7 @@ const staticPagesForSitemap = [
   // Decor & accesorii
   "/aranjamente-florale.html",
   "/stickere-oglinda.html",
+  "/stickere-auto.html",
   "/odorizante-dulap.html",
   "/panouri-intampinare-sevalete.html",
   "/toppere-tort.html",
