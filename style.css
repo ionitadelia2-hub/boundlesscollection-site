@@ -2388,20 +2388,23 @@ appearance: textfield;
   background: #fff8fb;
 }
 
-/* Meniu desktop: secțiuni compacte în două coloane */
+/* Meniu compact, cu derulare verticală */
 @media (min-width: 901px) {
   .dropdown.open .menu.menu-mega {
-    display: block;
-    column-count: 2;
-    column-gap: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    columns: unset;
+    max-height: min(70vh, 560px);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .dropdown .menu.menu-mega .menu-group {
-    display: inline-block;
+    display: block;
+    flex: 0 0 auto;
     width: 100%;
     box-sizing: border-box;
-    break-inside: avoid;
-    margin: 0 0 12px;
-    vertical-align: top;
+    margin: 0;
   }
 }
