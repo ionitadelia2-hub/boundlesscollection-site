@@ -2387,3 +2387,21 @@ appearance: textfield;
 .quantity-input:focus {
   background: #fff8fb;
 }
+
+/* Meniu desktop: secțiuni compacte în două coloane */
+@media (min-width: 901px) {
+  .dropdown.open .menu.menu-mega {
+    display: block;
+    column-count: 2;
+    column-gap: 14px;
+  }
+
+  .dropdown .menu.menu-mega .menu-group {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    break-inside: avoid;
+    margin: 0 0 12px;
+    vertical-align: top;
+  }
+}
