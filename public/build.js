@@ -128,6 +128,7 @@ const jsTagIfExists  = (filename) => exists(ROOT, filename)
 
 // ---- map categorii pentru breadcrumbs ----
 const CATEGORY_MAP = {
+  "lumanari decorative": { name: "Lumânări decorative", url: "/lumanari-decorative.html" },
   "invitatii": { name: "Invitații", url: "/invitatii.html" },
   "invitatii nunta": { name: "Invitații nuntă", url: "/invitatii-nunta.html" },
   "invitatii botez": { name: "Invitații botez", url: "/invitatii-botez.html" },
@@ -159,6 +160,7 @@ const CATEGORY_MAP = {
   "tricouri scolare elevi": { name: "Pentru Elevi / Absolvenți", url: "/tricouri-scolare-elevi.html" },
   "articole petreceri copii": { name: "Petreceri Copii 🎈", url: "/articole-petreceri-copii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
+  "stickere auto": { name: "Stickere auto", url: "/stickere-auto.html" },
   "odorizante dulap": { name: "Odorizante pentru dulap", url: "/odorizante-dulap.html" },
   "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
   "toppere tort": { name: "Toppere tort & cupcakes", url: "/toppere-tort.html" },
@@ -226,8 +228,14 @@ const PRODUCTS_DROPDOWN_HTML = `
     <a role="menuitem" href="/accesorii-pregatiri-nunta.html">Accesorii pregătiri nuntă</a>
   </li>
 
+    <li class="menu-group" role="none">
+    <div class="menu-title">Stickere auto</div>
+    <a role="menuitem" href="/stickere-auto.html">Stickere auto personalizate</a>
+  </li>
+
   <li class="menu-group" role="none">
     <div class="menu-title">Cadouri</div>
+    <a role="menuitem" href="/lumanari-decorative.html">Lumânări decorative</a>
     <a role="menuitem" href="/articole-petreceri-copii.html" style="font-weight:600; color:#d47a96;">Petreceri Copii 🎈</a>
     <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
     <a role="menuitem" href="/tablouri-parfumate.html">Tablouri parfumate</a>
@@ -710,6 +718,7 @@ function pageTemplate(prod) {
       else if(ref.includes("/panouri-intampinare-sevalete")) back="/panouri-intampinare-sevalete.html";
       else if(ref.includes("/toppere-tort")) back="/toppere-tort.html";
       else if(ref.includes("/accesorii-pregatiri-nunta")) back="/accesorii-pregatiri-nunta.html";
+      else if(ref.includes("/lumanari-decorative")) back="/lumanari-decorative.html";
       else if(ref.includes("/craciun")) back="/craciun.html";
       else if(ref.includes("/tablouri-luminoase")) back="/tablouri-luminoase.html";
       else if(ref.includes("/pahare-nunta-personalizate")) back="/pahare-nunta-personalizate.html";
@@ -1043,6 +1052,7 @@ const staticPagesForSitemap = [
   // Decor & accesorii
   "/aranjamente-florale.html",
   "/stickere-oglinda.html",
+  "/stickere-auto.html",
   "/odorizante-dulap.html",
   "/panouri-intampinare-sevalete.html",
   "/toppere-tort.html",
@@ -1050,6 +1060,7 @@ const staticPagesForSitemap = [
   "/pahare-nunta-personalizate.html",
 
   // Cadouri
+  "/lumanari-decorative.html",
   "/articole-petreceri-copii.html",
   "/tablouri-luminoase.html",
   "/tablouri-parfumate.html",

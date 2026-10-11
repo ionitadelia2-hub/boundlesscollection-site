@@ -2387,3 +2387,41 @@ appearance: textfield;
 .quantity-input:focus {
   background: #fff8fb;
 }
+
+/* Două coloane independente, cu derulare verticală */
+@media (min-width: 901px) {
+  .dropdown.open .menu.menu-mega {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 14px;
+    columns: unset;
+    max-height: min(70vh, 560px);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .menu-mega > .menu-column {
+    list-style: none;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-column > .menu-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown .menu.menu-mega .menu-group {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+}

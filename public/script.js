@@ -413,6 +413,14 @@ function matchesMarturiiFilters(p) {
   ]);
 }
 
+if (activeMarturiiType === 'artificii') {
+  hitType = containsAny([
+    'artificii',
+    'scanteietoare',
+    'sparklers'
+  ]);
+}
+  
   return hitEvent && hitType;
 }
 
@@ -541,12 +549,12 @@ if (PAGE_FILTER === 'stickere oglinda') {
 } else if (
   PAGE_FILTER === 'meniuri' ||
   PAGE_FILTER === 'numere de masa'||
-  PAGE_FILTER === 'invitatii' ||
+  ['invitatii', 'invitatii nunta', 'invitatii botez'].includes(PAGE_FILTER) ||
   PAGE_FILTER === 'plicuri'
 ) {
   hitCatToggle = matchesMenuSubfilter(p, activeFilter);
 
-} else if (PAGE_FILTER === 'marturii') {
+} else if (['marturii', 'marturii nunta', 'marturii botez'].includes(PAGE_FILTER)) {
   hitCatToggle = matchesMarturiiFilters(p);
 
 } else {
@@ -696,7 +704,7 @@ if (PAGE_FILTER === 'stickere oglinda') {
       }
     }
 
-if (PAGE_FILTER === 'marturii') {
+if (['marturii', 'marturii nunta', 'marturii botez'].includes(PAGE_FILTER)) {
   const eventBtns = $$('#marturii-event-filters .sticker-filter');
   const typeBtns = $$('#marturii-type-filters .sticker-filter');
 
@@ -739,7 +747,7 @@ if (PAGE_FILTER === 'marturii') {
   btn.addEventListener('click', () => {
 
     if (
-      PAGE_FILTER === 'marturii' &&
+      ['marturii', 'marturii nunta', 'marturii botez'].includes(PAGE_FILTER) &&
       (btn.dataset.event || btn.dataset.type)
     ) {
       return;
@@ -765,4 +773,58 @@ if (PAGE_FILTER === 'marturii') {
       render();
     });
   });
+})();
+
+/* Distribuie secțiunile în două coloane compacte */
+(function () {
+  function initMenuColumns() {
+    const menu = document.querySelector('.menu-mega');
+    if (!menu) return;
+
+    const groups = Array.from(menu.children).filter(
+      element => element.classList.contains('menu-group')
+    );
+    if (!groups.length) return;
+
+    const desktop = window.matchMedia('(min-width: 901px)');
+
+    function updateColumns() {
+      // Restabilește ordinea originală înainte de reorganizare.
+      menu.replaceChildren(...groups);
+
+      // Pe telefon rămâne meniul obișnuit.
+      if (!desktop.matches) return;
+
+      const stacks = [0, 1].map(() => {
+        const column = document.createElement('li');
+        column.className = 'menu-column';
+        column.setAttribute('role', 'none');
+
+        const stack = document.createElement('ul');
+        stack.className = 'menu-stack';
+        stack.setAttribute('role', 'group');
+
+        column.appendChild(stack);
+        menu.appendChild(column);
+        return stack;
+      });
+
+      const sizes = [0, 0];
+
+      groups.forEach(group => {
+        const index = sizes[0] <= sizes[1] ? 0 : 1;
+        stacks[index].appendChild(group);
+        sizes[index] += group.querySelectorAll('a').length + 2;
+      });
+    }
+
+    updateColumns();
+    desktop.addEventListener('change', updateColumns);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMenuColumns);
+  } else {
+    initMenuColumns();
+  }
 })();

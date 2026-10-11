@@ -405,6 +405,11 @@
       font-size: 1.8rem;
     }
   }
+
+    section.checkout-right {
+  padding: 0;
+  margin: 0;
+}
 </style>
 </head>
 
@@ -506,7 +511,7 @@
       <div class="checkout-card">
 
         <h2 class="section-title">
-          Date pentru comandă și livrare
+          Date pentru comandă
         </h2>
 
         <form id="checkout-form">
@@ -551,7 +556,7 @@
             </div>
 
             <div class="form-group">
-              <label for="email">Adresă de email *</label>
+              <label for="email">Adresă de email pentru confirmare și livrare digitală *</label>
               <input
                 type="email"
                 id="email"
@@ -796,6 +801,8 @@ fetch("/data/romania-localitati.json")
 
   .then(data => {
 
+if (!needsShipping) return;
+    
     if (!data || !Array.isArray(data.judete)) {
       throw new Error("Structura fișierului localităților nu este validă.");
     }
@@ -968,6 +975,49 @@ const needsShipping = cart.some(
 
 const taxaTransport = needsShipping ? 30.00 : 0;
 
+      if (!needsShipping) {
+  document.querySelector(".payment-note").innerHTML =
+    'Pentru produsele digitale se achită <strong>100% avans după confirmarea comenzii</strong>, înainte de realizare.';
+
+  const paymentSelect = document.getElementById("payment");
+
+  paymentSelect.replaceChildren(
+    new Option(
+      "100% avans — produs digital",
+      "100% avans - produs digital",
+      true,
+      true
+    )
+  );
+
+  paymentSelect.closest(".form-group")
+    .querySelector(".field-help").textContent =
+    "După verificarea comenzii primești documentul și instrucțiunile pentru plata integrală. Produsul final se livrează digital.";
+}
+
+    if (!needsShipping) {
+  const deliveryFieldIds = [
+    "county",
+    "city",
+    "street",
+    "street-number",
+    "postal-code",
+    "building",
+    "entrance",
+    "floor",
+    "apartment",
+    "delivery-notes"
+  ];
+
+  deliveryFieldIds.forEach(id => {
+    const field = document.getElementById(id);
+
+    field.required = false;
+    field.disabled = true;
+    field.closest(".form-group").style.display = "none";
+  });
+}
+
 
       cart.forEach(item => {
 
@@ -1114,7 +1164,7 @@ summaryText +=
     email: document.getElementById("email").value.trim(),
     phone: document.getElementById("phone").value.trim(),
 
-    address: [
+    address: needsShipping ? [
       document.getElementById("street").value.trim(),
       "nr. " + document.getElementById("street-number").value.trim(),
 
@@ -1142,7 +1192,7 @@ summaryText +=
         : ""
     ]
       .filter(Boolean)
-      .join(", ")
+.join(", ") : "Produs digital — fără adresă de livrare"
   },
 
   products: cart.map(item => ({
