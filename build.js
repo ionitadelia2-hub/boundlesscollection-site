@@ -128,6 +128,7 @@ const jsTagIfExists  = (filename) => exists(ROOT, filename)
 
 // ---- map categorii pentru breadcrumbs ----
 const CATEGORY_MAP = {
+  "cutii cerere nasi": { name: "Cutii cerere nași", url: "/cutii-cerere-nasi" },
   "lumanari decorative": { name: "Lumânări decorative", url: "/lumanari-decorative.html" },
   "invitatii": { name: "Invitații", url: "/invitatii.html" },
   "invitatii nunta": { name: "Invitații nuntă", url: "/invitatii-nunta.html" },
@@ -235,6 +236,7 @@ const PRODUCTS_DROPDOWN_HTML = `
 
   <li class="menu-group" role="none">
     <div class="menu-title">Cadouri</div>
+    <a role="menuitem" href="/cutii-cerere-nasi">Cutii cerere nași</a>
     <a role="menuitem" href="/lumanari-decorative.html">Lumânări decorative</a>
     <a role="menuitem" href="/articole-petreceri-copii.html" style="font-weight:600; color:#d47a96;">Petreceri Copii 🎈</a>
     <a role="menuitem" href="/tablouri-luminoase.html">Tablouri luminoase</a>
@@ -1012,6 +1014,7 @@ processedHtml = injectGoogleTag(
 // ============================================================
 
 const staticPagesForSitemap = [
+  "/cutii-cerere-nasi.html",
   "/",
 
   // Papetarie
