@@ -190,6 +190,14 @@ function matchesStickerSubfilter(p, filter) {
     });
   }
 
+    // STICKERE PENTRU CUTII CERERE NASI
+  if (filter === 'cerere nasi') {
+    return (
+      title.includes('cerere nasi') ||
+      tags.includes('stickere cutie nasi')
+    );
+  }
+
   // NUNTA / BOTEZ / ANIVERSARE / EVENIMENTE
   const words = STICKER_FILTER_GROUPS[filter] || [];
 
@@ -425,6 +433,15 @@ if (activeMarturiiType === 'artificii') {
 }
 
 const matchesCategoryGroup = (productKey, filterKey, tagsKey = []) => {
+    if (filterKey === 'stickere oglinda') {
+    return (
+      productKey === 'stickere oglinda' ||
+      (
+        productKey === 'stickere' &&
+        tagsKey.includes('stickere cutie nasi')
+      )
+    );
+  }
   if (!filterKey || filterKey === 'toate') return true;
 
   // Pagina / butonul "Invitatii" trebuie sa includa si nunta + botez
