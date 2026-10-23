@@ -698,8 +698,8 @@
             <div class="form-group full-width" id="caricature-upload-box" style="display:none;border:1px solid #e7cbd5;border-radius:12px;padding:16px;background:#fff8fb">
               <label for="caricature-photos">Fotografii pentru caricatură * (maximum 3 fotografii)</label>
               <input id="caricature-photos" type="file" accept="image/jpeg,image/png,image/webp" multiple>
-              <div class="field-help">Selectează 1–3 fotografii clare. Le optimizăm pentru trimitere și le atașăm doar emailului către magazin. Maximum 8 MB pentru fiecare fotografie originală. Nu încărca fotografii cu date sensibile.</div>
-              <p id="caricature-photo-status" aria-live="polite"></p>
+              <div class="field-help">Poți selecta fotografiile pe rând sau pe toate odată. Le poți șterge din lista de mai jos. Selectează 1–3 fotografii clare. Le optimizăm pentru trimitere și le atașăm doar emailului către magazin. Maximum 8 MB pentru fiecare fotografie originală. Nu încărca fotografii cu date sensibile.</div>
+              <p id="caricature-photo-status" aria-live="polite"></p><div id="caricature-photo-list" style="display:grid;gap:8px;margin-top:10px"></div>
             </div>
             <div class="form-group full-width">
 
@@ -978,6 +978,46 @@ const photoBox = document.getElementById("caricature-upload-box");
 photoBox.style.display = hasCaricature ? "block" : "none";
 const photoInput = document.getElementById("caricature-photos");
 photoInput.required = hasCaricature;
+const selectedCaricaturePhotos = [];
+const photoList = document.getElementById("caricature-photo-list");
+const photoStatus = document.getElementById("caricature-photo-status");
+photoInput.required = false;
+function renderCaricaturePhotos() {
+  photoList.replaceChildren();
+  selectedCaricaturePhotos.forEach((file, index) => {
+    const line = document.createElement("div");
+    line.style.cssText = "display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px;border:1px solid #ead8df;border-radius:9px;background:#fff";
+    const name = document.createElement("span");
+    name.textContent = (index + 1) + ". " + file.name;
+    name.style.cssText = "overflow-wrap:anywhere;font-size:13px";
+    const remove = document.createElement("button");
+    remove.type = "button";
+    remove.textContent = "Șterge";
+    remove.setAttribute("aria-label", "Șterge fotografia " + file.name);
+    remove.style.cssText = "border:1px solid #d8b9c6;border-radius:6px;background:white;padding:5px 10px;cursor:pointer";
+    remove.addEventListener("click", () => {
+      selectedCaricaturePhotos.splice(index, 1);
+      renderCaricaturePhotos();
+    });
+    line.append(name, remove);
+    photoList.append(line);
+  });
+  photoStatus.textContent = selectedCaricaturePhotos.length + " din 3 fotografii selectate. " + (selectedCaricaturePhotos.length < 3 ? "Poți adăuga încă " + (3 - selectedCaricaturePhotos.length) + "." : "Ai atins limita de 3.");
+}
+photoInput.addEventListener("change", () => {
+  const incoming = Array.from(photoInput.files || []);
+  photoInput.value = "";
+  let rejected = "";
+  for (const file of incoming) {
+    if (selectedCaricaturePhotos.length >= 3) { rejected = "Poți încărca maximum 3 fotografii."; break; }
+    if (!["image/jpeg","image/png","image/webp"].includes(file.type) || file.size > 8 * 1024 * 1024) { rejected = "Acceptăm doar JPG, PNG sau WebP, maximum 8 MB per fotografie."; continue; }
+    if (selectedCaricaturePhotos.some(old => old.name === file.name && old.size === file.size && old.lastModified === file.lastModified)) { rejected = "Fotografia este deja adăugată."; continue; }
+    selectedCaricaturePhotos.push(file);
+  }
+  renderCaricaturePhotos();
+  if (rejected) photoStatus.textContent += " " + rejected;
+});
+
 
       if (!needsShipping) {
   document.querySelector(".payment-note").innerHTML =
@@ -1114,7 +1154,7 @@ summaryText +=
 
       async function prepareCaricaturePhotos() {
         if (!hasCaricature) return [];
-        const files = Array.from(photoInput.files || []);
+        const files = selectedCaricaturePhotos.slice();
         if (files.length < 1 || files.length > 3) throw new Error("Încarcă între 1 și 3 fotografii pentru caricatură.");
         const status = document.getElementById("caricature-photo-status");
         status.textContent = "Pregătim fotografiile pentru trimitere...";
