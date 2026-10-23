@@ -11188,5 +11188,73 @@
     "material": "",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-digital",
+    "title": "Caricatură personalizată digitală",
+    "price": 49,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografiile încărcate la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate"
+    ],
+    "slug": "caricatura-personalizata-digital",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-print-a4",
+    "title": "Caricatură personalizată print A4",
+    "price": 79,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografiile încărcate la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate"
+    ],
+    "slug": "caricatura-personalizata-print-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-aurie-a4",
+    "title": "Caricatură personalizată A4 cu ramă aurie",
+    "price": 119,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografiile încărcate la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate"
+    ],
+    "slug": "caricatura-personalizata-rama-aurie-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-aurie-cadou-a4",
+    "title": "Caricatură personalizată A4 cu ramă aurie și ambalaj cadou",
+    "price": 139,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografiile încărcate la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate"
+    ],
+    "slug": "caricatura-personalizata-rama-aurie-cadou-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
