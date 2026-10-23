@@ -59,6 +59,8 @@ const seenIds = new Set();
 for (const item of products) {
   const product = productsById.get(item?.id);
   const quantity = item?.quantity;
+  const theme = product?.id?.startsWith("caricatura-personalizata-") && ["Crăciun", "Valentine\'s Day", "Cuplu"].includes(item?.theme) ? item.theme : "";
+  const uniqueKey = product?.id + "|" + theme;
 
   const minimum = Math.max(
     1,
@@ -67,7 +69,7 @@ for (const item of products) {
 
   if (
     !product ||
-    seenIds.has(item.id) ||
+    seenIds.has(uniqueKey) ||
     !Number.isSafeInteger(quantity) ||
     quantity < minimum ||
     quantity > 10000 ||
@@ -80,11 +82,11 @@ for (const item of products) {
     });
   }
 
-  seenIds.add(item.id);
+  seenIds.add(uniqueKey);
 
   checkedProducts.push({
     id: product.id,
-    title: product.title,
+    title: product.title + (theme ? " — tematică: " + theme : ""),
     price: product.price,
     quantity,
     image: product.images?.[0] || ""
