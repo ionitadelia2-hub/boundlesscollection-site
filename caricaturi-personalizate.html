@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caricaturi personalizate după fotografii | Boundless Collection</title>
+<meta name="description" content="Caricaturi personalizate după fotografii: format digital, print A4, ramă aurie sau ambalaj cadou.">
+<link rel="canonical" href="https://boundlesscollection.ro/caricaturi-personalizate.html">
+<link rel="stylesheet" href="/style.css">
+<style>
+.bc-wrap{max-width:1160px;margin:auto;padding:45px 20px 75px}.bc-hero{text-align:center;background:#fff7fa;border-radius:24px;padding:48px 20px;margin-bottom:35px}.bc-hero h1{font-family:Georgia,serif;font-size:clamp(32px,5vw,50px);margin:0 0 12px}.bc-hero p{max-width:670px;margin:0 auto;line-height:1.7;color:#65545a}.bc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:22px}.bc-card{border:1px solid #f0e2e7;border-radius:18px;overflow:hidden;background:white;padding:24px;display:flex;flex-direction:column;gap:14px}.bc-art{background:#fff5f8;border-radius:14px;min-height:165px;display:grid;place-items:center;text-align:center;font-size:55px}.bc-card h2{font-size:20px;line-height:1.35;margin:0}.bc-price{font-size:23px;font-weight:700}.bc-card a{margin-top:auto;display:block;text-align:center;padding:13px;border-radius:10px;background:#30242a;color:#fff;text-decoration:none}.bc-note{margin-top:30px;color:#62545a;line-height:1.7}
+</style></head><body>
+<main class="bc-wrap"><nav aria-label="Fir de navigare"><a href="/">Acasă</a> / Caricaturi personalizate</nav>
+<section class="bc-hero"><h1>Caricaturi personalizate</h1><p>Un cadou cu personalitate, creat după fotografiile tale. Alege varianta digitală sau un print A4, simplu ori înrămat.</p></section>
+<section aria-label="Produse" class="bc-grid" id="caricatureProducts"></section>
+<p class="bc-note">Fotografiile și detaliile de personalizare se stabilesc la confirmarea comenzii. Prețurile sunt pentru variantele afișate; eventualele cerințe suplimentare se discută înainte de realizare.</p></main>
+<script>
+const ids=["caricatura-personalizata-digital","caricatura-personalizata-print-a4","caricatura-personalizata-rama-aurie-a4","caricatura-personalizata-rama-aurie-cadou-a4"];
+fetch("/content/products.json").then(r=>{if(!r.ok)throw Error("catalog");return r.json()}).then(products=>{
+const root=document.getElementById("caricatureProducts");
+for(const id of ids){const p=products.find(x=>x.id===id);if(!p)continue;
+const card=document.createElement("article");card.className="bc-card";
+const art=document.createElement("div");art.className="bc-art";art.textContent="🎨";
+const title=document.createElement("h2");title.textContent=p.title;
+const price=document.createElement("div");price.className="bc-price";price.textContent=Number(p.price).toFixed(2)+" lei";
+const link=document.createElement("a");link.href="/p/"+encodeURIComponent(p.slug)+".html";link.textContent="Vezi produsul";
+card.append(art,title,price,link);root.append(card);
+}
+}).catch(()=>{document.getElementById("caricatureProducts").textContent="Produsele nu au putut fi încărcate momentan."});
+</script></body></html>
