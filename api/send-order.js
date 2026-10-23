@@ -246,6 +246,14 @@ const productRows = products.map((item, index) => {
                   Number(item.quantity || 0)
                 )} RON
               </strong>
+
+              ${item.id.startsWith("caricatura-personalizata-") ? (() => {
+                const caricatureIndex = caricatureProductsForPhotos.indexOf(item);
+                const assignedPhotos = photoAttachments.filter(photo => photo.productIndex === caricatureIndex);
+                return assignedPhotos.length
+                  ? '<div style="margin-top:10px;padding:9px 11px;background:#fff7fa;border-radius:8px;font-size:13px;"><strong>Fotografii asociate:</strong><br>' + assignedPhotos.map(photo => escapeHtml(photo.filename)).join('<br>') + '</div>'
+                  : '<div style="margin-top:8px;font-size:13px;color:#777;">Nicio fotografie asociată</div>';
+              })() : ""}
             </td>
 
           </tr>
