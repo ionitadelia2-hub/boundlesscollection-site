@@ -1066,6 +1066,9 @@ const staticPagesForSitemap = [
 
   // Cadouri
   "/caricaturi-personalizate.html",
+  "/caricatura-craciun.html",
+  "/caricatura-valentines-day.html",
+  "/caricatura-cuplu.html",
   "/lumanari-decorative.html",
   "/articole-petreceri-copii.html",
   "/tablouri-luminoase.html",
