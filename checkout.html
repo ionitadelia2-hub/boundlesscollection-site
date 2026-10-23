@@ -731,7 +731,7 @@
             <div class="form-group full-width" id="caricature-upload-box" style="display:none;border:1px solid #e7cbd5;border-radius:12px;padding:16px;background:#fff8fb">
               <label for="caricature-photos">Fotografii pentru caricatură * (maximum 3 fotografii)</label>
               <input id="caricature-photos" type="file" accept="image/jpeg,image/png,image/webp" multiple>
-              <div class="field-help">Poți selecta fotografiile pe rând sau pe toate odată. Le poți șterge din lista de mai jos. Selectează 1–3 fotografii clare. Le optimizăm pentru trimitere și le atașăm doar emailului către magazin. Maximum 8 MB pentru fiecare fotografie originală. Nu încărca fotografii cu date sensibile.</div>
+              <div class="field-help">Poți selecta fotografiile pe rând sau pe toate odată. Dacă ai mai multe caricaturi în coș, alege pentru fiecare fotografie produsul corespunzător. Le poți șterge din lista de mai jos. Selectează 1–3 fotografii clare. Le optimizăm pentru trimitere și le atașăm doar emailului către magazin. Maximum 8 MB pentru fiecare fotografie originală. Nu încărca fotografii cu date sensibile.</div>
               <p id="caricature-photo-status" aria-live="polite"></p><div id="caricature-photo-list" style="display:grid;gap:8px;margin-top:10px"></div>
             </div>
             <div class="form-group full-width">
@@ -1018,6 +1018,7 @@ photoBox.style.display = hasCaricature ? "block" : "none";
 const photoInput = document.getElementById("caricature-photos");
 photoInput.required = hasCaricature;
 const selectedCaricaturePhotos = [];
+const caricatureItems = cart.filter(item => item.id.startsWith("caricatura-personalizata-"));
 const photoList = document.getElementById("caricature-photo-list");
 const photoStatus = document.getElementById("caricature-photo-status");
 photoInput.required = false;
@@ -1038,6 +1039,18 @@ function renderCaricaturePhotos() {
       selectedCaricaturePhotos.splice(index, 1);
       renderCaricaturePhotos();
     });
+    const assignment = document.createElement("select");
+    assignment.setAttribute("aria-label", "Produsul pentru fotografia " + file.name);
+    assignment.style.cssText = "max-width:230px;padding:7px;border:1px solid #ead8df;border-radius:7px;background:#fff";
+    caricatureItems.forEach((item, itemIndex) => {
+      const option = document.createElement("option");
+      option.value = String(itemIndex);
+      option.textContent = "Caricatura " + (itemIndex + 1) + ": " + (item.title || item.id);
+      assignment.append(option);
+    });
+    assignment.value = String(file.caricatureItemIndex ?? 0);
+    assignment.addEventListener("change", () => { file.caricatureItemIndex = Number(assignment.value); });
+    if (caricatureItems.length > 1) line.append(assignment);
     line.append(name, remove);
     photoList.append(line);
   });
@@ -1051,6 +1064,7 @@ photoInput.addEventListener("change", () => {
     if (selectedCaricaturePhotos.length >= 3) { rejected = "Poți încărca maximum 3 fotografii."; break; }
     if (!["image/jpeg","image/png","image/webp"].includes(file.type) || file.size > 8 * 1024 * 1024) { rejected = "Acceptăm doar JPG, PNG sau WebP, maximum 8 MB per fotografie."; continue; }
     if (selectedCaricaturePhotos.some(old => old.name === file.name && old.size === file.size && old.lastModified === file.lastModified)) { rejected = "Fotografia este deja adăugată."; continue; }
+    file.caricatureItemIndex = 0;
     selectedCaricaturePhotos.push(file);
   }
   renderCaricaturePhotos();
@@ -1194,6 +1208,7 @@ summaryText +=
       async function prepareCaricaturePhotos() {
         if (!hasCaricature) return [];
         const files = selectedCaricaturePhotos.slice();
+        if (caricatureItems.length > 1 && caricatureItems.some((_, index) => !files.some(file => Number(file.caricatureItemIndex || 0) === index))) throw new Error("Adaugă cel puțin o fotografie pentru fiecare caricatură din comandă.");
         if (files.length < 1 || files.length > 3) throw new Error("Încarcă între 1 și 3 fotografii pentru caricatură.");
         const status = document.getElementById("caricature-photo-status");
         status.textContent = "Pregătim fotografiile pentru trimitere...";
@@ -1213,7 +1228,7 @@ summaryText +=
             const dataUrl = canvas.toDataURL("image/jpeg", 0.78);
             const base64 = dataUrl.split(",")[1];
             if (base64.length > 850000) throw new Error("Fotografia este prea mare după optimizare. Încearcă o fotografie mai mică.");
-            output.push({ filename: "fotografie-caricatura-" + (i + 1) + ".jpg", content: base64, contentType: "image/jpeg" });
+            output.push({ filename: "fotografie-caricatura-" + (i + 1) + ".jpg", content: base64, contentType: "image/jpeg", productIndex: Number(file.caricatureItemIndex || 0) });
           } finally { bitmap.close(); }
         }
         status.textContent = output.length + " fotografii pregătite.";
