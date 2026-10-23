@@ -22,6 +22,7 @@ export default async function handler(req, res) {
   try {
     let {
   orderId,
+  caricaturePhotos,
   customer,
   products,
   subtotal,
@@ -100,7 +101,8 @@ const subtotalCents = products.reduce(
 
 subtotal = subtotalCents / 100;
 const digitalProductIds = new Set([
-  "invitatie-digitala-nunta-muzica-animatii-whatsapp"
+  "invitatie-digitala-nunta-muzica-animatii-whatsapp",
+  "caricatura-personalizata-digital"
 ]);
 
 const needsShipping = products.some(
@@ -131,6 +133,26 @@ const paymentDescription = needsShipping
 
     const money = (value) =>
       Number(value || 0).toFixed(2);
+
+
+    // Fotografii pentru caricaturi: verificare strictă, fără stocare publică.
+    const hasCaricature = products.some(item => item.id.startsWith("caricatura-personalizata-"));
+    const uploaded = caricaturePhotos === undefined ? [] : caricaturePhotos;
+    if (!Array.isArray(uploaded) || uploaded.length > 3 || (hasCaricature && uploaded.length === 0) || (!hasCaricature && uploaded.length)) {
+      return res.status(400).json({ ok: false, error: "Fotografiile pentru caricatură lipsesc sau sunt invalide." });
+    }
+    const photoAttachments = [];
+    for (let i = 0; i < uploaded.length; i++) {
+      const photo = uploaded[i];
+      if (!photo || photo.contentType !== "image/jpeg" || typeof photo.content !== "string" || !/^[A-Za-z0-9+/]+={0,2}$/.test(photo.content) || photo.content.length > 850000) {
+        return res.status(400).json({ ok: false, error: "Format fotografie invalid." });
+      }
+      const bytes = Buffer.from(photo.content, "base64");
+      if (bytes.length < 100 || bytes.length > 640000 || bytes[0] !== 0xff || bytes[1] !== 0xd8 || bytes[2] !== 0xff) {
+        return res.status(400).json({ ok: false, error: "Fotografie JPEG invalidă sau prea mare." });
+      }
+      photoAttachments.push({ filename: "caricatura-" + String(i + 1) + ".jpg", content: photo.content });
+    }
 
     const productAttachments = [];
 
@@ -505,7 +527,7 @@ const productRows = products.map((item, index) => {
           reply_to: customer.email,
           subject: `🛍️ Comandă nouă ${orderId || ""} - ${customer.name || ""}`,
           html: adminEmailHtml,
-  attachments: productAttachments
+  attachments: [...productAttachments, ...photoAttachments]
         })
       }
     );
