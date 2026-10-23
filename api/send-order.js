@@ -153,9 +153,16 @@ const paymentDescription = needsShipping
       if (bytes.length < 100 || bytes.length > 640000 || bytes[0] !== 0xff || bytes[1] !== 0xd8 || bytes[2] !== 0xff) {
         return res.status(400).json({ ok: false, error: "Fotografie JPEG invalidă sau prea mare." });
       }
-      photoAttachments.push({ filename: "caricatura-" + String(i + 1) + ".jpg", content: photo.content });
+      const caricatureProducts = products.filter(item => item.id.startsWith("caricatura-personalizata-"));
+      const assignedIndex = Number(photo.productIndex ?? 0);
+      if (!Number.isInteger(assignedIndex) || assignedIndex < 0 || assignedIndex >= caricatureProducts.length) {
+        return res.status(400).json({ ok: false, error: "Asocierea fotografiei cu produsul este invalidă." });
+      }
+      photoAttachments.push({ filename: "caricatura-" + String(assignedIndex + 1) + "-foto-" + String(i + 1) + ".jpg", content: photo.content, productIndex: assignedIndex });
     }
 
+    const caricatureProductsForPhotos = products.filter(item => item.id.startsWith("caricatura-personalizata-"));
+    const photoAssignmentHtml = photoAttachments.length ? "<h2>Fotografii asociate produselor</h2><ul>" + photoAttachments.map((photo, i) => "<li>" + escapeHtml(photo.filename) + " → " + escapeHtml(caricatureProductsForPhotos[photo.productIndex]?.title || "") + "</li>").join("") + "</ul>" : "";
     const productAttachments = [];
 
 const productRows = products.map((item, index) => {
@@ -481,6 +488,7 @@ const productRows = products.map((item, index) => {
               : ""
           }
 
+          ${photoAssignmentHtml}
           <h2>Total</h2>
 
           <p>
