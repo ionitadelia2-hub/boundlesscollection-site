@@ -11540,5 +11540,131 @@
     "material": "",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-print-15x20",
+    "title": "Caricatură personalizată print 15 × 20 cm",
+    "price": 59,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, format 15 × 20 cm.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print 15x20"
+    ],
+    "slug": "caricatura-personalizata-print-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-alba-15x20",
+    "title": "Caricatură personalizată 15 × 20 cm cu ramă albă",
+    "price": 89,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, format 15 × 20 cm.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print 15x20"
+    ],
+    "slug": "caricatura-personalizata-rama-alba-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-alba-cadou-15x20",
+    "title": "Caricatură personalizată 15 × 20 cm cu ramă albă și ambalaj cadou",
+    "price": 109,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, format 15 × 20 cm.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print 15x20"
+    ],
+    "slug": "caricatura-personalizata-rama-alba-cadou-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-neagra-15x20",
+    "title": "Caricatură personalizată 15 × 20 cm cu ramă neagră",
+    "price": 89,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, format 15 × 20 cm.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print 15x20"
+    ],
+    "slug": "caricatura-personalizata-rama-neagra-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-neagra-cadou-15x20",
+    "title": "Caricatură personalizată 15 × 20 cm cu ramă neagră și ambalaj cadou",
+    "price": 109,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, format 15 × 20 cm.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print 15x20"
+    ],
+    "slug": "caricatura-personalizata-rama-neagra-cadou-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-aurie-15x20",
+    "title": "Caricatură personalizată 15 × 20 cm cu ramă aurie",
+    "price": 89,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, format 15 × 20 cm.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print 15x20"
+    ],
+    "slug": "caricatura-personalizata-rama-aurie-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-aurie-cadou-15x20",
+    "title": "Caricatură personalizată 15 × 20 cm cu ramă aurie și ambalaj cadou",
+    "price": 109,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, format 15 × 20 cm.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print 15x20"
+    ],
+    "slug": "caricatura-personalizata-rama-aurie-cadou-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
