@@ -11256,5 +11256,95 @@
     "material": "",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-print-a3",
+    "title": "Caricatură personalizată print A3",
+    "price": 99,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, print A3. Fără ramă. Fotografiile se încarcă la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print A3"
+    ],
+    "slug": "caricatura-personalizata-print-a3",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-alba-a3",
+    "title": "Caricatură personalizată A3 cu ramă albă",
+    "price": 159,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, print A3. Ramă albă. Fotografiile se încarcă la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print A3"
+    ],
+    "slug": "caricatura-personalizata-rama-alba-a3",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-neagra-a3",
+    "title": "Caricatură personalizată A3 cu ramă neagră",
+    "price": 159,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, print A3. Ramă neagră. Fotografiile se încarcă la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print A3"
+    ],
+    "slug": "caricatura-personalizata-rama-neagra-a3",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-alba-cadou-a3",
+    "title": "Caricatură personalizată A3 cu ramă albă și ambalaj cadou",
+    "price": 179,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, print A3. Ramă albă | Ambalaj cadou. Fotografiile se încarcă la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print A3"
+    ],
+    "slug": "caricatura-personalizata-rama-alba-cadou-a3",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-neagra-cadou-a3",
+    "title": "Caricatură personalizată A3 cu ramă neagră și ambalaj cadou",
+    "price": 179,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată după fotografii, print A3. Ramă neagră | Ambalaj cadou. Fotografiile se încarcă la finalizarea comenzii.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "print A3"
+    ],
+    "slug": "caricatura-personalizata-rama-neagra-cadou-a3",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
