@@ -11346,5 +11346,73 @@
     "material": "",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-alba-a4",
+    "title": "Caricatură personalizată A4 cu ramă albă",
+    "price": 119,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată A4 cu ramă albă.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate"
+    ],
+    "slug": "caricatura-personalizata-rama-alba-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-alba-cadou-a4",
+    "title": "Caricatură personalizată A4 cu ramă albă și ambalaj cadou",
+    "price": 139,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată A4 cu ramă albă și ambalaj cadou.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate"
+    ],
+    "slug": "caricatura-personalizata-rama-alba-cadou-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-neagra-a4",
+    "title": "Caricatură personalizată A4 cu ramă neagră",
+    "price": 119,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată A4 cu ramă neagră.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate"
+    ],
+    "slug": "caricatura-personalizata-rama-neagra-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-neagra-cadou-a4",
+    "title": "Caricatură personalizată A4 cu ramă neagră și ambalaj cadou",
+    "price": 139,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată A4 cu ramă neagră și ambalaj cadou.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate"
+    ],
+    "slug": "caricatura-personalizata-rama-neagra-cadou-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
