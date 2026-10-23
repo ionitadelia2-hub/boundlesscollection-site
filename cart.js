@@ -38,6 +38,9 @@ function initAddToCartButtons() {
         if (!btn) return;
 
         const id = btn.getAttribute("data-id");
+        const theme = id?.startsWith("caricatura-personalizata-") ? new URLSearchParams(location.search).get("tema") : null;
+        const allowedThemes = ["Crăciun", "Valentine\'s Day", "Cuplu"];
+        const chosenTheme = allowedThemes.includes(theme) ? theme : "";
         const title = btn.getAttribute("data-title");
         const price = parseFloat(btn.getAttribute("data-price"));
         const rawImage = btn.getAttribute("data-image");
@@ -69,7 +72,7 @@ const image = rawImage
         }
 
         let cart = getCart();
-        const existingIndex = cart.findIndex(item => item.id === id);
+        const existingIndex = cart.findIndex(item => item.id === id && (item.theme || "") === chosenTheme);
 
         if (existingIndex > -1) {
 
@@ -89,6 +92,7 @@ const image = rawImage
             // Produs nou în coș
             cart.push({
                 id,
+                theme: chosenTheme,
                 title,
                 price,
                 image,
