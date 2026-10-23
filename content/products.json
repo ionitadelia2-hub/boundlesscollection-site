@@ -11666,5 +11666,113 @@
     "material": "",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-argintie-10x15",
+    "title": "Caricatură personalizată 10 × 15 cm cu ramă argintie",
+    "price": 59,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată 10 × 15 cm cu ramă argintie.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "ramă argintie"
+    ],
+    "slug": "caricatura-personalizata-rama-argintie-10x15",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-argintie-cadou-10x15",
+    "title": "Caricatură personalizată 10 × 15 cm cu ramă argintie și ambalaj cadou",
+    "price": 69,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată 10 × 15 cm cu ramă argintie și ambalaj cadou.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "ramă argintie"
+    ],
+    "slug": "caricatura-personalizata-rama-argintie-cadou-10x15",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-argintie-15x20",
+    "title": "Caricatură personalizată 15 × 20 cm cu ramă argintie",
+    "price": 89,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată 15 × 20 cm cu ramă argintie.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "ramă argintie"
+    ],
+    "slug": "caricatura-personalizata-rama-argintie-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-argintie-cadou-15x20",
+    "title": "Caricatură personalizată 15 × 20 cm cu ramă argintie și ambalaj cadou",
+    "price": 109,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată 15 × 20 cm cu ramă argintie și ambalaj cadou.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "ramă argintie"
+    ],
+    "slug": "caricatura-personalizata-rama-argintie-cadou-15x20",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-argintie-a4",
+    "title": "Caricatură personalizată A4 cu ramă argintie",
+    "price": 119,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată A4 cu ramă argintie.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "ramă argintie"
+    ],
+    "slug": "caricatura-personalizata-rama-argintie-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "caricatura-personalizata-rama-argintie-cadou-a4",
+    "title": "Caricatură personalizată A4 cu ramă argintie și ambalaj cadou",
+    "price": 139,
+    "category": "caricaturi personalizate",
+    "product_type": "caricaturi personalizate",
+    "desc": "Caricatură personalizată A4 cu ramă argintie și ambalaj cadou.",
+    "images": [],
+    "tags": [
+      "caricaturi personalizate",
+      "ramă argintie"
+    ],
+    "slug": "caricatura-personalizata-rama-argintie-cadou-a4",
+    "google_product_category": "Arts & Entertainment > Artwork",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
