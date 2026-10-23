@@ -128,6 +128,7 @@ const jsTagIfExists  = (filename) => exists(ROOT, filename)
 
 // ---- map categorii pentru breadcrumbs ----
 const CATEGORY_MAP = {
+  "caricaturi personalizate": { name: "Caricaturi personalizate", url: "/caricaturi-personalizate.html" },
   "cutii cerere nasi": { name: "Cutii cerere nași", url: "/cutii-cerere-nasi" },
   "lumanari decorative": { name: "Lumânări decorative", url: "/lumanari-decorative.html" },
   "invitatii": { name: "Invitații", url: "/invitatii.html" },
@@ -236,6 +237,7 @@ const PRODUCTS_DROPDOWN_HTML = `
 
   <li class="menu-group" role="none">
     <div class="menu-title">Cadouri</div>
+    <a role="menuitem" href="/caricaturi-personalizate.html">Caricaturi personalizate</a>
     <a role="menuitem" href="/cutii-cerere-nasi">Cutii cerere nași</a>
     <a role="menuitem" href="/lumanari-decorative.html">Lumânări decorative</a>
     <a role="menuitem" href="/articole-petreceri-copii.html" style="font-weight:600; color:#d47a96;">Petreceri Copii 🎈</a>
@@ -1063,6 +1065,7 @@ const staticPagesForSitemap = [
   "/pahare-nunta-personalizate.html",
 
   // Cadouri
+  "/caricaturi-personalizate.html",
   "/lumanari-decorative.html",
   "/articole-petreceri-copii.html",
   "/tablouri-luminoase.html",
