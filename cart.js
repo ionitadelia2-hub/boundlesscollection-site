@@ -39,7 +39,7 @@ function initAddToCartButtons() {
 
         const id = btn.getAttribute("data-id");
         const theme = id?.startsWith("caricatura-personalizata-") ? (btn.getAttribute("data-theme") || new URLSearchParams(location.search).get("tema")) : null;
-        const allowedThemes = ["Crăciun", "Valentine\'s Day", "Cuplu"];
+        const allowedThemes = ["Crăciun", "Valentine's Day", "Cuplu", "Meserii", "Zi de naștere"];
         const chosenTheme = allowedThemes.includes(theme) ? theme : "";
         const title = btn.getAttribute("data-title");
         const price = parseFloat(btn.getAttribute("data-price"));

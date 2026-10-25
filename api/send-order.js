@@ -59,7 +59,7 @@ const seenIds = new Set();
 for (const item of products) {
   const product = productsById.get(item?.id);
   const quantity = item?.quantity;
-  const theme = product?.id?.startsWith("caricatura-personalizata-") && ["Crăciun", "Valentine\'s Day", "Cuplu"].includes(item?.theme) ? item.theme : "";
+  const theme = product?.id?.startsWith("caricatura-personalizata-") && ["Crăciun", "Valentine's Day", "Cuplu", "Meserii", "Zi de naștere"].includes(item?.theme) ? item.theme : "";
   const uniqueKey = product?.id + "|" + theme;
 
   const minimum = Math.max(
