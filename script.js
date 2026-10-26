@@ -661,7 +661,7 @@ if (PAGE_FILTER === 'stickere oglinda') {
 
       const data = await res.json();
       PRODUCTS = Array.isArray(data)
-        ? data.map((p) => {
+        ? data.filter(p => !p.paper_weight || p.paper_weight === 200).map((p) => {
             const tags = Array.isArray(p.tags) ? p.tags : [];
             return {
               id: p.id || String(Math.random()).slice(2),
@@ -845,3 +845,4 @@ if (['marturii', 'marturii nunta', 'marturii botez'].includes(PAGE_FILTER)) {
     initMenuColumns();
   }
 })();
+

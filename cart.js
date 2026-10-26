@@ -96,6 +96,9 @@ const image = rawImage
 
         if (existingIndex > -1) {
 
+            // Actualizăm datele variantei dacă produsul exista deja în coș.
+            Object.assign(cart[existingIndex], { title, price, image, url });
+
             // Păstrăm cantitatea minimă reală a produsului
             cart[existingIndex].minQuantity = minQuantity;
 

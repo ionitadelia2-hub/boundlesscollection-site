@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import envelopePaperOptions from "../envelope-paper-options.js";
 
 const catalog = JSON.parse(
   readFileSync(
@@ -8,7 +9,7 @@ const catalog = JSON.parse(
 );
 
 const productsById = new Map(
-  catalog.map(product => [product.id, product])
+  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).map(product => [product.id, product])
 );
 
 const caricatureImagesByTheme = new Map([

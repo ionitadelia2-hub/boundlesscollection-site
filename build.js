@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
+const { expandEnvelopeVariants } = require("./envelope-paper-options.js");
 
 const ROOT = __dirname;                         // rădăcina repo-ului
 const OUT  = path.join(ROOT, "public");         // directorul servit de hosting (web root)
@@ -595,6 +596,13 @@ function pageTemplate(prod) {
       <option value="Zi de naștere">Zi de naștere</option>
     </select>
   </div>` : ""}
+  ${prod.paper_options ? `
+  <div style="margin-bottom:20px">
+    <label for="envelopePaperWeight" style="display:block;font-weight:600;margin-bottom:8px">Gramajul plicului</label>
+    <select id="envelopePaperWeight" style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
+      ${prod.paper_options.map(option => `<option value="/p/${esc(option.slug)}.html"${option.weight === prod.paper_weight ? " selected" : ""}>${esc(option.label)} — ${option.price.toFixed(2).replace(".", ",")} lei/buc.</option>`).join("")}
+    </select>
+  </div>` : ""}
 <div class="product-quantity">
   <span class="product-quantity-label">Cantitate</span>
 
@@ -657,6 +665,9 @@ function pageTemplate(prod) {
 
   <script src="/cart.js" defer></script>
 <script>
+    document.getElementById('envelopePaperWeight')?.addEventListener('change', function () {
+      window.location.assign(this.value);
+    });
     document.getElementById('year').textContent = new Date().getFullYear();
 
 
@@ -985,7 +996,7 @@ function main() {
       min_quantity,
       mpn: r.mpn || ""
     };
-  });
+  }).flatMap(expandEnvelopeVariants);
 
   // 2) scriu JSON sursă + copie publică
   ensureDir(path.dirname(JSON_OUT));
