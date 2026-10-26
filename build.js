@@ -23,6 +23,11 @@ const GOOGLE_TAG = `
   </script>
 `;
 
+function injectLiveChat(html) {
+  if (html.includes('src="/live-chat.js"')) return html;
+  return html.replace(/<\/body>/i, '  <script src="/live-chat.js" defer></script>\n</body>');
+}
+
 function injectGoogleTag(html, filename = "") {
   // Dacă pagina are deja tag-ul Google Ads, nu facem nimic.
   if (html.includes("AW-18147990553")) {
@@ -1036,6 +1041,7 @@ processedHtml = injectGoogleTag(
   processedHtml,
   entry
 );
+processedHtml = injectLiveChat(processedHtml);
 
       ensureDir(path.dirname(d));
       fs.writeFileSync(d, processedHtml, "utf8");
@@ -1057,7 +1063,7 @@ processedHtml = injectGoogleTag(
   const PAGES_DIR = path.join(OUT, "p");
   ensureDir(PAGES_DIR);
   products.forEach((p) => {
-    fs.writeFileSync(path.join(PAGES_DIR, `${p.slug}.html`), pageTemplate(p), "utf8");
+    fs.writeFileSync(path.join(PAGES_DIR, `${p.slug}.html`), injectLiveChat(pageTemplate(p)), "utf8");
   });
 
   // 6) sitemap simplu
