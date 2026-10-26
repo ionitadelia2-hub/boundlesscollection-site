@@ -583,6 +583,18 @@ function pageTemplate(prod) {
   : ""
 }
 
+  ${prod.id.startsWith("caricatura-personalizata-") ? `
+  <div style="margin-bottom:20px">
+    <label for="caricatureTheme" style="display:block;font-weight:600;margin-bottom:8px">Tematica caricaturii *</label>
+    <select id="caricatureTheme" required style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
+      <option value="">Alege tematica</option>
+      <option value="Crăciun">Crăciun</option>
+      <option value="Valentine's Day">Valentine's Day</option>
+      <option value="Cuplu">Cuplu</option>
+      <option value="Meserii">Meserii</option>
+      <option value="Zi de naștere">Zi de naștere</option>
+    </select>
+  </div>` : ""}
 <div class="product-quantity">
   <span class="product-quantity-label">Cantitate</span>
 
@@ -819,6 +831,34 @@ function pageTemplate(prod) {
         });
       });
       setIndex(0);
+    })();
+    (function () {
+      const select = document.getElementById('caricatureTheme');
+      if (!select) return;
+      const button = document.querySelector('.add-to-cart');
+      const themeImages = {
+        "Crăciun": "/images/caricaturi/caricatura-craciun-noua.png",
+        "Valentine's Day": "/images/caricaturi/caricatura-valentines-day-noua.png",
+        "Cuplu": "/images/caricaturi/caricatura-cuplu-noua.png",
+        "Meserii": "/images/caricaturi/caricatura-meserii-noua.png",
+        "Zi de naștere": "/images/caricaturi/caricatura-zi-de-nastere-noua.png"
+      };
+      function updateTheme() {
+        button.dataset.theme = select.value;
+        const image = themeImages[select.value];
+        if (!image) return;
+        button.dataset.image = image;
+        const slides = Array.from(document.querySelectorAll('.g-slide'));
+        const index = slides.findIndex(slide => slide.getAttribute('src') === image);
+        const thumbs = document.querySelectorAll('.g-thumb');
+        if (index >= 0) thumbs[index]?.click();
+      }
+      const requestedTheme = new URLSearchParams(location.search).get('tema');
+      if (Object.prototype.hasOwnProperty.call(themeImages, requestedTheme)) {
+        select.value = requestedTheme;
+      }
+      select.addEventListener('change', updateTheme);
+      updateTheme();
     })();
   </script>
   ${jsGlobal}${jsGallery}${jsProduct}
@@ -1135,3 +1175,4 @@ console.log(
 }
 
 main();
+

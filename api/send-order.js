@@ -11,6 +11,14 @@ const productsById = new Map(
   catalog.map(product => [product.id, product])
 );
 
+const caricatureImagesByTheme = new Map([
+  ["Crăciun", "/images/caricaturi/caricatura-craciun-noua.png"],
+  ["Valentine's Day", "/images/caricaturi/caricatura-valentines-day-noua.png"],
+  ["Cuplu", "/images/caricaturi/caricatura-cuplu-noua.png"],
+  ["Meserii", "/images/caricaturi/caricatura-meserii-noua.png"],
+  ["Zi de naștere", "/images/caricaturi/caricatura-zi-de-nastere-noua.png"]
+]);
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({
@@ -59,7 +67,14 @@ const seenIds = new Set();
 for (const item of products) {
   const product = productsById.get(item?.id);
   const quantity = item?.quantity;
-  const theme = product?.id?.startsWith("caricatura-personalizata-") && ["Crăciun", "Valentine's Day", "Cuplu", "Meserii", "Zi de naștere"].includes(item?.theme) ? item.theme : "";
+  const isCaricature = product?.id?.startsWith("caricatura-personalizata-");
+  const theme = isCaricature && caricatureImagesByTheme.has(item?.theme) ? item.theme : "";
+  if (isCaricature && !theme) {
+    return res.status(400).json({
+      ok: false,
+      error: "Alege tematica fiecărei caricaturi pe pagina produsului și adaugă din nou produsul în coș."
+    });
+  }
   const uniqueKey = product?.id + "|" + theme;
 
   const minimum = Math.max(
@@ -89,7 +104,7 @@ for (const item of products) {
     title: product.title + (theme ? " — tematică: " + theme : ""),
     price: product.price,
     quantity,
-    image: product.images?.[0] || ""
+    image: isCaricature ? caricatureImagesByTheme.get(theme) : product.images?.[0] || ""
   });
 }
 
@@ -608,3 +623,4 @@ attachments: productAttachments
     });
   }
 }
+

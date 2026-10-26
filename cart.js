@@ -38,12 +38,32 @@ function initAddToCartButtons() {
         if (!btn) return;
 
         const id = btn.getAttribute("data-id");
-        const theme = id?.startsWith("caricatura-personalizata-") ? (btn.getAttribute("data-theme") || new URLSearchParams(location.search).get("tema")) : null;
-        const allowedThemes = ["Crăciun", "Valentine's Day", "Cuplu", "Meserii", "Zi de naștere"];
-        const chosenTheme = allowedThemes.includes(theme) ? theme : "";
-        const title = btn.getAttribute("data-title");
+        const isCaricature = id?.startsWith("caricatura-personalizata-");
+        const themeSelect = document.getElementById("caricatureTheme");
+        const theme = isCaricature ? (themeSelect ? themeSelect.value : (btn.getAttribute("data-theme") || new URLSearchParams(location.search).get("tema"))) : null;
+        const themeImages = new Map([
+            ["Crăciun", "/images/caricaturi/caricatura-craciun-noua.png"],
+            ["Valentine's Day", "/images/caricaturi/caricatura-valentines-day-noua.png"],
+            ["Cuplu", "/images/caricaturi/caricatura-cuplu-noua.png"],
+            ["Meserii", "/images/caricaturi/caricatura-meserii-noua.png"],
+            ["Zi de naștere", "/images/caricaturi/caricatura-zi-de-nastere-noua.png"]
+        ]);
+        const chosenTheme = themeImages.has(theme) ? theme : "";
+        if (isCaricature && !chosenTheme) {
+            if (themeSelect) {
+                themeSelect.focus();
+                themeSelect.reportValidity();
+            } else {
+                window.alert("Alege tematica pe pagina caricaturii înainte de a o adăuga în coș.");
+            }
+            return;
+        }
+        const baseTitle = btn.getAttribute("data-title") || "";
+        const title = isCaricature && !baseTitle.includes(chosenTheme)
+            ? baseTitle + " — " + chosenTheme
+            : baseTitle;
         const price = parseFloat(btn.getAttribute("data-price"));
-        const rawImage = btn.getAttribute("data-image");
+        const rawImage = isCaricature ? themeImages.get(chosenTheme) : btn.getAttribute("data-image");
 
 const image = rawImage
     ? new URL(rawImage, "https://boundlesscollection.ro").href
