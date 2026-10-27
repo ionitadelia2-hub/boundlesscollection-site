@@ -672,7 +672,7 @@ function pageTemplate(prod) {
   </main>
 
   <footer><div class="container footer-inner">
-    <small>© <span id="year"></span> Delia’s Candles & Papetărie</small>
+    <small>© <span id="year"></span> Boundless Collection</small>
     <small>Realizat cu pasiune ✨</small>
   </div></footer>
 
