@@ -36,6 +36,7 @@ function initAddToCartButtons() {
     document.body.addEventListener("click", (e) => {
         const btn = e.target.closest(".add-to-cart");
         if (!btn) return;
+        e.preventDefault();
 
         const id = btn.getAttribute("data-id");
         const isCaricature = id?.startsWith("caricatura-personalizata-");
@@ -127,21 +128,89 @@ const image = rawImage
 
         saveCart(cart);
 
-        // Efect vizual rapid pe buton
-        const originalText = btn.innerHTML;
-
-        btn.innerHTML = "✓ Adăugat!";
-        btn.style.backgroundColor = "#d9a74a";
-        btn.style.color = "#fff";
-
-        setTimeout(() => {
-            btn.innerHTML = originalText;
-            btn.style.backgroundColor = "";
-            btn.style.color = "";
-
-            window.location.href = "/cart.html";
-        }, 500);
+        showCartConfirmation({ title, image, price, quantity: selectedQuantity }, btn);
     });
+}
+
+let cartConfirmationTrigger = null;
+
+function showCartConfirmation(item, trigger) {
+    let dialog = document.getElementById("boundless-cart-confirmation");
+    if (!dialog) {
+        const style = document.createElement("style");
+        style.textContent = `
+            #boundless-cart-confirmation {
+                box-sizing:border-box; width:calc(100% - 32px); max-width:440px;
+                max-height:calc(100dvh - 32px); overflow:auto; margin:auto;
+                padding:26px; border:1px solid #efd7e2; border-radius:20px;
+                background:#fff; color:#2a2a2a; font-family:'Poppins',sans-serif;
+                box-shadow:0 16px 60px rgba(48,36,42,.2); text-align:left;
+            }
+            #boundless-cart-confirmation::backdrop { background:rgba(48,36,42,.38); }
+            #boundless-cart-confirmation .cart-confirm-close {
+                display:block; margin:0 0 8px auto; padding:4px; width:32px; height:32px;
+                border:0; background:transparent; color:#555; cursor:pointer; font-size:24px;
+            }
+            #boundless-cart-confirmation h2 { margin:0 0 20px; font-size:1.2rem; line-height:1.5; text-align:left; }
+            #boundless-cart-confirmation .cart-confirm-product { display:flex; align-items:center; gap:14px; }
+            #boundless-cart-confirmation img { width:72px; height:72px; object-fit:contain; border-radius:10px; flex-shrink:0; }
+            #boundless-cart-confirmation img[hidden] { display:none; }
+            #boundless-cart-confirmation .cart-confirm-info { min-width:0; overflow-wrap:anywhere; }
+            #boundless-cart-confirmation .cart-confirm-name { margin:0 0 6px; font-size:.95rem; font-weight:600; line-height:1.5; }
+            #boundless-cart-confirmation .cart-confirm-summary { margin:0; font-size:.85rem; line-height:1.7; color:#69555f; }
+            #boundless-cart-confirmation .cart-confirm-actions { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:24px; }
+            #boundless-cart-confirmation .cart-confirm-actions > * {
+                box-sizing:border-box; display:flex; align-items:center; justify-content:center;
+                min-height:46px; padding:12px; border:1px solid #e8c9d7; border-radius:10px;
+                background:#fff; color:#49343e; font:inherit; font-size:.85rem; line-height:1.5;
+                text-align:center; text-decoration:none; cursor:pointer;
+            }
+            #boundless-cart-confirmation .cart-confirm-actions a { background:#30242a; color:#fff; border-color:#30242a; }
+            #boundless-cart-confirmation :focus-visible { outline:2px solid #a23366; outline-offset:3px; }
+            @media (max-width:420px) {
+                #boundless-cart-confirmation { padding:20px; }
+                #boundless-cart-confirmation .cart-confirm-actions { grid-template-columns:1fr; }
+            }
+        `;
+        document.head.appendChild(style);
+        dialog = document.createElement("dialog");
+        dialog.id = "boundless-cart-confirmation";
+        dialog.setAttribute("aria-labelledby", "cart-confirm-title");
+        dialog.innerHTML = `
+            <button type="button" class="cart-confirm-close" aria-label="Închide confirmarea">×</button>
+            <h2 id="cart-confirm-title">Produs adăugat în coș ✓</h2>
+            <div class="cart-confirm-product">
+                <img alt="" hidden>
+                <div class="cart-confirm-info">
+                    <p class="cart-confirm-name"></p>
+                    <p class="cart-confirm-summary"></p>
+                </div>
+            </div>
+            <div class="cart-confirm-actions">
+                <button type="button" class="cart-confirm-continue" autofocus>Continuă cumpărăturile</button>
+                <a href="/cart.html">Vezi coșul</a>
+            </div>
+        `;
+        document.body.appendChild(dialog);
+        dialog.querySelector(".cart-confirm-close").addEventListener("click", () => dialog.close());
+        dialog.querySelector(".cart-confirm-continue").addEventListener("click", () => dialog.close());
+        dialog.addEventListener("close", () => {
+            if (cartConfirmationTrigger?.isConnected) cartConfirmationTrigger.focus({ preventScroll: true });
+        });
+        dialog.querySelector("img").addEventListener("error", function () { this.hidden = true; });
+    }
+
+    cartConfirmationTrigger = trigger;
+    const money = new Intl.NumberFormat("ro-RO", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    dialog.querySelector(".cart-confirm-name").textContent = item.title;
+    dialog.querySelector(".cart-confirm-summary").textContent = item.quantity + " buc. × " +
+        money.format(item.price) + " lei = " + money.format(Math.round(item.price * 100) * item.quantity / 100) + " lei";
+    const image = dialog.querySelector("img");
+    image.hidden = !item.image;
+    if (item.image) image.src = item.image;
+    else image.removeAttribute("src");
+    if (!dialog.open) dialog.showModal();
+    dialog.querySelector(".cart-confirm-continue").focus();
 }
 
 function updateCartIconCount() {
@@ -153,3 +222,4 @@ function updateCartIconCount() {
         badge.style.display = count > 0 ? "inline-block" : "none";
     });
 }
+
