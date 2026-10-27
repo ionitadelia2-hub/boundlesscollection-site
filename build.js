@@ -582,7 +582,6 @@ function pageTemplate(prod) {
 
       <div class="hero-text">
         <h1 class="product-title">${title}</h1>
-        <p class="product-desc">${descHtml}</p>
         <p class="price price-badge">${price}</p>
         ${prod.min_quantity > 1
   ? `<p class="min-order">Comandă minimă: <strong>${prod.min_quantity} buc.</strong></p>`
@@ -636,7 +635,6 @@ function pageTemplate(prod) {
     >+</button>
   </div>
 </div>
-        <div class="tags">${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
         
         <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
           <a class="btn" href="/index.html#produse" id="backBtn" style="border: 1px solid #ccc; padding: 10px 20px; text-decoration: none; border-radius: 4px; color: #333; font-family: 'Poppins', sans-serif;">← Înapoi</a>
@@ -659,6 +657,10 @@ function pageTemplate(prod) {
             Întreabă pe WhatsApp
           </a>
         </div>
+        <div class="product-description" style="margin-top:24px">
+          ${descHtml}
+        </div>
+        <div class="tags">${(prod.tags || []).map(t => `<span class="tag">${esc(t)}</span>`).join("")}</div>
       </div>
     </section>
   </main>
@@ -1192,4 +1194,5 @@ console.log(
 }
 
 main();
+
 
