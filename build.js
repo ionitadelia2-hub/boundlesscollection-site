@@ -23,6 +23,12 @@ const GOOGLE_TAG = `
   </script>
 `;
 
+function injectProductSubtotal(html) {
+  if (!/id=["']productQuantity["']/.test(html) || !html.includes('add-to-cart')) return html;
+  if (html.includes('src="/product-subtotal.js"')) return html;
+  return html.replace(/<\/body>/i, '  <script src="/product-subtotal.js" defer></script>\n</body>');
+}
+
 function injectLiveChat(html) {
   if (html.includes('src="/live-chat.js"')) return html;
   return html.replace(/<\/body>/i, '  <script src="/live-chat.js" defer></script>\n</body>');
@@ -1043,6 +1049,7 @@ processedHtml = injectGoogleTag(
   processedHtml,
   entry
 );
+processedHtml = injectProductSubtotal(processedHtml);
 processedHtml = injectLiveChat(processedHtml);
 
       ensureDir(path.dirname(d));
@@ -1065,7 +1072,7 @@ processedHtml = injectLiveChat(processedHtml);
   const PAGES_DIR = path.join(OUT, "p");
   ensureDir(PAGES_DIR);
   products.forEach((p) => {
-    fs.writeFileSync(path.join(PAGES_DIR, `${p.slug}.html`), injectLiveChat(pageTemplate(p)), "utf8");
+    fs.writeFileSync(path.join(PAGES_DIR, `${p.slug}.html`), injectLiveChat(injectProductSubtotal(pageTemplate(p))), "utf8");
   });
 
   // 6) sitemap simplu
@@ -1194,5 +1201,6 @@ console.log(
 }
 
 main();
+
 
 
