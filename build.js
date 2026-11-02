@@ -6,6 +6,7 @@ const path = require("path");
 const crypto = require("crypto");
 const { expandEnvelopeVariants } = require("./envelope-paper-options.js");
 const { CANDY_BOX_SIZES, CANDY_BOX_PERSONALIZATION_PRICE, expandCandyBoxVariants } = require("./candy-box-variants.js");
+const christmasSeo = require("./content/christmas-seo.json");
 
 const ROOT = __dirname;                         // rădăcina repo-ului
 const OUT  = path.join(ROOT, "public");         // directorul servit de hosting (web root)
@@ -366,7 +367,9 @@ function pageTemplate(prod) {
   const brand = "Boundless Collection";
   const title = esc(prod.title || "");
   const descPlain = prod.desc || prod.title || "";
-  const desc = esc(descPlain);
+  const seo = prod.category === "craciun" ? christmasSeo[prod.id] : null;
+  const seoTitle = esc(seo?.title || prod.title || "");
+  const desc = esc(seo?.description || descPlain);
   const descHtml = formatProductDesc(descPlain);
   const priceStr = Number(prod.price || 0).toFixed(2);
   const price = priceStr + " RON";
@@ -440,16 +443,16 @@ function pageTemplate(prod) {
 <head>
   ${GOOGLE_TAG}
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>${title} – ${brand}</title>
+  <title>${seoTitle} – ${brand}</title>
   <meta name="description" content="${desc}">
   <link rel="canonical" href="${url}">
   <meta property="og:type" content="product">
-  <meta property="og:title" content="${title} – ${brand}">
+  <meta property="og:title" content="${seoTitle} – ${brand}">
   <meta property="og:description" content="${desc}">
   <meta property="og:image" content="${ogImg}">
   <meta property="og:url" content="${url}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="${title} – ${brand}">
+  <meta name="twitter:title" content="${seoTitle} – ${brand}">
   <meta name="twitter:description" content="${desc}">
   <meta name="twitter:image" content="${ogImg}">
   ${faviconPng ? `<link rel="icon" type="image/png" href="${faviconPng}">` : ""}
@@ -994,7 +997,11 @@ function main() {
   const products = rows.map((r) => {
     const id    = r.id || crypto.randomUUID();
     const title = r.title || "";
-    const slug  = slugify(`${title}-${id.slice(0, 8)}`);
+    // Acest model avea aceeași adresă ca bradul cu fundiță și clopoțel.
+    // Pagina existentă rămâne acelui produs; varianta simplă primește o adresă proprie.
+    const slug  = id === 'lumanare-brad-straturi-craciun-001'
+      ? 'lumanare-brad-craciun-straturi-ondulate'
+      : slugify(`${title}-${id.slice(0, 8)}`);
 
     const images = (r.images || "")
       .split("|").map(s => s.trim()).filter(Boolean)
