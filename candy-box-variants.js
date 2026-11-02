@@ -1,8 +1,8 @@
 // Aceleași variante și prețuri pentru pagina produsului și validarea comenzii.
 const CANDY_BOX_ID = 'cutiuta-dulciuri-om-zapada';
 const CANDY_BOX_SIZES = [
-  { value: 'mini', label: 'Mini', height: '13,6', base: '4,7', price: 10 },
-  { value: 'mare', label: 'Mare', height: '23,5', base: '8,1', price: 18 }
+  { value: 'mini', label: 'Mini', height: '13,6', base: '4,7', price: 7 },
+  { value: 'mare', label: 'Mare', height: '23,5', base: '8,1', price: 15 }
 ];
 const CANDY_BOX_PERSONALIZATION_PRICE = 2;
 
