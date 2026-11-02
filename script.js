@@ -210,6 +210,32 @@ function matchesStickerSubfilter(p, filter) {
   });
 }
 
+// Tipurile colecției de iarnă; etichetele dedicate au prioritate.
+function christmasProductType(p) {
+  const tags = new Set((p.tagsKey || (p.tags || []).map(key)));
+  const title = key(p.title || '');
+  const hasTag = (...names) => names.some(name => tags.has(key(name)));
+
+  if (hasTag('globuri lemn', 'globuri din lemn') ||
+      (/\bglob(?:uri)?\b/.test(title) && /\blemn\b/.test(title))) return 'globuri lemn';
+  if (hasTag('cutiute dulciuri', 'cutii dulciuri', 'cutiute pentru dulciuri') ||
+      (/\bcuti(?:i|e|ute|uta)\b/.test(title) && /\bdulciuri\b/.test(title))) return 'cutiute dulciuri';
+  if (hasTag('seturi cadou', 'set cadou', 'odorizante', 'odorizant') ||
+      /\bodorizante?\b/.test(title)) return 'seturi cadou';
+  if (hasTag('wax melts', 'waxmelts') || /\bwax\s*melts\b/.test(title)) return 'wax melts';
+  if (hasTag('lumanare', 'lumanari') || /\blumanar[ei]\b/.test(title)) return 'lumanari';
+  return '';
+}
+
+function updateChristmasFilters() {
+  if (PAGE_FILTER !== 'craciun') return;
+  const collection = PRODUCTS.filter(p => matchesCategoryGroup(p.categoryKey, PAGE_FILTER, p.tagsKey));
+  $$('#christmas-filters [data-filter]').forEach(btn => {
+    const filter = key(btn.dataset.filter);
+    btn.hidden = filter !== 'toate' && !collection.some(p => christmasProductType(p) === filter);
+  });
+}
+
 function matchesMenuSubfilter(p, filter) {
   if (!filter || filter === 'toate') return true;
 
@@ -563,6 +589,9 @@ if (filterKey === 'tricouri scolare') {
 if (PAGE_FILTER === 'stickere oglinda') {
   hitCatToggle = matchesStickerSubfilter(p, activeFilter);
 
+} else if (PAGE_FILTER === 'craciun') {
+  hitCatToggle = activeFilter === 'toate' || christmasProductType(p) === activeFilter;
+
 } else if (
   PAGE_FILTER === 'meniuri' ||
   PAGE_FILTER === 'numere de masa'||
@@ -711,6 +740,7 @@ if (PAGE_FILTER === 'stickere oglinda') {
 
     if (grid) {
       await loadProducts();
+      updateChristmasFilters();
       render();
 
       if (loadMoreBtn) {
@@ -845,4 +875,5 @@ if (['marturii', 'marturii nunta', 'marturii botez'].includes(PAGE_FILTER)) {
     initMenuColumns();
   }
 })();
+
 

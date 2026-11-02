@@ -107,3 +107,24 @@ body[data-page="craciun"]::after {
   background: #25d366;
   border-radius: 40px;
 }
+
+/* Filtrele fără produse rămân pregătite, dar nu sunt afișate. */
+#christmas-filters [hidden] {
+  display: none !important;
+}
+
+#christmas-filters .sticker-filters {
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+#christmas-filters .sticker-filter:focus-visible {
+  outline: 2px solid #9a365e;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  [data-page="craciun"] .section-title { font-size: 2rem; }
+  #christmas-filters .sticker-filter { white-space: normal; }
+}
+

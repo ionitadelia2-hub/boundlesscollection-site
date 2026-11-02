@@ -179,7 +179,7 @@ const CATEGORY_MAP = {
   "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
   "toppere tort": { name: "Toppere tort & cupcakes", url: "/toppere-tort.html" },
   "accesorii pregatiri nunta": { name: "Accesorii pregătiri nuntă", url: "/accesorii-pregatiri-nunta.html" },
-  "craciun": { name: "Colecția de Crăciun", url: "/craciun.html" },
+  "craciun": { name: "Crăciun & Moș Nicolae", url: "/craciun.html" },
   "paste": { name: "Colecția de Paște", url: "/paste.html" },
   "martisor": { name: "Colecția de Mărțișor", url: "/martisor.html" },
   "tablouri luminoase": { name: "Tablouri luminoase", url: "/tablouri-luminoase.html" },
@@ -260,7 +260,7 @@ const PRODUCTS_DROPDOWN_HTML = `
 
   <li class="menu-group" role="none">
     <div class="menu-title">Colectii</div>
-    <a role="menuitem" href="/craciun.html">Colectia de Craciun</a>
+    <a role="menuitem" href="/craciun.html">Crăciun &amp; Moș Nicolae</a>
     <a role="menuitem" href="/paste.html">Colectia de Paste</a>
     <a role="menuitem" href="/martisor.html">Colectia de Martisor</a>
   </li>
@@ -1201,6 +1201,7 @@ console.log(
 }
 
 main();
+
 
 
 
