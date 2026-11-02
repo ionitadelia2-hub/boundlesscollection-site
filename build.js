@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 const { expandEnvelopeVariants } = require("./envelope-paper-options.js");
+const { CANDY_BOX_SIZES, CANDY_BOX_PERSONALIZATION_PRICE, expandCandyBoxVariants } = require("./candy-box-variants.js");
 
 const ROOT = __dirname;                         // rădăcina repo-ului
 const OUT  = path.join(ROOT, "public");         // directorul servit de hosting (web root)
@@ -613,6 +614,22 @@ function pageTemplate(prod) {
       ${prod.paper_options.map(option => `<option value="/p/${esc(option.slug)}.html"${option.weight === prod.paper_weight ? " selected" : ""}>${esc(option.label)} — ${option.price.toFixed(2).replace(".", ",")} lei/buc.</option>`).join("")}
     </select>
   </div>` : ""}
+  ${prod.id === "cutiuta-dulciuri-om-zapada" ? `
+  <form id="candyBoxOptions" class="candy-box-options" data-variants="${esc(JSON.stringify(expandCandyBoxVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
+    <p style="text-align:left"><strong>Cutiuță goală, fără dulciuri.</strong> Prețul este pentru o bucată.</p>
+    <label for="candyBoxSize" style="display:block;font-weight:600;margin-bottom:8px">Dimensiune</label>
+    <select id="candyBoxSize" style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
+      ${CANDY_BOX_SIZES.map(size => `<option value="${size.value}">${size.label} — înălțime ${size.height} cm · bază ${size.base} cm — ${size.price} lei</option>`).join('')}
+    </select>
+    <label style="display:flex;gap:10px;align-items:center;margin-top:16px;cursor:pointer">
+      <input type="checkbox" id="candyBoxPersonalize" style="appearance:auto;-webkit-appearance:checkbox;min-width:18px;width:18px;height:18px;flex:0 0 18px;margin:0;padding:0;accent-color:#a23366;box-shadow:none"> Personalizare cu nume (+${CANDY_BOX_PERSONALIZATION_PRICE} lei / buc.)
+    </label>
+    <div id="candyBoxNameGroup" hidden style="margin-top:14px">
+      <label for="candyBoxName" style="display:block;font-weight:600;margin-bottom:8px">Numele pentru personalizare</label>
+      <input id="candyBoxName" type="text" maxlength="40" disabled autocomplete="off" placeholder="Ex.: Lucas" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
+      <small>Același nume se aplică tuturor bucăților adăugate acum. Pentru alt nume, adaugă separat în coș.</small>
+    </div>
+  </form>` : ""}
 <div class="product-quantity">
   <span class="product-quantity-label">Cantitate</span>
 
@@ -654,6 +671,7 @@ function pageTemplate(prod) {
             data-image="${esc(firstImg)}"
             data-url="${esc(url)}"
             data-min-quantity="${prod.min_quantity || 1}"
+            ${prod.id === "cutiuta-dulciuri-om-zapada" ? 'data-options-form="candyBoxOptions"' : ''}
             style="background: #111; color: #fff; border: none; padding: 12px 25px; cursor: pointer; font-weight: 600; border-radius: 4px; transition: background 0.2s; font-family: 'Poppins', sans-serif;"
           >
             Adaugă în coș
@@ -677,6 +695,7 @@ function pageTemplate(prod) {
   </div></footer>
 
   <script src="/cart.js" defer></script>
+  ${prod.id === "cutiuta-dulciuri-om-zapada" ? '<script src="/candy-box-options.js" defer></script>' : ''}
 <script>
     document.getElementById('envelopePaperWeight')?.addEventListener('change', function () {
       window.location.assign(this.value);

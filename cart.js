@@ -38,6 +38,10 @@ function initAddToCartButtons() {
         if (!btn) return;
         e.preventDefault();
 
+        const optionsForm = document.getElementById(btn.getAttribute("data-options-form") || "");
+        if (optionsForm && !optionsForm.reportValidity()) return;
+        const personalization = btn.getAttribute("data-personalization") || "";
+
         const id = btn.getAttribute("data-id");
         const isCaricature = id?.startsWith("caricatura-personalizata-");
         const themeSelect = document.getElementById("caricatureTheme");
@@ -93,12 +97,12 @@ const image = rawImage
         }
 
         let cart = getCart();
-        const existingIndex = cart.findIndex(item => item.id === id && (item.theme || "") === chosenTheme);
+        const existingIndex = cart.findIndex(item => item.id === id && (item.theme || "") === chosenTheme && (item.personalization || "") === personalization);
 
         if (existingIndex > -1) {
 
             // Actualizăm datele variantei dacă produsul exista deja în coș.
-            Object.assign(cart[existingIndex], { title, price, image, url });
+            Object.assign(cart[existingIndex], { title, price, image, url, personalization });
 
             // Păstrăm cantitatea minimă reală a produsului
             cart[existingIndex].minQuantity = minQuantity;
@@ -117,6 +121,7 @@ const image = rawImage
             cart.push({
                 id,
                 theme: chosenTheme,
+                personalization,
                 title,
                 price,
                 image,

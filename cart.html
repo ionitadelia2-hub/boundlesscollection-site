@@ -230,7 +230,11 @@
   <script>
     document.addEventListener("DOMContentLoaded", renderCart);
     
-    function renderCart() {
+    function escapeCartText(value) {
+  return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
+}
+
+function renderCart() {
         const cart = getCart();
         const container = document.getElementById("cart-content");
         const summary = document.getElementById("cart-summary");
@@ -286,9 +290,9 @@ if (item.quantity < minQuantity) {
             subtotal += item.price * item.quantity;
             html += `
                 <div class="cart-item">
-                    <img src="${item.image}" alt="${item.title}">
+                    <img src="${item.image}" alt="${escapeCartText(item.title)}">
                     <div class="item-details">
-                        <div class="item-title">${item.title}</div>
+                        <div class="item-title">${escapeCartText(item.title)}</div>
                         <div class="item-price">${item.price.toFixed(2)} RON</div>
                         ${minQuantity > 1
     ? `<div style="font-size:0.82rem;color:#777;margin-top:4px;">
@@ -312,7 +316,7 @@ if (item.quantity < minQuantity) {
         min="${minQuantity}"
         step="1"
         inputmode="numeric"
-        aria-label="Cantitate pentru ${item.title}"
+        aria-label="Cantitate pentru ${escapeCartText(item.title)}"
         onchange="setQty(${index}, this.value)"
         onblur="setQty(${index}, this.value)"
         onkeydown="if(event.key === 'Enter'){ this.blur(); }"

@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import envelopePaperOptions from "../envelope-paper-options.js";
+import candyBoxVariants from "../candy-box-variants.js";
 
 const catalog = JSON.parse(
   readFileSync(
@@ -9,7 +10,7 @@ const catalog = JSON.parse(
 );
 
 const productsById = new Map(
-  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).map(product => [product.id, product])
+  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).flatMap(candyBoxVariants.expandCandyBoxVariants).map(product => [product.id, product])
 );
 
 const caricatureImagesByTheme = new Map([
@@ -76,7 +77,13 @@ for (const item of products) {
       error: "Alege tematica fiecărei caricaturi pe pagina produsului și adaugă din nou produsul în coș."
     });
   }
-  const uniqueKey = product?.id + "|" + theme;
+  const productName = product?.personalization_required && typeof item?.personalization === "string"
+    ? item.personalization.trim().replace(/\s+/g, " ")
+    : "";
+  if (product?.personalization_required && (!productName || productName.length > 40 || /[\u0000-\u001f\u007f]/.test(productName))) {
+    return res.status(400).json({ ok: false, error: "Scrie un nume valid pentru fiecare cutiuță personalizată (maximum 40 de caractere)." });
+  }
+  const uniqueKey = JSON.stringify([product?.id, theme, productName]);
 
   const minimum = Math.max(
     1,
@@ -102,7 +109,7 @@ for (const item of products) {
 
   checkedProducts.push({
     id: product.id,
-    title: product.title + (theme ? " — tematică: " + theme : ""),
+    title: product.title + (theme ? " — tematică: " + theme : "") + (productName ? " — Nume: " + productName : ""),
     price: product.price,
     quantity,
     image: isCaricature ? caricatureImagesByTheme.get(theme) : product.images?.[0] || ""
@@ -624,4 +631,5 @@ attachments: productAttachments
     });
   }
 }
+
 
