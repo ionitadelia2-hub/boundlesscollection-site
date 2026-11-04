@@ -40,7 +40,10 @@ function initAddToCartButtons() {
 
         const optionsForm = document.getElementById(btn.getAttribute("data-options-form") || "");
         if (optionsForm && !optionsForm.reportValidity()) return;
-        const personalization = btn.getAttribute("data-personalization") || "";
+        const isNameSticker = btn.getAttribute("data-id") === "sticker-nume-personalizat-20cm";
+        const personalization = isNameSticker
+            ? document.getElementById("stickerName").value.trim().replace(/\s+/g, " ")
+            : btn.getAttribute("data-personalization") || "";
 
         const id = btn.getAttribute("data-id");
         const isCaricature = id?.startsWith("caricatura-personalizata-");
@@ -66,7 +69,7 @@ function initAddToCartButtons() {
         const baseTitle = btn.getAttribute("data-title") || "";
         const title = isCaricature && !baseTitle.includes(chosenTheme)
             ? baseTitle + " — " + chosenTheme
-            : baseTitle;
+            : baseTitle + (isNameSticker ? " — Nume: " + personalization : "");
         const price = parseFloat(btn.getAttribute("data-price"));
         const rawImage = isCaricature ? themeImages.get(chosenTheme) : btn.getAttribute("data-image");
 

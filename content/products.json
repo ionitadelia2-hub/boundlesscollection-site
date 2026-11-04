@@ -11972,5 +11972,29 @@
     "material": "",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "sticker-nume-personalizat-20cm",
+    "title": "Sticker cu nume personalizat – 20 cm",
+    "price": 25,
+    "category": "stickere nume",
+    "product_type": "stickere nume",
+    "desc": "Sticker alb din vinil, decupat în formă de nume, cu scris caligrafic elegant. Personalizează obiectele și decorurile cu numele dorit. Caracteristici: Lățime: 20 cm | Înălțimea variază în funcție de nume | Culoare: alb | Personalizare cu un nume inclusă | Livrat cu folie de transfer | Aplicare pe suprafețe netede, curate și uscate | Preț: 25 lei pentru un sticker | Fotografia prezintă exemple de nume; se comandă fiecare sticker separat.",
+    "images": [
+      "/images/stickere/sticker-nume-personalizat-20cm.webp"
+    ],
+    "tags": [
+      "stickere nume",
+      "sticker personalizat",
+      "autocolant nume",
+      "vinil alb",
+      "caligrafic"
+    ],
+    "slug": "sticker-cu-nume-personalizat-20-cm-sticker-",
+    "google_product_category": "Home & Garden > Decor > Decals & Stickers",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "mpn": ""
   }
 ]

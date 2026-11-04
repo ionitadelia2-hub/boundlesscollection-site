@@ -176,6 +176,7 @@ const CATEGORY_MAP = {
   "tricouri scolare elevi": { name: "Pentru Elevi / Absolvenți", url: "/tricouri-scolare-elevi.html" },
   "articole petreceri copii": { name: "Petreceri Copii 🎈", url: "/articole-petreceri-copii.html" },
   "stickere oglinda": { name: "Stickere oglindă", url: "/stickere-oglinda.html" },
+  "stickere nume": { name: "Stickere cu nume", url: "/stickere-nume.html" },
   "stickere auto": { name: "Stickere auto", url: "/stickere-auto.html" },
   "odorizante dulap": { name: "Odorizante pentru dulap", url: "/odorizante-dulap.html" },
   "panouri întâmpinare & șevalete": { name: "Panouri Întâmpinare & Șevalete", url: "/panouri-intampinare-sevalete.html" },
@@ -237,6 +238,7 @@ const PRODUCTS_DROPDOWN_HTML = `
   <li class="menu-group" role="none">
     <div class="menu-title">Decor & accesorii</div>
     <a role="menuitem" href="/aranjamente-florale.html">Aranjamente florale</a>
+    <a role="menuitem" href="/stickere-nume.html">Stickere cu nume</a>
     <a role="menuitem" href="/stickere-oglinda.html">Stickere oglinda</a>
     <a role="menuitem" href="/odorizante-dulap.html">Odorizante pentru dulap</a>
     <a role="menuitem" href="/panouri-intampinare-sevalete.html">Panouri intampinare & Șevalete</a>
@@ -610,6 +612,13 @@ function pageTemplate(prod) {
       <option value="Zi de naștere">Zi de naștere</option>
     </select>
   </div>` : ""}
+  ${prod.id === "sticker-nume-personalizat-20cm" ? `
+  <form id="stickerNameOptions" style="margin:20px 0;text-align:left">
+    <p><strong>20 cm lățime · 25 lei / sticker</strong></p>
+    <label for="stickerName" style="display:block;font-weight:600;margin-bottom:8px">Numele dorit *</label>
+    <input id="stickerName" name="stickerName" type="text" required maxlength="40" pattern=".*\\S.*" autocomplete="off" placeholder="Ex.: Simina" aria-describedby="stickerNameHelp" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
+    <small id="stickerNameHelp">Același nume pentru toate bucățile adăugate acum. Pentru alt nume, adaugă separat în coș.</small>
+  </form>` : ""}
   ${prod.paper_options ? `
   <div style="margin-bottom:20px">
     <label for="envelopePaperWeight" style="display:block;font-weight:600;margin-bottom:8px">Gramajul plicului</label>
@@ -668,6 +677,7 @@ function pageTemplate(prod) {
           <button 
             class="btn btn-primary add-to-cart" 
             type="button"
+            ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
             data-id="${esc(prod.id)}"
             data-title="${esc(prod.title)}"
             data-price="${priceStr}"
@@ -1033,6 +1043,7 @@ function main() {
       google_product_category: gpc,
       material,
       min_quantity,
+      ...(id === "sticker-nume-personalizat-20cm" ? { personalization_required: true } : {}),
       mpn: r.mpn || ""
     };
   }).flatMap(expandEnvelopeVariants);
@@ -1150,6 +1161,7 @@ const staticPagesForSitemap = [
   "/aranjamente-florale.html",
   "/stickere-oglinda.html",
   "/stickere-auto.html",
+  "/stickere-nume.html",
   "/odorizante-dulap.html",
   "/panouri-intampinare-sevalete.html",
   "/toppere-tort.html",

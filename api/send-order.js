@@ -81,7 +81,7 @@ for (const item of products) {
     ? item.personalization.trim().replace(/\s+/g, " ")
     : "";
   if (product?.personalization_required && (!productName || productName.length > 40 || /[\u0000-\u001f\u007f]/.test(productName))) {
-    return res.status(400).json({ ok: false, error: "Scrie un nume valid pentru fiecare cutiuță personalizată (maximum 40 de caractere)." });
+    return res.status(400).json({ ok: false, error: "Scrie un nume valid pentru fiecare produs personalizat (maximum 40 de caractere)." });
   }
   const uniqueKey = JSON.stringify([product?.id, theme, productName]);
 
