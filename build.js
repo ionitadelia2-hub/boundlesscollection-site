@@ -1043,12 +1043,19 @@ function main() {
 
   // 1) CSV -> produse
   const rows = parseCSV(fs.readFileSync(CSV_FILE, "utf8"));
-  // Ascunse temporar: Diego, Patrick și Emma; modelele se păstrează în CSV.
+  // Modele ascunse temporar la cerere; descrierile și imaginile se păstrează.
   // Scoate ID-ul din această listă pentru a republica modelul.
   const hiddenProductIds = new Set([
     "glob-lemn-dinozaur-nume",
     "glob-lemn-om-zapada-nume",
-    "glob-lemn-unicorn-nume"
+    "glob-lemn-unicorn-nume",
+    "glob-lemn-primul-craciun-casa-noua",
+    "glob-lemn-primul-craciun-casatoriti",
+    "glob-lemn-casuta-iarna-familie",
+    "glob-lemn-primul-craciun-bebe",
+    "glob-lemn-bradut-nume",
+    "glob-lemn-coronita-funda-nume",
+    "glob-lemn-familie-turta-dulce"
   ]);
   const products = rows.filter(r => !hiddenProductIds.has(r.id)).map((r) => {
     const id    = r.id || crypto.randomUUID();
