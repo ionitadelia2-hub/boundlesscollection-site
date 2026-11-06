@@ -18391,5 +18391,34 @@
     "personalization_required": true,
     "personalization_label": "Nume",
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-bradut-nume",
+    "title": "Glob din lemn personalizat cu nume – brăduț cu stea",
+    "price": 15,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn natur, în formă de brăduț cu stea, globulețe și ghirlande decorative. Panglica centrală se personalizează cu numele dorit. Fotografia prezintă un exemplu cu numele „Matteo”; pe produsul tău va apărea numele introdus în câmpul de personalizare. Prevăzut cu șnur pentru agățare în brad. Preț: 15 lei/bucată, cu personalizarea numelui inclusă. Pentru nume diferite, adaugă produsele separat în coș.",
+    "images": [
+      "/images/craciun/glob-lemn-bradut-matteo.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "nume",
+      "bradut",
+      "stea",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-cu-nume-bradut-cu-stea-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Nume",
+    "mpn": ""
   }
 ]
