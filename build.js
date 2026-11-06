@@ -7,6 +7,7 @@ const crypto = require("crypto");
 const { expandEnvelopeVariants } = require("./envelope-paper-options.js");
 const { CANDY_BOX_SIZES, CANDY_BOX_PERSONALIZATION_PRICE, expandCandyBoxVariants } = require("./candy-box-variants.js");
 const { WOODEN_ORNAMENT_ID, ORNAMENT_LETTERS, expandWoodenOrnamentVariants } = require("./wooden-ornament-variants.js");
+const { WOODEN_TREE_ID, expandWoodenTreePacks } = require("./wooden-tree-packs.js");
 const christmasSeo = require("./content/christmas-seo.json");
 
 const ROOT = __dirname;                         // rădăcina repo-ului
@@ -643,6 +644,14 @@ function pageTemplate(prod) {
       <small>Același nume se aplică tuturor bucăților adăugate acum. Pentru alt nume, adaugă separat în coș.</small>
     </div>
   </form>` : ""}
+  ${prod.id === WOODEN_TREE_ID ? `
+  <form id="woodenTreeOptions" data-variants="${esc(JSON.stringify(expandWoodenTreePacks(prod)))}" style="display:block;text-align:left;margin:20px 0">
+    <label for="woodenTreePack" style="display:block;font-weight:600;margin-bottom:8px">Alege pachetul</label>
+    <select id="woodenTreePack" style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
+      ${expandWoodenTreePacks(prod).map(variant => `<option value="${variant.pack_count}">${variant.pack_count} ${variant.pack_count === 1 ? 'bucată' : 'bucăți'} — ${variant.price} lei</option>`).join('')}
+    </select>
+    <small>Prețul este pentru întregul pachet. Cantitatea de mai jos reprezintă numărul de pachete.</small>
+  </form>` : ""}
   ${prod.id === WOODEN_ORNAMENT_ID ? `
   <form id="woodenOrnamentOptions" data-variants="${esc(JSON.stringify(expandWoodenOrnamentVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
     <p><strong>Model dublu din lemn · aproximativ 14 × 12 cm.</strong><br>Panglică de satin inclusă.</p>
@@ -661,7 +670,7 @@ function pageTemplate(prod) {
     <small>Litera este inclusă în prețul de 35 lei. Cu scris jos: 37 lei/buc. Pentru altă literă sau alt text, adaugă separat în coș. Imaginea prezintă un exemplu cu scris jos.</small>
   </form>` : ""}
 <div class="product-quantity">
-  <span class="product-quantity-label">Cantitate</span>
+  <span class="product-quantity-label">${prod.id === WOODEN_TREE_ID ? "Număr de pachete" : "Cantitate"}</span>
 
   <div class="quantity-picker">
     <button
@@ -695,6 +704,7 @@ function pageTemplate(prod) {
           <button 
             class="btn btn-primary add-to-cart" 
             type="button"
+            ${prod.id === WOODEN_TREE_ID ? 'data-options-form="woodenTreeOptions"' : ''}
             ${prod.id === WOODEN_ORNAMENT_ID ? 'data-options-form="woodenOrnamentOptions" disabled' : ''}
             ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
             data-id="${esc(prod.id)}"
@@ -727,6 +737,7 @@ function pageTemplate(prod) {
   </div></footer>
 
   <script src="/cart.js" defer></script>
+  ${prod.id === WOODEN_TREE_ID ? '<script src="/wooden-tree-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_ORNAMENT_ID ? '<script src="/wooden-ornament-options.js" defer></script>' : ''}
   ${prod.id === "cutiuta-dulciuri-om-zapada" ? '<script src="/candy-box-options.js" defer></script>' : ''}
 <script>
