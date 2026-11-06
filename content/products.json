@@ -18308,5 +18308,31 @@
     "material": "",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-brad-fulgi-funda",
+    "title": "Glob din lemn cu brăduț, fulgi de zăpadă și fundiță",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob decorativ din lemn natur, cu brăduț de Crăciun, doi fulgi de zăpadă și fundiță ajurată. Detaliile decupate și bordura ornamentală completează decorul bradului și aranjamentele de sărbători. Model generalist, fără personalizare, prevăzut cu șnur pentru agățare. Preț: 25 lei/bucată. Se vinde individual.",
+    "images": [
+      "/images/craciun/glob-lemn-brad-fulgi-funda.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn generaliste",
+      "lemn natur",
+      "bradut",
+      "fulgi de zapada",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-cu-bradut-fulgi-de-zapada-si-fundita-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
