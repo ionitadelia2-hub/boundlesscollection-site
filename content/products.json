@@ -18507,5 +18507,34 @@
     "personalization_required": true,
     "personalization_label": "Text familie",
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-primul-craciun-casa-noua",
+    "title": "Glob din lemn personalizat – primul Crăciun în casa nouă",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn natur, în formă de căsuță cu acoperiș înzăpezit, coroniță cu cheie și peisaj de iarnă. Mesajul „First Christmas in Our New Home” marchează primul Crăciun în noua locuință. Plăcuța de jos se personalizează cu numele familiei. Fotografia prezintă un exemplu cu textul „Familia Ionescu”; pe produsul tău va apărea textul complet introdus în câmpul de personalizare. Un cadou pentru casă nouă și o amintire pentru bradul familiei. Prevăzut cu șnur pentru agățare. Preț: 25 lei/bucată, cu personalizarea textului inclusă. Pentru familii cu nume diferite, adaugă produsele separat în coș.",
+    "images": [
+      "/images/craciun/glob-lemn-casa-noua-familia-ionescu.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "familie",
+      "primul craciun casa noua",
+      "cadou casa noua",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-primul-craciun-in-casa-noua-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Text familie",
+    "mpn": ""
   }
 ]
