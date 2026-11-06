@@ -18536,5 +18536,34 @@
     "personalization_required": true,
     "personalization_label": "Text familie",
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-dinozaur-nume",
+    "title": "Glob din lemn personalizat cu nume – dinozaur de Crăciun",
+    "price": 20,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn natur, cu un dinozaur vesel cu căciulă de Moș Crăciun, luminițe, brăduți și steluțe. Panglica de jos se personalizează cu numele dorit. Fotografia prezintă un exemplu cu numele „Diego”; pe globul tău va apărea numele introdus în câmpul de personalizare. Un cadou de sărbători pentru copiii pasionați de dinozauri. Prevăzut cu panglică pentru agățare în brad. Preț: 20 lei/bucată, cu personalizarea numelui inclusă. Pentru nume diferite, adaugă produsele separat în coș.",
+    "images": [
+      "/images/craciun/glob-lemn-dinozaur-diego.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "nume",
+      "dinozaur",
+      "copii",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-cu-nume-dinozaur-de-craciun-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Nume",
+    "mpn": ""
   }
 ]
