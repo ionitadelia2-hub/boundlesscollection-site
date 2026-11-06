@@ -1200,6 +1200,7 @@ const staticPagesForSitemap = [
 
   // Colectii
   "/craciun.html",
+  "/globuri-din-lemn.html",
   "/paste.html",
   "/martisor.html"
 ];

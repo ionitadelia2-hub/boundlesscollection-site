@@ -572,7 +572,7 @@ if (filterKey === 'tricouri scolare') {
   }
 
   function emptyState(message) {
-    return `<div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">${message}</div>`;
+    return `<div class="item" style="grid-column:1/-1;text-align:center;padding:2rem 1rem;opacity:.8">${window.WOODEN_ORNAMENT_COLLECTION ? 'Momentan nu sunt produse în această selecție.' : message}</div>`;
   }
 
   // ===== Render + bind pe carduri =====
@@ -590,7 +590,13 @@ if (PAGE_FILTER === 'stickere oglinda') {
   hitCatToggle = matchesStickerSubfilter(p, activeFilter);
 
 } else if (PAGE_FILTER === 'craciun') {
-  hitCatToggle = activeFilter === 'toate' || christmasProductType(p) === activeFilter;
+  if (window.WOODEN_ORNAMENT_COLLECTION) {
+    const personalized = (p.tagsKey || []).some(tag => /personalizat|initiala/.test(tag)) || /personalizat|initiala/.test(key(p.title || ''));
+    hitCatToggle = christmasProductType(p) === 'globuri lemn' &&
+      (activeFilter === 'toate' || (activeFilter === 'personalizate' ? personalized : !personalized));
+  } else {
+    hitCatToggle = activeFilter === 'toate' || christmasProductType(p) === activeFilter;
+  }
 
 } else if (
   PAGE_FILTER === 'meniuri' ||
