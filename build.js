@@ -644,6 +644,12 @@ function pageTemplate(prod) {
       <small>Același nume se aplică tuturor bucăților adăugate acum. Pentru alt nume, adaugă separat în coș.</small>
     </div>
   </form>` : ""}
+  ${prod.id === "glob-lemn-familie-turta-dulce" ? `
+  <form id="familyOrnamentOptions" style="display:block;text-align:left;margin:20px 0">
+    <label for="familyOrnamentName" style="display:block;font-weight:600;margin-bottom:8px">Textul complet pentru glob *</label>
+    <input id="familyOrnamentName" type="text" required maxlength="40" autocomplete="off" placeholder="Ex.: Familia Paraschiv" aria-describedby="familyOrnamentHelp" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
+    <small id="familyOrnamentHelp">Personalizarea este inclusă în prețul de 20 lei/bucată. Scrie textul exact cum dorești să apară, inclusiv cuvântul „Familia”. Modelul include doi adulți și doi copii. Pentru alt nume, adaugă separat în coș.</small>
+  </form>` : ""}
   ${prod.id === WOODEN_TREE_ID ? `
   <form id="woodenTreeOptions" data-variants="${esc(JSON.stringify(expandWoodenTreePacks(prod)))}" style="display:block;text-align:left;margin:20px 0">
     <label for="woodenTreePack" style="display:block;font-weight:600;margin-bottom:8px">Alege pachetul</label>
@@ -704,6 +710,7 @@ function pageTemplate(prod) {
           <button 
             class="btn btn-primary add-to-cart" 
             type="button"
+            ${prod.id === "glob-lemn-familie-turta-dulce" ? 'data-options-form="familyOrnamentOptions"' : ''}
             ${prod.id === WOODEN_TREE_ID ? 'data-options-form="woodenTreeOptions"' : ''}
             ${prod.id === WOODEN_ORNAMENT_ID ? 'data-options-form="woodenOrnamentOptions" disabled' : ''}
             ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
@@ -737,6 +744,7 @@ function pageTemplate(prod) {
   </div></footer>
 
   <script src="/cart.js" defer></script>
+  ${prod.id === "glob-lemn-familie-turta-dulce" ? '<script src="/family-ornament-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_TREE_ID ? '<script src="/wooden-tree-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_ORNAMENT_ID ? '<script src="/wooden-ornament-options.js" defer></script>' : ''}
   ${prod.id === "cutiuta-dulciuri-om-zapada" ? '<script src="/candy-box-options.js" defer></script>' : ''}
@@ -1074,6 +1082,7 @@ function main() {
       google_product_category: gpc,
       material,
       min_quantity,
+      ...(id === "glob-lemn-familie-turta-dulce" ? { personalization_required: true, personalization_label: "Text familie" } : {}),
       ...(id === "sticker-nume-personalizat-20cm" ? { personalization_required: true } : {}),
       mpn: r.mpn || ""
     };
