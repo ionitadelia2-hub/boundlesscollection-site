@@ -18449,5 +18449,34 @@
     "personalization_required": true,
     "personalization_label": "Text familie",
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-primul-craciun-bebe",
+    "title": "Glob din lemn personalizat – primul Crăciun al bebelușului",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn natur, cu un bebeluș adormit pe semilună, steluțe, fulgi de zăpadă și mesajul „Baby’s First Christmas”. Panglica de jos se personalizează cu numele copilului. Fotografia prezintă un exemplu cu numele „Filip”; pe globul tău va apărea numele introdus în câmpul de personalizare. O amintire pentru primul Crăciun al bebelușului sau un cadou pentru proaspeții părinți. Prevăzut cu șnur pentru agățare în brad. Preț: 25 lei/bucată, cu personalizarea numelui inclusă. Pentru nume diferite, adaugă produsele separat în coș.",
+    "images": [
+      "/images/craciun/glob-lemn-primul-craciun-filip.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "nume",
+      "primul craciun",
+      "bebelus",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-primul-craciun-al-bebelusului-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Nume",
+    "mpn": ""
   }
 ]

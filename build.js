@@ -644,10 +644,10 @@ function pageTemplate(prod) {
       <small>Același nume se aplică tuturor bucăților adăugate acum. Pentru alt nume, adaugă separat în coș.</small>
     </div>
   </form>` : ""}
-  ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie"].includes(prod.id) ? `
+  ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe"].includes(prod.id) ? `
   <form id="familyOrnamentOptions" data-personalization-label="${!["glob-lemn-familie-turta-dulce", "glob-lemn-casuta-iarna-familie"].includes(prod.id) ? "Nume" : "Text familie"}" style="display:block;text-align:left;margin:20px 0">
     <label for="familyOrnamentName" style="display:block;font-weight:600;margin-bottom:8px">${!["glob-lemn-familie-turta-dulce", "glob-lemn-casuta-iarna-familie"].includes(prod.id) ? "Numele dorit" : "Textul complet pentru glob"} *</label>
-    <input id="familyOrnamentName" type="text" required maxlength="40" autocomplete="off" placeholder="${!["glob-lemn-familie-turta-dulce", "glob-lemn-casuta-iarna-familie"].includes(prod.id) ? (prod.id === "glob-lemn-bradut-nume" ? "Ex.: Matteo" : "Ex.: Andrada") : (prod.id === "glob-lemn-casuta-iarna-familie" ? "Ex.: Familia Toader" : "Ex.: Familia Paraschiv")}" aria-describedby="familyOrnamentHelp" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
+    <input id="familyOrnamentName" type="text" required maxlength="40" autocomplete="off" placeholder="${!["glob-lemn-familie-turta-dulce", "glob-lemn-casuta-iarna-familie"].includes(prod.id) ? (prod.id === "glob-lemn-primul-craciun-bebe" ? "Ex.: Filip" : prod.id === "glob-lemn-bradut-nume" ? "Ex.: Matteo" : "Ex.: Andrada") : (prod.id === "glob-lemn-casuta-iarna-familie" ? "Ex.: Familia Toader" : "Ex.: Familia Paraschiv")}" aria-describedby="familyOrnamentHelp" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
     <small id="familyOrnamentHelp">${!["glob-lemn-familie-turta-dulce", "glob-lemn-casuta-iarna-familie"].includes(prod.id) ? "Personalizarea numelui este inclusă în prețul de " + prod.price + " lei/bucată. Scrie numele exact cum dorești să apară. Pentru alt nume, adaugă separat în coș." : "Personalizarea este inclusă în prețul de " + prod.price + " lei/bucată. Scrie textul exact cum dorești să apară, inclusiv cuvântul „Familia”. " + (prod.id === "glob-lemn-familie-turta-dulce" ? "Modelul include doi adulți și doi copii. " : "") + "Pentru alt nume, adaugă separat în coș."}</small>
   </form>` : ""}
   ${prod.id === WOODEN_TREE_ID ? `
@@ -710,7 +710,7 @@ function pageTemplate(prod) {
           <button 
             class="btn btn-primary add-to-cart" 
             type="button"
-            ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie"].includes(prod.id) ? 'data-options-form="familyOrnamentOptions"' : ''}
+            ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe"].includes(prod.id) ? 'data-options-form="familyOrnamentOptions"' : ''}
             ${prod.id === WOODEN_TREE_ID ? 'data-options-form="woodenTreeOptions"' : ''}
             ${prod.id === WOODEN_ORNAMENT_ID ? 'data-options-form="woodenOrnamentOptions" disabled' : ''}
             ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
@@ -744,7 +744,7 @@ function pageTemplate(prod) {
   </div></footer>
 
   <script src="/cart.js" defer></script>
-  ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie"].includes(prod.id) ? '<script src="/family-ornament-options.js" defer></script>' : ''}
+  ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe"].includes(prod.id) ? '<script src="/family-ornament-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_TREE_ID ? '<script src="/wooden-tree-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_ORNAMENT_ID ? '<script src="/wooden-ornament-options.js" defer></script>' : ''}
   ${prod.id === "cutiuta-dulciuri-om-zapada" ? '<script src="/candy-box-options.js" defer></script>' : ''}
@@ -1082,6 +1082,7 @@ function main() {
       google_product_category: gpc,
       material,
       min_quantity,
+      ...(id === "glob-lemn-primul-craciun-bebe" ? { personalization_required: true, personalization_label: "Nume" } : {}),
       ...(id === "glob-lemn-bradut-nume" ? { personalization_required: true, personalization_label: "Nume" } : {}),
       ...(id === "glob-lemn-coronita-funda-nume" ? { personalization_required: true, personalization_label: "Nume" } : {}),
       ...(id === "glob-lemn-casuta-iarna-familie" ? { personalization_required: true, personalization_label: "Text familie" } : {}),
