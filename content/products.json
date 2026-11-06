@@ -18420,5 +18420,34 @@
     "personalization_required": true,
     "personalization_label": "Nume",
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-casuta-iarna-familie",
+    "title": "Glob din lemn personalizat cu familia – căsuță de iarnă",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn natur, în formă de glob de zăpadă, cu o căsuță de iarnă, brazi și fulgi de nea. Plăcuța decorativă de la bază se personalizează cu numele familiei. Fotografia prezintă un exemplu cu textul „Familia Toader”; pe produsul tău va apărea textul complet introdus în câmpul de personalizare. Prevăzut cu șnur pentru agățare în brad. Preț: 25 lei/bucată, cu personalizarea textului inclusă. Pentru familii cu nume diferite, adaugă produsele separat în coș.",
+    "images": [
+      "/images/craciun/glob-lemn-casuta-iarna-familia-toader.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "familie",
+      "casuta de iarna",
+      "glob de zapada",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-cu-familia-casuta-de-iarna-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Text familie",
+    "mpn": ""
   }
 ]
