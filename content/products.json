@@ -18565,5 +18565,34 @@
     "personalization_required": true,
     "personalization_label": "Nume",
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-om-zapada-nume",
+    "title": "Glob din lemn personalizat cu nume – om de zăpadă cu păsărică",
+    "price": 20,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn natur, cu un om de zăpadă vesel, căciulă, fular și o păsărică așezată pe mănușă. Fulgii de zăpadă și crenguțele decorative completează modelul de iarnă. Panglica de jos se personalizează cu numele dorit. Fotografia prezintă un exemplu cu numele „Patrick”; pe globul tău va apărea numele introdus în câmpul de personalizare. Prevăzut cu panglică pentru agățare în brad. Preț: 20 lei/bucată, cu personalizarea numelui inclusă. Pentru nume diferite, adaugă produsele separat în coș.",
+    "images": [
+      "/images/craciun/glob-lemn-om-zapada-patrick.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "nume",
+      "om de zapada",
+      "pasarica",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-cu-nume-om-de-zapada-cu-pasarica-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Nume",
+    "mpn": ""
   }
 ]
