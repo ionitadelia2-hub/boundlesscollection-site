@@ -1043,7 +1043,14 @@ function main() {
 
   // 1) CSV -> produse
   const rows = parseCSV(fs.readFileSync(CSV_FILE, "utf8"));
-  const products = rows.map((r) => {
+  // Ascunse temporar: Diego, Patrick și Emma; modelele se păstrează în CSV.
+  // Scoate ID-ul din această listă pentru a republica modelul.
+  const hiddenProductIds = new Set([
+    "glob-lemn-dinozaur-nume",
+    "glob-lemn-om-zapada-nume",
+    "glob-lemn-unicorn-nume"
+  ]);
+  const products = rows.filter(r => !hiddenProductIds.has(r.id)).map((r) => {
     const id    = r.id || crypto.randomUUID();
     const title = r.title || "";
     // Acest model avea aceeași adresă ca bradul cu fundiță și clopoțel.
