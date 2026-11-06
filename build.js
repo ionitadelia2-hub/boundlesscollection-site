@@ -6,6 +6,7 @@ const path = require("path");
 const crypto = require("crypto");
 const { expandEnvelopeVariants } = require("./envelope-paper-options.js");
 const { CANDY_BOX_SIZES, CANDY_BOX_PERSONALIZATION_PRICE, expandCandyBoxVariants } = require("./candy-box-variants.js");
+const { WOODEN_ORNAMENT_ID, ORNAMENT_LETTERS, expandWoodenOrnamentVariants } = require("./wooden-ornament-variants.js");
 const christmasSeo = require("./content/christmas-seo.json");
 
 const ROOT = __dirname;                         // rădăcina repo-ului
@@ -642,6 +643,23 @@ function pageTemplate(prod) {
       <small>Același nume se aplică tuturor bucăților adăugate acum. Pentru alt nume, adaugă separat în coș.</small>
     </div>
   </form>` : ""}
+  ${prod.id === WOODEN_ORNAMENT_ID ? `
+  <form id="woodenOrnamentOptions" data-variants="${esc(JSON.stringify(expandWoodenOrnamentVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
+    <p><strong>Model dublu din lemn · aproximativ 14 × 12 cm.</strong><br>Panglică de satin inclusă.</p>
+    <label for="ornamentLetter" style="display:block;font-weight:600;margin-bottom:8px">Alege litera *</label>
+    <select id="ornamentLetter" required style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
+      <option value="">Alege litera</option>
+      ${ORNAMENT_LETTERS.map(letter => `<option value="${letter}">${letter}</option>`).join('')}
+    </select>
+    <label style="display:flex;gap:10px;align-items:center;margin-top:16px;cursor:pointer">
+      <input type="checkbox" id="ornamentPersonalize" style="appearance:auto;-webkit-appearance:checkbox;width:18px;min-width:18px;height:18px;flex:0 0 18px;margin:0;padding:0;accent-color:#a23366"> Scris personalizat jos (+2 lei / buc.)
+    </label>
+    <div id="ornamentTextGroup" hidden style="margin-top:14px">
+      <label for="ornamentText" style="display:block;font-weight:600;margin-bottom:8px">Textul dorit în partea de jos *</label>
+      <input id="ornamentText" type="text" maxlength="40" disabled autocomplete="off" placeholder="Ex.: Eva" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
+    </div>
+    <small>Litera este inclusă în prețul de 35 lei. Cu scris jos: 37 lei/buc. Pentru altă literă sau alt text, adaugă separat în coș. Imaginea prezintă un exemplu cu scris jos.</small>
+  </form>` : ""}
 <div class="product-quantity">
   <span class="product-quantity-label">Cantitate</span>
 
@@ -677,6 +695,7 @@ function pageTemplate(prod) {
           <button 
             class="btn btn-primary add-to-cart" 
             type="button"
+            ${prod.id === WOODEN_ORNAMENT_ID ? 'data-options-form="woodenOrnamentOptions" disabled' : ''}
             ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
             data-id="${esc(prod.id)}"
             data-title="${esc(prod.title)}"
@@ -708,6 +727,7 @@ function pageTemplate(prod) {
   </div></footer>
 
   <script src="/cart.js" defer></script>
+  ${prod.id === WOODEN_ORNAMENT_ID ? '<script src="/wooden-ornament-options.js" defer></script>' : ''}
   ${prod.id === "cutiuta-dulciuri-om-zapada" ? '<script src="/candy-box-options.js" defer></script>' : ''}
 <script>
     document.getElementById('envelopePaperWeight')?.addEventListener('change', function () {

@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import envelopePaperOptions from "../envelope-paper-options.js";
+import woodenOrnamentVariants from "../wooden-ornament-variants.js";
 import candyBoxVariants from "../candy-box-variants.js";
 
 const catalog = JSON.parse(
@@ -10,7 +11,7 @@ const catalog = JSON.parse(
 );
 
 const productsById = new Map(
-  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).flatMap(candyBoxVariants.expandCandyBoxVariants).map(product => [product.id, product])
+  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).flatMap(candyBoxVariants.expandCandyBoxVariants).flatMap(woodenOrnamentVariants.expandWoodenOrnamentVariants).map(product => [product.id, product])
 );
 
 const caricatureImagesByTheme = new Map([
@@ -81,7 +82,7 @@ for (const item of products) {
     ? item.personalization.trim().replace(/\s+/g, " ")
     : "";
   if (product?.personalization_required && (!productName || productName.length > 40 || /[\u0000-\u001f\u007f]/.test(productName))) {
-    return res.status(400).json({ ok: false, error: "Scrie un nume valid pentru fiecare produs personalizat (maximum 40 de caractere)." });
+    return res.status(400).json({ ok: false, error: "Scrie un text valid pentru fiecare produs personalizat (maximum 40 de caractere)." });
   }
   const uniqueKey = JSON.stringify([product?.id, theme, productName]);
 
@@ -109,7 +110,7 @@ for (const item of products) {
 
   checkedProducts.push({
     id: product.id,
-    title: product.title + (theme ? " — tematică: " + theme : "") + (productName ? " — Nume: " + productName : ""),
+    title: product.title + (theme ? " — tematică: " + theme : "") + (productName ? " — " + (product.personalization_label || "Nume") + ": " + productName : ""),
     price: product.price,
     quantity,
     image: isCaricature ? caricatureImagesByTheme.get(theme) : product.images?.[0] || ""

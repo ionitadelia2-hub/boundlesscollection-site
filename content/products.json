@@ -11996,5 +11996,31 @@
     "min_quantity": 1,
     "personalization_required": true,
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-stitch-initiala",
+    "title": "Glob din lemn cu Stitch și inițială – model dublu",
+    "price": 35,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn, model dublu cu Stitch și inițiala aleasă, pentru brad sau un cadou personal. Dimensiune aproximativă: 14 × 12 cm (lățime × înălțime). Panglica de satin este inclusă. Preț: 35 lei/bucată, cu litera aleasă inclusă și fără scris în partea de jos. Opțional, adaugă un nume sau un text în partea de jos pentru 2 lei în plus/bucată (total 37 lei). Alege litera din selector și bifează personalizarea dacă dorești scris jos. Fotografia prezintă un exemplu personalizat. Produs realizat la comandă.",
+    "images": [
+      "/images/craciun/glob-lemn-stitch-initiala.png"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "glob personalizat",
+      "stitch",
+      "initiala",
+      "decoratiuni brad",
+      "cadou craciun"
+    ],
+    "slug": "glob-din-lemn-cu-stitch-si-initiala-model-dublu-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
