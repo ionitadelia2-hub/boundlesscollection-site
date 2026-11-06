@@ -18362,5 +18362,34 @@
     "personalization_required": true,
     "personalization_label": "Text familie",
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-coronita-funda-nume",
+    "title": "Glob din lemn personalizat cu nume – coroniță cu fundiță",
+    "price": 17,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn natur, în formă de coroniță cu fundiță, crenguțe de brad și frunze decorative. Panglica centrală se personalizează cu numele dorit. Fotografia prezintă un exemplu cu numele „Andrada”; pe globul tău va apărea numele introdus în câmpul de personalizare. Prevăzut cu șnur pentru agățare în brad. Preț: 17 lei/bucată, cu personalizarea numelui inclusă. Pentru nume diferite, adaugă produsele separat în coș.",
+    "images": [
+      "/images/craciun/glob-lemn-coronita-funda-andrada.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "nume",
+      "coronita",
+      "fundita",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-cu-nume-coronita-cu-fundita-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Nume",
+    "mpn": ""
   }
 ]

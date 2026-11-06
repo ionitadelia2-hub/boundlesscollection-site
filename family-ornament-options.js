@@ -9,7 +9,7 @@
     const value = name.value.trim().replace(/\s+/g, ' ');
     name.setCustomValidity(!value ? 'Scrie textul dorit pe glob.' : /[\u0000-\u001f\u007f]/.test(value) ? 'Scrie un text valid.' : '');
     button.dataset.personalization = value;
-    button.dataset.title = title + (value ? ' — Text familie: ' + value : '');
+    button.dataset.title = title + (value ? ' — ' + (form.dataset.personalizationLabel || 'Text familie') + ': ' + value : '');
   }
   form.addEventListener('input', update);
   form.addEventListener('change', update);
