@@ -1,6 +1,6 @@
 // Pachete comune paginii produsului și validării comenzii.
 const WOODEN_TREE_ID = 'glob-lemn-brad-verde-ajurat';
-const WOODEN_TREE_PACKS = [{ count: 1, price: 15 }, { count: 3, price: 40 }, { count: 5, price: 65 }];
+const WOODEN_TREE_PACKS = [{ count: 1, price: 10 }, { count: 3, price: 25 }, { count: 5, price: 45 }];
 function expandWoodenTreePacks(product) {
   if (product.id !== WOODEN_TREE_ID) return [product];
   return WOODEN_TREE_PACKS.map(pack => ({
