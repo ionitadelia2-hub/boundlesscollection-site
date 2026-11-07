@@ -216,6 +216,7 @@ function christmasProductType(p) {
   const title = key(p.title || '');
   const hasTag = (...names) => names.some(name => tags.has(key(name)));
 
+  if (hasTag('decoratiuni usa', 'semn usa')) return 'decoratiuni usa';
   if (hasTag('globuri lemn', 'globuri din lemn') ||
       (/\bglob(?:uri)?\b/.test(title) && /\blemn\b/.test(title))) return 'globuri lemn';
   if (hasTag('cutiute dulciuri', 'cutii dulciuri', 'cutiute pentru dulciuri') ||
