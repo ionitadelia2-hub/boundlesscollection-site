@@ -46,6 +46,11 @@ function initAddToCartButtons() {
             : btn.getAttribute("data-personalization") || "";
 
         const id = btn.getAttribute("data-id");
+        const photoUploadKey = btn.getAttribute("data-photo-upload-key") || "";
+        if (id === "glob-lemn-fotografie-gravata" && !photoUploadKey) {
+            window.alert("Încarcă fotografia pentru glob înainte de adăugarea în coș.");
+            return;
+        }
         const isCaricature = id?.startsWith("caricatura-personalizata-");
         const themeSelect = document.getElementById("caricatureTheme");
         const theme = isCaricature ? (themeSelect ? themeSelect.value : (btn.getAttribute("data-theme") || new URLSearchParams(location.search).get("tema"))) : null;
@@ -100,12 +105,12 @@ const image = rawImage
         }
 
         let cart = getCart();
-        const existingIndex = cart.findIndex(item => item.id === id && (item.theme || "") === chosenTheme && (item.personalization || "") === personalization);
+        const existingIndex = cart.findIndex(item => item.id === id && (item.theme || "") === chosenTheme && (item.personalization || "") === personalization && (item.photoUploadKey || "") === photoUploadKey);
 
         if (existingIndex > -1) {
 
             // Actualizăm datele variantei dacă produsul exista deja în coș.
-            Object.assign(cart[existingIndex], { title, price, image, url, personalization });
+            Object.assign(cart[existingIndex], { title, price, image, url, personalization, photoUploadKey });
 
             // Păstrăm cantitatea minimă reală a produsului
             cart[existingIndex].minQuantity = minQuantity;
@@ -125,6 +130,7 @@ const image = rawImage
                 id,
                 theme: chosenTheme,
                 personalization,
+                photoUploadKey,
                 title,
                 price,
                 image,
@@ -230,4 +236,3 @@ function updateCartIconCount() {
         badge.style.display = count > 0 ? "inline-block" : "none";
     });
 }
-

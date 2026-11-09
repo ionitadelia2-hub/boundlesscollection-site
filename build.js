@@ -602,6 +602,15 @@ function pageTemplate(prod) {
   : ""
 }
 
+  ${prod.id === "glob-lemn-fotografie-gravata" ? `
+  <form id="photoOrnamentOptions" style="text-align:left;margin:20px 0">
+    <label for="photoOrnamentFile" style="display:block;font-weight:600;margin-bottom:8px">Încarcă fotografia pentru glob *</label>
+    <input id="photoOrnamentFile" type="file" accept="image/jpeg,image/png,image/webp" required style="max-width:100%">
+    <p>Alege o fotografie clară, bine luminată, cu fețele complet vizibile. JPG, PNG sau WebP, maximum 8 MB. Gravarea fotografiei este inclusă în preț.</p>
+    <p id="photoOrnamentStatus" role="status" aria-live="polite">Încarcă fotografia înainte să adaugi globul în coș.</p>
+    <img id="photoOrnamentPreview" alt="Fotografia aleasă pentru gravarea globului" hidden style="max-width:180px;max-height:180px;object-fit:contain">
+    <small>Pentru altă fotografie, încarc-o și adaugă globul separat în coș. Poți verifica sau înlocui fotografia și la finalizarea comenzii.</small>
+  </form>` : ""}
   ${prod.id.startsWith("caricatura-personalizata-") ? `
   <div style="margin-bottom:20px">
     <label for="caricatureTheme" style="display:block;font-weight:600;margin-bottom:8px">Tematica caricaturii *</label>
@@ -716,6 +725,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
             ${prod.id === WOODEN_TREE_ID ? 'data-options-form="woodenTreeOptions"' : ''}
             ${prod.id === WOODEN_ORNAMENT_ID ? 'data-options-form="woodenOrnamentOptions" disabled' : ''}
             ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
+            ${prod.id === "glob-lemn-fotografie-gravata" ? 'data-options-form="photoOrnamentOptions" disabled' : ''}
             data-id="${esc(prod.id)}"
             data-title="${esc(prod.title)}"
             data-price="${priceStr}"
@@ -746,6 +756,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
   </div></footer>
 
   <script src="/cart.js" defer></script>
+  ${prod.id === "glob-lemn-fotografie-gravata" ? '<script src="/photo-ornament-upload.js" defer></script>' : ''}
   ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe", "glob-lemn-primul-craciun-casatoriti", "glob-lemn-primul-craciun-casa-noua", "glob-lemn-dinozaur-nume", "glob-lemn-om-zapada-nume", "glob-lemn-unicorn-nume", "glob-lemn-sanie-reni-nume", "glob-lemn-iepuras-morcov-nume", "glob-lemn-caciula-ajurat-nume", "glob-lemn-fetita-fursecuri-nume", "glob-lemn-clopotei-fulgi-nume", "glob-lemn-pisica-cadou-nume", "glob-lemn-om-zapada-fulgi-nume", "glob-lemn-familie-un-copil-nume", "glob-lemn-fluture-floare-nume", "glob-lemn-familie-funda-inima-nume", "glob-lemn-familie-fetita-nume"].includes(prod.id) ? '<script src="/family-ornament-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_TREE_ID ? '<script src="/wooden-tree-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_ORNAMENT_ID ? '<script src="/wooden-ornament-options.js" defer></script>' : ''}
@@ -1119,6 +1130,7 @@ function main() {
       ...(id === "glob-lemn-primul-craciun-casatoriti" ? { personalization_required: true, personalization_label: "Text familie" } : {}),
       ...(id === "glob-lemn-primul-craciun-casa-noua" ? { personalization_required: true, personalization_label: "Text familie" } : {}),
       ...(id === "glob-lemn-familie-turta-dulce" ? { personalization_required: true, personalization_label: "Text familie" } : {}),
+      ...(id === "glob-lemn-fotografie-gravata" ? { photo_required: true } : {}),
       ...(id === "sticker-nume-personalizat-20cm" ? { personalization_required: true } : {}),
       mpn: r.mpn || ""
     };
@@ -1316,7 +1328,3 @@ console.log(
 }
 
 main();
-
-
-
-

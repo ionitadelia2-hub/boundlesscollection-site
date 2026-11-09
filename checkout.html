@@ -435,6 +435,7 @@
   margin: 0;
 }
 </style>
+  <script src="/photo-ornament-upload.js"></script>
 </head>
 
 <body>
@@ -1012,6 +1013,7 @@ const needsShipping = cart.some(
 );
 
 const taxaTransport = needsShipping ? 30.00 : 0;
+const prepareOrnamentPhotos = window.PhotoOrnamentUploads.setupCheckout(cart);
 const hasCaricature = cart.some(item => item.id.startsWith("caricatura-personalizata-"));
 const photoBox = document.getElementById("caricature-upload-box");
 photoBox.style.display = hasCaricature ? "block" : "none";
@@ -1288,9 +1290,12 @@ summaryText +=
             */
 
             const caricaturePhotos = await prepareCaricaturePhotos();
+            const ornamentPhotos = await prepareOrnamentPhotos();
+            if ([...caricaturePhotos, ...ornamentPhotos].reduce((sum, photo) => sum + photo.content.length, 0) > 3500000) throw new Error("Fotografiile depășesc limita unei comenzi. Alege imagini mai mici sau plasează comenzi separate.");
             const orderData = {
   orderId: transactionId,
   caricaturePhotos,
+  ornamentPhotos,
   website: document.getElementById("order-website").value,
 
   customer: {
@@ -1489,4 +1494,3 @@ const response = await fetch(
 
 </body>
 </html>
-

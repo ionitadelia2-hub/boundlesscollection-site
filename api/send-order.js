@@ -35,6 +35,7 @@ export default async function handler(req, res) {
     let {
   orderId,
   caricaturePhotos,
+  ornamentPhotos,
   customer,
   products,
   subtotal,
@@ -68,7 +69,7 @@ if (req.body?.website) {
     const checkedProducts = [];
 const seenIds = new Set();
 
-for (const item of products) {
+for (const [orderProductIndex, item] of products.entries()) {
   const product = productsById.get(item?.id);
   const quantity = item?.quantity;
   const isCaricature = product?.id?.startsWith("caricatura-personalizata-");
@@ -85,7 +86,7 @@ for (const item of products) {
   if (product?.personalization_required && (!productName || productName.length > 40 || /[\u0000-\u001f\u007f]/.test(productName))) {
     return res.status(400).json({ ok: false, error: "Scrie un text valid pentru fiecare produs personalizat (maximum 40 de caractere)." });
   }
-  const uniqueKey = JSON.stringify([product?.id, theme, productName]);
+  const uniqueKey = JSON.stringify([product?.id, theme, productName, product?.photo_required ? orderProductIndex : null]);
 
   const minimum = Math.max(
     1,
@@ -188,6 +189,30 @@ const paymentDescription = needsShipping
 
     const caricatureProductsForPhotos = products.filter(item => item.id.startsWith("caricatura-personalizata-"));
     const photoAssignmentHtml = photoAttachments.length ? "<h2>Fotografii asociate produselor</h2><ul>" + photoAttachments.map((photo, i) => "<li>" + escapeHtml(photo.filename) + " → " + escapeHtml(caricatureProductsForPhotos[photo.productIndex]?.title || "") + "</li>").join("") + "</ul>" : "";
+    // Fotografii pentru globuri: asociate explicit liniei din comandă, trimise doar magazinului.
+    const ornamentUploads = ornamentPhotos === undefined ? [] : ornamentPhotos;
+    const photoProductIndexes = checkedProducts.map((item, index) => item.id === "glob-lemn-fotografie-gravata" ? index : -1).filter(index => index >= 0);
+    if (!Array.isArray(ornamentUploads) || ornamentUploads.length > 3 || ornamentUploads.length !== photoProductIndexes.length) {
+      return res.status(400).json({ ok: false, error: "Încarcă o fotografie pentru fiecare model de glob personalizat (maximum 3 fotografii diferite)." });
+    }
+    const ornamentAttachments = [];
+    const assignedOrnaments = new Set();
+    for (const photo of ornamentUploads) {
+      const index = photo?.productIndex;
+      if (!Number.isInteger(index) || !photoProductIndexes.includes(index) || assignedOrnaments.has(index) || photo.contentType !== "image/jpeg" || typeof photo.content !== "string" || !/^[A-Za-z0-9+/]+={0,2}$/.test(photo.content) || photo.content.length > 700000) {
+        return res.status(400).json({ ok: false, error: "Fotografia pentru glob este invalidă sau nu este asociată corect produsului." });
+      }
+      const bytes = Buffer.from(photo.content, "base64");
+      if (bytes.length < 100 || bytes.length > 525000 || bytes[0] !== 0xff || bytes[1] !== 0xd8 || bytes[2] !== 0xff) {
+        return res.status(400).json({ ok: false, error: "Fotografia pentru glob trebuie să fie un fișier JPEG valid." });
+      }
+      assignedOrnaments.add(index);
+      ornamentAttachments.push({ filename: "glob-produs-" + (index + 1) + ".jpg", content: photo.content, productIndex: index });
+    }
+    if ([...uploaded, ...ornamentUploads].reduce((sum, photo) => sum + photo.content.length, 0) > 3500000) {
+      return res.status(400).json({ ok: false, error: "Fotografiile depășesc limita unei comenzi. Alege imagini mai mici sau plasează comenzi separate." });
+    }
+    const ornamentAssignmentHtml = ornamentAttachments.length ? "<h2>Fotografii pentru globuri</h2><ul>" + ornamentAttachments.map(photo => "<li>" + escapeHtml(photo.filename) + " → Produsul " + (photo.productIndex + 1) + ": " + escapeHtml(products[photo.productIndex].title) + " (" + products[photo.productIndex].quantity + " buc.)</li>").join("") + "</ul>" : "";
     const productAttachments = [];
 
 const productRows = products.map((item, index) => {
@@ -522,6 +547,7 @@ const productRows = products.map((item, index) => {
           }
 
           ${photoAssignmentHtml}
+          ${ornamentAssignmentHtml}
           <h2>Total</h2>
 
           <p>
@@ -570,7 +596,7 @@ const productRows = products.map((item, index) => {
           reply_to: customer.email,
           subject: `🛍️ Comandă nouă ${orderId || ""} - ${customer.name || ""}`,
           html: adminEmailHtml,
-  attachments: [...productAttachments, ...photoAttachments]
+  attachments: [...productAttachments, ...photoAttachments.map(({ productIndex, ...attachment }) => attachment), ...ornamentAttachments.map(({ productIndex, ...attachment }) => attachment)]
         })
       }
     );
@@ -633,5 +659,3 @@ attachments: productAttachments
     });
   }
 }
-
-
