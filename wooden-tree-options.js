@@ -11,9 +11,11 @@
     if (!variant) return;
     button.dataset.id = variant.id;
     button.dataset.title = variant.title;
-    button.dataset.unit = variant.pack_count === 1 ? 'buc.' : 'pachete';
+    button.dataset.unit = 'selecții';
+    button.dataset.pieces = String(variant.pack_count);
+    document.getElementById('productQuantity').value = '1';
     button.dataset.price = variant.price.toFixed(2);
-    document.querySelector('.price-badge').textContent = variant.price.toFixed(2).replace('.', ',') + (variant.pack_count === 1 ? ' lei / buc.' : ' lei / pachet');
+    document.querySelector('.price-badge').textContent = variant.price.toFixed(2).replace('.', ',') + ' lei total';
   }
   form.addEventListener('change', update);
   form.addEventListener('submit', event => event.preventDefault());

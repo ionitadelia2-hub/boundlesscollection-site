@@ -653,11 +653,11 @@ function pageTemplate(prod) {
   ${prod.id === WOODEN_TREE_ID ? `
   <form id="woodenTreeOptions" data-variants="${esc(JSON.stringify(expandWoodenTreePacks(prod)))}" style="display:block;text-align:left;margin:20px 0">
     <p><strong>Realizat din lemn · Decupat laser · Vopsit în verde</strong></p>
-    <label for="woodenTreePack" style="display:block;font-weight:600;margin-bottom:8px">Alege pachetul</label>
+    <label for="woodenTreePack" style="display:block;font-weight:600;margin-bottom:8px">Alege cantitatea</label>
     <select id="woodenTreePack" style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
-      ${expandWoodenTreePacks(prod).map(variant => `<option value="${variant.pack_count}">${variant.pack_count} ${variant.pack_count === 1 ? 'bucată' : 'bucăți'} — ${variant.price} lei</option>`).join('')}
+      ${expandWoodenTreePacks(prod).map(variant => `<option value="${variant.pack_count}">${variant.pack_count} ${variant.pack_count === 1 ? 'brăduț' : 'brăduți'} — ${variant.price} lei total</option>`).join('')}
     </select>
-    <small>Prețul este pentru întregul pachet. Cantitatea de mai jos reprezintă numărul de pachete.</small>
+    <small>Primești numărul de brăduți ales. Prețul afișat este totalul pentru selecția ta.</small>
   </form>` : ""}
   ${prod.id === WOODEN_ORNAMENT_ID ? `
   <form id="woodenOrnamentOptions" data-variants="${esc(JSON.stringify(expandWoodenOrnamentVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
@@ -676,8 +676,8 @@ function pageTemplate(prod) {
     </div>
     <small>Litera este inclusă în prețul de 35 lei. Cu scris jos: 37 lei/buc. Pentru altă literă sau alt text, adaugă separat în coș. Imaginea prezintă un exemplu cu scris jos.</small>
   </form>` : ""}
-<div class="product-quantity">
-  <span class="product-quantity-label">${prod.id === WOODEN_TREE_ID ? "Număr de pachete" : "Cantitate"}</span>
+${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value="1" min="1">' : `<div class="product-quantity">
+  <span class="product-quantity-label">Cantitate</span>
 
   <div class="quantity-picker">
     <button
@@ -704,7 +704,8 @@ function pageTemplate(prod) {
     >+</button>
   </div>
 </div>
-        
+        `}
+
         <div class="actions" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
           <a class="btn" href="/index.html#produse" id="backBtn" style="border: 1px solid #ccc; padding: 10px 20px; text-decoration: none; border-radius: 4px; color: #333; font-family: 'Poppins', sans-serif;">← Înapoi</a>
           

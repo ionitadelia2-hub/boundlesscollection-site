@@ -37,7 +37,9 @@
     total.hidden = false;
     total.style.display = 'block';
     amount.textContent = money.format(cents * count / 100) + ' lei';
-    calculation.textContent = count + ' ' + (button.dataset.unit || 'buc.') + ' × ' + money.format(cents / 100) + ' lei';
+    calculation.textContent = button.dataset.pieces
+      ? 'Primești ' + button.dataset.pieces + (button.dataset.pieces === '1' ? ' brăduț.' : ' brăduți.')
+      : count + ' ' + (button.dataset.unit || 'buc.') + ' × ' + money.format(cents / 100) + ' lei';
   }
 
   quantity.addEventListener('input', updateTotal);
@@ -50,7 +52,7 @@
   // Formatele, ramele și ambalajul caricaturilor actualizează data-price.
   new MutationObserver(updateTotal).observe(button, {
     attributes: true,
-    attributeFilter: ['data-price', 'data-min-quantity', 'data-unit']
+    attributeFilter: ['data-price', 'data-min-quantity', 'data-unit', 'data-pieces']
   });
   window.addEventListener('pageshow', updateTotal);
   updateTotal();
