@@ -660,7 +660,7 @@ function pageTemplate(prod) {
   </form>` : ""}
   ${prod.id === WOODEN_ORNAMENT_ID ? `
   <form id="woodenOrnamentOptions" data-variants="${esc(JSON.stringify(expandWoodenOrnamentVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
-    <p><strong>Model dublu din lemn · aproximativ 14 × 12 cm.</strong><br>Panglică de satin inclusă.</p>
+    <p><strong>Personalizat cu inițiala dorită — inclusă în preț.</strong><br>Text suplimentar jos: +2 lei/bucată.</p><p>Model dublu din lemn · 24,187 cm lățime × 10,013 cm înălțime.<br>Panglică de satin inclusă.</p>
     <label for="ornamentLetter" style="display:block;font-weight:600;margin-bottom:8px">Alege litera *</label>
     <select id="ornamentLetter" required style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
       <option value="">Alege litera</option>
