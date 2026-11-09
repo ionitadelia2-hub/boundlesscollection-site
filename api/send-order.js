@@ -191,7 +191,7 @@ const paymentDescription = needsShipping
     const photoAssignmentHtml = photoAttachments.length ? "<h2>Fotografii asociate produselor</h2><ul>" + photoAttachments.map((photo, i) => "<li>" + escapeHtml(photo.filename) + " → " + escapeHtml(caricatureProductsForPhotos[photo.productIndex]?.title || "") + "</li>").join("") + "</ul>" : "";
     // Fotografii pentru globuri: asociate explicit liniei din comandă, trimise doar magazinului.
     const ornamentUploads = ornamentPhotos === undefined ? [] : ornamentPhotos;
-    const photoProductIndexes = checkedProducts.map((item, index) => item.id === "glob-lemn-fotografie-gravata" ? index : -1).filter(index => index >= 0);
+    const photoProductIndexes = checkedProducts.map((item, index) => productsById.get(item.id)?.photo_required ? index : -1).filter(index => index >= 0);
     if (!Array.isArray(ornamentUploads) || ornamentUploads.length > 3 || ornamentUploads.length !== photoProductIndexes.length) {
       return res.status(400).json({ ok: false, error: "Încarcă o fotografie pentru fiecare model de glob personalizat (maximum 3 fotografii diferite)." });
     }

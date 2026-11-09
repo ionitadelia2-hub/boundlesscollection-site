@@ -47,7 +47,7 @@ function initAddToCartButtons() {
 
         const id = btn.getAttribute("data-id");
         const photoUploadKey = btn.getAttribute("data-photo-upload-key") || "";
-        if (id === "glob-lemn-fotografie-gravata" && !photoUploadKey) {
+        if (["glob-lemn-fotografie-gravata", "glob-lemn-fotografie-animalut"].includes(id) && !photoUploadKey) {
             window.alert("Încarcă fotografia pentru glob înainte de adăugarea în coș.");
             return;
         }

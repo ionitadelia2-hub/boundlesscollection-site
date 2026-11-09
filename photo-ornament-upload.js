@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const PRODUCT = 'glob-lemn-fotografie-gravata';
+  const PRODUCTS = new Set(['glob-lemn-fotografie-gravata', 'glob-lemn-fotografie-animalut']);
   const TYPES = ['image/jpeg', 'image/png', 'image/webp'];
   function database() {
     return new Promise((resolve, reject) => {
@@ -48,7 +48,7 @@
     image.hidden = false;
   }
   function setupCheckout(cart) {
-    const entries = cart.map((item, productIndex) => ({ item, productIndex })).filter(({ item }) => item.id === PRODUCT);
+    const entries = cart.map((item, productIndex) => ({ item, productIndex })).filter(({ item }) => PRODUCTS.has(item.id));
     if (!entries.length) return async () => [];
     const box = document.createElement('section');
     box.className = 'form-group full-width';
