@@ -652,6 +652,7 @@ function pageTemplate(prod) {
   </form>` : ""}
   ${prod.id === WOODEN_TREE_ID ? `
   <form id="woodenTreeOptions" data-variants="${esc(JSON.stringify(expandWoodenTreePacks(prod)))}" style="display:block;text-align:left;margin:20px 0">
+    <p><strong>Realizat din lemn · Decupat laser · Vopsit în verde</strong></p>
     <label for="woodenTreePack" style="display:block;font-weight:600;margin-bottom:8px">Alege pachetul</label>
     <select id="woodenTreePack" style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
       ${expandWoodenTreePacks(prod).map(variant => `<option value="${variant.pack_count}">${variant.pack_count} ${variant.pack_count === 1 ? 'bucată' : 'bucăți'} — ${variant.price} lei</option>`).join('')}
