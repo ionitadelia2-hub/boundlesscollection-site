@@ -1,0 +1,35 @@
+#portraitPopup {
+  box-sizing: border-box;
+  width: min(680px, calc(100% - 28px));
+  max-height: calc(100dvh - 28px);
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid #edc9d8;
+  border-radius: 22px;
+  background: #fffafc;
+  color: #30242a;
+  box-shadow: 0 22px 80px #30242a40;
+  font-family: 'Poppins', sans-serif;
+}
+#portraitPopup::backdrop { background: #24171bb3; }
+#portraitPopup .portrait-popup-layout { display: grid; grid-template-columns: 1fr 1fr; }
+#portraitPopup .portrait-popup-photo { display: block; background: #f3e6dd; }
+#portraitPopup .portrait-popup-photo img { display: block; width: 100%; height: 100%; min-height: 320px; object-fit: cover; }
+#portraitPopup .portrait-popup-copy { align-self: center; padding: 38px 26px 28px; }
+#portraitPopup .portrait-popup-eyebrow { margin: 0 0 10px; color: #9c3865; font-size: .75rem; font-weight: 600; letter-spacing: .06em; }
+#portraitPopup h2 { margin: 0 0 14px; font-family: 'Playfair Display', Georgia, serif; font-size: 1.8rem; line-height: 1.2; }
+#portraitPopup p { line-height: 1.6; }
+#portraitPopup .portrait-popup-price { margin: 18px 0; font-size: 1.3rem; font-weight: 700; color: #a23366; }
+#portraitPopup .portrait-popup-price small { display: block; margin-top: 3px; font-size: .78rem; font-weight: 400; color: #69555f; }
+#portraitPopup .portrait-popup-link { display: block; padding: 13px 16px; border-radius: 11px; text-align: center; text-decoration: none; color: #fff; background: #a23366; font-weight: 600; }
+#portraitPopup .portrait-popup-close { position: absolute; top: 10px; right: 10px; width: 44px; height: 44px; padding: 0; border: 1px solid #ecd3df; border-radius: 50%; background: #fff; color: #49343e; font-size: 26px; line-height: 1; cursor: pointer; }
+#portraitPopup :focus-visible { outline: 3px solid #b97122; outline-offset: 3px; }
+@media (max-width: 540px) {
+  #portraitPopup .portrait-popup-layout { grid-template-columns: 1fr; }
+  #portraitPopup .portrait-popup-photo img { min-height: 0; height: min(34dvh, 270px); object-fit: contain; }
+  #portraitPopup .portrait-popup-copy { padding: 20px; }
+  #portraitPopup h2 { font-size: 1.55rem; }
+  #portraitPopup p { margin: 10px 0; font-size: .9rem; }
+  #portraitPopup .portrait-popup-price { margin: 12px 0; font-size: 1.25rem; }
+}
