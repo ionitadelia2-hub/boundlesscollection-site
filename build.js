@@ -1059,6 +1059,8 @@ function main() {
   // Modele ascunse temporar la cerere; descrierile și imaginile se păstrează.
   // Scoate ID-ul din această listă pentru a republica modelul.
   const hiddenProductIds = new Set([
+    // Model retras: detaliile saniei și renilor sunt prea subțiri pentru producție.
+    "glob-lemn-sanie-reni-nume",
     "glob-lemn-dinozaur-nume",
     "glob-lemn-om-zapada-nume",
     "glob-lemn-unicorn-nume",
