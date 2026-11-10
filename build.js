@@ -674,10 +674,14 @@ function pageTemplate(prod) {
   </form>` : ""}
   ${prod.id === FAMILY_STOCKING_ID ? `
   <form id="familyStockingOptions" data-variants="${esc(JSON.stringify(expandFamilyStockingVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
-    <p><strong>35 lei cu 5 inimioare · A șasea inimioară: +2 lei.</strong></p>
+    <p><strong>35 lei pentru 1–5 inimioare · A șasea inimioară: +2 lei.</strong></p>
     <label for="stockingHearts">Număr de inimioare</label>
     <select id="stockingHearts" style="display:block;width:100%;padding:12px;margin:8px 0 16px">
-      <option value="5">5 inimioare — 35 lei</option>
+      <option value="1">1 inimioară — 35 lei</option>
+      <option value="2">2 inimioare — 35 lei</option>
+      <option value="3">3 inimioare — 35 lei</option>
+      <option value="4">4 inimioare — 35 lei</option>
+      <option value="5" selected>5 inimioare — 35 lei</option>
       <option value="6">6 inimioare — 37 lei</option>
     </select>
     <label for="stockingFamily">Textul pentru partea de sus *</label>

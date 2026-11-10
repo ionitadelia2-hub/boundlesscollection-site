@@ -1,11 +1,11 @@
 const FAMILY_STOCKING_ID = "ornament-lemn-soseta-familiei";
 function expandFamilyStockingVariants(product) {
   if (product.id !== FAMILY_STOCKING_ID) return [product];
-  return [5, 6].map(count => ({
+  return [1, 2, 3, 4, 5, 6].map(count => ({
     ...product,
     id: product.id + "-inimi-" + count,
     title: product.title + " — " + count + " inimioare",
-    price: Number(product.price) + (count - 5) * 2,
+    price: Number(product.price) + Math.max(0, count - 5) * 2,
     heart_count: count,
     personalization_required: true,
     personalization_max_length: 300,

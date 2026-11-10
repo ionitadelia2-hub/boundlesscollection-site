@@ -6,7 +6,6 @@
   const family = document.getElementById('stockingFamily');
   const count = document.getElementById('stockingHearts');
   const variants = JSON.parse(form.dataset.variants);
-  const sixth = document.getElementById('stockingHeart6Group');
   const price = document.querySelector('.price-badge');
   function clean(input) {
     const value = input.value.trim().replace(/\s+/g, ' ');
@@ -17,10 +16,14 @@
     const n = Number(count.value);
     const variant = variants.find(v => v.heart_count === n);
     if (!variant) { button.disabled = true; return; }
-    const last = document.getElementById('stockingHeart6');
-    sixth.hidden = n === 5;
-    last.disabled = n === 5;
-    last.required = n === 6;
+    for (let i = 1; i <= 6; i++) {
+      const input = document.getElementById('stockingHeart' + i);
+      const active = i <= n;
+      document.getElementById('stockingHeart' + i + 'Group').hidden = !active;
+      input.disabled = !active;
+      input.required = active;
+      if (!active) input.setCustomValidity('');
+    }
     const names = Array.from({length:n}, (_, i) => clean(document.getElementById('stockingHeart' + (i+1))));
     const details = clean(family) + '; Inimioare: ' + names.join(', ');
     button.disabled = false;
