@@ -659,6 +659,18 @@ function pageTemplate(prod) {
     <input id="familyOrnamentName" type="text" required maxlength="40" autocomplete="off" placeholder="${!["glob-lemn-familie-turta-dulce", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-casatoriti", "glob-lemn-primul-craciun-casa-noua"].includes(prod.id) ? (prod.id === "glob-lemn-familie-fetita-nume" ? "Ex.: Maria" : prod.id === "glob-lemn-familie-funda-inima-nume" ? "Ex.: Sofia" : prod.id === "glob-lemn-fluture-floare-nume" ? "Ex.: Ema" : prod.id === "glob-lemn-familie-un-copil-nume" ? "Ex.: Filip" : prod.id === "glob-lemn-om-zapada-fulgi-nume" ? "Ex.: Vlad" : prod.id === "glob-lemn-pisica-cadou-nume" ? "Ex.: Luna" : prod.id === "glob-lemn-clopotei-fulgi-nume" ? "Ex.: Alina" : prod.id === "glob-lemn-fetita-fursecuri-nume" ? "Ex.: Ana" : prod.id === "glob-lemn-caciula-ajurat-nume" ? "Ex.: Maria" : prod.id === "glob-lemn-iepuras-morcov-nume" ? "Ex.: Ana" : prod.id === "glob-lemn-sanie-reni-nume" ? "Ex.: Eva" : prod.id === "glob-lemn-unicorn-nume" ? "Ex.: Emma" : prod.id === "glob-lemn-om-zapada-nume" ? "Ex.: Patrick" : prod.id === "glob-lemn-dinozaur-nume" ? "Ex.: Diego" : prod.id === "glob-lemn-primul-craciun-bebe" ? "Ex.: Filip" : prod.id === "glob-lemn-bradut-nume" ? "Ex.: Matteo" : "Ex.: Andrada") : (prod.id === "glob-lemn-primul-craciun-casa-noua" ? "Ex.: Familia Ionescu" : prod.id === "glob-lemn-primul-craciun-casatoriti" ? "Ex.: Familia Pavel" : prod.id === "glob-lemn-casuta-iarna-familie" ? "Ex.: Familia Toader" : "Ex.: Familia Paraschiv")}" aria-describedby="familyOrnamentHelp" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
     <small id="familyOrnamentHelp">${!["glob-lemn-familie-turta-dulce", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-casatoriti", "glob-lemn-primul-craciun-casa-noua"].includes(prod.id) ? "Personalizarea numelui este inclusă în prețul de " + prod.price + " lei/bucată. Scrie numele exact cum dorești să apară. Pentru alt nume, adaugă separat în coș." : "Personalizarea este inclusă în prețul de " + prod.price + " lei/bucată. Scrie textul exact cum dorești să apară, inclusiv cuvântul „Familia”. " + (prod.id === "glob-lemn-familie-turta-dulce" ? "Modelul include doi adulți și doi copii. " : "") + "Pentru alt nume, adaugă separat în coș."}</small>
   </form>` : ""}
+  ${prod.id === "glob-lemn-mickey-initiala-nume" ? `
+  <form id="mickeyOrnamentOptions" style="display:block;text-align:left;margin:20px 0">
+    <p><strong>35 lei/bucată · Inițiala și numele sunt incluse.</strong></p>
+    <label for="mickeyLetter" style="display:block;font-weight:600;margin-bottom:8px">Inițiala dorită *</label>
+    <select id="mickeyLetter" required style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
+      <option value="">Alege inițiala</option>
+      ${ORNAMENT_LETTERS.map(letter => `<option value="${letter}">${letter}</option>`).join('')}
+    </select>
+    <label for="mickeyName" style="display:block;font-weight:600;margin:16px 0 8px">Numele dorit *</label>
+    <input id="mickeyName" type="text" required maxlength="40" autocomplete="off" placeholder="Ex.: Vladimir" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
+    <small>Scrie numele exact cum dorești să apară. Pentru alt nume sau altă inițială, adaugă separat în coș.</small>
+  </form>` : ""}
   ${prod.id === WOODEN_TREE_ID ? `
   <form id="woodenTreeOptions" data-variants="${esc(JSON.stringify(expandWoodenTreePacks(prod)))}" style="display:block;text-align:left;margin:20px 0">
     <p><strong>Realizat din lemn · Decupat laser · Vopsit în verde</strong></p>
@@ -722,6 +734,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
             class="btn btn-primary add-to-cart" 
             type="button"
             ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe", "glob-lemn-primul-craciun-casatoriti", "glob-lemn-primul-craciun-casa-noua", "glob-lemn-dinozaur-nume", "glob-lemn-om-zapada-nume", "glob-lemn-unicorn-nume", "glob-lemn-sanie-reni-nume", "glob-lemn-iepuras-morcov-nume", "glob-lemn-caciula-ajurat-nume", "glob-lemn-fetita-fursecuri-nume", "glob-lemn-clopotei-fulgi-nume", "glob-lemn-pisica-cadou-nume", "glob-lemn-om-zapada-fulgi-nume", "glob-lemn-familie-un-copil-nume", "glob-lemn-fluture-floare-nume", "glob-lemn-familie-funda-inima-nume", "glob-lemn-familie-fetita-nume"].includes(prod.id) ? 'data-options-form="familyOrnamentOptions"' : ''}
+            ${prod.id === "glob-lemn-mickey-initiala-nume" ? 'data-options-form="mickeyOrnamentOptions"' : ''}
             ${prod.id === WOODEN_TREE_ID ? 'data-options-form="woodenTreeOptions"' : ''}
             ${prod.id === WOODEN_ORNAMENT_ID ? 'data-options-form="woodenOrnamentOptions" disabled' : ''}
             ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
@@ -756,6 +769,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
   </div></footer>
 
   <script src="/cart.js" defer></script>
+  ${prod.id === "glob-lemn-mickey-initiala-nume" ? '<script src="/mickey-ornament-options.js" defer></script>' : ''}
   ${prod.photo_required ? '<script src="/photo-ornament-upload.js" defer></script>' : ''}
   ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe", "glob-lemn-primul-craciun-casatoriti", "glob-lemn-primul-craciun-casa-noua", "glob-lemn-dinozaur-nume", "glob-lemn-om-zapada-nume", "glob-lemn-unicorn-nume", "glob-lemn-sanie-reni-nume", "glob-lemn-iepuras-morcov-nume", "glob-lemn-caciula-ajurat-nume", "glob-lemn-fetita-fursecuri-nume", "glob-lemn-clopotei-fulgi-nume", "glob-lemn-pisica-cadou-nume", "glob-lemn-om-zapada-fulgi-nume", "glob-lemn-familie-un-copil-nume", "glob-lemn-fluture-floare-nume", "glob-lemn-familie-funda-inima-nume", "glob-lemn-familie-fetita-nume"].includes(prod.id) ? '<script src="/family-ornament-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_TREE_ID ? '<script src="/wooden-tree-options.js" defer></script>' : ''}
@@ -1330,3 +1344,4 @@ console.log(
 }
 
 main();
+
