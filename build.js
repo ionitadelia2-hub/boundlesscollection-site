@@ -661,7 +661,7 @@ function pageTemplate(prod) {
   </form>` : ""}
   ${prod.id === "glob-lemn-mickey-initiala-nume" ? `
   <form id="mickeyOrnamentOptions" style="display:block;text-align:left;margin:20px 0">
-    <p><strong>35 lei/bucată · Inițiala și numele sunt incluse.</strong></p>
+    <p><strong>25 lei/bucată · Inițiala și numele sunt incluse.</strong></p>
     <label for="mickeyLetter" style="display:block;font-weight:600;margin-bottom:8px">Inițiala dorită *</label>
     <select id="mickeyLetter" required style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
       <option value="">Alege inițiala</option>
