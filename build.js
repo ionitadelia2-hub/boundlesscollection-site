@@ -9,6 +9,7 @@ const { CANDY_BOX_SIZES, CANDY_BOX_PERSONALIZATION_PRICE, expandCandyBoxVariants
 const { WOODEN_ORNAMENT_ID, ORNAMENT_LETTERS, expandWoodenOrnamentVariants } = require("./wooden-ornament-variants.js");
 const { WOODEN_TREE_ID, expandWoodenTreePacks } = require("./wooden-tree-packs.js");
 const christmasSeo = require("./content/christmas-seo.json");
+const { FAMILY_STOCKING_ID, expandFamilyStockingVariants } = require("./family-stocking-variants.js");
 
 const ROOT = __dirname;                         // rădăcina repo-ului
 const OUT  = path.join(ROOT, "public");         // directorul servit de hosting (web root)
@@ -671,6 +672,22 @@ function pageTemplate(prod) {
     <input id="mickeyName" type="text" required maxlength="40" autocomplete="off" placeholder="Ex.: Vladimir" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
     <small>Scrie numele exact cum dorești să apară. Pentru alt nume sau altă inițială, adaugă separat în coș.</small>
   </form>` : ""}
+  ${prod.id === FAMILY_STOCKING_ID ? `
+  <form id="familyStockingOptions" data-variants="${esc(JSON.stringify(expandFamilyStockingVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
+    <p><strong>35 lei cu 5 inimioare · A șasea inimioară: +2 lei.</strong></p>
+    <label for="stockingHearts">Număr de inimioare</label>
+    <select id="stockingHearts" style="display:block;width:100%;padding:12px;margin:8px 0 16px">
+      <option value="5">5 inimioare — 35 lei</option>
+      <option value="6">6 inimioare — 37 lei</option>
+    </select>
+    <label for="stockingFamily">Textul pentru partea de sus *</label>
+    <input id="stockingFamily" required maxlength="60" type="text" placeholder="Ex.: Familia Ioniță" style="box-sizing:border-box;display:block;width:100%;padding:12px;margin:8px 0 16px">
+    ${Array.from({length:6}, (_,i) => `<div id="stockingHeart${i+1}Group"${i===5?' hidden':''} style="margin:12px 0">
+      <label for="stockingHeart${i+1}">Numele pentru inimioara ${i+1} *</label>
+      <input id="stockingHeart${i+1}" type="text" maxlength="30" ${i===5?'disabled':'required'} style="box-sizing:border-box;display:block;width:100%;padding:12px;margin-top:8px">
+    </div>`).join('')}
+    <small>Scrie numele exact cum dorești să fie gravate. Fotografia prezintă varianta cu 6 inimioare, la 37 lei. Pentru altă familie, adaugă separat în coș.</small>
+  </form>` : ""}
   ${prod.id === WOODEN_TREE_ID ? `
   <form id="woodenTreeOptions" data-variants="${esc(JSON.stringify(expandWoodenTreePacks(prod)))}" style="display:block;text-align:left;margin:20px 0">
     <p><strong>Realizat din lemn · Decupat laser · Vopsit în verde</strong></p>
@@ -735,6 +752,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
             type="button"
             ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe", "glob-lemn-primul-craciun-casatoriti", "glob-lemn-primul-craciun-casa-noua", "glob-lemn-dinozaur-nume", "glob-lemn-om-zapada-nume", "glob-lemn-unicorn-nume", "glob-lemn-sanie-reni-nume", "glob-lemn-iepuras-morcov-nume", "glob-lemn-caciula-ajurat-nume", "glob-lemn-fetita-fursecuri-nume", "glob-lemn-clopotei-fulgi-nume", "glob-lemn-pisica-cadou-nume", "glob-lemn-om-zapada-fulgi-nume", "glob-lemn-familie-un-copil-nume", "glob-lemn-fluture-floare-nume", "glob-lemn-familie-funda-inima-nume", "glob-lemn-familie-fetita-nume"].includes(prod.id) ? 'data-options-form="familyOrnamentOptions"' : ''}
             ${prod.id === "glob-lemn-mickey-initiala-nume" ? 'data-options-form="mickeyOrnamentOptions"' : ''}
+            ${prod.id === FAMILY_STOCKING_ID ? 'data-options-form="familyStockingOptions"' : ''}
             ${prod.id === WOODEN_TREE_ID ? 'data-options-form="woodenTreeOptions"' : ''}
             ${prod.id === WOODEN_ORNAMENT_ID ? 'data-options-form="woodenOrnamentOptions" disabled' : ''}
             ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
@@ -769,6 +787,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
   </div></footer>
 
   <script src="/cart.js" defer></script>
+  ${prod.id === FAMILY_STOCKING_ID ? '<script src="/family-stocking-options.js" defer></script>' : ''}
   ${prod.id === "glob-lemn-mickey-initiala-nume" ? '<script src="/mickey-ornament-options.js" defer></script>' : ''}
   ${prod.photo_required ? '<script src="/photo-ornament-upload.js" defer></script>' : ''}
   ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe", "glob-lemn-primul-craciun-casatoriti", "glob-lemn-primul-craciun-casa-noua", "glob-lemn-dinozaur-nume", "glob-lemn-om-zapada-nume", "glob-lemn-unicorn-nume", "glob-lemn-sanie-reni-nume", "glob-lemn-iepuras-morcov-nume", "glob-lemn-caciula-ajurat-nume", "glob-lemn-fetita-fursecuri-nume", "glob-lemn-clopotei-fulgi-nume", "glob-lemn-pisica-cadou-nume", "glob-lemn-om-zapada-fulgi-nume", "glob-lemn-familie-un-copil-nume", "glob-lemn-fluture-floare-nume", "glob-lemn-familie-funda-inima-nume", "glob-lemn-familie-fetita-nume"].includes(prod.id) ? '<script src="/family-ornament-options.js" defer></script>' : ''}

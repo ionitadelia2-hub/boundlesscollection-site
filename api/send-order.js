@@ -3,6 +3,7 @@ import envelopePaperOptions from "../envelope-paper-options.js";
 import woodenOrnamentVariants from "../wooden-ornament-variants.js";
 import candyBoxVariants from "../candy-box-variants.js";
 import woodenTreePacks from "../wooden-tree-packs.js";
+import familyStockingVariants from "../family-stocking-variants.js";
 
 const catalog = JSON.parse(
   readFileSync(
@@ -12,7 +13,7 @@ const catalog = JSON.parse(
 );
 
 const productsById = new Map(
-  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).flatMap(candyBoxVariants.expandCandyBoxVariants).flatMap(woodenOrnamentVariants.expandWoodenOrnamentVariants).flatMap(woodenTreePacks.expandWoodenTreePacks).map(product => [product.id, product])
+  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).flatMap(candyBoxVariants.expandCandyBoxVariants).flatMap(woodenOrnamentVariants.expandWoodenOrnamentVariants).flatMap(woodenTreePacks.expandWoodenTreePacks).flatMap(familyStockingVariants.expandFamilyStockingVariants).map(product => [product.id, product])
 );
 
 const caricatureImagesByTheme = new Map([
@@ -83,8 +84,8 @@ for (const [orderProductIndex, item] of products.entries()) {
   const productName = product?.personalization_required && typeof item?.personalization === "string"
     ? item.personalization.trim().replace(/\s+/g, " ")
     : "";
-  if (product?.personalization_required && (!productName || productName.length > 40 || /[\u0000-\u001f\u007f]/.test(productName))) {
-    return res.status(400).json({ ok: false, error: "Scrie un text valid pentru fiecare produs personalizat (maximum 40 de caractere)." });
+  if (product?.personalization_required && (!productName || productName.length > (product.personalization_max_length || 40) || /[\u0000-\u001f\u007f]/.test(productName))) {
+    return res.status(400).json({ ok: false, error: "Scrie un text valid pentru fiecare produs personalizat (maximum " + (product.personalization_max_length || 40) + " de caractere)." });
   }
   const uniqueKey = JSON.stringify([product?.id, theme, productName, product?.photo_required ? orderProductIndex : null]);
 
