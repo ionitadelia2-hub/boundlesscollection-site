@@ -7,7 +7,7 @@ function expandWoodenOrnamentVariants(product) {
     ...product,
     id: product.id + '-litera-' + letter.codePointAt(0).toString(16) + (personalized ? '-personalizat' : ''),
     title: product.title + ' — Litera: ' + letter + (personalized ? '' : ' — Fără scris jos'),
-    price: 35 + (personalized ? 2 : 0),
+    price: Number(product.price) + (personalized ? 2 : 0),
     ornament_letter: letter,
     personalization_required: personalized,
     personalization_label: 'Text jos'

@@ -682,7 +682,7 @@ function pageTemplate(prod) {
   </form>` : ""}
   ${prod.id === WOODEN_ORNAMENT_ID ? `
   <form id="woodenOrnamentOptions" data-variants="${esc(JSON.stringify(expandWoodenOrnamentVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
-    <p><strong>Personalizat cu inițiala dorită — inclusă în preț.</strong><br>Text suplimentar jos: +2 lei/bucată.</p><p>Model dublu din lemn · 24,187 cm lățime × 10,013 cm înălțime.<br>Panglică de satin inclusă.</p>
+    <p><strong>Personalizat cu inițiala dorită — inclusă în preț.</strong><br>Text suplimentar jos: +2 lei/bucată.</p><p>Model dublu din lemn · 24 × 10 cm (lățime × înălțime).<br>Panglică de satin inclusă.</p>
     <label for="ornamentLetter" style="display:block;font-weight:600;margin-bottom:8px">Alege litera *</label>
     <select id="ornamentLetter" required style="width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
       <option value="">Alege litera</option>
@@ -695,7 +695,7 @@ function pageTemplate(prod) {
       <label for="ornamentText" style="display:block;font-weight:600;margin-bottom:8px">Textul dorit în partea de jos *</label>
       <input id="ornamentText" type="text" maxlength="40" disabled autocomplete="off" placeholder="Ex.: Eva" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px">
     </div>
-    <small>Litera este inclusă în prețul de 35 lei. Cu scris jos: 37 lei/buc. Pentru altă literă sau alt text, adaugă separat în coș. Imaginea prezintă un exemplu cu scris jos.</small>
+    <small>Litera este inclusă în prețul de 25 lei. Cu scris jos: 27 lei/buc. Pentru altă literă sau alt text, adaugă separat în coș. Imaginea prezintă un exemplu cu scris jos.</small>
   </form>` : ""}
 ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value="1" min="1">' : `<div class="product-quantity">
   <span class="product-quantity-label">Cantitate</span>
