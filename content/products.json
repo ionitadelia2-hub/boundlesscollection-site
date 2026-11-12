@@ -18651,5 +18651,31 @@
     "personalization_required": true,
     "personalization_label": "Nume",
     "mpn": ""
+  },
+  {
+    "id": "ornament-stea-mos-craciun-reni",
+    "title": "Ornament stea din lemn cu Moș Crăciun și reni",
+    "price": 15,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Ornament de Crăciun din lemn, în formă de stea, gravat cu Moș Crăciun în sanie și trei reni veseli. Brazii, cadourile și steluțele completează scena de sărbătoare. Potrivit pentru decorarea bradului sau pentru un mic cadou de Crăciun. Caracteristici: Material: lemn | Formă: stea | Model gravat cu Moș Crăciun, sanie și reni | Fără personalizare | Preț: 15 lei/bucată | Se vinde individual.",
+    "images": [
+      "/images/craciun/ornament-stea-mos-craciun-reni.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn generaliste",
+      "ornament stea",
+      "mos craciun",
+      "reni",
+      "decoratiuni brad"
+    ],
+    "slug": "ornament-stea-din-lemn-cu-mos-craciun-si-reni-ornament",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
