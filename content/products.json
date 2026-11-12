@@ -18623,5 +18623,33 @@
     "personalization_required": true,
     "personalization_label": "Nume",
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-fundita-nume",
+    "title": "Glob din lemn personalizat cu nume și fundiță",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun din lemn, cu fundiță aplicată în al doilea strat și numele dorit gravat cu scris caligrafic. Un ornament delicat pentru brad sau un cadou personalizat de sărbători. Caracteristici: Material: lemn | Model în două straturi, cu fundiță aplicată | Personalizare cu un nume inclusă | Orificiu pentru agățare | Preț: 25 lei/bucată | Fotografia prezintă două exemple, Amza și Alina; prețul este pentru un singur glob | Pentru nume diferite, adaugă produsele separat în coș | Produs realizat la comandă.",
+    "images": [
+      "/images/craciun/glob-lemn-fundita-nume.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "nume",
+      "fundita",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-cu-nume-si-fundita-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Nume",
+    "mpn": ""
   }
 ]
