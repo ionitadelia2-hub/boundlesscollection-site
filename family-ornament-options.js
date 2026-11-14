@@ -5,11 +5,12 @@
   const button = document.querySelector('[data-options-form="familyOrnamentOptions"]');
   if (!form || !name || !button) return;
   const title = button.dataset.title;
+  const color = document.getElementById('ornamentColor');
   function update() {
     const value = name.value.trim().replace(/\s+/g, ' ');
     name.setCustomValidity(!value ? 'Scrie textul dorit pe glob.' : /[\u0000-\u001f\u007f]/.test(value) ? 'Scrie un text valid.' : '');
-    button.dataset.personalization = value;
-    button.dataset.title = title + (value ? ' — ' + (form.dataset.personalizationLabel || 'Text familie') + ': ' + value : '');
+    button.dataset.personalization = value + (color && value ? ' | Culoare: ' + color.value : '');
+    button.dataset.title = title + (color ? ' — Culoare: ' + color.value : '') + (value ? ' — ' + (form.dataset.personalizationLabel || 'Text familie') + ': ' + value : '');
   }
   form.addEventListener('input', update);
   form.addEventListener('change', update);

@@ -18802,5 +18802,35 @@
     "min_quantity": 1,
     "mpn": "",
     "slug": "glob-din-lemn-gravat-brad-si-fotoliu-glob-lem"
+  },
+  {
+    "id": "glob-lemn-nume-color-mos-ren",
+    "title": "Glob din lemn personalizat cu nume colorat, Moș Crăciun și ren",
+    "price": 10,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Glob de Crăciun personalizat cu numele dorit, cu Moș Crăciun, ren, brăduț și cadouri în nuanțe pastel. Scrisul are un efect vizual de tricotaj, imprimat color pe suport din lemn decupat după contur. Alege varianta roz sau albastră și scrie numele exact cum dorești să apară. Caracteristici: Dimensiune aproximativă: 7 × 4 cm (lățime × înălțime), variabilă în funcție de nume | Suport din lemn, decor imprimat color | Variante: roz sau albastru | Personalizare cu un nume inclusă | Orificiu pentru agățare | Preț: 10 lei/bucată | Fotografia prezintă exemple; prețul este pentru un singur glob | Pentru nume sau culori diferite, adaugă separat în coș | Produs realizat la comandă.",
+    "images": [
+      "/images/craciun/glob-lemn-nume-color-mos-ren.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "nume",
+      "mos craciun",
+      "ren",
+      "roz",
+      "albastru"
+    ],
+    "slug": "glob-din-lemn-personalizat-cu-nume-colorat-mos-craciun-si-ren-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Nume și culoare",
+    "mpn": ""
   }
 ]
