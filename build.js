@@ -1,3 +1,4 @@
+const { NICOLAE_IDS, expandNicolaeVariants } = require("./nicolae-variants.js");
 // build.js — generează site-ul static în /public din content/products.csv
 // Node >= 18, fără dependențe externe
 
@@ -638,6 +639,12 @@ function pageTemplate(prod) {
       ${prod.paper_options.map(option => `<option value="/p/${esc(option.slug)}.html"${option.weight === prod.paper_weight ? " selected" : ""}>${esc(option.label)} — ${option.price.toFixed(2).replace(".", ",")} lei/buc.</option>`).join("")}
     </select>
   </div>` : ""}
+  ${NICOLAE_IDS.includes(prod.id) ? `
+  <form id="nicolaeOptions" data-variants="${esc(JSON.stringify(expandNicolaeVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
+    <label style="display:flex;align-items:center;gap:10px"><input type="checkbox" id="nicolaePersonalize" style="appearance:auto;width:18px;height:18px;flex:0 0 18px"> Personalizare cu nume (+5 lei / buc.)</label>
+    <div id="nicolaeNameGroup" hidden style="margin-top:14px"><label for="nicolaeName" style="display:block;font-weight:600;margin-bottom:8px">Numele dorit *</label><input id="nicolaeName" type="text" maxlength="40" disabled autocomplete="off" placeholder="Ex.: Matei" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px"><small>Scrie numele exact cum dorești să apară. Pentru alt nume, adaugă separat în coș.</small></div>
+    <small>Fără nume: ${prod.price} lei. Cu nume: ${Number(prod.price) + 5} lei.</small>
+  </form>` : ""}
   ${prod.id === "cutiuta-dulciuri-om-zapada" ? `
   <form id="candyBoxOptions" class="candy-box-options" data-variants="${esc(JSON.stringify(expandCandyBoxVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
     <p style="text-align:left"><strong>Cutiuță goală, fără dulciuri.</strong> Prețul este pentru o bucată.</p>
@@ -768,6 +775,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
             data-image="${esc(firstImg)}"
             data-url="${esc(url)}"
             data-min-quantity="${prod.min_quantity || 1}"
+            ${NICOLAE_IDS.includes(prod.id) ? 'data-options-form="nicolaeOptions"' : ''}
             ${prod.id === "cutiuta-dulciuri-om-zapada" ? 'data-options-form="candyBoxOptions"' : ''}
             style="background: #111; color: #fff; border: none; padding: 12px 25px; cursor: pointer; font-weight: 600; border-radius: 4px; transition: background 0.2s; font-family: 'Poppins', sans-serif;"
           >
@@ -798,6 +806,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
   ${["glob-lemn-familie-turta-dulce", "glob-lemn-coronita-funda-nume", "glob-lemn-bradut-nume", "glob-lemn-casuta-iarna-familie", "glob-lemn-primul-craciun-bebe", "glob-lemn-primul-craciun-casatoriti", "glob-lemn-primul-craciun-casa-noua", "glob-lemn-dinozaur-nume", "glob-lemn-om-zapada-nume", "glob-lemn-unicorn-nume", "glob-lemn-sanie-reni-nume", "glob-lemn-iepuras-morcov-nume", "glob-lemn-caciula-ajurat-nume", "glob-lemn-fetita-fursecuri-nume", "glob-lemn-clopotei-fulgi-nume", "glob-lemn-pisica-cadou-nume", "glob-lemn-om-zapada-fulgi-nume", "glob-lemn-familie-un-copil-nume", "glob-lemn-fluture-floare-nume", "glob-lemn-familie-funda-inima-nume", "glob-lemn-familie-fetita-nume", "glob-lemn-fundita-nume", "glob-lemn-nume-color-mos-ren"].includes(prod.id) ? '<script src="/family-ornament-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_TREE_ID ? '<script src="/wooden-tree-options.js" defer></script>' : ''}
   ${prod.id === WOODEN_ORNAMENT_ID ? '<script src="/wooden-ornament-options.js" defer></script>' : ''}
+  ${NICOLAE_IDS.includes(prod.id) ? '<script src="/nicolae-options.js" defer></script>' : ''}
   ${prod.id === "cutiuta-dulciuri-om-zapada" ? '<script src="/candy-box-options.js" defer></script>' : ''}
 <script>
     document.getElementById('envelopePaperWeight')?.addEventListener('change', function () {

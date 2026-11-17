@@ -18832,5 +18832,77 @@
     "personalization_required": true,
     "personalization_label": "Nume și culoare",
     "mpn": ""
+  },
+  {
+    "id": "cutie-mos-nicolae-dulciuri",
+    "title": "Cutie din lemn pentru dulciuri de Moș Nicolae",
+    "price": 25,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Cutie din lemn cu Moșul gravat, mesaj vesel și fulg decupat lateral, pregătită pentru a fi umplută cu dulciuri de Moș Nicolae. Se livrează goală, fără dulciuri și fără nuielușă. Caracteristici: Material: lemn | Preț fără personalizare: 25 lei | Personalizare opțională cu nume: +5 lei (total 30 lei) | Bifează personalizarea și scrie numele dorit | Pentru nume diferite, adaugă separat în coș | Produs realizat la comandă.",
+    "images": [
+      "/images/craciun/cutie-mos-nicolae-dulciuri.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "mos nicolae",
+      "cadou mos nicolae",
+      "cutie dulciuri",
+      "nuielusa",
+      "personalizare nume"
+    ],
+    "slug": "cutie-din-lemn-pentru-dulciuri-de-mos-nicolae-cutie-mo",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations",
+    "material": "lemn",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "nuielusa-mos-nicolae-mesaj",
+    "title": "Nuielușă decorativă de Moș Nicolae cu mesaj",
+    "price": 10,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Nuielușă decorativă din lemn, cu Moșul imprimat color, bastonaș în dungi roșii și albe și un mesaj de sărbătoare: „Ți-am adus ceva dulce, iar nuielușa-i doar de glumă! Să fii vesel și cuminte, până vin la anul iar!” Un accesoriu simbolic pentru cadourile de Moș Nicolae. Se vinde separat, fără cutie și fără dulciuri. Caracteristici: Material: lemn | Preț fără personalizare: 10 lei | Personalizare opțională cu nume: +5 lei (total 15 lei) | Bifează personalizarea și scrie numele dorit | Pentru nume diferite, adaugă separat în coș | Produs realizat la comandă.",
+    "images": [
+      "/images/craciun/nuielusa-mos-nicolae-mesaj.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "mos nicolae",
+      "cadou mos nicolae",
+      "cutie dulciuri",
+      "nuielusa",
+      "personalizare nume"
+    ],
+    "slug": "nuielusa-decorativa-de-mos-nicolae-cu-mesaj-nuielusa",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations",
+    "material": "lemn",
+    "min_quantity": 1,
+    "mpn": ""
+  },
+  {
+    "id": "set-mos-nicolae-cutie-nuielusa",
+    "title": "Set de Moș Nicolae – cutie din lemn și nuielușă",
+    "price": 35,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Set de Moș Nicolae format dintr-o cutie din lemn gravată cu Moșul și mesaj vesel și o nuielușă decorativă imprimată color. Cutia poate fi umplută cu dulciurile preferate pentru un cadou de sărbătoare. Setul conține cutia goală și nuielușa; dulciurile și decorul fotografiei nu sunt incluse. Caracteristici: Material: lemn | Preț fără personalizare: 35 lei | Personalizare opțională cu nume: +5 lei (total 40 lei) | Bifează personalizarea și scrie numele dorit | Pentru nume diferite, adaugă separat în coș | Produs realizat la comandă.",
+    "images": [
+      "/images/craciun/set-mos-nicolae-cutie-nuielusa.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "mos nicolae",
+      "cadou mos nicolae",
+      "cutie dulciuri",
+      "nuielusa",
+      "personalizare nume"
+    ],
+    "slug": "set-de-mos-nicolae-cutie-din-lemn-si-nuielusa-set-mos-",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations",
+    "material": "lemn",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]

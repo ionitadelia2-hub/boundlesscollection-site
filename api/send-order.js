@@ -1,3 +1,4 @@
+import nicolaeVariants from "../nicolae-variants.js";
 import { readFileSync } from "node:fs";
 import envelopePaperOptions from "../envelope-paper-options.js";
 import woodenOrnamentVariants from "../wooden-ornament-variants.js";
@@ -13,7 +14,7 @@ const catalog = JSON.parse(
 );
 
 const productsById = new Map(
-  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).flatMap(candyBoxVariants.expandCandyBoxVariants).flatMap(woodenOrnamentVariants.expandWoodenOrnamentVariants).flatMap(woodenTreePacks.expandWoodenTreePacks).flatMap(familyStockingVariants.expandFamilyStockingVariants).map(product => [product.id, product])
+  catalog.flatMap(envelopePaperOptions.expandEnvelopeVariants).flatMap(candyBoxVariants.expandCandyBoxVariants).flatMap(nicolaeVariants.expandNicolaeVariants).flatMap(woodenOrnamentVariants.expandWoodenOrnamentVariants).flatMap(woodenTreePacks.expandWoodenTreePacks).flatMap(familyStockingVariants.expandFamilyStockingVariants).map(product => [product.id, product])
 );
 
 const caricatureImagesByTheme = new Map([
