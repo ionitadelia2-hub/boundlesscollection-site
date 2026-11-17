@@ -230,12 +230,21 @@ function christmasProductType(p) {
   return '';
 }
 
+function matchesChristmasFilter(p, filter) {
+  if (!filter || filter === 'toate') return true;
+  if (filter === 'mos nicolae') {
+    return (p.tagsKey || (p.tags || []).map(key)).includes('mos nicolae') ||
+      key(p.title || '').includes('mos nicolae');
+  }
+  return christmasProductType(p) === filter;
+}
+
 function updateChristmasFilters() {
   if (PAGE_FILTER !== 'craciun') return;
   const collection = PRODUCTS.filter(p => matchesCategoryGroup(p.categoryKey, PAGE_FILTER, p.tagsKey));
   $$('#christmas-filters [data-filter]').forEach(btn => {
     const filter = key(btn.dataset.filter);
-    btn.hidden = filter !== 'toate' && !collection.some(p => christmasProductType(p) === filter);
+    btn.hidden = filter !== 'toate' && !collection.some(p => matchesChristmasFilter(p, filter));
   });
 }
 
@@ -598,7 +607,7 @@ if (PAGE_FILTER === 'stickere oglinda') {
     hitCatToggle = christmasProductType(p) === 'globuri lemn' &&
       (activeFilter === 'toate' || (activeFilter === 'personalizate' ? personalized : !personalized));
   } else {
-    hitCatToggle = activeFilter === 'toate' || christmasProductType(p) === activeFilter;
+    hitCatToggle = matchesChristmasFilter(p, activeFilter);
   }
 
 } else if (
