@@ -18904,5 +18904,60 @@
     "material": "lemn",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "tavita-lemn-tura-noapte-mos-craciun",
+    "title": "Tăviță din lemn – Tura de noapte a lui Moș Crăciun",
+    "price": 50,
+    "category": "craciun",
+    "desc": "Transformă seara de Ajun într-un ritual de familie cu tăvița din lemn „Tura de noapte a lui Moș Crăciun”. Designul gravat în limba română prezintă un sătuc de iarnă, sania Moșului cu reni, indicatorul „Polul Nord”, spiriduși și oameni de zăpadă. Cele trei zone ilustrate sunt marcate cu mesajele „Pauză de fursecuri”, „Porția de lapte” și „Gustarea lui Rudolf”, iar textul „Mulțumim pentru vizită!” completează decorul. Caracteristici: Preț: 50 lei/bucată | Material: lemn | Placă subțire și plată, fără margini ridicate | Tehnică: gravare laser | Model: Tura de noapte a lui Moș Crăciun | Texte în limba română | Formă dreptunghiulară cu colțuri drepte | Culoare: lemn natur | Personalizare: nu, model standard | Număr bucăți: 1 | Utilizare: decor pentru seara de Ajun, cadou de Crăciun | Realizat în atelierul Boundless Collection | Se vinde doar tăvița; alimentele, paharul și decorul fotografic nu sunt incluse. Pentru servire, așază bunătățile pe farfurioare sau șervețele și laptele într-un pahar.",
+    "images": [
+      "/images/craciun/tavita-tura-noapte-dreptunghiulara.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "tavite mos craciun",
+      "tavita lemn",
+      "tura de noapte",
+      "mos craciun",
+      "rudolf",
+      "fursecuri",
+      "lapte",
+      "ajun",
+      "cadou copii"
+    ],
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations",
+    "min_quantity": 1,
+    "product_type": "craciun",
+    "slug": "tavita-din-lemn-tura-de-noapte-a-lui-mos-craciun-tavita-l",
+    "material": "",
+    "mpn": ""
+  },
+  {
+    "id": "tavita-lemn-mos-craciun-ren-fursecuri",
+    "title": "Tăviță din lemn pentru Moș Crăciun – Fursecuri și morcovi pentru reni",
+    "price": 50,
+    "category": "craciun",
+    "desc": "Pregătește bunătățile pentru seara de Ajun pe o tăviță decorativă din lemn, gravată cu Moș Crăciun și un ren vesel. Designul în limba română include un cerc pentru lapte, un fursec decorativ și un morcov mare, alături de brăduți, steluțe, fulgi și inimioare. Mesajele „Lapte pentru Moș Crăciun”, „Fursecuri pentru Moș Crăciun” și „Morcovi pentru reni” marchează locurile pentru surprizele lăsate în așteptarea Moșului. Caracteristici: Preț: 50 lei/bucată | Material: lemn | Placă subțire și plată, fără margini ridicate | Tehnică: gravare laser | Model: Moș Crăciun, ren, fursec și morcov | Texte în limba română | Formă dreptunghiulară cu colțuri drepte | Culoare: lemn natur | Personalizare: nu, model standard | Număr bucăți: 1 | Utilizare: decor pentru seara de Ajun, cadou de Crăciun | Realizat în atelierul Boundless Collection | Se vinde doar tăvița; alimentele, paharul și decorul fotografic nu sunt incluse. Pentru servire, așază bunătățile pe farfurioare sau șervețele și laptele într-un pahar.",
+    "images": [
+      "/images/craciun/tavita-mos-ren-chenar-dreptunghiulara.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "tavite mos craciun",
+      "tavita lemn",
+      "mos craciun",
+      "ren",
+      "fursecuri",
+      "morcovi",
+      "ajun",
+      "cadou copii"
+    ],
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations",
+    "min_quantity": 1,
+    "product_type": "craciun",
+    "slug": "tavita-din-lemn-pentru-mos-craciun-fursecuri-si-morcovi-pentru-reni-tavita-l",
+    "material": "",
+    "mpn": ""
   }
 ]
