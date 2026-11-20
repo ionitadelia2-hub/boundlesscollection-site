@@ -19011,5 +19011,34 @@
     "material": "",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "glob-lemn-nume-vertical-turta-dulce",
+    "title": "Glob din lemn personalizat cu nume vertical – turtă dulce",
+    "price": 10,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Ornament de Crăciun din lemn, decupat după conturul numelui, cu litere așezate vertical și decor imprimat color în stil turtă dulce. Detaliile de glazură albă și accentele roșii și verzi aduc un aer festiv bradului. Personalizarea cu numele dorit este inclusă în preț. Caracteristici: Preț: 10 lei/bucată | Material: lemn cu decor imprimat color | Nume dispus vertical | Personalizare cu un nume inclusă | Dimensiune orientativă pentru exemplul DELIA: 13,1 × 2,83 cm (înălțime × lățime); dimensiunile variază în funcție de nume | Orificiu pentru agățare | Fotografia prezintă un exemplu cu numele DELIA | Pentru nume diferite, adaugă produsele separat în coș | Se vinde individual, fără decorul fotografic | Produs realizat la comandă. Produs decorativ pentru brad. A se ține departe de flăcări deschise și de surse de căldură.",
+    "images": [
+      "/images/craciun/glob-lemn-nume-vertical-turta-dulce.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "globuri lemn",
+      "globuri din lemn",
+      "globuri lemn personalizate",
+      "glob personalizat",
+      "nume",
+      "nume vertical",
+      "turta dulce",
+      "decoratiuni brad"
+    ],
+    "slug": "glob-din-lemn-personalizat-cu-nume-vertical-turta-dulce-glob-lem",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations > Holiday Ornaments",
+    "material": "",
+    "min_quantity": 1,
+    "personalization_required": true,
+    "personalization_label": "Nume",
+    "mpn": ""
   }
 ]
