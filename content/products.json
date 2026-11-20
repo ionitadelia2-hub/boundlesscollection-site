@@ -19040,5 +19040,28 @@
     "personalization_required": true,
     "personalization_label": "Nume",
     "mpn": ""
+  },
+  {
+    "id": "nuielusa-om-zapada-mesaj",
+    "title": "Nuielușă decorativă cu om de zăpadă și mesaj",
+    "price": 10,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Nuielușă decorativă din lemn, cu om de zăpadă imprimat color, căciuliță roșie și bastonaș în dungi roșii și albe. Mesajul vesel de pe pergament spune: „Dulciuri pentru bucurie, o nuielușă de comedie! Să zâmbești și să fii bun, că te vede Moș Crăciun!” Un accesoriu simbolic pentru cadourile de Moș Nicolae și de Crăciun. Caracteristici: Material: lemn | Decor imprimat color | Model: om de zăpadă | Preț: 10 lei/bucată | Model standard, fără personalizare | Se vinde individual, fără cutie și fără dulciuri | Decorul fotografiei nu este inclus.",
+    "images": [
+      "/images/craciun/nuielusa-om-zapada-mesaj.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "mos nicolae",
+      "nuielusa",
+      "om de zapada",
+      "cadou mos nicolae"
+    ],
+    "slug": "nuielusa-decorativa-cu-om-de-zapada-si-mesaj-nuielusa",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations",
+    "material": "lemn",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
