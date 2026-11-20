@@ -45,6 +45,9 @@ function initAddToCartButtons() {
             ? document.getElementById("stickerName").value.trim().replace(/\s+/g, " ")
             : btn.getAttribute("data-personalization") || "";
 
+        const scentSelect = document.getElementById("freshenerScent");
+        const scent = optionsForm?.id === "freshenerOptions" ? scentSelect.value : "";
+        const scentLabel = scent ? scentSelect.selectedOptions[0].textContent : "";
         const id = btn.getAttribute("data-id");
         const photoUploadKey = btn.getAttribute("data-photo-upload-key") || "";
         if (["glob-lemn-fotografie-gravata", "glob-lemn-fotografie-animalut"].includes(id) && !photoUploadKey) {
@@ -74,7 +77,7 @@ function initAddToCartButtons() {
         const baseTitle = btn.getAttribute("data-title") || "";
         const title = isCaricature && !baseTitle.includes(chosenTheme)
             ? baseTitle + " — " + chosenTheme
-            : baseTitle + (isNameSticker ? " — Nume: " + personalization : "");
+            : baseTitle + (isNameSticker ? " — Nume: " + personalization : "") + (scentLabel ? " — Aromă: " + scentLabel : "");
         const price = parseFloat(btn.getAttribute("data-price"));
         const rawImage = isCaricature ? themeImages.get(chosenTheme) : btn.getAttribute("data-image");
 
@@ -105,12 +108,12 @@ const image = rawImage
         }
 
         let cart = getCart();
-        const existingIndex = cart.findIndex(item => item.id === id && (item.theme || "") === chosenTheme && (item.personalization || "") === personalization && (item.photoUploadKey || "") === photoUploadKey);
+        const existingIndex = cart.findIndex(item => item.id === id && (item.theme || "") === chosenTheme && (item.personalization || "") === personalization && (item.photoUploadKey || "") === photoUploadKey && (item.scent || "") === scent);
 
         if (existingIndex > -1) {
 
             // Actualizăm datele variantei dacă produsul exista deja în coș.
-            Object.assign(cart[existingIndex], { title, price, image, url, personalization, photoUploadKey });
+            Object.assign(cart[existingIndex], { title, price, image, url, personalization, photoUploadKey, scent });
 
             // Păstrăm cantitatea minimă reală a produsului
             cart[existingIndex].minQuantity = minQuantity;
@@ -129,6 +132,7 @@ const image = rawImage
             cart.push({
                 id,
                 theme: chosenTheme,
+                scent,
                 personalization,
                 photoUploadKey,
                 title,

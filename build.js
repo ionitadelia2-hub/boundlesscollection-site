@@ -1,3 +1,4 @@
+const { FRAGRANCES, isFreshener } = require("./freshener-scents.js");
 const { NICOLAE_IDS, expandNicolaeVariants } = require("./nicolae-variants.js");
 // build.js — generează site-ul static în /public din content/products.csv
 // Node >= 18, fără dependențe externe
@@ -639,6 +640,15 @@ function pageTemplate(prod) {
       ${prod.paper_options.map(option => `<option value="/p/${esc(option.slug)}.html"${option.weight === prod.paper_weight ? " selected" : ""}>${esc(option.label)} — ${option.price.toFixed(2).replace(".", ",")} lei/buc.</option>`).join("")}
     </select>
   </div>` : ""}
+  ${isFreshener(prod) ? `
+  <form id="freshenerOptions" style="display:block;text-align:left;margin:20px 0">
+    <label for="freshenerScent" style="display:block;font-weight:600;margin-bottom:8px">Alege aroma *</label>
+    <select id="freshenerScent" name="scent" required aria-describedby="freshenerScentHelp" style="box-sizing:border-box;width:100%;padding:12px;border:1px solid #cdbdc2;border-radius:8px;background:#fff">
+      <option value="">Alege aroma</option>
+      ${FRAGRANCES.map(scent => `<option value="${esc(scent.id)}">${esc(scent.label)}</option>`).join("")}
+    </select>
+    <small id="freshenerScentHelp">Aroma aleasă se aplică întregului produs sau set, fără cost suplimentar. Forma și decorul sunt cele din fotografie. Parfumul menționat în titlu și descriere prezintă varianta inițială; vei primi aroma selectată. Pentru arome diferite, adaugă separat în coș.</small>
+  </form>` : ""}
   ${NICOLAE_IDS.includes(prod.id) ? `
   <form id="nicolaeOptions" data-variants="${esc(JSON.stringify(expandNicolaeVariants(prod)))}" style="display:block;text-align:left;margin:20px 0">
     <label style="display:flex;align-items:center;gap:10px"><input type="checkbox" id="nicolaePersonalize" style="appearance:auto;width:18px;height:18px;flex:0 0 18px"> Personalizare cu nume (+5 lei / buc.)</label>
@@ -769,6 +779,7 @@ ${prod.id === WOODEN_TREE_ID ? '<input type="hidden" id="productQuantity" value=
             ${prod.id === WOODEN_ORNAMENT_ID ? 'data-options-form="woodenOrnamentOptions" disabled' : ''}
             ${prod.id === "sticker-nume-personalizat-20cm" ? 'data-options-form="stickerNameOptions"' : ''}
             ${prod.photo_required ? 'data-options-form="photoOrnamentOptions" disabled' : ''}
+            ${isFreshener(prod) ? 'data-options-form="freshenerOptions"' : ''}
             data-id="${esc(prod.id)}"
             data-title="${esc(prod.title)}"
             data-price="${priceStr}"

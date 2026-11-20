@@ -1,3 +1,4 @@
+import freshenerScents from "../freshener-scents.js";
 import nicolaeVariants from "../nicolae-variants.js";
 import { readFileSync } from "node:fs";
 import envelopePaperOptions from "../envelope-paper-options.js";
@@ -88,7 +89,11 @@ for (const [orderProductIndex, item] of products.entries()) {
   if (product?.personalization_required && (!productName || productName.length > (product.personalization_max_length || 40) || /[\u0000-\u001f\u007f]/.test(productName))) {
     return res.status(400).json({ ok: false, error: "Scrie un text valid pentru fiecare produs personalizat (maximum " + (product.personalization_max_length || 40) + " de caractere)." });
   }
-  const uniqueKey = JSON.stringify([product?.id, theme, productName, product?.photo_required ? orderProductIndex : null]);
+  const fragrance = freshenerScents.isFreshener(product) ? freshenerScents.findFragrance(item?.scent) : null;
+  if (freshenerScents.isFreshener(product) && !fragrance) {
+    return res.status(400).json({ ok: false, error: "Alege aroma fiecărui odorizant pe pagina produsului și adaugă-l din nou în coș." });
+  }
+  const uniqueKey = JSON.stringify([product?.id, theme, productName, fragrance?.id || "", product?.photo_required ? orderProductIndex : null]);
 
   const minimum = Math.max(
     1,
@@ -114,7 +119,8 @@ for (const [orderProductIndex, item] of products.entries()) {
 
   checkedProducts.push({
     id: product.id,
-    title: product.title + (theme ? " — tematică: " + theme : "") + (productName ? " — " + (product.personalization_label || "Nume") + ": " + productName : ""),
+    scent: fragrance?.id || "",
+    title: product.title + (fragrance ? " — Aromă: " + fragrance.label : "") + (theme ? " — tematică: " + theme : "") + (productName ? " — " + (product.personalization_label || "Nume") + ": " + productName : ""),
     price: product.price,
     quantity,
     image: isCaricature ? caricatureImagesByTheme.get(theme) : product.images?.[0] || ""
