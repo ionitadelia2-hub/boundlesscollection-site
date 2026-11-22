@@ -19126,5 +19126,28 @@
     "material": "lemn",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "nuielusa-turta-dulce-mesaj",
+    "title": "Nuielușă decorativă cu omuleț de turtă dulce și mesaj",
+    "price": 10,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Nuielușă decorativă din lemn, cu omuleț de turtă dulce, fundiță roșie și bastonaș în dungi roșii și albe. Pe pergament apare mesajul: „Dulciuri pentru bucurie, o nuielușă de comedie! Să zâmbești și să fii bun, că te vede Moș Crăciun!” Un accesoriu simbolic de pus lângă dulciurile de Moș Nicolae. Caracteristici: Material: lemn | Decor imprimat color | Model: omuleț de turtă dulce | Preț: 10 lei/bucată | Se vinde individual, fără cutie, dulciuri sau decorul din fotografie.",
+    "images": [
+      "/images/craciun/nuielusa-turta-dulce-mesaj.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "mos nicolae",
+      "nuielusa",
+      "turta dulce",
+      "cadou mos nicolae"
+    ],
+    "slug": "nuielusa-decorativa-cu-omulet-de-turta-dulce-si-mesaj-nuielusa",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations",
+    "material": "lemn",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
