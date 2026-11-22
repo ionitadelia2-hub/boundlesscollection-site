@@ -19103,5 +19103,28 @@
     "material": "ceară de soia",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "inel-servetel-om-de-zapada",
+    "title": "Inel pentru șervețel din lemn – Om de zăpadă",
+    "price": 10,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Inel din lemn pentru șervețel, cu om de zăpadă gravat și fulgi pe margine. Inelul ține șervețelul rulat și adaugă un detaliu festiv mesei de Crăciun. Caracteristici: Material: lemn | Model: om de zăpadă cu fulgi | Preț: 10 lei/bucată | Șervețelul și decorul din fotografie nu sunt incluse.",
+    "images": [
+      "/images/craciun/inel-servetel-om-de-zapada.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "accesorii masa craciun",
+      "inel servetel",
+      "om de zapada",
+      "lemn"
+    ],
+    "slug": "inel-pentru-servetel-din-lemn-om-de-zapada-inel-ser",
+    "google_product_category": "Home & Garden > Kitchen & Dining > Tableware > Napkin Rings",
+    "material": "lemn",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
