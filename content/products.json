@@ -19149,5 +19149,31 @@
     "material": "lemn",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "cutie-servetele-lemn-craciun-fericit",
+    "title": "Suport pentru cutia de șervețele din lemn – Crăciun Fericit",
+    "price": 54.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Suport decorativ din lemn pentru cutia de șervețele, cu brăduți, fulgi și inscripția „Crăciun Fericit!”. Nuanța naturală a lemnului și decorul de iarnă îl fac potrivit pentru masa de Crăciun, birou sau living. Orificiul din partea de sus permite extragerea șervețelelor. Caracteristici: Material: lemn | Dimensiuni exterioare aproximative: 23,3 × 12,2 × 8,2 cm (lungime × lățime × înălțime) | Cutia de șervețele folosită în prezentare: 22 × 11 × 7 cm (lungime × lățime × înălțime) | Decor: brăduți și fulgi | Inscripție: Crăciun Fericit! | Preț: 54,99 lei/bucată | Se livrează suportul din lemn; cutia de șervețele și accesoriile din decor nu sunt incluse.",
+    "images": [
+      "/images/craciun/cutie-servetele-craciun-1.jpg",
+      "/images/craciun/cutie-servetele-craciun-2.jpg",
+      "/images/craciun/cutie-servetele-craciun-3.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "accesorii masa craciun",
+      "suport servetele",
+      "cutie servetele",
+      "lemn",
+      "decor masa craciun"
+    ],
+    "slug": "suport-pentru-cutia-de-servetele-din-lemn-craciun-fericit-cutie-se",
+    "google_product_category": "Home & Garden > Bathroom Accessories > Tissue Holders",
+    "material": "lemn",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
