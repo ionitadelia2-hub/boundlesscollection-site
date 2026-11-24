@@ -19201,5 +19201,28 @@
     "material": "placaj de 3 mm",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "nuielusa-ren-mesaj",
+    "title": "Nuielușă decorativă cu ren și mesaj",
+    "price": 10,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Nuielușă decorativă din lemn, cu ren vesel cu năsuc roșu, fundiță și bastonaș în dungi roșii și albe. Pe pergament apare mesajul: „Cu năsucul meu cel roșu, Am venit trimis de Moșu’. Ți-am adus și dulciuri bune, Iar nuielușa-i pusă pe glume!” Semnătura „Cu drag, Renul” completează acest accesoriu simbolic pentru cadourile de Moș Nicolae și Crăciun. Caracteristici: Material: lemn | Decor imprimat color | Model: ren cu năsuc roșu | Preț: 10 lei/bucată | Se vinde individual, fără cutie sau dulciuri. Accesoriile din decorul fotografiei nu sunt incluse.",
+    "images": [
+      "/images/craciun/nuielusa-ren-mesaj.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "mos nicolae",
+      "nuielusa",
+      "ren",
+      "cadou mos nicolae"
+    ],
+    "slug": "nuielusa-decorativa-cu-ren-si-mesaj-nuielusa",
+    "google_product_category": "Home & Garden > Decor > Seasonal & Holiday Decorations",
+    "material": "lemn",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
