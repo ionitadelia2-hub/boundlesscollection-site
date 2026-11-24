@@ -19175,5 +19175,31 @@
     "material": "lemn",
     "min_quantity": 1,
     "mpn": ""
+  },
+  {
+    "id": "suport-servetele-lemn-braduti-craciun",
+    "title": "Suport pentru șervețele din lemn – Brăduți de Crăciun",
+    "price": 34.99,
+    "category": "craciun",
+    "product_type": "craciun",
+    "desc": "Suport pentru șervețele din placaj, cu două panouri decorative cu brăduți decupați, steluțe și motive de iarnă. Nuanța naturală a lemnului completează decorul mesei de Crăciun. Șervețelele se așază vertical între cele două panouri. Caracteristici: Material: placaj de 3 mm | Dimensiuni bază: 18,5 × 7,5 cm | Dimensiuni panouri: 16,5 × 11 cm | Distanță nominală între panouri: 4 cm | Model: brăduți de Crăciun | Preț: 34,99 lei/bucată | Conținut pachet: 1 suport pentru șervețele | Șervețelele se achiziționează separat. Accesoriile din decorul fotografiilor nu sunt incluse.",
+    "images": [
+      "/images/craciun/suport-servetele-braduti-1.jpg",
+      "/images/craciun/suport-servetele-braduti-2.jpg",
+      "/images/craciun/suport-servetele-braduti-3.jpg"
+    ],
+    "tags": [
+      "craciun",
+      "accesorii masa craciun",
+      "suport servetele",
+      "braduti",
+      "lemn",
+      "decor masa craciun"
+    ],
+    "slug": "suport-pentru-servetele-din-lemn-braduti-de-craciun-suport-s",
+    "google_product_category": "Home & Garden > Kitchen & Dining > Tableware > Napkin Holders & Dispensers",
+    "material": "placaj de 3 mm",
+    "min_quantity": 1,
+    "mpn": ""
   }
 ]
